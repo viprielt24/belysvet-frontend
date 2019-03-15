@@ -1,0 +1,58 @@
+[class*="hint--"]:after{
+  background-color: #080808;
+  padding: 14px 17px;
+}
+
+[class*="hint--"].hint--left:before{
+  border-left-color: #080808;
+}
+[class*="hint--"].hint--top:before{
+  border-top-color: #080808;
+}
+
+.hint--top:hover:after{
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.hint--top:hover:before{
+  transform: translateY(-10px);
+}
+
+[class*="hint--"].hint--white.hint--bottom:before{
+  border-bottom-color: #fff;
+  transform: translateY(14px);
+}
+
+[class*="hint--"].hint--white:after{
+  background-color: #fff;
+  padding: 30px 25px;
+  color: #9d9d9d;
+  font-size: 16px;
+  text-shadow: none;
+  box-shadow: 0 0 27px 0 rgba(0, 0, 0, 0.4);
+  transform: translateX(0) translateY(14px);
+}
+
+.hint--user.hint--bottom:after{
+  right: -85px;
+  left: auto;
+}
+
+.hint--heart.hint--bottom:after{
+  right: -45px;
+  left: auto;
+}
+
+.hint--basket.hint--bottom:after{
+  right: -10px;
+  left: auto;
+}
+
+.cart__action[class*="hint--"]{
+  position: absolute;
+  
+  &.hint--left:after{
+    margin-bottom: -16px;
+    padding: 10px;
+  }
+}

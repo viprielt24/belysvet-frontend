@@ -1,0 +1,139 @@
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  font-size: 0;
+}
+
+.icon--close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 13px;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.icon--footer-item1 {
+  width: 24px;
+  height: 13px;
+  background-image: url(/images/footer-item1.svg);
+}
+
+.icon--footer-item2 {
+  width: 8px;
+  height: 17px;
+  background-image: url(/images/footer-item2.svg);
+}
+
+.icon--footer-item3 {
+  width: 19px;
+  height: 15px;
+  background-image: url(/images/footer-item3.svg);
+}
+
+.icon--footer-item4 {
+  width: 12px;
+  height: 18px;
+  background-image: url(/images/footer-item4.svg);
+}
+
+.icon--footer-item5 {
+  width: 20px;
+  height: 14px;
+  background-image: url(/images/footer-item5.svg);
+}
+
+.icon--footer-item6 {
+  width: 18px;
+  height: 18px;
+  background-image: url(/images/footer-item6.svg);
+}
+/**
+
+ */
+.icon--box{
+  width: 17px;
+  height: 10px;
+  background-image: url(/images/box.svg);
+}
+
+.icon--download{
+  width: 17px;
+  height: 11px;
+  background-image: url(/images/download.svg);
+}
+
+.icon--arrow-down{
+  width: 10px;
+  height: 6px;
+  background-image: url(/images/arrow-down.svg);
+}
+
+.icon--zoom{
+  width: 14px;
+  height: 13px;
+  background-image: url(/images/zoom.svg);
+}
+
+.icon--zoom-big{
+  width: 23px;
+  height: 23px;
+  background-image: url(/images/zoom-big.svg);
+}
+/**
+
+ */
+.icon--compare{
+  width: 16px;
+  height: 17px;
+  background-image: url(/images/compare.svg);
+}
+
+.icon--cart{
+  width: 18px;
+  height: 18px;
+  background-image: url(/images/cart.svg);
+}
+
+.icon--auth{
+  width: 22px;
+  height: 22px;
+  background-image: url(/images/auth.svg);
+}
+
+.icon--play{
+  width: 89px;
+  height: 88px;
+  background-image: url(/images/play.svg);
+}
+
+
+
+
+
+
+
+.icon--inline {
+  background-image: none;
+}

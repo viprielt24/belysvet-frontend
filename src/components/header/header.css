@@ -1,0 +1,386 @@
+@import "../../../node_modules/choices.js/public/assets/styles/choices.css";
+
+.header__top {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #e3ebeb;
+
+}
+
+.header__top-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 33px;
+}
+
+.header__top-menu {
+  display: flex;
+  align-items: center;
+
+  .list__item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .list__link {
+    color: #333333;
+    font-family: var(--museo);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      font-weight: 400;
+    }
+  }
+}
+
+/**
+
+ */
+.header__top-city {
+
+  .form-control {
+    color: transparent;
+  }
+
+  .choices {
+    font-size: 12px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 37px;
+      right: -3px;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &.is-open:before {
+      background-color: #fff;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .choices[data-type*="select-one"] {
+
+    &:after {
+      right: 0;
+      width: 10px;
+      height: 6px;
+      background-image: url(/images/arrow-down.svg);
+      margin-top: -3px;
+      border: 0;
+    }
+
+    .choices__inner {
+      padding: 0 21px 0 0;
+    }
+
+    .choices__input {
+      height: 33px;
+      background-color: #FAFAFA;
+      padding: 0 50px 0 20px;
+      border-bottom: 0;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 16px;
+      font-family: var(--museo);
+      color: #898989;
+    }
+  }
+
+  .choices__inner {
+    min-height: auto;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-family: var(--museo);
+    color: #333333;
+  }
+
+  .choices__list--single {
+    padding: 0;
+  }
+
+  .choices__list--dropdown {
+    right: -35px;
+    min-width: 223px;
+    margin-top: 30px;
+    padding-top: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+    border-radius: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 27px;
+      width: 14px;
+      height: 13px;
+      background-image: url(/images/zoom.svg);
+      pointer-events: none;
+    }
+
+    .choices__item {
+      padding: 11px 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 15px;
+      font-family: var(--museo);
+      color: #434343;
+    }
+
+    .choices__item--selectable.is-highlighted {
+      background-color: #F1F5F0;
+    }
+  }
+
+}
+
+/**
+
+ */
+.header__content{
+  margin-top: 20px;
+}
+
+.header__content-wrap {
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(104, 104, 104, 0.1);
+}
+
+.header__middle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 49px;
+  border-bottom: 1px solid #ededed;
+}
+
+.header__middle-item{
+  display: flex;
+  align-items: center;
+}
+
+.header__logo{
+  flex-shrink: 0;
+  margin-left: 30px;
+  margin-right: 43px;
+}
+
+.header__logo-link{
+  display: block;
+}
+
+.header__phone-link{
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+  color: #A1BF35;
+  text-decoration: none;
+}
+
+.header__menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 55px;
+  margin: 0 60px;
+
+  .list__link {
+    color: #333333;
+    font-family: var(--museo);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+  }
+}
+/**
+
+ */
+.header__search{
+
+  .form-group{
+    position: relative;
+  }
+
+  .form-control{
+    width: 100%;
+    height: 48px;
+    min-width: 537px;
+    background-color: #f2f5f0;
+    padding-right: 50px;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+
+    &::-webkit-input-placeholder {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: normal;
+      font-family: var(--museo);
+      color: #333333;
+      opacity: 0.7;
+    }
+
+    &::-moz-placeholder {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: normal;
+      font-family: var(--museo);
+      color: #333333;
+      opacity: 0.7;
+    }
+
+    &:-moz-placeholder {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: normal;
+      font-family: var(--museo);
+      color: #333333;
+      opacity: 0.7;
+    }
+
+    &:-ms-input-placeholder {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: normal;
+      font-family: var(--museo);
+      color: #333333;
+      opacity: 0.7;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  .button-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+  }
+
+  .button{
+    display: block;
+    width: 48px;
+    height: 48px;
+    min-height: auto;
+    background-image: url(/images/zoom-big.svg);
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding: 0;
+    border-radius: 0;
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
+}
+/**
+
+ */
+.header__client{
+  display: flex;
+  margin: 0 32px;
+}
+
+.header__client-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 32px;
+  border-radius: 2px;
+  transition: var(--trbg);
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &:hover{
+    background-color: #E1F0D9;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

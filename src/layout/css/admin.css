@@ -1,0 +1,59 @@
+#user_div_reg{
+  margin-top: 30px;
+  
+  & .form-group{
+    display: flex;
+    align-items: center;
+    
+    & .col-sm-12{
+      flex: 0 0 30%;
+    }
+  }
+  
+  & .main-profile-form-password-annotation{
+    flex: 0 0 55%;
+    text-align: right;
+  }
+  
+  & .main-profile-block-date-info{
+    margin-bottom: 30px;
+  }
+}
+
+.sale-order-link, .sale-order-history-link{
+  color: #ff0060;
+  text-decoration: underline;
+  font-family: 'HarmoniaSansProCyr', Arial, Helvetica, sans-serif;
+  
+  &:hover,
+  &:focus{
+    outline: 0;
+    color: #23527c;
+    text-decoration: none;
+  }
+}
+
+.bx-authform.form{
+  
+  & form{
+    width: 55%;
+    margin-bottom: 30px;
+  }
+  
+  & .bxe-light{
+    display: none;
+  }
+  
+  & .bx-authform-link-container{
+    margin: 10px 0;
+  }
+  
+  & .label--checkbox .label__text{
+    min-height: 22px;
+    line-height: 22px;
+  }
+}
+
+#bx-soa-order{
+  flex-wrap: nowrap;
+}

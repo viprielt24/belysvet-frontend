@@ -1,0 +1,68 @@
+{
+  "name": "genesis-pr-static",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server/server",
+    "debug": "node --inspect server/server",
+    "webpack": "webpack",
+    "build": "node server/generateStaticFiles",
+    "create": "node create",
+    "start": "pm2 start server/server.js",
+    "restart": "pm2 restart server/server.js",
+    "stop": "pm2 stop server/server.js",
+    "list": "pm2 list"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.44",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/runtime": "^7.0.0-beta.46",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.18",
+    "copy-webpack-plugin": "^4.5.0",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "nodemon": "^1.18.4",
+    "postcss-apply": "^0.8.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.1",
+    "postcss-preset-env": "^6.5.0",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-middleware": "^2.0.6"
+  },
+  "dependencies": {
+    "choices.js": "^6.0.3",
+    "draw-module": "^1.1.1",
+    "express": "^4.16.2",
+    "imask": "^4.1.5",
+    "imports-loader": "^0.8.0",
+    "object-fit-images": "^3.2.4",
+    "pm2": "^3.2.9",
+    "postcss-discard-comments": "^4.0.1",
+    "postcss-nested": "^4.1.0",
+    "swiper": "^4.4.6",
+    "ua-parser-js": "^0.7.18"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src",
+      "build",
+      "node_modules",
+      "package.json",
+      ".git"
+    ],
+    "delay": "2500"
+  }
+}

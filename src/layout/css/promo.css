@@ -1,0 +1,18 @@
+.promo{
+  display: flex;
+  background-color: #000;
+  background-repeat: no-repeat;
+  min-height: 438px;
+  
+  
+  & .content-title .title{
+    max-width: 825px;
+    color: #fff;
+    font-size: 48px;
+  }
+}
+
+.promo__wrap{
+  display: flex;
+  align-items: center;
+}

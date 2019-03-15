@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+build
+*.bak
+.idea
+/.idea
+.vscode
+/.vscode
+/templates/cache
+/vendor
+/qwer.js

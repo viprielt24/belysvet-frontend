@@ -1,0 +1,61 @@
+header.header.js-header
+  .header__top
+    //.container: .row: .col-sm-12
+    .container
+      .header__top-wrap
+        .header__top-menu.list
+          .list__item: a(href="javascript:void(0);").list__link Компания
+          .list__item: a(href="javascript:void(0);").list__link Проекты
+          .list__item: a(href="javascript:void(0);").list__link Связь с компанией
+          .list__item: a(href="javascript:void(0);").list__link Покупателю
+          .list__item: a(href="javascript:void(0);").list__link Где купить?
+        .header__top-city
+          select.form-control.js-header__top-city-select
+            option(value="1") Москва
+            option(value="2") Санкт-Петербург
+            option(value="3") Самара
+            option(value="3") Пермь
+            option(value="3") Воронеж
+            option(value="3") Пермь
+            option(value="3") Пермь
+            option(value="1") Москва
+            option(value="2") Санкт-Петербург
+            option(value="3") Самара
+            option(value="3") Пермь
+            option(value="3") Воронеж
+            option(value="3") Пермь
+            option(value="3") Пермь
+
+  .header__content
+    .container
+      .header__content-wrap
+        .header__middle
+
+          .header__middle-item
+            .header__logo: a(href="javascript:void(0);").header__logo-link: img(src="/images/logo.png")
+            .header__phone: a(href="tel:+74957851767").header__phone-link +7 (495) 785-17-67
+
+          .header__middle-item
+            .header__search
+              .form: form(action="javascript:void(0);")
+                .form-group
+                  .form-element
+                    input(type="text" placeholder="Поиск").form-control
+                    .error
+                  .button-wrap: button(type="submit").button
+            .header__client
+              a(href="javascript:void(0);").header__client-item.header__compare
+                .icon.icon--inline: include ../../images/compare.svg
+              a(href="javascript:void(0);").header__client-item.header__cart
+                .icon.icon--inline: include ../../images/cart.svg
+              a(href="javascript:void(0);").header__client-item.header__auth
+                .icon.icon--inline: include ../../images/auth.svg
+
+        .header__menu.list
+          .list__item: a(href="javascript:void(0);").list__link Продукция
+          .list__item: a(href="javascript:void(0);").list__link Конфигуратор
+          .list__item: a(href="javascript:void(0);").list__link Технические решения
+          .list__item: a(href="javascript:void(0);").list__link Сегменты
+          .list__item: a(href="javascript:void(0);").list__link Поддержка
+          .list__item: a(href="javascript:void(0);").list__link Сервис
+

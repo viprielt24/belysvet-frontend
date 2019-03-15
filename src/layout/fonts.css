@@ -1,0 +1,6 @@
+/**
+пути шрифтов пишутся полностью
+./layout/fonts/папкашрифта/шрифт.вофф
+ */
+@import "fonts/museosans/stylesheet.css";
+@import "fonts/opensans/stylesheet.css";

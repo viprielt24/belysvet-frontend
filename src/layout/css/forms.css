@@ -1,0 +1,353 @@
+@import "form-reset.css";
+
+:root {
+  --formIndent: 15px;
+  --inputHeight: 32px;
+  --iconIndent: 8px;
+  --iconIndentx2: 16px;
+  --formErrorColor: #D60000;
+}
+
+/**
+.form-group
+  .form-element
+    .form-control
+    .error
+    .form-placeholder (если лайблы плавают)
+ */
+.label {
+  display: block;
+  color: #8a8e95;
+  font-family: var(--museo);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: var(--inputHeight);
+  background-color: #1f1f1f;
+  padding: 0 var(--formIndent);
+  font-family: var(--opens);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 13px;
+  color: #FFFFFF;
+  border: 0;
+
+  & ~ .error {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    color: var(--formErrorColor);
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  &.has-error {
+    border-color: var(--formErrorColor);
+
+    & ~ .error {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: #626262;
+    font-family: var(--opens);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  &::-moz-placeholder {
+    color: #626262;
+    font-family: var(--opens);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  &:-moz-placeholder {
+    color: #626262;
+    font-family: var(--opens);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  &:-ms-input-placeholder {
+    color: #626262;
+    font-family: var(--opens);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  /** placeholder */
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+
+}
+
+textarea.form-control {
+  min-height: 40px;
+  height: auto;
+  padding: 10px 15px;
+  resize: none;
+
+  + .form-placeholder {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-family: var(--museo);
+    font-weight: 500;
+    line-height: 1;
+    font-size: 13px;
+    color: #000000;
+    opacity: 0.4;
+  }
+
+  &:focus + .form-placeholder {
+    display: none;
+  }
+}
+
+.form-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-group--half {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group--mb-sm {
+  margin-bottom: 33px;
+}
+
+.form-group--mt-lg {
+  margin-top: 85px;
+}
+
+.form-element {
+  position: relative;
+}
+
+.form-element--center {
+  text-align: center;
+}
+
+.form-element--space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: var(--inputHeight);
+  opacity: .4;
+  color: #000;
+  font-size: 13px;
+  white-space: nowrap;
+  line-height: var(--inputHeight);
+  transition: var(--trf);
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.form-element.has-value .form-placeholder,
+.form-control:focus ~ .form-placeholder {
+  transform: scale(.8) translateY(-20px);
+}
+
+/*
+
+.label--radio {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+  min-height: 22px;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .icon--radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 22px;
+    min-height: 22px;
+    background-color: transparent;
+    border-radius: 50%;
+    
+    border-width: 2px;
+    border-style: solid;
+    !*border-color: var(--alpha);*!
+    
+    !*transition: border-color var(--time);*!
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      margin: -5px 0 0 -5px;
+      background-color: transparent;
+      border-radius: 50%;
+      !*transition: var(--time);*!
+    }
+  }
+  .label__text {
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 22px;
+    margin-left: 14px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  
+  input[type="radio"]:checked {
+    ~ .icon--radio {
+      !*border-color: var(--primary);*!
+    }
+  }
+  input[type="radio"]:checked {
+    ~ .icon--radio:before {
+      !*background-color: var(--primary);*!
+    }
+  }
+}
+
+*/
+.label--checkbox {
+  position: relative;
+  display: inline-block;
+  padding-left: 14px;
+  min-height: 16px;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+
+  & input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  & .icon--checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    min-width: 14px;
+    min-height: 14px;
+    background-color: transparent;
+    margin-top: -7px;
+    border: 1px solid #8A8A8A;
+    border-radius: 2px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 7px;
+      margin: -3px 0 0 -5px;
+      background-repeat: no-repeat;
+      background-size: 10px 7px;
+    }
+  }
+
+  & .label__text {
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 16px;
+    margin-left: 12px;
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    font-size: 11px;
+  }
+
+  & .label__link {
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    font-size: 11px;
+    color: #76B325;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & input[type="checkbox"]:checked {
+    & ~ .icon--checkbox:before {
+      background-image: url(/images/checkbox.svg);
+    }
+  }
+}
+
+.form-success {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+  animation: fadeIn .3s ease;
+}

@@ -1,0 +1,61 @@
+@import "../variables.css";
+
+.link--default {
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #3d3d3d;
+  font-family: var(--opens);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #9F9F9F;
+  opacity: 1;
+  transition: var(--trb), var(--trc), var(--tro);
+
+  &:hover {
+    border-bottom: 1px solid #A1BF35;
+    color: #A1BF35;
+    opacity: 0.7;
+  }
+}
+
+.link--more{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+
+    .link__text {
+      color: #61AE3B;
+    }
+
+    .link__icon svg path {
+      stroke: #61AE3B
+    }
+  }
+
+  .link__text {
+    margin-right: 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    font-family: var(--museo);
+    color: #A1BF35;
+    transition: var(--trc);
+  }
+
+  .link__icon {
+    position: relative;
+    top: 1px;
+    font-size: 0;
+
+    svg path {
+      transition: stroke var(--time);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.form-control {
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+  
+  &::-ms-reveal,
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+select.form-control {
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  height: 22px;
+  background-color: transparent;
+  background-position: 100% 2px;
+  background-repeat: no-repeat;
+  background-size: 14px 8px;
+  padding: 0 23px 0 0;
+  border-radius: 0;
+  outline: 0;
+  border: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  
+  option{
+    color: #000;
+  }
+}
+
+video{
+  pointer-events: none;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+.IIV::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+  opacity: 0;
+  pointer-events: none;
+  width: 5px;
+}
+
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel-container,
+video::-webkit-media-controls-start-playback-button {
+  display:none !important;
+  -webkit-appearance: none;
+}

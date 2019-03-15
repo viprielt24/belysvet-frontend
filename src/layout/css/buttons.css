@@ -1,0 +1,85 @@
+.button {
+  display: inline-block;
+  min-height: 39px;
+  padding: 12px;
+  background-color: #A1BF35;
+  border-radius: 3px;
+  font-family: var(--museo);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  transition: box-shadow var(--time);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button {
+
+  &:active,
+  &:hover {
+    box-shadow: 0 6px 20px rgba(97, 174, 59, 0.3);
+  }
+}
+
+.button--white {
+  background-color: #fff;
+  color: #a1bf35;
+  font-family: var(--opens);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.12px;
+  line-height: 1;
+
+  &:hover {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.button--empty{
+  border: 1px solid #9F9F9F;
+  background-color: transparent;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--opens);
+  color: #333333;
+  font-weight: bold;
+  transition: var(--trc), var(--trbg), var(--trb), box-shadow var(--time);
+
+  &:hover {
+    background-color: #A1BF35;
+    box-shadow: 0 6px 20px rgba(97, 174, 59, 0.3);
+    border: 1px solid transparent;
+    color: #fff;
+  }
+}
+
+.button-size-sm{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.button-size-y-sm{
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.button-size-md{
+  padding-left: 40px;
+  padding-right: 40px;
+}

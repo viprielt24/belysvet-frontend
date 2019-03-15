@@ -1,0 +1,35 @@
+:root {
+  /**
+  colors
+   */
+  --primary: #a36b4f;
+
+  /**
+  fonts
+   */
+  --museo: "Museo Sans", sans-serif;
+  --opens: "Open Sans", sans-serif;
+  /**
+  transition
+   */
+  --time: .3s ease;
+  /**
+  transition helpers
+   */
+  --trc: color var(--time);
+  --tro: opacity var(--time);
+  --trb: border-color var(--time);
+  --trbg: background-color var(--time);
+  --trsee: opacity var(--time), visibility var(--time);
+  --trsh: box-shadow var(--time);
+  --trf: transform var(--time);
+}
+
+/**
+media 1920/1440/1024/768/320
+*/
+@custom-media --to767 (max-width: 767px);
+@custom-media --to1023 (max-width: 1023px);
+@custom-media --to1170 (max-width: 1170px);
+@custom-media --to1440 (max-width: 1439px);
+@custom-media --to1920 (max-width: 1919px);

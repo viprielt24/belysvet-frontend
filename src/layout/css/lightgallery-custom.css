@@ -1,0 +1,133 @@
+.lg-backdrop {
+  background-color: #fff;
+}
+
+.lg-custom {
+  
+  & .lg-toolbar {
+    margin-top: 44px;
+    padding: 0 44px;
+    
+    & .lg-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: var(--primaryColor);
+      background-image: url(/images/close-pixel-white.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 7px 7px;
+      transition: opacity .3s ease;
+      
+      &:hover {
+        opacity: .6;
+      }
+      
+      &:after {
+        content: none;
+      }
+    }
+  }
+  
+  & #lg-counter{
+    padding-left: 0;
+  }
+  
+  & .lg-actions .lg-prev {
+    left: 44px;
+  }
+  
+  & .lg-actions .lg-next {
+    right: 44px;
+  }
+  
+  & .lg-actions .lg-next:before,
+  & .lg-actions .lg-prev:after {
+    content: none;
+  }
+  
+  & .lg-actions .lg-next,
+  & .lg-actions .lg-prev {
+    padding: 0;
+  }
+  
+  &.lg-outer {
+  
+    & .lg-thumb-outer{
+      bottom: 44px;
+      transform: none;
+    }
+    
+    & .lg-img-wrap {
+      padding: 0;
+    }
+  
+    &.lg-has-thumb .lg-item{
+      padding-bottom: 200px;
+    }
+    
+    & .lg-thumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0;
+    }
+    
+    & .lg-thumb-item {
+      height: 67px;
+      background-color: #fff;
+      margin-bottom: 0;
+      border-radius: 0;
+      border-width: 1px;
+      border-color: #c1c1c1;
+      
+      &.active {
+        border-color: var(--primaryColor);
+      }
+      
+      &:last-child{
+        margin-right: 0;
+      }
+      
+      & img{
+        object-fit: contain;
+      }
+    }
+  }
+  
+  & .lg-actions .lg-next, & .lg-actions .lg-prev, & .lg-toolbar {
+    background-color: transparent;
+  }
+  
+  &.lg-hide-items {
+    
+    & .lg-prev {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    & .lg-next {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    & .lg-toolbar {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    & .lg-sub-html {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  & .lg-thumb-outer {
+    background-color: transparent;
+  }
+  
+  & .lg-toggle-thumb {
+    display: none;
+  }
+}

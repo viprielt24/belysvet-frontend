@@ -1,0 +1,456 @@
+extends ../layout.pug
+
+block content
+  .special
+    .container: .row.no-gutters
+      .col-sm-8
+        .special__slider.js-special__slider
+          .swiper-container
+            .swiper-button-prev
+            .swiper-button-next
+            .swiper-pagination
+            .swiper-wrapper
+              .swiper-slide
+                .pic: img(src="/images/special-slider-pic1.png").pic__img
+                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
+                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
+              .swiper-slide
+                .pic: img(src="/images/special-slider-pic1.png").pic__img
+                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
+                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
+              .swiper-slide
+                .pic: img(src="/images/special-slider-pic1.png").pic__img
+                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
+                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
+      .col-sm-4
+        .special__propos(style="background-image: url(/images/special-propos.jpg)")
+          .title Техническое решение №1
+          .descr Автономная система аварийного освещения с функцией<br> Telecontrol
+          a(href="javascript:void(0);").button.button--white.button-size-md Подробнее
+  .catalog.catalog--main
+    .container
+      .catalog__header
+        .catalog__title Делаем мир безопаснее<sup>&reg;</sup>
+      .catalog__content
+        .catalog__wrap
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Централизованная<br>система аварийного<br>освещения
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Световые приборы<br>автономной системы
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Пульты<br>управления
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Пульты аварийного<br>освещения
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Знаки безопасности
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Автономные аварийные<br>светильники
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Аккумуляторные<br>батареи
+              a(href="javascript:void(0);").link подробнее
+          .catalog__col
+            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
+              .title Аксессуары<br>и комплектация
+              a(href="javascript:void(0);").link подробнее
+  .catalog-box: .row
+    .col-sm-6
+      .catalog.catalog--favourite
+        .catalog__header
+          .catalog__title Световые приборы
+          a(href="javascript:void(0);").catalog__more
+            .catalog__more-text Смотреть все
+            .catalog__more-icon: include ../../images/arrow-right-small.svg
+        .catalog__content
+          .catalog__wrap
+            .catalog__col
+              .catalog__item
+                .title ICEBERG
+                .pic: img(src="/images/catalog/catalog-favourite-pic4.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+            .catalog__col
+              .catalog__item
+                .title RUMB
+                .pic: img(src="/images/catalog/catalog-favourite-pic5.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+            .catalog__col
+              .catalog__item
+                .title TERRON
+                .pic: img(src="/images/catalog/catalog-favourite-pic6.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+    .col-sm-6
+      .catalog.catalog--favourite
+        .catalog__header
+          .catalog__title Блоки аварийного питания
+          a(href="javascript:void(0);").catalog__more
+            .catalog__more-text Смотреть все
+            .catalog__more-icon: include ../../images/arrow-right-small.svg
+        .catalog__content
+          .catalog__wrap
+            .catalog__col
+              .catalog__item
+                .title REGATA
+                .pic: img(src="/images/catalog/catalog-favourite-pic1.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+            .catalog__col
+              .catalog__item
+                .title RUMB
+                .pic: img(src="/images/catalog/catalog-favourite-pic2.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+            .catalog__col
+              .catalog__item
+                .title TERRON
+                .pic: img(src="/images/catalog/catalog-favourite-pic3.png").pic__img
+                .descr от 238 300 ₽
+                a(href="javascript:void(0);").link подробнее
+  .catalog.catalog--review.js-catalog-review
+    .container
+      .catalog__header
+        .catalog__title Обзоры
+        .swiper-button-prev
+        .swiper-button-next
+      .catalog__content
+        .swiper-container
+          .swiper-pagination
+          .swiper-wrapper
+            .swiper-slide
+              .catalog__wrap
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+            .swiper-slide
+              .catalog__wrap
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+            .swiper-slide
+              .catalog__wrap
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic: img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+                .catalog__col
+                  .catalog__item
+                    .catalog__item-media: .pic
+                      img(src="/images/catalog/catalog-review-pic1.png").pic__img
+                      a(href="javascript:void(0);").pic__link
+                        .icon.icon--play
+                        .pic__link-text смотреть видео
+                    .catalog__item-wrap
+                      .title Состоялась обучающая конференция в Москве
+                      .descr Компания «Белый свет» является ведущим российским производителем профессионального
+                      a(href="javascript:void(0);").link подробнее
+  .catalog.catalog--tech.js-catalog-tech
+    .container
+      .catalog__header
+        .catalog__title Технические решения
+        .swiper-button-prev
+        .swiper-button-next
+    .catalog__content
+      .swiper-container
+        .swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic1.png)")
+                  .title Техническое решение №1
+                  .descr Автономная система аварийного<br>освещения с функцией<br> Telecontrol
+                  a(href="javascript:void(0);").button.button-size-md Подробнее
+                  .catalog__item-sign(style="background-color: #DE3831;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic2.png)")
+                  .title Техническое решение №2
+                  .descr Автономная система аварийного<br>освещения Zarus Dali
+                  a(href="javascript:void(0);").button.button-size-md Подробнее
+                  .catalog__item-sign(style="background-color: #ABCE80;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic1.png)")
+                  .title Техническое решение №3
+                  .descr Автономная система аварийного<br>освещения с функцией<br> Telecontrol
+                  a(href="javascript:void(0);").button.button-size-md Подробнее
+                  .catalog__item-sign(style="background-color: #7B4566;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic2.png)")
+                  .title Техническое решение №4
+                  .descr Автономная система аварийного<br>освещения Zarus Dali
+                  a(href="javascript:void(0);").button.button-size-md Подробнее
+                  .catalog__item-sign(style="background-color: #DE3831;")
+  .catalog.catalog--segment.js-catalog-segment
+    .container
+      .catalog__header
+        .catalog__title Сегменты
+        .swiper-button-prev
+        .swiper-button-next
+    .catalog__content
+      .swiper-container
+        .swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);" style="background-image: url(/images/catalog/catalog-segment-pic1.jpg)").catalog__item
+                  .title Медицинские учреждения
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);" style="background-image: url(/images/catalog/catalog-segment-pic2.jpg)").catalog__item
+                  .title Ритейл
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);" style="background-image: url(/images/catalog/catalog-segment-pic3.jpg)").catalog__item
+                  .title Спорт и инфраструктура
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);" style="background-image: url(/images/catalog/catalog-segment-pic4.png)").catalog__item
+                  .title Медицинские учреждения
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+  .catalog.catalog--projects.js-catalog-projects
+    .container
+      .catalog__header
+        .catalog__title Наши проекты
+        .swiper-button-prev
+        .swiper-button-next
+    .catalog__content
+      .swiper-container
+        .swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);").catalog__item
+                  .pic: img(src="/images/catalog/catalog-projects-pic1.jpg").pic__img
+                  .catalog__item-wrap
+                    .title ТЦ «Мега Белая дача» — холлы<br>и магазины
+                    .catalog__item-box
+                      .descr Москва, 2016
+                      .link подробнее
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);").catalog__item
+                  .pic: img(src="/images/catalog/catalog-projects-pic2.jpg").pic__img
+                  .catalog__item-wrap
+                    .title Гипермаркет «Глобус»
+                    .catalog__item-box
+                      .descr Москва, 2016
+                      .link подробнее
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);").catalog__item
+                  .pic: img(src="/images/catalog/catalog-projects-pic3.jpg").pic__img
+                  .catalog__item-wrap
+                    .title Автомобильный тоннель на пересечении МКАД
+                    .catalog__item-box
+                      .descr Москва, 2016
+                      .link подробнее
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                a(href="javascript:void(0);").catalog__item
+                  .pic: img(src="/images/catalog/catalog-projects-pic4.png").pic__img
+                  .catalog__item-wrap
+                    .title Ледовый дворец спорта "Арена Чувашия"
+                    .catalog__item-box
+                      .descr Москва, 2016
+                      .link подробнее
+                  .catalog__item-sign(style="background-color: #8DC63F;")
+  .distrib
+    script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+    .container
+      .distrib__header
+        .distrib__title Дистрибьюторская сеть
+        .distrib__country
+          a(href="javascript:void(0);" data-country="Russia").button.button--white.distrib__country-item.js-distrib__country-item.active Россия
+          a(href="javascript:void(0);" data-country="Belarus").button.button--white.distrib__country-item.js-distrib__country-item Беларусь
+          a(href="javascript:void(0);" data-country="Kazakhstan").button.button--white.distrib__country-item.js-distrib__country-item Казахстан
+          a(href="javascript:void(0);").link.link--more
+            .link__text Смотреть все
+            .link__icon: include ../../images/arrow-right-small.svg
+    .distrib__map
+      .distrib__map-wrap
+        .distrib__select
+          select.form-control.js-distrib__select
+            option(value="1") Москва
+            option(value="2") Санкт-Петербург
+            option(value="3") Самара
+            option(value="3") Пермь
+            option(value="3") Воронеж
+            option(value="3") Пермь
+            option(value="3") Пермь
+            option(value="1") Москва
+            option(value="2") Санкт-Петербург
+            option(value="3") Самара
+            option(value="3") Пермь
+            option(value="3") Воронеж
+            option(value="3") Пермь
+            option(value="3") Пермь
+      #map(data-mapMarker="/images/map/marker.svg")
+  .partners
+    .container
+      .partners__wrap
+        .pic: img(src="/images/partners-pic.jpg").pic__img
+        .partners__box
+          .title Стать партнером
+          .descr Какой-то текст, про дистрибьюторскую сеть, про ее разветвленность и приглашение стать дистрибьютором/дилером, текст, про дистрибьюторскую сеть, про ее разветвленность и приглашение стать дистрибьютором/дилером,текст, про дистрибьюторскую сеть, про ее разветвленность и приглашение стать дистрибьютором/дилером, текст.
+          button.button.button--empty.button-size-y-sm.button-size-md Перейти в раздел
+  .catalog.catalog--press
+    .container
+      .catalog__header
+        .catalog__title Пресс центр
+      .catalog__content
+        .catalog__wrap
+          .catalog__col
+            .catalog__item
+              .title Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»
+              .descr Компания «Белый свет» является ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
+              .catalog__item-box
+                a(href="javascript:void(0);").link подробнее
+                .date 14.12.18
+          .catalog__col
+            .catalog__item
+              .title Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»
+              .descr Компания «Белый свет» является ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
+              .catalog__item-box
+                a(href="javascript:void(0);").link подробнее
+                .date 14.12.18
+          .catalog__col
+            .catalog__item
+              .title Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»
+              .descr Компания «Белый свет» является ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
+              .catalog__item-box
+                a(href="javascript:void(0);").link подробнее
+                .date 14.12.18
+          .catalog__col
+            .catalog__item
+              .title Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»
+              .descr Компания «Белый свет» является ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
+              .catalog__item-box
+                a(href="javascript:void(0);").link подробнее
+                .date 14.12.18
+      .catalog__footer: a(href="javascript:void(0);").button.button--white Больше новостей
+  .event
+    .container
+      .event__wrap
+        .title Состоялась обучающая конференция в Москве
+        .descr Какой-то завершающий текстовый блог (по желанию), если для него нет контента, например, такого: "В современном обществе возрастает интерес к системам, обеспечивающим безопасность жизнедеятельности человека. Именно поэтому главной целью существования нашей компании, мы считаем содействие повышению степени безопасности среды обитания человека, а методом достижения этой цели – полное удовлетворение потребности рынка в системах аварийного освещения.", то его можно и не использовать.
+        a(href="javascript:void(0);").event__link.link.link--default.js-event__link развернуть

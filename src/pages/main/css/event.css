@@ -1,0 +1,28 @@
+@import "../../../layout/variables.css";
+
+.event{
+
+  .title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: normal;
+    color: #434343;
+  }
+
+  .descr{
+    margin: 16px 0 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: var(--opens);
+    color: #434343;
+  }
+
+}
+
+.event__wrap{
+  background-color: #fff;
+  padding: 40px 44px 20px;
+}

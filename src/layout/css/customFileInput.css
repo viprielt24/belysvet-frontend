@@ -1,0 +1,53 @@
+.form-inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  outline: 0;
+}
+
+.form-inputfile + label {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 20px;
+  outline: 0;
+  
+  & .icon{
+    margin-right: 10px;
+  }
+  
+  & .form-inputfile-name{
+    font-family: 'HarmoniaSansProCyr', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+/* style 2 */
+
+.form-inputfile + label {
+  color: #ff0060;
+  border: 2px solid currentColor;
+  transition: color .3s ease;
+  
+  & svg path{
+    transition: fill .3s ease;
+  }
+}
+
+.form-inputfile:focus + label,
+.form-inputfile.has-focus + label,
+.form-inputfile + label:hover {
+  color: #DC0047;
+  
+  & svg path{
+    fill: #DC0047;
+  }
+}

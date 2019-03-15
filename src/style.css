@@ -1,0 +1,18 @@
+@import './layout/variables.css';
+@import './layout/layout.css';
+
+@import './layout/grid.css';
+@import './layout/text-editor.css';
+@import './layout/css/forms.css';
+@import './layout/css/icons.css';
+@import './layout/css/buttons.css';
+@import './layout/css/links.css';
+
+@import "../node_modules/swiper/dist/css/swiper.css";
+
+@import './layout/css/swiper-custom.css';
+@import './layout/css/catalog.css';
+@import './layout/css/partners.css';
+@import './layout/css/distrib.css';
+
+@import './components/components.css';
