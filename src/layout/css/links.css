@@ -15,6 +15,7 @@
   opacity: 1;
   transition: var(--trb), var(--trc), var(--tro);
 
+  &.active,
   &:hover {
     border-bottom: 1px solid #A1BF35;
     color: #A1BF35;

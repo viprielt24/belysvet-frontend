@@ -26,10 +26,6 @@ body {
   -webkit-focus-ring-color: rgba(255, 255, 255, 0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  ::-webkit-scrollbar{
-    pointer-events: none;
-  }
 }
 
 .mobile body{

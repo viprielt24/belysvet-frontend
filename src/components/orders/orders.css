@@ -1,0 +1,136 @@
+.orders{
+  position: fixed;
+  top: 296px;
+  right: 0;
+  z-index: 50;
+  width: 270px;
+  transform: translateX(214px);
+  transition: var(--trf);
+
+  &.active{
+    transform: translateX(0px);
+
+    .orders-trigger{
+      transform: translateX(160px);
+    }
+
+    .orders-trigger__icon--hide,
+    .orders-trigger__text{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .orders-trigger__icon--show{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.orders__wrap{
+  background-color: #444444;
+}
+
+.orders__item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 44px;
+  border-bottom: 1px solid #575757;
+  padding-left: 14px;
+  text-decoration: none;
+  outline: 0;
+
+  &:last-child{
+    border-bottom: 0;
+  }
+
+  &:hover{
+
+    .orders__item-icon svg path{
+      fill: #fff;
+    }
+  }
+}
+
+.orders__item-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  margin-right: 22px;
+
+  svg path{
+    transition: fill var(--time);
+  }
+}
+
+.orders__item-text{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: normal;
+  color: #C7C7C7;
+}
+
+.orders-trigger{
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  transform: translateX(16px);
+  transition: var(--trf);
+}
+
+.orders-trigger__wrap{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 110px;
+  height: 36px;
+  background-color: #666666;
+  padding-left: 17px;
+}
+
+.orders-trigger__text{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 0.05em;
+  color: #C7C7C7;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--trsee);
+}
+
+.orders-trigger__icon{
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: var(--trsee);
+}
+
+.orders-trigger__icon--show{
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.orders-trigger__icon--hide{
+  right: 0;
+  transform: rotate(-180deg);
+  opacity: 0;
+  visibility: hidden;
+
+  svg path{
+    stroke: #C7C7C7;
+  }
+}

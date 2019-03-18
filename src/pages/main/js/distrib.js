@@ -23,9 +23,9 @@ export default class {
     ymaps.ready(function () {
       var markerPath = document.getElementById('map').dataset.mapmarker;
       var myMap = new ymaps.Map('map', {
-          center: [55.7597759, 37.5460719],
-          zoom: 10,
-          // controls: []
+          center: [55.4707759, 37.6800719],
+          zoom: 8,
+          controls: []
         }),
         objectManager = new ymaps.ObjectManager({
           clusterize: true,
@@ -38,7 +38,7 @@ export default class {
         iconImageSize: [34, 48]
       });
       myMap.geoObjects.add(objectManager);
-      objectManager.add(citiesBelarus);
+      objectManager.add(citiesRussia);
       //запрет зума по скроллу
       myMap.behaviors.disable('scrollZoom');
 
@@ -71,6 +71,5 @@ export default class {
         });
       });
     });
-
   }
 }

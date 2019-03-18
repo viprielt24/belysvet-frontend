@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-orders')) {
+    import('./orders/orders').then(module => {
+      new module.default();
+    });
+  }
+
   import('./../layout/js/detectIE').then((module) => {
     new module.default;
     if (document.documentElement.classList.contains('ie11')) {

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', event => {
   import('./js/catalog-segment').then(module => new module.default);
   import('./js/catalog-projects').then(module => new module.default);
   import('./js/distrib').then(module => new module.default);
+  import('./js/event').then(module => new module.default);
 
 });
 
