@@ -131,9 +131,11 @@
     right: 0;
     min-width: 223px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-    border: 0;
-    border-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     margin-top: 0;
+    border: 1px solid #BDD245;
+    border-top: 0;
 
     &:before {
       content: '';
