@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+if (document.querySelector('.js-popup-open')) {
+    import('./popup/popup').then(module => {
+      new module.default();
+    });
+  }
+
   import('./../layout/js/detectIE').then((module) => {
     new module.default;
     if (document.documentElement.classList.contains('ie11')) {

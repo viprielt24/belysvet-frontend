@@ -87,7 +87,9 @@ footer.footer
                 textarea(placeholder="Ваше сообщение" rows="5").form-control
                 .error
             .form__bottom
-              .button-wrap: button(type="submit").button Отправить
+              .button-wrap
+                //button(type="submit").button Отправить
+                a(href="javascript:void(0);" data-popupname="info").button.js-popup-open Отправить
               .form-group
                 .form-element
                   label.label.label--checkbox
@@ -99,3 +101,5 @@ footer.footer
                       | отправляя сообщение компании «Белый свет»
                     .error
   .footer__bottom
+include ../orders/orders.pug
+include ../popup/popup.pug

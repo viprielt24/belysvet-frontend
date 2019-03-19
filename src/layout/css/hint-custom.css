@@ -29,3 +29,10 @@
     border-bottom-color: #fff;
   }
 }
+
+.orders.active{
+  [class*="hint--"]:before,
+  [class*="hint--"]:after{
+    content: none;
+  }
+}

@@ -1,0 +1,43 @@
+.popup.js-popup-consultation
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="consultation").popup__header-close.js-popup-close: .icon.icon--close
+    .popup__content
+      .popup__content-header
+        .popup__content-title Запрос на техничекую консультацию
+        .popup__content-subtitle Если понадобиться второй заголовок
+      .popup__form.form: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group.form-group--half
+            .form-element
+              input(type="text" placeholder="Имя").form-control
+              .error
+            .form-element
+              input(type="text" placeholder="E-mail / телефон").form-control
+              .error
+          .form-group
+            .form-element
+              textarea(placeholder="Ваше сообщение" rows="5").form-control
+              .error
+          .form__bottom
+            .button-wrap: button(type="submit").button Отправить
+            .form-group
+              .form-element
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                  .icon.icon--checkbox
+                  .label__text
+                    | Я соглашаюсь на&nbsp;
+                    a(href='javascript:void(0);').label__link обработку моих персональных данных,<br>
+                    | отправляя сообщение компании «Белый свет»
+                  .error
+
+.popup.popup--info.js-popup-info
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="info").popup__header-close.js-popup-close: .icon.icon--close
+    .popup__content
+      .popup__content-header
+        .popup__content-title Ваше сообщение успешно отправленно
+        .popup__content-subtitle В скором времени с вами свяжутся
+        a(href="javascript:void(0);").button.button--flat Ок

@@ -69,6 +69,30 @@
   }
 }
 
+.button--flat{
+  background-color: #FFFFFF;
+  border: 1px solid #9F9F9F;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--opens);
+  color: #333333;
+  transition: var(--trc), var(--trbg), var(--trb), box-shadow var(--time);
+
+  &:hover{
+    background: #A1BF35;
+    box-shadow: 0px 6px 20px rgba(97, 174, 59, 0.3);
+    color: #FFFFFF;
+    border: 1px solid #A1BF35;
+  }
+}
+
 .button-size-sm{
   padding-left: 25px;
   padding-right: 25px;
