@@ -9,8 +9,11 @@
 @import './layout/css/links.css';
 
 @import "../node_modules/swiper/dist/css/swiper.css";
-
 @import './layout/css/swiper-custom.css';
+
+@import "../node_modules/hint.css/hint.min.css";
+@import './layout/css/hint-custom.css';
+
 @import './layout/css/catalog.css';
 @import './layout/css/partners.css';
 @import './layout/css/distrib.css';

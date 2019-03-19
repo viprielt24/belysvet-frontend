@@ -72,25 +72,35 @@ export default class {
           document.querySelector('.js-distrib__country-item.active').classList.remove('active');
           country.classList.add('active');
 
-          window.selectCities.clearStore();
-          window.selectCities.setChoices([
-            {value: 'moscow', label: 'Moscow', selected: true},
-            {value: 'Two', label: 'Label Two'},
-            {value: 'Three', label: 'Label Three'},
-          ], 'value', 'label', false);
-
           let countryName = event.currentTarget.dataset.country;
           objectManager.removeAll();
 
           switch (countryName) {
             case 'Russia':
               objectManager.add(citiesRussia);
+              window.selectCities.clearStore();
+              window.selectCities.setChoices([
+                {value: 'moscow', label: 'Москва', selected: true},
+                {value: 'armavir', label: 'Армавир'},
+                {value: 'abakan', label: 'Абакан'},
+                {value: 'piter', label: 'Санкт-Петербург'},
+              ], 'value', 'label', false);
               break;
             case 'Belarus':
               objectManager.add(citiesBelarus);
+              window.selectCities.clearStore();
+              window.selectCities.setChoices([
+                {value: 'minsk', label: 'Минск', selected: true},
+                {value: 'brest', label: 'Брест'},
+              ], 'value', 'label', false);
               break;
             case 'Kazakhstan':
               objectManager.add(citiesKazakhstan);
+              window.selectCities.clearStore();
+              window.selectCities.setChoices([
+                {value: 'astana', label: 'Астана', selected: true},
+                {value: 'almati', label: 'Алматы'},
+              ], 'value', 'label', false);
               break;
           }
           //центрирование по меткам

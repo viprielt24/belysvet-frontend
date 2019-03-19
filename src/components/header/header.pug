@@ -50,7 +50,7 @@ header.header.js-header
           .list__item: a(href="javascript:void(0);").list__link Где купить?
         .header__top-city
           select.form-control.js-header__top-city-select
-            option(value="1") Москва
+            option(value="1") Москва и Область
             option(value="2") Санкт-Петербург
             option(value="3") Самара
             option(value="3") Пермь
@@ -83,12 +83,12 @@ header.header.js-header
                     .error
                   .button-wrap: button(type="submit").button
             .header__client
-              a(href="javascript:void(0);").header__client-item.header__compare
+              a(href="javascript:void(0);" aria-label="Сравнение").header__client-item.header__compare.hint.hint--white.hint--bottom-left
                 .icon.icon--inline: include ../../images/compare.svg
-              a(href="javascript:void(0);").header__client-item.header__cart
+              a(href="javascript:void(0);" aria-label="Корзина").header__client-item.header__cart.hint.hint--white.hint--bottom-left
                 .icon.icon--inline: include ../../images/cart.svg
                 .header__cart-count 28
-              a(href="javascript:void(0);").header__client-item.header__auth
+              a(href="javascript:void(0);" aria-label="Авторизация").header__client-item.header__auth.hint.hint--white.hint--bottom-left
                 .icon.icon--inline: include ../../images/auth.svg
 
         .header__menu.list

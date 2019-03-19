@@ -15,7 +15,7 @@
     text-transform: uppercase;
     border-bottom: 1px solid #9F9F9F;
     opacity: 1;
-    transition: var(--trb), var(--trc), var(--tro);
+    transition: var(--trb), var(--trc), var(--tro), font-weight var(--time);
 
     &:hover {
       border-bottom: 1px solid #A1BF35;
@@ -34,9 +34,8 @@
   padding-bottom: 30px;
   font-style: normal;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 34px;
   line-height: 1;
-  letter-spacing: -0.03em;
   border-bottom: 1px solid #DCDCDC;
 
   sup {
@@ -54,6 +53,11 @@
 }
 
 .catalog--main {
+
+  .catalog__title{
+    font-size: 38px;
+    letter-spacing: -0.03em;
+  }
 
   .catalog__wrap {
     display: flex;
@@ -94,7 +98,7 @@
 
 .catalog__more {
   position: absolute;
-  top: 15px;
+  top: 12px;
   right: 0;
   display: flex;
   align-items: center;
@@ -195,6 +199,16 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 1.15;
+  }
+
+  .link{
+    font-size: 12px;
+    border-bottom: 0;
+
+    &:hover{
+      font-weight: 700;
+      border-bottom: 0;
+    }
   }
 }
 
@@ -640,6 +654,27 @@
       width: 190px;
       height: 44px;
       margin: 0 auto;
+
+      background-color: #FFFFFF;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: normal;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: var(--opens);
+      color: #333333;
+      transition: var(--trc), var(--trbg), box-shadow var(--time);
+
+      &:hover{
+        color: #A1BF35;
+        background-color: #FFFFFF;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      }
     }
   }
 }

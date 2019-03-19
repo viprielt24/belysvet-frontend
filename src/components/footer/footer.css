@@ -32,6 +32,11 @@
     font-weight: 400;
     line-height: 1.15;
     text-decoration: none;
+    
+    &:hover{
+      color: #fff;
+      text-decoration: underline;
+    }
   }
 }
 /**
@@ -155,7 +160,7 @@
     text-decoration: none;
     text-transform: uppercase;
     
-    &:hover{
+    &:hover .list__text{
       color: #fff;
       text-decoration: underline;
     }
@@ -185,6 +190,14 @@
 
     .form-element{
       width: 48%;
+    }
+  }
+
+  .label--checkbox .label__link{
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
     }
   }
 }
