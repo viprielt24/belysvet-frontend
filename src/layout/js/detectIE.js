@@ -38,7 +38,7 @@ export default class DetectIE {
       document.documentElement.classList.add('ipad');
     }
 
-    if (navigator.platform.toLowerCase().indexOf('safari') !== -1 && !navigator.platform.toLowerCase().indexOf('chrome') > -1) {
+    if (navigator.platform.toLowerCase().indexOf('safari') !== -1) {
       document.documentElement.classList.add('safari');
     }
 
