@@ -11,8 +11,12 @@ export default class {
 
   addEvents() {
     new Choices(this.citySelect,{
+      searchFloor: 2,
+      shouldSort: false,
       itemSelectText: '',
-      noResultsText: 'Не найдено'
+      noResultsText: 'Не найдено',
+      renderSelectedChoices: true,
+      searchPlaceholderValue: 'Поиск',
     });
   }
 }

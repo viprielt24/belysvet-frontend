@@ -91,8 +91,8 @@
 }
 
 .catalog-box {
-  max-width: 1440px;
-  padding: 0 100px;
+  max-width: 1270px;
+  padding: 0 15px;
   margin: 50px auto 70px;
 }
 
@@ -206,7 +206,6 @@
     border-bottom: 0;
 
     &:hover{
-      font-weight: 700;
       border-bottom: 0;
     }
   }

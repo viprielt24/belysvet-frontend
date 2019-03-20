@@ -16,8 +16,12 @@ export default class {
 
   addEvents() {
     window.selectCities = new Choices(this.distribCitySelect, {
+      searchFloor: 2,
+      shouldSort: false,
       itemSelectText: '',
-      noResultsText: 'Не найдено'
+      noResultsText: 'Не найдено',
+      renderSelectedChoices: true,
+      searchPlaceholderValue: 'Поиск',
     });
 
     this.distribMap();
