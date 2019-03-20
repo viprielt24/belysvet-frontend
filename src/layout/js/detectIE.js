@@ -37,6 +37,12 @@ export default class DetectIE {
     if (navigator.platform.indexOf('iPad') !== -1) {
       document.documentElement.classList.add('ipad');
     }
+
+    if (navigator.platform.toLowerCase().indexOf('safari') !== -1 && !navigator.platform.toLowerCase().indexOf('chrome') > -1) {
+      document.documentElement.classList.add('safari');
+    }
+
+
   }
 }
 /*

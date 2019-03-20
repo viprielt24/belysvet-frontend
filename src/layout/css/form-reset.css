@@ -25,7 +25,9 @@
     display: none;
   }
 }
+/**
 
+ */
 select.form-control {
   display: flex;
   align-items: flex-start;
@@ -49,7 +51,31 @@ select.form-control {
     color: #000;
   }
 }
+/**
 
+ */
+.safari .form-control {
+
+  &::-webkit-input-placeholder {
+    line-height: normal !important;
+  }
+
+  &::-moz-placeholder {
+    line-height: normal !important;
+  }
+
+  &:-moz-placeholder {
+    line-height: normal !important;
+  }
+
+  &:-ms-input-placeholder {
+    line-height: normal !important;
+  }
+
+}
+/**
+
+ */
 video{
   pointer-events: none;
 }

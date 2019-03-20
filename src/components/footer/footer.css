@@ -78,6 +78,10 @@
     color: #333333;
     text-decoration: none;
 
+    &:hover{
+      text-decoration: underline;
+    }
+
     &:last-child{
       margin-right: 0;
     }
@@ -144,6 +148,7 @@
 
  */
 .footer__contacts{
+  font-family: var(--opens);
   color: #9c9c9c;
   font-size: 12px;
   font-weight: 400;
@@ -151,7 +156,7 @@
   line-height: 1.17;
 
   .list__item{
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 
     &:last-child{
       margin-bottom: 0;
@@ -168,7 +173,7 @@
 
  */
 .footer__icons{
-  margin-top: 17px;
+  margin-top: 24px;
 
   .list__title{
     color: #ffffff;
@@ -216,7 +221,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   .list__item{
-    margin-bottom: 10px;
+    margin-bottom: 19px;
 
     &:last-child{
       margin-bottom: 0;
