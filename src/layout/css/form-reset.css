@@ -58,18 +58,22 @@ select.form-control {
 
   &::-webkit-input-placeholder {
     line-height: normal !important;
+    color: #f00;
   }
 
   &::-moz-placeholder {
     line-height: normal !important;
+    color: #f00;
   }
 
   &:-moz-placeholder {
     line-height: normal !important;
+    color: #f00;
   }
 
   &:-ms-input-placeholder {
     line-height: normal !important;
+    color: #f00;
   }
 
 }

@@ -39,10 +39,12 @@ export default class DetectIE {
     }
 
     if (this._ua.toLowerCase().indexOf('safari') !== -1) {
-      document.documentElement.classList.add('safari');
+      if (this._ua.toLowerCase().indexOf('chrome') > -1) {
+        document.documentElement.classList.add('chrome-safari');
+      } else {
+        document.documentElement.classList.add('safari');
+      }
     }
-
-
   }
 }
 /*
