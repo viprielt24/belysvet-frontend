@@ -3,6 +3,7 @@
 :root {
   --formIndent: 15px;
   --inputHeight: 32px;
+  --inputLineHeight: calc(var(--inputHeight) - 2px);
   --iconIndent: 8px;
   --iconIndentx2: 16px;
   --formErrorColor: #D60000;
@@ -64,7 +65,7 @@
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
-    line-height: var(--inputHeight);
+    line-height: var(--inputLineHeight);
   }
 
   &::-moz-placeholder {
@@ -72,7 +73,7 @@
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
-    line-height: var(--inputHeight);
+    line-height: var(--inputLineHeight);
   }
 
   &:-moz-placeholder {
@@ -80,7 +81,7 @@
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
-    line-height: var(--inputHeight);
+    line-height: var(--inputLineHeight);
   }
 
   &:-ms-input-placeholder {
@@ -88,7 +89,7 @@
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
-    line-height: var(--inputHeight);
+    line-height: var(--inputLineHeight);
   }
 
   /** placeholder */
@@ -132,6 +133,22 @@ textarea.form-control {
 
   &:focus + .form-placeholder {
     display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    line-height: 1.5;
+  }
+
+  &::-moz-placeholder {
+    line-height: 1.5;
+  }
+
+  &:-moz-placeholder {
+    line-height: 1.5;
+  }
+
+  &:-ms-input-placeholder {
+    line-height: 1.5;
   }
 }
 

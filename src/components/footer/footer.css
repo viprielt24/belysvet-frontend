@@ -104,6 +104,13 @@
   color: #404040;
   text-decoration: none;
 
+  &:hover{
+
+    span{
+      text-decoration: underline;
+    }
+  }
+
   span{
     font-style: normal;
     font-weight: 600;

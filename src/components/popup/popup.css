@@ -41,6 +41,7 @@
 
   .label--checkbox .label__link {
     text-decoration: none;
+    outline: 0;
 
     &:hover {
       text-decoration: underline;
@@ -103,6 +104,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  outline: 0;
 }
 
 /**

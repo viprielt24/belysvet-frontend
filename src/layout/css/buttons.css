@@ -15,7 +15,7 @@
   cursor: pointer;
   text-decoration: none;
   border: none;
-
+  outline: 0;
   transition: box-shadow var(--time);
 
   &:focus {

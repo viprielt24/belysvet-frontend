@@ -33,7 +33,7 @@ export default class {
       var myMap = new ymaps.Map('map', {
           center: [55.4707759, 37.6800719],
           zoom: 8,
-          // controls: []
+          controls: []
         }),
         objectManager = new ymaps.ObjectManager({
           clusterize: true,

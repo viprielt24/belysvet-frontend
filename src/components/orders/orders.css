@@ -81,6 +81,7 @@
   text-decoration: none;
   transform: translateX(16px);
   transition: var(--trf);
+  outline: 0;
 }
 
 .orders-trigger__wrap{
