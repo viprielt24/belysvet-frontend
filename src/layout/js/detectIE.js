@@ -39,9 +39,7 @@ export default class DetectIE {
     }
 
     if (this._ua.toLowerCase().indexOf('safari') !== -1) {
-      if (this._ua.toLowerCase().indexOf('chrome') > -1) {
-        document.documentElement.classList.add('chrome-safari');
-      } else {
+      if (!this._ua.toLowerCase().indexOf('chrome') > -1) {
         document.documentElement.classList.add('safari');
       }
     }
