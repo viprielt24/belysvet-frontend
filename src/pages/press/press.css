@@ -1,0 +1,60 @@
+@import "../../layout/variables.css";
+
+.press{
+  margin-top: 40px;
+}
+
+.press__tabs{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background: rgba(196, 196, 196, 0.5);
+  }
+}
+
+.press__tabs-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 80px;
+  color: #333333;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: var(--trbg);
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    transition: var(--trbg);
+  }
+
+  &.active{
+    background-color: #fff;
+
+    &:after{
+      background-color: #A1BF35;
+    }
+  }
+}
+
+.press__content{
+
+}

@@ -1,0 +1,74 @@
+@import "../../layout/variables.css";
+
+.press__calendar {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.calendar__year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.calendar__year-current {
+  margin: 0 25px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.calendar__year-prev,
+.calendar__year-next {
+  font-size: 0;
+}
+
+.calendar__months {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.calendar__months-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 94px;
+  min-height: 40px;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  font-family: var(--opens);
+  color: #333333;
+  text-decoration: none;
+  transition: var(--trc), var(--trbg);
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active,
+  &:hover{
+    background-color: #A1BF35;
+    color: #fff;
+  }
+  
+  &.disable{
+    color: #C2C2C2;
+    box-shadow: none;
+
+    &:hover{
+      background-color: #fff;
+      color: #C2C2C2;
+    }
+  }
+}

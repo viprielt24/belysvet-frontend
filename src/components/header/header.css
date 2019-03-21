@@ -1,9 +1,12 @@
 @import "../../../node_modules/choices.js/public/assets/styles/choices.css";
 
+.header {
+  margin-bottom: 26px;
+}
+
 .header__top {
   background-color: #F5F5F5;
   border-bottom: 1px solid #e3ebeb;
-
 }
 
 .header__top-wrap {

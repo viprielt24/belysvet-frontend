@@ -23,6 +23,13 @@ const pages = {
       pageName: 'Главная',
     }
   },
+  'press': {
+    parameters: {
+      page: 'press',
+      title: 'Белый свет 2000',
+      pageName: 'Пресс-центр',
+    }
+  },
 };
 // Страницы проекта
 pages.pages = {

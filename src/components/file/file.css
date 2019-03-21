@@ -1,0 +1,52 @@
+.file{
+  position: relative;
+  display: block;
+  min-height: 32px;
+  padding-left: 40px;
+  text-decoration: none;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(/images/file-type/file-doc.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:hover{
+    text-decoration: none;
+
+    .file__text{
+      text-decoration: underline;
+    }
+
+    .file__size{
+      text-decoration: none;
+    }
+  }
+}
+
+.file__text{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #A1BF35;
+}
+
+.file__size{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: var(--opens);
+  color: #C2C2C2;
+}
+
+.file--pdf:before{background-image: url(/images/file-type/file-pdf.svg);}
+.file--xls:before{background-image: url(/images/file-type/file-xls.svg);}
+.file--zip:before{background-image: url(/images/file-type/file-zip.svg);}

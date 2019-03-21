@@ -1,0 +1,10 @@
+//- тестовые данные
+- fileType = fileType ? 'file file--' + fileType : 'file'
+- fileText = fileText ? fileText : 'Скачать файл с длинным названием .DOCX'
+- fileSize = fileSize ? fileSize : '(7.9 Mb)'
+//- шаблон
+a(href="javascript:void(0);" class= fileType)
+  .file__text= fileText
+  .file__size= fileSize
+//- очистка тестовых данных
+- fileType = fileText = fileSize = null;
