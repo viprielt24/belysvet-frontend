@@ -1,6 +1,17 @@
-.crumbs
-  .crumbs__item: .crumbs__link Главная
-  .crumbs__item: .crumbs__link Компания
-  .crumbs__item: .crumbs__link Пресс-центр
+include ../crumbs/crumbs
 .content__header
-  h1.title= pageName
+  if page === 'press-inner'
+    .content__top
+      a(href="javascript:void(0);").link.link--back
+        .link__icon: include ../../images/arrow-right-small.svg
+        .link__text К списку статей и публикаций
+      .stack
+        .stack__title Поделиться:
+        .stack__links
+          script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+          script(src="//yastatic.net/share2/share.js")
+          .ya-share2(data-services="facebook,twitter" data-size="s")
+    .content__middle
+      .press-inner-data Сентябрь 2017
+  .content__bottom
+    h1.title= pageName

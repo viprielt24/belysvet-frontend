@@ -1,4 +1,4 @@
-.file{
+a.file{
   position: relative;
   display: block;
   min-height: 32px;
@@ -31,6 +31,7 @@
 }
 
 .file__text{
+  display: block;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -47,6 +48,6 @@
   color: #C2C2C2;
 }
 
-.file--pdf:before{background-image: url(/images/file-type/file-pdf.svg);}
-.file--xls:before{background-image: url(/images/file-type/file-xls.svg);}
-.file--zip:before{background-image: url(/images/file-type/file-zip.svg);}
+a.file--pdf:before{background-image: url(/images/file-type/file-pdf.svg);}
+a.file--xls:before{background-image: url(/images/file-type/file-xls.svg);}
+a.file--zip:before{background-image: url(/images/file-type/file-zip.svg);}

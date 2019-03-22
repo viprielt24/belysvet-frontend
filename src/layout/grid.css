@@ -729,13 +729,10 @@
     max-width: 1270px;
     padding: 0 15px;
   }
-}
 
-/*@media (min-width: 1440px){
-
-  .container{
-    max-width: 1440px;
-    padding: 0 100px;
+  .container__text-editor{
+    max-width: 66.666667%;
+    margin: 0 auto;
+    padding: 0 5px;
   }
-}*/
-
+}

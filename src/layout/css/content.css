@@ -1,8 +1,8 @@
 @import "../../layout/variables.css";
 
-.content__header{
+.content__header {
 
-  .title{
+  .title {
     margin: 0 0 40px 0;
     font-style: normal;
     font-weight: 700;
@@ -10,4 +10,9 @@
     line-height: 41px;
     letter-spacing: -0.02em;
   }
+}
+
+.content__text-editor {
+  background-color: #fff;
+  margin-bottom: -40px;
 }

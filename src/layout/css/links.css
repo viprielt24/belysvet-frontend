@@ -22,7 +22,7 @@
     opacity: 0.7;
   }
 }
-
+.link--back,
 .link--more{
   display: flex;
   align-items: center;
@@ -54,9 +54,32 @@
     position: relative;
     top: 1px;
     font-size: 0;
+    line-height: 1;
 
     svg path {
       transition: stroke var(--time);
+    }
+  }
+}
+
+.link--back{
+
+  .link__text {
+    margin-right: 0;
+    margin-left: 14px;
+    color: #A1BF35;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--opens);
+  }
+
+  .link__icon{
+    top: 0;
+    transform: rotate(-180deg);
+
+    svg{
+      width: 11px;
+      height: 14px;
     }
   }
 }

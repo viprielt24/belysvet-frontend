@@ -8,7 +8,6 @@
 @import './layout/css/icons.css';
 @import './layout/css/buttons.css';
 @import './layout/css/links.css';
-@import './layout/css/crumbs.css';
 
 @import "../node_modules/swiper/dist/css/swiper.css";
 @import './layout/css/swiper-custom.css';
@@ -20,5 +19,6 @@
 @import './layout/css/partners.css';
 @import './layout/css/distrib.css';
 @import './layout/css/calendar.css';
+@import './layout/css/stack.css';
 
 @import './components/components.css';

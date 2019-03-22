@@ -26,8 +26,52 @@ const pages = {
   'press': {
     parameters: {
       page: 'press',
-      title: 'Белый свет 2000',
+      title: 'Пресс-центр',
       pageName: 'Пресс-центр',
+      crumbs:['Главная', 'Компания', 'Пресс-центр'],
+      files: [
+        {
+          'fileType': 'pdf',
+          'fileHref': 'javascript:void(0);',
+          'fileText': 'Скачать фирменный стиль .PDF',
+          'fileSize': '(7.5 Mb)',
+        },
+      ]
+    }
+  },
+  'press-inner': {
+    parameters: {
+      page: 'press-inner',
+      title: 'Пресс-центр текстовая',
+      pageName: 'INEXI TECHNOLOGY — инновации в аварийном освещении',
+      crumbs:['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
+      files: [
+        {
+          'fileType': 'pdf',
+          'fileHref': 'javascript:void(0);',
+          'fileText': 'Скачать статью .PDF',
+          'fileSize': '(7.5 Mb)',
+        },
+        {
+          'fileType': 'doc',
+          'fileHref': 'javascript:void(0);',
+          'fileText': 'Скачать файл с длинным названием .DOCX',
+          'fileSize': '(699,4 Kb)',
+        },
+        {
+          'fileType': 'xls',
+          'fileHref': 'javascript:void(0);',
+          'fileText': 'Скачать файл .XLSX',
+          'fileSize': '(699,4 Kb)',
+        },
+        {
+          'fileType': 'zip',
+          'fileHref': 'javascript:void(0);',
+          'fileText': 'Скачать архив .ZIP',
+          'fileSize': '(699,4 Kb)',
+        },
+
+      ]
     }
   },
 };
