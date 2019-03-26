@@ -1,0 +1,112 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.text-editor
+      .container
+        .project-inner__header: .row
+          .col-sm-6
+            .project-inner__header-item
+              .project-inner__header-label Техническое решение №1
+              .project-inner__header-title "Автономная система аварийного освещения с функцией TELECONTROL"
+          .col-sm-6
+            .project-inner__header-item
+              .project-inner__header-label Сегмент/Отрасль
+              .project-inner__header-title HORECA
+
+        .project-inner__middle: .row
+          .col-sm-6
+            .project-inner__middle-item
+              .project-inner__middle-title Цели заказчиков
+              .project-inner__middle-descr
+                ul
+                  li Провести реконструкцию системы аварийного освещения в соответствии с требованиями и нормами аварийного освещения, снизить издержки на эксплуатацию системы аварийного освещения за счет применения энергоэффективного оборудования;
+                  li Использовать на объекте качественное оборудование с современным дизайном.
+            .project-inner__middle-item
+              .project-inner__middle-title Основные этапы проекта
+              .project-inner__middle-descr
+                ul
+                  li Проектирование и поставка оборудования: 2015 – 2106 год.
+                  li Проектирование и поставка оборудования: 2015 – 2106 год.
+                  li Проектирование и поставка оборудования: 2015 – 2106 год.
+          .col-sm-6
+            .project-inner__slider.js-project-inner__slider
+              .swiper-container
+                .swiper-button-prev
+                .swiper-button-next
+                .swiper-wrapper
+                  //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+            .project-inner__thumbs.js-project-inner__thumbs
+              .swiper-container
+                .swiper-wrapper
+                  //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+        .project-inner__video
+          .project-inner__video-title Видео о проекте
+          .project-inner__video-player: include ../../components/insert-video/insert-video
+
+        .project-inner__equipment
+          .project-inner__equipment-title Использованное оборудование
+          .project-inner__equipment-wrap
+            .project-inner__equipment-item
+              .project-inner__equipment-item-title Световые приборы:
+              .project-inner__equipment-item-descr
+                p: a(href="javascript:void(0);").link ARUNA, артикул a15325, модель BS-ARUNA-81-L2-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+                p: a(href="javascript:void(0);").link ARUNA, артикул a15325, модель BS-ARUNA-81-L2-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+                p: a(href="javascript:void(0);").link ARUNA, артикул a15325, модель BS-ARUNA-81-L2-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+                p: a(href="javascript:void(0);").link ARUNA, артикул a15325, модель BS-ARUNA-81-L2-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+                p: a(href="javascript:void(0);").link ARUNA, артикул a15325, модель BS-ARUNA-81-L2-INEXI2
+                p: a(href="javascript:void(0);").link KONTUR артикул a15743, модель BS-KONTUR-71-S1-INEXI2
+            .project-inner__equipment-item
+              .project-inner__equipment-item-title Блоки аварийного питания:
+              .project-inner__equipment-item-descr
+                p: a(href="javascript:void(0);").link INEXI артикул a17946, модель BS-INEXI2-81-B2-LED
+                p: a(href="javascript:void(0);").link STABILAR.LED артикул a16809, модель BS-STABILAR2-83-B1-LED
+                p: a(href="javascript:void(0);").link STABILAR.UNI артикул a16830, модель BS-STABILAR2-81-B1-UNI
+            .project-inner__equipment-item
+              .project-inner__equipment-item-title Щиты аварийного освещения:
+              .project-inner__equipment-item-descr
+                p: a(href="javascript:void(0);").link BS-AKTEON-1 артикул a16032, модель<br> BS-AKTEON-1-QS40-230/230-Bt3QF6-LCGt3QF10-R13
+                p: a(href="javascript:void(0);").link BS-AKTEON-2 артикул a17350, модель<br> BS-AKTEON-2-QS10-230/230-Bi2QF3-R8-GSM
+                p: a(href="javascript:void(0);").link BS-AKTEON-3 артикул a17428, модель<br> BS-AKTEON-3-QS25-230/230-Mtd1QF3-Мd3QF6-Z64
+            .project-inner__equipment-item
+              .project-inner__equipment-item-title Центральные аккумуляторные установки и источники бесперебойного питания:
+              .project-inner__equipment-item-descr
+                p: a(href="javascript:void(0);").link BS-ELECTRO-4 артикул ?????, модель ????????????????????????
+                p: a(href="javascript:void(0);").link BS-ELECTRO-5 артикул ?????, модель ????????????????????????
+                p: a(href="javascript:void(0);").link BS-ELECTRO-6 артикул ?????, модель ????????????????????????
+                p: a(href="javascript:void(0);").link BS-ELECTRO-7 артикул ?????, модель ????????????????????????
+        .project-inner__about
+          .project-inner__about-wrap
+            .project-inner__about-item
+              .project-inner__about-title Особенности проекта
+              .project-inner__about-descr Провести реконструкцию системы аварийного освещения в соответствии с требованиями и нормами аварийного освещения, снизить издержки на эксплуатацию системы аварийного освещения за счет применения энергоэффективного оборудования;
+            .project-inner__about-item
+              .project-inner__about-title Особенности проекта
+              .project-inner__about-descr Провести реконструкцию системы аварийного освещения в соответствии с требованиями и нормами аварийного освещения, снизить издержки на эксплуатацию системы аварийного освещения за счет применения энергоэффективного оборудования;
+            .project-inner__about-item
+              .project-inner__about-title Особенности проекта
+              .project-inner__about-descr Провести реконструкцию системы аварийного освещения в соответствии с требованиями и нормами аварийного освещения, снизить издержки на эксплуатацию системы аварийного освещения за счет применения энергоэффективного оборудования;
+          a(href="javascript:void(0);").button Посмотреть отзыв
+        .press-inner-footer
+          a(href="javascript:void(0);").link.link--back
+            .link__icon: include ../../images/arrow-right-small.svg
+            .link__text К списку проектов
+          .stack
+            .stack__title Поделиться:
+            .stack__links
+              .ya-share2(data-services="facebook,twitter" data-size="s")

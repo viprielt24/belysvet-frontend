@@ -127,6 +127,12 @@
   height: 88px;
   background-image: url(/images/play.svg);
 }
+
+.icon--play-sm{
+  width: 84px;
+  height: 84px;
+  background-image: url(/images/play.svg);
+}
 /**
 
  */

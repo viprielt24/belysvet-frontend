@@ -1,0 +1,250 @@
+@import "../../layout/variables.css";
+
+.content__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .link {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--museo);
+    color: #A1BF35;
+    text-decoration: none;
+  }
+}
+
+.project-inner__header {
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.project-inner__header-label {
+  margin-bottom: 11px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.project-inner__header-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: var(--museo);
+  color: #A1BF35;
+}
+
+.project-inner__middle {
+  padding-bottom: 55px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.project-inner__middle-title {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  font-family: var(--museo);
+}
+
+/**
+
+ */
+.project-inner__slider {
+
+  .swiper-container {
+    width: 100%;
+    height: 385px;
+  }
+
+  .swiper-button-prev {
+    right: auto;
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
+.project-inner__slider-pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-inner__thumbs {
+  margin-top: 12px;
+
+  .swiper-container {
+    height: 89px;
+  }
+}
+
+/**
+
+ */
+.project-inner__video {
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.project-inner__video-title {
+  margin-bottom: 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  font-family: var(--museo);
+}
+
+.project-inner__video-player {
+  position: relative;
+  width: 816px;
+  height: 458px;
+  margin: auto;
+}
+
+/**
+
+ */
+.project-inner__equipment {
+  padding-top: 31px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.project-inner__equipment-title {
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  font-family: var(--museo);
+  color: #333333;
+}
+
+.project-inner__equipment-wrap {
+  column-count: 2;
+}
+
+.project-inner__equipment-item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-inner__equipment-item-title {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: var(--museo);
+  color: #333333;
+}
+
+.project-inner__equipment-item-descr {
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  .link {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--museo);
+    color: #A1BF35;
+  }
+}
+
+/**
+
+ */
+.project-inner__about {
+  margin-bottom: 39px;
+  padding: 51px 0 0;
+
+  .button {
+    width: 244px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--opens);
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.project-inner__about-wrap {
+  margin-bottom: 49px;
+}
+
+.project-inner__about-item {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-inner__about-title {
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  font-family: var(--museo);
+}
+
+.project-inner__about-descr {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+
+
+
+
+
+
+
+
+

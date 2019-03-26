@@ -23,8 +23,24 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
-if (document.querySelector('.js-popup-open')) {
+  if (document.querySelector('.js-popup-open')) {
     import('./popup/popup').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-accordion__header')) {
+    import('./accordion/accordion').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-project-inner__slider')) {
+    import('../pages/project-inner/project-inner').then(module => {
+      new module.default();
+    });
+  }if (document.querySelector('.js-insert-video')) {
+    import('./insert-video/insert-video').then(module => {
       new module.default();
     });
   }

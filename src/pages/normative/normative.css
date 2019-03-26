@@ -1,0 +1,63 @@
+@import "../../layout/variables.css";
+
+.normative{
+
+}
+
+.normative__about{
+  margin-bottom: 23px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  p{
+    margin: 15px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: var(--opens);
+    color: #404040;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.normative__warning{
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 104px;
+  background-color: #fff;
+  margin-bottom: 33px;
+  padding-left: 109px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+
+  &:before {
+    content: '!';
+    position: absolute;
+    top: 50%;
+    left: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #DE3831;
+    margin-top: -32px;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 41px;
+    letter-spacing: -0.02em;
+    font-family: var(--museo);
+    color: #FFFFFF;
+  }
+}

@@ -5,6 +5,19 @@
 .stack{
   display: flex;
   align-items: center;
+
+  .ya-share2__list{
+    margin-bottom: 0;
+    line-height: 1;
+
+    li{
+      padding-left: 0;
+    }
+
+    li:before{
+      content: none;
+    }
+  }
 }
 
 .stack__title{

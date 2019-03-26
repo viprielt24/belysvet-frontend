@@ -28,7 +28,7 @@ const pages = {
       page: 'press',
       title: 'Пресс-центр',
       pageName: 'Пресс-центр',
-      crumbs:['Главная', 'Компания', 'Пресс-центр'],
+      crumbs: ['Главная', 'Компания', 'Пресс-центр'],
       files: [
         {
           'fileType': 'pdf',
@@ -44,7 +44,7 @@ const pages = {
       page: 'press-inner',
       title: 'Пресс-центр текстовая',
       pageName: 'INEXI TECHNOLOGY — инновации в аварийном освещении',
-      crumbs:['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
+      crumbs: ['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
       files: [
         {
           'fileType': 'pdf',
@@ -72,6 +72,43 @@ const pages = {
         },
 
       ]
+    }
+  },
+  'normative': {
+    parameters: {
+      page: 'normative',
+      title: 'Нормативные документы',
+      pageName: 'Нормативные документы',
+      crumbs: ['Главная', 'Компания', 'Нормативные документы'],
+      files: [
+        {
+          'fileType': 'pdf',
+          'fileHref': 'javascript:void(0);',
+          'fileText': '1. Федеральный закон Российской Федерации от 30.12.2009 No 384-Фз «Технический регламент о безопасности зданий и сооружений».',
+          'fileSize': '(7.5 Mb)',
+        },
+      ]
+    }
+  },
+  'project-inner': {
+    parameters: {
+      page: 'project-inner',
+      title: 'ТЦ «Мега Белая дача» - холлы и магазины',
+      pageName: 'ТЦ «Мега Белая дача» - холлы и магазины',
+      crumbs: ['Главная', 'Компания', 'ТЦ «Мега Белая дача» - холлы и магазины'],
+      files: [
+        {
+          'fileType': 'pdf',
+          'fileHref': 'javascript:void(0);',
+          'fileText': '1. Федеральный закон Российской Федерации от 30.12.2009 No 384-Фз «Технический регламент о безопасности зданий и сооружений».',
+          'fileSize': '(7.5 Mb)',
+        },
+      ],
+      video: {
+        poster: '/images/temp/project-inner-video-player.png',
+        buttonText: 'смотреть видео',
+        iframe: '<iframe id="projectInnerYoutubePlayer" src="https://www.youtube.com/embed/0kNKPYK9cd0?autoplay=1&showinfo=0&modestbranding=1&rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      }
     }
   },
 };

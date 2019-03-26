@@ -6,36 +6,3 @@
     margin-bottom: 25px;
   }
 }
-
-.content__top {
-  position: relative;
-  top: -13px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.content__middle {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.press-inner-data {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  font-family: var(--opens);
-  color: #404040;
-}
-
-.press-inner-footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 15px;
-
-  .link--back:hover{
-    text-decoration: none;
-  }
-}

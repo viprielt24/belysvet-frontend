@@ -1,0 +1,77 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .normative
+        .normative__about
+          p Технологическое развитие рынка светотехники в России приводит к повышенным требованиям со стороны заказчиков к поставляемым продуктам - к характеристикам оборудования, его качеству, срокам разработки и поставки, наличию сертификатов. И аварийного освещения это касается едва ли не в первую очередь, ведь этот вид освещения необходим на любом объекте, независимо от его назначения и размеров. Требования к аварийному освещению значительно более серьезные, нежели к рабочему освещению и регулируются рядом нормативных документов.
+          p Эксперты компании «Белый свет» подготовили уникальный аналитический обзор нормативной документации, действующей (в том числе вступившей в действие с 2015 года) на территории Российской Федерации в отношении проектирования и эксплуатации систем аварийного освещения и систем оповещения и управления эвакуацией людей при пожаре.
+        .normative__warning Представленные в данном разделе материалы (изображения и текст) являются интеллектуальной собственностью ООО «Белый свет 2000». <br>Любое использование материалов допускается не иначе, как с письменного разрешения их правообладателя - ООО «Белый свет 2000».
+        .normative__accordion.accordion
+          .accordion__item.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__num I.
+              .accordion__title Основные нормативные документы в сфере аварийного освещения
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content(style="display:none;")
+              p Проектирование и эксплуатация систем аварийного освещения и СОУЭ регламентированы рядом нормативных документов Российской Федерации, к которым относятся Федеральные законы, ГОСТы и Своды Правил.
+              p: strong Перечень действующих основных нормативных документов
+              p: .row
+                .col-sm-6: include ../../components/file/file
+                .col-sm-6: include ../../components/file/file
+              p: .row
+                .col-sm-6
+                  include ../../components/file/file
+                  p(style="font-style: italic;padding-left: 40px;") Примечание:<br>Требования СП 52.13330.2011 к аварийному освещению (пункты 7.104‐7.121) включены в перечень национальных стандар‐ тов и сводов правил, в результате применения которых на обязательной основе обеспечивается соблюдение требова‐ ний Федерального закона No 384‐ФЗ «Технический регламент о безопасности зданий и сооружений» (Постановление Прави‐ тельства РФ No 1521 от 26.12.2014).<br>Свод правил СП 52.13330.2016 включен в перечень документов в области стандартизации, в результате применения ко‐ торых на добровольной основе обеспечивается соблюдение требований Федерального закона от 30 декабря 2009 года No 384‐ФЗ «Технический регламент о безопасности зданий и сооружений» (Приказ Федерального агентства по техническо‐ му регулированию и метрологии от 30 марта 2015 года No365 с изменениями на 10 мая 2017 года).
+                .col-sm-6: include ../../components/file/file
+              p: .row
+                .col-sm-6: include ../../components/file/file
+                .col-sm-6: include ../../components/file/file
+              .accordion__close.js-accordion__close
+                a(href="javascript:void(0);").accordion__close-text.js-accordion__close-text Свернуть
+          .accordion__item.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__num II.
+              .accordion__title Термины и определения
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content(style="display:none;")
+              p Проектирование и эксплуатация систем аварийного освещения и СОУЭ регламентированы рядом нормативных документов Российской Федерации, к которым относятся Федеральные законы, ГОСТы и Своды Правил.
+              .accordion__close.js-accordion__close
+                a(href="javascript:void(0);").accordion__close-text.js-accordion__close-text Свернуть
+          .accordion__item.accordion__item--parent.js-accordion__item.active
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__num III.
+              .accordion__title Требования к системам аварийного освещения
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__inner.js-accordion__inner
+                a(href="javascript:void(0);").accordion__inner-header.js-accordion__inner-header
+                  .accordion__inner-title 1. Требования к светильникам аварийного освещения
+                  .accordion__inner-trigger
+                .accordion__inner-content.js-accordion__inner-content(style="display:none;")
+                  p К световым указателям относятся все требования, перечисленные в разделе IV.1, и ряд частных требований.
+                  p К световым указателям со знаками безопасности применимы все требования ГОСТ 12.4.026–2015 «Цвета сигнальные, знаки без- опасности и разметка сигнальная», т. е.:
+                  .accordion__close.js-accordion__close
+                    a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
+              .accordion__inner.js-accordion__inner
+                a(href="javascript:void(0);").accordion__inner-header.js-accordion__inner-header
+                  .accordion__inner-title 2. Требования к указателям
+                  .accordion__inner-trigger
+                .accordion__inner-content.js-accordion__inner-content(style="display:none;")
+                  p К световым указателям относятся все требования, перечисленные в разделе IV.1, и ряд частных требований.
+                  p К световым указателям со знаками безопасности применимы все требования ГОСТ 12.4.026–2015 «Цвета сигнальные, знаки без- опасности и разметка сигнальная», т. е.:
+                  .accordion__close.js-accordion__close
+                    a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
+              .accordion__inner.js-accordion__inner
+                a(href="javascript:void(0);").accordion__inner-header.js-accordion__inner-header
+                  .accordion__inner-title 3. Требования к световым пожарным оповещателям
+                  .accordion__inner-trigger
+                .accordion__inner-content.js-accordion__inner-content(style="display:none;")
+                  p К световым указателям относятся все требования, перечисленные в разделе IV.1, и ряд частных требований.
+                  p К световым указателям со знаками безопасности применимы все требования ГОСТ 12.4.026–2015 «Цвета сигнальные, знаки без- опасности и разметка сигнальная», т. е.:
+                  .accordion__close.js-accordion__close
+                    a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
+              .accordion__close.js-accordion__close
+                a(href="javascript:void(0);").accordion__close-text.js-accordion__close-text Свернуть

@@ -16,3 +16,38 @@
   background-color: #fff;
   margin-bottom: -40px;
 }
+
+.content__top {
+  position: relative;
+  top: -13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__middle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.press-inner-data {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.press-inner-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(196, 196, 196, .5);
+
+  .link--back:hover{
+    text-decoration: none;
+  }
+}
