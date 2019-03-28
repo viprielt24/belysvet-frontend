@@ -1,0 +1,139 @@
+.catalog--article {
+  margin-bottom: 28px;
+
+  .catalog__wrap {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0 -15px -40px;
+    width: 100%;
+  }
+
+  .catalog__col {
+    width: 50%;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+
+  .catalog__item {
+    display: flex;
+    min-height: 211px;
+  }
+
+  .catalog__item-wrap {
+    flex-shrink: 0;
+    width: 51%;
+    padding: 30px 40px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    padding-bottom: 72px;
+  }
+
+  .swiper-slide {
+    display: flex;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 0;
+    margin-top: 0;
+  }
+
+  .swiper-button-prev {
+    right: 39px;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 50px;
+    height: 2px;
+    border: 0;
+    border-radius: 0;
+    background-color: #dcdcdc;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #61AE3B;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+    outline: 0;
+  }
+
+  .title {
+    color: #444444;
+    font-family: var(--museo);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+  }
+
+  .descr {
+    margin: 7px 0 18px;
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+  }
+
+  .pic {
+    position: relative;
+    height: 100%;
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .pic__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pic__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    display: block;
+    width: 112px;
+    height: 106px;
+    margin: -56px 0 0 -53px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .pic__link-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: var(--opens);
+    color: #FFFFFF;
+  }
+
+  .catalog__item-media {
+    width: 100%;
+  }
+}

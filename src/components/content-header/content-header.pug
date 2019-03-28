@@ -18,7 +18,7 @@ include ../crumbs/crumbs
     .content__bottom
       h1.title= pageName
 
-  if page === 'project-inner'
+  else if page === 'project-inner'
     .content__top
       a(href="javascript:void(0);").link.link--back
         .link__icon: include ../../images/arrow-right-small.svg
@@ -35,3 +35,8 @@ include ../crumbs/crumbs
     .content__bottom
       h1.title= pageName
       a(href="javascript:void(0);").link Посмотреть отзыв
+
+  else
+    div(class= pageDescr ? 'content__bottom content__bottom--descr' : 'content__bottom')
+      h1.title= pageName
+      .descr!= pageDescr

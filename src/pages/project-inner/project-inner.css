@@ -12,8 +12,13 @@
     font-size: 16px;
     line-height: 21px;
     font-family: var(--museo);
-    color: #A1BF35;
+    color: var(--primary);
+    transition: var(--trc);
     text-decoration: none;
+
+    &:hover{
+      color: var(--hover);
+    }
   }
 }
 
@@ -174,7 +179,13 @@
     font-size: 16px;
     line-height: 21px;
     font-family: var(--museo);
-    color: #A1BF35;
+    color: var(--primary);
+    transition: var(--trc);
+    
+    &:hover{
+      color: var(--hover);
+      text-decoration: none;
+    }
   }
 }
 

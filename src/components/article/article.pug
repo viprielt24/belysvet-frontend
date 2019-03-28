@@ -1,0 +1,24 @@
+mixin article(item, odd)
+  .catalog__item
+    if (odd <= 1)
+      .catalog__item-wrap
+        .title= item.title
+        .descr= item.description
+        a(href= item.link.href).link= item.link.title
+      .catalog__item-media: .pic
+        img(src= item.img).pic__img
+        if item.play
+          a(href= item.play.href).pic__link
+            .icon.icon--play
+            .pic__link-text= item.play.title
+    else
+      .catalog__item-media: .pic
+        img(src= item.img).pic__img
+        if item.play
+          a(href= item.play.href).pic__link
+            .icon.icon--play
+            .pic__link-text= item.play.title
+      .catalog__item-wrap
+        .title= item.title
+        .descr= item.description
+        a(href= item.link.href).link= item.link.title

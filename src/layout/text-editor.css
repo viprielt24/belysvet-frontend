@@ -46,11 +46,13 @@
   }
 
   & a {
-    color: #a36b4f;
+    color: var(--primary);
     text-decoration: none;
+    transition: var(--trc);
 
     &:hover {
-      text-decoration: underline;
+      color: var(--hover);
+      text-decoration: none;
     }
   }
 

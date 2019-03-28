@@ -1,7 +1,7 @@
 @import "../../layout/variables.css";
 
-.normative{
-
+.content__header .title{
+  margin-bottom: 0;
 }
 
 .normative__about{

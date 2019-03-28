@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .career
+        .career__top
+          .career__top-title Вступайте в нашу команду, и вас ждет:
+          .list
+            .list__item Интересная работа
+            .list__item Карьерный рост
+            .list__item Стабильность и уверенность в завтрашнем дне
+        .career__accordion
+          include ../common/career

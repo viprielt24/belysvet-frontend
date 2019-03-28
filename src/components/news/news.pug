@@ -1,0 +1,8 @@
+mixin news(item)
+  .catalog__item
+    +tag(item.tag)
+    .title= item.title
+    .descr= item.description
+    .catalog__item-box
+      a(href= item.link.href).link= item.link.title
+      .date= item.date

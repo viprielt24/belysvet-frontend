@@ -5,7 +5,7 @@ const footer = require('./footer');
  * принимаем ассоциативный массив из incData.js
  * use: const regions = data.contactsRegions;
  */
-// const data = require('./incData');
+const data = require('./incData');
 
 // параметры для всех страниц
 const parametersInEachPage = {
@@ -21,6 +21,8 @@ const pages = {
       page: 'main',
       title: 'Белый свет 2000',
       pageName: 'Главная',
+      news: data.news,
+      article: data.article,
     }
   },
   'press': {
@@ -29,12 +31,18 @@ const pages = {
       title: 'Пресс-центр',
       pageName: 'Пресс-центр',
       crumbs: ['Главная', 'Компания', 'Пресс-центр'],
+      news: data.news,
+      article: data.article,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'Больше новостей'
+      },
       files: [
         {
-          'fileType': 'pdf',
-          'fileHref': 'javascript:void(0);',
-          'fileText': 'Скачать фирменный стиль .PDF',
-          'fileSize': '(7.5 Mb)',
+          fileType: 'pdf',
+          fileHref: 'javascript:void(0);',
+          fileText: 'Скачать фирменный стиль .PDF',
+          fileSize: '(7.5 Mb)',
         },
       ]
     }
@@ -77,17 +85,10 @@ const pages = {
   'normative': {
     parameters: {
       page: 'normative',
-      title: 'Нормативные документы',
-      pageName: 'Нормативные документы',
-      crumbs: ['Главная', 'Компания', 'Нормативные документы'],
-      files: [
-        {
-          'fileType': 'pdf',
-          'fileHref': 'javascript:void(0);',
-          'fileText': '1. Федеральный закон Российской Федерации от 30.12.2009 No 384-Фз «Технический регламент о безопасности зданий и сооружений».',
-          'fileSize': '(7.5 Mb)',
-        },
-      ]
+      title: 'Обзор нормативной базы',
+      pageName: 'Обзор нормативной базы',
+      crumbs: ['Главная', 'Компания', 'Обзор нормативной базы'],
+      normative: data.normative
     }
   },
   'project-inner': {
@@ -109,6 +110,16 @@ const pages = {
         buttonText: 'смотреть видео',
         iframe: '<iframe id="projectInnerYoutubePlayer" src="https://www.youtube.com/embed/0kNKPYK9cd0?autoplay=1&showinfo=0&modestbranding=1&rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
       }
+    }
+  },
+  'career': {
+    parameters: {
+      page: 'career',
+      title: 'Карьера',
+      pageName: 'Карьера',
+      pageDescr: '<p>Если Вы хотите работать в динамично развивающейся компании, мечтаете о стабильной и достойно оплачиваемой работе, готовы проявить на деле свои таланты, добро пожаловать в «Белый Свет».</p><p>Мы смогли стать лидерами отечественного рынка аварийного освещения благодаря и тем, кто работает со дня основания компании, и тем, кто приходит к нам со свежими идеями.</p>',
+      crumbs: ['Главная', 'Компания', 'Карьера'],
+      career: data.career
     }
   },
 };

@@ -13,6 +13,7 @@
 
     .crumbs__link {
       color: #A1BF35;
+      pointer-events: none;
 
       &:after {
         content: none;
@@ -30,6 +31,10 @@
   font-family: var(--opens);
   color: #C2C2C2;
   text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
 
   &:after {
     content: '/';

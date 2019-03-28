@@ -1,0 +1,18 @@
+.tag{
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background-color: rgba(189, 210, 69, 0.2);
+  border-radius: 3px;
+  padding: 0 11px;
+}
+
+.tag__title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  font-family: var(--opens);
+  color: #8CA826;
+}

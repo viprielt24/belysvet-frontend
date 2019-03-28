@@ -1,0 +1,9 @@
+include ../../components/news/news
+
+.catalog.catalog--press
+  .catalog__content
+    .catalog__wrap
+      each item in news
+        .catalog__col
+          +news(item)
+  .catalog__footer: a(href= more.href).button.button--press= more.title

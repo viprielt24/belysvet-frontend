@@ -1,7 +1,7 @@
 .insert-video.js-insert-video(data-insert-video=video.iframe)
   .insert-video__poster.js-insert-video__poster(style= 'background-image: url('+ video.poster +');')
   .insert-video__button
-    .icon.icon--play-sm
+    include ../../images/play.svg
     if video.buttonText
       .insert-video__button-text= video.buttonText
   .insert-video__player.js-insert-video__player

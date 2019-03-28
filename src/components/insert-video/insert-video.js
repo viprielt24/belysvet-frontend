@@ -9,9 +9,14 @@ export default class {
   }
 
   addEvents() {
-    this.videoPoster.addEventListener('click', () => {
-      this.videoWrap.classList.add('plays');
-      this.videoPlayer.innerHTML = this.videoWrapLink;
+    this.videoWrap.addEventListener('click', () => {
+      this.insertVideo();
     });
+
+  }
+
+  insertVideo(){
+    this.videoWrap.classList.add('plays');
+    this.videoPlayer.innerHTML = this.videoWrapLink;
   }
 }

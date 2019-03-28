@@ -53,6 +53,7 @@
     "pm2": "^3.2.9",
     "postcss-discard-comments": "^4.0.1",
     "postcss-nested": "^4.1.0",
+    "romanize": "^1.1.1",
     "swiper": "^4.4.6",
     "ua-parser-js": "^0.7.18"
   },

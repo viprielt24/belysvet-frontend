@@ -1,0 +1,51 @@
+@import "../../layout/variables.css";
+
+.career__top{
+  margin-top: 30px;
+  margin-bottom: 23px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  .list{
+    display: flex;
+    align-items: center;
+  }
+
+  .list__item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 35px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: var(--opens);
+    color: #A1BF35;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:before{
+      content: '';
+      margin-right: 6px;
+      width: 22px;
+      height: 22px;
+      background-image: url(/images/checkbox-primary.svg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 14px 10px;
+    }
+  }
+}
+
+.career__top-title{
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: var(--museo);
+}
+
