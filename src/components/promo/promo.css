@@ -1,0 +1,36 @@
+@import "../../layout/variables.css";
+
+.promo__item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 272px;
+  background-color: #fff;
+  background-image: url(/images/special-slider-bg2.jpg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 56px 50px 48px;
+  overflow: hidden;
+
+  .pic{
+    position: absolute;
+    right: -40px;
+    bottom: -35px;
+  }
+
+  .title{
+    margin-bottom: 20px;
+    padding-right: 440px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: normal;
+    color: #333333;
+    font-family: var(--museo);
+  }
+
+  .button{
+    margin-top: auto;
+  }
+}

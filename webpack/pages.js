@@ -23,6 +23,9 @@ const pages = {
       pageName: 'Главная',
       news: data.news,
       article: data.article,
+      products: data.products,
+      tech: data.tech,
+      promo: data.promo,
     }
   },
   'press': {
@@ -39,10 +42,10 @@ const pages = {
       },
       files: [
         {
-          fileType: 'pdf',
-          fileHref: 'javascript:void(0);',
-          fileText: 'Скачать фирменный стиль .PDF',
-          fileSize: '(7.5 Mb)',
+          type: 'pdf',
+          href: 'javascript:void(0);',
+          text: 'Скачать фирменный стиль .PDF',
+          size: '(7.5 Mb)',
         },
       ]
     }
@@ -55,28 +58,28 @@ const pages = {
       crumbs: ['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
       files: [
         {
-          'fileType': 'pdf',
-          'fileHref': 'javascript:void(0);',
-          'fileText': 'Скачать статью .PDF',
-          'fileSize': '(7.5 Mb)',
+          type: 'pdf',
+          href: 'javascript:void(0);',
+          text: 'Скачать статью .PDF',
+          size: '(7.5 Mb)',
         },
         {
-          'fileType': 'doc',
-          'fileHref': 'javascript:void(0);',
-          'fileText': 'Скачать файл с длинным названием .DOCX',
-          'fileSize': '(699,4 Kb)',
+          type: 'doc',
+          href: 'javascript:void(0);',
+          text: 'Скачать файл с длинным названием .DOCX',
+          size: '(699,4 Kb)',
         },
         {
-          'fileType': 'xls',
-          'fileHref': 'javascript:void(0);',
-          'fileText': 'Скачать файл .XLSX',
-          'fileSize': '(699,4 Kb)',
+          type: 'xls',
+          href: 'javascript:void(0);',
+          text: 'Скачать файл .XLSX',
+          size: '(699,4 Kb)',
         },
         {
-          'fileType': 'zip',
-          'fileHref': 'javascript:void(0);',
-          'fileText': 'Скачать архив .ZIP',
-          'fileSize': '(699,4 Kb)',
+          type: 'zip',
+          href: 'javascript:void(0);',
+          text: 'Скачать архив .ZIP',
+          size: '(699,4 Kb)',
         },
 
       ]
@@ -120,6 +123,33 @@ const pages = {
       pageDescr: '<p>Если Вы хотите работать в динамично развивающейся компании, мечтаете о стабильной и достойно оплачиваемой работе, готовы проявить на деле свои таланты, добро пожаловать в «Белый Свет».</p><p>Мы смогли стать лидерами отечественного рынка аварийного освещения благодаря и тем, кто работает со дня основания компании, и тем, кто приходит к нам со свежими идеями.</p>',
       crumbs: ['Главная', 'Компания', 'Карьера'],
       career: data.career
+    }
+  },
+  'tech': {
+    parameters: {
+      page: 'tech',
+      title: 'Технические решения',
+      pageName: 'Технические решения',
+      pageDescr: '<p>В 2017 году команда компании «Белый свет» провела большую исследовательскую работу, чтобы классифицировать и максимально подробно и понятно представить описание и принципы действия технических решений аварийного освещения, именно поэтому было принято решение разделить полученный материал на два каталога.</p>',
+      crumbs: ['Главная', 'Технические решения'],
+      tech: data.tech,
+      files: data.productsFiles,
+      promo: data.promo,
+    }
+  },
+  'products': {
+    parameters: {
+      page: 'products',
+      title: 'Продукция',
+      pageName: 'Продукция',
+      pageDescr: '<p>Ассортиментный ряд продукции "Белый свет" насчитывает более 9 тысяч позиций, на базе которых можно сформировать готовые комплексные решения для аварийного освещения любого объекта в любой отрасли.</p>',
+      crumbs: ['Главная', 'Продукция'],
+      products: data.products,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'Архив и налоги'
+      },
+      files: data.productsFiles
     }
   },
 };

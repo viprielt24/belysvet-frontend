@@ -8,6 +8,10 @@
   align-items: center;
   background-color: #fff;
   min-height: 145px;
+
+  .files .file{
+    width: 100%;
+  }
 }
 
 .press-copyright__user{

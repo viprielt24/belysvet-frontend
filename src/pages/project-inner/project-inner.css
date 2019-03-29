@@ -196,7 +196,7 @@
   margin-bottom: 39px;
   padding: 51px 0 0;
 
-  .button {
+  a.button {
     width: 244px;
     height: 40px;
     display: flex;
@@ -212,6 +212,7 @@
     text-transform: uppercase;
     font-family: var(--opens);
     color: #FFFFFF;
+    transition: box-shadow var(--time);
 
     &:hover {
       text-decoration: none;

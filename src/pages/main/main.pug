@@ -1,70 +1,8 @@
 extends ../layout.pug
 
 block content
-  .special
-    .container: .row
-      .col-sm-8
-        .special__slider.js-special__slider
-          .swiper-container
-            .swiper-button-prev
-            .swiper-button-next
-            .swiper-pagination
-            .swiper-wrapper
-              .swiper-slide
-                .pic: img(src="/images/special-slider-pic1.png").pic__img
-                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
-                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
-              .swiper-slide
-                .pic: img(src="/images/special-slider-pic1.png").pic__img
-                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
-                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
-              .swiper-slide
-                .pic: img(src="/images/special-slider-pic1.png").pic__img
-                .title Трансформируй светильник<br> в аварийный вместе<br>с STABILAR.2 и INEXI.2
-                a(href="javascript:void(0);").button.button--empty.button-size-sm подробнее
-      .col-sm-4
-        .special__propos(style="background-image: url(/images/special-propos.jpg)")
-          .title Техническое решение №1
-          .descr Автономная система аварийного освещения с функцией<br> Telecontrol
-          a(href="javascript:void(0);").button.button--white.button-size-md Подробнее
-  .catalog.catalog--main
-    .container
-      .catalog__header
-        .catalog__title Делаем мир безопаснее<sup>&reg;</sup>
-      .catalog__content
-        .catalog__wrap
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Централизованная<br>система аварийного<br>освещения
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Световые приборы<br>автономной системы
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Пульты<br>управления
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Пульты аварийного<br>освещения
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Знаки безопасности
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Автономные аварийные<br>светильники
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Аккумуляторные<br>батареи
-              a(href="javascript:void(0);").link подробнее
-          .catalog__col
-            .catalog__item(style="background-image: url(/images/catalog/catalog-main-pic1.jpg);")
-              .title Аксессуары<br>и комплектация
-              a(href="javascript:void(0);").link подробнее
+  include ../common/promoMain
+  include ../common/productsMain
   .catalog-box: .row
     .col-sm-6
       .catalog.catalog--favourite
@@ -121,48 +59,7 @@ block content
                 .descr от 238 300 ₽
                 a(href="javascript:void(0);").link подробнее
   include ../common/articleMain
-  .catalog.catalog--tech.js-catalog-tech
-    .container
-      .catalog__header
-        .catalog__title Технические решения
-        .swiper-button-prev
-        .swiper-button-next
-    .catalog__content
-      .swiper-container
-        .swiper-pagination
-        .swiper-wrapper
-          .swiper-slide
-            .catalog__wrap
-              .catalog__col
-                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic1.png)")
-                  .title Техническое решение №1
-                  .descr Автономная система аварийного<br>освещения с функцией<br> Telecontrol
-                  a(href="javascript:void(0);").button.button-size-md Подробнее
-                  .catalog__item-sign(style="background-color: #DE3831;")
-          .swiper-slide
-            .catalog__wrap
-              .catalog__col
-                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic2.png)")
-                  .title Техническое решение №2
-                  .descr Автономная система аварийного<br>освещения Zarus Dali
-                  a(href="javascript:void(0);").button.button-size-md Подробнее
-                  .catalog__item-sign(style="background-color: #ABCE80;")
-          .swiper-slide
-            .catalog__wrap
-              .catalog__col
-                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic1.png)")
-                  .title Техническое решение №3
-                  .descr Автономная система аварийного<br>освещения с функцией<br> Telecontrol
-                  a(href="javascript:void(0);").button.button-size-md Подробнее
-                  .catalog__item-sign(style="background-color: #7B4566;")
-          .swiper-slide
-            .catalog__wrap
-              .catalog__col
-                .catalog__item(style="background-image: url(/images/catalog/catalog-tech-pic2.png)")
-                  .title Техническое решение №4
-                  .descr Автономная система аварийного<br>освещения Zarus Dali
-                  a(href="javascript:void(0);").button.button-size-md Подробнее
-                  .catalog__item-sign(style="background-color: #DE3831;")
+  include ../../pages/common/techMain-common
   .catalog.catalog--segment.js-catalog-segment
     .container
       .catalog__header

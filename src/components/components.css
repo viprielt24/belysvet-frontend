@@ -12,3 +12,6 @@
 @import "news/news.css";
 @import "article/article.css";
 @import "tag/tag.css";
+@import "product/product.css";
+@import "tech-item/tech-item.css";
+@import "promo/promo.css";

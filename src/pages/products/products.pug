@@ -1,5 +1,9 @@
 extends ../layout.pug
 
 block content
-	.content
-		.products PAGE NAME :: products
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .products
+        include ../common/products
+        include ../common/polygraphy

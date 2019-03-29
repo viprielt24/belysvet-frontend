@@ -1,0 +1,11 @@
+include ../../components/product/product
+
+.catalog.catalog--main
+  .container
+    .catalog__header
+      .catalog__title Делаем мир безопаснее<sup>&reg;</sup>
+    .catalog__content
+      .catalog__wrap
+        each item in products
+          .catalog__col
+            +product(item)

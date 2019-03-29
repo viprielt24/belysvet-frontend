@@ -1,0 +1,5 @@
+mixin promo(item)
+  .promo__item
+    .pic: img(src= item.img).pic__img
+    .title!= item.title
+    a(href= item.link.href).button.button--empty.button-size-sm= item.link.title

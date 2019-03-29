@@ -1,3 +1,15 @@
+.files{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+
+  .file{
+    width: 25%;
+    margin-bottom: 15px;
+    padding-right: 30px;
+  }
+}
+
 a.file{
   position: relative;
   display: block;
@@ -21,7 +33,7 @@ a.file{
     text-decoration: none;
 
     .file__text{
-      text-decoration: underline;
+      color: var(--hover);
     }
 
     .file__size{
@@ -36,7 +48,8 @@ a.file{
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  color: #A1BF35;
+  color: var(--primary);
+  transition: var(--trc);
 }
 
 .file__size{

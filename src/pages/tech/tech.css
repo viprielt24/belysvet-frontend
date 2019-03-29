@@ -1,0 +1,22 @@
+@import "../../layout/variables.css";
+
+.tech{
+  margin-top: 22px;
+  padding-top: 39px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+
+  .promo{
+    padding-top: 31px;
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
+  }
+}
+
+.tech__descr{
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}

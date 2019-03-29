@@ -1,0 +1,17 @@
+include ../../components/tech-item/tech-item
+
+.catalog.catalog--tech.js-catalog-tech
+  .container
+    .catalog__header
+      .catalog__title Технические решения
+      .swiper-button-prev
+      .swiper-button-next
+  .catalog__content
+    .swiper-container
+      .swiper-pagination
+      .swiper-wrapper
+        each item in tech
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                +tech-item(item)

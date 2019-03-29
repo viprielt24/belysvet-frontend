@@ -1,0 +1,8 @@
+include ../../components/tech-item/tech-item
+
+.catalog.catalog--tech
+  .catalog__content
+    .catalog__wrap
+      each item in tech
+        .catalog__col
+          +tech-item(item)

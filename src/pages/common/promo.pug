@@ -1,0 +1,7 @@
+include ../../components/promo/promo
+
+.promo
+  each item, index in promo
+    - item.img = '/images/special-slider-pic2.png'
+    if index <= 0
+      +promo(item)

@@ -1,0 +1,9 @@
+include ../../components/product/product
+
+.catalog.catalog--main
+  .catalog__content
+    .catalog__wrap
+      each item in products
+        .catalog__col
+          +product(item)
+  .catalog__footer: a(href= more.href).button.button--press= more.title

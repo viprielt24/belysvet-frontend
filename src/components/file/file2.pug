@@ -1,0 +1,4 @@
+mixin file(item)
+  a(href= item.href class= item.type ? 'file file--' + item.type : 'file')
+    span.file__text= item.text
+    span.file__size= item.size

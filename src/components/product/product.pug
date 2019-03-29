@@ -1,0 +1,4 @@
+mixin product(item)
+  .catalog__item(style='background-image: url(' + item.img + ')')
+    .title!= item.title
+    a(href= item.link.href).link= item.link.title

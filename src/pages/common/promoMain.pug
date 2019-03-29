@@ -1,0 +1,21 @@
+include ../../components/promo/promo
+
+.special
+  .container: .row
+    .col-sm-8
+      .special__slider.js-special__slider
+        .swiper-container
+          .swiper-button-prev
+          .swiper-button-next
+          .swiper-pagination
+          .swiper-wrapper
+            each item in promo
+              - item.img = '/images/special-slider-pic2.png'
+              .swiper-slide
+                .promo
+                  +promo(item)
+    .col-sm-4
+      .special__propos(style="background-image: url(/images/special-propos.jpg)")
+        .title Техническое решение №1
+        .descr Автономная система аварийного освещения с функцией<br> Telecontrol
+        a(href="javascript:void(0);").button.button--white.button-size-md Подробнее
