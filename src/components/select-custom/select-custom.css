@@ -1,0 +1,234 @@
+.select-custom {
+
+  .form-control {
+    color: transparent;
+  }
+
+  .choices {
+    font-size: 12px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 37px;
+      right: -3px;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &.is-open:before {
+      background-color: #fff;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .choices[data-type*="select-one"] {
+
+    &:after {
+      right: 0;
+      width: 10px;
+      height: 6px;
+      background-image: url(/images/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      margin-top: -3px;
+      border: 0;
+    }
+
+    .choices__inner {
+      padding: 0 21px 0 0;
+    }
+
+    .choices__input {
+      height: 33px;
+      background-color: #FAFAFA;
+      padding: 0 50px 0 20px;
+      border-bottom: 0;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 16px;
+      font-family: var(--museo);
+      color: #898989;
+    }
+  }
+
+  .choices__inner {
+    min-height: auto;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: var(--museo);
+    color: #333333;
+  }
+
+  .choices__list--single {
+    padding: 0;
+  }
+
+  .choices__list--dropdown {
+    right: -35px;
+    z-index: 50;
+    min-width: 223px;
+    margin-top: 30px;
+    padding-top: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+    border-radius: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 27px;
+      width: 14px;
+      height: 13px;
+      background-image: url(/images/zoom.svg);
+      pointer-events: none;
+    }
+
+    .choices__item {
+      padding: 11px 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 15px;
+      font-family: var(--museo);
+      color: #434343;
+    }
+
+    .choices__item--selectable.is-highlighted {
+      background-color: rgba(189, 210, 69, 0.2);
+    }
+  }
+}
+/**
+
+ */
+.projects__filter-top{
+
+  .select-custom .choices{
+    background-color: #FFFFFF;
+    box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    transition: box-shadow var(--time);
+
+    &:hover{
+      box-shadow: 0 6px 15px rgba(97, 174, 59, 0.2);
+    }
+
+    &:before{
+      content: none;
+    }
+  }
+
+  .select-custom .choices.is-open:after{
+    transform: rotate(-180deg);
+  }
+
+  .choices__list--single .choices__item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 55px 0 20px;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 15px;
+    font-family: "Museo Sans", sans-serif;
+    color: #434343;
+  }
+
+  .select-custom .choices[data-type*="select-one"] .choices__inner{
+    padding: 0;
+  }
+
+  .select-custom .choices__list--dropdown{
+    right: 0;
+    margin-top: -10px;
+  }
+
+  .select-custom .choices[data-type*="select-one"]:after{
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/images/arrow-down-big-green.svg);
+    margin-top: -9px;
+    background-size: 14px 9px;
+  }
+}
+
+/**
+
+ */
+.projects__filter-middle {
+
+  .select-custom .choices:before{
+    top: 30px;
+    right: -5px;
+  }
+
+  .select-custom .choices.is-open:after{
+    transform: rotate(-180deg);
+  }
+
+  .select-custom .choices[data-type*="select-one"]:after{
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/images/arrow-down-big-green.svg);
+    margin-top: -9px;
+    background-size: 14px 9px;
+  }
+
+  .select-custom .choices__list--dropdown{
+    margin-top: 15px;
+  }
+
+  .choices__list--single .choices__item {
+    position: relative;
+    background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: left 2px bottom 0;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    padding-bottom: 4px;
+    color: #A1BF35;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: none;
+    transition: var(--trc);
+
+    &:hover{
+      color: var(--hover);
+
+      &:after{
+        opacity: 1;
+      }
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-image: linear-gradient(to right, var(--hover) 50%, rgba(255, 255, 255, 0) 50%);
+      background-position: left 2px bottom 0;
+      background-size: 10px 1px;
+      background-repeat: repeat-x;
+      opacity: 0;
+      transition: var(--tro);
+    }
+  }
+}
+

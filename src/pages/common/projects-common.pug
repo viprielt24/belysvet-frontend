@@ -1,0 +1,8 @@
+include ../../components/project/project
+
+.catalog.catalog--projects
+  .catalog__content
+    .catalog__wrap
+      each item in projects
+        .catalog__col
+          +project(item)

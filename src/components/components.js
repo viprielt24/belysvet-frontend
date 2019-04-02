@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', event => {
   document.createElement('article');
   document.createElement('address');
 
-  if (document.querySelector('.js-header')) {
-    import('./header/header').then(module => {
+  if (document.querySelector('.js-select-custom')) {
+    import('./select-custom/select-custom').then(module => {
       new module.default();
     });
   }

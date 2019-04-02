@@ -1,3 +1,276 @@
-.project {
-	border: 1px solid red;
+@import "../../layout/variables.css";
+
+.projects__filter {
+  margin-top: 16px;
+  margin-bottom: 53px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
 }
+
+.projects__filter-title {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: normal;
+  font-family: var(--museo);
+}
+
+.projects__filter-middle {
+  margin-top: 32px;
+  margin-bottom: 18px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.projects__filter-middle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+a.projects__filter-middle-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  margin-right: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  font-family: var(--opens);
+  text-transform: none;
+  letter-spacing: normal;
+  color: #333333;
+  transition: var(--trc), var(--trbg), box-shadow var(--time);
+
+  &:last-child {
+    margin-right: 0;
+    margin-left: 35px;
+  }
+
+  &.active,
+  &.active:hover {
+    color: #fff;
+    background-color: #A1BF35;
+    box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, .05);
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #A1BF35;
+    box-shadow: 0 6px 20px rgba(161, 191, 53, 0.3);
+  }
+}
+
+.projects__filter-middle-item {
+
+  .select-custom {
+    margin-left: 40px;
+  }
+}
+
+.projects__filter-top-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.projects__filter-top-item {
+  width: 50%;
+
+  &:first-child {
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: 41.666667%;
+  }
+
+  &:last-child {
+    margin-left: 10px;
+  }
+}
+
+.projects__filter-top-label {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.projects__filter-bottom-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.projects__filter-bottom-box,
+.projects__filter-bottom-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.projects__filter-bottom-box {
+  justify-content: space-between;
+}
+
+.projects__filter-bottom-item {
+  position: relative;
+  margin-right: 55px;
+  padding-right: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--museo);
+  color: #A1BF35;
+  text-decoration: none;
+  transition: var(--trc);
+
+  &.active,
+  &:hover {
+    color: var(--hover);
+  }
+
+  &.active:after {
+    transform: rotate(-180deg);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url(/images/arrow-down-big-green.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 10px 6px;
+    margin-top: -5px;
+  }
+
+  &.disable {
+    color: rgba(196, 196, 196, 0.7);
+    pointer-events: none;
+  }
+}
+
+.projects__filter-bottom-view {
+  display: flex;
+  align-items: center;
+}
+
+.catalog--projects {
+  margin-bottom: 32px;
+}
+
+.change-view {
+  display: flex;
+  align-items: center;
+}
+
+.change-view__item {
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+  border-radius: 2.64078px;
+  transition: var(--trbg);
+
+  &:last-child {
+    margin-left: 8px;
+  }
+
+  &.active,
+  &:hover {
+    background-color: #A1BF35;
+
+    .change-view__elem {
+      background-color: #fff;
+    }
+  }
+}
+
+.change-view__elem {
+  transition: var(--trbg);
+}
+
+.change-view__line {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .change-view__elem {
+    width: 22px;
+    height: 3px;
+    background-color: var(--primary);
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.change-view__tile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 6px;
+
+  .change-view__elem {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 1px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

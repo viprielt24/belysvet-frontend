@@ -1,0 +1,76 @@
+.paging{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paging__prev,
+.paging__next{
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #FDFDFD;
+  background-size: 12px 20px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: 1px solid #FFFFFF;
+  transition: var(--trbg), var(--trb);
+  outline: 0;
+
+  &:hover{
+    background-color: #EBF1D5;
+    border: 1px solid #EBF1D5;
+  }
+}
+
+.paging__prev{
+  left: 0;
+  background-image: url(/images/arrow-left.svg);
+}
+
+.paging__next{
+  right: 0;
+  background-image: url(/images/arrow-right.svg);
+}
+
+.paging__box{
+  position: relative;
+  padding: 0 72px;
+}
+
+.paging__box,
+.paging__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.paging__item{
+  margin-right: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  font-family: var(--museo);
+  color: #404040;
+  text-decoration: none;
+  transition: var(--trc);
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &.active,
+  &:hover{
+    color: #A1BF35;
+  }
+
+  &.active,
+  &.disable{
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,17 @@
+include ../../components/project/project
+
+.catalog.catalog--projects.js-catalog-projects
+  .container
+    .catalog__header
+      .catalog__title Наши проекты
+      .swiper-button-prev
+      .swiper-button-next
+  .catalog__content
+    .swiper-container
+      .swiper-pagination
+      .swiper-wrapper
+        each item in projects
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                +project(item)

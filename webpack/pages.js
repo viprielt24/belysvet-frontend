@@ -11,7 +11,8 @@ const data = require('./incData');
 const parametersInEachPage = {
   header,
   footer,
-  items: null
+  items: null,
+  cities: data.cities
 };
 // страницы и параметры
 const pages = {
@@ -26,6 +27,7 @@ const pages = {
       products: data.products,
       tech: data.tech,
       promo: data.promo,
+      projects: data.projects,
     }
   },
   'press': {
@@ -56,33 +58,7 @@ const pages = {
       title: 'Пресс-центр текстовая',
       pageName: 'INEXI TECHNOLOGY — инновации в аварийном освещении',
       crumbs: ['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
-      files: [
-        {
-          type: 'pdf',
-          href: 'javascript:void(0);',
-          text: 'Скачать статью .PDF',
-          size: '(7.5 Mb)',
-        },
-        {
-          type: 'doc',
-          href: 'javascript:void(0);',
-          text: 'Скачать файл с длинным названием .DOCX',
-          size: '(699,4 Kb)',
-        },
-        {
-          type: 'xls',
-          href: 'javascript:void(0);',
-          text: 'Скачать файл .XLSX',
-          size: '(699,4 Kb)',
-        },
-        {
-          type: 'zip',
-          href: 'javascript:void(0);',
-          text: 'Скачать архив .ZIP',
-          size: '(699,4 Kb)',
-        },
-
-      ]
+      files: data.pressInnerFiles
     }
   },
   'normative': {
@@ -150,6 +126,20 @@ const pages = {
         title: 'Архив и налоги'
       },
       files: data.productsFiles
+    }
+  },
+  'projects': {
+    parameters: {
+      page: 'projects',
+      title: 'Проекты',
+      pageName: 'Проекты',
+      pageDescr: '<p>Требовалось оборудование, применявшееся ранее на объектах. Организация аварийного освещения на базе Централизованной системы аварийного освещения BS-ELECTRO положительно зарекомендовало себя на развлекательных объектах — театрах, цирках, выставочных комплексах.</p>',
+      crumbs: ['Главная', 'Компания', 'Проекты'],
+      projects: data.projects,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'Больше новостей'
+      },
     }
   },
 };

@@ -1,0 +1,5 @@
+mixin select-custom(items)
+  .select-custom
+    select.form-control.js-select-custom
+      each item in items
+        option(value= item.value selected= item.selected)= item.title

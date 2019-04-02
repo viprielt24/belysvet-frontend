@@ -9,24 +9,31 @@
     line-height: 1;
     text-align: center;
     color: #333333;
-    border: 1px solid #F2F2F2;
+    /*border: 1px solid #F2F2F2;*/
     text-shadow: none;
+    border-radius: 1px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
   }
 
-  &:before {
+  &.hint--left:before {
     border-left-color: #fff;
   }
 
   &.hint--left:after{
     margin-bottom: -16px;
   }
+
   &.hint--left:before{
-    margin-bottom: -5px;
+    margin-bottom: -6px;
+    margin-right: -10px;
   }
-  
+
   &.hint--bottom-left:before{
     border-bottom-color: #fff;
+  }
+
+  &.hint--top-left:before{
+    border-top-color: #fff;
   }
 }
 

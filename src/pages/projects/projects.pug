@@ -1,5 +1,51 @@
 extends ../layout.pug
 
 block content
-	.content
-		.project PAGE NAME :: project
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .projects
+        .projects__filter
+          .projects__filter-top
+            .projects__filter-title Выберите техническое решение, позицию и сегмент:
+            .projects__filter-top-wrap
+              .projects__filter-top-item
+                .projects__filter-top-label Техническое решение
+                - cities[1].title = 'Техническое решение №1. Автономная система аварийного освещения с функцией TELECONTROL'
+                include ../../pages/common/select-header
+              .projects__filter-top-item
+                .projects__filter-top-label Позиция, изделие, оборудование
+                - cities[1].title = 'BS-ARUNA-81-L1-INEXI2'
+                include ../../pages/common/select-header
+              .projects__filter-top-item
+                .projects__filter-top-label Сегмент, отрасль
+                - cities[1].title = 'Инфраструктура транспорта и подземные сооружения'
+                include ../../pages/common/select-header
+          .projects__filter-middle
+            .projects__filter-title Выберите страну и город:
+            .projects__filter-middle-wrap
+              a(href="javascript:void(0);").button.button--white.projects__filter-middle-item.active Россия
+              a(href="javascript:void(0);").button.button--white.projects__filter-middle-item Беларусь
+              a(href="javascript:void(0);").button.button--white.projects__filter-middle-item Казахстан
+              - cities[1].title = 'Санкт-Петербург'
+              .projects__filter-middle-item: include ../../pages/common/select-header
+          .projects__filter-bottom
+            .projects__filter-bottom-title Сортировать по:
+            .projects__filter-bottom-box
+              .projects__filter-bottom-wrap
+                a(href="javascript:void(0);").projects__filter-bottom-item.active Название проекта от А до Я
+                a(href="javascript:void(0);").projects__filter-bottom-item.disable Город от Я до А
+                a(href="javascript:void(0);").projects__filter-bottom-item С отзывами сверху
+              .projects__filter-bottom-view
+                .change-view
+                  a(href="javascript:void(0);" aria-label="Вид списком").change-view__item.change-view__line.hint.hint--white.hint--top-left
+                    span.change-view__elem
+                    span.change-view__elem
+                    span.change-view__elem
+                  a(href="javascript:void(0);" aria-label="Вид плиткой").change-view__item.change-view__tile.hint.hint--white.hint--top-left
+                    span.change-view__elem
+                    span.change-view__elem
+                    span.change-view__elem
+                    span.change-view__elem
+        include ../common/projects-common
+        include ../../components/paging/paging
