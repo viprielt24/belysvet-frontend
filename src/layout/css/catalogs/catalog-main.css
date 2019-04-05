@@ -54,6 +54,7 @@
   height: 32px;
   background-color: var(--primary);
   padding: 0 40px 0 7px;
+  cursor: pointer;
 
   .icon{
     position: absolute;
@@ -80,6 +81,7 @@
   background-color: #fff;
   padding: 32px 36px;
   box-shadow: 0 26px 41px rgba(0, 0, 0, 0.18);
+  cursor: default;
 
   .pic{
     position: relative;

@@ -3,7 +3,7 @@ mixin product(item)
     .title!= item.title
     a(href= item.link.href).link= item.link.title
 
-    if (page = 'products' && item.menuList)
+    if page === 'products'
 
       .catalog__menu
 
