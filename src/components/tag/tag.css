@@ -1,10 +1,12 @@
 .tag{
+  position: relative;
   display: flex;
   align-items: center;
   height: 28px;
   background-color: rgba(189, 210, 69, 0.2);
   border-radius: 3px;
-  padding: 0 11px;
+  padding: 0 15px;
+  transition: var(--trbg);
 }
 
 .tag__title{
@@ -15,4 +17,64 @@
   text-align: center;
   font-family: var(--opens);
   color: #8CA826;
+  transition: var(--trc), var(--trf);
+}
+
+.tagline{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .tag{
+    margin-right: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.tag__close{
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  margin-top: -3px;
+  opacity: 0;
+  transition: var(--tro);
+
+  &:after,
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  &:before{
+    transform: rotate(45deg);
+  }
+
+  &:after{
+    transform: rotate(-45deg);
+  }
+}
+
+.tag--active{
+  background-color: #61AE3B;
+
+  .tag__title{
+    color: #fff;
+    transform: translateX(-6px);
+  }
+
+  .tag__close{
+    opacity: 1;
+  }
 }

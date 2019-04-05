@@ -4,4 +4,20 @@
   margin-top: 22px;
   padding-top: 39px;
   border-top: 1px solid rgba(196, 196, 196, 0.5);
+
+  .catalog--main .catalog__col{
+    width: 50%;
+  }
+
+  .catalog--main .catalog__item{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px 35px 20px;
+
+    .link{
+      margin-top: auto;
+    }
+  }
 }

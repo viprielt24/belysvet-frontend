@@ -7,7 +7,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -17,7 +19,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -27,7 +31,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -37,7 +43,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -47,7 +55,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -57,7 +67,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -67,7 +79,9 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
   {
     title: 'Пульт аварийного освещения BS-ALARIS-1 от компании «Белый свет»',
@@ -77,6 +91,8 @@ module.exports = [
       href: 'javascript:void(0);',
       title: 'подробнее',
     },
-    tag: 'Продукция'
+    tag: {
+      title: 'Продукция'
+    }
   },
 ];

@@ -1,3 +1,4 @@
-mixin tag(title)
-  .tag
-    .tag__title= title
+mixin tag(item)
+  div(class= item.active ? 'tag tag--active' : 'tag')
+    .tag__title= item.title
+    .tag__close

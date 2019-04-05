@@ -66,6 +66,7 @@
 
  */
 .project-inner__slider {
+  position: relative;
 
   .swiper-container {
     width: 100%;

@@ -6,6 +6,7 @@
 @import "./catalogs/catalog-segment.css";
 @import "./catalogs/catalog-projects.css";
 @import "./catalogs/catalog-press.css";
+@import "./catalogs/catalog-company.css";
 
 .catalog {
 

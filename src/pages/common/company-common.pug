@@ -1,0 +1,8 @@
+include ../../components/company-item/company-item
+
+.catalog.catalog--company
+  .catalog__content
+    .catalog__wrap
+      each item in company
+        .catalog__col
+          +company-item(item)

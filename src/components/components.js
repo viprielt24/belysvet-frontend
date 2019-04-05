@@ -39,7 +39,15 @@ document.addEventListener('DOMContentLoaded', event => {
     import('../pages/project-inner/project-inner').then(module => {
       new module.default();
     });
-  }if (document.querySelector('.js-insert-video')) {
+  }
+
+  if (document.querySelector('.js-catalog__menu-trigger')) {
+    import('../pages/products/products').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-insert-video')) {
     import('./insert-video/insert-video').then(module => {
       new module.default();
     });
@@ -51,6 +59,12 @@ document.addEventListener('DOMContentLoaded', event => {
       objectFitImages();
     }
   });
+
+  if (document.querySelector('.js-inputfile')) {
+    import('../components/input-file/input-file').then(module => {
+      new module.default();
+    });
+  }
 
   if (document.querySelector('.js-form-validate')) {
     import('../layout/js/validate').then(module => {

@@ -1,0 +1,47 @@
+.catalog--company {
+
+  .catalog__title {
+    padding-bottom: 20px;
+  }
+
+  .catalog__wrap {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+    width: 100%;
+  }
+
+  .catalog__col {
+    width: 25%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .catalog__item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 192px;
+    padding: 29px 35px 24px;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: var(--museo);
+    color: #333333;
+  }
+
+  .link {
+    margin-top: auto;
+    font-size: 12px;
+    border-bottom: 0;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}

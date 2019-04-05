@@ -93,6 +93,7 @@
 }
 
 .accordion__content {
+  position: relative;
   padding: 0 36px;
   font-style: normal;
   font-weight: normal;

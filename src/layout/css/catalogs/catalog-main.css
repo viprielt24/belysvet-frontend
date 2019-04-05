@@ -35,3 +35,169 @@
     line-height: 1.17;
   }
 }
+
+.catalog__menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.catalog__menu-trigger{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  height: 32px;
+  background-color: var(--primary);
+  padding: 0 40px 0 7px;
+
+  .icon{
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    margin-top: 0;
+  }
+}
+
+.catalog__menu-trigger-text{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: right;
+  font-family: var(--museo);
+  color: #FFFFFF;
+}
+
+.catalog__menu-content{
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  background-color: #fff;
+  padding: 32px 36px;
+  box-shadow: 0 26px 41px rgba(0, 0, 0, 0.18);
+
+  .pic{
+    position: relative;
+    width: 66px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .pic__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .title{
+    min-height: auto;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--museo);
+    color: #404040;
+  }
+
+  &.is-open{
+
+    .catalog__menu-trigger .icon:before{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.catalog__menu-content-title{
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: normal;
+  font-family: var(--museo);
+
+  br{
+    display: none;
+  }
+}
+
+.catalog__menu-content-item{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.catalog__menu-content--double{
+
+  .catalog__menu-content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+
+  .catalog__menu-content-item{
+    width: 50%;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.catalog__menu-content--quadruple{
+
+  .catalog__menu-content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+
+  .catalog__menu-content-item{
+    width: 25%;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.catalog__menu-content--simple{
+
+  .pic{
+    display: none;
+  }
+
+  .catalog__menu-content-wrap{
+    column-count: 7;
+    display: block;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+
+  .catalog__menu-content-item{
+    width: auto;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

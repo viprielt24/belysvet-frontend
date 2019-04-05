@@ -2,3 +2,24 @@ mixin product(item)
   .catalog__item(style='background-image: url(' + item.img + ')')
     .title!= item.title
     a(href= item.link.href).link= item.link.title
+
+    if (page = 'products' && item.menuList)
+
+      .catalog__menu
+
+        .catalog__menu-trigger.js-catalog__menu-trigger
+          .catalog__menu-trigger-text= item.menuList.length + ' серий'
+          .icon.icon--plus.icon--plus-white.icon--plus-small
+
+        div(style="display:none;" class='catalog__menu-content js-catalog__menu-content catalog__menu-content--' + item.menuType)
+
+          .catalog__menu-trigger.js-catalog__menu-content-close
+            .catalog__menu-trigger-text= item.menuList.length + ' серий'
+            .icon.icon--plus.icon--plus-white.icon--plus-small
+
+          .catalog__menu-content-title!= item.title
+          .catalog__menu-content-wrap
+            each part in item.menuList
+              a(href= part.link).catalog__menu-content-item
+                .pic: img(src= part.img).pic__img
+                .title= part.title

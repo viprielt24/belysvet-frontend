@@ -2,6 +2,10 @@
 
 .press{
   margin-top: 40px;
+
+  .tagline{
+    margin-bottom: 20px;
+  }
 }
 
 .press__tabs{

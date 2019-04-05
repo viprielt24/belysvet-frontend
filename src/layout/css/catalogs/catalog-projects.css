@@ -130,3 +130,51 @@
     transition: height var(--time);
   }
 }
+
+.catalog--projects-line{
+
+  .catalog__col{
+    width: 100%;
+  }
+
+  .catalog__item{
+    display: flex;
+    flex-direction: row;
+    min-height: auto;
+    height: 200px;
+  }
+
+  .pic{
+    width: 300px;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .catalog__item-sign{
+    display: none;
+  }
+
+  .catalog__item-wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    padding: 65px 45px 30px;
+  }
+
+  .catalog__item-box{
+    display: block;
+    margin-top: auto;
+  }
+
+  .title{
+    margin-top: 0;
+  }
+
+  .descr{
+    position: absolute;
+    top: 30px;
+    left: 45px;
+  }
+}

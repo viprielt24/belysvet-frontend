@@ -1,0 +1,49 @@
+.form-inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  outline: 0;
+}
+
+.form-inputfile + label {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  outline: 0;
+
+  & .icon{
+    margin-right: 10px;
+  }
+
+  & .form-inputfile-name{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--museo);
+    color: #A1BF35;
+  }
+}
+
+.form-inputfile-clear{
+  position: relative;
+  margin-left: 6px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.has-file{
+
+  ~ .form-inputfile-clear{
+    opacity: 1;
+    visibility: visible;
+  }
+}

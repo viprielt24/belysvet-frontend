@@ -29,3 +29,5 @@ mixin accordion(item, index)
       //-закрытие главного аккордеона
       .accordion__close.js-accordion__close
         a(href="javascript:void(0);").accordion__close-text.js-accordion__close-text Свернуть
+      if item.career
+        .accordion__button: a(href= item.career[0].link data-popupname="career").button.js-popup-open ответить на вакансию

@@ -45,6 +45,7 @@
   "dependencies": {
     "choices.js": "^6.0.3",
     "draw-module": "^1.1.1",
+    "es6-promise": "^4.2.6",
     "express": "^4.16.2",
     "hint.css": "^2.5.1",
     "imask": "^4.1.5",

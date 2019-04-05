@@ -1,0 +1,46 @@
+.thanks{
+  max-width: 1028px;
+  background-color: #fff;
+  margin: 54px auto 0;
+  padding: 81px 125px 79px;
+  text-align: center;
+}
+
+.thanks__title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+}
+
+.thanks__descr{
+  margin: 28px 0 52px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.thanks__button{
+  display: flex;
+  justify-content: center;
+
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 48px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+
+    &:hover{
+      box-shadow: 0 6px 20px rgba(97, 174, 59, .3);
+    }
+  }
+}

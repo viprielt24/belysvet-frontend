@@ -1,5 +1,12 @@
 @import "../../layout/variables.css";
 
+.career{
+
+  .accordion__content{
+    padding-right: 360px;
+  }
+}
+
 .career__top{
   margin-top: 30px;
   margin-bottom: 23px;
@@ -48,4 +55,128 @@
   line-height: 26px;
   font-family: var(--museo);
 }
+
+.accordion__close{
+  margin-right: -324px;
+}
+
+.accordion__button{
+  position: absolute;
+  right: 36px;
+  bottom: 76px;
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 288px;
+    height: 40px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--opens);
+    color: #FFFFFF;
+    transition: box-shadow var(--time);
+
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+}
+/**
+
+ */
+.career-form{
+  background-color: #fff;
+  margin: 40px 0 0;
+  padding: 62px 0 48px;
+
+  .form{
+    max-width: 816px;
+    margin: 36px auto 0;
+  }
+}
+
+.career-form__descr{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  font-family: var(--museo);
+}
+
+.career-form__title{
+  margin: 24px 0 22px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+}
+
+.career-form__subtitle{
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.career-footer{
+  padding: 40px 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+
+  .link{
+    display: inline-block;
+    margin-left: 5px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--trc);
+
+    &:hover{
+      color: var(--hover);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

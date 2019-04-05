@@ -1,7 +1,7 @@
 .popup.js-popup-consultation
   .popup__wrap
     .popup__header
-      a(href="javascript:void(0);" data-popupname="consultation").popup__header-close.js-popup-close: .icon.icon--close
+      a(href="javascript:void(0);" data-popupname="consultation").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
     .popup__content
       .popup__content-header
         .popup__content-title Запрос на техничекую консультацию
@@ -35,9 +35,40 @@
 .popup.popup--info.js-popup-info
   .popup__wrap
     .popup__header
-      a(href="javascript:void(0);" data-popupname="info").popup__header-close.js-popup-close: .icon.icon--close
+      a(href="javascript:void(0);" data-popupname="info").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
     .popup__content
       .popup__content-header
         .popup__content-title Ваше сообщение успешно отправленно
         .popup__content-subtitle В скором времени с вами свяжутся
         a(href="javascript:void(0);").button.button--flat Ок
+
+.popup.popup--photo.js-popup-photo
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="photo").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .project-inner__slider.js-project-inner-popup-slider
+        .swiper-button-prev
+        .swiper-button-next
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+      .project-inner__thumbs.js-project-inner-popup-thumbs
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+            .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+
+.popup.popup--style.js-popup-career
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="career").popup__header-close.js-popup-close: .icon.icon--close.icon--close-primary
+    .popup__content
+      .popup__content-header
+        .popup__content-title Вакансия «Помощник юриста»
+      .popup__form: include ../../pages/career/pug/career-form

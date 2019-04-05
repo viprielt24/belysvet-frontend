@@ -1,0 +1,41 @@
+.form.form--style: form(action="javascript:void(0);")
+  .form-wrap
+    .form-group.form-group--triple
+      .row
+        .col-sm-4.form-element
+          label
+            .form-placeholder Как вас зовут?
+            input(type="text").form-control
+            .error
+        .col-sm-4.form-element
+          label
+            .form-placeholder Email
+            input(type="email").form-control
+            .error
+        .col-sm-4.form-element
+          label
+            .form-placeholder Телефон
+            input(type="tel").form-control
+            .error
+    .form-group
+      .form-element
+        label
+          .form-placeholder Текст сообщения, ссылки на резюме, аккаунты и т.п.
+          textarea(rows="5").form-control
+          .error
+    .form__bottom
+      .form-element
+        .input-file
+          .icon.icon--clip
+          include ../../../components/input-file/input-file
+        div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+      .form-group
+        .form-element
+          label.label.label--checkbox
+            input.form-control.js-form-validate__checked(type='checkbox', checked='')
+            .icon.icon--checkbox
+            .label__text
+              | Я соглашаюсь с условиями обработки<br>
+              a(href='javascript:void(0);').label__link персональных данных
+            .error
+      .button-wrap: button(type="submit").button Отправить заявку

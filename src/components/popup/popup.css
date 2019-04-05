@@ -84,11 +84,6 @@
     height: 2px;
     background-color: #A1C760;
   }
-
-  .icon--close:after,
-  .icon--close:before {
-    background-color: #000;
-  }
 }
 
 /**
@@ -96,8 +91,8 @@
  */
 .popup__header {
   position: absolute;
-  top: 16px;
-  right: 13px;
+  top: 24px;
+  right: 29px;
 }
 
 .popup__header-close {
@@ -111,7 +106,7 @@
 
  */
 .popup__content-header {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .popup__content-title {
@@ -156,7 +151,6 @@
   width: 480px;
   margin: auto;
 }
-
 /**
 
  */
@@ -184,3 +178,117 @@
     padding: 0;
   }
 }
+/**
+
+ */
+.popup--photo {
+  background-color: rgba(19, 19, 19, 0.8);
+
+  .popup__wrap {
+    max-width: 1124px;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    padding: 40px 0 0;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .project-inner__slider .swiper-container {
+    height: 717px;
+  }
+
+  .project-inner__slider .swiper-button-next{
+    right: -66px;
+  }
+
+  .project-inner__slider .swiper-button-prev{
+    left: -66px;
+  }
+
+  .project-inner__thumbs .swiper-container{
+    width: 760px;
+  }
+
+  .popup__header{
+    top: -26px;
+    right: -66px;
+  }
+
+  .popup__header-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FDFDFD;
+    transition: var(--trbg);
+
+    &:hover{
+      background-color: #EBF1D5;
+    }
+  }
+
+  .icon--close{
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+  }
+
+  .popup__wrap .icon--close:after, .popup__wrap .icon--close:before{
+    background-color: #A1C760;
+    height: 2px;
+  }
+}
+/**
+
+ */
+.popup--style{
+
+  .popup__wrap{
+    max-width: 864px;
+    background-image: none;
+    background-color: #fff;
+    padding: 33px;
+    box-shadow: 0 26px 41px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+
+    &:before{
+      content: none;
+    }
+  }
+
+  .popup__content-title{
+    padding: 0;
+    font-family: var(--museo);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .popup__form{
+    width: 100%;
+  }
+
+  .form__bottom{
+    align-items: flex-start;
+  }
+
+  .form__bottom .button-wrap{
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+

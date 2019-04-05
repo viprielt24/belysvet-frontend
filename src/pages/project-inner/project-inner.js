@@ -11,6 +11,14 @@ export default class {
     this.thumbsWrap = document.querySelector('.js-project-inner__thumbs');
     this.thumbsContainer = this.thumbsWrap.querySelector('.swiper-container');
 
+    this.popupWrap = document.querySelector('.js-project-inner-popup-slider');
+    this.popupContainer = this.popupWrap.querySelector('.swiper-container');
+    this.popupNavPrev = this.popupWrap.querySelector('.swiper-button-prev');
+    this.popupNavNext = this.popupWrap.querySelector('.swiper-button-next');
+
+    this.popupThumbsWrap = document.querySelector('.js-project-inner-popup-thumbs');
+    this.popupThumbsContainer = this.popupThumbsWrap.querySelector('.swiper-container');
+
     this.addEvents();
   }
 
@@ -19,8 +27,7 @@ export default class {
       slidesPerView: 4,
       spaceBetween: 16,
       loop: true,
-      // freeMode: true,
-      loopedSlides: 4, //looped slides should be the same
+      loopedSlides: 4,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
@@ -29,14 +36,39 @@ export default class {
     const slider = new Swiper(this.container, {
       slidesPerView: 1,
       loop:true,
-      loopedSlides: 4, //looped slides should be the same
+      loopedSlides: 4,
       navigation: {
         prevEl: this.navPrev,
         nextEl: this.navNext,
       },
     });
 
+    const popupThumbs = new Swiper(this.popupThumbsContainer, {
+      slidesPerView: 4,
+      spaceBetween: 16,
+      loop: true,
+      loopedSlides: 4,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+    });
+
+    const popupSlider = new Swiper(this.popupContainer, {
+      slidesPerView: 1,
+      loop:true,
+      loopedSlides: 4,
+      navigation: {
+        prevEl: this.popupNavPrev,
+        nextEl: this.popupNavNext,
+      },
+    });
+
     slider.controller.control = thumbs;
     thumbs.controller.control = slider;
+
+    thumbs.controller.control = popupSlider;
+
+    popupSlider.controller.control = popupThumbs;
+    popupThumbs.controller.control = popupSlider;
   }
 }

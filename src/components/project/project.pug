@@ -1,5 +1,5 @@
 mixin project(item)
-  a(href= item.link.title).catalog__item
+  a(href= item.link.href).catalog__item
     .pic: img(src= item.img).pic__img
     .catalog__item-wrap
       .title!= item.title

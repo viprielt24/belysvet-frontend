@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const extractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// var CriticalPlugin = require('critical-plugin');
 
 const PATH = {
   build: path.join(__dirname, 'build'),

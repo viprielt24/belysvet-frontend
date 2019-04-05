@@ -28,12 +28,17 @@
     margin-right: -10px;
   }
 
-  &.hint--bottom-left:before{
+  &.hint--bottom-left:before,
+  &.hint--bottom-right:before{
     border-bottom-color: #fff;
   }
 
   &.hint--top-left:before{
     border-top-color: #fff;
+  }
+
+  &.hint--right:before{
+    border-right-color: #fff;
   }
 }
 

@@ -49,6 +49,29 @@ const pages = {
           text: 'Скачать фирменный стиль .PDF',
           size: '(7.5 Mb)',
         },
+      ],
+      tags: [
+        {
+          title: 'Продукция',
+          active: true
+        },
+        {
+          title: 'Жизнь компании',
+          active: false
+        },
+        {
+          title: 'Обучение и мероприятия',
+          active: false
+        },
+        {
+          title: 'Тег 1',
+          active: false
+        },
+        {
+          title: 'Тег 2',
+          active: false
+        },
+
       ]
     }
   },
@@ -140,6 +163,22 @@ const pages = {
         href: 'javascript:void(0);',
         title: 'Больше новостей'
       },
+    }
+  },
+  'company': {
+    parameters: {
+      page: 'company',
+      title: 'Компания',
+      pageName: 'Компания',
+      crumbs: ['Главная', 'Компания'],
+      company: data.company
+    }
+  },
+  'thanks': {
+    parameters: {
+      page: 'thanks',
+      title: 'Спасибо',
+      pageName: 'Спасибо',
     }
   },
 };
