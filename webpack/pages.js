@@ -50,29 +50,7 @@ const pages = {
           size: '(7.5 Mb)',
         },
       ],
-      tags: [
-        {
-          title: 'Продукция',
-          active: true
-        },
-        {
-          title: 'Жизнь компании',
-          active: false
-        },
-        {
-          title: 'Обучение и мероприятия',
-          active: false
-        },
-        {
-          title: 'Тег 1',
-          active: false
-        },
-        {
-          title: 'Тег 2',
-          active: false
-        },
-
-      ]
+      tags: data.tagline
     }
   },
   'press-inner': {
@@ -179,6 +157,24 @@ const pages = {
       page: 'thanks',
       title: 'Спасибо',
       pageName: 'Спасибо',
+    }
+  },
+  'study': {
+    parameters: {
+      page: 'study',
+      title: 'Обучение',
+      pageName: 'Обучение',
+      pageDescr: '<div class="row"><div class="col-sm-6"><p>Работа со сложным оборудованием требует специальных знаний. И с каждым годом строительные и монтажные компании понимают смысл этой аксиомы все реалистичнее. <br />Однако никто не научит ваших сотрудников работе с оборудованием лучше, чем его производитель.</p></div><div class="col-sm-6"><p>Компания «Белый свет 2000» оказывает не только информационные сервисные услуги в поддержку клиентам, но и проводит полноценное специализированное обучение в Школе Аварийного Освещения.</p></div>\n' +
+        '</div>',
+      crumbs: ['Главная', 'Обучение'],
+      seminars: data.studySeminars,
+      trainings: data.studyTraining,
+      tags: data.tagline,
+      taglineClear: true,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'Показать еще'
+      },
     }
   },
 };

@@ -1,0 +1,9 @@
+include ../../components/study-item/study-item
+
+.catalog.catalog--training
+  .catalog__content
+    .catalog__wrap
+      each item in trainings
+        .catalog__col
+          +study-item(item)
+  .catalog__footer: a(href= more.href).link= more.title

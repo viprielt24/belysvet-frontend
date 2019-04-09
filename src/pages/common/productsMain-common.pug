@@ -8,4 +8,5 @@ include ../../components/product/product
       .catalog__wrap
         each item in products
           .catalog__col
+            - item.img = '/images/catalog/catalog-main-pic1.jpg'
             +product(item)

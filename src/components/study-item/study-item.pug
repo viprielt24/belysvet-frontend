@@ -1,0 +1,16 @@
+include ../../components/tag/tag
+
+mixin study-item(item)
+  .catalog__item
+    .catalog__item-media: .pic
+      img(src= item.img).pic__img
+      if item.play
+        a(href= item.play.href).pic__link
+          .icon.icon--play
+          .pic__link-text смотреть видео
+    .catalog__item-box
+      .tagline
+        each part in item.tags
+          +tag(part)
+      .title!= item.title
+      .date= item.date

@@ -1,5 +1,12 @@
 extends ../layout.pug
 
 block content
-	.content
-		.study PAGE NAME :: study
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .study
+        .study__title Ближайшие семинары и конференции
+        include ../../pages/common/study-seminars-common
+        .study__title Видео-обзоры и обучающие видео
+        include ../../pages/common/tagline
+        include ../../pages/common/study-trainings-common

@@ -21,7 +21,7 @@
 
   .catalog__item {
     min-height: 260px;
-    background-size: cover;
+    background-position: 100% 0;
     padding: 145px 37px 23px;
   }
 

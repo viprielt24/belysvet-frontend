@@ -27,6 +27,7 @@ a.file{
     background-image: url(/images/file-type/file-doc.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
   }
 
   &:hover{

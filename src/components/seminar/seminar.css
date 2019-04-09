@@ -1,0 +1,162 @@
+@import "../../layout/variables.css";
+
+.seminars{
+  margin-bottom: -16px;
+}
+
+.seminar{
+  background-color: #fff;
+  box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+  border-radius: 2.64078px;
+  margin-bottom: 16px;
+  padding: 11px 28px 13px;
+
+  a.file{
+    min-height: 20px;
+    padding-left: 25px;
+
+    &:before{
+      top: 0;
+      width: 15px;
+      height: 20px;
+    }
+  }
+}
+
+.seminar__top{
+  margin-bottom: 5px;
+}
+
+.seminar__type{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 21px;
+  font-family: var(--opens);
+  color: var(--primary);
+}
+
+.seminar__middle{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
+}
+
+.seminar__title{
+  padding-right: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: var(--museo);
+}
+
+.seminar__middle-wrap{
+  display: flex;
+  align-items: center;
+
+  .button:first-child{
+    font-weight: 400;
+  }
+
+  .button:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176px;
+    margin-left: 8px;
+  }
+}
+
+.seminar__bottom{
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+}
+
+.seminar__bottom-item{
+  position: relative;
+  margin-right: 57px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -30px;
+    width: 1px;
+    height: 21px;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  &:first-child{
+    margin-right: 26px;
+
+    &:after{
+      content: none;
+    }
+  }
+
+  &:last-child{
+    margin-right: 0;
+
+    &:after{
+      content: none;
+    }
+  }
+}
+
+.seminar__date{
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background: rgba(189, 210, 69, 0.2);
+  border-radius: 3px;
+  padding: 0 9px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #A1BF35;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

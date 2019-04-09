@@ -1,3 +1,32 @@
+@import "../../layout/variables.css";
+
 .study {
-	border: 1px solid red;
+  margin-top: 22px;
+  padding-top: 39px;
+  border-top: 1px solid rgba(196, 196, 196, .5);
+}
+
+.content__header .title {
+  margin-bottom: 34px;
+}
+
+.study__title{
+  margin-bottom: 31px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: normal;
+  font-family: var(--museo);
+}
+
+.seminars{
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
+}
+
+.tagline{
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
 }

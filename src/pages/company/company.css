@@ -1,8 +1,9 @@
+@import "../../layout/variables.css";
+
 .company {
   margin-top: 22px;
   padding-top: 39px;
   border-top: 1px solid rgba(196, 196, 196, .5);
-
 }
 
 .content__header .title {
