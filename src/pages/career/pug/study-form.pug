@@ -1,0 +1,51 @@
+.form.form--style: form(action="javascript:void(0);").js-form-validate
+  .form-wrap
+    .form-group.form-group--triple
+      .row
+        .col-sm-4.form-element
+          label
+            .form-placeholder Как вас зовут?
+            input(type="text").form-control.js-form-validate__empty
+            .error Заполните это поле
+        .col-sm-4.form-element
+          label
+            .form-placeholder Email
+            input(type="email").form-control.js-form-validate__email
+            .error Заполните это поле
+        .col-sm-4.form-element
+          label
+            .form-placeholder Телефон
+            input(type="tel").form-control.js-form-validate__phone
+            .error Заполните это поле
+    .form-group
+      .row
+        .col-sm-6.form-element
+          label
+            .form-placeholder Название вашей организации
+            input(type="text").form-control.js-form-validate__empty
+            .error Заполните это поле
+        .col-sm-6.form-element
+          label
+            .form-placeholder Ваша должность
+            input(type="text").form-control.js-form-validate__empty
+            .error Заполните это поле
+    .form__bottom
+      .form-group
+        .form-element
+          .form__bottom-study-price Стоимость участия: 155000 рубей
+        .form-element
+          label.label.label--checkbox
+            input(type='checkbox', checked='').form-control.js-form-validate__checked
+            .icon.icon--checkbox
+            .label__text
+              | Я соглашаюсь с условиями обработки&nbsp;
+              a(href='javascript:void(0);').label__link персональных данных
+        .form-element
+          label.label.label--checkbox
+            input(type='checkbox', checked='').form-control.js-form-validate__checked
+            .icon.icon--checkbox
+            .label__text
+              | Согласие с&nbsp;
+              a(href='javascript:void(0);').label__link договором-офертой
+              | &nbsp;подтверждаю
+      .button-wrap: button(type="submit").button Записаться

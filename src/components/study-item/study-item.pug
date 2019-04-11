@@ -6,7 +6,7 @@ mixin study-item(item)
       img(src= item.img).pic__img
       if item.play
         a(href= item.play.href).pic__link
-          .icon.icon--play
+          .icon.icon--inline.icon--play: include ../../images/play.svg
           .pic__link-text смотреть видео
     .catalog__item-box
       .tagline

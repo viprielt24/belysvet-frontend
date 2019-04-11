@@ -8,7 +8,7 @@ mixin seminar(item)
       .seminar__title!= item.title
       .seminar__middle-wrap
         a(href= item.calendar.href).button.button--empty= item.calendar.title
-        a(href= item.order.href).button= item.order.title
+        a(href= item.order.href data-popupname="study").button.js-popup-open= item.order.title
     .seminar__bottom
       .seminar__bottom-item
         .seminar__date= item.date

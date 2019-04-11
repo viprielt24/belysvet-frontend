@@ -1,8 +1,14 @@
-import IMask from 'imask';
+import maskInput from 'vanilla-text-mask';
+
 /**
  * Как использовать:
  * 1. Поставить форме .js-form-validate
- * 2. Расставить полям тип валидации, например, .js-form-validate__empty или .js-form-validate__email
+ * 2. Расставить полям тип валидации (см.ниже)
+ * Классы для валидации полей:
+ * .js-form-validate__empty
+ * .js-form-validate__email
+ * .js-form-validate__phone
+ * .js-form-validate__checked
  */
 export default class Validate {
   constructor() {
@@ -18,7 +24,7 @@ export default class Validate {
   addEvents() {
     this.forms.forEach(form => {
       //маска для телефона
-      if (form.querySelector('.js-form-validate__phone')){
+      if (form.querySelector('.js-form-validate__phone')) {
         let phoneField = form.querySelector('.js-form-validate__phone');
         Validate.inputPhone(phoneField);
       }
@@ -70,7 +76,7 @@ export default class Validate {
 
       return res.json();
     }).then((res) => {
-      if(res.success == true){
+      if (res.success == true) {
         //очищаем форму
         form.reset();
         //очищаем элементы формы от класса заполнения
@@ -87,26 +93,26 @@ export default class Validate {
         let successMessage = document.querySelector('.js-popup-thanks');
         let formWrap = document.querySelector('.popup--visible');
 
-        if (successMessage){
+        if (successMessage) {
           successMessage.classList.add('popup--visible');
           successMessage.querySelector('.js-popup-close').addEventListener('click', () => {
-            successMessage.classList.remove('popup--visible')
+            successMessage.classList.remove('popup--visible');
           });
         }
 
-        setTimeout(()=>{
-          if(formWrap){
+        setTimeout(() => {
+          if (formWrap) {
             formWrap.classList.remove('popup--visible');
           }
         }, 500);
-      }else{
-        if(form.querySelector('.form-error')){
+      } else {
+        if (form.querySelector('.form-error')) {
           form.querySelector('.form-error').innerHTML = `<p>${res.message}</p>`;
-        }else{
+        } else {
           alert(res.message);
         }
       }
-      if(typeof res.data.callback != 'undefined'){
+      if (typeof res.data.callback != 'undefined') {
         eval(res.data.callback);
       }
     }).catch(err => {
@@ -118,13 +124,20 @@ export default class Validate {
 
   static inputPhone(phoneField) {
     //включаем маску
-    var phoneMask = new IMask(phoneField, {
+    /*var phoneMask = new IMask(phoneField, {
       mask: '+{7} (000) 000-00-00',
+    });*/
+    var phoneMask = maskInput({
+      inputElement: phoneField,
+      mask: ['+', '7', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
+      keepCharPositions: true,
+      placeholderChar: '_',
+      showMask: true
     });
     //показываем маску при фокусе
-    phoneField.addEventListener('focus', _ => {
+    /*phoneField.addEventListener('focus', _ => {
       phoneMask.updateOptions({lazy: false});
-    });
+    });*/
     // phoneField.addEventListener('blur', _=>{
     //   if (phoneMask.unmaskedValue.length <= 1){
     //     // phoneMask.updateOptions({lazy: false});
@@ -174,10 +187,12 @@ export default class Validate {
   }
 
   static inputErrorAdd(input) {
+    input.parentElement.classList.add('has-error');
     input.classList.add('has-error');
   }
 
   static inputErrorRemove(input) {
+    input.parentElement.classList.remove('has-error');
     input.classList.remove('has-error');
   }
 }

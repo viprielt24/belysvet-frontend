@@ -1,0 +1,107 @@
+@import "../../layout/variables.css";
+
+.lights__info {
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 59px;
+  padding-top: 23px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.lights__info-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 400px;
+  height: 80px;
+  background-color: #fff;
+  margin-right: 32px;
+  padding: 0 20px;
+  border-radius: 3px;
+  text-decoration: none;
+
+  &:hover {
+
+    .lights__info-item-text {
+      color: var(--hover);
+    }
+  }
+
+  &:last-child {
+    width: auto;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+.lights__info-item-text {
+  margin-left: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  font-family: var(--museo);
+  color: var(--primary);
+  transition: var(--trc);
+}
+
+/**
+
+ */
+.lights__filter {
+  margin-bottom: 23px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.lights__filter-title {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: var(--museo);
+  color: #333;
+}
+
+.catalog--favourite {
+  margin-bottom: 31px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  .catalog__wrap{
+    border-bottom: 1px solid #EBEBEB;
+  }
+
+  .catalog__col {
+    width: 16.666667%;
+    text-decoration: none;
+
+    &:nth-child(6n) {
+
+      .catalog__item {
+        border-right: 1px solid #EBEBEB;
+      }
+    }
+  }
+
+  .catalog__item {
+    border: 1px solid #EBEBEB;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .link{
+    display: none;
+  }
+
+  .title{
+    margin-bottom: 55px;
+  }
+
+  .descr{
+    margin-bottom: 13px;
+  }
+}

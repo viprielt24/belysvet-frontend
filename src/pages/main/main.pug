@@ -3,61 +3,7 @@ extends ../layout.pug
 block content
   include ../common/promoMain
   include ../common/productsMain-common
-  .catalog-box: .row
-    .col-sm-6
-      .catalog.catalog--favourite
-        .catalog__header
-          .catalog__title Световые приборы
-          a(href="javascript:void(0);").catalog__more
-            .catalog__more-text Смотреть все
-            .catalog__more-icon: include ../../images/arrow-right-small.svg
-        .catalog__content
-          .catalog__wrap
-            .catalog__col
-              .catalog__item
-                .title ICEBERG
-                .pic: img(src="/images/catalog/catalog-favourite-pic4.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
-            .catalog__col
-              .catalog__item
-                .title RUMB
-                .pic: img(src="/images/catalog/catalog-favourite-pic5.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
-            .catalog__col
-              .catalog__item
-                .title TERRON
-                .pic: img(src="/images/catalog/catalog-favourite-pic6.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
-    .col-sm-6
-      .catalog.catalog--favourite
-        .catalog__header
-          .catalog__title Блоки аварийного питания
-          a(href="javascript:void(0);").catalog__more
-            .catalog__more-text Смотреть все
-            .catalog__more-icon: include ../../images/arrow-right-small.svg
-        .catalog__content
-          .catalog__wrap
-            .catalog__col
-              .catalog__item
-                .title REGATA
-                .pic: img(src="/images/catalog/catalog-favourite-pic1.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
-            .catalog__col
-              .catalog__item
-                .title RUMB
-                .pic: img(src="/images/catalog/catalog-favourite-pic2.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
-            .catalog__col
-              .catalog__item
-                .title TERRON
-                .pic: img(src="/images/catalog/catalog-favourite-pic3.png").pic__img
-                .descr от 238 300 ₽
-                a(href="javascript:void(0);").link подробнее
+  include ../common/lightsMain-common
   include ../common/articleMain
   include ../../pages/common/techMain-common
   .catalog.catalog--segment.js-catalog-segment

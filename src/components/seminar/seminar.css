@@ -6,10 +6,14 @@
 
 .seminar{
   background-color: #fff;
-  box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
   border-radius: 2.64078px;
   margin-bottom: 16px;
   padding: 11px 28px 13px;
+  transition: var(--trsh);
+
+  &:hover{
+    box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+  }
 
   a.file{
     min-height: 20px;

@@ -1,0 +1,7 @@
+mixin lights-item(item)
+  .catalog__item
+    .title!= item.title
+    .pic: img(src= item.img).pic__img
+    .descr= 'от ' + item.price + ' ₽'
+    if item.link
+      a(href= item.link.href).link= item.link.title

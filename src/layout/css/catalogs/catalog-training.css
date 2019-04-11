@@ -37,7 +37,7 @@
     color: #333333;
   }
 
-  .date{
+  .date {
     margin-top: auto;
     font-style: normal;
     font-weight: 300;
@@ -51,7 +51,7 @@
     position: relative;
     height: 100%;
 
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       width: 100%;
@@ -76,10 +76,21 @@
     z-index: 1;
     display: block;
     width: 125px;
-    height: 106px;
-    margin: -63px 0 0 -53px;
+    height: 125px;
+    margin: -63px 0 0 -63px;
     text-align: center;
     text-decoration: none;
+
+    svg path {
+      transition: fill var(--time);
+    }
+
+    &:hover {
+
+      svg path {
+        fill: var(--primary);
+      }
+    }
   }
 
   .pic__link-text {
@@ -100,7 +111,7 @@
     height: 251px;
   }
 
-  .catalog__item-box{
+  .catalog__item-box {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -108,16 +119,17 @@
     padding: 13px 20px 10px;
   }
 
-  .tagline{
+  .tagline {
     margin-bottom: 0;
     padding: 0;
     border: 0;
+    pointer-events: none;
   }
 
-  .catalog__footer{
+  .catalog__footer {
     text-align: center;
 
-    .link{
+    .link {
       background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
       background-position: left 2px bottom 0;
       background-size: 10px 1px;
@@ -131,7 +143,7 @@
       border-bottom: 0;
       font-family: var(--museo);
 
-      &:hover{
+      &:hover {
         border-bottom: 0;
       }
     }

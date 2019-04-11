@@ -1,4 +1,4 @@
-import "./project-inner.css";
+import './project-inner.css';
 import Swiper from 'swiper/dist/js/swiper.min.js';
 
 export default class {
@@ -35,7 +35,7 @@ export default class {
 
     const slider = new Swiper(this.container, {
       slidesPerView: 1,
-      loop:true,
+      loop: true,
       loopedSlides: 4,
       navigation: {
         prevEl: this.navPrev,
@@ -43,32 +43,41 @@ export default class {
       },
     });
 
-    const popupThumbs = new Swiper(this.popupThumbsContainer, {
-      slidesPerView: 4,
-      spaceBetween: 16,
-      loop: true,
-      loopedSlides: 4,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      slideToClickedSlide: true,
-    });
-
-    const popupSlider = new Swiper(this.popupContainer, {
-      slidesPerView: 1,
-      loop:true,
-      loopedSlides: 4,
-      navigation: {
-        prevEl: this.popupNavPrev,
-        nextEl: this.popupNavNext,
-      },
-    });
-
     slider.controller.control = thumbs;
     thumbs.controller.control = slider;
 
-    thumbs.controller.control = popupSlider;
+    document.querySelectorAll('.js-contentSwiper-slide').forEach(slide => {
+      slide.addEventListener('click', () => {
 
-    popupSlider.controller.control = popupThumbs;
-    popupThumbs.controller.control = popupSlider;
+        const popupThumbs = new Swiper(this.popupThumbsContainer, {
+          slidesPerView: 4,
+          spaceBetween: 16,
+          loop: true,
+          loopedSlides: 4,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+          slideToClickedSlide: true,
+        });
+
+        const popupSlider = new Swiper(this.popupContainer, {
+          initialSlide: slider.activeIndex - 1,
+          slidesPerView: 1,
+          loop: true,
+          loopedSlides: 4,
+          navigation: {
+            prevEl: this.popupNavPrev,
+            nextEl: this.popupNavNext,
+          },
+        });
+
+
+        popupSlider.controller.control = popupThumbs;
+        popupThumbs.controller.control = popupSlider;
+
+        popupSlider.slideNext();
+      });
+    });
+
+
   }
 }

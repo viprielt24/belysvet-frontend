@@ -247,6 +247,23 @@
   background-image: url(/images/clip.svg);
 }
 
+.icon--gear {
+  width: 36px;
+  height: 36px;
+  background-image: url(/images/gear.svg);
+}
+
+.icon--blank {
+  width: 36px;
+  height: 36px;
+  background-image: url(/images/blank.svg);
+}
+
+.icon--info {
+  width: 30px;
+  height: 30px;
+  background-image: url(/images/info.svg);
+}
 
 .icon--inline {
   background-image: none;

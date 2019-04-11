@@ -66,6 +66,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-header')) {
+    import('../components/header/header').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-form-validate')) {
     import('../layout/js/validate').then(module => {
       new module.default();

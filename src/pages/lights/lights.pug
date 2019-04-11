@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .lights
+        .lights__info
+          a(href="javascript:void(0);").lights__info-item
+            .icon.icon--gear
+            .lights__info-item-text Подобрать световой прибор <br>аварийного освещения
+          a(href="javascript:void(0);").lights__info-item
+            .icon.icon--blank
+            .lights__info-item-text Световые приборы аварийного <br>освещения. Техническое описание
+          a(href="javascript:void(0);").lights__info-item
+            .icon.icon--info
+            .lights__info-item-text Справочная информация
+        .lights__filter
+          .lights__filter-title Укажите степень защиты от внешних воздействий, IP
+          - tags = [{title:'20',active: true},{title:'40'},{title:'42'},{title:'44'},{title:'54'},{title:'65'},{title:'66'},]
+          include ../../pages/common/tagline
+        include ../common/lights-common
+        include ../common/promo
+        .tech-descr
+          p Какой-то промотекст к картинке выше, например про распродажи, лучшие условия, участие в выставке, программы по обучению и т.п. Если нет никаких промоактивностей, то этот блок не выводится.
+          p Какой-то промотекст к картинке выше, например про распродажи, лучшие условия, участие в выставке, программы по обучению и т.п. Если нет никаких промоактивностей, то этот блок не выводится.
+        include ../common/polygraphy

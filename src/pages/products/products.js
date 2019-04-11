@@ -20,12 +20,18 @@ export default class {
       });
 
       menuTriggerClose.addEventListener('click', () => {
-        this.menuClose(triggerOpen, index);
+        this.menuClose(triggerOpen);
       });
     });
   }
 
   menuOpen(triggerOpen, index) {
+    const openedMenu = document.querySelector('.js-catalog__menu-content.is-open');
+    if (openedMenu) {
+      let openedMenuTrogger = openedMenu.parentElement.querySelector('.js-catalog__menu-trigger');
+      this.menuClose(openedMenuTrogger);
+    }
+
     let menu = triggerOpen.parentElement.querySelector('.js-catalog__menu-content');
     let wrapWidth = this.prodWrap.offsetWidth;
     menu.style.display = 'block';
@@ -36,7 +42,7 @@ export default class {
     }
   }
 
-  menuClose(triggerOpen, index) {
+  menuClose(triggerOpen) {
     let menu = triggerOpen.parentElement.querySelector('.js-catalog__menu-content');
     menu.style.display = 'none';
     menu.classList.remove('is-open');
