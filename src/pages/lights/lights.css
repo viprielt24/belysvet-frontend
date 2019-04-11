@@ -71,26 +71,24 @@
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(196, 196, 196, 0.5);
 
-  .catalog__wrap{
-    border-bottom: 1px solid #EBEBEB;
-  }
-
   .catalog__col {
     width: 16.666667%;
     text-decoration: none;
-
-    &:nth-child(6n) {
-
-      .catalog__item {
-        border-right: 1px solid #EBEBEB;
-      }
-    }
   }
 
   .catalog__item {
-    border: 1px solid #EBEBEB;
-    border-right: 0;
-    border-bottom: 0;
+    position: relative;
+    border: 0;
+    
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid #EBEBEB;
+    }
   }
 
   .link{

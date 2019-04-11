@@ -3,7 +3,8 @@ include ../../components/lights-item/lights-item
 .catalog.catalog--favourite
   .catalog__content
     .catalog__wrap
-      each item in lights
-        a(href="javascript:void(0);").catalog__col
-          - item.link = null
-          +lights-item(item)
+      each item, index in lights
+        if index <= 10
+          a(href="javascript:void(0);").catalog__col
+            - item.link = null
+            +lights-item(item)
