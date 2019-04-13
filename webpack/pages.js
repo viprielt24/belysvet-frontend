@@ -138,6 +138,66 @@ const pages = {
       pageDescr: '<p>Требовалось оборудование, применявшееся ранее на объектах. Организация аварийного освещения на базе Централизованной системы аварийного освещения BS-ELECTRO положительно зарекомендовало себя на развлекательных объектах — театрах, цирках, выставочных комплексах.</p>',
       crumbs: ['Главная', 'Компания', 'Проекты'],
       projects: data.projects,
+      projectsSolution: [
+        {
+          title: 'Техническое решение №1. Автономная система аварийного освещения с функцией TELECONTROL',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Техническое решение №2. Автономная система аварийного освещения с функциями AUTOTEST, TELECOMAND, FELS и MSS ',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Техническое решение №3. Автономная система аварийного освещения ZARIUS DALI ',
+          value: '1',
+          selected: false
+        },],
+      projectsPosition: [
+        {
+          title: 'BS-ARUNA-81-L1-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L2-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L3-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L4-INEXI2',
+          value: '1',
+          selected: false
+        },
+      ],
+      projectsSegment: [
+        {
+          title: 'Медицинские учреждения',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'HORECA',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Инфраструктура транспорта и подземные сооружения',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Объекты культуры',
+          value: '1',
+          selected: false
+        },
+      ],
       more: {
         href: 'javascript:void(0);',
         title: 'Больше новостей'
@@ -189,6 +249,33 @@ const pages = {
       lights: data.lights,
       files: data.productsFiles,
       promo: data.promo,
+    }
+  },
+  'connect': {
+    parameters: {
+      page: 'connect',
+      title: 'Связь с компанией',
+      pageName: 'Связь с компанией',
+      pageDescr: 'Какой-то текст. Компьютеры коренным образом изменили жизнь каждого человека. Несколько десятилетий назад люди даже не знали ничего об этих электронных устройствах, тогда как в наши дни даже маленький ребенок может управлять этой машиной. Почти все современные технологии зависит от компьютеров, которые используются для хранения данных: файлов, секретной информации, банковских операций и прочего.',
+      crumbs: ['Главная', 'Связь с компанией'],
+      connect: data.connect,
+      projectsSolution: [
+        {
+          title: 'Техническое решение №1. Автономная система аварийного освещения с функцией TELECONTROL',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Техническое решение №2. Автономная система аварийного освещения с функциями AUTOTEST, TELECOMAND, FELS и MSS ',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Техническое решение №3. Автономная система аварийного освещения ZARIUS DALI ',
+          value: '1',
+          selected: false
+        },
+      ],
     }
   }
 };

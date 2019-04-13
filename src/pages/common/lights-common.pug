@@ -5,6 +5,6 @@ include ../../components/lights-item/lights-item
     .catalog__wrap
       each item, index in lights
         if index <= 10
-          a(href="javascript:void(0);").catalog__col
+          .catalog__col
             - item.link = null
             +lights-item(item)

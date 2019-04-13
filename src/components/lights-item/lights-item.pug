@@ -1,5 +1,31 @@
 mixin lights-item(item)
   .catalog__item
+    .part
+      .part__wrap
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item001.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item002.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item003.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item004.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item005.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item006.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item007.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item008.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item009.png").part__pic
+        div(aria-label="Описание иконки").part__item.hint.hint--white.hint--right
+          img(src="images/lights/lights-item010.png").part__pic
+
+      .part__title проекты
+      .part__button: a(href="javascript:void(0);").button Посмотреть
+
     .title!= item.title
     .pic: img(src= item.img).pic__img
     .descr= 'от ' + item.price + ' ₽'

@@ -237,7 +237,6 @@
 .icon--next {
   background-image: url(/images/arrow-right.svg);
 }
-
 /**
 
  */
@@ -268,3 +267,91 @@
 .icon--inline {
   background-image: none;
 }
+/**
+
+ */
+.icon--list {
+  width: 28px;
+  height: 29px;
+  background-image: url(/images/list.svg);
+}
+
+.icon--sms {
+  width: 28px;
+  height: 29px;
+  background-image: url(/images/sms.svg);
+}
+
+.icon--atsign {
+  width: 28px;
+  height: 29px;
+  background-image: url(/images/atsign.svg);
+}
+
+.icon--phone {
+  width: 28px;
+  height: 29px;
+  background-image: url(/images/phone.svg);
+}
+/**
+
+ */
+.icon--msg-item1{
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/msg-item1.svg);
+}
+
+.icon--msg-item2{
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/msg-item2.svg);
+}
+
+.icon--msg-item3{
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/msg-item3.svg);
+}
+
+.icon--msg-item4{
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/msg-item4.svg);
+}
+
+.icon--msg-item4{
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/msg-item4.svg);
+}
+
+.icon--msg-item5{
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/msg-item5.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

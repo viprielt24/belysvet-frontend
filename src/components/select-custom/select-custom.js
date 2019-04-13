@@ -12,6 +12,7 @@ export default class {
   addEvents() {
     this.selection.forEach(select => {
       new Choices(select, {
+        placeholder: false,
         searchFloor: 2,
         shouldSort: false,
         itemSelectText: '',

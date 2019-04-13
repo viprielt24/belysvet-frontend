@@ -1,0 +1,204 @@
+@import "../../layout/variables.css";
+
+.content__bottom.content__bottom--descr .title {
+  margin-bottom: 14px;
+}
+
+.connect {
+  margin-top: 31px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+
+  .accordion__header{
+
+    .icon{
+      position: absolute;
+      top: 50%;
+      left: 36px;
+      margin-top: -14px;
+    }
+  }
+}
+
+.connect__form{
+  max-width: 784px;
+
+  .form__bottom{
+    display: block;
+    margin-top: 36px;
+
+    .button-wrap{
+      margin-left: 0;
+    }
+  }
+
+  .select-custom{
+
+    .choices{
+      border: 1px solid #C2C2C2;
+      box-shadow: none;
+    }
+
+    .choices__inner{
+      height: 46px;
+      overflow: hidden;
+    }
+
+    .choices__list--dropdown{
+      left: -1px;
+      right: -1px;
+      width: auto;
+      border: 1px solid #C2C2C2;
+      border-top: 0;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+}
+/**
+
+ */
+.msg{
+  display: flex;
+  align-items: center;
+}
+
+.msg__item{
+  display: flex;
+  align-items: center;
+  margin-right: 87px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  .icon{
+    margin-right: 10px;
+  }
+}
+
+.msg__name{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+  color: #404040;
+}
+/**
+
+ */
+.connect__mail-title{
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+}
+
+.connect__mail-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.connect__mail-name{
+  width: 245px;
+  margin-right: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+}
+
+.connect__mail-link{
+  font-family: var(--museo);
+  font-size: 16px;
+}
+/**
+
+ */
+.connect__call{
+  display: flex;
+  align-items: flex-start;
+}
+
+.connect__call-wrap{
+  width: 33.333333%;
+  padding-right: 70px;
+}
+
+.connect__call-item{
+  margin-bottom: 22px;
+
+  &:last-child{
+
+    .connect__call-descr{
+      padding-left: 22px;
+
+      .icon{
+        position: absolute;
+        top: 5px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.connect__call-title{
+  margin-bottom: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+}
+
+.connect__call-descr{
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

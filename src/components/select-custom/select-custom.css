@@ -1,5 +1,9 @@
 .select-custom {
 
+  .choices__placeholder{
+    display: none;
+  }
+
   .form-control {
     color: transparent;
   }
@@ -114,7 +118,71 @@
 /**
 
  */
-.projects__filter-top{
+.select-custom--default{
+
+  .choices{
+    background-color: #FFFFFF;
+    box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    transition: box-shadow var(--time);
+
+    &:hover{
+      box-shadow: 0 6px 15px rgba(97, 174, 59, 0.2);
+    }
+
+    &:before{
+      content: none;
+    }
+  }
+
+  .choices.is-open:after{
+    transform: rotate(-180deg);
+  }
+
+  .choices__list--single .choices__item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 55px 0 20px;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 15px;
+    font-family: "Museo Sans", sans-serif;
+    color: #434343;
+
+    &.choices__placeholder{
+      opacity: 1;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      font-family: var(--opens);
+      color: #C2C2C2;
+    }
+  }
+
+  .choices[data-type*="select-one"] .choices__inner{
+    padding: 0;
+  }
+
+  .choices__list--dropdown{
+    right: 0;
+    margin-top: -10px;
+  }
+
+  .choices[data-type*="select-one"]:after{
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/images/arrow-down-big-green.svg);
+    margin-top: -9px;
+    background-size: 14px 9px;
+  }
+}
+
+/*.projects__filter-top{
 
   .select-custom .choices{
     background-color: #FFFFFF;
@@ -145,8 +213,18 @@
     font-weight: 300;
     line-height: normal;
     font-size: 15px;
-    font-family: "Museo Sans", sans-serif;
+    font-family: var(--museo);
     color: #434343;
+
+    &.choices__placeholder{
+      opacity: 1;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      font-family: var(--opens);
+      color: #C2C2C2;
+    }
   }
 
   .select-custom .choices[data-type*="select-one"] .choices__inner{
@@ -166,7 +244,7 @@
     margin-top: -9px;
     background-size: 14px 9px;
   }
-}
+}*/
 /**
 
  */

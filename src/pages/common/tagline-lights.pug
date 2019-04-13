@@ -1,0 +1,7 @@
+include ../../components/tag/tag
+- tags = [{title:'20',active: true},{title:'40'},{title:'42'},{title:'44'},{title:'54'},{title:'65'},{title:'66'},]
+.tagline
+  each item in tags
+    +tag(item)
+  if taglineClear
+    a(href="javascript:void(0);").tagline__clear.js-tagline__clear Сбросить фильтры

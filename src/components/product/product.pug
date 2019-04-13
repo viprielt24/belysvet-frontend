@@ -19,7 +19,7 @@ mixin product(item)
 
           .catalog__menu-content-title!= item.title
           .catalog__menu-content-wrap
-            each part in item.menuList
-              a(href= part.link).catalog__menu-content-item
-                .pic: img(src= part.img).pic__img
-                .title= part.title
+            each unit in item.menuList
+              a(href= unit.link).catalog__menu-content-item
+                .pic: img(src= unit.img).pic__img
+                .title= unit.title
