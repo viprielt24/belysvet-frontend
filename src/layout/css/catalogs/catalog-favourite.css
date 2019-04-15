@@ -119,6 +119,11 @@
     width: 32px;
     height: 32px;
     margin: 0 10px 10px 0;
+    transition: var(--trsh);
+
+    &:hover{
+      box-shadow: 0 3px 13px #A1C760;
+    }
   }
 
   .part__pic {
@@ -139,8 +144,14 @@
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    text-decoration: none;
     font-family: var(--opens);
     color: var(--primary);
+    transition: var(--trc);
+    
+    &:hover{
+      color: var(--hover);
+    }
   }
 
 

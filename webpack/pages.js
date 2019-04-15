@@ -277,7 +277,15 @@ const pages = {
         },
       ],
     }
-  }
+  },
+  'registration': {
+    parameters: {
+      page: 'registration',
+      title: 'Регистрация',
+      pageName: 'Регистрация',
+      crumbs: ['Главная', 'Регистрация'],
+    }
+  },
 };
 // Страницы проекта
 pages.pages = {

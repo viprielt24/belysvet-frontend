@@ -420,6 +420,10 @@ textarea.form-control {
     border-radius: 3px;
     color: #404040;
     font-size: 16px;
+
+    &.has-error{
+      border-color: var(--formErrorColor);
+    }
   }
 
   textarea.form-control {
