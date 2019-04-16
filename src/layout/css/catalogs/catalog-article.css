@@ -18,6 +18,18 @@
   .catalog__item {
     display: flex;
     min-height: 211px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--trsh);
+
+    &:hover{
+      box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+
+      .link{
+        color: var(--hover);
+        border-bottom-color: var(--hover);
+      }
+    }
   }
 
   .catalog__item-wrap {

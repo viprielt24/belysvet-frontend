@@ -28,12 +28,3 @@ include ../../components/article/article
                 if index <= 3
                   .catalog__col
                     +article(item, index)
-
-
-//-.catalog.catalog--article
-  .catalog__content
-    .catalog__wrap
-      each item in article
-        .catalog__col
-          +article(item)
-  .catalog__footer: a(href= more.href).button.button--press= more.title

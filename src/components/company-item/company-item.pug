@@ -1,4 +1,4 @@
 mixin company-item(item)
-  .catalog__item
+  a(href= item.link.href).catalog__item
     .title!= item.title
-    a(href= item.link.href).link= item.link.title
+    .link= item.link.title

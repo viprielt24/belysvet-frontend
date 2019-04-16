@@ -37,8 +37,10 @@ export default class {
     menu.style.display = 'block';
     menu.classList.add('is-open');
     menu.style.width = wrapWidth + 'px';
+    menu.style.left = 15 + 'px';
     if (index % 2) {
-      menu.style.right = 0;
+      menu.style.left = 'auto'
+      menu.style.right = 15 + 'px';
     }
   }
 

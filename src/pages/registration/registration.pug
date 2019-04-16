@@ -5,3 +5,67 @@ block content
     .container
       include ../../components/content-header/content-header
       .registration
+        .form.form--style: form(action="javascript:void(0);").js-form-validate
+          .registration__item
+            .registration__item-title Информация об организации
+            .registration__specialization
+              .registration__specialization-title Какая специализация у организации
+              include ../../pages/common/tagline-registration
+            .form-wrap
+              .form-group: .row
+                .col-sm-6.form-element: label
+                  .form-placeholder Страна местонахождения
+                  include ../common/registration-country-common
+                .col-sm-6.form-element: label
+                  .form-placeholder Город
+                  include ../common/registration-city-common
+              .form-group
+                .form-element: label
+                  .form-placeholder Название организации
+                  include ../common/registration-organization-common
+          .registration__item
+            .registration__item-title Персональная информация
+            .form-wrap
+              .form-group: .row
+                .col-sm-4.form-element: label
+                  .form-placeholder Фамилия
+                  input.form-control.js-form-validate__empty
+                  .error Текст ошибки
+                .col-sm-4.form-element: label
+                  .form-placeholder Имя
+                  input.form-control.js-form-validate__empty
+                  .error Текст ошибки
+                .col-sm-4.form-element: label
+                  .form-placeholder Отчество
+                  input.form-control.js-form-validate__empty
+                  .error Текст ошибки
+              .form-group: .row
+                .col-sm-6.form-element: label
+                  .form-placeholder Ваш мобильный телефон
+                  input.form-control.js-form-validate__phone
+                  .error Текст ошибки
+                .col-sm-6.form-element: label
+                  .form-placeholder Email (логин для входа в личный кабинет)
+                  input.form-control.js-form-validate__email
+                  .error Текст ошибки
+              .form-group
+                .form-element: label
+                  .form-placeholder Ваша должность
+                  input.form-control.js-form-validate__empty
+                  .error Текст ошибки
+              .form-group
+                .form-element: label
+                  .form-placeholder Комментарий
+                  textarea(rows="4").form-control.js-form-validate__empty
+                  .error Текст ошибки
+              .form__bottom
+                .form-group
+                  .form-element
+                    label.label.label--checkbox
+                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                      .icon.icon--checkbox
+                      .label__text
+                        | Я соглашаюсь с условиями обработки<br>
+                        a(href='javascript:void(0);').label__link персональных данных
+                      .error
+                .button-wrap: button(type="submit").button Отправить заявку

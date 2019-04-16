@@ -22,6 +22,8 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 211px;
+    cursor: pointer;
+    text-decoration: none;
 
     .button{
       margin-top: auto;

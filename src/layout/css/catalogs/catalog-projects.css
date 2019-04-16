@@ -65,6 +65,11 @@
 
     &:hover {
 
+      .link{
+        color: var(--hover);
+        border-bottom-color: var(--hover);
+      }
+
       .catalog__item-sign {
         height: 4px;
       }

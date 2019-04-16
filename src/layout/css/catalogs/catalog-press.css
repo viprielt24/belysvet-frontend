@@ -24,10 +24,23 @@
     background-position: right -30px bottom -35px;
     background-repeat: no-repeat;
     padding: 20px 25px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--trsh);
+
+    &:hover {
+      box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+
+      .link{
+        color: var(--hover);
+        border-bottom-color: var(--hover);
+      }
+    }
   }
 
-  .tag{
+  .tag {
     margin-bottom: 11px;
+    cursor: default;
   }
 
   .title {

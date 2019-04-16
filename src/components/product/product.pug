@@ -1,25 +1,25 @@
 mixin product(item)
-  .catalog__item(style='background-image: url(' + item.img + ')')
-    .title!= item.title
-    a(href= item.link.href).link= item.link.title
+  if page === 'products'
 
-    if page === 'products'
+    .catalog__menu
 
-      .catalog__menu
+      .catalog__menu-trigger.js-catalog__menu-trigger
+        .catalog__menu-trigger-text= item.menuList.length + ' серий'
+        .icon.icon--plus.icon--plus-white.icon--plus-small
 
-        .catalog__menu-trigger.js-catalog__menu-trigger
+      div(style="display:none;" class='catalog__menu-content js-catalog__menu-content catalog__menu-content--' + item.menuType)
+
+        .catalog__menu-trigger.js-catalog__menu-content-close
           .catalog__menu-trigger-text= item.menuList.length + ' серий'
           .icon.icon--plus.icon--plus-white.icon--plus-small
 
-        div(style="display:none;" class='catalog__menu-content js-catalog__menu-content catalog__menu-content--' + item.menuType)
+        .catalog__menu-content-title!= item.title
+        .catalog__menu-content-wrap
+          each unit in item.menuList
+            a(href= unit.link).catalog__menu-content-item
+              .pic: img(src= unit.img).pic__img
+              .title= unit.title
 
-          .catalog__menu-trigger.js-catalog__menu-content-close
-            .catalog__menu-trigger-text= item.menuList.length + ' серий'
-            .icon.icon--plus.icon--plus-white.icon--plus-small
-
-          .catalog__menu-content-title!= item.title
-          .catalog__menu-content-wrap
-            each unit in item.menuList
-              a(href= unit.link).catalog__menu-content-item
-                .pic: img(src= unit.img).pic__img
-                .title= unit.title
+  a(href="javascript:void(0);").catalog__item(style='background-image: url(' + item.img + ')')
+    .title!= item.title
+    .link= item.link.title

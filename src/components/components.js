@@ -47,6 +47,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-select-country')) {
+    import('../pages/registration/registration').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-insert-video')) {
     import('./insert-video/insert-video').then(module => {
       new module.default();

@@ -31,29 +31,6 @@
       margin-left: 0;
     }
   }
-
-  .select-custom{
-
-    .choices{
-      border: 1px solid #C2C2C2;
-      box-shadow: none;
-    }
-
-    .choices__inner{
-      height: 46px;
-      overflow: hidden;
-    }
-
-    .choices__list--dropdown{
-      left: -1px;
-      right: -1px;
-      width: auto;
-      border: 1px solid #C2C2C2;
-      border-top: 0;
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px;
-    }
-  }
 }
 /**
 

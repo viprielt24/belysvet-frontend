@@ -6,6 +6,7 @@
   border-top: 1px solid rgba(196, 196, 196, 0.5);
 
   .catalog--main .catalog__col{
+    position: relative;
     width: 50%;
   }
 
@@ -15,9 +16,18 @@
     align-items: flex-start;
     flex-direction: column;
     padding: 40px 35px 20px;
+    cursor: pointer;
+    text-decoration: none;
 
     .link{
       margin-top: auto;
+    }
+
+    &:hover{
+      .link{
+        color: var(--hover);
+        border-bottom-color: var(--hover);
+      }
     }
   }
 }

@@ -284,6 +284,73 @@ const pages = {
       title: 'Регистрация',
       pageName: 'Регистрация',
       crumbs: ['Главная', 'Регистрация'],
+      registrationCountry: [
+        {
+          title: 'Россия',
+          value: '11234',
+          selected: false
+        },
+        {
+          title: 'Украина',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Беларусь',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Казахстан',
+          value: '1',
+          selected: false
+        },
+      ],
+      registrationCity: [
+        {
+          title: 'Москва и Московская область',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Санкт-Петербург',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Абакан',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Альметьевск',
+          value: '1',
+          selected: false
+        },
+      ],
+      registrationOrganization: [
+        {
+          title: 'Ассоциация «Русский Свет»',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Компания ЭТМ',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' АО «Форум Электро»',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' ООО «Элком-Электро»',
+          value: '1',
+          selected: false
+        },
+      ],
+
     }
   },
 };

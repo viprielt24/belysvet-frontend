@@ -1,0 +1,14 @@
+include ../../components/select-custom/select-custom
+
+//+select-custom(registrationCountry, 'Укажите страну', 'default select-custom--simple')
+
+.select-custom.select-custom--default.select-custom--simple
+  select.form-control.js-select-country
+    - conter = 0;
+    each item in registrationCountry
+      //- неправильное условие на отсутствие выделенного пункта
+      if !item.selected & !conter
+        option(placeholder) Укажите страну
+        - conter++
+      if item.value
+        option(value= item.value selected= item.selected)= item.title

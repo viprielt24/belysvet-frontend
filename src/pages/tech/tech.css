@@ -23,4 +23,6 @@
 
 .catalog--tech .catalog__item{
   min-height: 288px;
+  cursor: pointer;
+  text-decoration: none;
 }
