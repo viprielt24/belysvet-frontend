@@ -6,6 +6,10 @@
   border-top: 1px solid rgba(196, 196, 196, .5);
 }
 
+.content__bottom{
+  justify-content: flex-start;
+}
+
 .content__header .title {
   margin-bottom: 0;
 }

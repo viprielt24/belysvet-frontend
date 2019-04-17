@@ -4,7 +4,6 @@ include ../../components/lights-item/lights-item
   .catalog__content
     .catalog__wrap
       each item, index in lights
-        if index <= 10
-          .catalog__col
-            - item.link = null
-            +lights-item(item)
+        .catalog__col
+          - item.link = null
+          +lights-item(item)

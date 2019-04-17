@@ -6,3 +6,7 @@
     margin-bottom: 25px;
   }
 }
+
+.content__bottom{
+  justify-content: flex-start;
+}

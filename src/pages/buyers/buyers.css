@@ -1,59 +1,13 @@
 @import "../../layout/variables.css";
 
 .career{
+  margin-top: 23px;
+  padding-top: 23px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
 
   .accordion__content{
     padding-right: 360px;
   }
-}
-
-.career__top{
-  margin-top: 30px;
-  margin-bottom: 23px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
-
-  .list{
-    display: flex;
-    align-items: center;
-  }
-
-  .list__item{
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-right: 35px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 26px;
-    font-family: var(--opens);
-    color: #A1BF35;
-
-    &:last-child{
-      margin-right: 0;
-    }
-
-    &:before{
-      content: '';
-      margin-right: 6px;
-      width: 22px;
-      height: 22px;
-      background-image: url(/images/checkbox-primary.svg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: 14px 10px;
-    }
-  }
-}
-
-.career__top-title{
-  margin-bottom: 15px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  font-family: var(--museo);
 }
 
 .accordion__close{
@@ -92,7 +46,7 @@
  */
 .career-form{
   background-color: #fff;
-  margin: 40px 0 0;
+  margin: 40px 0 -40px;
   padding: 62px 0 48px;
 
   .form{
@@ -129,26 +83,4 @@
   text-align: center;
   font-family: var(--opens);
   color: #404040;
-}
-
-.career-footer{
-  padding: 40px 0 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  font-family: var(--opens);
-  color: #404040;
-
-  .link{
-    display: inline-block;
-    margin-left: 5px;
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--trc);
-
-    &:hover{
-      color: var(--hover);
-    }
-  }
 }

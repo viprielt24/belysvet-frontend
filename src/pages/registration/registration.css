@@ -4,25 +4,25 @@
   justify-content: center;
 }
 
-.registration{
+.registration {
   background-color: #fff;
   max-width: 1028px;
   margin: 0 auto -40px;
   padding: 48px 74px 56px;
 
-  .form__bottom{
+  .form__bottom {
     margin-top: 40px;
   }
 }
 
-.registration__item{
+.registration__item {
 
-  &:first-child{
+  &:first-child {
     margin-bottom: 40px;
   }
 }
 
-.registration__item-title{
+.registration__item-title {
   margin-bottom: 22px;
   font-style: normal;
   font-weight: 700;
@@ -33,16 +33,16 @@
   font-family: var(--museo);
 }
 
-.registration__specialization{
+.registration__specialization {
   margin-bottom: 18px;
 
-  .form-control{
+  .form-control {
     height: 27px;
     margin-bottom: 6px;
   }
 }
 
-.registration__specialization-title{
+.registration__specialization-title {
   margin-bottom: 7px;
   font-style: normal;
   font-weight: normal;

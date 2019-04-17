@@ -166,6 +166,12 @@
   background-image: url(/images/arrow-down.svg);
 }
 
+.icon--arrow-right-small {
+  width: 6px;
+  height: 11px;
+  background-image: url(/images/arrow-right-small.svg);
+}
+
 .icon--zoom {
   width: 14px;
   height: 13px;
@@ -264,10 +270,6 @@
   height: 30px;
   background-image: url(/images/info.svg);
 }
-
-.icon--inline {
-  background-image: none;
-}
 /**
 
  */
@@ -287,6 +289,11 @@
   width: 28px;
   height: 29px;
   background-image: url(/images/atsign.svg);
+}
+
+.icon--atsign-sm {
+  width: 16px;
+  height: 16px;
 }
 
 .icon--phone {
@@ -332,7 +339,12 @@
   height: 16px;
   background-image: url(/images/msg-item5.svg);
 }
+/**
 
+ */
+.icon--inline {
+  background-image: none;
+}
 
 
 

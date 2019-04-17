@@ -1,0 +1,91 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container: include ../../components/content-header/content-header
+    .content__text-editor.text-editor
+      script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+      .container
+        .contacts.js-contacts
+          .contacts__item
+            .contacts__item-title Центральный офис ООО «Белый свет 2000»
+            .contacts__item-map: #contactsMap1(data-map-marker="/images/map/marker2.svg")
+            .contacts__item-bottom: .row
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Адрес офиса
+                  .connect__item-descr 125080, Москва, Факультетский переулок, дом 12 (заезд с ул. Царева)
+                .connect__item
+                  .connect__item-title Адрес для почтовой корреспонденции
+                  .connect__item-descr 125080, Москва, Факультетский переулок, дом 12
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Телефон/факс
+                  .connect__item-descr.connect__item-descr--phone
+                    .icon.icon--msg-item5
+                    | +7 (495) 785-17-67<br>(многоканальный)
+                .connect__item
+                  .connect__item-title Эл.почта
+                  .connect__item-descr
+                    .connect__item-mail
+                      .icon.icon--atsign.icon--atsign-sm
+                      a(href="javascript:void(0);") info@belysvet.ru
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title По вопросам трудоустройства
+                  .connect__item-descr
+                    .connect__item-mail
+                      .icon.icon--atsign.icon--atsign-sm
+                      a(href="javascript:void(0);") hr@belysvet.ru
+                    .connect__item-more
+                      | Подробнее в разделе&nbsp;
+                      a(href="javascript:void(0);") Карьера
+                      .icon.icon--inline.icon--arrow-right-small: include ../../images/arrow-right-small.svg
+
+                .connect__item
+                  .connect__item-title Для СМИ
+                  .connect__item-descr
+                    .connect__item-mail
+                      .icon.icon--atsign.icon--atsign-sm
+                      a(href="javascript:void(0);") pressa@belysvet.ru
+                    .connect__item-more
+                      | Подробнее в разделе&nbsp;
+                      a(href="javascript:void(0);") Пресс-центр
+                      .icon.icon--inline.icon--arrow-right-small: include ../../images/arrow-right-small.svg
+
+          .contacts__item
+            .contacts__item-title Центральный склад г. Москва
+            .contacts__item-map: #contactsMap2(data-map-marker="/images/map/marker2.svg")
+            .contacts__item-bottom: .row
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Адрес склада
+                  .connect__item-descr г. Москва, ул. Маршала Федоренко, 3, стр.1
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Телефон/факс
+                  .connect__item-descr.connect__item-descr--phone
+                    .icon.icon--msg-item5
+                    | +7 (985) 778-25-92
+
+          .contacts__item
+            .contacts__item-title Склад г. Санкт-Петербург
+            .contacts__item-map: #contactsMap3(data-map-marker="/images/map/marker2.svg")
+            .contacts__item-bottom: .row
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Адрес склада
+                  .connect__item-descr г. Санкт-Петербург, пос. Шушары, ул. Пушкинская, 25, корп. 1, стр. 1
+
+              .col-sm-4.contacts__connect.connect
+                .connect__item
+                  .connect__item-title Телефон/факс
+                  .connect__item-descr.connect__item-descr--phone
+                    .icon.icon--msg-item5
+                    | +7 (911) 740-75-70

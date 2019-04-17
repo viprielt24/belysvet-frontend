@@ -53,6 +53,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-contacts')) {
+    import('../pages/contacts/contacts').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-insert-video')) {
     import('./insert-video/insert-video').then(module => {
       new module.default();

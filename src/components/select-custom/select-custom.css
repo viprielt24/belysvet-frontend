@@ -193,6 +193,10 @@
       box-shadow: none;
       border-color: var(--hover);
     }
+
+    &.is-disabled:hover{
+      border: 1px solid #C2C2C2;
+    }
   }
 
   .choices__inner{

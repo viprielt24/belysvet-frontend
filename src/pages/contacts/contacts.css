@@ -1,0 +1,195 @@
+@import "../../layout/variables.css";
+
+.content__bottom {
+  justify-content: flex-start;
+
+  .title{
+    margin-bottom: 22px;
+  }
+}
+
+.contacts__item{
+  margin-bottom: 57px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  &:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+  }
+}
+
+.contacts__item-title{
+  margin-bottom: 27px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  font-family: var(--museo);
+}
+/**
+
+ */
+.contacts__item-bottom{
+  margin-top: 42px;
+}
+
+.connect__item{
+  margin-bottom: 28px;
+  padding-right: 80px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.connect__item-title{
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+}
+
+.connect__item-descr{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+
+  .icon{
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+.connect__item-descr--phone{
+  position: relative;
+  padding-left: 24px;
+
+  .icon{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin-right: 0;
+  }
+}
+
+.connect__item-mail{
+  font-size: 16px;
+  font-family: var(--museo);
+}
+
+.connect__item-more{
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--museo);
+  color: #404040;
+
+  .icon{
+    margin-right: 0;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+}
+/**
+
+ */
+#contactsMap1,
+#contactsMap2,
+#contactsMap3{
+  width: 100%;
+  height: 456px;
+}
+
+#contactsMap2{
+  .balloon{
+    height: 140px;
+  }
+}
+
+#contactsMap3{
+  .balloon{
+    height: 160px;
+  }
+}
+
+.balloon{
+  position: relative;
+  top: -192px;
+  width: 323px;
+  height: 192px;
+  background-color: #fff;
+  padding: 27px 30px 22px;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+
+  &:before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 15px 15px;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+.balloon-title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+  color: #404040;
+}
+
+.balloon-content-address{
+  margin: 7px 0 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.balloon-content-phone{
+  margin-bottom: 9px;
+  padding-left: 26px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--museo);
+  color: #404040;
+  background-image: url(/images/msg-item5.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.balloon-content-email{
+  padding-left: 26px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--museo);
+  color: #A1BF35;
+  background-image: url(/images/atsign.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 16px 16px;
+}

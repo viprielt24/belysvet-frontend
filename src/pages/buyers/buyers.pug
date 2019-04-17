@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .career: .career__accordion: include ../common/career
+    .career-form
+      .career-form__descr Не нашли ответа на свой вопрос?
+      .career-form__title Напишите нам!
+      .career-form__subtitle Напишите нам свой вопрос и мы с удовольствием оперативно вам на него ответим.
+      include ./pug/career-form

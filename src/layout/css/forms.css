@@ -38,6 +38,11 @@
   font-size: 13px;
   color: #FFFFFF;
   border: 0;
+  transition: var(--trb);
+
+  &:hover{
+    border-color: var(--hover);
+  }
 
   & ~ .error {
     opacity: 0;
@@ -346,7 +351,7 @@ textarea.form-control {
     min-height: 16px;
     background-color: transparent;
     margin-top: 2px;
-    border: 1px solid #61AE3B;
+    border: 1px solid var(--primary);
     border-radius: 2px;
     transition: var(--trbg), var(--trb);
 
@@ -391,7 +396,7 @@ textarea.form-control {
   & input[type="checkbox"]:checked {
 
     & ~ .icon--checkbox{
-      background-color: #61AE3B;
+      background-color: var(--primary);
 
       &:before {
         background-image: url(/images/checkbox2.svg);
@@ -421,8 +426,13 @@ textarea.form-control {
     color: #404040;
     font-size: 16px;
 
-    &.has-error{
+    &.has-error,
+    &.has-error:hover{
       border-color: var(--formErrorColor);
+    }
+
+    &:hover{
+      border-color: var(--hover);
     }
   }
 
