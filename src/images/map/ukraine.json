@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.500159,30.462065
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.50010566163,30.461860982803
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.411663396559,30.603933796295
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.438043627968,30.614685846558
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.465580677776,30.373989100248
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.45018299717,30.646771519423
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.403919525131,30.681527337766
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.412823408605,30.414754647841
+        ]
+      },
+      "properties": {
+        "balloonContent": "",
+        "clusterCaption": "",
+        "hintContent": ""
+      }
+    }
+  ]
+}

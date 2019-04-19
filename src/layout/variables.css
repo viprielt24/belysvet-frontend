@@ -24,6 +24,9 @@
   --trsee: opacity var(--time), visibility var(--time);
   --trsh: box-shadow var(--time);
   --trf: transform var(--time);
+
+  --trsf: fill var(--time);
+  --trss: stroke var(--time);
 }
 
 /**

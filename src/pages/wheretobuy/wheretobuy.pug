@@ -1,0 +1,34 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .wheretobuy.js-wheretobuy
+        script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+        .wheretobuy__filter: .form.form--style
+          .form-group: .row
+            .col-sm-4.form-element: label
+              .form-placeholder Страна
+              include ../common/wheretobuy-country-common
+            .col-sm-4.form-element: label
+              .form-placeholder Город
+              include ../common/wheretobuy-city-common
+            .col-sm-4.form-element
+              .wheretobuy__toggle-map.js-wheretobuy__toggle-map
+                .wheretobuy__toggle-map-text.js-wheretobuy__toggle-map-text Скрыть карту
+                .icon.icon-inline: include ../../images/eye.svg
+        .wheretobuy__map.js-wheretobuy__map
+          .wheretobuy__map-self: #wheretobuyMap(data-map-marker="/images/map/marker2.svg")
+    .wheretobuy-partners
+      .container
+        .wheretobuy-partners__title.js-wheretobuy-partners__title Москва и Московская область
+        .wheretobuy-partners__wrap.js-wheretobuy-partners__wrap
+          .wheretobuy-partners__item
+            .wheretobuy-partners__item-name Ассоциация «Русский Свет», Алматы
+            .wheretobuy-partners__item-address 050000, г.Алматы, Микрорайон 8, д. 55А, офис 8
+            .wheretobuy-partners__item-phone 8 (727) 249-60-83, 390-37-49
+            .wheretobuy-partners__item-email-wrap
+              a(href="mailto:almata@urs.russvet.ru").wheretobuy-partners__item-email almata@urs.russvet.ru
+            .wheretobuy-partners__item-site-wrap
+              a(href="http://russvet.ru" target=_blank).wheretobuy-partners__item-site russvet.ru

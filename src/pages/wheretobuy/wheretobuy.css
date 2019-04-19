@@ -1,0 +1,155 @@
+@import "../../layout/variables.css";
+
+.wheretobuy__toggle-map {
+  display: flex;
+  align-items: center;
+  margin-top: 52px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  font-family: var(--museo);
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--trc);
+
+  .icon {
+    margin-left: 14px;
+
+    svg path {
+      transition: var(--trsf);
+    }
+  }
+
+  &:hover {
+    color: var(--hover);
+
+    svg path {
+      fill: var(--hover)
+    }
+  }
+}
+
+.wheretobuy__filter{
+  margin-bottom: 24px;
+}
+
+.wheretobuy__map{
+  overflow: hidden;
+  margin-top: 24px;
+  transition: height var(--time);
+}
+
+.wheretobuy__map-self{
+  padding-top: 23px;
+  padding-bottom: 63px;
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+#wheretobuyMap{
+  width: 100%;
+  height: 521px;
+}
+/**
+
+ */
+.wheretobuy-partners{
+  background-color: #fff;
+  margin-bottom: -40px;
+  padding: 70px 0 65px;
+}
+
+.wheretobuy-partners__wrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -33px;
+}
+
+.wheretobuy-partners__title{
+  margin-bottom: 44px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: normal;
+  font-family: var(--museo);
+  color: #000000;
+}
+
+.wheretobuy-partners__item{
+  width: 33.333333%;
+  margin-bottom: 33px;
+}
+
+.wheretobuy-partners__item-name{
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  font-family: var(--museo);
+  color: #333;
+}
+
+.wheretobuy-partners__item-phone,
+.wheretobuy-partners__item-address{
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+.wheretobuy-partners__item-phone{
+  padding-left: 21px;
+  background-image: url(/images/msg-item5.svg);
+  background-position: 0 5px;
+  background-repeat: no-repeat;
+}
+
+.wheretobuy-partners__item-site,
+.wheretobuy-partners__item-email{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--museo);
+  color: #A1BF35;
+}
+
+.wheretobuy-partners__item-email-wrap{
+  margin-bottom: 8px;
+}
+
+.wheretobuy-partners__item-email{
+  display: inline-block;
+  min-height: 20px;
+  padding-left: 21px;
+  background-image: url(/images/atsign.svg);
+  background-position: 0 3px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: var(--trc);
+
+  &:hover{
+    color: var(--hover);
+  }
+}
+
+.wheretobuy-partners__item-site{
+  display: inline-block;
+  min-height: 20px;
+  padding-left: 21px;
+  background-image: url(/images/earth.svg);
+  background-position: 0 3px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: var(--trc);
+
+  &:hover{
+    color: var(--hover);
+  }
+}

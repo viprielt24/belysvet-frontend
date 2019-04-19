@@ -3,28 +3,52 @@
   "features": [
     {
       "id": 0,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Армавир",
+        "address": "352932, г.Армавир, ул. Ефремова, д. 256",
+        "email": "logist@armavir.russvet.ru",
+        "phone": "(86137) 2-71-42",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          44.98206094626,41.082195711639
+          44.98206094626,
+          41.082195711639
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Армавир",
+        "address": "352932, г.Армавир, ул. Ефремова, д. 256",
+        "email": "logist@armavir.russvet.ru",
+        "phone": "(86137) 2-71-42",
+        "site": "russvet.ru"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.99078683,
+          41.133132034393
         ]
       }
     },
     {
       "id": 2,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Армавир",
+        "address": "352932, г.Армавир, ул. Ефремова, д. 256",
+        "email": "logist@armavir.russvet.ru",
+        "phone": "(86137) 2-71-42",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          44.99078683,41.133132034393
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.996893488679,41.108616084656
+          44.996893488679,
+          41.108616084656
         ]
       }
     }

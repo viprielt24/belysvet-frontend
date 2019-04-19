@@ -49,6 +49,7 @@
     background-color: var(--primary);
   }
 }
+
 /**
 
  */
@@ -86,7 +87,7 @@
   }
 }
 
-.icon--plus-white{
+.icon--plus-white {
 
   &:before,
   &:after {
@@ -94,7 +95,7 @@
   }
 }
 
-.icon--plus-small{
+.icon--plus-small {
   width: 14px;
   height: 14px;
 
@@ -244,6 +245,7 @@
 .icon--next {
   background-image: url(/images/arrow-right.svg);
 }
+
 /**
 
  */
@@ -270,6 +272,7 @@
   height: 30px;
   background-image: url(/images/info.svg);
 }
+
 /**
 
  */
@@ -301,44 +304,52 @@
   height: 29px;
   background-image: url(/images/phone.svg);
 }
+
+.icon--eye {
+  width: 24px;
+  height: 14px;
+  background-image: url(/images/eye.svg);
+}
+
 /**
 
  */
-.icon--msg-item1{
+.icon--msg-item1 {
   width: 32px;
   height: 32px;
   background-image: url(/images/msg-item1.svg);
 }
 
-.icon--msg-item2{
+.icon--msg-item2 {
   width: 32px;
   height: 32px;
   background-image: url(/images/msg-item2.svg);
 }
 
-.icon--msg-item3{
+.icon--msg-item3 {
   width: 32px;
   height: 32px;
   background-image: url(/images/msg-item3.svg);
 }
 
-.icon--msg-item4{
+.icon--msg-item4 {
   width: 32px;
   height: 32px;
   background-image: url(/images/msg-item4.svg);
 }
 
-.icon--msg-item4{
+.icon--msg-item4 {
   width: 32px;
   height: 32px;
   background-image: url(/images/msg-item4.svg);
 }
 
-.icon--msg-item5{
+.icon--msg-item5 {
   width: 16px;
   height: 16px;
   background-image: url(/images/msg-item5.svg);
 }
+
 /**
 
  */

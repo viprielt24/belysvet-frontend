@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
-  if (document.querySelector('.js-select-country')) {
+  if (document.querySelector('.js-registration')) {
     import('../pages/registration/registration').then(module => {
       new module.default();
     });
@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', event => {
 
   if (document.querySelector('.js-contacts')) {
     import('../pages/contacts/contacts').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-wheretobuy')) {
+    import('../pages/wheretobuy/wheretobuy').then(module => {
       new module.default();
     });
   }

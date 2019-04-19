@@ -386,6 +386,58 @@ const pages = {
       crumbs: ['Главная', 'Компания', 'Контакты'],
     }
   },
+  'wheretobuy': {
+    parameters: {
+      page: 'wheretobuy',
+      title: 'Где купить',
+      pageName: 'Где купить',
+      crumbs: ['Главная', 'Где купить'],
+      registrationCountry: [
+        {
+          title: 'Россия',
+          value: 'Russia',
+          selected: false
+        },
+        {
+          title: 'Украина',
+          value: 'Ukraine',
+          selected: false
+        },
+        {
+          title: ' Беларусь',
+          value: 'Belarus',
+          selected: false
+        },
+        {
+          title: ' Казахстан',
+          value: 'Kazakhstan',
+          selected: false
+        },
+      ],
+      registrationCity: [
+        {
+          title: 'Москва и Московская область',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'Санкт-Петербург',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Абакан',
+          value: '1',
+          selected: false
+        },
+        {
+          title: ' Альметьевск',
+          value: '1',
+          selected: false
+        },
+      ],
+    },
+  },
 };
 // Страницы проекта
 pages.pages = {
