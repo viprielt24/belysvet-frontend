@@ -71,12 +71,17 @@
   background-color: var(--primary);
   padding: 0 40px 0 7px;
   cursor: pointer;
+  transition: var(--trbg);
 
   .icon {
     position: absolute;
     top: 9px;
     right: 12px;
     margin-top: 0;
+  }
+
+  &:hover{
+    background-color: var(--hover);
   }
 }
 

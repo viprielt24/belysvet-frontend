@@ -34,7 +34,7 @@
     &:hover {
 
       > .list__link {
-        color: #000;
+        color: var(--hover);
       }
     }
 
@@ -330,7 +330,7 @@
       transition: var(--trc);
 
       &:hover {
-        color: #111111;
+        color: var(--hover);
       }
     }
   }

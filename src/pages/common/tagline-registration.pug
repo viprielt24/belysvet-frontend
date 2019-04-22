@@ -1,6 +1,6 @@
 include ../../components/tag/tag
-- tags = [{title:'Проектная организация'},{title:'Дистрибуция',active: true},{title:'ОЕМ Производитель'},{title:'Монтажная организация'}]
-.tagline
+- tags = [{title:'Проектная организация'},{title:'Дистрибуция'},{title:'ОЕМ Производитель'},{title:'Монтажная организация'}]
+.tagline.js-reg-tagline
   each item in tags
     +tag(item)
   input(placeholder="Другое").form-control

@@ -6,8 +6,9 @@ export default class {
     this.selectCountry = document.querySelector('.js-select-country');
     this.selectCity = document.querySelector('.js-select-city');
     this.selectOrg = document.querySelector('.js-select-org');
-
+    this.regTags = document.querySelectorAll('.js-reg-tagline .tag');
     this.addEvents();
+    this.tagToggle();
   }
 
   addEvents() {
@@ -56,6 +57,22 @@ export default class {
         {value: '64', label: ' АО «Форум Электро»'},
         {value: '67', label: ' ООО «Элком-Электро»'},
       ], 'value', 'label', true).enable();
+    });
+  }
+
+  tagToggle() {
+    this.regTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        tag.classList.toggle('tag--active')
+
+        /*if (!tag.classList.contains('tag--active')) {
+          let oldActiveTag = document.querySelector('.js-reg-tagline .tag.tag--active');
+          if (oldActiveTag) {
+            oldActiveTag.classList.remove('tag--active');
+          }
+          tag.classList.add('tag--active');
+        }*/
+      });
     });
   }
 }

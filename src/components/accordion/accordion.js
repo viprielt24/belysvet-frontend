@@ -28,8 +28,13 @@ export default class {
     this.accordionItems.forEach(item => {
       const itemHeader = item.querySelector('.js-accordion__header');
       const itemContent = item.querySelector('.js-accordion__content');
-      const itemContentHeight = itemContent.clientHeight;
-      itemContent.style.height = 0;
+      let itemContentHeight = null;
+      setTimeout(() => {
+        itemContentHeight = itemContent.clientHeight;
+      }, 50);
+      setTimeout(() => {
+        itemContent.style.height = 0;
+      }, 100);
 
       itemHeader.addEventListener('click', (event) => {
         //главный аккордеон

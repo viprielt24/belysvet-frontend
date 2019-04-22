@@ -8,6 +8,14 @@
   }
 }
 
+.content__text-editor{
+  padding-bottom: 0;
+}
+
+.contacts{
+  padding-bottom: 42px;
+}
+
 .contacts__item{
   margin-bottom: 57px;
   padding-bottom: 40px;
@@ -192,4 +200,11 @@
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-size: 16px 16px;
+}
+/**
+
+ */
+.contacts-bottom{
+  background-color: #F5F5F5;
+  padding: 48px 0 64px;
 }

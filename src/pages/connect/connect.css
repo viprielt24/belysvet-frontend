@@ -5,9 +5,6 @@
 }
 
 .connect {
-  margin-top: 31px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(196, 196, 196, 0.5);
 
   .accordion__header{
 
@@ -150,32 +147,6 @@
   color: #404040;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.select-custom--simple .choices__list--dropdown:before{
+  content: none;
+}
