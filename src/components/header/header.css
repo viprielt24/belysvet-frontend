@@ -74,7 +74,7 @@
         }
       }
 
-      &:hover {
+      &.is-open {
 
         .header__top-submenu {
           opacity: 1;

@@ -1,3 +1,5 @@
+import Swiper from 'swiper/dist/js/swiper.min.js';
+
 export default class {
   constructor() {
     //tabs
@@ -43,6 +45,26 @@ export default class {
     let popupInfoElement = popup.querySelector('[name=form_info]');
     if (popupInfoElement) {
       popup.querySelector('[name=form_info]').value = popupInfo;
+    }
+
+    if (targetPopupName === 'lights'){
+      let popup = document.querySelector('.js-popup-' + targetPopupName);
+      const lightsContent = popup.querySelector('.swiper-container');
+      const lightsContentBar = lightsContent.querySelector('.swiper-scrollbar');
+      new Swiper(lightsContent, {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollbar: {
+          el: lightsContentBar,
+        },
+        mousewheel: true,
+        simulateTouch: false,
+        dragSize: 100,
+        autoHeight: true,
+        observer: true,
+        observeParents: true
+      });
     }
   }
 

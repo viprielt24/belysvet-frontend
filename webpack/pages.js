@@ -60,7 +60,12 @@ const pages = {
       title: 'Пресс-центр текстовая',
       pageName: 'INEXI TECHNOLOGY — инновации в аварийном освещении',
       crumbs: ['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
-      files: data.pressInnerFiles
+      files: data.pressInnerFiles,
+      video: {
+        poster: '/images/temp/project-inner-video-player.png',
+        buttonText: 'смотреть видео',
+        iframe: '<iframe id="projectInnerYoutubePlayer" src="https://www.youtube.com/embed/0kNKPYK9cd0?autoplay=1&showinfo=0&modestbranding=1&rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      }
     }
   },
   'normative': {
@@ -125,7 +130,7 @@ const pages = {
       products: data.products,
       more: {
         href: 'javascript:void(0);',
-        title: 'Архив и налоги'
+        title: 'Архив и аналоги'
       },
       files: data.productsFiles
     }

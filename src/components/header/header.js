@@ -1,11 +1,13 @@
 export default class {
   constructor() {
     this.parentMenu = document.querySelectorAll('.js-header__menu-parent');
+    this.parentTopMenu = document.querySelectorAll('.js-header__top-parent');
     this.addEvents();
   }
 
   addEvents() {
     this.menuToggle();
+    this.topMenuToggle();
   }
 
   menuToggle() {
@@ -23,4 +25,20 @@ export default class {
       });
     });
   }
+  topMenuToggle() {
+    this.parentTopMenu.forEach(menu => {
+      menu.addEventListener('click', () => {
+        if (menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+        } else {
+          let openMenu = document.querySelector('.js-header__top-parent.is-open');
+          if (openMenu) {
+            openMenu.classList.remove('is-open');
+          }
+          menu.classList.add('is-open');
+        }
+      });
+    });
+  }
+
 }

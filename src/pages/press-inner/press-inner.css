@@ -10,3 +10,8 @@
 .content__bottom{
   justify-content: flex-start;
 }
+
+.project-inner__video{
+  padding-bottom: 36px;
+  border: 0;
+}
