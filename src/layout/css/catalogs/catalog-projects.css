@@ -147,6 +147,11 @@
     flex-direction: row;
     min-height: auto;
     height: 200px;
+    transition: var(--trsh);
+
+    &:hover{
+      box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    }
   }
 
   .pic{
