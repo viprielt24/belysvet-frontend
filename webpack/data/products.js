@@ -1,6 +1,6 @@
 module.exports = [
   {
-    title: 'Централизованная <br>система аварийного <br>освещения',
+    title: 'Световые приборы <br>аварийного освещения',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
       href: 'javascript:void(0);',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    title: 'Световые приборы <br>автономной системы',
+    title: 'Блоки аварийного <br>питания',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
       href: 'javascript:void(0);',
@@ -99,7 +99,7 @@ module.exports = [
     ]
   },
   {
-    title: 'Пульты <br>управления',
+    title: 'Щиты аварийного <br>освещения',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
       href: 'javascript:void(0);',
@@ -251,6 +251,43 @@ module.exports = [
     ]
   },
   {
+    title: 'Центральные <br>аккумуляторные <br>установки и источники <br>бесперебойного питания',
+    img: '/images/catalog/catalog-main-pic1.jpg',
+    link: {
+      href: 'javascript:void(0);',
+      title: 'подробнее',
+    },
+    menuType: 'double',
+    menuList: [
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+
+    ]
+  },
+  {
     title: 'Пульты аварийного <br>освещения',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
@@ -325,7 +362,44 @@ module.exports = [
     ]
   },
   {
-    title: 'Автономные аварийные <br>светильники',
+    title: 'Аксессуары и комплектация',
+    img: '/images/catalog/catalog-main-pic1.jpg',
+    link: {
+      href: 'javascript:void(0);',
+      title: 'подробнее',
+    },
+    menuType: 'double',
+    menuList: [
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+      {
+        img: '/images/catalog/catalog-favourite-pic4.png',
+        title: 'Блоки аварийного питания с источником аварийного питания INEXI',
+        link: 'javascript:void(0);'
+      },
+
+    ]
+  },
+  {
+    title: 'Элементы управления',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
       href: 'javascript:void(0);',
@@ -399,7 +473,7 @@ module.exports = [
     ]
   },
   {
-    title: 'Аксессуары <br>и комплектация',
+    title: 'Автономные аварийные <br>светильники <br>эвакуационного <br>освещения из состава <br>рабочих светильников',
     img: '/images/catalog/catalog-main-pic1.jpg',
     link: {
       href: 'javascript:void(0);',
