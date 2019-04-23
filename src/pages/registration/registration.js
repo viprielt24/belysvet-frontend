@@ -6,7 +6,11 @@ export default class {
     this.selectCountry = document.querySelector('.js-select-country');
     this.selectCity = document.querySelector('.js-select-city');
     this.selectOrg = document.querySelector('.js-select-org');
+
     this.regTags = document.querySelectorAll('.js-reg-tagline .tag');
+    this.nondistribWrap = document.querySelector('.js-registration-nondistrib');
+    this.distribWrap = document.querySelector('.js-registration-distrib');
+
     this.addEvents();
     this.tagToggle();
   }
@@ -63,15 +67,17 @@ export default class {
   tagToggle() {
     this.regTags.forEach(tag => {
       tag.addEventListener('click', () => {
-        tag.classList.toggle('tag--active')
+        tag.classList.toggle('tag--active');
 
-        /*if (!tag.classList.contains('tag--active')) {
-          let oldActiveTag = document.querySelector('.js-reg-tagline .tag.tag--active');
-          if (oldActiveTag) {
-            oldActiveTag.classList.remove('tag--active');
+        if (tag.classList.contains('js-tag-distrib')) {
+          if (tag.classList.contains('tag--active')) {
+            this.nondistribWrap.style.display = 'none';
+            this.distribWrap.style.display = 'block';
+          } else {
+            this.nondistribWrap.style.display = 'block';
+            this.distribWrap.style.display = 'none';
           }
-          tag.classList.add('tag--active');
-        }*/
+        }
       });
     });
   }

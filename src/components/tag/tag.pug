@@ -1,4 +1,6 @@
 mixin tag(item)
-  div(class= item.active ? 'tag tag--active' : 'tag')
+  - distribClass = item.regDistrib ? ' js-tag-distrib' : ''
+  - activeClass = item.active ? ' tag--active' : ''
+  div(class= 'tag' + distribClass + activeClass)
     .tag__title= item.title
     .tag__close
