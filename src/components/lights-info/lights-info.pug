@@ -1,0 +1,33 @@
+mixin lights-info()
+
+  .lights__info
+    a(href="javascript:void(0);").lights__info-item
+      .icon.icon--inline.icon--gear: include ../../images/gear.svg
+      .lights__info-item-text Подобрать световой прибор <br>аварийного освещения
+    a(href="javascript:void(0);").lights__info-item
+      .icon.icon--inline.icon--blank: include ../../images/blank.svg
+      .lights__info-item-text Световые приборы аварийного <br>освещения. Техническое описание
+    a(href="javascript:void(0);" data-popupname="lights").lights__info-item.js-popup-open
+      .icon.icon--inline.icon--info: include ../../images/info.svg
+      .lights__info-item-text Справочная информация
+
+  .lights__info
+    a(href="javascript:void(0);").lights__info-item
+      .icon.icon--inline.icon--gear: include ../../images/gear.svg
+      .lights__info-item-text Подобрать световой прибор <br>аварийного освещения
+    .lights__info-item.lights__info-item--long
+      .icon.icon--inline.icon--blank: include ../../images/blank.svg
+      .lights__info-item-box
+        .lights__info-item-text Световые приборы аварийного освещения. Техническое описание
+        .lights__info-item-wrap
+          a(href="javascript:void(0);").lights__info-part ТР0
+          a(href="javascript:void(0);").lights__info-part ТР1
+          a(href="javascript:void(0);").lights__info-part ТР2
+          a(href="javascript:void(0);").lights__info-part ТР3
+          a(href="javascript:void(0);").lights__info-part ТР4
+          a(href="javascript:void(0);").lights__info-part ТР5
+          a(href="javascript:void(0);").lights__info-part ТР6
+          a(href="javascript:void(0);").lights__info-part ТР7
+    a(href="javascript:void(0);" data-popupname="lights").lights__info-item.js-popup-open
+      .icon.icon--inline.icon--info: include ../../images/info.svg
+      .lights__info-item-text Справочная информация

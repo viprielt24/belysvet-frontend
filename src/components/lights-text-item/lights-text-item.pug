@@ -1,11 +1,8 @@
-mixin lights-item(item)
+mixin lights-text-item(item)
   .catalog__item
+    if item.description
     .part
-      .part__wrap
-        if item.parts
-          each part in item.parts
-            div(aria-label=part.label).part__item.hint.hint--white.hint--right
-              img(src=part.icon).part__pic
+      .part__wrap.part__wrap--text!= item.description
 
       a(href="javascript:void(0);").part__title проекты
       .part__button: a(href="javascript:void(0);").button Посмотреть

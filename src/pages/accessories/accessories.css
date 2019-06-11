@@ -1,0 +1,94 @@
+@import "../../layout/variables.css";
+
+.content__bottom .title{
+  margin-bottom: 0;
+}
+
+.catalog--favourite {
+  margin-bottom: 31px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  .catalog__col {
+    width: 25%;
+    text-decoration: none;
+  }
+
+  .catalog__item {
+    border: 0;
+    padding-top: 22px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid #EBEBEB;
+    }
+  }
+
+  .link {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 55px;
+  }
+
+  .descr {
+    margin-bottom: 13px;
+  }
+
+  .part{
+    padding-top: 72px;
+  }
+
+  .part__wrap--text{
+    font-size: 12px;
+
+    p{
+      margin-bottom: 10px;
+    }
+
+    ul{
+      column-count: 3;
+
+      li{
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-left: 0;
+        text-transform: uppercase;
+
+        &:before{
+          content: none;
+        }
+
+        a{
+          color: #333333;
+          text-decoration: none;
+          transition: var(--trc);
+
+          &:hover{
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+/**
+
+ */
+.lights__description{
+  margin-bottom: 24px;
+  padding: 0 0 23px 0;
+  /*margin-bottom: 59px;*/
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
+
+  ul{
+    margin-bottom: 0;
+  }
+}

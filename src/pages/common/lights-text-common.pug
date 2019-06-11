@@ -1,0 +1,9 @@
+include ../../components/lights-text-item/lights-text-item
+
+.catalog.catalog--favourite
+  .catalog__content
+    .catalog__wrap
+      each item, index in lights
+        .catalog__col
+          - item.link = null
+          +lights-text-item(item)
