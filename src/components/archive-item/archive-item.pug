@@ -1,0 +1,17 @@
+mixin archive-item(item)
+  a(href= item.link.href).catalog__item
+    if item.img
+      .pic: img(src= item.img).pic__img
+    if item.advdescr
+      .advdescr= item.advdescr
+    if item.title
+      .title!= item.title
+    if item.subtitle
+      .subtitle!= item.subtitle
+    .catalog__item-footer
+      if item.price
+        .descr!= 'Цена от <span>' + item.price + ' ₽</span>'
+      else
+        .descr.descr--not
+          p АРХИВ
+          p Модель снята с производства

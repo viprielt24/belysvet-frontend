@@ -1,0 +1,40 @@
+@import "../../layout/variables.css";
+
+.catalog--favourite {
+  margin-bottom: 31px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+
+  .catalog__col {
+    width: 16.666667%;
+    text-decoration: none;
+  }
+
+  .catalog__item {
+    border: 0;
+    padding: 22px 14px 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid #EBEBEB;
+    }
+  }
+
+  .link {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 55px;
+  }
+
+  .descr {
+    margin-bottom: 13px;
+  }
+}

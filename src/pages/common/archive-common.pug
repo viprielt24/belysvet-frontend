@@ -1,0 +1,8 @@
+include ../../components/archive-item/archive-item
+
+.catalog.catalog--favourite
+  .catalog__content
+    .catalog__wrap
+      each item, index in lights
+        .catalog__col
+          +archive-item(item)
