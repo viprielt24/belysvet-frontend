@@ -1,0 +1,159 @@
+.container__text-editor
+  h2 Структурные схемы и логика работы системы
+  p Нормативная база Российской Федерации предъявляет ряд требования к пострению систем аварийного освещения.
+  ol
+    li «Питания аварийного освещения (эвакуационного и резервного) должно быть независимым от питания рабочего освезения и в нормальном режиме обеспечиваться электроэнергией от ввода, который не применяется для питания рабочего освещения...» (ФЕДЕРАЛЬНЫЙ ЗАКОН 384-ФЗ гл. 1, ст 2.2.1, СП52.13330.2011, п. 7.104, СП-256.1325800.2016, пп. 5.1.2, 8.12.1).
+    li Питание аварийного освещения (АО) рекомендуется осуществлять от панели противопожарных устройств (ППУ), предназначенной для питания систем безопасности, которые должны сохранять работоспособность во время пожара (СП 256.1325800.2016, п. 8.12.11 «Питание аварийного эвакуационного освещения (пп. 8.12.1, 8.12.3, 8.12.4, 8.12.5, 8.12.8) рекомендуется осуществлять от панели противопожарных утройств (ППУ) с учетом п. 8.12.7, предназначенной для питания систем безопасности...»).
+    li Применения для рабочего освещения, освещения безопасности и (или) эвакуационного освещения общих групповых щитков, а также становка аппаротов управления рабочим освещения, освещением безопасности и (или) эвакуационным освещением, за исключением аппаратов вспомогательных цепей (например, сигнальных ламп, ключей управления), в общих шкафах не допускается (ПУЭ 6.1.27).
+  p Автономная система аварийного освещения с функцией TELECONTROL выполняет требования нормативной базы РФ, для демонстрации функциональных возможностей всех элементов системы подробно рассмотрим построение системы на примере однофазной распределительной сети 230В — Структурная схема № 1.
+  p Пример построения системы с трехфазной распределительной сетью 400В — структурная схема №2.
+  p: strong Структурная схема №1. Автономная система аварийного освещения (однофазная, 230В), с функцией TELECONTROL
+
+img(src="./images/temp/single-phase.jpg")
+
+.container__text-editor: p: strong Таблица №2. Состав автономной системы аварийного освещения
+
+table.table.table--valign-top
+  thead
+    tr
+      td(style="width:68px;text-align:center") №
+      td(style="width:568px;text-align:center") Элемент системы
+      td(style="width:604px;text-align:center") Функции
+  tbody
+    tr
+      td 1
+      td ПУАО BS-ALARIS-1-FU1-230/230-1LCG-1Bt
+      td Удаленно управление световыми приборами аварийного освещения универсального типа.<br>Активация общего режима ожидания.<br>Индикация основных состояний системы аварийного освещения здания (все ЩАО).
+    tr
+      td 2
+      td ЩАО-1 BS-AKTEON-1-QS16-230/230-LCGt2QF6-R8
+      td
+        ol
+          li Распределение электроснабжения в групповых цепях аварийного освещения, 2 групповые цепи по 6А каждая.
+          li Вид групповых цепей —коммутируемые группой с прерыванием питания (LCGt). Данные групповые цепи обеспечивают управление световыми приборами аварийного освещения универсального типа.
+          li Включение/выключение группового режима ожидания световых приборов аварийного освещения — блоком управления BS-TELECONTROL-2/
+          li Проведение тестирования свтоевых приборов аварийного освещения:
+            ol
+              li Функциональный тест — блоком управления BS-TELECONTROL-2;
+              li Тест на длительность — модулем теста длительность.
+
+.container__text-editor: h3 Логика работы щита аварийного освещения BS-AKTEON-1 и пульта аварийного освещения BS-ALARIS-1
+
+table.table.table--valign-top
+  thead
+    tr
+      td(rowspan=3 style="width:68px;text-align:center") №
+      td(rowspan=3 style="width:356px;text-align:center") Вид теста
+      td(colspan=4  style="width:816px;text-align:center") Периодичность и длительность проведения тестирования, мин
+    tr
+      td(colspan=4 style="text-align:center") Нормируемая продолжительность аварийной работы, мин
+    tr
+      td(style="text-align:center") 60
+      td(style="text-align:center") 180
+      td(style="text-align:center") 300
+      td(style="text-align:center") 480
+  tbody
+    tr
+      td(style="text-align:center") 1
+      td Тест на длительность при вводе в эксплуатацию , мин.
+      td(style="text-align:center") 90
+      td(style="text-align:center") 230
+      td(style="text-align:center") 375
+      td(style="text-align:center") 600
+    tr
+      td(style="text-align:center") 2
+      td Ручной ежемесячный функциональный тест, не менее, сек.
+      td(style="text-align:center") 10
+      td(style="text-align:center") 10
+      td(style="text-align:center") 10
+      td(style="text-align:center") 10
+
+.container__text-editor: p: strong Таблица №4. Логика работы ЩАО BS-AKTEON-1
+
+table.table.table--valign-top
+  thead
+    tr
+      td(rowspan=2 style="text-align:center;width:52px;") №
+      td(rowspan=2 style="text-align:center;width:186px;") Ситуация
+      td(rowspan=2 style="text-align:center;width:155px;") Действие оператора
+      td(rowspan=2 style="text-align:center;width:251px;") Результат
+      td(colspan=8 style="text-align:center;width:596px;") Смысловое значение световых индикаторов ЩАО
+    tr
+      td(style="text-align:center;width:76px;") «УПР ГР Вкл»
+      td(style="text-align:center;width:70px;") Авария
+      td(style="text-align:center;width:70px;") Сеть
+      td(style="text-align:center;width:70px;") Авария ЩРО
+      td(style="text-align:center;width:70px;") Тест
+      td(style="text-align:center;width:70px;") Пожар
+      td(style="text-align:center;width:70px;") Заряд АКБ
+      td(style="text-align:center;width:70px;") УПР. Сигнал
+  tbody
+    tr
+      td 1
+      td Нормальный режим
+      td -
+      td Работа системы в штатном режиме
+      td(style="text-align:center") -
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+      td(style="text-align:center") -
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+    tr
+      td 2
+      td Нормальный режим, включение коммутируемых групп
+      td Нажать на кнопку «УПР ГР вкл»
+      td Включаются универсальные световые приборы на коммутируемых группах
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-yellow.svg")
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+      td(style="text-align:center") -
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+    tr
+      td 3
+      td Проведение теста на длительность
+      td Повернуть и отпустить ключ «ТЕСТ вкл»
+      td Прерывание питания на групповых цепях, свтовые приборы переведены в аварийный режим на заданное время
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-red.svg")
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-blue.svg")
+      td(style="text-align:center") -
+      td(style="text-align:center"): img(src="../../../images/temp/ellipse-green.svg")
+      td(style="text-align:center") -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

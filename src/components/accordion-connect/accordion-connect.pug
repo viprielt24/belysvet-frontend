@@ -5,10 +5,11 @@ mixin accordion-connect(item, index)
   div(class= innerClass)
 
     //-пункты главного аккордеона
-    a(href="javascript:void(0);").accordion__header.js-accordion__header
+    - simpleHeader = index || item.icon ? 'accordion__header js-accordion__header' : 'accordion__header accordion__header--simple js-accordion__header'
+    a(href="javascript:void(0);" class= simpleHeader)
       if item.icon
         div(class='icon icon--' + item.icon)
-      else
+      else if index
         .accordion__num.js-accordion__num= index + 1 + '.'
       - careerClass = item.career ? 'accordion__title accordion__title--career' : 'accordion__title'
       div(class= careerClass)= item.title

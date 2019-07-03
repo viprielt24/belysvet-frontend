@@ -28,3 +28,7 @@
 @import "lights-info/lights-info.css";
 @import "lights-columns-item/lights-columns-item.css";
 @import "archive-item/archive-item.css";
+@import "compare-item/compare-item.css";
+@import "brands-item/brands-item.css";
+@import "parts-item/parts-item.css";
+@import "gallery/gallery.css";

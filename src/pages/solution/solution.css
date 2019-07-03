@@ -1,0 +1,179 @@
+@import "../../layout/variables.css";
+
+.content__top {
+  padding-top: 16px;
+  padding-bottom: 10px;
+  border: var(--border);
+  border-left: 0;
+  border-right: 0;
+}
+
+.content__top--signone{
+
+  .tagline{
+    flex-wrap: wrap;
+  }
+
+  .tag--active .tag__title{
+    transform: none;
+  }
+
+  .tag--active .tag__close{
+    display: none;
+  }
+}
+
+.content__bottom .title{
+
+  span{
+    display: block;
+    margin-top: 10px;
+    font-size: 27px;
+  }
+}
+
+.content__top-links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1px;
+  margin-bottom: 35px;
+
+  .link{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  .link--icon .link__text{
+    margin-left: 5px;
+  }
+}
+/**
+
+ */
+.solution__tabs-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+}
+
+.solution__tabs-title-item{
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 5px;
+    transition: var(--trbg);
+  }
+  
+  &.active .solution__tabs-title-link,
+  &:hover .solution__tabs-title-link{
+    color: #DE3831;
+  }
+
+  &.active:after{
+    background-color: #DE3831;
+  }
+}
+
+.solution__tabs-title-link{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  transition: var(--trc);
+}
+
+.solution__tabs-title-item--icon{
+
+  .icon{
+    margin-right: 9px;
+  }
+
+  svg path{
+    transition: var(--trsf);
+  }
+
+  &:hover{
+
+    svg path{
+      fill: #DE3831;
+    }
+  }
+
+  &.hint--white:before{
+    margin-top: -35px;
+    margin-left: -137px;
+  }
+
+  &.hint--white:after{
+    margin-top: -24px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: var(--opens);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.solution{
+  margin-bottom: 0;
+}
+
+.solution-bottom{
+  background-color: #f5f5f5;
+  padding-top: 32px;
+}
+
+.tech-descr{
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--opens);
+  color: #404040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

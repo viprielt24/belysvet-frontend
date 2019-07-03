@@ -1,15 +1,19 @@
 mixin lights-text-item(item)
   .catalog__item
     if item.description
-    .part
-      .part__wrap.part__wrap--text!= item.description
+      .part
+        .part__wrap.part__wrap--text!= item.description
 
-      a(href="javascript:void(0);").part__title проекты
-      .part__button: a(href="javascript:void(0);").button Посмотреть
+        a(href="javascript:void(0);").part__title проекты
+        .part__button: a(href="javascript:void(0);").button Посмотреть
 
-    .subtitle!= item.subtitle
-    .title!= item.title
-    .pic: img(src= item.img).pic__img
-    .descr= 'от ' + item.price + ' ₽'
+    if item.subtitle
+      .subtitle!= item.subtitle
+    if item.title
+      .title!= item.title
+    if item.img
+      .pic: img(src= item.img).pic__img
+    if item.price
+      .descr= 'от ' + item.price + ' ₽'
     if item.link
       a(href= item.link.href).link= item.link.title

@@ -1,0 +1,48 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .compare.js-compare
+      .container
+        .compare__header
+          .swiper-button-prev
+          .swiper-button-next
+        .compare__content
+          .compare__table
+            //- первая ячейка
+            .compare__maincel
+              .compare__maincel-wrap.js-compare__maincel-wrap
+                //- контроль
+                .compare__maincel-control
+                  .compare__clear.js-compare__clear
+                    a(href="javascript:void(0);").compare__clear-link
+                      .icon.icon--close.icon--close-primary.icon--inline: include ../../images/close.svg
+                      | Очистить весь список
+                  .compare__print.js-compare__print
+                    a(href="javascript:void(0);").compare__print-link
+                      .icon.icon--print.icon--inline: include ../../images/print.svg
+                      | Распечатать список
+                //- выбор
+                .compare__maincel-choose
+                  .title Показать
+                  .form-group
+                    .form-element
+                      label.label.label--radio
+                        input.form-control(type="radio" checked='' name="compare")
+                        .icon.icon--radio
+                        .label__text Все параметры
+                    .form-element
+                      label.label.label--radio
+                        input.form-control(type="radio" name="compare")
+                        .icon.icon--radio
+                        .label__text Только отличия
+                //- заголовки
+              .compare__maincel-params.js-compare__maincel-params
+                each compare, index in lights[0].compare
+                  div(class= "compare__maincel-params-item js-compare__maincel-params-item compare__maincel-params-"+ index)!= compare.name
+
+            //- ячейка со слайдером
+            .compare__slider
+              include ../common/compare-common

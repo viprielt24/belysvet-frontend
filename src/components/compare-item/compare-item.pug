@@ -1,0 +1,25 @@
+mixin compare-item(item)
+  .catalog__item.js-catalog__item
+    a(href="javascript:void(0);" aria-label="Удалить из сравнения").catalog__compare-close.js-catalog__compare-close.hint.hint--white.hint--left
+      .icon.icon--close.icon--close-primary
+    if item.img
+      .pic: img(src= item.img).pic__img
+    if item.advdescr
+      .advdescr= item.advdescr
+    if item.title
+      .title!= item.title
+    if item.subtitle
+      .subtitle!= item.subtitle
+    .catalog__item-footer
+      if item.price
+        if item.balance
+          .balance!= 'Остатки на складах: <span class="balance__digit js-balance__digit">'+ item.balance +'</span> шт'
+        .descr!= 'Цена от <span>' + item.price + ' ₽</span>'
+      else
+        .descr.descr--not
+          p АРХИВ
+          p Модель снята с производства
+  .catalog__compare
+    each compare, index in item.compare
+      div(class= "catalog__compare-item js-catalog__compare-item catalog__compare-param-" + index)
+        .catalog__compare-value= compare.value

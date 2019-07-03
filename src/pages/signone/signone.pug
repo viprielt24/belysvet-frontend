@@ -1,0 +1,62 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.emunit
+      .container.emunit__top
+        .row
+          .col-sm-6.emunit__top-left
+            include ../../components/gallery/gallery
+            +gallery()
+          .col-sm-6.emunit__top-right
+            include ../../pages/common/emunit-parts-common
+
+            .emunit__top-right-table.row
+              dl
+                dt.col-sm-6 Форма:
+                dd.col-sm-6 Квадратный
+              dl
+                dt.col-sm-6 Размер:
+                dd.col-sm-6 150х150х0,21
+              dl
+                dt.col-sm-6 Материал:
+                dd.col-sm-6 Светорассеивающий ПЭТ-бэклит
+              dl
+                dt.col-sm-6 Крепление:
+                dd.col-sm-6 На двухсторонний скотч
+              dl
+                dt.col-sm-6 Расстояние для распознавания:
+                dd.col-sm-6 30 м
+
+            .emunit__top-right-compatibility
+              .title Совместимы с моделями световых указателей:
+              include ../../pages/common/tagline-compatibility-common
+
+            .emunit__top-links
+              .emunit__top-links-wrap
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
+                  .link__text Сохранить в PDF
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--print: include ../../images/print.svg
+                  .link__text Распечатать страницу
+
+      .container.emunit__middle
+        .emunit__tabs
+          .emunit__tabs-title
+            a(href="javascript:void(0);").emunit__tabs-title-item.active Ассоритмент знаков для этой серии
+            a(href="javascript:void(0);").emunit__tabs-title-item Обзор и описании серии
+          .emunit__tabs-content
+            include ./pug/models-signone
+            include ./pug/review
+
+    .emunit__bottom
+      .container
+        .emunit__archive
+          include ../../components/accordion-connect/accordion-connect
+          +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
+            include ./pug/archive
+      .container
+        include ../common/polygraphy

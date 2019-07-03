@@ -25,6 +25,7 @@
   min-height: 104px;
   padding: 20px 100px 20px 90px;
   text-decoration: none;
+  text-align: left;
 
   &:after {
     content: '';
@@ -43,6 +44,10 @@
       background-color: var(--hover);
     }
   }
+}
+
+.accordion__header--simple{
+  padding-left: 36px;
 }
 
 .accordion__title {

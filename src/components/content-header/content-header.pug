@@ -16,7 +16,7 @@ include ../crumbs/crumbs
       .press-inner-data Сентябрь 2017
 
     .content__bottom
-      h1.title= pageName
+      h1.title!= pageName
 
   else if page === 'project-inner'
     .content__top
@@ -33,10 +33,35 @@ include ../crumbs/crumbs
       .press-inner-data г. Москва
 
     .content__bottom
-      h1.title= pageName
+      h1.title!= pageName
       a(href="javascript:void(0);").link Посмотреть отзыв
+
+  else if page === 'emunit'
+    .content__top.content__top--emunit: include ../../pages/common/tagline
+    .content__bottom
+      h1.title!= pageName
+
+  else if page === 'signone'
+    .content__top.content__top--signone: include ../../pages/common/tagline
+    .content__bottom
+      h1.title!= pageName
+
+  else if page === 'solution'
+    .content__top.content__top--signone: include ../../pages/common/tagline
+    .content__top-links
+      a(href="javascript:void(0);").link.link--icon
+        .icon.icon--inline.icon--pencil: include ../../images/pencil.svg
+        .link__text Заявка на составление технического задания
+      a(href="javascript:void(0);").link.link--icon
+        .icon.icon--inline.icon--stack: include ../../images/stack.svg
+        .link__text Реализованные проекты
+      a(href="javascript:void(0);").link.link--icon
+        .icon.icon--inline.icon--video: include ../../images/video.svg
+        .link__text Видео
+    .content__bottom
+      h1.title!= pageName
 
   else
     div(class= pageDescr ? 'content__bottom content__bottom--descr' : 'content__bottom')
-      h1.title= pageName
+      h1.title!= pageName
       .descr!= pageDescr

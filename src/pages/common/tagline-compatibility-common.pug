@@ -1,0 +1,9 @@
+include ../../components/tag/tag
+
+
+.tagline
+  each item in tagsCompatibility
+    +tag(item)
+  //- доп.элемент в линии тегов
+  if taglineClear
+    a(href="javascript:void(0);").tagline__clear.js-tagline__clear Сбросить фильтры

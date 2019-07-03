@@ -5,6 +5,16 @@ block content
     .container
       include ../../components/content-header/content-header
       .lights
+        .archive-search
+          include ../common/archive-search-common
+          .archive-search__result
+            .archive-search__result-header
+              a(href="javascript:void(0);").archive-search__result-clear
+                .icon.icon--close
+              .archive-search__result-title Аналоги DL Small LED
+              .archive-search__result-descr Прямые результаты DL Small LED не найдены, поэтому предлагаем вам ознакомиться с аналогами.
+            .archive-search__result-footer Найдено 4 результата
+
         include ../common/archive-common
         include ../common/promo
         .tech-descr

@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.solution
+      .container.solution__tabs
+
+        .solution__tabs-title
+          .solution__tabs-title-item.active: a(href="javascript:void(0);").solution__tabs-title-link Описание и состав
+          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Структурные схемы
+          .solution__tabs-title-item: a(href="javascript:void(0);" aria-label="Доступно после авторизации").solution__tabs-title-item--icon.solution__tabs-title-link.hint.hint--white.hint--bottom-left
+            .icon.icon--inline.icon--lock: include ../../images/lock.svg
+            | Примеры для проектирования
+          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Примеры для технического задания
+          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Типовые решения
+
+        .solution__tabs-content
+          //-.solution__tabs-content-item.text-editor: include ./pug/tabs-content
+          .solution__tabs-content-item.text-editor: include ./pug/tabs-content2
+
+    .container.solution-bottom
+      include ../common/promo
+      .tech-descr
+        p Какой-то промотекст к картинке выше, например про распродажи, лучшие условия, участие в выставке, программы по обучению и т.п. Если нет никаких промоактивностей, то этот блок не выводится.
+        p Какой-то промотекст к картинке выше, например про распродажи, лучшие условия, участие в выставке, программы по обучению и т.п. Если нет никаких промоактивностей, то этот блок не выводится.
+      include ../common/polygraphy

@@ -1,0 +1,9 @@
+include ../../components/brands-item/brands-item
+
+.catalog.catalog--article
+  .catalog__content
+    .catalog__wrap
+      each item in products
+        .catalog__col
+          +brands-item(item)
+  //-.catalog__footer: a(href= more.href).button.button--press= more.title

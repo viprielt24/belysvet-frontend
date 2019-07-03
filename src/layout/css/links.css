@@ -61,7 +61,9 @@
     }
   }
 }
+/**
 
+ */
 .link--back{
 
   .link__text {
@@ -80,6 +82,28 @@
     svg{
       width: 11px;
       height: 14px;
+    }
+  }
+}
+/**
+
+ */
+.link--icon{
+  display: flex;
+  text-decoration: none;
+
+  .link__text{
+    font-family: var(--museo);
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 1;
+    transition: var(--trc);
+  }
+
+  &:hover{
+
+    .link__text{
+      color: var(--hover);
     }
   }
 }

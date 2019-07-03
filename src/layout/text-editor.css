@@ -145,7 +145,7 @@
     }
 
     & ol {
-      margin-top: 40px;
+      margin-top: 20px;
       margin-bottom: 0;
       padding-left: 40px;
     }
@@ -222,6 +222,14 @@
         background-color: rgba(196, 196, 196, 0.12);
       }
     }
+
+    ol,ul{
+      font-size: 14px;
+    }
+
+    ol li:before{
+      font-size: 14px;
+    }
   }
 
   /**
@@ -273,6 +281,16 @@
 
     li:before{
       content: none;
+    }
+  }
+  /**
+
+   */
+  .table--valign-top{
+
+    tbody td{
+      vertical-align: top;
+      line-height: 26px;
     }
   }
 }
@@ -392,8 +410,6 @@ blockquote.blockquote--author {
     color: #404040;
   }
 }
-
-
 
 
 

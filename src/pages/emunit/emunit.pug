@@ -1,0 +1,49 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.emunit
+      .container.emunit__top
+        .row
+          .col-sm-6.emunit__top-left
+            include ../../components/gallery/gallery
+            +gallery()
+          .col-sm-6.emunit__top-right
+            include ../../pages/common/emunit-parts-common
+            .text-editor
+              p Вы можете подобрать блоки аварийного питания, совместимые со следующими источниками света:
+              ul
+                li Cветодиодными модулями, работающими на различных токах и напряжениях;
+                li Cветодиодными лампами-ретрофитами с напряжением питания 220/230 В и 12 В;
+                li Cсветодиодными световыми приборами с напряжением питания 220/230 В.
+            .emunit__top-links
+              a(href="javascript:void(0);").link.link--icon
+                .icon.icon--inline.icon--stack: include ../../images/stack.svg
+                .link__text Проекты со блоками аварийного питания INEXI
+              .emunit__top-links-wrap
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
+                  .link__text Сохранить в PDF
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--print: include ../../images/print.svg
+                  .link__text Распечатать страницу
+
+      .container.emunit__middle
+        .emunit__tabs
+          .emunit__tabs-title
+            a(href="javascript:void(0);").emunit__tabs-title-item.active Модельный ряд
+            a(href="javascript:void(0);").emunit__tabs-title-item Обзор и описание серии
+          .emunit__tabs-content
+            include ./pug/models
+            include ./pug/review
+
+    .emunit__bottom
+      .container
+        .emunit__archive
+          include ../../components/accordion-connect/accordion-connect
+          +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
+            include ./pug/archive
+      .container
+        include ../common/polygraphy

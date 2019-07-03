@@ -4,11 +4,11 @@ include ../../components/select-custom/select-custom
 
 .select-custom.select-custom--default.select-custom--simple
   select.form-control.js-select-org
-    - conter = 0;
+    - counter = 0;
     each item in registrationOrganization
       //- неправильное условие на отсутствие выделенного пункта
-      if !item.selected & !conter
+      if !item.selected & !counter
         option(placeholder) Выберите свою компанию из списка
-        - conter++
+        - counter++
       if item.value
         option(value= item.value selected= item.selected)= item.title

@@ -10,6 +10,8 @@ mixin archive-item(item)
       .subtitle!= item.subtitle
     .catalog__item-footer
       if item.price
+        if item.balance
+          .balance!= 'Остатки на складах: <span class="balance__digit js-balance__digit">'+ item.balance +'</span> шт'
         .descr!= 'Цена от <span>' + item.price + ' ₽</span>'
       else
         .descr.descr--not

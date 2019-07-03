@@ -32,6 +32,11 @@
   &:after {
     transform: rotate(-45deg);
   }
+
+  &.icon--inline:before,
+  &.icon--inline:after{
+    content: none;
+  }
 }
 
 .icon--close-dark {
@@ -309,6 +314,42 @@
   width: 24px;
   height: 14px;
   background-image: url(/images/eye.svg);
+}
+
+.icon--print {
+  width: 15px;
+  height: 14px;
+  background-image: url(/images/print.svg);
+}
+
+.icon--stack {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/stack.svg);
+}
+
+.icon--list-empty {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/list-empty.svg);
+}
+
+.icon--pencil {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/pencil.svg);
+}
+
+.icon--video {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/video.svg);
+}
+
+.icon--lock {
+  width: 13px;
+  height: 18px;
+  background-image: url(/images/lock.svg);
 }
 
 /**

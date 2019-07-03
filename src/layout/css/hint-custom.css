@@ -41,10 +41,21 @@
     border-right-color: #fff;
   }
 }
+/**
 
+ */
 .orders.active{
   [class*="hint--"]:before,
   [class*="hint--"]:after{
     content: none;
+  }
+}
+/**
+
+ */
+.solution__tabs-title-item--icon{
+
+  [class*="hint--"].hint--white:after{
+
   }
 }

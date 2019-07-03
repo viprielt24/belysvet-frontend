@@ -1,0 +1,10 @@
+include ../../components/compare-item/compare-item
+
+.catalog.catalog--favourite
+  .catalog__content
+    .catalog__wrap
+      .swiper-container
+        .swiper-wrapper
+          each item, index in lights
+            .swiper-slide.catalog__col
+              +compare-item(item)

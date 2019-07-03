@@ -79,7 +79,8 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  width: 636px;
+  /*width: 636px;*/
+  width: auto;
   height: 80px;
   background-color: #fff;
   margin-right: 28px;

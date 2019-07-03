@@ -107,4 +107,15 @@ document.addEventListener('DOMContentLoaded', event => {
     inputPlaceholderInit.then(module => new module.default());
   }
 
+  if (document.querySelector('.js-input-number')) {
+    import('../layout/js/inputReset').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-gallery')) {
+    import('../components/gallery/gallery').then(module => {
+      new module.default();
+    });
+  }
 });

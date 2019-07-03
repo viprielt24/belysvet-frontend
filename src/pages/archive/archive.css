@@ -1,5 +1,9 @@
 @import "../../layout/variables.css";
 
+.content__header .descr{
+  margin-bottom: 21px;
+}
+
 .catalog--favourite {
   margin-bottom: 31px;
   padding-bottom: 32px;
@@ -87,6 +91,15 @@
     text-align: left;
   }
 
+  .balance{
+    margin-top: 6px;
+    font-family: var(--opens);
+    font-size: 12px;
+    color: #404040;
+    opacity: 0.8;
+    text-align: left;
+  }
+
   .catalog__item-footer{
     display: flex;
     width: 100%;
@@ -115,3 +128,63 @@
     }
   }
 }
+
+.archive-search__result{
+  margin-top: 40px;
+  margin-bottom: 27px;
+}
+
+.archive-search__result-header{
+  position: relative;
+  margin-bottom: 19px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
+}
+
+.archive-search__result-title{
+  margin-bottom: 7px;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.archive-search__result-descr{
+  color: #404040;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.archive-search__result-footer{
+  font-family: var(--opens);
+  color: #7E7E7E;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.archive-search__result-clear{
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  .icon--close:after, .icon--close:before{
+    background-color: var(--primary);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
