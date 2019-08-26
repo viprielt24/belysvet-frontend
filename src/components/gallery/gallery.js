@@ -6,7 +6,7 @@ export default class {
     this.container = this.wrap.querySelector('.swiper-container');
     this.navPrev = this.wrap.querySelector('.swiper-button-prev');
     this.navNext = this.wrap.querySelector('.swiper-button-next');
-    this.paging = this.wrap.nextElementSibling.querySelector('.swiper-pagination');console.log(this.paging)
+    this.paging = this.wrap.nextElementSibling.querySelector('.swiper-pagination');
 
     this.thumbsWrap = document.querySelector('.js-thumbs');
     this.thumbsContainer = this.thumbsWrap.querySelector('.swiper-container');

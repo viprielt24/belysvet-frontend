@@ -5,10 +5,19 @@ block content
     .container
       include ../../components/content-header/content-header
       .lights
-        include ../common/lights-info-common
-        .lights__filter
-          .lights__filter-title Укажите степень защиты от внешних воздействий, IP
-          include ../../pages/common/tagline-lights
+
+        .lights__info
+          a(href="javascript:void(0);").lights__info-item
+            .icon.icon--inline.icon--gear: include ../../images/gear.svg
+            .lights__info-item-text Подобрать автономный<br> аварийный светильник
+          a(href="javascript:void(0);").lights__info-item
+            .icon.icon--inline.icon--blank: include ../../images/blank.svg
+            .lights__info-item-text Автономные аварийные светильники. Техническое описание
+          a(href="javascript:void(0);" data-popupname="lights").lights__info-item.lights__info-item--empty.js-popup-open
+            .icon.icon--inline.icon--info: include ../../images/info.svg
+            .lights__info-item-text Справочная информация
+
+        .lights__description.text-editor!= catalogDescr
 
         include ../common/lights-common
         include ../common/promo

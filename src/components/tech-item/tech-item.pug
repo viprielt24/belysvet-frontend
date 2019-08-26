@@ -1,5 +1,5 @@
 mixin tech-item(item)
-  a(href= item.link.href).catalog__item(style='background-image: url(' + item.img + ');')
+  a(href= item.link.href style='background-image: url(' + item.img + ');').catalog__item
     .title!= item.title
     .descr!= item.descr
     button.button.button-size-md= item.link.title

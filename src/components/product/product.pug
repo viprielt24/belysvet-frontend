@@ -20,6 +20,6 @@ mixin product(item)
               .pic: img(src= unit.img).pic__img
               .title= unit.title
 
-  a(href="javascript:void(0);").catalog__item(style='background-image: url(' + item.img + ')')
+  a(href="javascript:void(0);" style='background-image: url(' + item.img + ')').catalog__item
     .title!= item.title
     .link= item.link.title

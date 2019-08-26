@@ -14,7 +14,7 @@
   }
 }
 
-.lights__info-item:not(.lights__info-item--long) {
+.lights__info-item {
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -52,25 +52,26 @@
       }
     }
   }
+}
 
-  &:last-child {
-    width: auto;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: 0;
-    padding: 0;
-    flex-shrink: 1;
+.lights__info-item--empty{
+  width: auto;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 0;
+  flex-shrink: 1;
+  box-shadow: none;
+
+  .lights__info-item-text {
+    font-size: 16px;
+  }
+
+  &:hover {
     box-shadow: none;
 
-    .lights__info-item-text {
-      font-size: 16px;
-    }
-
-    &:hover {
-
-      .icon svg path {
-        fill: var(--hover);
-      }
+    .icon svg path {
+      fill: var(--hover);
     }
   }
 }

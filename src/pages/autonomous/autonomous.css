@@ -38,3 +38,16 @@
     margin-bottom: 13px;
   }
 }
+/**
+
+ */
+.lights__description{
+  margin-bottom: 24px;
+  padding: 0 0 23px 0;
+  /*margin-bottom: 59px;*/
+  border-bottom: 1px solid rgba(196, 196, 196, .5);
+
+  ul{
+    margin-bottom: 0;
+  }
+}
