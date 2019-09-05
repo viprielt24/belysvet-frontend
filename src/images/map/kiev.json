@@ -4,6 +4,13 @@
     {
       "type": "Feature",
       "id": 0,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -19,6 +26,13 @@
     {
       "type": "Feature",
       "id": 1,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -34,6 +48,13 @@
     {
       "type": "Feature",
       "id": 2,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -49,6 +70,13 @@
     {
       "type": "Feature",
       "id": 3,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -64,6 +92,13 @@
     {
       "type": "Feature",
       "id": 4,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -79,6 +114,13 @@
     {
       "type": "Feature",
       "id": 5,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -94,6 +136,13 @@
     {
       "type": "Feature",
       "id": 6,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -109,6 +158,13 @@
     {
       "type": "Feature",
       "id": 7,
+      "partner": {
+        "name": "Ассоциация «Русский Свет», Киев",
+        "address": "04074, г. Киев, ул. Автозаводская, д. 2",
+        "email": "russvet@el-komplekt.com.ua",
+        "phone": "+38 (044) 503 38 11",
+        "site": "www.russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [

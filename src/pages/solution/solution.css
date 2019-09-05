@@ -8,65 +8,66 @@
   border-right: 0;
 }
 
-.content__top--signone{
+.content__top--signone {
 
-  .tagline{
+  .tagline {
     flex-wrap: wrap;
   }
 
-  .tag--active .tag__title{
+  .tag--active .tag__title {
     transform: none;
   }
 
-  .tag--active .tag__close{
+  .tag--active .tag__close {
     display: none;
   }
 }
 
-.content__bottom .title{
+.content__bottom .title {
 
-  span{
+  span {
     display: block;
     margin-top: 10px;
     font-size: 27px;
   }
 }
 
-.content__top-links{
+.content__top-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 1px;
   margin-bottom: 35px;
 
-  .link{
+  .link {
     display: flex;
     align-items: center;
     margin-right: 30px;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
 
-  .link--icon .link__text{
+  .link--icon .link__text {
     margin-left: 5px;
   }
 }
+
 /**
 
  */
-.solution__tabs-title{
+.solution__tabs-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: var(--border);
 }
 
-.solution__tabs-title-item{
+.solution__tabs-title-item {
   position: relative;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -76,18 +77,28 @@
     height: 5px;
     transition: var(--trbg);
   }
-  
+
   &.active .solution__tabs-title-link,
-  &:hover .solution__tabs-title-link{
+  &:hover .solution__tabs-title-link {
     color: #DE3831;
   }
 
-  &.active:after{
+  &.active:after {
     background-color: #DE3831;
+  }
+
+  &.active {
+
+    .solution__tabs-title-item--icon {
+
+      svg path {
+        fill: #DE3831;
+      }
+    }
   }
 }
 
-.solution__tabs-title-link{
+.solution__tabs-title-link {
   display: flex;
   align-items: center;
   height: 80px;
@@ -97,29 +108,29 @@
   transition: var(--trc);
 }
 
-.solution__tabs-title-item--icon{
+.solution__tabs-title-item--icon {
 
-  .icon{
+  .icon {
     margin-right: 9px;
   }
 
-  svg path{
+  svg path {
     transition: var(--trsf);
   }
 
-  &:hover{
+  &:hover {
 
-    svg path{
+    svg path {
       fill: #DE3831;
     }
   }
 
-  &.hint--white:before{
+  &.hint--white:before {
     margin-top: -35px;
     margin-left: -137px;
   }
 
-  &.hint--white:after{
+  &.hint--white:after {
     margin-top: -24px;
     margin-left: 15px;
     font-size: 12px;
@@ -128,16 +139,16 @@
   }
 }
 
-.solution{
+.solution {
   margin-bottom: 0;
 }
 
-.solution-bottom{
+.solution-bottom {
   background-color: #f5f5f5;
   padding-top: 32px;
 }
 
-.tech-descr{
+.tech-descr {
   margin-top: 32px;
   font-style: normal;
   font-weight: normal;

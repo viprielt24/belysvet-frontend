@@ -8,7 +8,7 @@ include ../../components/select-custom/select-custom
     each item in registrationCity
       //- неправильное условие на отсутствие выделенного пункта
       if !item.selected & !counter
-        option(placeholder) Укажите город/область
+        option(placeholder) Выберите страну
         - counter++
       if item.value
         option(value= item.value selected= item.selected)= item.title

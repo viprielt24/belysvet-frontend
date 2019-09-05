@@ -1,5 +1,11 @@
 .gallery {
   position: relative;
+  opacity: 0;
+  transition: var(--tro);
+
+  &.images-ready{
+    opacity: 1;
+  }
 
   .swiper-container{
     width: 100%;
@@ -56,6 +62,12 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+  opacity: 0;
+  transition: var(--tro);
+
+  &.images-ready{
+    opacity: 1;
+  }
 
   .swiper-pagination-fraction{
     position: relative;
@@ -85,6 +97,12 @@
  */
 .thumbs{
   margin-top: 12px;
+  opacity: 0;
+  transition: var(--tro);
+
+  &.images-ready{
+    opacity: 1;
+  }
 
   .swiper-container{
     height: 89px;

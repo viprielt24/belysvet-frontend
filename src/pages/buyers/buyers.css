@@ -1,17 +1,14 @@
 @import "../../layout/variables.css";
 
-.career{
+.buyers{
   margin-top: 23px;
   padding-top: 23px;
   border-top: 1px solid rgba(196, 196, 196, 0.5);
 
-  .accordion__content{
-    padding-right: 360px;
+  .text-editor .files{
+    padding-top: 35px;
+    border-top: 0;
   }
-}
-
-.accordion__close{
-  margin-right: -324px;
 }
 
 .accordion__button{

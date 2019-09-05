@@ -130,6 +130,7 @@
 
   &.active:hover{
     color: #333333;
+    cursor: default;
   }
 
   &:hover{
@@ -373,15 +374,19 @@
 .emunit__archive {
   text-align: center;
 
-  .emunit__models-table-s1 {width: 115px;}
+  .emunit__models-table-s0 {width: 105px;}
 
-  .emunit__models-table-s2 {width: 340px;}
+  .emunit__models-table-s1 {width: 77px;}
 
   .emunit__models-table-s3 {width: 173px;}
 
-  .emunit__models-table-s7 {width: 334px;}
+  .emunit__models-table-s5 {width: 90px;}
+
+  .emunit__models-table-s7 {width: 190px;}
 
   .emunit__models-table-s8 {width: 179px;}
+
+  .emunit__models-table-s12 {width: 260px;}
 
   .text-editor table {
     margin: 0;
@@ -390,15 +395,27 @@
   .text-editor table thead td {
     padding-top: 13px;
     font-size: 13px;
+    text-align: left;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4){
+      text-align: center;
+    }
   }
 
   .text-editor table tbody td {
     padding-top: 13px;
     padding-bottom: 13px;
     vertical-align: top;
+    text-align: left;
 
     &:first-child {
       line-height: 24px;
+    }
+
+    &:nth-child(4){
+      text-align: center;
     }
   }
 }

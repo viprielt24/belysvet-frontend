@@ -13,7 +13,6 @@ export default class {
   constructor() {
     this.hideMapTrigger = document.querySelector('.js-wheretobuy__toggle-map');
     this.hideMapSelf = document.querySelector('.js-wheretobuy__map');
-    this.hideMapText = document.querySelector('.js-wheretobuy__toggle-map-text');
     this.hideMapSelfHeight = this.hideMapSelf.clientHeight;
     this.selectOrg = document.querySelector('.js-select-org');
 
@@ -38,10 +37,17 @@ export default class {
       objectManager.objects.options.set({
         iconLayout: 'default#image',
         iconImageHref: markerPath,
-        iconImageSize: [34, 48],
+        iconImageSize: [34, 48]
       });
       myMap.geoObjects.add(objectManager);
       objectManager.add(citiesRussia);
+
+      //добавляем маленький зум справа
+      myMap.controls.add('zoomControl',{
+        position: { right: 10, top: 230 },
+        size: 'small'
+      });
+
       //запрет зума по скроллу
       myMap.behaviors.disable('scrollZoom');
 
@@ -137,12 +143,17 @@ export default class {
         }
 
       });
-      //карту по городу
 
+      //карту по городу
       selectCityInst.passedElement.element.addEventListener('change', (event) => {
-        let cityName = event.target.value;
+        citiesRender(event.target.value)
+      });
+
+      const citiesRender = function (name) {
+        let cityName = name;
         if (cityName) {
-          partnersCity.innerText = document.querySelector('.js-select-city').innerText;
+          partnersCity.innerText = document.querySelector('.js-select-city').innerText !== 'Выберите страну' ?
+            document.querySelector('.js-select-city').innerText : 'Москва и Московская область';
           fetch('../../images/map/' + cityName + '.json')
           .then(res => res.json())
           .then(data => {
@@ -170,7 +181,9 @@ export default class {
             }, 100);
           });
         }
-      });
+      };
+      //первый рендер городов Москвы
+      citiesRender('moscow')
     });
   }
 
@@ -181,11 +194,9 @@ export default class {
       if (target.classList.contains('active')) {
         this.hideMapSelf.style.height = this.hideMapSelfHeight + 'px';
         target.classList.remove('active');
-        this.hideMapText.innerText = 'Скрыть карту';
       } else {
         this.hideMapSelf.style.height = 0 + 'px';
         target.classList.add('active');
-        this.hideMapText.innerText = 'Показать карту';
       }
     });
   }

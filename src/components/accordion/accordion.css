@@ -1,20 +1,16 @@
+.accordion{
+
+  .text-editor ul{
+    margin-bottom: 25px;
+  }
+}
+
 .accordion__item {
   background-color: #fff;
   margin-bottom: 16px;
 
   &:last-child {
     margin-bottom: 0;
-  }
-}
-
-.accordion__item--parent {
-
-  .accordion__header:after {
-    content: none;
-  }
-
-  .accordion__content {
-    padding: 0 90px 0;
   }
 }
 
@@ -26,16 +22,6 @@
   padding: 20px 100px 20px 90px;
   text-decoration: none;
   text-align: left;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 36px;
-    right: 36px;
-    height: 1px;
-    background-color: transparent;
-  }
 
   &:hover{
 
@@ -131,8 +117,22 @@
   }
 }
 
+.accordion__content-wrap{
+  position: relative;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: transparent;
+  }
+}
+
 .accordion__close {
-  margin-top: 25px;
+  padding-top: 25px;
   text-align: center;
 }
 
@@ -175,16 +175,24 @@ a.accordion__close-text {
     padding-bottom: 26px;
   }
 
-  &.accordion__item--parent .accordion__content {
-    padding-top: 0;
+  .accordion__content-wrap:before{
+    background-color: rgba(196, 196, 196, 0.5);
   }
 }
 
 /**
 
  */
-.accordion__inner {
-  margin-bottom: -1px;
+.accordion__inner-wrap{
+  clear: both;
+  padding-top: 35px;
+}
+
+.accordion__inner{
+
+  &:last-child{
+    border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+  }
 }
 
 .accordion__inner-header {
@@ -194,7 +202,6 @@ a.accordion__close-text {
   min-height: 80px;
   padding: 27px 0;
   border-top: 1px solid rgba(196, 196, 196, 0.5);
-  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
   text-decoration: none;
 
   &:hover{
@@ -275,6 +282,7 @@ a.accordion__close-text {
   }
 
   .accordion__inner-content {
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
     padding: 15px 15px 23px;
   }
 }

@@ -5,6 +5,24 @@
   .accordion__content{
     padding-right: 360px;
   }
+
+  .accordion__close{
+    margin-right: -324px;
+  }
+
+  .accordion__content-wrap:before{
+    content: none;
+  }
+
+  .active .accordion__header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 36px;
+    right: 36px;
+    height: 1px;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
 }
 
 .career__top{
@@ -54,10 +72,6 @@
   font-size: 20px;
   line-height: 26px;
   font-family: var(--museo);
-}
-
-.accordion__close{
-  margin-right: -324px;
 }
 
 .accordion__button{

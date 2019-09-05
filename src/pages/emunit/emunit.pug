@@ -31,10 +31,10 @@ block content
                   .link__text Распечатать страницу
 
       .container.emunit__middle
-        .emunit__tabs
+        .emunit__tabs.js-tabs
           .emunit__tabs-title
-            a(href="javascript:void(0);").emunit__tabs-title-item.active Модельный ряд
-            a(href="javascript:void(0);").emunit__tabs-title-item Обзор и описание серии
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Модельный ряд
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Обзор и описание серии
           .emunit__tabs-content
             include ./pug/models
             include ./pug/review

@@ -28,13 +28,20 @@ export default class {
     this.accordionItems.forEach(item => {
       const itemHeader = item.querySelector('.js-accordion__header');
       const itemContent = item.querySelector('.js-accordion__content');
-      let itemContentHeight = null;
-      setTimeout(() => {
-        itemContentHeight = itemContent.clientHeight;
-      }, 50);
-      setTimeout(() => {
-        itemContent.style.height = 0;
-      }, 100);
+      //кнопа закрыть главного аккордеона
+      // const itemContentCloseBtn = item.querySelector('.js-accordion__close');
+      // const itemContentCloseBtnHeight = itemContentCloseBtn.clientHeight;
+
+      //считаем высоту контента
+      // let itemContentHeight = itemContent.clientHeight;
+      let itemContentHeight = Math.max(
+        itemContent.scrollHeight,
+        itemContent.offsetHeight,
+        itemContent.clientHeight,
+      );
+      itemContent.style.height = 0;
+      //считаем высоту закрывашки контента
+      const itemChildCloseHeight = item.querySelector('.js-accordion__close').clientHeight;
 
       itemHeader.addEventListener('click', (event) => {
         //главный аккордеон
@@ -46,7 +53,7 @@ export default class {
             setTimeout(() => {
               itemContent.style.height = 0;
               this.accordInnerReset(item);
-            }, 100);
+            }, 50);
           } else {
             itemContent.style.height = 0;
           }
@@ -54,24 +61,32 @@ export default class {
           //аккордеон в аккордеоне открываем
           if (item.classList.contains('accordion__item--parent')) {
             item.classList.add('active');
-            //считаем высоту заголовков
+            //высота контента до внутреннего аккордеона
+            const itemChildContentHeight = item.querySelector('.js-accordion__content-wrap').clientHeight;
+
+            //считаем высоту заголовков и отступ внутреннего аккордеона
             const itemChildsHeaders = item.querySelectorAll('.js-accordion__inner-header');
             let itemChildsHeadersHeight = null;
             itemChildsHeaders.forEach(child => {
               itemChildsHeadersHeight = itemChildsHeadersHeight + child.clientHeight;
             });
-            //считаем высоту закрывашки
-            const itemChildClose = item.querySelector('.js-accordion__close');
-            let itemChildCloseHeight = itemChildClose.clientHeight +
-              parseFloat(getComputedStyle(itemChildClose).marginTop);
+            const itemChildsWrapPadding = parseFloat(getComputedStyle(document.querySelector('.js-accordion__inner-wrap')).paddingTop);
+
+
+
+            //сумма высоты всех блоков
+            let summaryInnerHeight = itemChildContentHeight + itemChildsHeadersHeight + itemChildsWrapPadding + itemChildCloseHeight;
+
             //открываем родительский контент и убираем посчитанную высоту
-            itemContent.style.height = 26 + itemChildsHeadersHeight + itemChildCloseHeight + 'px';
+            itemContent.style.height = summaryInnerHeight + 'px';
+
             setTimeout(() => {
               itemContent.style.height = 'auto';
             }, 300);
           } else {
+            //главный аккордеон открываем
             item.classList.add('active');
-            itemContent.style.height = 52 + itemContentHeight + 'px';
+            itemContent.style.height = itemContentHeight + itemChildCloseHeight + 'px';
           }
         }
       });

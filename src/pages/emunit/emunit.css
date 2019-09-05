@@ -1,5 +1,9 @@
 @import "../../layout/variables.css";
 
+.content__bottom {
+  justify-content: flex-start;
+}
+
 .content__top {
   margin-bottom: 20px;
   padding-top: 16px;
@@ -126,6 +130,7 @@
 
   &.active:hover{
     color: #333333;
+    cursor: default;
   }
 
   &:hover{
@@ -147,6 +152,10 @@
   font-weight: 700;
   line-height: 22px;
   text-decoration: underline;
+
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 .emunit__models-table {

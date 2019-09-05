@@ -45,6 +45,16 @@ export default class {
         el: this.paging,
         type: 'fraction',
       },
+      on:{
+        imagesReady:() => {
+          //галерея
+          this.wrap.classList.add('images-ready');
+          //счетчик
+          this.wrap.parentElement.querySelector('.js-gallery-counter').classList.add('images-ready');
+          //превью
+          this.thumbsWrap.classList.add('images-ready');
+        }
+      }
     });
 
     slider.controller.control = thumbs;

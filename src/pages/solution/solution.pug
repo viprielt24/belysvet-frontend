@@ -5,20 +5,21 @@ block content
     .container
       include ../../components/content-header/content-header
     .content__text-editor.solution
-      .container.solution__tabs
+      .container.solution__tabs.js-tabs
 
         .solution__tabs-title
-          .solution__tabs-title-item.active: a(href="javascript:void(0);").solution__tabs-title-link Описание и состав
-          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Структурные схемы
-          .solution__tabs-title-item: a(href="javascript:void(0);" aria-label="Доступно после авторизации").solution__tabs-title-item--icon.solution__tabs-title-link.hint.hint--white.hint--bottom-left
-            .icon.icon--inline.icon--lock: include ../../images/lock.svg
-            | Примеры для проектирования
-          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Примеры для технического задания
-          .solution__tabs-title-item: a(href="javascript:void(0);").solution__tabs-title-link Типовые решения
+          .solution__tabs-title-item.js-tabs-header-item.active: a(href="javascript:void(0);").solution__tabs-title-link Описание и состав
+          .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Структурные схемы
+          .solution__tabs-title-item.js-tabs-header-item
+            a(href="javascript:void(0);" aria-label="Доступно после авторизации").solution__tabs-title-item--icon.solution__tabs-title-link.hint.hint--white.hint--bottom-left
+              .icon.icon--inline.icon--lock: include ../../images/lock.svg
+              | Примеры для проектирования
+          .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Примеры для технического задания
+          .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Типовые решения
 
         .solution__tabs-content
-          //-.solution__tabs-content-item.text-editor: include ./pug/tabs-content
-          .solution__tabs-content-item.text-editor: include ./pug/tabs-content2
+          .solution__tabs-content-item.text-editor.js-tabs-content-item: include ./pug/tabs-content
+          .solution__tabs-content-item.text-editor.js-tabs-content-item: include ./pug/tabs-content2
 
     .container.solution-bottom
       include ../common/promo

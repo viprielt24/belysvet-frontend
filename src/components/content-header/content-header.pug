@@ -64,4 +64,5 @@ include ../crumbs/crumbs
   else
     div(class= pageDescr ? 'content__bottom content__bottom--descr' : 'content__bottom')
       h1.title!= pageName
-      .descr!= pageDescr
+      if pageDescr
+        .descr!= pageDescr

@@ -1,0 +1,8 @@
+.js-tabs{
+  opacity: 0;
+  transition: var(--tro);
+}
+
+.tabs-content-hidden{
+  display: none;
+}

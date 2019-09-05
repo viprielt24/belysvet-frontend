@@ -118,4 +118,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-tabs')) {
+    import('./tabs/tabs').then(module => {
+      new module.default();
+    });
+  }
 });

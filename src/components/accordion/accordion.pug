@@ -2,12 +2,14 @@ mixin accordion(item, index)
 
   //-доп.класс на вложенный аккордеон
   - innerClass = item.inner ? 'accordion__item accordion__item--parent js-accordion__item' : 'accordion__item js-accordion__item'
+  //-доп.класс для пункта аккордеона карьеры
+  - careerClass = item.career ? 'accordion__title accordion__title--career' : 'accordion__title'
+  //-начало аккордеона
   div(class= innerClass)
 
     //-пункты главного аккордеона
     a(href="javascript:void(0);").accordion__header.js-accordion__header
       .accordion__num.js-accordion__num= index + 1 + '.'
-      - careerClass = item.career ? 'accordion__title accordion__title--career' : 'accordion__title'
       div(class= careerClass)= item.title
       if item.career
         .accordion__career
@@ -17,22 +19,26 @@ mixin accordion(item, index)
 
     //-контент главного аккордеона
     .accordion__content.js-accordion__content.text-editor
+      .accordion__content-wrap.js-accordion__content-wrap
+        != item.content
 
       //-если есть вложенный аккордеон
       if item.inner
-        each unit in item.inner
-          .accordion__inner.js-accordion__inner
-            a(href="javascript:void(0);").accordion__inner-header.js-accordion__inner-header
-              .accordion__inner-title= unit.title
-              .accordion__inner-trigger
-            .accordion__inner-content.js-accordion__inner-content
-              != unit.content
+        .accordion__inner-wrap.js-accordion__inner-wrap
+          each unit in item.inner
+            .accordion__inner.js-accordion__inner
+              a(href="javascript:void(0);").accordion__inner-header.js-accordion__inner-header
+                .accordion__inner-title= unit.title
+                .accordion__inner-trigger
+              .accordion__inner-content.js-accordion__inner-content
+                != unit.content
 
-              //-закрытие вложенного аккордеона
-              .accordion__close
-                a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
-      else
-        != item.content
+                //-закрытие вложенного аккордеона
+                .accordion__close
+                  a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
+
+      if item.files
+        include ../../pages/common/file-accordion-common
 
       //-закрытие главного аккордеона
       .accordion__close.js-accordion__close

@@ -3,6 +3,13 @@
   "features": [
     {
       "id": 0,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»",
+        "address": "124489, Сосновая аллея д. 4, стр. 2",
+        "email": "logist@russvet.ru",
+        "phone": "(495) 463-12-12",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -13,6 +20,13 @@
     },
     {
       "id": 1,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»",
+        "address": "124489, Сосновая аллея д. 4, стр. 2",
+        "email": "logist@russvet.ru",
+        "phone": "(495) 463-12-12",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -23,6 +37,13 @@
     },
     {
       "id": 2,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»",
+        "address": "124489, Сосновая аллея д. 4, стр. 2",
+        "email": "logist@russvet.ru",
+        "phone": "(495) 463-12-12",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -33,6 +54,13 @@
     },
     {
       "id": 3,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»",
+        "address": "124489, Сосновая аллея д. 4, стр. 2",
+        "email": "logist@russvet.ru",
+        "phone": "(495) 463-12-12",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -43,6 +71,13 @@
     },
     {
       "id": 4,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»",
+        "address": "124489, Сосновая аллея д. 4, стр. 2",
+        "email": "logist@russvet.ru",
+        "phone": "(495) 463-12-12",
+        "site": "russvet.ru"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
