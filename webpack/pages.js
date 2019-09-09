@@ -438,7 +438,7 @@ const pages = {
         {
           title: 'Россия',
           value: 'Russia',
-          selected: false
+          selected: true
         },
         {
           title: 'Украина',
@@ -459,22 +459,22 @@ const pages = {
       registrationCity: [
         {
           title: 'Москва и Московская область',
-          value: '1',
-          selected: false
+          value: 'moscow',
+          selected: true
         },
         {
           title: 'Санкт-Петербург',
-          value: '1',
+          value: 'piter',
+          selected: false
+        },
+        {
+          title: ' Армавир',
+          value: 'armavir',
           selected: false
         },
         {
           title: ' Абакан',
-          value: '1',
-          selected: false
-        },
-        {
-          title: ' Альметьевск',
-          value: '1',
+          value: 'abakan',
           selected: false
         },
       ],

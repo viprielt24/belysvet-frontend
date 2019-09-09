@@ -2,6 +2,7 @@ import romanize from 'romanize';
 
 export default class {
   constructor() {
+    this.accordionWrap = document.querySelector('.accordion');
     this.accordionItems = document.querySelectorAll('.js-accordion__item');
     this.accordionItemsNumber = document.querySelectorAll('.js-accordion__num');
     this.accordionItemsCloseUp = document.querySelectorAll('.js-accordion__close-text');
@@ -22,6 +23,7 @@ export default class {
       let arabNumber = number.innerText;
       number.innerText = romanize(arabNumber) + '.';
     });
+    this.accordionWrap.style.opacity = '1';
   }
 
   slideDown() {

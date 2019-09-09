@@ -74,7 +74,7 @@ export default class {
         noResultsText: 'Не найдено',
         renderSelectedChoices: true,
         searchPlaceholderValue: 'Поиск',
-      }).disable();
+      });
 
       //по стране обновляем город, а карту по городу
       selectCountryInst.passedElement.element.addEventListener('change', (event) => {
@@ -84,10 +84,10 @@ export default class {
           case 'Russia':
             objectManager.add(citiesRussia);
             selectCityInst.setChoices([
-              {value: 'moscow', label: 'Москва', selected: true},
+              {value: 'moscow', label: 'Москва и Московская область', selected: true},
+              {value: 'piter', label: 'Санкт-Петербург'},
               {value: 'armavir', label: 'Армавир'},
               {value: 'abakan', label: 'Абакан'},
-              {value: 'piter', label: 'Санкт-Петербург'},
             ], 'value', 'label', true).enable();
             break;
           case 'Ukraine':
@@ -169,7 +169,7 @@ export default class {
         });
       });
 
-      const citiesRender = function (name = 'moscow', store) {
+      const citiesRender = function (name, store) {
 
         const storeData = document.querySelector('.js-wheretobuy-partners__filter-item').dataset.filter;
         const storeCheck = store !== undefined ? store : storeData;
@@ -249,8 +249,8 @@ export default class {
           });
         }
       };
-      //первый рендер филиалов Москвы
-      citiesRender()
+      //первый рендер филиалов
+      citiesRender(selectCity.value)
     });//end ymaps
   }//end addEvents
 

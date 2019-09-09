@@ -6,6 +6,7 @@
   border-top: 1px solid rgba(196, 196, 196, 0.5);
 
   .text-editor .files{
+    clear: both;
     padding-top: 35px;
     border-top: 0;
   }

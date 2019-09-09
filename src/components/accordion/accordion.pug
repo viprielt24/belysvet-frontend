@@ -22,6 +22,10 @@ mixin accordion(item, index)
       .accordion__content-wrap.js-accordion__content-wrap
         != item.content
 
+      //-файлы
+      if item.files
+        include ../../pages/common/file-accordion-common
+
       //-если есть вложенный аккордеон
       if item.inner
         .accordion__inner-wrap.js-accordion__inner-wrap
@@ -33,12 +37,13 @@ mixin accordion(item, index)
               .accordion__inner-content.js-accordion__inner-content
                 != unit.content
 
+                //-файлы
+                if unit.files
+                  include ../../pages/common/file-accordion-common
+
                 //-закрытие вложенного аккордеона
                 .accordion__close
                   a(href="javascript:void(0);").accordion__close-text.js-accordion__close-inner Свернуть
-
-      if item.files
-        include ../../pages/common/file-accordion-common
 
       //-закрытие главного аккордеона
       .accordion__close.js-accordion__close
