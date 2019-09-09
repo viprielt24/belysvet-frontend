@@ -3,6 +3,13 @@
   "features": [
     {
       "id": 0,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -12,6 +19,13 @@
     },
     {
       "id": 1,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [

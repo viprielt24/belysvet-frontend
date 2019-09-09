@@ -10,6 +10,10 @@
         "phone": "8 (727) 249-60-83, 390-37-49",
         "site": "russvet.ru"
       },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -26,6 +30,10 @@
         "email": "kazsvet_almaty@mail.ru",
         "phone": "8 (727) 382-23-92, 382-22-23",
         "site": "kazsvet.kz"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
       },
       "geometry": {
         "type": "Point",

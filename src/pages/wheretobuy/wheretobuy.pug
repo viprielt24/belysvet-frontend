@@ -22,6 +22,15 @@ block content
           .wheretobuy__map-self: #wheretobuyMap(data-map-marker="/images/map/marker2.svg")
     .wheretobuy-partners
       .container
+        .wheretobuy-partners__filter
+          .wheretobuy-partners__filter-title Показать:
+          .wheretobuy-partners__filter-wrap
+            label
+              input(type="radio" name="partnersFilter" data-filter="all" checked).js-wheretobuy-partners__filter-item
+              .wheretobuy-partners__filter-name Все
+            label
+              input(type="radio" name="partnersFilter" data-filter="store").js-wheretobuy-partners__filter-item
+              .wheretobuy-partners__filter-name Интернет-магазины
         .wheretobuy-partners__title.js-wheretobuy-partners__title Москва и Московская область
         .wheretobuy-partners__wrap.js-wheretobuy-partners__wrap
           .wheretobuy-partners__item

@@ -4,33 +4,37 @@
     {
       "type": "Feature",
       "id": 0,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           51.150501483642,
           71.455738911333
         ]
-      },
-      "properties": {
-        "balloonContent": "",
-        "clusterCaption": "",
-        "hintContent": ""
       }
     },
     {
       "type": "Feature",
       "id": 1,
+      "partner": {
+        "name": "Ассоциация «Русский Свет»"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           51.170106,
           71.465907
         ]
-      },
-      "properties": {
-        "balloonContent": "",
-        "clusterCaption": "",
-        "hintContent": ""
       }
     }
   ]

@@ -11,6 +11,10 @@
         "phone": "8-10-375-17-213-06-48",
         "site": "www.russvet.ru"
       },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -29,6 +33,10 @@
         "phone": "8-10-375-17-213-06-48",
         "site": "www.russvet.ru"
       },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -46,6 +54,10 @@
         "email": "minsk@urs.russvet.ru",
         "phone": "8-10-375-17-213-06-48",
         "site": "www.russvet.ru"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
       },
       "geometry": {
         "type": "Point",

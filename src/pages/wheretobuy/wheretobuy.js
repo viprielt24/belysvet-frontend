@@ -40,7 +40,7 @@ export default class {
         iconImageSize: [34, 48]
       });
       myMap.geoObjects.add(objectManager);
-      objectManager.add(citiesRussia);
+      objectManager.add(moscow);
 
       //добавляем маленький зум справа
       myMap.controls.add('zoomControl',{
@@ -53,6 +53,7 @@ export default class {
 
       const partnersWrap = document.querySelector('.js-wheretobuy-partners__wrap');
       const partnersCity = document.querySelector('.js-wheretobuy-partners__title');
+      const partnersFilterItems = document.querySelectorAll('.js-wheretobuy-partners__filter-item');
 
       const selectCountry = document.querySelector('.js-select-country');
       const selectCountryInst = new Choices(selectCountry, {
@@ -74,6 +75,7 @@ export default class {
         renderSelectedChoices: true,
         searchPlaceholderValue: 'Поиск',
       }).disable();
+
       //по стране обновляем город, а карту по городу
       selectCountryInst.passedElement.element.addEventListener('change', (event) => {
         let countryName = event.target.value;
@@ -115,22 +117,31 @@ export default class {
           myMap.setBounds(objectManager.getBounds());
         }, 1000);
 
-        let cityName = document.querySelector('.js-select-city').value;
-        if (cityName) {
-          partnersCity.innerText = document.querySelector('.js-select-city').innerText;
+        // let cityName = document.querySelector('.js-select-city').value;
+        citiesRender(selectCity.value);
+        //сбрасываем фильтр на Все
+        partnersFilterItems[0].checked = true;
+        /*if (cityName) {
+          /!*partnersCity.innerText = document.querySelector('.js-select-city').innerText;
           fetch('../../images/map/' + cityName + '.json')
           .then(res => res.json())
           .then(data => {
             let partnerLayout = '';
             data.features.forEach(feature => {
               if (!feature.partner) return;
+              let partnerName = feature.partner.name !== '' && `<div class="wheretobuy-partners__item-name">${feature.partner.name}</div>`;
+              let partnerAddress = feature.partner.address !== '' && `<div class="wheretobuy-partners__item-address">${feature.partner.address}</div>`;
+              let partnerPhone = feature.partner.phone !== '' && `<div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>`;
+              let partnerEmail = feature.partner.email !== '' && `<a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a>`;
+              let partnerSite = feature.partner.site !== '' && `<a class="wheretobuy-partners__item-site" href="http://${feature.partner.site}">${feature.partner.site}</a>`;
+
               partnerLayout += `<div class="wheretobuy-partners__item">
-              <div class="wheretobuy-partners__item-name">${feature.partner.name}</div>
-              <div class="wheretobuy-partners__item-address">${feature.partner.address}</div>
-              <div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>
-              <div class="wheretobuy-partners__item-email-wrap"><a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a></div>
-              <div class="wheretobuy-partners__item-site-wrap"><a class="wheretobuy-partners__item-site" href="http://feature.partner.site">feature.partner.site</a></div>
-            </div>`;
+                ${partnerName}
+                ${partnerAddress}
+                ${partnerPhone}
+                <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
+                <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
+              </div>`;
             });
             if (partnerLayout) {
               partnersWrap.innerHTML = partnerLayout;
@@ -139,35 +150,91 @@ export default class {
             }
             objectManager.removeAll();
             objectManager.add(data);
-          });
-        }
-
+          });*!/
+        }*/
       });
 
       //карту по городу
       selectCityInst.passedElement.element.addEventListener('change', (event) => {
-        citiesRender(event.target.value)
+        citiesRender(event.target.value);
+        //сбрасываем фильтр на Все
+        partnersFilterItems[0].checked = true;
       });
 
-      const citiesRender = function (name) {
+      //фильтруем филиалы в городе
+      partnersFilterItems.forEach(item => {
+        item.addEventListener('change', event => {
+          const cityNameCheck = selectCity.value === 'Выберите страну' ? 'moscow' : selectCity.value;
+          citiesRender(cityNameCheck, event.target.dataset.filter);
+        });
+      });
+
+      const citiesRender = function (name = 'moscow', store) {
+
+        const storeData = document.querySelector('.js-wheretobuy-partners__filter-item').dataset.filter;
+        const storeCheck = store !== undefined ? store : storeData;
+
         let cityName = name;
         if (cityName) {
+
+          //заголовок филиалов когда не выбрана страна
           partnersCity.innerText = document.querySelector('.js-select-city').innerText !== 'Выберите страну' ?
             document.querySelector('.js-select-city').innerText : 'Москва и Московская область';
+
+          //запрос города
           fetch('../../images/map/' + cityName + '.json')
           .then(res => res.json())
           .then(data => {
             let partnerLayout = '';
+            let storeCounter = null;
             data.features.forEach(feature => {
               if (!feature.partner) return;
-              partnerLayout += `<div class="wheretobuy-partners__item">
-              <div class="wheretobuy-partners__item-name">${feature.partner.name}</div>
-              <div class="wheretobuy-partners__item-address">${feature.partner.address}</div>
-              <div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>
-              <div class="wheretobuy-partners__item-email-wrap"><a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a></div>
-              <div class="wheretobuy-partners__item-site-wrap"><a class="wheretobuy-partners__item-site" href="http://feature.partner.site">feature.partner.site</a></div>
-            </div>`;
+              if (feature.partner.store){
+                storeCounter++;
+              }
+              //если в json нет параметра store, то ставим all в проверку вывода интернет-магазинов
+              const storeCheckJson = feature.partner.store ? feature.partner.store : 'all';
+              // console.log('storeCheck', storeCheck)
+              // console.log('storeCheckJson', storeCheckJson)
+              if (storeCheck === 'all') {
+
+                let partnerName = feature.partner.name !== undefined ? `<div class="wheretobuy-partners__item-name">${feature.partner.name}</div>` : '';
+                let partnerAddress = feature.partner.address !== undefined ? `<div class="wheretobuy-partners__item-address">${feature.partner.address}</div>` : '';
+                let partnerPhone = feature.partner.phone !== undefined ? `<div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>` : '';
+                let partnerEmail = feature.partner.email !== undefined ? `<a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a>` : '';
+                let partnerSite = feature.partner.site !== undefined ? `<a class="wheretobuy-partners__item-site" href="http://${feature.partner.site}">${feature.partner.site}</a>` : '';
+
+                partnerLayout += `<div class="wheretobuy-partners__item">
+                ${partnerName}
+                ${partnerAddress}
+                ${partnerPhone}
+                <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
+                <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
+              </div>`;
+
+              } else if (storeCheck === storeCheckJson) {
+
+                let partnerName = feature.partner.name !== undefined ? `<div class="wheretobuy-partners__item-name">${feature.partner.name}</div>` : '';
+                let partnerAddress = feature.partner.address !== undefined ? `<div class="wheretobuy-partners__item-address">${feature.partner.address}</div>` : '';
+                let partnerPhone = feature.partner.phone !== undefined ? `<div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>` : '';
+                let partnerEmail = feature.partner.email !== undefined ? `<a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a>` : '';
+                let partnerSite = feature.partner.site !== undefined ? `<a class="wheretobuy-partners__item-site" href="http://${feature.partner.site}">${feature.partner.site}</a>` : '';
+
+                partnerLayout += `<div class="wheretobuy-partners__item">
+                ${partnerName}
+                ${partnerAddress}
+                ${partnerPhone}
+                <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
+                <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
+              </div>`;
+
+              }
             });
+            //если нет интернет-магазинов, пишем сообещине
+            if (!storeCounter && !partnerLayout){
+              partnerLayout += `<div class="wheretobuy-partners__item">В городе нет интернет-магазинов</div>`
+            }
+            //вставляем верстку
             if (partnerLayout) {
               partnersWrap.innerHTML = partnerLayout;
             } else {
@@ -182,10 +249,10 @@ export default class {
           });
         }
       };
-      //первый рендер городов Москвы
-      citiesRender('moscow')
-    });
-  }
+      //первый рендер филиалов Москвы
+      citiesRender()
+    });//end ymaps
+  }//end addEvents
 
   toggleMap() {
     this.hideMapSelf.style.height = this.hideMapSelfHeight + 'px';

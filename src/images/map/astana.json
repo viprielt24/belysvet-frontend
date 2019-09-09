@@ -10,6 +10,10 @@
         "phone": "8 (7172) 35-28-03",
         "site": "russvet.ru"
       },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -26,6 +30,10 @@
         "email": "kazsvet@mail.ru",
         "phone": "8 (7172) 34-62-70, 34-52-00, 28-25-14, 28-25-13,",
         "site": "kazsvet.kz"
+      },
+      "properties": {
+        "hintContent": "Содержание всплывающей подсказки",
+        "balloonContent": "Содержание балуна"
       },
       "geometry": {
         "type": "Point",
