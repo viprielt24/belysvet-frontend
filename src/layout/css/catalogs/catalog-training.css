@@ -56,6 +56,7 @@
 
   .pic {
     position: relative;
+    width: 100%;
     height: 100%;
 
     &:after {
@@ -114,6 +115,7 @@
   }
 
   .catalog__item-media {
+    flex-shrink: 0;
     width: 100%;
     height: 251px;
   }

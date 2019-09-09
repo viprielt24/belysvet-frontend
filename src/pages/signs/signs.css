@@ -48,6 +48,7 @@
   }
 
   .part__wrap--text{
+    display: block;
     font-size: 12px;
   }
 }

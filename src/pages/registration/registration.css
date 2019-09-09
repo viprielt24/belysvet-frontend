@@ -1,7 +1,10 @@
 @import "../../layout/variables.css";
 
-.content__bottom {
-  justify-content: center;
+.content--registration{
+
+  .content__bottom {
+    justify-content: center;
+  }
 }
 
 .registration {
