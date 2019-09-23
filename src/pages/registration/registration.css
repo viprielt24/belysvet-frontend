@@ -54,3 +54,52 @@
   font-family: var(--opens);
   color: #404040;
 }
+/**
+media
+ */
+.mobile {
+
+  .registration {
+    margin: 0 -16px -40px;
+    padding: 22px 16px 38px;
+
+    .col-sm-6{
+      margin-bottom: 12px;
+    }
+
+    .form--style .form-group{
+      margin-bottom: 0;
+
+      .form-element{
+        margin-bottom: 12px;
+      }
+    }
+
+    .form--style .form__bottom{
+      margin-top: 0;
+      padding: 0;
+
+      .button-wrap{
+        width: 100%;
+      }
+    }
+
+    .button-wrap,
+    .form-group{
+      margin-left: 0;
+    }
+  }
+
+  .registration__specialization-title{
+    font-size: 12px;
+  }
+
+  .tagline .form-control{
+    height: 27px;
+    margin-top: 9px;
+  }
+
+  .registration__item-title{
+    font-size: 18px;
+  }
+}

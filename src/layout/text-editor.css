@@ -410,38 +410,16 @@ blockquote.blockquote--author {
     color: #404040;
   }
 }
+/**
+media
+ */
+.mobile {
 
+  .text-editor ul {
+    font-size: 14px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .text-editor ul li {
+    margin-bottom: 0;
+  }
+}

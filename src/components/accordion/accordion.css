@@ -326,37 +326,85 @@ a.accordion__close-text {
   color: #333;
   font-family: var(--opens);
 }
+/**
+media
+ */
+.mobile {
 
+  .accordion__item {
+    margin-bottom: 12px;
+  }
 
+  .accordion__header {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 64px;
+    padding: 22px 40px;
+  }
 
+  .accordion__num {
+    top: 24px;
+    left: 16px;
+    margin-top: 0;
+    font-size: 15px;
+  }
 
+  .accordion__title{
+    font-size: 15px;
+    line-height: 19px;
+  }
 
+  .accordion__toggle {
+    top: 24px;
+    right: 16px;
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
 
+    &:before{
+      height: 12px;
+    }
 
+    &:after{
+      width: 12px;
+    }
+  }
 
+  .accordion__content {
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 22px;
+  }
 
+  .active .accordion__content{
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 
+  .accordion__content-wrap:before{
+    top: -22px;
+  }
 
+  a.accordion__close-text{
+    font-size: 14px;
+    font-weight: 400;
+  }
 
+  .accordion__career{
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+  }
 
+  .accordion__career-salary{
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 19px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .accordion__career-type {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

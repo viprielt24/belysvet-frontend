@@ -56,9 +56,21 @@ header.header.js-header
         .header__middle
 
           .header__middle-item
-            .header__logo: a(href="/").header__logo-link: img(src="/images/logo.svg")
-            .header__phone: a(href="tel:+74957851767").header__phone-link +7 (495) 785-17-67
-
+            .header__logo
+              a(href="/").header__logo-link: img(src="/images/logo.svg")
+              a(href="/").header__logo-link.header__logo-link--mobile: img(src="/images/logo-mobile.svg")
+            .header__phone
+              a(href="tel:+74957851767").header__phone-link +7 (495) 785-17-67
+              a(href="tel:+74957851767").header__phone-link.header__phone-link--mobile
+                img(src="/images/phone-small.svg")
+                | +7 (495) 785-17-67
+            a(href="javascript:void(0);" aria-label="Авторизация").header__client-item.header__auth.header__auth--mobile.hint.hint--white.hint--bottom-left
+              .icon.icon--inline: include ../../images/auth.svg
+            .header__burger.js-header__burger.burger.burger--close6
+              .burger__icon
+                .burger__line.burger__line--1
+                .burger__line.burger__line--2
+                .burger__line.burger__line--3
           .header__middle-item
             .header__search
               .form: form(action="javascript:void(0);")

@@ -547,37 +547,57 @@ textarea.form-control {
       transform: rotate(45deg);
     }
   }
-
-
 }
+/**
+media
+ */
+.mobile {
 
+  .form--style{
 
+    .form-placeholder{
+      height: auto;
+      white-space: normal;
+      font-size: 12px;
+      line-height: 18px;
+    }
 
+    .form-control{
+      height: 36px;
+    }
 
+    textarea.form-control{
+      height: 69px;
+    }
 
+    .form__bottom {
+      padding: 0 16px;
 
+      .form-group{
+        margin-top: 20px;
+      }
 
+      .button{
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
 
+  .form-inputfile + label .form-inputfile-name {
+    font-size: 14px;
+  }
 
+  .form--style .form__bottom .label__text,
+  .form--style .form__bottom .label__link{
+    font-size: 12px;
+  }
 
+  .form-group--triple{
+    margin-bottom: 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .form-element{
+      margin-bottom: 13px;
+    }
+  }
+}

@@ -34,7 +34,7 @@
   }
 
   &.icon--inline:before,
-  &.icon--inline:after{
+  &.icon--inline:after {
     content: none;
   }
 }
@@ -389,6 +389,52 @@
   width: 16px;
   height: 16px;
   background-image: url(/images/msg-item5.svg);
+}
+
+/**
+media
+ */
+.mobile {
+
+  .icon--play{
+    width: 49px;
+    height: 48px;
+  }
+
+  .icon--gear {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon--blank {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon--info {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon--list{
+    width: 19px;
+    height: 20px;
+  }
+
+  .icon--sms{
+    width: 22px;
+    height: 23px;
+  }
+
+  .icon--atsign{
+    width: 20px;
+    height: 21px;
+  }
+
+  .icon--phone{
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /**

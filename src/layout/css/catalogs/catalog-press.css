@@ -77,5 +77,34 @@
     font-family: var(--opens);
     color: #333333;
   }
+}
+/**
+media
+ */
+.mobile {
 
+  .catalog--press {
+
+    .catalog__col{
+      width: 100%;
+      margin-bottom: 13px;
+    }
+
+    .catalog__wrap{
+      margin-bottom: -13px;
+    }
+
+    .catalog__item{
+      padding: 16px;
+      min-height: 276px;
+    }
+
+    .title{
+      font-size: 15px;
+    }
+
+    .descr{
+      margin-top: 8px;
+    }
+  }
 }

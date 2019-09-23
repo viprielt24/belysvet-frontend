@@ -1,8 +1,8 @@
 footer.footer
   .footer__content
     .container: .row
-      .col-sm-6: .row
-        .col-sm-4
+      .footer__main-menu.col-sm-6: .row
+        .footer__main-menu-item.col-sm-4
           .footer__menu.list
             .list__title Компания
             .list__wrap
@@ -17,7 +17,7 @@ footer.footer
               .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
               .list__item: a(href="javascript:void(0);").list__link Карьера
               .list__item: a(href="javascript:void(0);").list__link Контакты
-        .col-sm-8
+        .footer__main-menu-item.col-sm-8
           .footer__menu-double
             .footer__menu.list
               .list__title Партнерство
@@ -35,6 +35,46 @@ footer.footer
                 .list__item: a(href="javascript:void(0);").list__link Сервисное обслуживание
                 .list__item: a(href="javascript:void(0);").list__link Нормативные документы
                 .list__item: a(href="javascript:void(0);").list__link Воспрос-ответ
+          if isDesktop
+            .footer__icons.list
+              .list__title Следите за нами в соцсетях:
+              .list__wrap
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item1
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item2
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item3
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item4
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item5
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item6
+            .footer__docs.list
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--box
+                .list__text Нормативные документы
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--box
+                .list__text Аналоги и устаревшие модели
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--download
+                .list__text Скачать все каталоги одним архивом
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--download
+                .list__text Скачать прайс-лист
+      .col-sm-6
+        .footer__menu-triple
+          .footer__menu.list
+            .list__title Обучение
+          .footer__menu.list
+            .list__title Где купить?
+          .footer__menu.list
+            .list__title Карта сайта
+        .footer__contacts.list
+          .list__item
+            .list__text <span class="list__title">Адрес офиса:</span> Россия, 125080, Москва, Факультетский переулок, дом 12 (заезд со стороны ул. Царева)
+          .list__item
+            .list__text <span class="list__title">Тел./Факс:</span> +7 (495) 785-17-67 (многоканальный)
+          .list__item
+            .list__text <span class="list__title">E-mail:</span> info@belysvet.ru
+
+        if isMobile
           .footer__icons.list
             .list__title Следите за нами в соцсетях:
             .list__wrap
@@ -57,21 +97,7 @@ footer.footer
             .list__item: a(href="javascript:void(0);").list__link
               .list__icon.icon.icon--download
               .list__text Скачать прайс-лист
-      .col-sm-6
-        .footer__menu-triple
-          .footer__menu.list
-            .list__title Обучение
-          .footer__menu.list
-            .list__title Где купить?
-          .footer__menu.list
-            .list__title Карта сайта
-        .footer__contacts.list
-          .list__item
-            .list__text <span class="list__title">Адрес офиса:</span> Россия, 125080, Москва, Факультетский переулок, дом 12 (заезд со стороны ул. Царева)
-          .list__item
-            .list__text <span class="list__title">Тел./Факс:</span> +7 (495) 785-17-67 (многоканальный)
-          .list__item
-            .list__text <span class="list__title">E-mail:</span> info@belysvet.ru
+
         .footer__form: .form: form(action="javascript:void(0);")
           .form__title Cообщение в службу менеджмента качества
           .form-wrap

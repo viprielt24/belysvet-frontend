@@ -55,3 +55,26 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .catalog--company {
+
+    .catalog__col {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .catalog__item {
+      min-height: 120px;
+      padding: 14px 16px 20px;
+    }
+
+    .title {
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+}

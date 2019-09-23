@@ -65,3 +65,17 @@ a.file{
 a.file--pdf:before{background-image: url(/images/file-type/file-pdf.svg);}
 a.file--xls:before{background-image: url(/images/file-type/file-xls.svg);}
 a.file--zip:before{background-image: url(/images/file-type/file-zip.svg);}
+
+/**
+media
+ */
+.mobile {
+
+  .files .file {
+    width: 100%;
+  }
+
+  .file__text{
+    font-size: 14px;
+  }
+}

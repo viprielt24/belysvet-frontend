@@ -1,6 +1,10 @@
 include ../../components/tag/tag
 - tags = [{title:'Проектная организация', active: true},{title:'Дистрибуция', regDistrib: true},{title:'ОЕМ Производитель'},{title:'Монтажная организация'}]
 .tagline.js-reg-tagline
-  each item in tags
-    +tag(item)
-  input(placeholder="Другое").form-control
+  .tagline__wrap
+    each item in tags
+      +tag(item)
+    if isDesktop
+      input(placeholder="Другое").form-control
+  if isMobile
+    input(placeholder="Другое").form-control

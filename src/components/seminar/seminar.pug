@@ -1,25 +1,47 @@
 include ../../components/file/file2
 
 mixin seminar(item)
-  .seminar
-    .seminar__top
-      .seminar__type= item.type
-    .seminar__middle
-      .seminar__title!= item.title
-      .seminar__middle-wrap
-        a(href= item.calendar.href).button.button--empty= item.calendar.title
-        a(href= item.order.href data-popupname="study").button.js-popup-open= item.order.title
-    .seminar__bottom
-      .seminar__bottom-item
+  if isDesktop
+    .seminar
+      .seminar__top
+        .seminar__type= item.type
+      .seminar__middle
+        .seminar__title!= item.title
+        .seminar__middle-wrap
+          a(href= item.calendar.href).button.button--empty= item.calendar.title
+          a(href= item.order.href data-popupname="study").button.js-popup-open= item.order.title
+      .seminar__bottom
+        .seminar__bottom-item
+          .seminar__date= item.date
+        .seminar__bottom-item
+          .seminar__place= item.place
+        .seminar__bottom-item
+          if item.price
+            .seminar__price= 'Стоимость: ' + item.price + ' рублей'
+          else
+            .seminar__price Стоимость: Бесплатно
+        .seminar__bottom-item
+          .seminar__program
+            +file(item.program)
+  if isMobile
+    .seminar
+      .seminar__top
         .seminar__date= item.date
-      .seminar__bottom-item
-        .seminar__place= item.place
-      .seminar__bottom-item
-        if item.price
-          .seminar__price= 'Стоимость: ' + item.price + ' рублей'
-        else
-          .seminar__price Стоимость: Бесплатно
-      .seminar__bottom-item
-        .seminar__program
-          +file(item.program)
-
+        .seminar__type= item.type
+      .seminar__middle
+        .seminar__title!= item.title
+      .seminar__bottom
+        .seminar__bottom-item
+          .seminar__place= item.place
+        .seminar__bottom-item
+          if item.price
+            .seminar__price= 'Стоимость: ' + item.price + ' рублей'
+          else
+            .seminar__price Стоимость: Бесплатно
+        .seminar__bottom-item
+          .seminar__program
+            +file(item.program)
+        .seminar__bottom-item
+          .seminar__middle-wrap
+            a(href= item.calendar.href).button.button--empty= item.calendar.title
+            a(href= item.order.href data-popupname="study").button.js-popup-open= item.order.title

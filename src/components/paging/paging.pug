@@ -5,8 +5,9 @@
     .paging__wrap
       a(href="javascript:void(0);").paging__item.active 1
       a(href="javascript:void(0);").paging__item 2
-      a(href="javascript:void(0);").paging__item 3
-      a(href="javascript:void(0);").paging__item 4
-      a(href="javascript:void(0);").paging__item 5
+      if isDesktop
+        a(href="javascript:void(0);").paging__item 3
+        a(href="javascript:void(0);").paging__item 4
+        a(href="javascript:void(0);").paging__item 5
       a(href="javascript:void(0);").paging__item.disable ...
       a(href="javascript:void(0);").paging__item 10

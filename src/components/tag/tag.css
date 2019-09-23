@@ -29,7 +29,7 @@
   transition: var(--trc), var(--trf);
 }
 
-.tagline {
+.tagline__wrap {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -122,5 +122,47 @@
     width: 1px;
     height: 21px;
     background-color: rgba(196, 196, 196, 0.5);
+  }
+}
+/**
+media
+ */
+.mobile {
+
+  .tagline__wrap{
+    position: relative;
+    margin: 0 -16px;
+    padding-left: 16px;
+    overflow: scroll;
+
+    .tag{
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .tag{
+    height: 24px;
+  }
+
+  .tag__title{
+    font-size: 12px;
+  }
+
+  .tagline--has-clear {
+    position: relative;
+    padding-top: 34px;
+
+    .tagline__clear {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      font-size: 14px;
+
+      &:before {
+        content: none;
+      }
+    }
   }
 }

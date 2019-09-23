@@ -223,6 +223,12 @@
 .header__middle-item {
   display: flex;
   align-items: center;
+
+  &:last-child {
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 58px;
+  }
 }
 
 .header__logo {
@@ -234,8 +240,12 @@
 .header__logo-link {
   display: block;
 }
+.header__logo-link--mobile{
+  display: none;
+}
 
 .header__phone-link {
+  display: none;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -244,6 +254,10 @@
   font-family: var(--museo);
   color: #A1BF35;
   text-decoration: none;
+}
+
+.header__phone-link--mobile{
+  display: none;
 }
 
 .header__menu {
@@ -340,6 +354,7 @@
 
  */
 .header__search {
+  width: 100%;
 
   .form-group {
     position: relative;
@@ -348,7 +363,6 @@
   .form-control {
     width: 100%;
     height: 48px;
-    min-width: 537px;
     background-color: #FAFAFA;
     padding-right: 50px;
     border-left: 1px solid #EDEDED;
@@ -471,6 +485,14 @@
   }
 }
 
+.header__auth{
+  display: block;
+}
+
+.header__auth--mobile{
+  display: none;
+}
+
 .header__cart {
   position: relative;
 }
@@ -494,36 +516,104 @@
   color: #FFFFFF;
 }
 
+/**
+mobile
+ */
+.mobile {
 
+  .header {
+    margin-bottom: 12px;
+  }
 
+  .header__top{
+    display: none;
+  }
 
+  .header__content{
+    margin-top: 0;
 
+    .container{
+      padding: 0;
+    }
+  }
 
+  .header__logo{
+    margin-left: 16px;
+    margin-right: 20px;
+  }
 
+  .header__logo-link {
+    display: none;
+  }
 
+  .header__logo-link--mobile{
+    display: block;
+  }
 
+  .header__phone-link{
+    display: none;
+    font-size: 14px;
+  }
 
+  .header__phone-link--mobile{
+    display: flex;
+    align-items: center;
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    padding: 5px 8px;
 
+    img{
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+  }
 
+  .header__auth{
+    display: none;
+  }
 
+  .header__auth--mobile{
+    display: flex;
+    margin: 0 53px 0 auto;
+  }
 
+  .header__top-submenu-wrap{
+    flex-wrap: wrap;
+  }
 
+  .header__top-submenu-item{
+    width: 100%;
+  }
+  /**
 
+   */
+  .header__middle {
+    flex-wrap: wrap;
+  }
 
+  .header__middle-item{
+    position: relative;
+    width: 100%;
 
+    &:first-child{
+      padding: 8px 0;
+    }
 
+    &:last-child {
+      display: none;
+      margin-left: 0;
+    }
+  }
 
+  /**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   */
+  .header__menu {
+    display: none;
+  }
+}
+/**
+end mobile
+*/

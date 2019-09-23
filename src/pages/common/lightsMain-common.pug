@@ -1,29 +1,62 @@
 include ../../components/lights-item/lights-item
 
-.catalog-box: .row
-  .col-sm-6
-    .catalog.catalog--favourite
-      .catalog__header
-        .catalog__title Световые приборы
-        a(href="javascript:void(0);").catalog__more
-          .catalog__more-text Смотреть все
-          .catalog__more-icon: include ../../images/arrow-right-small.svg
-      .catalog__content
-        .catalog__wrap
-          each item, index in lights
-            if index <= 2
+if isDesktop
+  .catalog-box: .row
+    .col-sm-6
+      .catalog.catalog--favourite
+        .catalog__header
+          .catalog__title Световые приборы
+          a(href="javascript:void(0);").catalog__more
+            .catalog__more-text Смотреть все
+            .catalog__more-icon: include ../../images/arrow-right-small.svg
+        .catalog__content
+          .catalog__wrap
+            each item, index in lights
+              if index <= 2
+                .catalog__col
+                  +lights-item(item)
+    .col-sm-6
+      .catalog.catalog--favourite
+        .catalog__header
+          .catalog__title Блоки аварийного питания
+          a(href="javascript:void(0);").catalog__more
+            .catalog__more-text Смотреть все
+            .catalog__more-icon: include ../../images/arrow-right-small.svg
+        .catalog__content
+          .catalog__wrap
+            each item, index in lights
+              if index >= 3 && index <= 5
+                .catalog__col
+                  +lights-item(item)
+
+if isMobile
+  .catalog-box.catalog.catalog--favourite
+    .container: .row
+      .col-sm-6
+          .catalog__header
+            .catalog__title Световые приборы
+            a(href="javascript:void(0);").catalog__more
+              .catalog__more-text Смотреть все
+              .catalog__more-icon: include ../../images/arrow-right-small.svg
+    .catalog__content.catalog__content--lights-main.js-catalog__content-lights-main
+      .swiper-container
+        .swiper-wrapper
+          each item in lights
+            .swiper-slide
               .catalog__col
                 +lights-item(item)
-  .col-sm-6
-    .catalog.catalog--favourite
-      .catalog__header
-        .catalog__title Блоки аварийного питания
-        a(href="javascript:void(0);").catalog__more
-          .catalog__more-text Смотреть все
-          .catalog__more-icon: include ../../images/arrow-right-small.svg
-      .catalog__content
-        .catalog__wrap
-          each item, index in lights
-            if index >= 3 && index <= 5
+    .container: .row
+      .col-sm-6
+        .catalog.catalog--favourite
+          .catalog__header
+            .catalog__title Блоки аварийного питания
+            a(href="javascript:void(0);").catalog__more
+              .catalog__more-text Смотреть все
+              .catalog__more-icon: include ../../images/arrow-right-small.svg
+    .catalog__content.catalog__content--empowers-main.js-catalog__content-lights-main
+      .swiper-container
+        .swiper-wrapper
+          each item in lights
+            .swiper-slide
               .catalog__col
                 +lights-item(item)

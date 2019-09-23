@@ -14,3 +14,18 @@
   line-height: normal;
   font-family: var(--museo);
 }
+/**
+media
+ */
+.mobile {
+
+  .polygraphy{
+    margin-top: 22px;
+  }
+
+  .polygraphy__title{
+    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}

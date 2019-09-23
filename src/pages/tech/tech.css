@@ -26,3 +26,13 @@
   cursor: pointer;
   text-decoration: none;
 }
+/**
+media
+ */
+.mobile {
+
+  .tech-descr{
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

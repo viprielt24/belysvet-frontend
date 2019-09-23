@@ -278,4 +278,22 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
 
+  .select-custom--simple .choices__inner,
+  .select-custom--default .choices__list--single .choices__item{
+    height: 36px;
+  }
+
+  .select-custom--default .choices__list--single .choices__item{
+    padding: 0 40px 0 12px;
+    white-space: nowrap;
+  }
+
+  .select-custom--default .choices[data-type*="select-one"]:after{
+    right: 12px;
+  }
+}

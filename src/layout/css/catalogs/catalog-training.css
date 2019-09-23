@@ -158,3 +158,57 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .catalog--training {
+
+    .catalog__wrap{
+      margin-bottom: -12px;
+    }
+
+    .catalog__col {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .catalog__item-box{
+      width: 100%;
+      height: auto;
+      padding: 11px 16px 10px;
+    }
+
+    .catalog__item-media{
+      height: 185px;
+
+      .icon--play{
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    .catalog__item {
+      min-height: 341px;
+    }
+
+    .tagline__wrap{
+      flex-wrap: wrap;
+    }
+
+    .title{
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .pic__link{
+      height: 96px;
+      margin: -48px 0 0 -63px;
+    }
+
+    .catalog__footer .link{
+      font-size: 15px;
+    }
+  }
+}

@@ -58,7 +58,25 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
 
-.press__content{
+  .press{
+    margin-top: 0;
+  }
 
+  .press__tabs{
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .press__tabs-item{
+    height: 60px;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+  }
 }

@@ -8,6 +8,7 @@
 @import './layout/css/icons.css';
 @import './layout/css/buttons.css';
 @import './layout/css/links.css';
+@import './layout/css/burger.css';
 
 @import "../node_modules/swiper/dist/css/swiper.css";
 @import './layout/css/swiper-custom.css';

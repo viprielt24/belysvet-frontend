@@ -1,6 +1,6 @@
 @import "../../layout/variables.css";
 
-.content__bottom.content__bottom--descr{
+.content__bottom.content__bottom--descr {
   margin-bottom: 19px;
 
   .title {
@@ -10,9 +10,9 @@
 
 .connect {
 
-  .accordion__header{
+  .accordion__header {
 
-    .icon{
+    .icon {
       position: absolute;
       top: 50%;
       left: 36px;
@@ -21,41 +21,42 @@
   }
 }
 
-.connect__form{
+.connect__form {
   max-width: 784px;
 
-  .form__bottom{
+  .form__bottom {
     display: block;
     margin-top: 36px;
 
-    .button-wrap{
+    .button-wrap {
       margin-left: 0;
     }
   }
 }
+
 /**
 
  */
-.msg{
+.msg {
   display: flex;
   align-items: center;
 }
 
-.msg__item{
+.msg__item {
   display: flex;
   align-items: center;
   margin-right: 87px;
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 
-  .icon{
+  .icon {
     margin-right: 10px;
   }
 }
 
-.msg__name{
+.msg__name {
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -64,10 +65,11 @@
   font-family: var(--museo);
   color: #404040;
 }
+
 /**
 
  */
-.connect__mail-title{
+.connect__mail-title {
   margin-bottom: 16px;
   font-style: normal;
   font-weight: 600;
@@ -77,17 +79,17 @@
   font-family: var(--museo);
 }
 
-.connect__mail-item{
+.connect__mail-item {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 }
 
-.connect__mail-name{
+.connect__mail-name {
   width: 245px;
   margin-right: 40px;
   font-style: normal;
@@ -97,32 +99,33 @@
   font-family: var(--opens);
 }
 
-.connect__mail-link{
+.connect__mail-link {
   font-family: var(--museo);
   font-size: 16px;
 }
+
 /**
 
  */
-.connect__call{
+.connect__call {
   display: flex;
   align-items: flex-start;
 }
 
-.connect__call-wrap{
+.connect__call-wrap {
   width: 33.333333%;
   padding-right: 70px;
 }
 
-.connect__call-item{
+.connect__call-item {
   margin-bottom: 22px;
 
-  &:last-child{
+  &:last-child {
 
-    .connect__call-descr{
+    .connect__call-descr {
       padding-left: 22px;
 
-      .icon{
+      .icon {
         position: absolute;
         top: 5px;
         left: 0;
@@ -131,7 +134,7 @@
   }
 }
 
-.connect__call-title{
+.connect__call-title {
   margin-bottom: 6px;
   font-style: normal;
   font-weight: 600;
@@ -141,7 +144,7 @@
   font-family: var(--museo);
 }
 
-.connect__call-descr{
+.connect__call-descr {
   position: relative;
   font-style: normal;
   font-weight: normal;
@@ -151,6 +154,101 @@
   color: #404040;
 }
 
-.select-custom--simple .choices__list--dropdown:before{
+.select-custom--simple .choices__list--dropdown:before {
   content: none;
+}
+
+/**
+media
+ */
+.mobile {
+
+  .connect {
+    margin: 0 -16px;
+
+    .accordion__header {
+      padding-left: 54px;
+
+      .icon {
+        left: 16px;
+      }
+    }
+  }
+
+  .connect__form {
+
+    .col-sm-6 {
+      margin-bottom: 13px;
+    }
+
+    .form--style .form-group {
+      margin-bottom: 0;
+    }
+
+    .form__bottom {
+      margin-top: 22px;
+      padding: 0;
+    }
+  }
+
+  .msg {
+    flex-wrap: wrap;
+  }
+
+  .msg__item {
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 22px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .msg__name {
+    font-size: 14px;
+  }
+
+  .connect__mail-title {
+    font-size: 15px;
+  }
+
+  .connect__mail-item {
+    align-items: flex-end;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .connect__mail-link,
+  .connect__mail-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .connect__mail-name {
+    width: 152px;
+    margin-right: 0;
+  }
+
+  .connect__call-wrap{
+    width: 100%;
+  }
+
+  .connect__call {
+    flex-wrap: wrap;
+  }
+
+  .connect__call-title{
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .connect__call-descr{
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

@@ -1,15 +1,15 @@
 @import "../../layout/variables.css";
 
-.content__header .title{
+.content__header .title {
   margin-bottom: 0;
 }
 
-.normative__about{
+.normative__about {
   margin-bottom: 23px;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(196, 196, 196, 0.5);
 
-  p{
+  p {
     margin: 15px 0;
     font-style: normal;
     font-weight: normal;
@@ -18,13 +18,13 @@
     font-family: var(--opens);
     color: #404040;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
 }
 
-.normative__warning{
+.normative__warning {
   position: relative;
   display: flex;
   align-items: center;
@@ -59,5 +59,31 @@
     letter-spacing: -0.02em;
     font-family: var(--museo);
     color: #FFFFFF;
+  }
+}
+
+/**
+media
+ */
+.mobile {
+
+  .normative__about p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .normative__warning {
+    padding: 58px 16px 18px;
+    font-size: 14px;
+    line-height: 22px;
+
+    &:before {
+      top: 16px;
+      left: 16px;
+      width: 32px;
+      height: 32px;
+      margin-top: 0;
+      font-size: 21px;
+    }
   }
 }

@@ -101,8 +101,8 @@
   text-decoration: none;
   outline: 0;
 
-  &:hover{
-    .icon--close-primary:after, .icon--close-primary:before{
+  &:hover {
+    .icon--close-primary:after, .icon--close-primary:before {
       background-color: var(--hover);
     }
   }
@@ -157,6 +157,7 @@
   width: 480px;
   margin: auto;
 }
+
 /**
 
  */
@@ -184,6 +185,7 @@
     padding: 0;
   }
 }
+
 /**
 
  */
@@ -206,24 +208,24 @@
     height: 717px;
   }
 
-  .project-inner__slider .swiper-button-next{
+  .project-inner__slider .swiper-button-next {
     right: -66px;
   }
 
-  .project-inner__slider .swiper-button-prev{
+  .project-inner__slider .swiper-button-prev {
     left: -66px;
   }
 
-  .project-inner__thumbs .swiper-container{
+  .project-inner__thumbs .swiper-container {
     width: 760px;
   }
 
-  .popup__header{
+  .popup__header {
     top: -26px;
     right: -66px;
   }
 
-  .popup__header-close{
+  .popup__header-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,28 +235,29 @@
     transition: var(--trbg);
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       background-color: #EBF1D5;
     }
   }
 
-  .icon--close{
+  .icon--close {
     width: 20px;
     height: 20px;
     margin-top: 0;
   }
 
-  .popup__wrap .icon--close:after, .popup__wrap .icon--close:before{
+  .popup__wrap .icon--close:after, .popup__wrap .icon--close:before {
     background-color: #A1C760;
     height: 2px;
   }
 }
+
 /**
 
  */
-.popup--style{
+.popup--style {
 
-  .popup__wrap{
+  .popup__wrap {
     max-width: 864px;
     background-image: none;
     background-color: #fff;
@@ -262,12 +265,12 @@
     box-shadow: 0 26px 41px rgba(0, 0, 0, 0.18);
     border-radius: 5px;
 
-    &:before{
+    &:before {
       content: none;
     }
   }
 
-  .popup__content-title{
+  .popup__content-title {
     padding: 0;
     font-family: var(--museo);
     font-style: normal;
@@ -277,40 +280,41 @@
     text-align: left;
   }
 
-  .popup__form{
+  .popup__form {
     width: 100%;
   }
 
-  .form__bottom{
+  .form__bottom {
     align-items: flex-start;
   }
 
-  .form__bottom .button-wrap{
+  .form__bottom .button-wrap {
     margin-right: 0;
   }
 }
+
 /**
 
  */
-.popup--study{
+.popup--study {
 
-  .form__bottom{
+  .form__bottom {
     display: block;
 
-    .button-wrap{
+    .button-wrap {
       margin-left: 0;
     }
 
-    .form-element{
+    .form-element {
       margin-bottom: 8px;
 
-      &:first-child{
+      &:first-child {
         margin-bottom: 19px;
       }
     }
   }
 
-  .form__bottom-study-price{
+  .form__bottom-study-price {
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -319,65 +323,103 @@
     color: #404040;
   }
 }
+
 /**
 
  */
-.popup--lights{
-  background: linear-gradient(0deg, rgba(51,51,51,.4), rgba(51,51,51,.4)) ;
+.popup--lights {
+  background: linear-gradient(0deg, rgba(51, 51, 51, .4), rgba(51, 51, 51, .4));
 
-  .popup__wrap{
+  .popup__wrap {
     max-width: 1240px;
     margin-left: -15px;
   }
 
-  .popup__content-scroll .swiper-container{
+  .popup__content-scroll .swiper-container {
     max-height: 520px;
   }
 
-  .text-editor{
+  .text-editor {
     padding: 0 30px 0 0;
   }
 
-  .swiper-scrollbar-drag{
+  .swiper-scrollbar-drag {
     background: rgba(196, 196, 196, 0.5);
   }
 
-  .swiper-container-vertical > .swiper-scrollbar{
+  .swiper-container-vertical > .swiper-scrollbar {
     width: 8px;
     background: rgba(196, 196, 196, 0.3);
   }
 }
+
 /**
 
  */
-.popup--single{
+.popup--single {
 
-  .popup__wrap{
+  .popup__wrap {
     max-height: 85%;
     min-height: 85%;
   }
 
-  .popup__content{
+  .popup__content {
     position: relative;
     height: 100%;
   }
 
-  .pic{
+  .pic {
     position: absolute;
     width: 100%;
     height: 100%;
   }
 
-  .pic__img{
+  .pic__img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 }
+/**
+media
+ */
+.mobile {
 
+  .popup--lights {
 
+    .popup__wrap {
+      margin-left: 0;
+      padding: 18px 16px;
+    }
 
+    .popup__content-title {
+      font-size: 18px;
+    }
 
+    .text-editor ol li:before,
+    .text-editor,
+    .text-editor ol {
+      font-size: 14px;
+      line-height: 22px;
+    }
 
+    .text-editor ol li:before {
+      margin-right: 12px;
+    }
+  }
 
+  .popup__header {
+    top: 20px;
+    right: 16px;
+
+    .icon--close {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .popup--lights .swiper-container-vertical > .swiper-scrollbar{
+    width: 4px;
+  }
+}

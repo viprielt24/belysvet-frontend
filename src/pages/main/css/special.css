@@ -15,6 +15,7 @@
   }
 
   .promo__item .title{
+    position: relative;
     padding-right: 300px;
     font-size: 27px;
     line-height: 36px;
@@ -35,6 +36,7 @@
   align-items: flex-start;
   min-height: 240px;
   background-color: #a1bf35;
+  background-repeat: no-repeat;
   padding: 28px 32px 44px;
 
   .title{
@@ -61,5 +63,70 @@
 
   .button{
     margin-top: auto;
+  }
+}
+/**
+media
+ */
+.mobile{
+
+  .special{
+    margin: 25px 0 80px;
+
+    .col-sm-4,
+    .col-sm-8{
+      padding: 0 16px;
+    }
+
+    .promo__item{
+      padding: 32px 20px 44px;
+
+      .pic{
+        top: 0;
+        right: -123px;
+        bottom: auto;
+      }
+
+      .pic__img{
+        max-width: 226px;
+        max-height: 226px;
+      }
+
+      .title{
+        padding-right: 0;
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  .special__slider{
+    margin-bottom: 12px;
+
+    .swiper-button-prev, .swiper-button-next{
+      display: none;
+    }
+  }
+
+  .special__propos{
+    min-height: 216px;
+    background-position: right -37px bottom 0;
+    background-size: 115%;
+    padding: 20px;
+
+    .title{
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .descr{
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 600;
+      
+      br{
+        display: none;
+      }
+    }
   }
 }

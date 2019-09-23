@@ -37,10 +37,10 @@ export default class {
     menu.style.display = 'block';
     menu.classList.add('is-open');
     menu.style.width = wrapWidth + 'px';
-    menu.style.left = 15 + 'px';
+    menu.style.left = document.documentElement.classList.contains('mobile') ? 16 + 'px' : 15 + 'px';
     if (index % 2) {
       menu.style.left = 'auto'
-      menu.style.right = 15 + 'px';
+      menu.style.right = document.documentElement.classList.contains('mobile') ? 16 + 'px' : 15 + 'px';
     }
   }
 

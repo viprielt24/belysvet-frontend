@@ -31,3 +31,23 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .products{
+
+    .catalog--main{
+
+      .catalog__col {
+        width: 100%;
+      }
+
+      .catalog__item{
+        min-height: 188px;
+        padding: 18px 120px 20px 16px;
+      }
+    }
+  }
+}

@@ -46,3 +46,34 @@
     }
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .thanks {
+    margin-top: 32px;
+    padding: 38px 16px;
+  }
+
+  .thanks__title{
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 23px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .thanks__descr{
+    margin: 7px 0 22px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .thanks__button .button{
+    height: 40px;
+    font-size: 13px;
+  }
+}

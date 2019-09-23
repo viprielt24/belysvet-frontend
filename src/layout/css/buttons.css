@@ -137,4 +137,13 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+/**
+media
+ */
+.mobile {
 
+  .button-size-md{
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}

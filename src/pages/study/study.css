@@ -30,3 +30,21 @@
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(196, 196, 196, .5);
 }
+/**
+media
+ */
+.mobile {
+
+  .study__title {
+    font-size: 21px;
+    line-height: 27px;
+  }
+
+  .seminar__bottom {
+    flex-wrap: wrap;
+  }
+
+  .seminar__middle-wrap {
+    flex-wrap: wrap;
+  }
+}

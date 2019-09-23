@@ -188,3 +188,51 @@
     left: 45px;
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .catalog--projects {
+
+    .swiper-container{
+      width: 100%;
+      margin: 0 16px;
+      overflow: hidden;
+
+      .catalog__wrap{
+        height: 100%;
+      }
+
+      .catalog__col{
+        margin-bottom: 0;
+      }
+    }
+
+    .catalog__wrap{
+      flex-wrap: wrap;
+    }
+
+    .catalog__col{
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .catalog__item{
+      min-height: 280px;
+    }
+
+    .catalog__item-wrap{
+      padding: 22px 16px;
+    }
+
+    .pic{
+      height: 144px;
+    }
+
+    .title{
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+}

@@ -52,3 +52,27 @@
   right: 25px;
   background-image: url(/images/arrow-right.svg);
 }
+/**
+media
+ */
+.mobile {
+
+  .swiper-button-prev,
+  .swiper-button-next{
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiper-button-prev{
+    right: 36px;
+  }
+
+  .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 4px;
+  }
+}

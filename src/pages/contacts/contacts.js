@@ -8,6 +8,7 @@ export default class {
 
   addEvents() {
     ymaps.ready(function () {
+      var isMobile = document.documentElement.classList.contains('mobile');
       var markerPath = document.getElementById('contactsMap1').dataset.mapMarker;
       var myMap = new ymaps.Map('contactsMap1', {
           center: [55.812008, 37.493551],
@@ -25,7 +26,7 @@ export default class {
           '</div>'
         ),
         myPlacemark = new ymaps.Placemark([55.812058, 37.493751], {}, {
-          balloonLayout: MyBalloonLayout,
+          balloonLayout: isMobile ? false : MyBalloonLayout,
         }),
         myPlacemark2 = new ymaps.Placemark([55.812008, 37.493551], {}, {
           iconLayout: 'default#image',
@@ -34,14 +35,17 @@ export default class {
         });
 
       //добавление метки с контентом балуна
-      myMap.geoObjects.add(myPlacemark);
       myMap.geoObjects.add(myPlacemark2);
       //балун открыт сразу
-      myPlacemark.balloon.open();
+      if (!isMobile) {
+        myMap.geoObjects.add(myPlacemark);
+        myPlacemark.balloon.open();
+      }
       //запрет зума по скроллу
       myMap.behaviors.disable('scrollZoom');
     });
     ymaps.ready(function () {
+      var isMobile = document.documentElement.classList.contains('mobile');
       var markerPath = document.getElementById('contactsMap2').dataset.mapMarker;
       var myMap = new ymaps.Map('contactsMap2', {
           center: [55.879011, 37.492716],
@@ -67,14 +71,17 @@ export default class {
         });
 
       //добавление метки с контентом балуна
-      myMap.geoObjects.add(myPlacemark);
       myMap.geoObjects.add(myPlacemark2);
       //балун открыт сразу
-      myPlacemark.balloon.open();
+      if (!isMobile) {
+        myMap.geoObjects.add(myPlacemark);
+        myPlacemark.balloon.open();
+      }
       //запрет зума по скроллу
       myMap.behaviors.disable('scrollZoom');
     });
     ymaps.ready(function () {
+      var isMobile = document.documentElement.classList.contains('mobile');
       var markerPath = document.getElementById('contactsMap3').dataset.mapMarker;
       var myMap = new ymaps.Map('contactsMap3', {
           center: [59.800806, 30.380996],
@@ -100,10 +107,12 @@ export default class {
         });
 
       //добавление метки с контентом балуна
-      myMap.geoObjects.add(myPlacemark);
       myMap.geoObjects.add(myPlacemark2);
       //балун открыт сразу
-      myPlacemark.balloon.open();
+      if (!isMobile) {
+        myMap.geoObjects.add(myPlacemark);
+        myPlacemark.balloon.open();
+      }
       //запрет зума по скроллу
       myMap.behaviors.disable('scrollZoom');
     });

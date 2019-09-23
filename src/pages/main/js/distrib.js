@@ -38,7 +38,7 @@ export default class {
         objectManager = new ymaps.ObjectManager({
           clusterize: true,
           gridSize: 48,
-          clusterDisableClickZoom: true
+          hasBalloon: false,
         });
       objectManager.objects.options.set({
         iconLayout: 'default#image',

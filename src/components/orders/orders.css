@@ -1,4 +1,4 @@
-.orders{
+.orders {
   position: fixed;
   top: 296px;
   right: 0;
@@ -7,31 +7,31 @@
   transform: translateX(214px);
   transition: var(--trf);
 
-  &.active{
+  &.active {
     transform: translateX(0px);
 
-    .orders-trigger{
+    .orders-trigger {
       transform: translateX(160px);
     }
 
     .orders-trigger__icon--hide,
-    .orders-trigger__text{
+    .orders-trigger__text {
       opacity: 1;
       visibility: visible;
     }
 
-    .orders-trigger__icon--show{
+    .orders-trigger__icon--show {
       opacity: 0;
       visibility: hidden;
     }
   }
 }
 
-.orders__wrap{
+.orders__wrap {
   background-color: #444444;
 }
 
-.orders__item{
+.orders__item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -41,19 +41,19 @@
   text-decoration: none;
   outline: 0;
 
-  &:last-child{
+  &:last-child {
     border-bottom: 0;
   }
 
-  &:hover{
+  &:hover {
 
-    .orders__item-icon svg path{
+    .orders__item-icon svg path {
       fill: #fff;
     }
   }
 }
 
-.orders__item-icon{
+.orders__item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,12 +62,12 @@
   font-size: 0;
   margin-right: 22px;
 
-  svg path{
+  svg path {
     transition: fill var(--time);
   }
 }
 
-.orders__item-text{
+.orders__item-text {
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -75,7 +75,7 @@
   color: #C7C7C7;
 }
 
-.orders-trigger{
+.orders-trigger {
   display: flex;
   justify-content: flex-start;
   text-decoration: none;
@@ -84,7 +84,7 @@
   outline: 0;
 }
 
-.orders-trigger__wrap{
+.orders-trigger__wrap {
   position: relative;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@
   padding-left: 17px;
 }
 
-.orders-trigger__text{
+.orders-trigger__text {
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
@@ -107,7 +107,7 @@
   transition: var(--trsee);
 }
 
-.orders-trigger__icon{
+.orders-trigger__icon {
   position: absolute;
   top: 0;
   display: flex;
@@ -119,19 +119,29 @@
   transition: var(--trsee);
 }
 
-.orders-trigger__icon--show{
+.orders-trigger__icon--show {
   left: 0;
   opacity: 1;
   visibility: visible;
 }
 
-.orders-trigger__icon--hide{
+.orders-trigger__icon--hide {
   right: 0;
   transform: rotate(-180deg);
   opacity: 0;
   visibility: hidden;
 
-  svg path{
+  svg path {
     stroke: #C7C7C7;
+  }
+}
+
+/**
+media
+ */
+.mobile {
+
+  .orders {
+    display: none;
   }
 }

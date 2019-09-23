@@ -898,7 +898,16 @@
   margin: 0 auto;
   padding: 0 5px;
 }
+/**
+mobile
+ */
+.mobile {
 
-@media (min-width: 1280px) {
+  .container{
+    padding: 0 16px;
+  }
 
+  .row{
+    margin: 0 -16px;
+  }
 }

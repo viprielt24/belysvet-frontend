@@ -2,12 +2,12 @@
   margin-top: 50px;
 }
 
-.press-kit__header{
+.press-kit__header {
   margin-bottom: 23px;
   padding-bottom: 23px;
   border-bottom: 1px solid rgba(196, 196, 196, 0.5);;
 
-  .title{
+  .title {
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -15,13 +15,13 @@
   }
 }
 
-.press-kit__item{
+.press-kit__item {
   height: 100%;
   min-height: 296px;
   background-color: #fff;
 }
 
-.press-kit__item-header{
+.press-kit__item-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,16 +29,16 @@
   border-bottom: 1px solid rgba(196, 196, 196, 0.5);
 }
 
-.press-kit__content{
+.press-kit__content {
 
-  .title{
+  .title {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: normal;
   }
 
-  .descr{
+  .descr {
     margin-top: 17px;
     font-style: normal;
     font-weight: normal;
@@ -49,14 +49,14 @@
   }
 }
 
-.press-kit__content-item:last-child{
+.press-kit__content-item:last-child {
   margin-top: 32px;
 
-  .press-kit__item{
+  .press-kit__item {
     padding: 31px 43px;
   }
 
-  .press-kit__item-wrap{
+  .press-kit__item-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,6 +65,69 @@
   }
 }
 
-.press-kit__item-wrap{
+.press-kit__item-wrap {
   padding: 31px 43px;
+}
+
+/**
+media
+ */
+.mobile {
+
+  .press-kit__header {
+
+    .title {
+      font-size: 24px;
+    }
+  }
+
+  .press-kit__content {
+
+    .title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .descr {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .press-kit__content-item {
+    margin-bottom: 12px;
+  }
+
+  .press-kit__item-header {
+    min-height: auto;
+    padding: 12px 28px;
+  }
+
+  .press-kit__item-wrap {
+    padding: 23px 24px;
+  }
+
+  .press-kit__content-item:last-child {
+
+    .press-kit__item {
+      padding: 23px 24px;
+    }
+
+    .press-kit__item-wrap {
+      flex-wrap: wrap;
+
+      .pic{
+        width: 50%;
+        margin-bottom: 8px;
+
+        img{
+          /**
+          убрать после загрузки реальных данных
+           */
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
 }

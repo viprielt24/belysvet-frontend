@@ -87,3 +87,58 @@
   font-family: var(--opens);
   color: #404040;
 }
+/**
+media
+ */
+.mobile {
+
+  .press-copyright-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .press-copyright__user{
+    align-items: flex-start;
+
+    &:before{
+      content: none;
+    }
+
+    .user__photo{
+      width: 100px;
+      height: 100px;
+    }
+
+    .user__wrap{
+      padding: 12px 11px 0 11px;
+    }
+
+    .user__name{
+      font-size: 15px;
+      line-height: 19px;
+    }
+
+    .user__post{
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  .press-copyright__contact{
+    padding: 22px 12px;
+  }
+
+  .press-copyright__contact-title{
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .press-copyright__contact-item{
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .press-copyright__item:last-child{
+    padding: 0px 12px 15px;
+  }
+}

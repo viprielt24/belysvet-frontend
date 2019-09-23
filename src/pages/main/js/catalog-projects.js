@@ -19,6 +19,12 @@ export default class {
         prevEl: this.navPrev,
         nextEl: this.navNext,
       },
+      breakpoints:{
+        1264: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        }
+      }
     });
   }
 

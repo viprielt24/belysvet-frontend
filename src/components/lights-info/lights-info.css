@@ -168,3 +168,61 @@
   font-family: var(--museo);
   color: #333;
 }
+/**
+media
+ */
+.mobile {
+
+  .lights__info {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .lights__info-item{
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    min-height: 63px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    padding: 13px 16px;
+  }
+
+  .lights__info-item-wrap{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .lights__info-item-box{
+    margin-left: 12px;
+
+    .lights__info-item-text{
+      margin-left: 0;
+      margin-bottom: 12px;
+    }
+
+    .lights__info-item-wrap{
+      margin-bottom: -13px;
+    }
+  }
+
+  .lights__info-item-text {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+
+  .lights__info-part {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .lights__info-item--empty {
+
+    .lights__info-item-text{
+      margin-top: 4px;
+    }
+  }
+}

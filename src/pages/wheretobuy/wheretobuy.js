@@ -244,7 +244,9 @@ export default class {
             objectManager.add(data);
             //центрирование по меткам
             setTimeout(() => {
-              myMap.setBounds(objectManager.getBounds());
+              myMap.setBounds(objectManager.getBounds(), {
+                checkZoomRange: true
+              });
             }, 100);
           });
         }

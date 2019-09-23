@@ -10,7 +10,8 @@ mixin study-item(item)
           .pic__link-text смотреть видео
     .catalog__item-box
       .tagline
-        each unit in item.tags
-          +tag(unit)
+        .tagline__wrap
+          each unit in item.tags
+            +tag(unit)
       .title!= item.title
       .date= item.date

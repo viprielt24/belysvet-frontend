@@ -208,3 +208,57 @@
   background-color: #F5F5F5;
   padding: 48px 0 64px;
 }
+/**
+media
+ */
+.mobile {
+
+  .contacts {
+    padding-bottom: 25px;
+  }
+
+  .contacts__item{
+    margin-bottom: 38px;
+    padding-bottom: 22px;
+
+    &:last-child{
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .connect__item {
+    margin-bottom: 13px;
+    padding: 0 16px;
+
+    &:last-child{
+      margin-bottom: 13px;
+    }
+  }
+
+  .contacts__item-title{
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .connect__item-title{
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .connect__item-mail,
+  .connect__item-descr{
+    font-size: 14px;
+    line-height: 22px;
+
+    .icon--atsign{
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .connect__item-more{
+    font-size: 14px;
+  }
+}

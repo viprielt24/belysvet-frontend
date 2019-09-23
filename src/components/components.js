@@ -124,4 +124,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-catalog__content-lights-main')) {
+    import('../pages/common/js/lightsMain-common').then(module => {
+      new module.default();
+    });
+  }
 });

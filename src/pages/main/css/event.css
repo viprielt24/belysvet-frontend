@@ -28,3 +28,21 @@
   background-color: #fff;
   padding: 40px 44px 20px;
 }
+/**
+media
+ */
+.mobile {
+
+  .event__wrap{
+    padding: 30px 17px;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .descr{
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

@@ -1,30 +1,42 @@
 include ../../components/article/article
 
-.catalog.catalog--article.js-catalog-review
-  .container
-    .catalog__header
-      .catalog__title Обзоры
-      .swiper-button-prev
-      .swiper-button-next
-    .catalog__content
-      .swiper-container
-        .swiper-pagination
-        .swiper-wrapper
-          .swiper-slide
-            .catalog__wrap
-              each item, index in article
-                if index <= 3
-                  .catalog__col
-                    +article(item, index)
-          .swiper-slide
-            .catalog__wrap
-              each item, index in article
-                if index <= 3
-                  .catalog__col
-                    +article(item, index)
-          .swiper-slide
-            .catalog__wrap
-              each item, index in article
-                if index <= 3
-                  .catalog__col
-                    +article(item, index)
+if isDesktop
+  .catalog.catalog--article.js-catalog-review
+    .container
+      .catalog__header
+        .catalog__title Обзоры
+        .swiper-button-prev
+        .swiper-button-next
+      .catalog__content
+        .swiper-container
+          .swiper-pagination
+          .swiper-wrapper
+            .swiper-slide
+              .catalog__wrap
+                each item, index in article
+                  if index <= 3
+                    .catalog__col
+                      +article(item, index)
+            .swiper-slide
+              .catalog__wrap
+                each item, index in article
+                  if index <= 3
+                    .catalog__col
+                      +article(item, index)
+            .swiper-slide
+              .catalog__wrap
+                each item, index in article
+                  if index <= 3
+                    .catalog__col
+                      +article(item, index)
+
+if isMobile
+  .catalog.catalog--article
+    .container
+      .catalog__header
+        .catalog__title Обзоры
+      .catalog__content
+        .catalog__wrap
+          each item, index in article
+            .catalog__col
+              +article(item, index)

@@ -4,7 +4,7 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-      .projects
+      .projects.js-tabs
         .projects__filter
 
           .projects__filter-top
@@ -26,8 +26,12 @@ block content
               a(href="javascript:void(0);").button.button--white.projects__filter-middle-item.active Россия
               a(href="javascript:void(0);").button.button--white.projects__filter-middle-item Беларусь
               a(href="javascript:void(0);").button.button--white.projects__filter-middle-item Казахстан
+              if isDesktop
+                - cities[1].title = 'Санкт-Петербург'
+                .projects__filter-middle-item: include ../common/header-select-common
+            if isMobile
               - cities[1].title = 'Санкт-Петербург'
-              .projects__filter-middle-item: include ../common/header-select-common
+              .projects__filter-middle-item.projects__filter-middle-mobile: include ../common/header-select-common
 
           .projects__filter-bottom
             .projects__filter-bottom-title Сортировать по:
@@ -38,11 +42,11 @@ block content
                 a(href="javascript:void(0);").projects__filter-bottom-item С отзывами сверху
               .projects__filter-bottom-view
                 .change-view
-                  a(href="javascript:void(0);" aria-label="Вид списком").change-view__item.change-view__line.hint.hint--white.hint--top-left
+                  a(href="javascript:void(0);" aria-label="Вид списком").change-view__item.change-view__line.hint.hint--white.hint--top-left.js-tabs-header-item.active
                     span.change-view__elem
                     span.change-view__elem
                     span.change-view__elem
-                  a(href="javascript:void(0);" aria-label="Вид плиткой").change-view__item.change-view__tile.hint.hint--white.hint--top-left.active
+                  a(href="javascript:void(0);" aria-label="Вид плиткой").change-view__item.change-view__tile.hint.hint--white.hint--top-left.js-tabs-header-item
                     span.change-view__elem
                     span.change-view__elem
                     span.change-view__elem

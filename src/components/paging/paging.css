@@ -74,3 +74,13 @@
     pointer-events: none;
   }
 }
+/**
+media
+ */
+.mobile {
+
+  .paging__box {
+    width: 100%;
+    padding: 0;
+  }
+}

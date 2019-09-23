@@ -110,3 +110,48 @@
 .catalog__footer {
   margin-top: 30px;
 }
+/**
+mobile
+ */
+.mobile{
+
+  .catalog-box{
+    padding: 0;
+
+    .catalog__content{
+      margin-bottom: 33px;
+    }
+
+    .swiper-container{
+      width: 100%;
+    }
+  }
+
+  .catalog__title{
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 27px;
+  }
+
+  .catalog__content--lights-main{
+
+    .swiper-slide{
+      width: 144px;
+    }
+
+    .catalog__col{
+      width: 100%;
+    }
+  }
+
+  .catalog__content--empowers-main{
+
+    .swiper-slide{
+      width: 288px;
+    }
+
+    .catalog__col{
+      width: 100%;
+    }
+  }
+}
