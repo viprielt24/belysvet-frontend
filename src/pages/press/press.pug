@@ -4,12 +4,12 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-      .press
+      .press.js-tabs
         .press__tabs
-          a(href="javascript:void(0);").press__tabs-item.active Новости и события
-          a(href="javascript:void(0);").press__tabs-item Статьи и публикации
+          a(href="javascript:void(0);").js-tabs-header-item.press__tabs-item.active Новости и события
+          a(href="javascript:void(0);").js-tabs-header-item.press__tabs-item Статьи и публикации
         .press__content
-          .press__content-item.js-press__content-item
+          .press__content-item.js-tabs-content-item
             .press__calendar.calendar
               .calendar__year
                 .calendar__year-prev: .icon.icon--prev
@@ -30,7 +30,7 @@ block content
                 a(href="javascript:void(0);").calendar__months-item.disable Декабрь
             include ../common/tagline
             include ../common/news
-          .press__content-item.js-press__content-item
+          .press__content-item.js-tabs-content-item
             include ../common/article
       include ../../components/press-copyright/press-copyright
       include ../../components/press-kit/press-kit

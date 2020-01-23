@@ -1,4 +1,4 @@
-@import 'fonts.css';
+@import './fonts.css';
 @import './css/preloader.css';
 
 *,
@@ -55,4 +55,8 @@ iframe {
 img {
   border: 0;
   vertical-align: top;
+}
+
+.ns {
+  display: none !important;
 }

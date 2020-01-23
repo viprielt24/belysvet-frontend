@@ -1,0 +1,17 @@
+include ../../components/segment-item/segment-item
+
+.catalog.catalog--segment.js-catalog-segment
+  .container
+    .catalog__header
+      .catalog__title Сегменты
+      .swiper-button-prev
+      .swiper-button-next
+  .catalog__content
+    .swiper-container
+      .swiper-pagination
+      .swiper-wrapper
+        each item in segments
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                +segment-item(item)

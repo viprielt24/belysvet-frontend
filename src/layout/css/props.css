@@ -1,0 +1,15 @@
+.props__item {
+  max-width: 670px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #404040;
+}
+
+.props__name {
+  display: inline;
+}
+
+.props__value {
+  display: inline;
+  font-weight: 700;
+}

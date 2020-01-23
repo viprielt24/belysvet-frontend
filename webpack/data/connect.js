@@ -1,5 +1,9 @@
 module.exports = [
   {
+    title: 'Заказать обратный звонок',
+    icon: 'callback',
+  },
+  {
     title: 'Воспользуйтесь формой обратной связи',
     icon: 'list',
   },

@@ -1,0 +1,10 @@
+include ../../components/sale-item/sale-item
+
+.catalog.catalog--article
+  .catalog__content
+    .catalog__wrap
+      each item, index in sale
+        if index <= 5
+          .catalog__col
+            +sale-item(item, index)
+  .catalog__footer: a(href= more.href).button.button--press= more.title

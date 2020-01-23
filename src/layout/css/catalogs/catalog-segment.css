@@ -23,6 +23,7 @@
 
   .catalog__item {
     position: relative;
+    overflow: hidden;
     display: flex;
     min-height: 240px;
     background-position: 100% 100%;
@@ -34,6 +35,10 @@
 
       .catalog__item-sign {
         height: 5px;
+      }
+
+      .catalog__item-sign {
+        transform: translateY(0);
       }
     }
 
@@ -66,8 +71,9 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    height: 2px;
-    transition: height var(--time);
+    height: 5px;
+    transform: translateY(5px);
+    transition: var(--trf);
   }
 }
 /**

@@ -1,96 +1,141 @@
+include ../../../components/accordion-connect/accordion-connect
+
 .connect.js-connect
-  include ../../../components/accordion-connect/accordion-connect
-  +accordion-connect(connect[0]): .accordion__content-wrap
-    .connect__form: .form.form--style: form(action="javascript:void(0);").js-form-validate
-      .form-wrap
-        .form-group: .row
-          .col-sm-6.form-element: label
-            .form-placeholder Укажите тему сообщения
-            include ../../common/connect-select-common
-          .col-sm-6.form-element: label
-            .form-placeholder Как вас зовут?
-            input.form-control.js-form-validate__empty
-            .error Текст ошибки
-        .form-group: .row
-          .col-sm-6.form-element: label
-            .form-placeholder Email
-            input.form-control.js-form-validate__email
-            .error Текст ошибки
-          .col-sm-6.form-element: label
-            .form-placeholder Телефон
-            input.form-control.js-form-validate__phone
-            .error Текст ошибки
-        .form-group
-          .form-element: label
-            .form-placeholder Текст сообщения, ссылки на резюме, аккаунты и т.п.
-            textarea(rows="4").form-control.js-form-validate__empty
-            .error Текст ошибки
-        .form__bottom
+  .accordion
+    +accordion-connect(connect[0]): .accordion__content-wrap
+      .connect__form.connect__form--has-callback: .form.form--style: form(action="javascript:void(0);").js-form-validate: .row
+        .col-sm-5
+          .form-wrap
+            .form-group: .row
+              .col-sm-6.form-element: label
+                .form-placeholder Как вас зовут?
+                input.form-control.js-form-validate__empty
+              .col-sm-6.form-element: label
+                .form-placeholder Телефон
+                input.form-control.js-form-validate__phone
+                .error Текст ошибки
+            .form-group: .row
+              .col-sm-12.form-element: label
+                .form-placeholder Email
+                input.form-control.js-form-validate__email
+                .error Текст ошибки
+            .form__bottom
+              .form-group
+                .form-element
+                  label.label.label--checkbox
+                    input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                    .icon.icon--checkbox
+                    .label__text
+                      | Я соглашаюсь с условиями обработки<br>
+                      a(href='javascript:void(0);').label__link персональных данных
+                    .error
+              .button-wrap: button(type="submit").button Отправить
+        .col-sm-7
+          .connect__callback
+            .title Удобное время для звонка
+            .connect__callback-wrap
+              .form-group
+                .connect__callback-range.js-connect__callback-range
+              .form-group
+                .form-element: label
+                  .form-placeholder с
+                  include ../../common/connect-select-from-common
+                .form-element: label
+                  .form-placeholder до
+                  include ../../common/connect-select-to-common
+                .form-element: label
+                  include ../../common/connect-select-time-common
+    +accordion-connect(connect[1]): .accordion__content-wrap
+      .connect__form: .form.form--style: form(action="javascript:void(0);").js-form-validate
+        .form-wrap
+          .form-group: .row
+            .col-sm-6.form-element: label
+              .form-placeholder Укажите тему сообщения
+              include ../../common/connect-select-common
+            .col-sm-6.form-element: label
+              .form-placeholder Как вас зовут?
+              input.form-control.js-form-validate__empty
+              .error Текст ошибки
+          .form-group: .row
+            .col-sm-6.form-element: label
+              .form-placeholder Email
+              input.form-control.js-form-validate__email
+              .error Текст ошибки
+            .col-sm-6.form-element: label
+              .form-placeholder Телефон
+              input.form-control.js-form-validate__phone
+              .error Текст ошибки
           .form-group
-            .form-element
-              label.label.label--checkbox
-                input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                .icon.icon--checkbox
-                .label__text
-                  | Я соглашаюсь с условиями обработки<br>
-                  a(href='javascript:void(0);').label__link персональных данных
-                .error
-          .button-wrap: button(type="submit").button Отправить
-  +accordion-connect(connect[1]): .accordion__content-wrap
-    .msg
-      .msg__item
-        .icon.icon--msg-item1
-        .msg__name Skype
-      .msg__item
-        .icon.icon--msg-item2
-        .msg__name WhatsApp
-      .msg__item
-        .icon.icon--msg-item3
-        .msg__name Viber
-      .msg__item
-        .icon.icon--msg-item4
-        .msg__name Messenger
+            .form-element: label
+              .form-placeholder Текст сообщения, ссылки на резюме, аккаунты и т.п.
+              textarea(rows="4").form-control.js-form-validate__empty
+              .error Текст ошибки
+          .form__bottom
+            .form-group
+              .form-element
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                  .icon.icon--checkbox
+                  .label__text
+                    | Я соглашаюсь с условиями обработки<br>
+                    a(href='javascript:void(0);').label__link персональных данных
+                  .error
+            .button-wrap: button(type="submit").button Отправить
+    +accordion-connect(connect[2]): .accordion__content-wrap
+      .msg
+        .msg__item
+          .icon.icon--msg-item1
+          .msg__name Skype
+        .msg__item
+          .icon.icon--msg-item2
+          .msg__name WhatsApp
+        .msg__item
+          .icon.icon--msg-item3
+          .msg__name Viber
+        .msg__item
+          .icon.icon--msg-item4
+          .msg__name Messenger
 
-  +accordion-connect(connect[2]): .accordion__content-wrap
-    .connect__mail
-      .connect__mail-title Центральный офис г. Москва
-      .connect__mail-wrap
-        .connect__mail-item
-          .connect__mail-name Общие вопросы:
-          a(href="javascript:void(0);").connect__mail-link info@belysvet.ru
-        .connect__mail-item
-          .connect__mail-name По вопросам трудоустройства:
-          a(href="javascript:void(0);").connect__mail-link hr@belysvet.ru
-        .connect__mail-item
-          .connect__mail-name Для СМИ:
-          a(href="javascript:void(0);").connect__mail-link pressa@belysvet.ru
+    +accordion-connect(connect[3]): .accordion__content-wrap
+      .connect__mail
+        .connect__mail-title Центральный офис г. Москва
+        .connect__mail-wrap
+          .connect__mail-item
+            .connect__mail-name Общие вопросы:
+            a(href="javascript:void(0);").connect__mail-link info@belysvet.ru
+          .connect__mail-item
+            .connect__mail-name По вопросам трудоустройства:
+            a(href="javascript:void(0);").connect__mail-link hr@belysvet.ru
+          .connect__mail-item
+            .connect__mail-name Для СМИ:
+            a(href="javascript:void(0);").connect__mail-link pressa@belysvet.ru
 
-  +accordion-connect(connect[3]): .accordion__content-wrap
-    .connect__call
-      .connect__call-wrap
-        .connect__call-item
-          .connect__call-title Центральный офис
-          .connect__call-descr 125080, Москва, Факультетский переулок, дом 12 (заезд с ул. Царева)
-        .connect__call-item
-          .connect__call-title Телефон/факс
-          .connect__call-descr
-            .icon.icon--msg-item5
-            | +7 (495) 785-17-67 <br>(многоканальный)
-      .connect__call-wrap
-        .connect__call-item
-          .connect__call-title Склад в г. Москва
-          .connect__call-descr г. Москва, ул. Маршала Федоренко, 3, стр.1
-        .connect__call-item
-          .connect__call-title Телефон/факс
-          .connect__call-descr
-            .icon.icon--msg-item5
-            | + 7 (985) 778-25-92
-      .connect__call-wrap
-        .connect__call-item
-          .connect__call-title Склад в г. Санкт-Петербург
-          .connect__call-descr г. Санкт-Петербург, пос. Шушары, ул. Пушкинская, 25, корп. 1, стр. 1
-        .connect__call-item
-          .connect__call-title Телефон/факс
-          .connect__call-descr
-            .icon.icon--msg-item5
-            | +7 (911) 740-75-70
+    +accordion-connect(connect[4]): .accordion__content-wrap
+      .connect__call
+        .connect__call-wrap
+          .connect__call-item
+            .connect__call-title Центральный офис
+            .connect__call-descr 125080, Москва, Факультетский переулок, дом 12 (заезд с ул. Царева)
+          .connect__call-item
+            .connect__call-title Телефон/факс
+            .connect__call-descr
+              .icon.icon--msg-item5
+              | +7 (495) 785-17-67 <br>(многоканальный)
+        .connect__call-wrap
+          .connect__call-item
+            .connect__call-title Склад в г. Москва
+            .connect__call-descr г. Москва, ул. Маршала Федоренко, 3, стр.1
+          .connect__call-item
+            .connect__call-title Телефон/факс
+            .connect__call-descr
+              .icon.icon--msg-item5
+              | + 7 (985) 778-25-92
+        .connect__call-wrap
+          .connect__call-item
+            .connect__call-title Склад в г. Санкт-Петербург
+            .connect__call-descr г. Санкт-Петербург, пос. Шушары, ул. Пушкинская, 25, корп. 1, стр. 1
+          .connect__call-item
+            .connect__call-title Телефон/факс
+            .connect__call-descr
+              .icon.icon--msg-item5
+              | +7 (911) 740-75-70

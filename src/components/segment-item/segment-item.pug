@@ -1,0 +1,4 @@
+mixin segment-item(item)
+  a(href= item.link.href style='background-image: url(' + item.img + ');').catalog__item
+    .title= item.title
+    .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

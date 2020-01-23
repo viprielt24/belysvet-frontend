@@ -1,0 +1,13 @@
+mixin stack-popup()
+  .stack-popup.js-stack-popup
+    a(href="javascript:void(0);").stack-popup-close.js-stack-popup-close
+      .icon.icon--close.icon--close-primary.icon--close-small
+    .stack-popup-wrap
+      script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async)
+      script(src="https://yastatic.net/share2/share.js" async)
+      .ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter")
+      .stack-popup-href
+        .stack-popup-input
+          input(type='text' value='https://link.com/share').form-control
+        .stack-popup-link
+          a(href="javascript:void(0);").link.link--more-action.js-stack-popup-link Скопировать ссылку

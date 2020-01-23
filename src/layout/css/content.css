@@ -84,6 +84,12 @@
   color: #404040;
 }
 /**
+
+ */
+.content__top.content__top--signone {
+  padding: 25px 0 15px;
+}
+/**
 media
  */
 .mobile {

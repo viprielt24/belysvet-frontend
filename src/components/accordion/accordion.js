@@ -2,7 +2,7 @@ import romanize from 'romanize';
 
 export default class {
   constructor() {
-    this.accordionWrap = document.querySelector('.accordion');
+    this.accordionsWrap = document.querySelectorAll('.accordion');
     this.accordionItems = document.querySelectorAll('.js-accordion__item');
     this.accordionItemsNumber = document.querySelectorAll('.js-accordion__num');
     this.accordionItemsCloseUp = document.querySelectorAll('.js-accordion__close-text');
@@ -23,7 +23,10 @@ export default class {
       let arabNumber = number.innerText;
       number.innerText = romanize(arabNumber) + '.';
     });
-    this.accordionWrap.style.opacity = '1';
+
+    this.accordionsWrap.forEach(accordionWrap => {
+      accordionWrap.style.opacity = '1';
+    });
   }
 
   slideDown() {
@@ -89,6 +92,9 @@ export default class {
             //главный аккордеон открываем
             item.classList.add('active');
             itemContent.style.height = itemContentHeight + itemChildCloseHeight + 'px';
+            setTimeout(()=>{
+              // itemContent.style.height = 'auto'
+            },500)
           }
         }
       });

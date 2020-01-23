@@ -1,0 +1,57 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.emunit.aruna
+      .container.emunit__top
+        .row
+          .col-sm-6.emunit__top-left
+            include ../../components/gallery/gallery
+            +gallery()
+          .col-sm-6.emunit__top-right
+            include ../../pages/common/emunit-parts-common
+
+            .emunit__top-right-descr.text-editor
+              p Световой прибор ARUNA выполняется в 3-х моделях:
+              ul
+                li Модель L1
+                li Модель L2
+                li Модель L3
+
+            .emunit__top-right-proj
+              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                .icon.icon--inline.icon--stack: include ../../images/stack.svg
+                .link__text Проекты со световыми приборами серии ARUNA
+
+            .emunit__top-links
+              .emunit__top-links-wrap
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
+                  .link__text Сохранить в PDF
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--print: include ../../images/print.svg
+                  .link__text Распечатать
+                .link.link--icon.js-stack-trigger
+                  .icon.icon--inline.icon--share: include ../../images/share.svg
+                  .link__text Поделиться
+                  .link__wrap: include ../../pages/common/signone-share-common
+
+      .container.emunit__middle
+        .emunit__tabs.js-tabs
+          .emunit__tabs-title
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Модельный ряд
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Обзор и описании серии
+          .emunit__tabs-content
+            include ./pug/models-signone-new
+            include ./pug/review
+
+    .emunit__bottom
+      .container
+        .emunit__archive.accordion
+          include ../../components/accordion-connect/accordion-connect
+          +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
+            include ./pug/archive-new
+      .container
+        include ../common/polygraphy

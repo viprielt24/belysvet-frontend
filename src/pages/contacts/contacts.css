@@ -1,4 +1,5 @@
 @import "../../layout/variables.css";
+@import "../../pages/connect/connect.css";
 
 .content__bottom {
   justify-content: flex-start;

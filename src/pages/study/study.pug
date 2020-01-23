@@ -4,9 +4,17 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-      .study
-        .study__title Ближайшие семинары и конференции
-        include ../../pages/common/study-seminars-common
-        .study__title Видео-обзоры и обучающие видео
-        include ../../pages/common/tagline
-        include ../../pages/common/study-trainings-common
+      if isDesktop
+        .study.js-tabs
+          .study__tabs
+            a(href="javascript:void(0);").study__tabs-item.js-tabs-header-item.active Обучающие мероприятия
+            a(href="javascript:void(0);").study__tabs-item.js-tabs-header-item Видеообзоры
+            a(href="javascript:void(0);").study__tabs-item.js-tabs-header-item Статьи
+          .study__tabs-content
+            include ./pug/seminars
+            include ./pug/trainings
+            include ./pug/articles
+      else
+        include ./pug/seminars
+        include ./pug/trainings
+        include ./pug/articles

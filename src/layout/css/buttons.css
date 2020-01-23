@@ -51,14 +51,13 @@
   padding-top: 9px;
   padding-bottom: 10px;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: normal;
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-family: var(--opens);
   color: #333333;
-  font-weight: bold;
   transition: var(--trc), var(--trbg), var(--trb), box-shadow var(--time);
 
   &:hover {

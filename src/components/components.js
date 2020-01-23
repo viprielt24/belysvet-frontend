@@ -54,7 +54,12 @@ document.addEventListener('DOMContentLoaded', event => {
   }
 
   if (document.querySelector('.js-connect')) {
-    import('../pages/connect/connect').then(module => {
+    import('../pages/connect/js/connect-choices').then(module => {
+      new module.default();
+    });
+  }
+  if (document.querySelector('.js-connect__callback-range')) {
+    import('../pages/connect/js/connect-input-range').then(module => {
       new module.default();
     });
   }
@@ -119,6 +124,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-batch__list')) {
+    import('../components/batch/batch').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-tabs')) {
     import('./tabs/tabs').then(module => {
       new module.default();
@@ -127,6 +138,24 @@ document.addEventListener('DOMContentLoaded', event => {
 
   if (document.querySelector('.js-catalog__content-lights-main')) {
     import('../pages/common/js/lightsMain-common').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-stack-trigger')) {
+    import('../components/stack-popup/stack-popup').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-prop-wrap')) {
+    import('../pages/signone/js/props-toggle').then(module => {
+      new module.default();
+    });
+  }
+
+  if (document.querySelector('.js-catalog-aruna')) {
+    import('../components/aruna-item/aruna-item').then(module => {
       new module.default();
     });
   }

@@ -1,6 +1,12 @@
 mixin tag(item)
   - distribClass = item.regDistrib ? ' js-tag-distrib' : ''
   - activeClass = item.active ? ' tag--active' : ''
-  div(class= 'tag' + distribClass + activeClass)
-    .tag__title= item.title
-    .tag__close
+
+  if item.link
+    a(href= item.link.href class= 'tag' + distribClass + activeClass)
+      span.tag__title= item.title
+      span.tag__close
+  else
+    div(class= 'tag' + distribClass + activeClass)
+      .tag__title= item.title
+      .tag__close

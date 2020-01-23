@@ -8,3 +8,4 @@ mixin news(item)
     .catalog__item-box
       .link= item.link.title
       .date= item.date
+    .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

@@ -14,8 +14,9 @@
 
   .catalog__col {
     width: 33.333333%;
-    margin-bottom: 30px;
-    padding: 0 15px;
+    margin-bottom: 15px;
+    padding: 0 15px 15px;
+    overflow: hidden;
   }
 
   .catalog__item {
@@ -122,6 +123,7 @@
 
   .catalog__item-box {
     display: flex;
+    flex-grow: 1;
     align-items: flex-start;
     flex-direction: column;
     height: 100%;

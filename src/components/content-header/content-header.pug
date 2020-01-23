@@ -9,8 +9,8 @@ include ../crumbs/crumbs
       .stack
         .stack__title Поделиться:
         .stack__links
-          script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
-          script(src="//yastatic.net/share2/share.js")
+          script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async)
+          script(src="https://yastatic.net/share2/share.js" async)
           .ya-share2(data-services="facebook,twitter" data-size="s")
     .content__middle
       .press-inner-data Сентябрь 2017
@@ -26,8 +26,8 @@ include ../crumbs/crumbs
       .stack
         .stack__title Поделиться:
         .stack__links
-          script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
-          script(src="//yastatic.net/share2/share.js")
+          script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async)
+          script(src="https://yastatic.net/share2/share.js" async)
           .ya-share2(data-services="facebook,twitter" data-size="s")
     .content__middle
       .press-inner-data г. Москва
@@ -42,7 +42,13 @@ include ../crumbs/crumbs
       h1.title!= pageName
 
   else if page === 'signone'
-    .content__top.content__top--signone: include ../../pages/common/tagline
+    //-.content__top.content__top--signone: include ../../pages/common/tagline
+    .content__top.content__top--signone: include ../../pages/common/batch-common
+    .content__bottom
+      h1.title!= pageName
+
+  else if page === 'aruna'
+    .content__top.content__top--signone: include ../../pages/common/batch-common
     .content__bottom
       h1.title!= pageName
 

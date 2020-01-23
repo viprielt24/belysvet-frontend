@@ -12,7 +12,8 @@ const parametersInEachPage = {
   header,
   footer,
   items: null,
-  cities: data.cities
+  cities: data.cities,
+  batch: data.batch,
 };
 // страницы и параметры
 const pages = {
@@ -26,6 +27,7 @@ const pages = {
       article: data.article,
       products: data.products,
       tech: data.tech,
+      segments: data.segments,
       promo: data.promo,
       projects: data.projects,
       lights: data.lights,
@@ -51,7 +53,8 @@ const pages = {
           size: '(7.5 Mb)',
         },
       ],
-      tags: data.tagline
+      tags: data.tagline,
+      taglineClear: true,
     }
   },
   'press-inner': {
@@ -143,22 +146,7 @@ const pages = {
       pageDescr: '<p>Требовалось оборудование, применявшееся ранее на объектах. Организация аварийного освещения на базе Централизованной системы аварийного освещения BS-ELECTRO положительно зарекомендовало себя на развлекательных объектах — театрах, цирках, выставочных комплексах.</p>',
       crumbs: ['Главная', 'Компания', 'Проекты'],
       projects: data.projects,
-      projectsSolution: [
-        {
-          title: 'Техническое решение №1. Автономная система аварийного освещения с функцией TELECONTROL',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Техническое решение №2. Автономная система аварийного освещения с функциями AUTOTEST, TELECOMAND, FELS и MSS ',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Техническое решение №3. Автономная система аварийного освещения ZARIUS DALI ',
-          value: '1',
-          selected: false
-        },],
+      projectsSolution: data.solutions,
       projectsPosition: [
         {
           title: 'BS-ARUNA-81-L1-INEXI2',
@@ -228,12 +216,13 @@ const pages = {
   'study': {
     parameters: {
       page: 'study',
-      title: 'Учебный центр',
-      pageName: 'Учебный центр',
-      pageDescr: '<div class="row"><div class="col-sm-6"><p>Работа со сложным оборудованием требует специальных знаний. И с каждым годом строительные и монтажные компании понимают смысл этой аксиомы все реалистичнее. <br />Однако никто не научит ваших сотрудников работе с оборудованием лучше, чем его производитель.</p></div><div class="col-sm-6"><p>Компания «Белый свет 2000» оказывает не только информационные сервисные услуги в поддержку клиентам, но и проводит полноценное специализированное обучение в Школе Аварийного Освещения.</p></div></div>',
-      crumbs: ['Главная', 'Учебный центр'],
+      title: 'Обучение',
+      pageName: 'Обучение',
+      pageDescr: '<p>Работа со сложным оборудованием требует специальных знаний. И с каждым годом строительные и монтажные компании понимают смысл этой аксиомы все реалистичнее. <br />Однако никто не научит ваших сотрудников работе с оборудованием лучше, чем его производитель.</p><p>Компания «Белый свет 2000» оказывает не только информационные сервисные услуги в поддержку клиентам, но и проводит полноценное специализированное обучение в Школе Аварийного Освещения.</p>',
+      crumbs: ['Главная', 'Обучение'],
       seminars: data.studySeminars,
       trainings: data.studyTraining,
+      article: data.article,
       tags: data.tagline,
       taglineClear: true,
       more: {
@@ -264,33 +253,10 @@ const pages = {
       pageDescr: 'Какой-то текст. Компьютеры коренным образом изменили жизнь каждого человека. Несколько десятилетий назад люди даже не знали ничего об этих электронных устройствах, тогда как в наши дни даже маленький ребенок может управлять этой машиной. Почти все современные технологии зависит от компьютеров, которые используются для хранения данных: файлов, секретной информации, банковских операций и прочего.',
       crumbs: ['Главная', 'Связь с компанией'],
       connect: data.connect,
-      connectSubject: [
-        {
-          title: 'Общие вопросы',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Подбор оборудования',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Техническая консультация',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Заявка на проектирование',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Заявка на сервис',
-          value: '1',
-          selected: false
-        }
-      ],
+      connectSubject: data.connectSubject,
+      connectFrom: data.connectFrom,
+      connectTo: data.connectTo,
+      connectTime: data.connectTime,
     }
   },
   'registration': {
@@ -385,8 +351,8 @@ const pages = {
   'buyers': {
     parameters: {
       page: 'buyers',
-      title: 'Как купить?',
-      pageName: 'Как купить?',
+      title: 'Часто задаваемые вопросы',
+      pageName: 'Часто задаваемые вопросы',
       pageDescr: '<p>Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы, о том, что если вы не нашли ответа на свой вопрос свяжитесь с нами и мы с удовольствием вам ответим. Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы, о том, что если вы не нашли ответа на свой вопрос свяжитесь с нами и мы с удовольствием вам ответим. Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы.</p>',
       crumbs: ['Главная', 'Покупателю', 'Как купить?'],
       buyers: data.buyers
@@ -399,33 +365,10 @@ const pages = {
       pageName: 'Контакты',
       crumbs: ['Главная', 'Компания', 'Контакты'],
       connect: data.connect,
-      connectSubject: [
-        {
-          title: 'Общие вопросы',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Подбор оборудования',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Техническая консультация',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Заявка на проектирование',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'Заявка на сервис',
-          value: '1',
-          selected: false
-        }
-      ],
+      connectSubject: data.connectSubject,
+      connectFrom: data.connectFrom,
+      connectTo: data.connectTo,
+      connectTime: data.connectTime,
     }
   },
   'wheretobuy': {
@@ -434,6 +377,29 @@ const pages = {
       title: 'Где купить',
       pageName: 'Где купить',
       crumbs: ['Главная', 'Где купить'],
+      wheretobuy: data.wheretobuy,
+      registrationDealers: [
+        {
+          title: 'Дилер 1',
+          value: 'dealer-1',
+          selected: false
+        },
+        {
+          title: 'Дилер 2',
+          value: 'dealer-2',
+          selected: false
+        },
+        {
+          title: 'Дилер 3',
+          value: 'dealer-3',
+          selected: false
+        },
+        {
+          title: 'Дилер 4',
+          value: 'dealer-4',
+          selected: false
+        },
+      ],
       registrationCountry: [
         {
           title: 'Россия',
@@ -675,66 +641,8 @@ const pages = {
       files: data.productsFiles,
       galleryCounter: true,
       galleryCopyright: true,
-      uid: [
-        {
-          title: 'D01',
-          value: '1'
-        },
-        {
-          title: 'D02',
-          value: '2'
-        },
-        {
-          title: 'EC01',
-          value: '3'
-        },
-        {
-          title: 'D01',
-          value: '4'
-        },
-        {
-          title: 'D02',
-          value: '5'
-        },
-        {
-          title: 'EC01',
-          value: '6'
-        },
-      ],
-      purpose: [
-        {
-          title: 'Пожарные',
-          value: '1'
-        },
-        {
-          title: 'Эвакуационные',
-          value: '2'
-        },
-        {
-          title: 'Эвакуационный МГН',
-          value: '3'
-        },
-        {
-          title: 'Символы доступности МГН',
-          value: '4'
-        },
-        {
-          title: 'Пожарные',
-          value: '5'
-        },
-        {
-          title: 'Эвакуационные',
-          value: '6'
-        },
-        {
-          title: 'Эвакуационный МГН',
-          value: '7'
-        },
-        {
-          title: 'Символы доступности МГН',
-          value: '8'
-        },
-      ],
+      uid: data.uid,
+      purpose: data.purpose,
     }
   },
   'solution': {
@@ -761,6 +669,100 @@ const pages = {
       galleryCounter: true,
       galleryCopyright: true,
       promo: data.promo,
+    }
+  },
+  'sale': {
+    parameters: {
+      page: 'sale',
+      title: 'Акции',
+      pageName: 'Акции',
+      crumbs: ['Главная', 'Компания', 'Акции'],
+      pageDescr: '<p>Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п.</p>',
+      sale: data.sale,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'смотреть прошедшие акции'
+      }
+    }
+  },
+  'aruna': {
+    parameters: {
+      page: 'aruna',
+      title: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
+      pageName: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
+      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA'],
+      lights: data.lights,
+      tags: data.signone,
+      tagsCompatibility: data.compatibility,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      uid: data.uid,
+      purpose: data.purpose,
+      projectsSolution: data.solutions,
+      projectsPosition: [
+        {
+          title: 'BS-ARUNA-81-L1-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L2-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L3-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L4-INEXI2',
+          value: '1',
+          selected: false
+        },
+      ],
+    }
+  },
+  'aruna-product': {
+    parameters: {
+      page: 'aruna-product',
+      title: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
+      pageName: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
+      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA', 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2'],
+      lights: data.lights,
+      tags: data.signone,
+      tagsCompatibility: data.compatibility,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      uid: data.uid,
+      purpose: data.purpose,
+      projectsSolution: data.solutions,
+      projectsPosition: [
+        {
+          title: 'BS-ARUNA-81-L1-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L2-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L3-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L4-INEXI2',
+          value: '1',
+          selected: false
+        },
+      ],
     }
   },
 };

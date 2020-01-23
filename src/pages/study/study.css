@@ -4,6 +4,82 @@
   margin-top: 22px;
   padding-top: 39px;
   border-top: 1px solid rgba(196, 196, 196, .5);
+
+  .catalog__footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.study__tabs {
+  display: flex;
+  margin: 50px 0;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.study__tabs-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 33.333333%;
+  padding-bottom: 20px;
+  color: #333333;
+  font-size: 18px;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: transparent;
+  }
+
+  &.active:after {
+    background-color: #A1BF35;
+  }
+}
+
+.study__tabs-content-item {
+
+  .catalog__footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button--press {
+    display: flex;
+    width: auto;
+    height: auto;
+    min-height: auto;
+    background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: left 2px bottom 0;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    background-color: transparent;
+    padding: 0 0 4px;
+    color: #A1BF35;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: none;
+    border-bottom: 0;
+    font-family: var(--museo);
+    text-decoration: none;
+    box-shadow: none;
+    letter-spacing: normal;
+    line-height: 1;
+    transition: var(--trc);
+
+    &:hover {
+      color: #61AE3B;
+      border-bottom: 0;
+      box-shadow: none;
+    }
+  }
 }
 
 .content__header .title {
@@ -20,9 +96,34 @@
 }
 
 .seminars{
-  margin-bottom: 50px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(196, 196, 196, .5);
+  margin-bottom: 44px;
+}
+
+.seminars-more {
+  margin-top: 30px;
+  text-align: center;
+
+  .link {
+    background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: left 2px bottom 0;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    padding-bottom: 4px;
+    color: #A1BF35;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: none;
+    border-bottom: 0;
+    font-family: var(--museo);
+    text-decoration: none;
+    transition: var(--trc);
+
+    &:hover {
+      color: #61AE3B;
+      border-bottom: 0;
+    }
+  }
 }
 
 .tagline{
@@ -46,5 +147,11 @@ media
 
   .seminar__middle-wrap {
     flex-wrap: wrap;
+  }
+
+  .study__tabs-content-item {
+    margin-bottom: 50px;
+
+
   }
 }

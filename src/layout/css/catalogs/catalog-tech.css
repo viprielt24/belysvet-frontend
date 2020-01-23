@@ -22,6 +22,7 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 240px;
+    height: 100%;
     background-position: 100% 100%;
     padding: 30px 45px;
     cursor: pointer;
@@ -82,13 +83,22 @@
   }
 
   .descr {
-    margin: 12px 0 32px;
+    max-width: 300px;
+    margin: 12px 0 5px;
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 26px;
     letter-spacing: -0.02em;
     color: #333333;
+  }
+
+  .note {
+    max-width: 240px;
+    margin: 5px 0 15px;
+    color: #404040;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   .catalog__item-sign {
@@ -98,6 +108,15 @@
     bottom: 0;
     height: 4px;
     transition: height var(--time);
+  }
+}
+/**
+
+ */
+.catalog--tech-main {
+
+  .catalog__wrap {
+    height: 100%;
   }
 }
 /**

@@ -1,12 +1,12 @@
 @import "../../layout/variables.css";
 
-.polygraphy{
+.polygraphy {
   margin-top: 53px;
   padding-top: 40px;
-  border-top: 1px solid rgba(196, 196, 196, 0.5);
+  border-top: 1px solid var(--border);
 }
 
-.polygraphy__title{
+.polygraphy__title {
   margin-bottom: 34px;
   font-style: normal;
   font-weight: 700;
@@ -14,16 +14,23 @@
   line-height: normal;
   font-family: var(--museo);
 }
+
+.polygraphy--aruna {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 44px;
+  padding-bottom: 30px;
+}
 /**
 media
  */
 .mobile {
 
-  .polygraphy{
+  .polygraphy {
     margin-top: 22px;
   }
 
-  .polygraphy__title{
+  .polygraphy__title {
     margin-bottom: 22px;
     font-size: 18px;
     line-height: 23px;

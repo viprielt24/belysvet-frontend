@@ -8,3 +8,4 @@ mixin brands-item(item)
         .descr!= item.text
     if item.description
       .text!= item.description
+    .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

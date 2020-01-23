@@ -16,8 +16,12 @@ export default class {
     this.hideMapSelfHeight = this.hideMapSelf.clientHeight;
     this.selectOrg = document.querySelector('.js-select-org');
 
+    this.view = document.querySelector('.js-change-view');
+    this.viewItems = this.view.querySelectorAll('.js-change-view__item');
+
     this.addEvents();
     this.toggleMap();
+    this.changeView();
   }
 
   addEvents() {
@@ -67,6 +71,16 @@ export default class {
       });
       const selectCity = document.querySelector('.js-select-city');
       const selectCityInst = new Choices(selectCity, {
+        placeholder: false,
+        searchFloor: 2,
+        shouldSort: false,
+        itemSelectText: '',
+        noResultsText: 'Не найдено',
+        renderSelectedChoices: true,
+        searchPlaceholderValue: 'Поиск',
+      });
+      const selectDealers = document.querySelector('.js-select-dealers');
+      const selectDealersInst = new Choices(selectDealers, {
         placeholder: false,
         searchFloor: 2,
         shouldSort: false,
@@ -197,36 +211,56 @@ export default class {
               // console.log('storeCheck', storeCheck)
               // console.log('storeCheckJson', storeCheckJson)
               if (storeCheck === 'all') {
-
+                let storeClass = feature.partner.store ? ' wheretobuy-partners__item-pic--store' : '';
                 let partnerName = feature.partner.name !== undefined ? `<div class="wheretobuy-partners__item-name">${feature.partner.name}</div>` : '';
                 let partnerAddress = feature.partner.address !== undefined ? `<div class="wheretobuy-partners__item-address">${feature.partner.address}</div>` : '';
                 let partnerPhone = feature.partner.phone !== undefined ? `<div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>` : '';
                 let partnerEmail = feature.partner.email !== undefined ? `<a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a>` : '';
                 let partnerSite = feature.partner.site !== undefined ? `<a class="wheretobuy-partners__item-site" href="http://${feature.partner.site}">${feature.partner.site}</a>` : '';
 
-                partnerLayout += `<div class="wheretobuy-partners__item">
-                ${partnerName}
-                ${partnerAddress}
-                ${partnerPhone}
-                <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
-                <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
-              </div>`;
+                partnerLayout += `
+                <div class="col-sm-3">
+                  <div class="wheretobuy-partners__item">
+                    <div class="wheretobuy-partners__item-pic${storeClass}">
+                      <img src="/images/temp/wheretobuy.jpg" alt="" class="wheretobuy-partners__item-img">
+                    </div>
+                    ${partnerName}
+                    <div class="wheretobuy-partners__item-wrap">
+                      <div class="wheretobuy-partners__item-warehouse">Адрес склада:</div>
+                      ${partnerAddress}
+                      ${partnerPhone}
+                      <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
+                      <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
+                  </div>
+                  </div>
+                </div>
+                `;
 
               } else if (storeCheck === storeCheckJson) {
-
+                let storeClass = feature.partner.store ? 'wheretobuy-partners__item-pic--store' : '';
                 let partnerName = feature.partner.name !== undefined ? `<div class="wheretobuy-partners__item-name">${feature.partner.name}</div>` : '';
                 let partnerAddress = feature.partner.address !== undefined ? `<div class="wheretobuy-partners__item-address">${feature.partner.address}</div>` : '';
                 let partnerPhone = feature.partner.phone !== undefined ? `<div class="wheretobuy-partners__item-phone">${feature.partner.phone}</div>` : '';
                 let partnerEmail = feature.partner.email !== undefined ? `<a class="wheretobuy-partners__item-email" href="mailto:${feature.partner.email}">${feature.partner.email}</a>` : '';
                 let partnerSite = feature.partner.site !== undefined ? `<a class="wheretobuy-partners__item-site" href="http://${feature.partner.site}">${feature.partner.site}</a>` : '';
 
-                partnerLayout += `<div class="wheretobuy-partners__item">
-                ${partnerName}
-                ${partnerAddress}
-                ${partnerPhone}
-                <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
-                <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
-              </div>`;
+                partnerLayout += `
+                <div class="col-sm-3">
+                  <div class="wheretobuy-partners__item">
+                    <div class="wheretobuy-partners__item-pic${storeClass}">
+                      <img src="/images/temp/wheretobuy.jpg" alt="" class="wheretobuy-partners__item-img">
+                    </div>
+                    ${partnerName}
+                    <div class="wheretobuy-partners__item-wrap">
+                      <div class="wheretobuy-partners__item-warehouse">Адрес склада:</div>
+                      ${partnerAddress}
+                      ${partnerPhone}
+                      <div class="wheretobuy-partners__item-email-wrap">${partnerEmail}</div>
+                      <div class="wheretobuy-partners__item-site-wrap">${partnerSite}</div>
+                    </div>
+                  </div>
+                </div>
+                `;
 
               }
             });
@@ -267,6 +301,25 @@ export default class {
         this.hideMapSelf.style.height = 0 + 'px';
         target.classList.add('active');
       }
+    });
+  }
+
+  changeView() {
+    this.viewItems.forEach((item, index) => {
+      const wrapViewTargets = document.querySelector('.js-wheretobuy-partners__wrap');
+      item.addEventListener('click', () => {
+        // активность табов
+        document.querySelector('.js-change-view__item.active').classList.remove('active');
+        item.classList.add('active');
+        // классы смена вида
+        if (index === 0) {
+          wrapViewTargets.classList.remove('wheretobuy-partners__wrap--grid');
+          wrapViewTargets.classList.add('wheretobuy-partners__wrap--list')
+        } else {
+          wrapViewTargets.classList.remove('wheretobuy-partners__wrap--list');
+          wrapViewTargets.classList.add('wheretobuy-partners__wrap--grid')
+        }
+      });
     });
   }
 }

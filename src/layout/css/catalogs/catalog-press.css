@@ -16,6 +16,8 @@
   }
 
   .catalog__item {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,6 +36,10 @@
       .link{
         color: var(--hover);
         border-bottom-color: var(--hover);
+      }
+
+      .catalog__item-sign {
+        transform: translateY(0);
       }
     }
   }
@@ -76,6 +82,17 @@
     line-height: 18px;
     font-family: var(--opens);
     color: #333333;
+  }
+
+  .catalog__item-sign {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 5px;
+    transform: translateY(5px);
+    transition: var(--trf);
   }
 }
 /**

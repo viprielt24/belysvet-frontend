@@ -1,6 +1,10 @@
 mixin tech-item(item)
   a(href= item.link.href style='background-image: url(' + item.img + ');').catalog__item
-    .title!= item.title
-    .descr!= item.descr
+    if item.title
+      .title!= item.title
+    if item.descr
+      .descr!= item.descr
+    if item.note
+      .note!= item.note
     button.button.button-size-md= item.link.title
-    .catalog__item-sign(style='background-color: ' + item.color + ';')
+    .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

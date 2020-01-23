@@ -6,7 +6,7 @@ mixin accordion-connect(item, index)
 
     //-пункты главного аккордеона
     - simpleHeader = index || item.icon ? 'accordion__header js-accordion__header' : 'accordion__header accordion__header--simple js-accordion__header'
-    a(href="javascript:void(0);" class= simpleHeader)
+    a(href="javascript:void(0);" class= simpleHeader style= item.bgsol ? "background-color: #" + item.bgsol : '')
       if item.icon
         div(class='icon icon--' + item.icon)
       else if index

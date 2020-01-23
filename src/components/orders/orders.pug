@@ -1,19 +1,19 @@
 .orders.js-orders
-  .orders__wrap
-    a(href="javascript:void(0);" aria-label="Подбор оборудования").orders__item.hint.hint--white.hint--left
-      .orders__item-icon: include ../../images/orders__item-icon1.svg
-      .orders__item-text Подбор оборудования
-    a(href="javascript:void(0);" aria-label="Техническая консультация" data-popupname="consultation").orders__item.hint.hint--white.hint--left.js-popup-open
-      .orders__item-icon: include ../../images/orders__item-icon2.svg
-      .orders__item-text Техническая консультация
-    a(href="javascript:void(0);" aria-label="Заявка на проектирование").orders__item.hint.hint--white.hint--left
-      .orders__item-icon: include ../../images/orders__item-icon3.svg
-      .orders__item-text Заявка на проектирование
-    a(href="javascript:void(0);" aria-label="Заявка на сервис").orders__item.hint.hint--white.hint--left
-      .orders__item-icon: include ../../images/orders__item-icon4.svg
-      .orders__item-text Заявка на сервис
   a(href="javascript:void(0);").orders-trigger.js-orders-trigger
     .orders-trigger__wrap
       .orders-trigger__icon.orders-trigger__icon--show: include ../../images/orders-trigger__icon.svg
       .orders-trigger__text Скрыть
       .orders-trigger__icon.orders-trigger__icon--hide: include ../../images/orders-trigger__icon.svg
+  .orders__wrap
+    a(href="javascript:void(0);" aria-label="Подбор оборудования" data-popupname="assist").orders__item.hint.hint--white.hint--left.js-popup-open
+      .orders__item-icon: include ../../images/orders__item-icon1.svg
+      .orders__item-text Подбор оборудования
+    a(href="javascript:void(0);" aria-label="Техническая консультация" data-popupname="consultation").orders__item.hint.hint--white.hint--left.js-popup-open
+      .orders__item-icon: include ../../images/orders__item-icon2.svg
+      .orders__item-text Техническая консультация
+    a(href="javascript:void(0);" aria-label="Заявка на проектирование" data-popupname="design").orders__item.hint.hint--white.hint--left.js-popup-open
+      .orders__item-icon: include ../../images/orders__item-icon3.svg
+      .orders__item-text Заявка на проектирование
+    a(href="javascript:void(0);" aria-label="Заявка на сервис" data-popupname="service").orders__item.hint.hint--white.hint--left.js-popup-open
+      .orders__item-icon: include ../../images/orders__item-icon4.svg
+      .orders__item-text Заявка на сервис

@@ -1,9 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const extractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+// https://github.com/webpack-contrib/mini-css-extract-plugin
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// https://github.com/mzgoddard/hard-source-webpack-plugin
+var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 const PATH = {
   build: path.join(__dirname, 'build'),
   src: path.join(__dirname, 'src')
@@ -16,9 +19,7 @@ const entry = {
 const pagesHTML = [];
 
 for (let pageName in pages) {
-
   entry[pageName] = PATH.src + `/pages/${pageName}/${pageName}.js`;
-
 }
 
 
@@ -34,7 +35,10 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin('build'),
-    new extractTextWebpackPlugin('css/[name].css'),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: "css/[id].[chunkhash].css",
+    }),
     new CopyWebpackPlugin([
       {
         from: PATH.src + '/images',
@@ -55,7 +59,8 @@ const config = {
     ]),
     new CopyWebpackPlugin([
       {from: PATH.src + '/layout/js/browserVer.js', to: PATH.build + '/js'}
-    ])
+    ]),
+    new HardSourceWebpackPlugin()
   ],
   module: {
     rules: [
@@ -72,11 +77,10 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: extractTextWebpackPlugin.extract({
-          publicPath: '../',
-          fallback: 'style-loader',
-          use: ['css-loader?sourceMap', 'postcss-loader?sourceMap']
-        })
+        use: [
+          devMode ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader?sourceMap', 'postcss-loader?sourceMap'
+        ],
       },
       {
         test: /\.js$/,
@@ -109,10 +113,20 @@ const config = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name (file) {
+                if (devMode) {
+                  return '[name].[ext]'
+                }
+                return 'fonts/[name].[ext]'
+              }
+              //name: 'fonts/[name].[ext]',
+            },
+          },
+        ],
       }
     ]
   }

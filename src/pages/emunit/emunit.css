@@ -79,13 +79,33 @@
   padding-top: 17px;
   border-top: var(--border);
 
+  .link svg path{
+    transition: var(--trsf);
+  }
+
   .link {
+    position: relative;
     display: flex;
     align-items: center;
     margin-left: 37px;
+    cursor: pointer;
+
+    &.is-active,
+    &:hover svg path{
+      fill: var(--hover);
+    }
 
     &:first-child {
       margin-left: 0;
+
+      svg path {
+        transition: var(--trss);
+      }
+
+      &:hover svg path {
+        stroke: var(--hover);
+        fill: transparent;
+      }
     }
   }
 }

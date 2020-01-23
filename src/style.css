@@ -16,11 +16,19 @@
 @import "../node_modules/hint.css/hint.min.css";
 @import './layout/css/hint-custom.css';
 
+@import "../node_modules/nouislider/distribute/nouislider.css";
+@import './layout/css/nouislider-custom.css';
+
 @import './layout/css/catalog.css';
 @import './layout/css/partners.css';
 @import './layout/css/distrib.css';
 @import './layout/css/calendar.css';
 @import './layout/css/stack.css';
 @import './layout/css/polygraphy.css';
+@import './layout/css/change-view.css';
+@import './layout/css/price.css';
+@import './layout/css/props.css';
+@import './layout/css/defin.css';
+@import './layout/css/table.css';
 
 @import './components/components.css';

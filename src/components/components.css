@@ -33,3 +33,9 @@
 @import "parts-item/parts-item.css";
 @import "gallery/gallery.css";
 @import "tabs/tabs.css";
+@import "segment-item/segment-item.css";
+@import "wheretobuy-item/wheretobuy-item.css";
+@import "sale-item/sale-item.css";
+@import "batch/batch.css";
+@import "stack-popup/stack-popup.css";
+@import "aruna-item/aruna-item.css";

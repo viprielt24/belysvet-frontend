@@ -20,6 +20,8 @@
   }
 
   .catalog__item {
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -38,6 +40,10 @@
         color: var(--hover);
         border-bottom-color: var(--hover);
       }
+
+      .catalog__item-sign {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -53,6 +59,16 @@
 
   .link{
     margin-top: auto;
+  }
+
+  .catalog__item-sign {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    transform: translateY(5px);
+    transition: var(--trf);
   }
 }
 

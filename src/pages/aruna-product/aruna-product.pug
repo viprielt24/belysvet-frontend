@@ -1,0 +1,152 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.emunit.aruna
+      .container.emunit__top
+        .row
+          .col-sm-6.emunit__top-left
+            include ../../components/gallery/gallery
+            +gallery()
+          .col-sm-6.emunit__top-right
+            .emunit__top-right-articul Артикул: а15744
+            include ../../pages/common/emunit-parts-common
+            .emunit__top-right-links
+              a(href="javascript:void(0);").link.link--more-action Складской
+              a(href="javascript:void(0);").link.link--more-action В наличии (3 579)
+            .emunit__top-right-price
+              .price-wrap
+                .price-descr.props
+                  .props__item
+                    .props__name Единица измерения:
+                    .props__value штуки
+                .price: .price__item
+                  .price__value 4700,00
+                  .price__currency: a(href="javascript:void(0);").link.link--more-action Цена (руб.)
+              .emunit__top-right-wrap
+                .count.js-count
+                  .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+                  .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
+                  .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+                button.button.emunit__models-button-fill в корзину
+                button.button.button--empty.emunit__models-button-empty В спецификацию
+            .emunit__top-right-compare
+              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                .icon.icon--inline.icon--chart: include ../../images/chart.svg
+                .link__text Сравнить
+              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                .icon.icon--inline.icon--compare: include ../../images/compare.svg
+                .link__text Сравнить выбранное
+              //- a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                .icon.icon--close.icon--close-primary.icon--close-medium
+                .link__text Удалить из сравнения
+            .emunit__top-right-proj
+              a(href="javascript:void(0);").link.link--icon
+                .icon.icon--inline.icon--stack: include ../../images/stack.svg
+                .link__text Проекты со световыми приборами серии ARUNA
+            .emunit__top-links
+              .emunit__top-links-wrap
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
+                  .link__text Сохранить в PDF
+                a(href="javascript:void(0);").link.link--icon
+                  .icon.icon--inline.icon--print: include ../../images/print.svg
+                  .link__text Распечатать
+                .link.link--icon.js-stack-trigger
+                  .icon.icon--inline.icon--share: include ../../images/share.svg
+                  .link__text Поделиться
+                  .link__wrap: include ../../pages/common/signone-share-common
+
+      .container.emunit__middle
+        .emunit__tabs.js-tabs
+          .emunit__tabs-title
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Возможности для заказа
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Совместимые продукты
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Характеристики
+            a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Техническая документация
+          .emunit__tabs-content
+            .emunit__tabs-content-item.emunit__models.js-tabs-content-item
+            .emunit__tabs-content-item.emunit__models.js-tabs-content-item
+              .emunit__models-temp-text Аксессуары и совместимые продукты для данной товарной позиции не предусмотрены
+            .emunit__tabs-content-item.emunit__models.js-tabs-content-item
+              .emunit__models-table.text-editor: table.table
+                thead
+                  tr
+                    td.table-td-center.table-td-thead Параметры
+                    td.table-td-link
+                      a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                        .icon.icon--inline.icon--info: include ../../images/info.svg
+                        .link__text BS-ARUNA-81-L1-INEXI2
+                tbody
+                  tr
+                    td Артикул
+                    td а15324
+                  tr
+                    td(colspan="4").table-td-gray.table-td-thead.table-td-left Аварийный режим и функции управления
+                  tr
+                    td Нормируемая продолжительность аварийной работы, ч
+                    td 1
+                  tr
+                    td.table-td-bold Источник питания
+                    td INEXI-2N
+                  tr
+                    td 2 клеммы подключения слаботочной сети дистанционного устройства управления и тестирования BS-TELECONTROL-2 ГОСТ IEC 60598-2-22-2012
+                    td +
+            .emunit__tabs-content-item.emunit__models.js-tabs-content-item
+              include ../common/aruna-polygraphy-common
+          .emunit__tabs-footer
+            .emunit__tabs-footer-table.text-editor: table.table
+              thead
+                tr
+                  td(rowspan=2) Склад компании «Белый свет», г. Москва
+                  td.table-td-center Остаток на складе, шт
+                  td.table-td-center Статус позиции
+                  td.table-td-center Цена 4 700,00 руб.
+                tr
+                  td.table-td-tbody 2 345
+                  td.table-td-tbody Заказной
+                  td.emunit__tabs-footer-buttons
+                    .count.js-count
+                      .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+                      .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
+                      .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+                    button.button.emunit__models-button-fill в корзину
+                    button.button.button--empty.emunit__models-button-empty В спецификацию
+                tr
+                  td(colspan=4).table-td-gray Интернет-магазины партнеров
+                tr
+                  td Интернет-магазин партнера
+                  td Остаток на складе, шт
+                  td Все города
+                  td Ссылка на интернет-магазин
+              tbody
+                tr
+                  td «Русский свет»
+                  td 1
+                  td г. Москва
+                  td www.rs24.ru
+                tr
+                  td «Русский свет»
+                  td 22
+                  td г. Москва
+                  td www.e-shop.rs24.ru
+                tr
+                  td Интернет-магазин
+                  td 456
+                  td Московская область г. Балашиха
+                  td www.Internet-light.ru
+                tr
+                  td «Свет-привет»
+                  td 97 531
+                  td Москвоская область г. Мытищи
+                  td www.hi-light.ru
+                tr
+                  td «ЛЕД-Свет»
+                  td 1
+                  td г. Великие Луки
+                  td www.Internet-light5.ru
+
+
+    .aruna-bottom: include ../../pages/common/aruna-item-common

@@ -1,0 +1,21 @@
+.distrib
+  script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+  .container
+    .distrib__header
+      .distrib__title Дистрибьюторская сеть
+      .distrib__country
+        a(href="javascript:void(0);" data-country="Russia").button.button--white.distrib__country-item.js-distrib__country-item.active Россия
+        a(href="javascript:void(0);" data-country="Belarus").button.button--white.distrib__country-item.js-distrib__country-item Беларусь
+        a(href="javascript:void(0);" data-country="Kazakhstan").button.button--white.distrib__country-item.js-distrib__country-item Казахстан
+        a(href="javascript:void(0);").link.link--more
+          .link__text Где купить?
+          .link__icon: include ../../../images/arrow-right-small.svg
+  .distrib__map
+    .distrib__map-wrap
+      .distrib__select
+        select.form-control.js-distrib__select
+          option(value="moscow" selected="true") Москва
+          option(value="abakan") Абакан
+          option(value="armavir") Армавир
+          option(value="piter") Санкт-Петербург
+    #map(data-mapMarker="/images/map/marker2.svg")

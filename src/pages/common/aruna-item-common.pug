@@ -1,0 +1,17 @@
+include ../../components/aruna-item/aruna-item
+
+.catalog.catalog--aruna.js-catalog-aruna
+  .container
+    .catalog__header
+      .catalog__title Совместимые продукты
+      .swiper-button-prev
+      .swiper-button-next
+    .catalog__content
+      .swiper-container
+        .swiper-pagination
+        .swiper-wrapper
+          each item, index in lights
+            .swiper-slide
+              .catalog__wrap
+                .catalog__col
+                  +aruna-item(item, index)

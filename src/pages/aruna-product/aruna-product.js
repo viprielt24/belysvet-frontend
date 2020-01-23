@@ -1,0 +1,1 @@
+import "./aruna-product.css";

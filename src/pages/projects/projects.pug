@@ -4,7 +4,7 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-      .projects.js-tabs
+      .projects.js-tabs(data-tabsstart="1")
         .projects__filter
 
           .projects__filter-top
@@ -42,16 +42,16 @@ block content
                 a(href="javascript:void(0);").projects__filter-bottom-item С отзывами сверху
               .projects__filter-bottom-view
                 .change-view
-                  a(href="javascript:void(0);" aria-label="Вид списком").change-view__item.change-view__line.hint.hint--white.hint--top-left.js-tabs-header-item.active
+                  a(href="javascript:void(0);" aria-label="Вид списком").change-view__item.change-view__line.hint.hint--white.hint--top-left.js-tabs-header-item
                     span.change-view__elem
                     span.change-view__elem
                     span.change-view__elem
-                  a(href="javascript:void(0);" aria-label="Вид плиткой").change-view__item.change-view__tile.hint.hint--white.hint--top-left.js-tabs-header-item
+                  a(href="javascript:void(0);" aria-label="Вид плиткой").change-view__item.change-view__tile.hint.hint--white.hint--top-left.js-tabs-header-item.active
                     span.change-view__elem
                     span.change-view__elem
                     span.change-view__elem
                     span.change-view__elem
 
-        include ../common/projects-common
         include ../common/projects-line-common
+        include ../common/projects-common
         include ../../components/paging/paging

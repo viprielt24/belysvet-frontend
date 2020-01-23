@@ -2,3 +2,4 @@ mixin company-item(item)
   a(href= item.link.href).catalog__item
     .title!= item.title
     .link= item.link.title
+    .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

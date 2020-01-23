@@ -2,51 +2,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-}
-
-.price__new {
-  color: var(--contentColor);
+  font-family: var(--museo);
   font-size: 18px;
   line-height: 1;
-  font-weight: 700;
-  
-  & .price__currency {
-    margin-left: 5px;
-  }
+  color: #404040;
 }
 
-.price__old {
-  position: relative;
-  margin-left: 30px;
-  color: var(--contentColor);
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 400;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -5px;
-    right: -5px;
-    height: 2px;
-    background-color: var(--primaryColor);
-    margin-top: -1px;
-  }
-  
-  & .price__currency {
-    margin-left: 6px;
-    font-weight: 400;
-  }
-}
-
-.price__total{
-  color: var(--contentColor);
-  font-size: 24px;
-  line-height: 1;
-  font-weight: 700;
-  
-  & .price__currency {
-    margin-left: 8px;
-  }
+.price__currency {
+  margin-left: 3px;
 }

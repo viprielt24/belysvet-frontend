@@ -1,0 +1,47 @@
+include ../../components/wheretobuy-item/wheretobuy-item
+
+.wheretobuy-partners
+  .container
+    .change-view.js-change-view
+      a(href="javascript:void(0);" aria-label="Вид списком").js-change-view__item.change-view__item.change-view__line.hint.hint--white.hint--top-left
+        span.change-view__elem
+        span.change-view__elem
+        span.change-view__elem
+      a(href="javascript:void(0);" aria-label="Вид плиткой").js-change-view__item.change-view__item.change-view__tile.hint.hint--white.hint--top-left.active
+        span.change-view__elem
+        span.change-view__elem
+        span.change-view__elem
+        span.change-view__elem
+
+    .wheretobuy-partners__filter.ns
+      .wheretobuy-partners__filter-title Показать:
+      .wheretobuy-partners__filter-wrap
+        label
+          input(type="radio" name="partnersFilter" data-filter="all" checked).js-wheretobuy-partners__filter-item
+          .wheretobuy-partners__filter-name Все
+        label
+          input(type="radio" name="partnersFilter" data-filter="store").js-wheretobuy-partners__filter-item
+          .wheretobuy-partners__filter-name Интернет-магазины
+
+    .wheretobuy-partners__title.js-wheretobuy-partners__title Москва и Московская область
+    .wheretobuy-partners__wrap.wheretobuy-partners__wrap--grid.js-wheretobuy-partners__wrap
+      each item, index in wheretobuy
+        .col-sm-3: .wheretobuy-partners__item
+          div(class= item.store
+                  ? 'wheretobuy-partners__item-pic wheretobuy-partners__item-pic--store'
+                  : 'wheretobuy-partners__item-pic')
+            if item.image
+              img(src= item.image).wheretobuy-partners__item-img
+          .wheretobuy-partners__item-name= item.name
+          .wheretobuy-partners__item-wrap
+            .wheretobuy-partners__item-warehouse Адрес склада:
+            if item.address
+              .wheretobuy-partners__item-address= item.address
+            if item.phone
+              .wheretobuy-partners__item-phone= item.phone
+            if item.email
+              .wheretobuy-partners__item-email-wrap
+                a(href= 'mailto:'+ item.email).wheretobuy-partners__item-email= item.email
+            if item.site
+              .wheretobuy-partners__item-site-wrap
+                a(href= 'http://' + item.site target=_blank).wheretobuy-partners__item-site= item.site

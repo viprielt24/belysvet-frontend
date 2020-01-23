@@ -1,0 +1,30 @@
+.noUi-horizontal {
+  height: 5px;
+  border-radius: 11px;
+  background-color: rgba(196, 196, 196, 0.5);
+  box-shadow: none;
+  border: none;
+  padding: 0 10px;
+
+  .noUi-handle {
+    width: 21px;
+    height: 21px;
+    top: -9px;
+    right: -11px;
+  }
+}
+
+.noUi-connect {
+  background-color: var(--primary);
+}
+
+.noUi-handle {
+  outline: 0;
+  border: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+
+  &:before, &:after {
+    content: none;
+  }
+}

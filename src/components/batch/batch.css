@@ -1,0 +1,119 @@
+.batch {
+  display: flex;
+  align-items: center;
+
+  .tagline__wrap .tag {
+    width: 72px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .tag__title {
+    text-transform: uppercase;
+  }
+}
+
+.batch__title {
+  margin-right: 29px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #404040;
+}
+
+.batch__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.25);
+  transition: var(--trsee);
+
+
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.batch__list-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+
+  &:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+}
+
+.batch__choose {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  cursor: pointer;
+
+  .icon {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    transform: rotate(180deg);
+
+    svg path{
+      transition: var(--trss);
+    }
+  }
+
+  &.is-active,
+  &:hover {
+
+    .batch__name {
+      background-color: rgba(97, 174, 59, .2);
+    }
+
+    .icon svg path {
+      stroke: var(--hover);
+    }
+  }
+
+  &.is-active .icon {
+    top: 9px;
+    right: 2px;
+    transform: rotate(0deg);
+  }
+}
+
+.batch__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 27px;
+  background-color: rgba(189, 210, 69, .2);
+  font-family: var(--opens);
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #8CA826;
+  border-radius: 3px;
+  transition: var(--trbg);
+}

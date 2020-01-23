@@ -13,7 +13,7 @@ block content
           .col-sm-6.emunit__top-right
             include ../../pages/common/emunit-parts-common
 
-            .emunit__top-right-table.row
+            .emunit__top-right-table.row.defin
               dl
                 dt.col-sm-6 Форма:
                 dd.col-sm-6 Квадратный
@@ -41,7 +41,11 @@ block content
                   .link__text Сохранить в PDF
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--print: include ../../images/print.svg
-                  .link__text Распечатать страницу
+                  .link__text Распечатать
+                .link.link--icon.js-stack-trigger
+                  .icon.icon--inline.icon--share: include ../../images/share.svg
+                  .link__text Поделиться
+                  .link__wrap: include ../../pages/common/signone-share-common
 
       .container.emunit__middle
         .emunit__tabs.js-tabs
@@ -49,14 +53,14 @@ block content
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Ассоритмент знаков для этой серии
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Обзор и описании серии
           .emunit__tabs-content
-            include ./pug/models-signone
+            include ./pug/models-signone-new
             include ./pug/review
 
     .emunit__bottom
       .container
-        .emunit__archive
+        .emunit__archive.accordion
           include ../../components/accordion-connect/accordion-connect
           +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
-            include ./pug/archive
+            include ./pug/archive-new
       .container
         include ../common/polygraphy

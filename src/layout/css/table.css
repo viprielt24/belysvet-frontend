@@ -1,0 +1,25 @@
+.text-editor .table {
+
+}
+
+.table-td-center {
+  text-align: center;
+}
+
+.table-td-gray {
+  background-color: #F5F5F5;
+}
+
+.table-td-bold {
+  font-weight: 700 !important;
+}
+
+.table-td-thead {
+  font-family: var(--museo) !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+.table-td-left {
+  text-align: left !important;
+}

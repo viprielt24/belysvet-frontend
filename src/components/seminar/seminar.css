@@ -126,41 +126,74 @@
   color: #A1BF35;
 }
 
+/**
+media
+ */
+.mobile {
+
+  .seminar {
+    padding: 16px;
+  }
+
+  .seminar__date {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .seminar__type {
+    font-size: 12px;
+  }
+
+  .seminar__middle {
+    margin: 6px 0 35px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .seminar__middle-wrap {
+
+    .button {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .seminar__title {
+    font-size: 18px;
+  }
+
+  .seminar__price,
+  .seminar__place {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .seminar__bottom {
+    display: block;
+    padding-top: 0;
+  }
+
+  .seminar__bottom-item {
+    margin-right: 0;
+
+    &:last-child {
+      margin-top: 29px;
+    }
+  }
+
+  .seminar__bottom-item:after {
+    content: none;
+  }
+
+  .seminar__program {
+    margin-top: 10px;
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

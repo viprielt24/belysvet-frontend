@@ -1,0 +1,40 @@
+.popup.popup--style.js-popup-assist
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="assist").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Запрос на подбор оборудования
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group: .row
+            .col-sm-4.form-element: label
+              .form-placeholder Как вас зовут?
+              input.form-control.js-form-validate__empty
+            .col-sm-4.form-element: label
+              .form-placeholder Email
+              input.form-control.js-form-validate__email
+            .col-sm-4.form-element: label
+              .form-placeholder Телефон
+              input.form-control.js-form-validate__phone
+          .form-group
+            .form-element: label
+              .form-placeholder Текст сообщения
+              textarea(rows="4").form-control.js-form-validate__empty
+              .error Текст ошибки
+          .form__bottom
+            .form-element
+              .input-file
+                .icon.icon--clip
+                include ../../../components/input-file/input-file
+              div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+            .form-group
+              .form-element
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                  .icon.icon--checkbox
+                  .label__text
+                    | Я соглашаюсь с условиями обработки<br>
+                    a(href='javascript:void(0);').label__link персональных данных
+                  .error
+            .button-wrap: button(type="submit").button Отправить заявку

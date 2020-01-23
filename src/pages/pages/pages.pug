@@ -27,10 +27,6 @@ block content
       color: #0f6cb6;
     }
 
-    .show-link span {
-      font-size: 14px;
-    }
-
     .tech {
       color: #333;
       z-index: 99999;
@@ -64,7 +60,7 @@ block content
             a.show-link(
             href=page.link || ('/' + key)
             target="_blank"
-            )= page.parameters.pageName
+            )!= page.parameters.pageName
             //- if item.design
             //- 	span= ' (design: ' + item.design + ')'
             //- if item.progress

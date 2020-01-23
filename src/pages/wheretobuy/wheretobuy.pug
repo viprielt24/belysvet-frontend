@@ -8,37 +8,29 @@ block content
         script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
         .wheretobuy__filter: .form.form--style
           .form-group: .row
-            .col-sm-4.form-element: label
-              .form-placeholder Страна
-              include ../common/wheretobuy-country-common
-            .col-sm-4.form-element: label
-              .form-placeholder Город
-              include ../common/wheretobuy-city-common
+            .col-sm-4.form-group-double
+              .form-element: label
+                .form-placeholder Страна
+                include ../common/wheretobuy-country-common
+              .form-element: label
+                include ../common/wheretobuy-city-common
+            .col-sm-4
+              .form-element: label
+                .form-placeholder Компании-дилеры
+                include ../common/wheretobuy-dealers-common
+              .form-element.form-element--wtb-chbox
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox')
+                  .icon.icon--checkbox
+                  .label__text Интернет-магазин
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox')
+                  .icon.icon--checkbox
+                  .label__text OEM-производители
             .col-sm-4.form-element
               .wheretobuy__toggle-map.js-wheretobuy__toggle-map
                 .wheretobuy__toggle-map-item: span Скрыть карту
                 .wheretobuy__toggle-map-item: span Показать карту
         .wheretobuy__map.js-wheretobuy__map
           .wheretobuy__map-self: #wheretobuyMap(data-map-marker="/images/map/marker2.svg")
-    .wheretobuy-partners
-      .container
-        .wheretobuy-partners__filter
-          .wheretobuy-partners__filter-title Показать:
-          .wheretobuy-partners__filter-wrap
-            label
-              input(type="radio" name="partnersFilter" data-filter="all" checked).js-wheretobuy-partners__filter-item
-              .wheretobuy-partners__filter-name Все
-            label
-              input(type="radio" name="partnersFilter" data-filter="store").js-wheretobuy-partners__filter-item
-              .wheretobuy-partners__filter-name Интернет-магазины
-        .wheretobuy-partners__title.js-wheretobuy-partners__title Москва и Московская область
-        .wheretobuy-partners__wrap.js-wheretobuy-partners__wrap
-          .wheretobuy-partners__item
-            .wheretobuy-partners__item-name Ассоциация «Русский Свет», Алматы
-            .wheretobuy-partners__item-address 050000, г.Алматы, Микрорайон 8, д. 55А, офис 8
-            .wheretobuy-partners__item-phone 8 (727) 249-60-83, 390-37-49
-            .wheretobuy-partners__item-email-wrap
-              a(href="mailto:almata@urs.russvet.ru").wheretobuy-partners__item-email almata@urs.russvet.ru
-            .wheretobuy-partners__item-site-wrap
-              a(href="http://russvet.ru" target=_blank).wheretobuy-partners__item-site russvet.ru
-
+    include ../../pages/common/wheretobuy-common

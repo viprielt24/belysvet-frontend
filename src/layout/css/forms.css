@@ -393,6 +393,10 @@ textarea.form-control {
     & ~ .icon--checkbox{
       background-color: var(--primary);
 
+      &:hover {
+        background-color: var(--hover);
+      }
+
       &:before {
         background-image: url(/images/checkbox2.svg);
       }

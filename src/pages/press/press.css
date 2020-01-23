@@ -6,6 +6,10 @@
   .tagline{
     margin-bottom: 20px;
   }
+
+  .tagline__clear {
+    margin-left: auto;
+  }
 }
 
 .press__tabs{
