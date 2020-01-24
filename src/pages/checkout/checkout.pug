@@ -1,0 +1,39 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .container.checkout: .row
+      .col-sm-8.checkout__left
+
+        .checkout__item
+          .title Контактная информация
+          .checkout__wrap
+            .checkout__header
+              .form-group
+                .form-element
+                  label.label.label--checkbox
+                    input.form-control.js-form-validate__checked(type='checkbox')
+                    .icon.icon--checkbox
+                    .label__text Юридическое лицо
+                .form-element
+                  label.label.label--checkbox
+                    input.form-control.js-form-validate__checked(type='checkbox')
+                    .icon.icon--checkbox
+                    .label__text Физическое лицо
+            .checkout__content
+              .checkout__temp-text Авторизуйтесь или укажите ваши контактные данные
+              .checkout__content-tabs
+                .checkout__content-tabs-item.is-active
+                  .checkout__content-title Авторизация
+                  .checkout__content-subtitle Для зарегистрированных пользователей сайта
+                .checkout__content-tabs-item
+                  .checkout__content-title Контактные данные
+                  .checkout__content-subtitle Для тех, у кого нет личного кабинета на сайте
+              .checkout__content-self
+                include ./pug/form-auth
+                include ./pug/form-auth-success
+        include ./pug/receive
+        include ./pug/payment
+      .col-sm-4.checkout__right: .row: include ./pug/checkout-right

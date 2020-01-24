@@ -23,6 +23,22 @@
   }
 }
 
+.link--simple {
+  display: inline-block;
+  color: var(--primary);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height:inherit;
+  text-decoration: none;
+  transition: var(--trc);
+
+  &.active,
+  &:hover {
+    color: var(--hover);
+  }
+}
+
 .link--back,
 .link--more {
   display: flex;

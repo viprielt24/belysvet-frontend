@@ -69,6 +69,7 @@
   margin-bottom: 18px;
 
   .form-control {
+    width: auto;
     height: 27px;
     margin-bottom: 6px;
   }

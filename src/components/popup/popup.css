@@ -16,12 +16,6 @@
   visibility: hidden;
   transition: var(--trsee);
 
-  .form-control {
-    background-color: #fff;
-    border: 1px solid #E8E8E8;
-    color: #000;
-  }
-
   .form-group--half {
 
     .form-element {

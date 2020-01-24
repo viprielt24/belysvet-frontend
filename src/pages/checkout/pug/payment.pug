@@ -1,0 +1,30 @@
+.checkout__item
+  .title Способы оплаты
+  .checkout__wrap.checkout__wrap--indent
+    .checkout__temp-text Заполните информацию в предыдущих блоках выше
+    .checkout__payment
+
+      .checkout__payment-item
+        .checkout__content-select-label Юридическое лицо
+        include ../../../pages/common/checkout-llc-common
+        .checkout__payment-wrap
+          label.label.label--checkbox
+            input.form-control.js-form-validate__checked(type='checkbox' checked)
+            .icon.icon--checkbox
+            .label__text Договор-счет
+          label.label.label--checkbox
+            input.form-control.js-form-validate__checked(type='checkbox')
+            .icon.icon--checkbox
+            .label__text Счет по договору поставки
+
+      .checkout__payment-item
+        label.label.label--checkbox
+          input.form-control.js-form-validate__checked(type='checkbox')
+          .icon.icon--checkbox
+          .label__text Оплата банковской картой
+
+      .checkout__payment-item
+        label.label.label--checkbox
+          input.form-control.js-form-validate__checked(type='checkbox')
+        noUiSlider  .icon.icon--checkbox
+          .label__text Купить в кредит

@@ -1,0 +1,24 @@
+.checkout__content-self-item
+  .checkout__form-auth: form(action='javascript:void(0);').js-form-validate
+    .form-group
+      .form-element: label
+        .form-placeholder Email
+        input.form-control.js-form-validate__empty
+        .error Текст ошибки
+    .form-group
+      .form-element: label
+        .form-placeholder.form-placeholder--space-between
+          | Пароль
+          a(href="javascript:void(0);").link.link--simple Забыли пароль?
+        input.form-control.js-form-validate__empty
+        .error Текст ошибки
+    .form-group
+      label.label.label--checkbox
+        input.form-control.js-form-validate__checked(type='checkbox')
+        .icon.icon--checkbox
+        .label__text Запомнить меня
+    .form-group.checkout__form-footer
+      button.button Войти
+      .checkout__form-footer-wrap
+        | У вас еще нет доступа?
+        a(href="javascript:void(0);").link.link--simple Зарегистрироваться

@@ -765,6 +765,36 @@ const pages = {
       ],
     }
   },
+  'checkout': {
+    parameters: {
+      page: 'checkout',
+      title: 'Оформление заказа',
+      pageName: 'Оформление заказа',
+      crumbs: ['Главная', 'Продукция', 'Корзина', 'Оформление заказа'],
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ]
+    }
+  }
 };
 // Страницы проекта
 pages.pages = {

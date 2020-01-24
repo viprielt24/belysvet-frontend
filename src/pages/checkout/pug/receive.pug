@@ -1,0 +1,30 @@
+.checkout__item
+  .title Способы получения заказа
+  .checkout__wrap.checkout__wrap--indent
+    .checkout__temp-text Заполните информацию в предыдущих блоках выше
+    .checkout__content-select
+      .checkout__content-select-label Город
+      include ../../../pages/common/checkout-city-common
+    .checkout__content-tabs
+      .checkout__content-tabs-item.is-active
+        .checkout__content-title Самовывоз
+        .checkout__content-subtitle Выбор службы доставки и пунктов самовывоза
+      .checkout__content-tabs-item
+        .checkout__content-title Доставка
+        .checkout__content-subtitle Выбор службы доставки и указание адреса
+    .checkout__content-self
+      .checkout__content-self-item
+        .checkout__receive.row
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/svet.png').pic__img
+              .checkout__receive-title Склад компании «Белый свет»
+              .checkout__receive-address г. Москва, ул. Маршала Федоренко, 3, стр. 1
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/cdek.png').pic__img
+              .checkout__receive-title Курьерская доставка СДЭК
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/dellin.png').pic__img
+              .checkout__receive-title Транспортно-логистическая компания «Деловые Линии»
