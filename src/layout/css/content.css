@@ -86,6 +86,52 @@
 /**
 
  */
+.content__bottom--checkout {
+  position: relative;
+}
+
+.content__support {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 433px;
+  background-color: #fff;
+  padding: 10px 17px;
+}
+
+.content__support-title {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: var(--border);
+  font-family: var(--museo);
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.content__support-bottom {
+  display: flex;
+  align-items: center;
+
+  .link {
+    font-family: var(--opens);
+    color: #A1BF35;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+  }
+}
+
+.content__support-descr {
+  margin-right: 6px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 26px;
+}
+/**
+
+ */
 .content__top.content__top--signone {
   padding: 25px 0 15px;
 }

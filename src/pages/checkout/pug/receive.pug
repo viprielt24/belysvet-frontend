@@ -1,19 +1,19 @@
 .checkout__item
   .title Способы получения заказа
-  .checkout__wrap.checkout__wrap--indent
+  .checkout__wrap.checkout__wrap--indent.js-tabs
     .checkout__temp-text Заполните информацию в предыдущих блоках выше
     .checkout__content-select
       .checkout__content-select-label Город
       include ../../../pages/common/checkout-city-common
     .checkout__content-tabs
-      .checkout__content-tabs-item.is-active
+      .checkout__content-tabs-item.js-tabs-header-item.active
         .checkout__content-title Самовывоз
         .checkout__content-subtitle Выбор службы доставки и пунктов самовывоза
-      .checkout__content-tabs-item
+      .checkout__content-tabs-item.js-tabs-header-item
         .checkout__content-title Доставка
         .checkout__content-subtitle Выбор службы доставки и указание адреса
     .checkout__content-self
-      .checkout__content-self-item
+      .js-tabs-content-item
         .checkout__receive.row
           .col-sm-6
             .checkout__receive-item
@@ -28,3 +28,39 @@
             .checkout__receive-item
               .pic: img(src='/images/dellin.png').pic__img
               .checkout__receive-title Транспортно-логистическая компания «Деловые Линии»
+      .js-tabs-content-item
+        .checkout__receive.row
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/svet.png').pic__img
+              .checkout__receive-title Склад компании «Белый свет»
+              .checkout__receive-address г. Москва, ул. Маршала Федоренко, 3, стр. 1
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/cdek.png').pic__img
+              .checkout__receive-title Курьерская доставка СДЭК
+          .col-sm-6
+            .checkout__receive-item
+              .pic: img(src='/images/dellin.png').pic__img
+              .checkout__receive-title Транспортно-логистическая компания «Деловые Линии»
+        .checkout__receive-form
+          .form-group.form-group--receive-top
+            .form-element: label
+              .form-placeholder Улица: *
+              input(placeholder='Введите название улицы').form-control
+          .form-group.form-group--receive-bottom
+            .form-element: label
+              .form-placeholder Дом: *
+              input.form-control
+            .form-element: label
+              .form-placeholder Корпус:
+              input.form-control
+            .form-element: label
+              .form-placeholder Строение:
+              input.form-control
+            .form-element: label
+              .form-placeholder Офис/Квартира: *
+              input.form-control
+            .form__bottom
+              button.button Выбрать
+

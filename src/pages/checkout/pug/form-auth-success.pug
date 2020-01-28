@@ -1,35 +1,56 @@
-.checkout__content-self-item
-  .checkout__form-header
-    .checkout__form-header-title Авторизация прошла успешно
-    .checkout__form-header-subtitle Для этого конкретного заказа вы можете изменить свои контактные данные.<br> Ваши регистрационные данные при этом не изменятся.
-  .checkout__form-auth-success: form(action='javascript:void(0);')
-    .form-group
-      .form-element: label
-        .form-placeholder Фамилия:
-        input(value='Иванов').form-control
-        .error Текст ошибки
-    .form-group
-      .form-element: label
-        .form-placeholder Имя:
-        input(value='Иван').form-control
-        .error Текст ошибки
-    .form-group
-      .form-element: label
-        .form-placeholder Ваш мобильный телефон:
-        input(value='+7 (900) 000-00-00').form-control
-        .error Текст ошибки
-    .form-group
-      .form-element: label
-        .form-placeholder E-mail:
-        input(value='test@test.test').form-control
-        .error Текст ошибки
-    .form-group
-      .form-element: label
-        .form-placeholder Название вашей компании:
-        input(value='ООО «ТЕХСВЕТ»').form-control
-        .error Текст ошибки
-    .form-group
-      .form-element: label
-        .form-placeholder Телефона или факс вашей компании:
-        input(value='+7 (495) 771-76-61').form-control
-        .error Текст ошибки
+.checkout__content-self-item.js-tabs-content-item
+  .checkout__form-auth-success-wrap
+    .checkout__form-header
+      .checkout__form-header-title Авторизация прошла успешно
+      .checkout__form-header-subtitle Для этого конкретного заказа вы можете изменить свои контактные данные.<br> Ваши регистрационные данные при этом не изменятся.
+    .checkout__form-auth-success: form(action='javascript:void(0);')
+      .form-group
+        .form-element: label
+          .form-placeholder Фамилия:
+          input(value='Иванов').form-control
+          .error Текст ошибки
+      .form-group
+        .form-element: label
+          .form-placeholder Имя:
+          input(value='Иван').form-control
+          .error Текст ошибки
+      .form-group
+        .form-element: label
+          .form-placeholder Ваш мобильный телефон:
+          input(value='+7 (900) 000-00-00').form-control
+          .error Текст ошибки
+      .form-group
+        .form-element: label
+          .form-placeholder E-mail:
+          input(value='test@test.test').form-control
+          .error Текст ошибки
+      .form-group
+        .form-element: label
+          .form-placeholder Название вашей компании:
+          input(value='ООО «ТЕХСВЕТ»').form-control
+          .error Текст ошибки
+      .form-group
+        .form-element: label
+          .form-placeholder Телефона или факс вашей компании:
+          input(value='+7 (495) 771-76-61').form-control
+          .error Текст ошибки
+      .form__bottom
+        .form-element
+          .input-file
+            .icon.icon--clip
+            - filePlaceholder = 'Прикрепить реквизиты компании';
+            include ../../../components/input-file/input-file
+          div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+      .form-group
+        .form-element: label
+          input(placeholder='Или вставьте сюда ссылку для скачивания ваших реквизитов из файлообменника').form-control
+          .error Текст ошибки
+      .form-group.form-group--agree
+        .form-element
+          label.label.label--checkbox
+            input.form-control.js-form-validate__checked(type='checkbox', checked='')
+            .icon.icon--checkbox
+            .label__text
+              | Я соглашаюсь с условиями обработки&nbsp;
+              a(href='javascript:void(0);').label__link персональных данных
+            .error

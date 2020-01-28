@@ -1,8 +1,9 @@
 - random = (Math.random() * 100).toFixed();
+- filePlaceholder = filePlaceholder ? filePlaceholder : 'Прикрепить файл';
 
 input(type='file' name='inputFile[]' data-multiple-caption='{count} files selected' accept="image/*,image/jpeg" class="form-inputfile js-inputfile" id='inputFile' + random)
 
 label(for='inputFile' + random class="form-inputfile-label")
-  span.form-inputfile-name.js-inputfile-name Прикрепить файл
+  span.form-inputfile-name.js-inputfile-name= filePlaceholder
 
 div(class="form-inputfile-clear js-inputfile-clear hint hint--white hint--right" aria-label="Открепить файл"): .icon.icon--close.icon--close-primary

@@ -119,11 +119,10 @@ const config = {
             options: {
               name (file) {
                 if (devMode) {
-                  return '[path][name].[ext]'
+                  return 'fonts/[name].[ext]'
                 }
                 return 'fonts/[name].[ext]'
               }
-              //name: 'fonts/[name].[ext]',
             },
           },
         ],

@@ -4,36 +4,61 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-    .container.checkout: .row
-      .col-sm-8.checkout__left
-
-        .checkout__item
-          .title Контактная информация
-          .checkout__wrap
-            .checkout__header
-              .form-group
-                .form-element
-                  label.label.label--checkbox
-                    input.form-control.js-form-validate__checked(type='checkbox')
-                    .icon.icon--checkbox
-                    .label__text Юридическое лицо
-                .form-element
-                  label.label.label--checkbox
-                    input.form-control.js-form-validate__checked(type='checkbox')
-                    .icon.icon--checkbox
-                    .label__text Физическое лицо
-            .checkout__content
-              .checkout__temp-text Авторизуйтесь или укажите ваши контактные данные
-              .checkout__content-tabs
-                .checkout__content-tabs-item.is-active
-                  .checkout__content-title Авторизация
-                  .checkout__content-subtitle Для зарегистрированных пользователей сайта
-                .checkout__content-tabs-item
-                  .checkout__content-title Контактные данные
-                  .checkout__content-subtitle Для тех, у кого нет личного кабинета на сайте
-              .checkout__content-self
-                include ./pug/form-auth
-                include ./pug/form-auth-success
-        include ./pug/receive
-        include ./pug/payment
-      .col-sm-4.checkout__right: .row: include ./pug/checkout-right
+    .container.checkout
+      form(action='javascript:void(0);'): .row
+        .col-sm-8.checkout__left
+          .checkout__item
+            .title Контактная информация
+            .checkout__wrap
+              .checkout__header
+                .form-group
+                  .form-element
+                    label.label.label--checkbox.label--aka-radio
+                      input(type='radio' name='saymyname' checked).form-control.js-form-validate__checked
+                      .icon.icon--checkbox
+                      .label__text Юридическое лицо
+                  .form-element
+                    label.label.label--checkbox.label--aka-radio
+                      input(type='radio' name='saymyname').form-control.js-form-validate__checked
+                      .icon.icon--checkbox
+                      .label__text Физическое лицо
+              .checkout__content.js-tabs
+                .checkout__temp-text Авторизуйтесь или укажите ваши контактные данные
+                .checkout__content-tabs
+                  .checkout__content-tabs-item.js-tabs-header-item.active
+                    .checkout__content-title Авторизация
+                    .checkout__content-subtitle Для зарегистрированных пользователей сайта
+                  .checkout__content-tabs-item.js-tabs-header-item
+                    .checkout__content-title Контактные данные
+                    .checkout__content-subtitle Для тех, у кого нет личного кабинета на сайте
+                .checkout__content-self
+                  include ./pug/form-auth
+                  include ./pug/form-auth-success
+          include ./pug/receive
+          include ./pug/payment
+        .col-sm-4.checkout__right: .row: include ./pug/checkout-right
+    .container.checkout-quick
+      .checkout__item
+        .title Авторизуйтесь или укажите ваши контактные данные
+        .checkout__wrap
+          .checkout__content.js-tabs
+            .checkout__content-tabs
+              .checkout__content-tabs-item.js-tabs-header-item.active
+                .checkout__content-title Авторизация
+                .checkout__content-subtitle Для зарегистрированных пользователей сайта
+              .checkout__content-tabs-item.js-tabs-header-item
+                .checkout__content-title Контактные данные
+                .checkout__content-subtitle Для тех, у кого нет личного кабинета на сайте
+            .checkout__content-self
+              include ./pug/form-auth
+              include ./pug/checkout-quick-form
+    .container.checkout-done
+      .checkout__wrap
+        .title Спасибо!
+        .descr Ваш заказ отправлен выбранным дилерам.
+        button.button на главную
+    .container.checkout-descr
+      p Сайт не является интернет-магазином, мы лишь предоставляем информацию о наличии товара на наших складах и складах наших дилеров и дистрибьюторов.  Пару фраз про то и сёспо этой теме...
+      p Цена, указанная на сайте, является "базовой"  идалее развить тему и пояснить...
+      p Что-то про сроки поставки и другие параметры и обязательства...
+      p И в заключении пару-тройку слов про ответственность, про то за что вы не несете ответственности и т.п.

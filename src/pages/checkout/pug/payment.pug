@@ -16,6 +16,15 @@
             input.form-control.js-form-validate__checked(type='checkbox')
             .icon.icon--checkbox
             .label__text Счет по договору поставки
+        .checkout__payment-wrap.row
+            .col-sm-6.form-element: label
+              .form-placeholder Номер договора
+              input(placeholder='Укажите номер договора').form-control
+              .error Текст ошибки
+            .col-sm-6.form-element: label
+              .form-placeholder Дата договора
+              input(placeholder='Укажите дату договора').form-control
+              .error Текст ошибки
 
       .checkout__payment-item
         label.label.label--checkbox

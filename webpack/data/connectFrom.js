@@ -1,47 +1,72 @@
 module.exports = [
   {
-    title: '00:00',
-    value: '00:00',
+    title: '10:00',
+    value: '600',
+    selected: false
+  },
+  {
+    title: '10:30',
+    value: '630',
+    selected: false
+  },
+  {
+    title: '11:00',
+    value: '660',
+    selected: false
+  },
+  {
+    title: '11:30',
+    value: '690',
     selected: true
   },
   {
-    title: '00:15',
-    value: '00:15',
+    title: '12:00',
+    value: '720',
     selected: false
   },
   {
-    title: '00:30',
-    value: '00:30',
+    title: '12:30',
+    value: '750',
     selected: false
   },
   {
-    title: '00:45',
-    value: '00:45',
+    title: '13:00',
+    value: '780',
     selected: false
   },
   {
-    title: '01:00',
-    value: '01:00',
+    title: '13:30',
+    value: '810',
     selected: false
   },
   {
-    title: '01:15',
-    value: '01:15',
+    title: '14:00',
+    value: '840',
     selected: false
   },
   {
-    title: '01:30',
-    value: '01:30',
+    title: '14:30',
+    value: '870',
     selected: false
   },
   {
-    title: '01:45',
-    value: '01:45',
+    title: '15:00',
+    value: '900',
     selected: false
   },
   {
-    title: '02:00',
-    value: '02:00',
+    title: '15:30',
+    value: '930',
     selected: false
   },
+  {
+    title: '16:00',
+    value: '960',
+    selected: false
+  },
+  {
+    title: '16:30',
+    value: '990',
+    selected: false
+  }
 ];

@@ -53,12 +53,25 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
-  if (document.querySelector('.js-connect')) {
+  /*if (document.querySelector('.js-connect')) {
     import('../pages/connect/js/connect-choices').then(module => {
       new module.default();
     });
-  }
+  }*/
   if (document.querySelector('.js-connect__callback-range')) {
+
+    /*window.inputPlaceholderInit = import('../layout/js/inputPlaceholder');
+    inputPlaceholderInit.then(module => new module.default());*/
+
+    /*import('./header/js/header-cart')
+    .then(module => {
+      window.HeaderCard = module.default;
+      new HeaderCard();
+    });*/
+
+    /*window.connectInputRange = import('../pages/connect/js/connect-input-range');
+    window.connectInputRange.then(module => new module.default());*/
+
     import('../pages/connect/js/connect-input-range').then(module => {
       new module.default();
     });

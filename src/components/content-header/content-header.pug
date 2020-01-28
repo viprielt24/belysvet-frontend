@@ -44,12 +44,21 @@ include ../crumbs/crumbs
   else if page === 'signone'
     //-.content__top.content__top--signone: include ../../pages/common/tagline
     .content__top.content__top--signone: include ../../pages/common/batch-common
-    .content__bottom
+    .content__bottomv
       h1.title!= pageName
 
   else if page === 'aruna'
     .content__top.content__top--signone: include ../../pages/common/batch-common
     .content__bottom
+      h1.title!= pageName
+
+  else if page === 'checkout'
+    .content__bottom.content__bottom--checkout
+      .content__support
+        .content__support-title Есть вопрос?
+        .content__support-bottom
+         .content__support-descr Позвоните в службу поддержки
+         a(href="javascript:void(0);").link +7 (495) 785-17-67
       h1.title!= pageName
 
   else if page === 'solution'

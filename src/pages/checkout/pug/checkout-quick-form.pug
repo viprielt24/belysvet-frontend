@@ -1,0 +1,70 @@
+.checkout__content-self-item.js-tabs-content-item
+  .checkout__form-auth-success-wrap
+    .checkout__form-header
+      .checkout__form-header-title Авторизация прошла успешно
+      .checkout__form-header-subtitle При необходимости, для этого заказа вы можете изменить свои контактные данные.<br> Ваши регистрационные данные при этом не изменятся.
+    .checkout__form-auth-success.checkout__form-auth-success--quick: form(action='javascript:void(0);')
+      .row
+        .col-sm-6
+          .form-group
+            .form-element: label
+              .form-placeholder Фамилия: *
+              input(placeholder='Иванов').form-control
+              .error Текст ошибки
+          .form-group
+            .form-element: label
+              .form-placeholder Ваш мобильный телефон: *
+              input(placeholder='+7 (900) 000-00-00').form-control
+              .error Текст ошибки
+          .form-group
+            .form-element: label
+              .form-placeholder Название вашей компании: *
+              input(placeholder='ООО «ТЕХСВЕТ»').form-control
+              .error Текст ошибки
+        .col-sm-6
+          .form-group
+            .form-element: label
+              .form-placeholder Имя: *
+              input(placeholder='Иван').form-control
+              .error Текст ошибки
+          .form-group
+            .form-element: label
+              .form-placeholder E-mail: *
+              input(placeholder='test@test.test').form-control
+              .error Текст ошибки
+          .form-group
+            .form-element: label
+              .form-placeholder Телефона или факс вашей компании: *
+              input(placeholder='+7 (495) 771-76-61').form-control
+              .error Текст ошибки
+
+        .form__bottom
+          .col-sm-5
+            .form-element
+              .input-file
+                .icon.icon--clip
+                - filePlaceholder = 'Прикрепить реквизиты компании';
+                include ../../../components/input-file/input-file
+              div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+          .col-sm-7
+            .form-group
+              .form-element: label
+                input(placeholder='Или вставьте сюда ссылку для скачивания из файлообменника').form-control
+                .error Текст ошибки
+
+        .form__footer
+          .col-sm-6
+            a(href="javascript:void(0);").link.link--back
+              .link__icon: include ../../../images/arrow-right-small.svg
+              .link__text Назад
+          .col-sm-6
+            .form-group.form-group--agree
+              .form-element
+                label.label.label--checkbox
+                  input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                  .icon.icon--checkbox
+                  .label__text
+                    | Я соглашаюсь с условиями обработки&nbsp;
+                    a(href='javascript:void(0);').label__link персональных данных
+                  .error
+            button.button отправить заказ дилерам

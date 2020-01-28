@@ -74,7 +74,7 @@
   }
 
   &::-webkit-input-placeholder {
-    color: #9c9c9c;
+    color: #C2C2C2;
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
@@ -82,7 +82,7 @@
   }
 
   &::-moz-placeholder {
-    color: #9c9c9c;
+    color: #C2C2C2;
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
@@ -90,7 +90,7 @@
   }
 
   &:-moz-placeholder {
-    color: #9c9c9c;
+    color: #C2C2C2;
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
@@ -98,7 +98,7 @@
   }
 
   &:-ms-input-placeholder {
-    color: #9c9c9c;
+    color: #C2C2C2;
     font-family: var(--opens);
     font-size: 13px;
     font-weight: 300;
@@ -269,7 +269,7 @@ textarea.form-control {
   line-height: 1;
   user-select: none;
   
-  input[type="radio"] {
+  input {
     position: absolute;
     top: 0;
     left: 0;
@@ -334,7 +334,7 @@ textarea.form-control {
   line-height: 1;
   user-select: none;
 
-  & input[type="checkbox"] {
+  & input {
     position: absolute;
     top: 0;
     left: 0;
@@ -351,7 +351,6 @@ textarea.form-control {
     min-width: 16px;
     min-height: 16px;
     background-color: transparent;
-    margin-top: 2px;
     border: 1px solid var(--primary);
     border-radius: 2px;
     transition: var(--trbg), var(--trb);
@@ -394,6 +393,7 @@ textarea.form-control {
     }
   }
 
+  &.label--aka-radio input[type="radio"]:checked,
   & input[type="checkbox"]:checked {
 
     & ~ .icon--checkbox{
