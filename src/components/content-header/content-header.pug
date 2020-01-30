@@ -61,6 +61,24 @@ include ../crumbs/crumbs
          a(href="javascript:void(0);").link +7 (495) 785-17-67
       h1.title!= pageName
 
+  else if page === 'card'
+    .content__bottom.content__bottom--checkout
+      .content__support
+        .content__support-title Есть вопрос?
+        .content__support-bottom
+         .content__support-descr Позвоните в службу поддержки
+         a(href="javascript:void(0);").link +7 (495) 785-17-67
+      h1.title!= pageName
+
+  else if page === 'card-empty'
+    .content__bottom.content__bottom--checkout
+      .content__support
+        .content__support-title Есть вопрос?
+        .content__support-bottom
+         .content__support-descr Позвоните в службу поддержки
+         a(href="javascript:void(0);").link +7 (495) 785-17-67
+      h1.title!= pageName
+
   else if page === 'solution'
     .content__top.content__top--signone: include ../../pages/common/tagline
     .content__top-links

@@ -1,0 +1,51 @@
+@import "../../layout/variables.css";
+
+.content__header .title {
+  margin-bottom: 26px;
+}
+
+.card-empty {
+  background-color: #F5F5F5;
+  padding-bottom: 40px;
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 48px;
+    margin-top: 34px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.card-empty__wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 340px;
+  background-color: #fff;
+  margin-bottom: 64px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -32px;
+    height: 1px;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+}
+
+.card-empty__title {
+  font-family: var(--museo);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}

@@ -427,6 +427,12 @@
   background-image: url(/images/chart.svg);
 }
 
+.icon--sort {
+  width: 12px;
+  height: 21px;
+  background-image: url(/images/sort.svg);
+}
+
 /**
 media
  */

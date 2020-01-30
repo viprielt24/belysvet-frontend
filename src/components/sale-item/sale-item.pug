@@ -1,5 +1,6 @@
 mixin sale-item(item, odd)
   a(href= item.link.href class= item.img ? 'catalog__item' : 'catalog__item catalog__item--no-media')
+    .catalog__item-sign-sale Акция завершена
     .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')
     if (odd <= 1)
       .catalog__item-wrap

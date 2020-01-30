@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+    .content__text-editor.card
+      .container
+        include ./pug/card-table
+        .card-footer
+          .card-footer__descr
+            .card-footer__title Итого ваш заказ
+            .card-footer__subtitle Заказы, стоимостью свыше 5 000 рублей доставляются бесплатно
+          .card-footer__wrap
+            .card-footer__item 2 345 позиций
+            .card-footer__item 11 021 500,00 рублей
+        .card-buttons
+          .card-buttons__clear
+            a(href="javascript:void(0);").link.link--icon
+              .icon.icon--close.icon--close-primary.icon--close-medium
+              .link__text Очистить корзину
+          .card-buttons__wrap
+            .card-buttons__box
+              button.button оформить заказ
+              button.button.button--empty купить в кредит
+            button.button.button--empty отправить заказ дистрибьютору
+            .card-buttons__text (На следующем шаге вы сможете выбрать до трех дилеров, кому будет переправлен ваш заказ)
+    .card-descr
+      .container
+        p Сайт не является интернет-магазином, мы лишь предоставляем информацию о наличии товара на наших складах и складах наших дилеров и дистрибьюторов.  Пару фраз про то и сёспо этой теме...
+        p Цена, указанная на сайте, является "базовой"  идалее развить тему и пояснить...
+        p Что-то про сроки поставки и другие параметры и обязательства...
+        p И в заключении пару-тройку слов про ответственность, про то за что вы не несете ответственности и т.п.

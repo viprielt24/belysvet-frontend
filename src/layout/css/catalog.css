@@ -31,6 +31,26 @@
       border-bottom: 1px solid var(--hover);
       color: var(--hover);
     }
+
+    &.link--simple {
+      display: inline-block;
+      color: var(--primary);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      line-height:inherit;
+      text-decoration: none;
+      transition: var(--trc);
+
+      &.active,
+      &:hover {
+        color: var(--hover);
+      }
+    }
+  }
+
+  .catalog__item-sign-sale {
+    display: none;
   }
 }
 
@@ -153,6 +173,36 @@ mobile
 
     .catalog__col{
       width: 100%;
+    }
+  }
+}
+/**
+
+ */
+.sale{
+
+  .catalog__content--end-sale {
+
+    .catalog__item {
+      pointer-events: none;
+    }
+
+    .catalog__item-sign-sale {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #DE3831;
+      font-family: var(--museo);
+      background-color: rgba(255,255,255, .9);
     }
   }
 }

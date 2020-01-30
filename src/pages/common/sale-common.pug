@@ -7,4 +7,12 @@ include ../../components/sale-item/sale-item
         if index <= 5
           .catalog__col
             +sale-item(item, index)
-  .catalog__footer: a(href= more.href).button.button--press= more.title
+  .catalog__content.catalog__content--end-sale
+    .catalog__wrap
+      each item, index in sale
+        if index <= 5
+          .catalog__col
+            +sale-item(item, index)
+  .catalog__footer
+    a(href="javascript:void(0);").link.link--simple Скрыть прошедшие акции
+    a(href= more.href).button.button--press= more.title

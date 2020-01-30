@@ -1,3 +1,5 @@
+@import "../../layout/variables.css";
+
 .content__header .descr {
   margin-bottom: 40px;
   padding-bottom: 19px;
@@ -13,4 +15,36 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #333333;
+}
+
+.sale {
+
+  .catalog__footer {
+    position: relative;
+    margin-top: 50px;
+
+    .button--press {
+      height: 50px;
+    }
+
+    .link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 12px;
+      font-family: var(--museo);
+      border-bottom: 0;
+      text-transform: none;
+      background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+      background-position: left -1px bottom 0;
+      background-size: 10px 1px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  .catalog__content--end-sale {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: var(--border);
+  }
 }

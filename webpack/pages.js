@@ -794,6 +794,25 @@ const pages = {
         }
       ]
     }
+  },
+  'card': {
+    parameters: {
+      page: 'card',
+      title: 'Корзина',
+      pageName: 'Корзина',
+      crumbs: ['Главная', 'Продукция', 'Корзина'],
+    }
+  },
+  'card-empty': {
+    parameters: {
+      page: 'card-empty',
+      title: 'Ваша корзина пуста',
+      pageName: 'Ваша корзина пуста',
+      crumbs: ['Главная', 'Продукция', 'Ваша корзина пуста'],
+      lights: data.lights,
+      files: data.productsFiles,
+      promo: data.promo,
+    }
   }
 };
 // Страницы проекта
