@@ -21,13 +21,109 @@
               .checkout__receive-title Склад компании «Белый свет»
               .checkout__receive-address г. Москва, ул. Маршала Федоренко, 3, стр. 1
           .col-sm-6
-            .checkout__receive-item
+            .checkout__receive-item.is-active
               .pic: img(src='/images/cdek.png').pic__img
               .checkout__receive-title Курьерская доставка СДЭК
           .col-sm-6
             .checkout__receive-item
               .pic: img(src='/images/dellin.png').pic__img
               .checkout__receive-title Транспортно-логистическая компания «Деловые Линии»
+
+        .checkout__receive-map.js-checkout__receive-map
+          #sdek-map(data-map-marker="/images/map/marker.svg" data-map-marker-active="/images/map/marker2.svg")
+          .checkout__receive-map-list.js-checkout__receive-map-list
+            .swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  ul.list
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.812008' data-longitude='37.493551')
+                        .icon.icon--checkbox
+                        .label__text 125080, г. Москва, ул. Факультетский переулок, 12
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811816' data-longitude='37.491826')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Факультетский переулок, 7
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811346' data-longitude='37.492626')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Константина Царёва, 6
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.812064' data-longitude='37.490389')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Светлый проезд, 2А
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 6
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Барклая 7/1
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 2
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 4
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 6
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Барклая 7/1
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 2
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 4
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 6
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Барклая 7/1
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 2
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 4
+                    li.list__item
+                      label.label.label--checkbox.label--aka-radio
+                        input.form-control.js-checkout__receive-item(type='radio' name='receive' data-latitude='55.811700' data-longitude='37.493751')
+                        .icon.icon--checkbox
+                        .label__text 123456, г. Москва, ул. Бибиревская, 10, стр 6
+
+              .swiper-scrollbar
+
       .js-tabs-content-item
         .checkout__receive.row
           .col-sm-6

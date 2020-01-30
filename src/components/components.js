@@ -172,4 +172,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-checkout__receive-map')) {
+    import('../pages/checkout/checkout').then(module => {
+      new module.default();
+    });
+  }
 });
