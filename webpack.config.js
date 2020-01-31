@@ -60,7 +60,7 @@ const config = {
     new CopyWebpackPlugin([
       {from: PATH.src + '/layout/js/browserVer.js', to: PATH.build + '/js'}
     ]),
-    devMode ? new HardSourceWebpackPlugin() : ''
+    devMode ? new HardSourceWebpackPlugin() : null
   ],
   module: {
     rules: [
@@ -119,7 +119,7 @@ const config = {
             options: {
               name (file) {
                 if (devMode) {
-                  return '[path][name].[ext]'
+                  return 'fonts/[name].[ext]'
                 }
                 return 'fonts/[name].[ext]'
               }

@@ -9,6 +9,7 @@
 @import "./catalogs/catalog-company.css";
 @import "./catalogs/catalog-training.css";
 @import "./catalogs/catalog-aruna.css";
+@import "./catalogs/catalog-compare.css";
 
 .catalog {
 
@@ -45,6 +46,27 @@
       &.active,
       &:hover {
         color: var(--hover);
+      }
+    }
+
+    &.link--more-action {
+      padding-bottom: 5px;
+      background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+      background-position: left -1px bottom 0;
+      background-size: 10px 1px;
+      background-repeat: repeat-x;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      color: var(--primary);
+      font-family: var(--museo);
+      text-decoration: none;
+      transition: var(--trc);
+
+      &:hover {
+        color: var(--hover);
+        text-decoration: none;
       }
     }
   }

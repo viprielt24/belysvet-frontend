@@ -1,5 +1,13 @@
 @import "../../layout/variables.css";
 
+.content__header .title {
+  margin-bottom: 10px;
+}
+
+.content__top.content__top--signone {
+  padding-bottom: 0;
+}
+
 .content__header .descr{
   margin-bottom: 21px;
 }
@@ -15,10 +23,10 @@
   }
 }
 
-.catalog--favourite {
-  margin-bottom: 31px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+.catalog--compare {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 
   .catalog__wrap {
     display: flex;
@@ -78,6 +86,18 @@
 
   .link {
     display: none;
+
+    &.link--more-action {
+      display: block;
+      text-transform: none;
+      font-weight: 500;
+      border-bottom: 0;
+      margin-bottom: 7px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .title {
@@ -114,8 +134,8 @@
     margin-top: 10px;
     font-family: var(--opens);
     color: #404040;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 13px;
     line-height: 21px;
     text-align: left;
   }
@@ -167,6 +187,72 @@
     .icon--close{
       width: 14px;
       height: 14px;
+    }
+  }
+
+  .catalog__item-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .catalog__item-links-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+
+    .link {
+      margin-bottom: 0;
+    }
+
+    .price {
+      margin-left: 18px;
+    }
+
+    .price__value {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: var(--museo);
+    }
+  }
+
+  .catalog__item-count {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 9px;
+    border-top: var(--border);
+
+    .props {
+      font-family: var(--opens);
+    }
+
+    .props__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .props__value {
+      display: block;
+    }
+  }
+
+  .catalog__item-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 18px;
+
+    .button {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -244,7 +330,7 @@
 
 .compare__maincel{
   position: relative;
-  width: 380px;
+  width: 315px;
   flex-shrink: 0;
   /*padding: 23px 13px;*/
   border-top: 1px solid rgba(196,196,196,.5);
