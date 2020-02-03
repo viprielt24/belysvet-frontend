@@ -22,7 +22,7 @@ module.exports = [
   },
   {
     title: 'Медицинские учреждения',
-    img: '/images/catalog/catalog-segment-pic4.jpg',
+    img: '/images/catalog/catalog-segment-pic2.jpg',
     link: {
       href:'javascript:void(0);',
     },

@@ -121,6 +121,7 @@
     letter-spacing: 0.08em;
   }
 }
+
 /**
 
  */
@@ -225,7 +226,7 @@
     }
   }
 
-  .form-placeholder--space-between .link{
+  .form-placeholder--space-between .link {
     font-family: var(--museo);
   }
 }
@@ -242,12 +243,12 @@
     margin-bottom: 12px;
   }
 
-  .form-group--agree .label--checkbox .label__text{
+  .form-group--agree .label--checkbox .label__text {
     font-size: 13px;
     color: #404040;
   }
 
-  .form-group--agree .label--checkbox .label__link{
+  .form-group--agree .label--checkbox .label__link {
     font-size: inherit;
   }
 }
@@ -321,6 +322,7 @@
   font-size: 16px;
   line-height: 26px;
 }
+
 /**
 
  */
@@ -376,6 +378,7 @@
   font-size: 16px;
   line-height: 26px;
 }
+
 /**
 
  */
@@ -429,6 +432,7 @@
     }
   }
 }
+
 /**
 
  */
@@ -472,6 +476,7 @@
     margin-left: auto;
   }
 }
+
 /**
 
  */
@@ -524,6 +529,7 @@
   padding-left: 178px;
   padding-right: 178px;
 }
+
 /**
 
  */
@@ -566,6 +572,7 @@
     letter-spacing: 0.08em;
   }
 }
+
 /**
 
  */
@@ -576,6 +583,7 @@
   font-size: 16px;
   line-height: 26px;
 }
+
 /**
 
  */
@@ -627,7 +635,7 @@
 }
 
 
-.balloon{
+.balloon {
   position: relative;
   top: 0;
   left: 0;
@@ -638,7 +646,7 @@
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     left: -10px;
@@ -651,7 +659,7 @@
   }
 }
 
-.balloon-title{
+.balloon-title {
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -661,7 +669,7 @@
   color: #404040;
 }
 
-.balloon-content-address{
+.balloon-content-address {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -670,7 +678,7 @@
   color: #404040;
 }
 
-.balloon-content-phone{
+.balloon-content-phone {
   margin-bottom: 9px;
   padding-left: 26px;
   font-style: normal;
@@ -684,7 +692,7 @@
   background-position: 0 50%;
 }
 
-.balloon-content-email{
+.balloon-content-email {
   padding-left: 26px;
   font-style: normal;
   font-weight: normal;

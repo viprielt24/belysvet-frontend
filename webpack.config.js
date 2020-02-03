@@ -5,8 +5,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // https://github.com/mzgoddard/hard-source-webpack-plugin
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+// https://github.com/NMFR/optimize-css-assets-webpack-plugin
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// https://github.com/webpack-contrib/terser-webpack-plugin
+const TerserPlugin = require('terser-webpack-plugin');
+// https://github.com/Klathmon/imagemin-webpack-plugin
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+// devMode
 const devMode = process.env.NODE_ENV !== 'production';
+
 const PATH = {
   build: path.join(__dirname, 'build'),
   src: path.join(__dirname, 'src')
@@ -21,27 +29,70 @@ const pagesHTML = [];
 for (let pageName in pages) {
   entry[pageName] = PATH.src + `/pages/${pageName}/${pageName}.js`;
 }
+/**
+ * плагины
+ */
+const devPlugins = !devMode ? [
+  new OptimizeCssAssetsPlugin(),
+  new TerserPlugin({
+    cache: true,
+    parallel: true
+  }),
+  new ImageminPlugin({
+    pngquant: {
+      quality: '80'
+    }
+  })
+  // дев мод
+] : [
+  new HardSourceWebpackPlugin({
+    info: {
+      // 'none' or 'test'.
+      mode: 'none',
+      // 'debug', 'log', 'info', 'warn', or 'error'.
+      level: 'info',
+    },
+  })
 
-const devPlugins = !devMode ? [] : [
-  new HardSourceWebpackPlugin()
 ];
-
-
+/**
+ * правила
+ */
+const devRules = !devMode ? [
+  {
+    test: /\.css$/,
+    use: [
+      MiniCssExtractPlugin.loader,
+      'css-loader', 'postcss-loader'
+    ],
+  },
+  // дев мод
+] : [
+  {
+    test: /\.css$/,
+    use: [
+      MiniCssExtractPlugin.loader,
+      'css-loader?sourceMap', 'postcss-loader?sourceMap'
+    ],
+  },
+];
+/**
+ * конфиг
+ */
 const config = {
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: process.env.NODE_ENV,
+  devtool: devMode ? 'inline-source-map' : false,
   entry,
   output: {
     path: PATH.build,
     filename: 'js/[name].js',
-    chunkFilename: 'js/[name].js',
-    publicPath: '/'
+    chunkFilename: devMode ? 'js/[name].[chunkhash].js' : 'js/[name].js',
   },
   plugins: [
     new CleanWebpackPlugin('build'),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      chunkFilename: "css/[id].[chunkhash].css",
+      chunkFilename: 'css/[id].css',
     }),
     new CopyWebpackPlugin([
       {
@@ -80,13 +131,6 @@ const config = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [
-          devMode ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader?sourceMap', 'postcss-loader?sourceMap'
-        ],
-      },
-      {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)(?!\/draw-module)/,
         use: {
@@ -116,21 +160,22 @@ const config = {
         }
       },
       {
-        test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(ttf|eot|woff|woff2)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name (file) {
                 if (devMode) {
-                  return 'fonts/[name].[ext]'
+                  return '[path][name].[ext]'
                 }
                 return 'fonts/[name].[ext]'
-              }
+              },
             },
           },
         ],
-      }
+      },
+      ...devRules
     ]
   }
 };
