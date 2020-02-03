@@ -56,8 +56,6 @@ for (let pageName in pages) {
     const cookie = req.headers.cookie;
     const ua = uaParser(req.headers['user-agent']);
 
-    console.log(ua.device.type);
-
     if (/mobile=true|tablet=true|desktop=true/.test(cookie)) {
       var isMobile = /mobile=true/.test(cookie);
       var isTablet = /tablet=true/.test(cookie);
