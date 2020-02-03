@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node server/server",
+    "dev": "cross-env NODE_ENV=development node server/server",
     "debug": "node --inspect server/server",
     "webpack": "webpack",
-    "build": "node server/generateStaticFiles",
+    "build": "cross-env NODE_ENV=production node server/generateStaticFiles",
     "create": "node create",
     "start": "pm2 start server/server.js",
     "restart": "pm2 restart server/server.js",
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "choices.js": "^6.0.3",
+    "cross-env": "^7.0.0",
     "draw-module": "^1.1.1",
     "es6-promise": "^4.2.6",
     "express": "^4.16.2",

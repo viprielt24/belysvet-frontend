@@ -22,6 +22,10 @@ for (let pageName in pages) {
   entry[pageName] = PATH.src + `/pages/${pageName}/${pageName}.js`;
 }
 
+const devPlugins = !devMode ? [] : [
+  new HardSourceWebpackPlugin()
+];
+
 
 const config = {
   mode: 'development',
@@ -60,7 +64,7 @@ const config = {
     new CopyWebpackPlugin([
       {from: PATH.src + '/layout/js/browserVer.js', to: PATH.build + '/js'}
     ]),
-    devMode ? new HardSourceWebpackPlugin() : null
+    ...devPlugins
   ],
   module: {
     rules: [
