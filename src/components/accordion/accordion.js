@@ -54,47 +54,44 @@ export default class {
           //аккордеон в аккордеоне закрываем
           item.classList.remove('active');
           if (item.classList.contains('accordion__item--parent')) {
-            itemContent.style.height = itemContent.clientHeight + 'px';
+            const itemContentWrapH = itemContent.querySelector('.accordion__content-wrap').clientHeight;
+            const itemContentFilesH = itemContent.querySelector('.files') !== null ? itemContent.querySelector('.files').clientHeight : 0;
+            const itemContentParentWrapH = itemContent.querySelector('.js-accordion__inner-wrap').clientHeight;
+            itemContent.style.height = itemContentWrapH + itemContentFilesH + itemContentParentWrapH + itemChildCloseHeight + 'px';
             setTimeout(() => {
               itemContent.style.height = 0;
               this.accordInnerReset(item);
             }, 50);
           } else {
-            itemContent.style.height = 0;
+            const itemContentWrapH = itemContent.querySelector('.accordion__content-wrap').clientHeight;
+            itemContent.style.height = itemContentWrapH + itemChildCloseHeight + 'px';
+            setTimeout(()=>{
+              itemContent.style.height = 0;
+            },100)
           }
         } else {
           //аккордеон в аккордеоне открываем
           if (item.classList.contains('accordion__item--parent')) {
-            item.classList.add('active');
-            //высота контента до внутреннего аккордеона
-            const itemChildContentHeight = item.querySelector('.js-accordion__content-wrap').clientHeight;
-
-            //считаем высоту заголовков и отступ внутреннего аккордеона
-            const itemChildsHeaders = item.querySelectorAll('.js-accordion__inner-header');
-            let itemChildsHeadersHeight = null;
-            itemChildsHeaders.forEach(child => {
-              itemChildsHeadersHeight = itemChildsHeadersHeight + child.clientHeight;
-            });
-            const itemChildsWrapPadding = parseFloat(getComputedStyle(document.querySelector('.js-accordion__inner-wrap')).paddingTop);
-
-
-
-            //сумма высоты всех блоков
-            let summaryInnerHeight = itemChildContentHeight + itemChildsHeadersHeight + itemChildsWrapPadding + itemChildCloseHeight;
-
-            //открываем родительский контент и убираем посчитанную высоту
-            itemContent.style.height = summaryInnerHeight + 'px';
-
+            item.classList.add('passive');
+            const itemContentWrapH = itemContent.querySelector('.accordion__content-wrap').clientHeight;
+            const itemContentFilesH = itemContent.querySelector('.files') !== null ? itemContent.querySelector('.files').clientHeight : 0;
+            const itemContentParentWrapH = itemContent.querySelector('.js-accordion__inner-wrap').clientHeight;
+            itemContent.style.height = itemContentWrapH + itemContentFilesH + itemContentParentWrapH + itemChildCloseHeight + 'px';
             setTimeout(() => {
+              item.classList.remove('passive');
+              item.classList.add('active');
               itemContent.style.height = 'auto';
-            }, 300);
+            }, 600);
           } else {
             //главный аккордеон открываем
-            item.classList.add('active');
-            itemContent.style.height = itemContentHeight + itemChildCloseHeight + 'px';
+            item.classList.add('passive');
+            const itemContentWrapH = itemContent.querySelector('.accordion__content-wrap').clientHeight;
+            itemContent.style.height = itemContentWrapH + itemChildCloseHeight + 'px';
             setTimeout(()=>{
-              // itemContent.style.height = 'auto'
-            },500)
+              item.classList.remove('passive');
+              item.classList.add('active');
+              itemContent.style.height = 'auto'
+            },600)
           }
         }
       });
@@ -107,6 +104,10 @@ export default class {
 
         const closeParent = close.closest('.js-accordion__item');
         const closeParentContent = closeParent.querySelector('.js-accordion__content');
+        const closeParentWrapH = closeParent.querySelector('.accordion__content-wrap').clientHeight;
+        const itemContentFilesH = closeParent.querySelector('.files') !== null ? itemContent.querySelector('.files').clientHeight:0;
+        const itemContentParentWrapH = closeParent.querySelector('.js-accordion__inner-wrap') !== null ? closeParent.querySelector('.js-accordion__inner-wrap').clientHeight:0;
+        const itemChildCloseHeight = closeParent.querySelector('.js-accordion__close').clientHeight;
         closeParent.classList.remove('active');
 
         if (closeParent.classList.contains('accordion__item--parent')) {
@@ -116,7 +117,10 @@ export default class {
             this.accordInnerReset(closeParent);
           }, 100);
         } else {
-          closeParentContent.style.height = 0;
+          closeParentContent.style.height = closeParentWrapH + itemChildCloseHeight + 'px';
+          setTimeout(()=>{
+            closeParentContent.style.height = 0;
+          },100)
         }
       });
     });

@@ -541,6 +541,7 @@
   font-size: 16px;
   line-height: 21px;
   color: var(--primary);
+  cursor: pointer;
 
   &:after {
     content: '';
@@ -557,27 +558,11 @@
  */
 .emunit__archive {
 
+  .text-editor table {
+    margin: 0;
+  }
+
   .text-editor table thead td {
     text-align: center;
-  }
-
-  .accordion__item.active {
-
-    .accordion__header--simple:after {
-      background-color: rgba(196, 196, 196, 0.5);
-    }
-  }
-
-  .accordion__header--simple {
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 36px;
-      right: 36px;
-      bottom: 0;
-      height: 1px;
-      background-color: transparent;
-    }
   }
 }
