@@ -65,7 +65,7 @@ const devRules = !devMode ? [
       {
         loader: MiniCssExtractPlugin.loader,
         options: {
-          publicPath: '../'
+          publicPath: './'
         }
       },
       'css-loader', 'postcss-loader'
