@@ -62,7 +62,12 @@ const devRules = !devMode ? [
   {
     test: /\.css$/,
     use: [
-      MiniCssExtractPlugin.loader,
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          publicPath: '../'
+        }
+      },
       'css-loader', 'postcss-loader'
     ],
   },
@@ -71,7 +76,12 @@ const devRules = !devMode ? [
   {
     test: /\.css$/,
     use: [
-      MiniCssExtractPlugin.loader,
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          publicPath: '../'
+        }
+      },
       'css-loader?sourceMap', 'postcss-loader?sourceMap'
     ],
   },
@@ -86,7 +96,7 @@ const config = {
   output: {
     path: PATH.build,
     filename: 'js/[name].js',
-    chunkFilename: devMode ? 'js/[name].[chunkhash].js' : 'js/[name].js',
+    chunkFilename: 'js/[name].js',
   },
   plugins: [
     new CleanWebpackPlugin('build'),
@@ -160,16 +170,16 @@ const config = {
         }
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
+        test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name (file) {
+              name(file) {
                 if (devMode) {
-                  return 'fonts/[name].[ext]'
+                  return 'fonts/[name].[ext]';
                 }
-                return '../fonts/[name].[ext]'
+                return 'fonts/[name].[ext]';
               },
             },
           },
