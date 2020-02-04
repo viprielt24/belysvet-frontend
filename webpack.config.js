@@ -167,9 +167,9 @@ const config = {
             options: {
               name (file) {
                 if (devMode) {
-                  return '../fonts/[name].[ext]'
+                  return 'fonts/[name].[ext]'
                 }
-                return 'fonts/[name].[ext]'
+                return '../fonts/[name].[ext]'
               },
             },
           },
