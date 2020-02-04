@@ -12,6 +12,15 @@
   }
 }
 
+.buyers__accordion {
+
+  .files {
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-bottom: 0;
+  }
+}
+
 .accordion__button{
   position: absolute;
   right: 36px;

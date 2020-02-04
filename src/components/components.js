@@ -178,4 +178,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-propshider')) {
+    import('../pages/aruna/js/propshider').then(module => {
+      new module.default();
+    });
+  }
 });
