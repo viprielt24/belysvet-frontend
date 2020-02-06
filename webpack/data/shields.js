@@ -57,7 +57,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'bs-akteon-5',
-    img: '/images/catalog/catalog-favourite-pic3.png',
+    img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',

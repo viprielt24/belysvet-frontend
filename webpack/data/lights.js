@@ -247,7 +247,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'TERRON',
-    img: '/images/catalog/catalog-favourite-pic3.png',
+    img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',
@@ -785,7 +785,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'TERRON',
-    img: '/images/catalog/catalog-favourite-pic3.png',
+    img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',
@@ -1323,7 +1323,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'TERRON',
-    img: '/images/catalog/catalog-favourite-pic3.png',
+    img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',
