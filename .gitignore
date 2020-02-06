@@ -9,3 +9,4 @@ build
 /templates/cache
 /vendor
 /qwer.js
+/logs
