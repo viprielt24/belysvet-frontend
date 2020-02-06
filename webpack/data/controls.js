@@ -13,7 +13,7 @@ module.exports = [
   {
     subtitle: 'Переключающие модули',
     title: 'УДТУ bs-telecontrol',
-    img: '/images/catalog/catalog-favourite-pic5.png',
+    img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',

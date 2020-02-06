@@ -11,7 +11,7 @@ module.exports = [
   },
   {
     title: 'NiMH<br> (Никель-металлогидридные)',
-    img: '/images/catalog/catalog-favourite-pic5.png',
+    img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',

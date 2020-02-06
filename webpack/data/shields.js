@@ -13,7 +13,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'bs-akteon-1',
-    img: '/images/catalog/catalog-favourite-pic5.png',
+    img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',
@@ -79,7 +79,7 @@ module.exports = [
   {
     subtitle: 'Серия',
     title: 'bs-akteon-7',
-    img: '/images/catalog/catalog-favourite-pic5.png',
+    img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
     link: {
       href: 'javascript:void(0);',
