@@ -910,4 +910,8 @@ mobile
   .row{
     margin: 0 -16px;
   }
+
+  .container__text-editor {
+    max-width: 100%;
+  }
 }

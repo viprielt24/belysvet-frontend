@@ -45,15 +45,14 @@ const devPlugins = !devMode ? [
   })
   // дев мод
 ] : [
-  new HardSourceWebpackPlugin({
+  /*new HardSourceWebpackPlugin({
     info: {
       // 'none' or 'test'.
       mode: 'none',
       // 'debug', 'log', 'info', 'warn', or 'error'.
       level: 'info',
     },
-  })
-
+  })*/
 ];
 /**
  * правила

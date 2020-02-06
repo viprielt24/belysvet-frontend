@@ -7,7 +7,6 @@
   font-family: var(--opens);
   color: #404040;
 
-
   & h2 {
     margin-bottom: 21px;
     font-style: normal;
@@ -215,19 +214,19 @@
         }
       }
     }
-    
-    &.table--zebra{
-      
-      & tr:nth-child(even){
+
+    &.table--zebra {
+
+      & tr:nth-child(even) {
         background-color: rgba(196, 196, 196, 0.12);
       }
     }
 
-    ol,ul{
+    ol, ul {
       font-size: 14px;
     }
 
-    ol li:before{
+    ol li:before {
       font-size: 14px;
     }
   }
@@ -260,35 +259,37 @@
     width: 100%;
   }
 
-  hr{
+  hr {
     height: 1px;
     background-color: rgba(196, 196, 196, .5);
     border: 0;
   }
 
-  .files{
+  .files {
     padding: 25px 0 0;
     border-top: 1px solid rgba(196, 196, 196, 0.5);
   }
 
-  .ya-share2__list{
+  .ya-share2__list {
     margin-bottom: 0;
     line-height: 1;
 
-    li{
+    li {
       padding-left: 0;
     }
 
-    li:before{
+    li:before {
       content: none;
     }
   }
+
   /**
 
    */
-  .table--valign-top{
 
-    tbody td{
+  .table--valign-top {
+
+    tbody td {
       vertical-align: top;
       line-height: 26px;
     }
@@ -371,7 +372,7 @@ blockquote.blockquote--author {
   border-left: 0;
   border-right: 0;
 
-  &:before{
+  &:before {
     content: '“';
     position: absolute;
     top: 36px;
@@ -383,7 +384,7 @@ blockquote.blockquote--author {
     letter-spacing: 0.02em;
   }
 
-  &:after{
+  &:after {
     content: '“';
     position: absolute;
     top: 83px;
@@ -410,6 +411,7 @@ blockquote.blockquote--author {
     color: #404040;
   }
 }
+
 /**
 media
  */
@@ -421,5 +423,35 @@ media
 
   .text-editor ul li {
     margin-bottom: 0;
+  }
+
+  .text-editor table {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+
+  blockquote.blockquote--important {
+    padding-left: 48px;
+  }
+
+  blockquote.blockquote--important:before {
+    width: 32px;
+    height: 32px;
+    font-size: 21px;
+  }
+
+  .table {
+    overflow-x:auto;
+  }
+
+  blockquote.blockquote--author {
+
+    &:before {
+      left: -16px;
+    }
+
+    &:after {
+      right: -16px;
+    }
   }
 }
