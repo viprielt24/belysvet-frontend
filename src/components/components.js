@@ -1,6 +1,6 @@
 import objectFitImages from 'object-fit-images';
 import 'lazysizes/plugins/bgset/ls.bgset';
-import 'lazysizes';
+import lazySizes from 'lazysizes';
 
 document.addEventListener('DOMContentLoaded', event => {
 
