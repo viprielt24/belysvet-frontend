@@ -10,7 +10,7 @@ mixin article(item, odd)
           .date= item.date
       if item.img
         .catalog__item-media: .pic
-          img(src= item.img).pic__img
+          img(src='/images/thumbs/thumb.jpg' data-src= item.img).pic__img.lazyload
           if item.play
             .pic__link
               .icon.icon--play
@@ -18,7 +18,7 @@ mixin article(item, odd)
     else
       if item.img
         .catalog__item-media: .pic
-          img(src= item.img).pic__img
+          img(src='/images/thumbs/thumb.jpg' data-src= item.img).pic__img.lazyload
           if item.play
             .pic__link
               .icon.icon--play

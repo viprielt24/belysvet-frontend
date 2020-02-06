@@ -1,5 +1,5 @@
 mixin promo(item)
   .promo__item
-    .pic: img(src= item.img).pic__img
+    .pic: img(src='/images/thumbs/thumb.jpg' data-src= item.img).pic__img.lazyload
     .title!= item.title
     a(href= item.link.href).button.button--empty.button-size-sm= item.link.title

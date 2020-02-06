@@ -1,5 +1,5 @@
 mixin tech-item(item)
-  a(href= item.link.href style='background-image: url(' + item.img + ');').catalog__item
+  a(href= item.link.href data-bgset= item.img).catalog__item.lazyload
     if item.title
       .title!= item.title
     if item.descr

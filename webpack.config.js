@@ -39,7 +39,7 @@ const devPlugins = !devMode ? [
   new ImageminPlugin({
     test: /\.(jpe?g|png|gif|svg)$/i,
     pngquant: {
-      quality: '70-80'
+      quality: '70'
     },
   })
   // дев мод

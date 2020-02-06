@@ -17,7 +17,7 @@ mixin product(item)
         .catalog__menu-content-wrap
           each unit in item.menuList
             a(href= unit.link).catalog__menu-content-item
-              .pic: img(src= unit.img).pic__img
+              .pic: img(src='/images/thumbs/thumb.jpg' data-src= unit.img).pic__img.lazyload
               .title= unit.title
 
   a(href="javascript:void(0);" style='background-image: url(' + item.img + ')').catalog__item
