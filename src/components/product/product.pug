@@ -20,7 +20,7 @@ mixin product(item)
               .pic: img(src='/images/thumbs/thumb.jpg' data-src= unit.img).pic__img.lazyload
               .title= unit.title
 
-  a(href="javascript:void(0);" style='background-image: url(' + item.img + ')').catalog__item
+  a(href="javascript:void(0);" data-bgset= item.img).catalog__item.lazyload
     .title!= item.title
     .link= item.link.title
     .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')
