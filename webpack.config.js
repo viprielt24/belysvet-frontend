@@ -37,9 +37,10 @@ const devPlugins = !devMode ? [
     parallel: true
   }),
   new ImageminPlugin({
+    test: /\.(jpe?g|png|gif|svg)$/i,
     pngquant: {
-      quality: '80'
-    }
+      quality: '70-80'
+    },
   })
   // дев мод
 ] : [];
@@ -95,7 +96,7 @@ const config = {
     new CopyWebpackPlugin([
       {
         from: PATH.src + '/images',
-        to: PATH.build + '/images'
+        to: PATH.build + '/images',
       }
     ]),
     new CopyWebpackPlugin([

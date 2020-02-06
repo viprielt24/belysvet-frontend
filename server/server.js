@@ -4,7 +4,7 @@ const middleware = require('webpack-dev-middleware');
 const express = require('express');
 const app = express();
 const pug = require('pug');
-const PugOPTIONS = {pretty: true};
+const PugOPTIONS = {pretty: process.env.NODE_ENV !== 'production'};
 const fs = require('fs');
 const zlib = require('zlib');
 const path = require('path');
