@@ -38,6 +38,7 @@ const devPlugins = !devMode ? [
   }),
   new ImageminPlugin({
     test: /\.(jpe?g|png|gif|svg)$/i,
+    gifsicle: null,
     pngquant: {
       quality: '70'
     },
