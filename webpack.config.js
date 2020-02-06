@@ -4,8 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 // https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// https://github.com/mzgoddard/hard-source-webpack-plugin
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 // https://github.com/NMFR/optimize-css-assets-webpack-plugin
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // https://github.com/webpack-contrib/terser-webpack-plugin
@@ -44,16 +42,7 @@ const devPlugins = !devMode ? [
     }
   })
   // дев мод
-] : [
-  /*new HardSourceWebpackPlugin({
-    info: {
-      // 'none' or 'test'.
-      mode: 'none',
-      // 'debug', 'log', 'info', 'warn', or 'error'.
-      level: 'info',
-    },
-  })*/
-];
+] : [];
 /**
  * правила
  */
@@ -134,7 +123,7 @@ const config = {
           {
             loader: 'pug-loader',
             options: {
-              pretty: true
+              pretty: devMode
             }
           }
         ]
@@ -174,13 +163,8 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              name(file) {
-                if (devMode) {
-                  return 'fonts/[name].[ext]';
-                }
-                return 'fonts/[name].[ext]';
-              },
-            },
+              name: 'fonts/[name].[ext]',
+            }
           },
         ],
       },
