@@ -1,4 +1,6 @@
 import Choices from 'choices.js';
+// scroll animation library
+import sal from 'sal.js';
 import citiesRussia from '../../../images/map/russia';
 import moscow from '../../../images/map/moscow';
 import piter from '../../../images/map/piter';
@@ -11,6 +13,7 @@ export default class {
   constructor() {
     if (!document.querySelector('.js-distrib__select')) return;
     this.distribCitySelect = document.querySelector('.js-distrib__select');
+    this.distribWrap = document.querySelector('.js-distrib');
     this.addEvents();
   }
 
@@ -24,7 +27,16 @@ export default class {
       searchPlaceholderValue: 'Поиск',
     });
 
-    this.distribMap();
+    sal();
+
+    this.distribWrap.addEventListener('sal:in', ({detail}) => {
+      const elem = document.createElement('script');
+      const elemAttr = elem.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU');
+      detail.target.appendChild(elem);
+      elem.onload = () => {
+        this.distribMap();
+      };
+    });
   }
 
   distribMap() {

@@ -61,6 +61,7 @@
     "postcss-discard-comments": "^4.0.1",
     "postcss-nested": "^4.1.0",
     "romanize": "^1.1.1",
+    "sal.js": "^0.7.1",
     "swiper": "^4.4.6",
     "terser-webpack-plugin": "^2.3.4",
     "ua-parser-js": "^0.7.18",

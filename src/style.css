@@ -19,6 +19,8 @@
 @import "../node_modules/nouislider/distribute/nouislider.css";
 @import './layout/css/nouislider-custom.css';
 
+@import '../node_modules/sal.js/dist/sal.css';
+
 @import './layout/css/catalog.css';
 @import './layout/css/partners.css';
 @import './layout/css/distrib.css';
