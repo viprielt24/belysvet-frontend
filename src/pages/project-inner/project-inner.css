@@ -120,7 +120,7 @@
 
 .project-inner__video-player {
   position: relative;
-  width: 816px;
+  max-width: 816px;
   height: 458px;
   margin: auto;
 }
@@ -251,13 +251,24 @@
   font-family: var(--opens);
   color: #404040;
 }
+/**
+media
+ */
+.mobile {
 
+  .project-inner__equipment-wrap {
+    column-count: auto;
+  }
 
+  .project-inner__about a.button {
+    width: 100%;
+  }
+  
+  .press-inner-footer {
+    display: block;
 
-
-
-
-
-
-
-
+    .stack {
+      margin-top: 20px;
+    }
+  }
+}

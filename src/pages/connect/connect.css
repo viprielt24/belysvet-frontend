@@ -322,4 +322,38 @@ media
     font-size: 14px;
     line-height: 22px;
   }
+
+  .connect__form .form__bottom .button-wrap {
+    margin-right: 0;
+  }
+
+  .connect__callback {
+    margin-top: 30px;
+    padding: 16px 20px;
+  }
+
+  .connect__callback .form-group:last-child {
+    display: block;
+
+    .form-element {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .connect__callback .form-placeholder {
+    width: 18px;
+  }
+
+  .connect__callback .form-group:last-child .form-element .select-custom {
+    width: 100%;
+  }
+
+  .connect__callback .form-group:last-child .form-element:last-child {
+    width: auto;
+  }
 }

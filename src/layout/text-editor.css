@@ -423,6 +423,7 @@ media
 
   .text-editor ul li {
     margin-bottom: 0;
+    padding-left: 16px;
   }
 
   .text-editor table {

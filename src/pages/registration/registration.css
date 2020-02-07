@@ -111,6 +111,7 @@ media
 
       .button-wrap{
         width: 100%;
+        margin-right: 0;
       }
     }
 
@@ -131,5 +132,11 @@ media
 
   .registration__item-title{
     font-size: 18px;
+  }
+
+  .registration .form-element--reg-address {
+    position: relative;
+    top: 0;
+    padding-left: 16px;
   }
 }

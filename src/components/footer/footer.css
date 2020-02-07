@@ -618,4 +618,8 @@ media
   .footer__bottom-links {
     margin: 20px 0 25px;
   }
+
+  .footer__bottom-phone {
+    font-size: 30px;
+  }
 }

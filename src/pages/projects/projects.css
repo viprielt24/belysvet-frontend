@@ -234,6 +234,7 @@ media
 
   .projects__filter-middle-mobile{
     display: flex;
+    justify-content: center;
     margin-top: 13px;
 
     .select-custom{
