@@ -1,3 +1,3 @@
 mixin parts-item(item)
   div(aria-label=item.label).part__item.hint.hint--white.hint--right
-    img(src=item.icon).part__pic
+    img(src='/images/thumbs/thumb.jpg' data-src= item.icon).part__pic.lazyload

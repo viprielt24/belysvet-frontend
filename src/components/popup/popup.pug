@@ -4,7 +4,9 @@ include ./pug/consultation
 include ./pug/design
 include ./pug/info
 include ./pug/lights
-include ./pug/photo
+if page === 'project-inner'
+  include ./pug/photo
 include ./pug/service
 include ./pug/single
-include ./pug/study
+if page === 'study'
+  include ./pug/study
