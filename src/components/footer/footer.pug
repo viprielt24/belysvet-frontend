@@ -131,6 +131,6 @@ footer.footer
             a(href="javascript:void(0);").link Специальная оценка условий труда
             a(href="javascript:void(0);").link Обработка персональных данных
           a(href="javascript:void(0);").footer__bottom-dev Сделано в <span>IT People</span>
-
-include ../orders/orders.pug
+if isDesktop
+  include ../orders/orders.pug
 include ../popup/popup.pug

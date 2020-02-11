@@ -144,4 +144,26 @@ media
   .orders {
     display: none;
   }
+
+  .orders__wrap {
+    background-color: transparent;
+    border-top: var(--border);
+  }
+
+  .orders-trigger {
+    display: none;
+  }
+
+  .orders__item {
+    border-bottom: var(--border);
+  }
+
+  .orders__item-text {
+    color: #333;
+    font-size: 14px;
+  }
+
+  .orders__item-icon svg path {
+    fill: #C1C1C1;
+  }
 }

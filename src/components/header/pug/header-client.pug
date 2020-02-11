@@ -1,0 +1,11 @@
+.header__client
+  if isMobile
+    a(href="javascript:void(0);" aria-label="Поиск").header__client-item.header__compare.hint.hint--white.hint--bottom-left
+      .icon.icon--inline.icon--zoom-big: include ../../../images/zoom-big.svg
+  a(href="javascript:void(0);" aria-label="Сравнение").header__client-item.header__compare.hint.hint--white.hint--bottom-left
+    .icon.icon--inline.icon--compare: include ../../../images/compare.svg
+  a(href="javascript:void(0);" aria-label="Корзина").header__client-item.header__cart.hint.hint--white.hint--bottom-left
+    .icon.icon--inline.icon--cart: include ../../../images/cart.svg
+    .header__cart-count 28
+  a(href="javascript:void(0);" aria-label="Авторизация").header__client-item.header__auth.hint.hint--white.hint--bottom-left
+    .icon.icon--inline: include ../../../images/auth.svg

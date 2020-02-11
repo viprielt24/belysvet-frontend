@@ -1,9 +1,12 @@
 mixin brands-item(item)
   a(href="javascript:void(0);").catalog__item
-    .catalog__item-media: .pic
-      img(src= item.img).pic__img
+    .catalog__item-media
+      .pic: img(src= item.img).pic__img
+      if isMobile
+        .title!= item.title
     .catalog__item-wrap
-      .title!= item.title
+      if isDesktop
+        .title!= item.title
       if item.text
         .descr!= item.text
     if item.description

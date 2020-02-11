@@ -2,127 +2,15 @@ header.header.js-header
   .header__top
     .container
       .header__top-wrap
-        .header__top-menu.list
-          .list__item.list__item--parent.js-header__top-parent
-            a(href="javascript:void(0);").list__link Компания
-            .header__top-submenu
-              .header__top-submenu-wrap
-                .header__top-submenu-item.list
-                  .list__item: a(href="javascript:void(0);").list__link О компании
-                  .list__item: a(href="javascript:void(0);").list__link Пресс-центр
-                  .list__item: a(href="javascript:void(0);").list__link Структура и руководство
-                  .list__item: a(href="javascript:void(0);").list__link Контроль качества
-                  .list__item: a(href="javascript:void(0);").list__link Охрана труда и безопасность
-                  .list__item: a(href="javascript:void(0);").list__link Проекты
-                  .list__item: a(href="javascript:void(0);").list__link Социальная отвественность
-                  .list__item: a(href="javascript:void(0);").list__link Торговые марки
-                  .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
-                  .list__item: a(href="javascript:void(0);").list__link Карьера
-                  .list__item: a(href="javascript:void(0);").list__link Контакты
-                .header__top-submenu-item.header__top-submenu-about
-                  .title Компания «Белый свет»
-                  .descr Мы являемся ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
-                .header__top-submenu-item.header__top-submenu-pic(style="background-image: url(/images/submenu-pic.jpg)")
-
-          .list__item
-            a(href="javascript:void(0);").list__link Проекты
-            .header__top-submenu
-              .header__top-submenu-wrap
-                .header__top-submenu-item.list
-                  .list__item: a(href="javascript:void(0);").list__link О проектах
-                  .list__item: a(href="javascript:void(0);").list__link Пресс-центр
-                  .list__item: a(href="javascript:void(0);").list__link Структура и руководство
-                  .list__item: a(href="javascript:void(0);").list__link Контроль качества
-                  .list__item: a(href="javascript:void(0);").list__link Охрана труда и безопасность
-                  .list__item: a(href="javascript:void(0);").list__link Проекты
-                  .list__item: a(href="javascript:void(0);").list__link Социальная отвественность
-                  .list__item: a(href="javascript:void(0);").list__link Торговые марки
-                  .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
-                  .list__item: a(href="javascript:void(0);").list__link Карьера
-                  .list__item: a(href="javascript:void(0);").list__link Контакты
-                .header__top-submenu-item.header__top-submenu-about
-                  .title Компания «Белый свет»
-                  .descr Мы являемся ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
-                .header__top-submenu-item.header__top-submenu-pic(style="background-image: url(/images/submenu-pic.jpg)")
-
-          .list__item: a(href="javascript:void(0);").list__link Связь с компанией
-          .list__item: a(href="javascript:void(0);").list__link Покупателю
-          .list__item: a(href="javascript:void(0);").list__link Где купить?
+        include ./pug/header-topmenu
         .header__top-city: include ../../pages/common/header-select-common
-
   .header__content
+    include ./pug/mobile-menu
     .container
       .header__content-wrap
         .header__middle
-
+          include ./pug/header-middle
           .header__middle-item
-            .header__logo
-              a(href="/").header__logo-link: img(src="/images/logo.svg")
-              a(href="/").header__logo-link.header__logo-link--mobile: img(src="/images/logo-mobile.svg")
-            .header__phone
-              a(href="tel:+74957851767").header__phone-link +7 (495) 785-17-67
-              a(href="tel:+74957851767").header__phone-link.header__phone-link--mobile
-                img(src="/images/phone-small.svg")
-                | +7 (495) 785-17-67
-            a(href="javascript:void(0);" aria-label="Авторизация").header__client-item.header__auth.header__auth--mobile.hint.hint--white.hint--bottom-left
-              .icon.icon--inline: include ../../images/auth.svg
-            .header__burger.js-header__burger.burger.burger--close6
-              .burger__icon
-                .burger__line.burger__line--1
-                .burger__line.burger__line--2
-                .burger__line.burger__line--3
-          .header__middle-item
-            .header__search
-              .form: form(action="javascript:void(0);")
-                .form-group
-                  .form-element
-                    input(type="text" placeholder="Поиск").form-control
-                    .error
-                  .button-wrap: button(type="submit").button
-            .header__client
-              a(href="javascript:void(0);" aria-label="Сравнение").header__client-item.header__compare.hint.hint--white.hint--bottom-left
-                .icon.icon--inline: include ../../images/compare.svg
-              a(href="javascript:void(0);" aria-label="Корзина").header__client-item.header__cart.hint.hint--white.hint--bottom-left
-                .icon.icon--inline: include ../../images/cart.svg
-                .header__cart-count 28
-              a(href="javascript:void(0);" aria-label="Авторизация").header__client-item.header__auth.hint.hint--white.hint--bottom-left
-                .icon.icon--inline: include ../../images/auth.svg
-
-        .header__menu.list
-          .list__item: a(href="javascript:void(0);").list__link Продукция
-          .list__item: a(href="javascript:void(0);").list__link Конфигуратор
-          .list__item: a(href="javascript:void(0);").list__link Технические решения
-          .list__item: a(href="javascript:void(0);").list__link Сегменты
-          .list__item.list__item--parent.js-header__menu-parent
-            a(href="javascript:void(0);").list__link Поддержка
-            .header__top-submenu.js-header__top-submenu
-              .header__top-submenu-wrap
-                .header__top-submenu-item.list
-                  .list__item: a(href="javascript:void(0);").list__link О компании
-                  .list__item: a(href="javascript:void(0);").list__link Пресс-центр
-                  .list__item: a(href="javascript:void(0);").list__link Структура и руководство
-                  .list__item: a(href="javascript:void(0);").list__link Контроль качества
-                  .list__item: a(href="javascript:void(0);").list__link Охрана труда и безопасность
-                  .list__item: a(href="javascript:void(0);").list__link Проекты
-                  .list__item: a(href="javascript:void(0);").list__link Социальная отвественность
-                  .list__item: a(href="javascript:void(0);").list__link Торговые марки
-                  .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
-                  .list__item: a(href="javascript:void(0);").list__link Карьера
-                  .list__item: a(href="javascript:void(0);").list__link Контакты
-                .header__top-submenu-item.header__top-submenu-pic(style="background-image: url(/images/submenu-pic.jpg)")
-                .header__top-submenu-item.header__top-submenu-about
-                  .title Компания «Белый свет»
-                  .descr Мы являемся ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
-          .list__item.list__item--parent.js-header__menu-parent
-            a(href="javascript:void(0);").list__link Сервис
-            .header__top-submenu.js-header__top-submenu
-              .header__top-submenu-wrap
-                .header__top-submenu-item.list
-                  .list__item: a(href="javascript:void(0);").list__link Заявка на сервис
-                  .list__item: a(href="javascript:void(0);").list__link Гарантийные сроки
-                  .list__item: a(href="javascript:void(0);").list__link Сервисная политика
-                  .list__item: a(href="javascript:void(0);").list__link Сервисные партнеры
-                .header__top-submenu-item.header__top-submenu-pic(style="background-image: url(/images/submenu-pic.jpg)")
-                .header__top-submenu-item.header__top-submenu-about
-                  .title Компания «Белый свет»
-                  .descr Мы являемся ведущим российским производителем профессионального оборудования для аварийного освещения на рынке светотехники на территории РФ и СНГ.
+            include ./pug/header-search
+            include ./pug/header-client
+        include ./pug/header-menu

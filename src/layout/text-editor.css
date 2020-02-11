@@ -455,4 +455,8 @@ media
       right: -16px;
     }
   }
+
+  .text-editor figure {
+    max-width: 100%;
+  }
 }
