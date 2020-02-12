@@ -34,6 +34,12 @@ export default class {
           menu.classList.add('is-open');
         }
       });
+
+      this.parentTopMenu.forEach(menu => {
+        if (menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+        }
+      });
     });
   }
 
@@ -49,6 +55,12 @@ export default class {
           }
           menu.classList.add('is-open');
         }
+
+        this.parentMenu.forEach(menu => {
+          if (menu.classList.contains('is-open')) {
+            menu.classList.remove('is-open');
+          }
+        });
       });
     });
   }

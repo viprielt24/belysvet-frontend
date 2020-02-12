@@ -380,3 +380,42 @@
     color: #61AE3B;
   }
 }
+/**
+mobile
+ */
+.mobile {
+
+  .wheretobuy__filter {
+
+    .form-group-double {
+      margin-bottom: 25px;
+    }
+  }
+
+  .wheretobuy .form-element--wtb-chbox .label--checkbox .label__text {
+    font-size: 13px;
+  }
+
+  .wheretobuy .form-element--wtb-chbox {
+    margin-top: 15px;
+  }
+
+  .select-custom .choices[data-type*="select-one"] .choices__input,
+  .select-custom .choices__list--dropdown .choices__item,
+  .wheretobuy .select-custom--default .choices__list--single .choices__item.choices__placeholder,
+  .select-custom--default .choices__list--single .choices__item {
+    font-size: 12px;
+  }
+
+  .wheretobuy__toggle-map-item span {
+    font-size: 14px;
+  }
+
+  .wheretobuy-partners .change-view {
+    display: none;
+  }
+
+  .wheretobuy-partners__title {
+    font-size: 22px;
+  }
+}
