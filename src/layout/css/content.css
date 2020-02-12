@@ -154,4 +154,12 @@ media
     font-size: 14px;
     line-height: 22px;
   }
+
+  .content__top--stack {
+    display: block;
+
+    .stack {
+      margin-top: 20px;
+    }
+  }
 }

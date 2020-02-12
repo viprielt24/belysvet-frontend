@@ -2,7 +2,7 @@ include ../crumbs/crumbs
 .content__header
 
   if page === 'press-inner'
-    .content__top
+    .content__top.content__top--stack
       a(href="javascript:void(0);").link.link--back
         .link__icon: include ../../images/arrow-right-small.svg
         .link__text К списку статей и публикаций
@@ -19,7 +19,7 @@ include ../crumbs/crumbs
       h1.title!= pageName
 
   else if page === 'project-inner'
-    .content__top
+    .content__top.content__top--stack
       a(href="javascript:void(0);").link.link--back
         .link__icon: include ../../images/arrow-right-small.svg
         .link__text К списку проектов

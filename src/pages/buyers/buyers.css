@@ -135,4 +135,10 @@ mobile
     font-size: 14px;
     line-height: 22px;
   }
+
+  .buyers__accordion .files {
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

@@ -130,7 +130,8 @@ export default class {
     this.accordionInnerItems.forEach(inner => {
       const innerHeader = inner.querySelector('.js-accordion__inner-header');
       const innerContent = inner.querySelector('.js-accordion__inner-content');
-      const innerContentHeight = innerContent.clientHeight;
+      const innerContentWrapH = innerContent.querySelector('.accordion__inner-content-wrap').clientHeight;
+      const innerContentCloseH = innerContent.querySelector('.accordion__close').clientHeight;
       innerContent.style.height = 0;
 
       innerHeader.addEventListener('click', (event) => {
@@ -139,7 +140,7 @@ export default class {
           innerContent.style.height = 0;
         } else {
           inner.classList.add('active-inner');
-          innerContent.style.height = 48 + innerContentHeight + 'px';
+          innerContent.style.height = innerContentWrapH + innerContentCloseH + 'px';
         }
       });
     });

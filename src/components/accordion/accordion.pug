@@ -35,7 +35,8 @@ mixin accordion(item, index)
                 .accordion__inner-title= unit.title
                 .accordion__inner-trigger
               .accordion__inner-content.js-accordion__inner-content
-                != unit.content
+                .accordion__inner-content-wrap
+                  != unit.content
 
                 //-файлы
                 if unit.files

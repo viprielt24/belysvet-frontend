@@ -279,7 +279,6 @@ a.accordion__close-text {
 }
 
 .accordion__inner-content {
-  padding: 0 15px 0;
   overflow: hidden;
   transition: height var(--time), padding var(--time);
 
@@ -298,15 +297,15 @@ a.accordion__close-text {
   }
 }
 
+.accordion__inner-content-wrap {
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+  padding: 15px 0 0;
+}
+
 .active-inner {
 
   .accordion__inner-trigger:before {
     transform: rotate(90deg);
-  }
-
-  .accordion__inner-content {
-    border-top: 1px solid rgba(196, 196, 196, 0.5);
-    padding: 15px 15px 23px;
   }
 }
 
