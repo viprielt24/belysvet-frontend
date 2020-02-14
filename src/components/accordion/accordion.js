@@ -105,8 +105,8 @@ export default class {
         const closeParent = close.closest('.js-accordion__item');
         const closeParentContent = closeParent.querySelector('.js-accordion__content');
         const closeParentWrapH = closeParent.querySelector('.accordion__content-wrap').clientHeight;
-        const itemContentFilesH = closeParent.querySelector('.files') !== null ? itemContent.querySelector('.files').clientHeight:0;
-        const itemContentParentWrapH = closeParent.querySelector('.js-accordion__inner-wrap') !== null ? closeParent.querySelector('.js-accordion__inner-wrap').clientHeight:0;
+        // const itemContentFilesH = closeParent.querySelector('.files') !== null ? itemContent.querySelector('.files').clientHeight:0;
+        // const itemContentParentWrapH = closeParent.querySelector('.js-accordion__inner-wrap') !== null ? closeParent.querySelector('.js-accordion__inner-wrap').clientHeight:0;
         const itemChildCloseHeight = closeParent.querySelector('.js-accordion__close').clientHeight;
         closeParent.classList.remove('active');
 
@@ -131,6 +131,7 @@ export default class {
       const innerHeader = inner.querySelector('.js-accordion__inner-header');
       const innerContent = inner.querySelector('.js-accordion__inner-content');
       const innerContentWrapH = innerContent.querySelector('.accordion__inner-content-wrap').clientHeight;
+      const itemContentFilesH = innerContent.querySelector('.files') !== null ? innerContent.querySelector('.files').clientHeight : 0;
       const innerContentCloseH = innerContent.querySelector('.accordion__close').clientHeight;
       innerContent.style.height = 0;
 
@@ -140,7 +141,7 @@ export default class {
           innerContent.style.height = 0;
         } else {
           inner.classList.add('active-inner');
-          innerContent.style.height = innerContentWrapH + innerContentCloseH + 'px';
+          innerContent.style.height = innerContentWrapH + itemContentFilesH + innerContentCloseH + 'px';
         }
       });
     });

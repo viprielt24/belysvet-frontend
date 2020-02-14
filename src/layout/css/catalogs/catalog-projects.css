@@ -169,10 +169,6 @@
     flex-shrink: 0;
   }
 
-  .catalog__item-sign{
-    display: none;
-  }
-
   .catalog__item-wrap{
     position: relative;
     display: flex;

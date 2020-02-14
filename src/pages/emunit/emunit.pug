@@ -19,7 +19,7 @@ block content
                 li Cветодиодными лампами-ретрофитами с напряжением питания 220/230 В и 12 В;
                 li Cсветодиодными световыми приборами с напряжением питания 220/230 В.
             .emunit__top-links
-              a(href="javascript:void(0);").link.link--icon
+              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
                 .icon.icon--inline.icon--stack: include ../../images/stack.svg
                 .link__text Проекты со блоками аварийного питания INEXI
               .emunit__top-links-wrap
@@ -28,7 +28,11 @@ block content
                   .link__text Сохранить в PDF
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--print: include ../../images/print.svg
-                  .link__text Распечатать страницу
+                  .link__text Распечатать
+                .link.link--icon.js-stack-trigger
+                  .icon.icon--inline.icon--share: include ../../images/share.svg
+                  .link__text Поделиться
+                  .link__wrap: include ../../pages/common/signone-share-common
 
       .container.emunit__middle
         .emunit__tabs.js-tabs

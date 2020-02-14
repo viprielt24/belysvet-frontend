@@ -5,7 +5,8 @@ header.header.js-header
         include ./pug/header-topmenu
         .header__top-city: include ../../pages/common/header-select-common
   .header__content
-    include ./pug/mobile-menu
+    if isMobile
+      include ./pug/mobile-menu
     .container
       .header__content-wrap
         .header__middle

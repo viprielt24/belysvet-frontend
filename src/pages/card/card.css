@@ -12,6 +12,14 @@
 
 .emunit__models-table {
 
+  .icon--close:hover {
+
+    &:before,
+    &:after {
+      background-color: var(--hover);
+    }
+  }
+
   .sort {
     position: absolute;
     top: 13px;

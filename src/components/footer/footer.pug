@@ -13,11 +13,23 @@ footer.footer
                 .list__item: a(href="javascript:void(0);").list__link Карьера
                 .list__item: a(href="javascript:void(0);").list__link Контакты
           .col-sm-4
-            .footer__menu.list
-              .list__title Проекты
+            .footer__menu.list.list--top-indent
+              .list__wrap
+                .list__item: a(href="javascript:void(0);").list__link Социальная ответственность
+                .list__item: a(href="javascript:void(0);").list__link Торговые марки
+                .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
+                .list__item: a(href="javascript:void(0);").list__link Карьера
+                .list__item: a(href="javascript:void(0);").list__link Контакты
           .col-sm-4
             .footer__menu.list
-              .list__title Связь с компанией
+              .list__title Покупателю
+              .list__wrap
+                .list__item: a(href="javascript:void(0);").list__link Каналы сбыта
+                .list__item: a(href="javascript:void(0);").list__link Акции
+                .list__item: a(href="javascript:void(0);").list__link Работа с сайтом
+                .list__item: a(href="javascript:void(0);").list__link Договоры Белый свет
+                .list__item: a(href="javascript:void(0);").list__link Покупка продукции
+                .list__item: a(href="javascript:void(0);").list__link Часто задаваемые вопросы
         .footer__menu-bottom.footer__menu-bottom--left
           .row
             .col-sm-4
@@ -57,21 +69,13 @@ footer.footer
       .col-sm-6
         .footer__menu-top.row
           .col-sm-5
-            .footer__menu.footer__menu--offset.list
-              .list__title Покупателю
-              .list__wrap
-                .list__item: a(href="javascript:void(0);").list__link Каналы сбыта
-                .list__item: a(href="javascript:void(0);").list__link Акции
-                .list__item: a(href="javascript:void(0);").list__link Работа с сайтом
-                .list__item: a(href="javascript:void(0);").list__link Договоры Белый свет
-                .list__item: a(href="javascript:void(0);").list__link Покупка продукции
-                .list__item: a(href="javascript:void(0);").list__link Часто задаваемые вопросы
+            .footer__menu.footer__menu--offset.list.list--ls-md
+              .list__title Проекты
+              .list__title Где купить?
+              .list__title Связь с компанией
           .col-sm-4
             .footer__menu.list
-              .list__title Где купить?
-          .col-sm-3
-            .footer__menu.list
-              a(href="javascript:void(0);").list__title.footer__menu-mapsite Карта сайта
+              .list__title Карта сайта
         .footer__menu-bottom.footer__menu-bottom--right
           .footer__form: .form: form(action="javascript:void(0);").js-form-validate
             .form__title Cообщение в службу менеджмента качества

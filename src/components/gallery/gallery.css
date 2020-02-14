@@ -10,6 +10,7 @@
   .swiper-container{
     width: 100%;
     height: 385px;
+    border: 1px solid #F5F5F5;
   }
 
   .swiper-button-prev, .swiper-button-next{

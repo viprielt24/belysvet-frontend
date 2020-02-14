@@ -14,8 +14,10 @@ block content
             .emunit__top-right-articul Артикул: а15744
             include ../../pages/common/emunit-parts-common
             .emunit__top-right-links
-              a(href="javascript:void(0);").link.link--more-action Складской
-              a(href="javascript:void(0);").link.link--more-action В наличии (3 579)
+              a(href="javascript:void(0);").link.link--more-action Заказной
+              .emunit__top-right-links-wrap
+                a(href="javascript:void(0);").link.link--more-action Нет в наличии
+                span (Добавьте в заказ для определения сроков поставки)
             .emunit__top-right-price
               .price-wrap
                 .price-descr.props
@@ -39,7 +41,7 @@ block content
               a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
                 .icon.icon--inline.icon--compare: include ../../images/compare.svg
                 .link__text Сравнить выбранное
-              //- a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+              a(href="javascript:void(0);" style='display:none').link.link--icon.link--icon-path-fill
                 .icon.icon--close.icon--close-primary.icon--close-medium
                 .link__text Удалить из сравнения
             .emunit__top-right-proj

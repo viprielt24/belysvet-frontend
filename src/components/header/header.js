@@ -1,10 +1,15 @@
 export default class {
   constructor() {
+    this.isMobile = document.documentElement.classList.contains('mobile');
     this.parentMenu = document.querySelectorAll('.js-header__menu-parent');
     this.parentTopMenu = document.querySelectorAll('.js-header__top-parent');
-    this.mobileMenu = document.querySelector('.js-header-mobile');
-    this.mobileMenuBtn = document.querySelector('.header__middle .js-header__burger');
-    this.mobileMenuMainBtn = this.mobileMenu.querySelector('.js-header__burger');
+
+    if (this.isMobile) {
+      this.mobileMenu = document.querySelector('.js-header-mobile');
+      this.mobileMenuBtn = document.querySelector('.header__middle .js-header__burger');
+      this.mobileMenuMainBtn = this.mobileMenu.querySelector('.js-header__burger');
+    }
+
     this.addEvents();
   }
 
@@ -12,13 +17,15 @@ export default class {
     this.menuToggle();
     this.topMenuToggle();
 
-    this.mobileMenuBtn.addEventListener('click', () => {
-      this.mobileMenuToggle();
-    });
+    if (this.isMobile) {
+      this.mobileMenuBtn.addEventListener('click', () => {
+        this.mobileMenuToggle();
+      });
 
-    this.mobileMenuMainBtn.addEventListener('click', () => {
-      this.mobileMenuToggle();
-    });
+      this.mobileMenuMainBtn.addEventListener('click', () => {
+        this.mobileMenuToggle();
+      });
+    }
   }
 
   menuToggle() {

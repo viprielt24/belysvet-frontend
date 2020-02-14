@@ -43,10 +43,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -95,10 +91,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -147,10 +139,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -199,10 +187,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -251,10 +235,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -303,10 +283,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 
@@ -355,10 +331,6 @@ module.exports = [
       {
         label: 'Описание иконки',
         icon: 'images/lights/lights-item009.png'
-      },
-      {
-        label: 'Описание иконки',
-        icon: 'images/lights/lights-item010.png'
       }
     ]
 

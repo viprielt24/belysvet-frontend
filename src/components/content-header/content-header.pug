@@ -36,19 +36,29 @@ include ../crumbs/crumbs
       h1.title!= pageName
       a(href="javascript:void(0);").link Посмотреть отзыв
 
-  else if page === 'emunit'
-    .content__top.content__top--emunit: include ../../pages/common/tagline
+  else if page === 'signone'
+    .content__top.content__top--signone: include ../../pages/common/batch-common
     .content__bottom
       h1.title!= pageName
 
-  else if page === 'signone'
-    //-.content__top.content__top--signone: include ../../pages/common/tagline
+  else if page === 'aruna'
+    - batchName= 'ARUNA'
     .content__top.content__top--signone: include ../../pages/common/batch-common
-    .content__bottomv
+    .content__bottom
       h1.title!= pageName
 
-  else if page === 'aruna'
-    .content__top.content__top--signone: include ../../pages/common/batch-common
+  else if page === 'emunit'
+    - batchName= 'INEXI'
+    .content__top.content__top--signone.content__top--batch-active: include ../../pages/common/batch-common
+    .content__bottom
+      h1.title!= pageName
+
+  else if page === 'aruna-product'
+    - batchName= 'ARUNA'
+    .content__top.content__top--signone.content__top--batch-active: include ../../pages/common/batch-common
+    a(href="javascript:void(0);").link.link--back.content__top-aruna-product
+      .link__icon: include ../../images/arrow-right-small.svg
+      .link__text На страницу серии
     .content__bottom
       h1.title!= pageName
 
@@ -87,13 +97,13 @@ include ../crumbs/crumbs
   else if page === 'solution'
     .content__top.content__top--signone: include ../../pages/common/tagline
     .content__top-links
-      a(href="javascript:void(0);").link.link--icon
+      a(href="javascript:void(0);" data-popupname="solution").link.link--icon.link--icon-path-fill.js-popup-open
         .icon.icon--inline.icon--pencil: include ../../images/pencil.svg
         .link__text Заявка на составление технического задания
-      a(href="javascript:void(0);").link.link--icon
+      a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
         .icon.icon--inline.icon--stack: include ../../images/stack.svg
         .link__text Реализованные проекты
-      a(href="javascript:void(0);").link.link--icon
+      a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
         .icon.icon--inline.icon--video: include ../../images/video.svg
         .link__text Видео
     .content__bottom

@@ -7,16 +7,19 @@
     padding-bottom: 47px;
   }
 }
+
 .emunit__top-right {
   padding-left: 50px;
 }
+
 /**
 
  */
-.emunit__top-right-table{
+.emunit__top-right-table {
   padding-top: 25px;
   padding-bottom: 28px;
 }
+
 /**
 
  */
@@ -27,6 +30,7 @@
   font-size: 16px;
   line-height: 26px;
 }
+
 /**
 
  */
@@ -44,7 +48,15 @@
       margin-bottom: 0;
     }
   }
+
+  span {
+    margin-left: 14px;
+    color: #333333;
+    font-size: 13px;
+    line-height: 19px;
+  }
 }
+
 /**
 
  */
@@ -89,7 +101,7 @@
     margin-top: 5px;
     font-weight: 700;
   }
-  
+
   .price-wrap {
     position: relative;
     display: flex;
@@ -130,6 +142,7 @@
     margin-right: auto;
   }
 }
+
 /**
 
  */
@@ -156,6 +169,7 @@
     margin-left: 8px;
   }
 }
+
 /*
 
  */
@@ -174,6 +188,7 @@
     padding-left: 20px;
   }
 }
+
 /**
 
  */
@@ -183,17 +198,18 @@
     margin-left: 8px;
   }
 }
+
 /**
 
  */
-.emunit__top-right-compatibility{
+.emunit__top-right-compatibility {
 
-  .title{
+  .title {
     margin-bottom: 10px;
     font-size: 18px;
   }
 
-  .tagline{
+  .tagline {
     display: flex;
     flex-wrap: wrap;
   }
@@ -206,6 +222,7 @@
     text-transform: uppercase;
   }
 }
+
 /**
 
  */
@@ -223,7 +240,7 @@
   padding-top: 17px;
   border-top: var(--border);
 
-  .link svg path{
+  .link svg path {
     transition: var(--trsf);
   }
 
@@ -235,7 +252,7 @@
     cursor: pointer;
 
     &.is-active,
-    &:hover svg path{
+    &:hover svg path {
       fill: var(--hover);
     }
 
@@ -253,6 +270,7 @@
     }
   }
 }
+
 /**
 
  */
@@ -290,15 +308,16 @@
     background-color: var(--primary);
   }
 
-  &.active:hover{
+  &.active:hover {
     color: #333333;
     cursor: default;
   }
 
-  &:hover{
+  &:hover {
     color: var(--hover);
   }
 }
+
 /**
 
  */
@@ -382,6 +401,7 @@
     margin-left: 0;
   }
 }
+
 /**
 
  */
@@ -390,7 +410,7 @@
   table td:last-child {
     text-align: center;
   }
-  
+
   table thead td {
     padding-top: 14px;
     padding-bottom: 14px;
@@ -418,22 +438,23 @@
     }
   }
 }
+
 /**
 
  */
-.emunit__review-item--more{
+.emunit__review-item--more {
   display: flex;
   justify-content: center;
   padding-top: 37px;
   border-top: var(--border);
 
-  .link{
+  .link {
     justify-content: center;
     padding-bottom: 8px;
     border-bottom: 1px dashed var(--primary);
   }
 
-  .link__text{
+  .link__text {
     margin-left: 0;
     font-family: var(--museo);
     color: var(--primary);
@@ -441,16 +462,17 @@
     font-weight: 700;
   }
 
-  .link__icon{
+  .link__icon {
     transform: rotate(0);
   }
 
-  .link--back .link__icon svg{
+  .link--back .link__icon svg {
     width: 9px;
     height: 12px;
     margin-left: 10px;
   }
 }
+
 /**
 
  */
@@ -458,6 +480,7 @@
   padding-top: 41px;
   padding-bottom: 39px;
 }
+
 /**
 
  */
@@ -480,6 +503,7 @@
   margin-bottom: 5px;
   font-family: var(--opens);
 }
+
 /**
 
  */
@@ -607,12 +631,14 @@
   top: 107px;
   right: 28px;
 }
+
 /**
 
  */
 .emunit__models-middle {
   margin-bottom: 13px;
 }
+
 /**
 
  */
@@ -635,6 +661,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 /**
 
  */
@@ -733,6 +760,7 @@
   margin-left: 10px;
   padding: 0;
 }
+
 /**
 
  */
@@ -770,6 +798,7 @@
     background-color: rgba(196, 196, 196, 0.5);
   }
 }
+
 /**
 
  */
@@ -783,6 +812,7 @@
   line-height: 41px;
   text-align: center;
 }
+
 /**
 
  */
@@ -805,6 +835,7 @@
     }
   }
 }
+
 /**
 
  */

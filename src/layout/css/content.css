@@ -135,6 +135,27 @@
 .content__top.content__top--signone {
   padding: 25px 0 15px;
 }
+
+.content__top-aruna-product{
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.content__top.content__top--batch-active {
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+.content__top.content__top--batch-active .batch__choose {
+
+  .batch__name {
+    background-color: var(--hover);
+    color: #fff;
+  }
+
+  &:hover .batch__name {
+    background-color: var(--hover);
+  }
+}
 /**
 media
  */

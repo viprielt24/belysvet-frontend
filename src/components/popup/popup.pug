@@ -4,9 +4,11 @@ include ./pug/consultation
 include ./pug/design
 include ./pug/info
 include ./pug/lights
-if page === 'project-inner'
+if page === 'project-inner' || page === 'emunit' || page === 'aruna' || page === 'aruna-product' || page === 'signone'
   include ./pug/photo
 include ./pug/service
 include ./pug/single
+if page === 'solution'
+  include ./pug/solution
 if page === 'study'
   include ./pug/study

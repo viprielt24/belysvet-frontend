@@ -125,6 +125,13 @@
   .icon {
     margin-right: 10px;
   }
+
+  &:hover {
+
+    .msg__name {
+      color: var(--hover);
+    }
+  }
 }
 
 .msg__name {
@@ -135,6 +142,7 @@
   letter-spacing: -0.02em;
   font-family: var(--museo);
   color: #404040;
+  transition: var(--trc);
 }
 
 /**

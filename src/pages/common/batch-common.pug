@@ -9,5 +9,5 @@ include ../../components/tag/tag
           +tag(item)
   .batch__title Выберите серию:
   .batch__choose.js-batch__choose
-    .batch__name Серия
+    .batch__name= batchName ? batchName : 'Серия'
     .icon.icon--inline.icon--inline.icon--arrow-up: include ../../images/arrow-up.svg

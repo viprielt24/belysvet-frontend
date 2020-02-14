@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: transparent;
+  background-color: rgba(51,51,51,.4);
   opacity: 0;
   visibility: hidden;
   transition: var(--trsee);
@@ -270,7 +270,7 @@
     font-family: var(--museo);
     font-style: normal;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 27px;
     line-height: normal;
     text-align: left;
   }

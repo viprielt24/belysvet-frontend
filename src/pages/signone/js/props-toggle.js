@@ -16,6 +16,7 @@ export default class {
 
       propBtn.addEventListener('click', () => {
         if (prop.classList.contains('is-hidden')) {
+          propWrap.classList.remove('prop-hide');
           prop.classList.remove('is-hidden');
           prop.style.height = propH + 'px';
           prop.style.opacity = 1;
@@ -23,6 +24,7 @@ export default class {
           prop.style.transition = 'opacity .2s ease .1s, visibility .2s ease .1s, height .3s ease';
           propBtn.innerText = 'Свернуть характеристики'
         } else {
+          propWrap.classList.add('prop-hide');
           prop.classList.add('is-hidden');
           prop.style.height = 0;
           prop.style.opacity = 0;
