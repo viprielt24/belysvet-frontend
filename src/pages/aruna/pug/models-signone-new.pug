@@ -1,5 +1,3 @@
-include ../../../components/accordion-connect/accordion-connect
-
 .emunit__tabs-content-item.emunit__models.js-tabs-content-item
   .emunit__models-filter
     .emunit__models-filter-item
@@ -8,19 +6,4 @@ include ../../../components/accordion-connect/accordion-connect
     .emunit__models-filter-item
       .emunit__models-filter-title Тип светого прибора
       include ../../common/project-position-common
-  .emunit__models
-    .accordion.accordion--aruna
-      +accordion-connect({title: 'Техническое решение №1. Автономная система аварийного освещения с функцией TELECONTROL.', bgsol: 'DE3831'}): .accordion__content-wrap
-        .emunit__models-box.js-propshider-wrap
-          .emunit__models-box-title Автономный аварийный светильник эвакуационного освещения с функцией TELECONTROL.
-          .emunit__models-box-propshider.js-propshider Свернуть характеристики всех товаров
-          include ./aruna-item
-          include ./aruna-item
-          include ./aruna-item
-      +accordion-connect({title: 'Техническое решение №2. Автономная система аварийного освещения с функциями AUTOTEST, ТELECOMAND, FELS и MSS', bgsol: 'A1BF35'}): .accordion__content-wrap
-        .emunit__models-box.js-propshider-wrap
-          .emunit__models-box-title Автономный аварийный светильник эвакуационного освещения с функциями AUTOTEST и TELECOMAND
-          .emunit__models-box-propshider.js-propshider Свернуть характеристики всех товаров
-          include ./aruna-item
-          include ./aruna-item
-          include ./aruna-item
+  include ./models-signone-models

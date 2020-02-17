@@ -431,6 +431,10 @@
       margin-right: 0;
     }
   }
+
+  &.tabs-content-hidden {
+    display: none;
+  }
 }
 
 /**

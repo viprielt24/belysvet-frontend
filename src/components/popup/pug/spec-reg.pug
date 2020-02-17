@@ -1,0 +1,53 @@
+.popup.popup--specreg.js-popup-specreg
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="specreg").popup__header-close.js-popup-close: .icon.icon--close.icon--close-primary
+
+    .popup__content.popup__content--spec-choose.ns
+      .form-title Товар успешно добавлен<br> в спецификацию:
+      .form__bottom Название спецификации, Веселые Светила, Торговый центр «Дружба», г. Домодедово, ТР№1
+      .button-wrap: button(type="submit").button перейти в спецификацию
+      .form-footer
+        a(href="javascript:void(0);").link.link--simple Остаться на странице
+
+    .popup__content.popup__content--spec-choose.ns
+      .popup__form.form.form--style: form(action="javascript:void(0);").js-form-validate
+        .form-title Выберите спецификацию из списка
+        include ../../../pages/common/spec-reg-common
+        .form-group
+          .count.js-count
+            .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+            .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
+            .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+          button.button добавить спецификацию
+        .form__bottom
+          | Для того, чтобы спецификация появилась в списке, ее необходимо создать в Личном кабинете, в разделе Спецификации
+          a(href="javascript:void(0);").link.link--simple Перейти в раздел Спецификации
+
+    .popup__content
+      .popup__content-header
+        .popup__content-spectitle Добавлять товар в спецификации могут только зарегистрированные пользователи
+      .popup__form.form.form--style: form(action="javascript:void(0);").js-form-validate
+        .form-title Вход в личный кабинет
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder Email
+              input.form-control.js-form-validate__email
+              .error Текст ошибки
+          .form-group
+            .form-element: label
+              .form-placeholder.form-placeholder--space-between
+                | Пароль
+                a(href="javascript:void(0);").link.link--simple Забыли пароль?
+              input(type="password").form-control.js-form-validate__empty
+              .error Текст ошибки
+          .form-group
+            label.label.label--checkbox
+              input.form-control.js-form-validate__checked(type='checkbox')
+              .icon.icon--checkbox
+              .label__text Запомнить меня
+          .button-wrap: button(type="submit").button Войти
+          .form-footer
+            | У вас еще нет доступа?
+            a(href="javascript:void(0);").link.link--simple Зарегистрироваться

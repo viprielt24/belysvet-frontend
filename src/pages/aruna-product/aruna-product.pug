@@ -14,9 +14,13 @@ block content
             .emunit__top-right-articul Артикул: а15744
             include ../../pages/common/emunit-parts-common
             .emunit__top-right-links
-              a(href="javascript:void(0);").link.link--more-action Заказной
+              a(href="javascript:void(0);"
+                class="link link--more-action hint hint--white hint--bottom hint--aruna"
+                aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") Заказной
               .emunit__top-right-links-wrap
-                a(href="javascript:void(0);").link.link--more-action Нет в наличии
+                a(href="javascript:void(0);"
+                  class="link link--more-action hint hint--white hint--bottom hint--aruna"
+                  aria-label="Для определения сроков изготовления и поставки этого товара добавьте товар в корзину и отправьте нам заказ. Наш менеджер уточнит информацию, свяжется с вами и сообщит срок изготовления/поставки товара.") Нет в наличии
                 span (Добавьте в заказ для определения сроков поставки)
             .emunit__top-right-price
               .price-wrap
@@ -26,14 +30,17 @@ block content
                     .props__value штуки
                 .price: .price__item
                   .price__value 4700,00
-                  .price__currency: a(href="javascript:void(0);").link.link--more-action Цена (руб.)
+                  .price__currency: a(href="javascript:void(0);"
+                    class="link link--more-action hint hint--white hint--bottom hint--aruna"
+                    aria-label="Текстовая подсказка для \"цена\", текст появляется при наведении/клике в слово \"Цена\""
+                  ) Цена (руб.)
               .emunit__top-right-wrap
                 .count.js-count
                   .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
                   .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
                   .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
-                button.button.emunit__models-button-fill в корзину
-                button.button.button--empty.emunit__models-button-empty В спецификацию
+                button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
+                button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
             .emunit__top-right-compare
               a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
                 .icon.icon--inline.icon--chart: include ../../images/chart.svg
@@ -45,7 +52,7 @@ block content
                 .icon.icon--close.icon--close-primary.icon--close-medium
                 .link__text Удалить из сравнения
             .emunit__top-right-proj
-              a(href="javascript:void(0);").link.link--icon
+              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
                 .icon.icon--inline.icon--stack: include ../../images/stack.svg
                 .link__text Проекты со световыми приборами серии ARUNA
             .emunit__top-links

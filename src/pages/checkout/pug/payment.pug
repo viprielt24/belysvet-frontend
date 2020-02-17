@@ -4,27 +4,28 @@
     .checkout__temp-text Заполните информацию в предыдущих блоках выше
     .checkout__payment
 
-      .checkout__payment-item
+      .checkout__payment-item.js-tabs
         .checkout__content-select-label Юридическое лицо
         include ../../../pages/common/checkout-llc-common
         .checkout__payment-wrap
-          label.label.label--checkbox
-            input.form-control.js-form-validate__checked(type='checkbox' checked)
+          label.label.label--checkbox.label--aka-radio.js-tabs-header-item.active
+            input.form-control.js-form-validate__checked(type='radio' name='payment' checked)
             .icon.icon--checkbox
             .label__text Договор-счет
-          label.label.label--checkbox
-            input.form-control.js-form-validate__checked(type='checkbox')
+          label.label.label--checkbox.label--aka-radio.js-tabs-header-item
+            input.form-control.js-form-validate__checked(type='radio' name='payment')
             .icon.icon--checkbox
             .label__text Счет по договору поставки
-        .checkout__payment-wrap.row
-            .col-sm-6.form-element: label
-              .form-placeholder Номер договора
-              input(placeholder='Укажите номер договора').form-control
-              .error Текст ошибки
-            .col-sm-6.form-element: label
-              .form-placeholder Дата договора
-              input(placeholder='Укажите дату договора').form-control
-              .error Текст ошибки
+        .js-tabs-content-item
+        .checkout__payment-wrap.row.js-tabs-content-item.tabs-content-hidden
+          .col-sm-6.form-element: label
+            .form-placeholder Номер договора
+            input(placeholder='Укажите номер договора').form-control
+            .error Текст ошибки
+          .col-sm-6.form-element: label
+            .form-placeholder Дата договора
+            input(placeholder='Укажите дату договора').form-control
+            .error Текст ошибки
 
       .checkout__payment-item
         label.label.label--checkbox

@@ -40,6 +40,38 @@
   &.hint--right:before{
     border-right-color: #fff;
   }
+  /**
+  hint--aruna
+   */
+  &.hint--bottom:before {
+    border-bottom-color: #fff;
+  }
+
+  &.hint--aruna:after {
+    left: 0;
+    width: 344px;
+    margin-left: 0;
+    padding: 10px 15px 12px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    font-family: var(--opens);
+    font-size: 12px;
+    line-height: 20px;
+    color: #404040;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+    transform: translateX(0);
+  }
+
+  &.hint--aruna:hover:after {
+    transform: translateX(0) translateY(8px);
+  }
+
+  &.hint--aruna-item:after {
+    left: auto;
+    right: 0;
+  }
 }
 /**
 
