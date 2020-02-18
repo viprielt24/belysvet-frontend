@@ -13,6 +13,14 @@ export default class {
       const tabStart = tabWrap.dataset.tabsstart ? tabWrap.dataset.tabsstart : 0;
       this.initTabs(tabWrap, tabStart);
       tabWrap.style.opacity = 1;
+
+      //кнопки внутри табов на переход по табам
+      const tabsBackBtns = tabWrap.querySelectorAll('.js-tabs-content-back');
+      tabsBackBtns.forEach(button => {
+        button.addEventListener('click', () => {
+          this.tabsBack(button);
+        });
+      });
     });
   }
 
@@ -62,5 +70,21 @@ export default class {
     });
     //если активный таб указан в data-tabsstart
     tabsHeaderItems[tabStart].click();
+  }
+
+  tabsBack(button) {
+    const tabsNum = button.dataset.tabsback;
+    const parent = button.closest('.js-tabs');
+    const childs = parent.querySelectorAll('.js-tabs-header-item');
+    if (tabsNum <= childs.length - 1) {
+      window.scroll({
+        top: parent.offsetTop - 30,
+        left: 0,
+        behavior: 'smooth'
+      });
+      setTimeout(() => {
+        childs[tabsNum].click();
+      }, 300);
+    }
   }
 }
