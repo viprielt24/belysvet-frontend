@@ -842,8 +842,52 @@
 .aruna-bottom {
   padding-top: 50px;
 }
+/**
 
+ */
+.emunit__tabs-footer-table table thead td {
+  position: relative;
+}
 
+.emunit__tabs-footer-table .sort {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.emunit__tabs-footer .text-editor table thead td.aruna-partners-filter {
+  padding: 0;
+}
+
+.aruna-partners-filter {
+
+  .choices__list--dropdown .choices__list {
+    max-height: 200px;
+  }
+
+  .select-custom--thin.select-custom .choices {
+    padding: 16px 20px;
+  }
+
+  .select-custom--thin .choices__list--single .choices__item {
+    padding-bottom: 0;
+    font-family: var(--museo);
+    background-image: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: #333333;
+  }
+
+  .select-custom--thin.select-custom .choices[data-type*="select-one"]:after {
+    right: 20px;
+    margin-top: -7px;
+  }
+
+  .select-custom--thin .choices__list--single .choices__item:after {
+    content: none;
+  }
+}
 
 
 

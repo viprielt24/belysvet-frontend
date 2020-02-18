@@ -126,9 +126,11 @@ block content
                 tr
                   td(colspan=4).table-td-gray Интернет-магазины партнеров
                 tr
-                  td Интернет-магазин партнера
-                  td Остаток на складе, шт
-                  td Все города
+                  td.aruna-partners-filter: include ../common/aruna-partners-common
+                  td
+                    | Остаток на складе, шт
+                    .sort: .icon.icon--inline.icon--sort: include ../../images/sort.svg
+                  td.aruna-partners-filter: include ../common/aruna-cities-common
                   td Ссылка на интернет-магазин
               tbody
                 tr

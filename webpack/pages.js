@@ -15,6 +15,7 @@ const parametersInEachPage = {
   cities: data.cities,
   batch: data.batch,
   spec: data.spec,
+  partners: data.partners,
 };
 // страницы и параметры
 const pages = {
