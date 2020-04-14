@@ -16,6 +16,28 @@ const parametersInEachPage = {
   batch: data.batch,
   spec: data.spec,
   partners: data.partners,
+  projectsPosition: [
+    {
+      title: 'BS-ARUNA-81-L1-INEXI2',
+      value: '1',
+      selected: false
+    },
+    {
+      title: 'BS-ARUNA-81-L2-INEXI2',
+      value: '1',
+      selected: false
+    },
+    {
+      title: 'BS-ARUNA-81-L3-INEXI2',
+      value: '1',
+      selected: false
+    },
+    {
+      title: 'BS-ARUNA-81-L4-INEXI2',
+      value: '1',
+      selected: false
+    },
+  ]
 };
 // страницы и параметры
 const pages = {

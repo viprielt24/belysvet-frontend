@@ -163,6 +163,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-stack-popup-link')) {
+    import('../components/stack-popup/stack-popup-copy').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-prop-wrap')) {
     import('../pages/signone/js/props-toggle').then(module => {
       new module.default();

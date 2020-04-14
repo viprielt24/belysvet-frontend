@@ -11,9 +11,14 @@ block content
           .solution__tabs-title-item.js-tabs-header-item.active: a(href="javascript:void(0);").solution__tabs-title-link Описание и состав
           .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Структурные схемы
           .solution__tabs-title-item.js-tabs-header-item
-            a(href="javascript:void(0);" aria-label="Доступно после авторизации").solution__tabs-title-item--icon.solution__tabs-title-link.hint.hint--white.hint--bottom-left
-              .icon.icon--inline.icon--lock: include ../../images/lock.svg
-              | Примеры для проектирования
+            if isDesktop
+              a(href="javascript:void(0);" aria-label="Доступно после авторизации").solution__tabs-title-item--icon.solution__tabs-title-link.hint.hint--white.hint--bottom-left
+                .icon.icon--inline.icon--lock: include ../../images/lock.svg
+                | Примеры для проектирования
+            else
+              a(href="javascript:void(0);").solution__tabs-title-item--icon.solution__tabs-title-link
+                .icon.icon--inline.icon--lock: include ../../images/lock.svg
+                | Примеры для проектирования
           .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Примеры для технического задания
           .solution__tabs-title-item.js-tabs-header-item: a(href="javascript:void(0);").solution__tabs-title-link Типовые решения
 

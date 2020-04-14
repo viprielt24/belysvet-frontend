@@ -1,35 +1,41 @@
 .emunit__models-item
+  if page === 'signone'
+    .emunit__models-pic
+      a(href="javascript:void(0);" data-popupname="single" class= isDesktop ? 'pic js-popup-open' : 'pic')
+        img(src="./images/catalog/catalog-favourite-pic4.png").pic__img
   .emunit__models-wrap.js-prop-wrap
     .emunit__models-top
       .emunit__models-top-wrap
         .emunit__models-top-item
           .emunit__models-top-box
             a(href="javascript:void(0);").title BS-ARUNA-81-L1-INEXI2
-            .props__item
-              .props__name Артикул:
-              .props__value а15324
-        .emunit__models-top-item
-          .price
-            .price__item
-              .price__value 5100
-              .price__currency ₽
-          .count.js-count
-            .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
-            .count__item: input(type="number" value="250" max="999").count__input.form-control.js-input-number
-            .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
-          button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
-          button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
-          .emunit__models-top-links
-            a(href="javascript:void(0);"
-              class="link link--more-action hint hint--white hint--bottom hint--aruna hint--aruna-item"
-              aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") Заказной
-            a(href="javascript:void(0);"
-              class="link link--more-action hint hint--white hint--bottom hint--aruna hint--aruna-item"
-              aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") В наличии (3 579)
-          .emunit__models-top-props.props
-            .props__item
-              .props__name Единица измерения:
-              .props__value штуки
+            if isDesktop
+              .props__item
+                .props__name Артикул:
+                .props__value а15324
+        if isDesktop
+          .emunit__models-top-item
+            .price
+              .price__item
+                .price__value 5100
+                .price__currency ₽
+            .count.js-count
+              .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+              .count__item: input(type="number" value="250" max="999").count__input.form-control.js-input-number
+              .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+            button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
+            button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
+            .emunit__models-top-links
+              a(href="javascript:void(0);"
+                class="link link--more-action hint hint--white hint--bottom hint--aruna hint--aruna-item"
+                aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") Заказной
+              a(href="javascript:void(0);"
+                class="link link--more-action hint hint--white hint--bottom hint--aruna hint--aruna-item"
+                aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") В наличии (3 579)
+            .emunit__models-top-props.props
+              .props__item
+                .props__name Единица измерения:
+                .props__value штуки
     .emunit__models-middle
       .emunit__models-props.props.js-props
         .props__item
@@ -56,7 +62,35 @@
     .emunit__models-bottom
       .emunit__models-bottom-wrap
         .emunit__models-bottom-item
-          a(href="javascript:void(0);").link.js-props-toggle Свернуть характеристики
+          a(href="javascript:void(0);" class= isDesktop ? 'link js-props-toggle' : 'link link--more-action js-props-toggle') Свернуть характеристики
+        if isDesktop
+          .emunit__models-bottom-item
+            .form-element
+              label.label.label--checkbox
+                input.form-control.js-form-validate__checked(type='checkbox')
+                .icon.icon--checkbox
+                .label__text Сравнить
+      if isMobile
+        .emunit__models-top-item
+          .price
+            .price__item
+              .price__value 5100
+              .price__currency ₽
+          if page !== 'signone'
+            .emunit__models-top-links
+              a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintoutstock") В наличии (3 579)
+              a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintregistered") Заказной
+          .count.js-count
+            .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+            .count__item: input(type="number" value="250" max="999").count__input.form-control.js-input-number
+            .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+          if page !== 'signone'
+            .emunit__models-top-props.props
+              .props__item
+                .props__name Единица измерения:
+                .props__value штуки
+          button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
+          button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
         .emunit__models-bottom-item
           .form-element
             label.label.label--checkbox

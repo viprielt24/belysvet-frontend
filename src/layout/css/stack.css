@@ -2,25 +2,25 @@
 Блок поделиться
 Нельзя использовать названия - share и аналоги из-за адблока
  */
-.stack{
+.stack {
   display: flex;
   align-items: center;
 
-  .ya-share2__list{
+  .ya-share2__list {
     margin-bottom: 0;
     line-height: 1;
 
-    li{
+    li {
       padding-left: 0;
     }
 
-    li:before{
+    li:before {
       content: none;
     }
   }
 }
 
-.stack__title{
+.stack__title {
   margin-right: 13px;
   font-style: normal;
   font-weight: normal;
@@ -116,4 +116,49 @@
 .stack-popup-link {
   display: flex;
   justify-content: center;
+}
+
+/**
+mobile
+ */
+.mobile {
+
+  .stack-popup {
+    display: none;
+  }
+
+  .popup--visible {
+
+    .stack-popup {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      box-shadow: none;
+      transition: none;
+
+      &:before {
+        content: none;
+      }
+
+      .ya-share2 {
+        text-align: center;
+      }
+    }
+
+    .stack-popup-close {
+      display: none;
+    }
+    
+    .stack-popup-wrap {
+      margin-top: 24px;
+      padding: 0;
+    }
+  }
+
+
 }

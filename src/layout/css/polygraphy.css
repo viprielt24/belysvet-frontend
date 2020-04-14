@@ -3,7 +3,7 @@
 .polygraphy {
   margin-top: 53px;
   padding-top: 40px;
-  border-top: 1px solid var(--border);
+  border-top: var(--border);
 }
 
 .polygraphy__title {
@@ -27,7 +27,8 @@ media
 .mobile {
 
   .polygraphy {
-    margin-top: 22px;
+    margin-top: 25px;
+    padding-top: 20px;
   }
 
   .polygraphy__title {

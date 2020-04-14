@@ -28,7 +28,10 @@
     .subtitle Комментарий к заказу
     textarea(rows='4').form-control
     .checkout__bottom
-      .checkout__bottom-link
-        a(href="javascript:void(0);").link.link--simple Изменить
+      if isDesktop
+        .checkout__bottom-link
+          a(href="javascript:void(0);").link.link--simple Изменить
       .checkout__bottom-button
+        if isMobile
+          button.button.button--empty.button--empty-primary Изменить
         button.button оформить заказ

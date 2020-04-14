@@ -14,3 +14,8 @@ if page === 'solution'
 include ./pug/spec-reg
 if page === 'study'
   include ./pug/study
+if isMobile
+  include ./pug/stack-popup-mobile
+  include ./pug/hint-price-popup-mobile
+  include ./pug/hint-registered-popup-mobile
+  include ./pug/hint-outstock-popup-mobile

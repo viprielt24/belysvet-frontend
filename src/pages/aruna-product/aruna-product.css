@@ -888,34 +888,299 @@
     content: none;
   }
 }
+/**
+mobile
+ */
+.mobile {
 
+  .emunit__tabs-footer-table {
+    overflow-x: auto;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 0 16px;
+    padding-left: 0;
+  }
 
+  .emunit__tabs-footer-table-wrap {
+    position: relative;
 
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 16px;
+      bottom: 0;
+      width: 20px;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    }
+  }
 
+  .emunit__tabs-title {
+    overflow-x: auto;
+  }
 
+  .emunit__top-right-price .price-wrap {
+    flex-direction: column;
+  }
 
+  .emunit__top-right-wrap {
+    flex-direction: column;
+    align-items: center;
 
+    .count {
+      margin-right: 0;
+    }
 
+    .count__input {
+      width: 106px;
+    }
 
+    .price-descr {
+      margin: 12px 0;
+    }
+  }
 
+  .emunit__top-right-price .price__currency {
+    position: relative;
+    top: 0;
+    margin-left: 0;
+  }
 
+  .emunit__top-right-links {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 75px;
 
+    .link {
+      padding-bottom: 2px;
+      line-height: 1.1;
+    }
+  }
 
+  .emunit__top-right-links-wrap {
+    position: relative;
+    font-size: 0;
+  }
 
+  .emunit__top-right-links span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140px;
+    margin-top: 8px;
+    margin-left: 0;
+    line-height: 18px;
+  }
 
+  .emunit__top-right-price .price__item {
+    flex-direction: column;
+  }
 
+  .emunit__top-right-price {
+    margin-top: 25px;
+    margin-bottom: 20px;
 
+    .price {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
+  .emunit__top-right-price .price__currency .link {
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+  }
 
+  .emunit__top-right-price .price__value {
+    font-size: 28px;
+    font-weight: normal;
+  }
 
+  .emunit__top-right-compare {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
 
+    .link {
+      margin-right: 0;
+      margin-bottom: 17px;
 
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 
+  .emunit__tabs-title-item {
+    padding: 0 10px;
+    font-size: 14px;
+  }
 
+  .emunit__tabs-title-item:first-child {
+    padding: 0 10px 12px;
+  }
 
+  .emunit__tabs-footer-product {
+    padding: 0 16px;
 
+    .emunit__top-right-price {
+      padding: 0 13px 20px;
+      border: var(--border);
 
+      .price-descr {
+        width: 100%;
+        margin: 18px 0 25px;
+      }
 
+      .props__value {
+        display: inline;
+      }
 
+      .props__item {
+        font-size: 14px;
+        text-align: center;
+      }
 
+      .emunit__models-button-empty,
+      .emunit__models-button-fill {
+        width: 100%;
+        height: 40px;
+        font-size: 11px;
+      }
 
+      .emunit__models-button-empty {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .emunit__top-right-price-title {
+    background-color: rgba(196, 196, 196, 0.2);
+    margin: 0 -13px 20px;
+    padding: 13px;
+    font-family: var(--museo);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    border-bottom: var(--border);
+  }
+
+  .emunit__tabs-footer-product-props {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .emunit__top-right-price-bottom {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .emunit__tabs-footer .table {
+    margin-top: 18px;
+    min-width: 780px;
+  }
+
+  .aruna-partners-filter .select-custom--thin.select-custom .choices {
+    padding: 0;
+  }
+
+  .select-custom--default .choices__list--single .choices__item {
+    height: 19px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .emunit__tabs-footer-table {
+
+    &.text-editor table thead td {
+      padding: 13px;
+    }
+
+    &.text-editor table tbody td {
+      padding: 13px;
+      font-size: 13px;
+    }
+  }
+
+  .emunit__tabs-footer .text-editor table thead td {
+    font-size: 16px;
+  }
+
+  .aruna-bottom {
+
+    .catalog__title {
+      padding-right: 80px;
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    .catalog--aruna .swiper-button-prev {
+      right: 36px;
+    }
+  }
+
+  .emunit__models-temp-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .emunit__models-temp-button {
+    position: relative;
+    margin-bottom: 35px;
+    padding-top: 35px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background-color: var(--bdc);
+    }
+
+    .button {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  .emunit__models-table-wrap {
+    overflow-x: auto;
+
+    .table {
+      min-width: 500px;
+    }
+  }
+
+  .emunit__models-table table td.table-td-thead,
+  .emunit__models-table table thead td {
+    font-size: 16px !important;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  .emunit__models-table table tbody td {
+    font-size: 13px !important;
+    line-height: 21px;
+  }
+
+  .emunit__tabs-content-item.emunit__models .polygraphy{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

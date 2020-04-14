@@ -14,11 +14,19 @@ export default class {
   addEvents() {
     new Swiper(this.container, {
       loop: true,
+      loopedSlides: 4,
       slidesPerView: 4,
       spaceBetween: 30,
       navigation: {
         prevEl: this.navPrev,
         nextEl: this.navNext,
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 1,
+          loopedSlides: 1,
+          spaceBetween: 0,
+        }
       }
     });
   }

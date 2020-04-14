@@ -45,7 +45,7 @@
   }
 }
 
-.button--empty{
+.button--empty {
   border: 1px solid #9F9F9F;
   background-color: transparent;
   padding-top: 9px;
@@ -68,7 +68,12 @@
   }
 }
 
-.button--flat{
+.button--empty-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.button--flat {
   background-color: #FFFFFF;
   border: 1px solid #9F9F9F;
   box-sizing: border-box;
@@ -84,7 +89,7 @@
   color: #333333;
   transition: var(--trc), var(--trbg), var(--trb), box-shadow var(--time);
 
-  &:hover{
+  &:hover {
     background: #A1BF35;
     box-shadow: 0 6px 20px rgba(97, 174, 59, 0.3);
     color: #FFFFFF;
@@ -92,7 +97,7 @@
   }
 }
 
-.button--press{
+.button--press {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,33 +120,34 @@
   color: #333333;
   transition: var(--trc), var(--trbg), box-shadow var(--time);
 
-  &:hover{
+  &:hover {
     color: #A1BF35;
     background-color: #FFFFFF;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   }
 }
 
-.button-size-sm{
+.button-size-sm {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.button-size-y-sm{
+.button-size-y-sm {
   padding-top: 14px;
   padding-bottom: 15px;
 }
 
-.button-size-md{
+.button-size-md {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 /**
 media
  */
 .mobile {
 
-  .button-size-md{
+  .button-size-md {
     padding-left: 27px;
     padding-right: 27px;
   }

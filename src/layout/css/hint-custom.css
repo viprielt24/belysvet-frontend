@@ -91,3 +91,13 @@
 
   }
 }
+/**
+mobile
+ */
+.mobile {
+
+  .part__wrap [class*="hint--"].hint--white:before,
+  .part__wrap [class*="hint--"].hint--white:after {
+    content: none;
+  }
+}

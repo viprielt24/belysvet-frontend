@@ -479,4 +479,9 @@ media
       font-size: 11px;
     }
   }
+
+  .accordion--aruna .accordion__content-wrap {
+    background-color: #F3F3F3;
+    padding: 0;
+  }
 }

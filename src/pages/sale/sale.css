@@ -48,3 +48,23 @@
     border-top: var(--border);
   }
 }
+/**
+mobile
+ */
+.mobile {
+
+  .sale .catalog__footer {
+    text-align: center;
+  }
+
+  .sale .catalog__footer .link {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .sale .catalog__footer .button--press {
+    width: 100%;
+    font-size: 13px;
+  }
+}

@@ -33,10 +33,11 @@ block content
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--print: include ../../images/print.svg
                   .link__text Распечатать
-                .link.link--icon.js-stack-trigger
+                div(class= isDesktop ? 'link link--icon js-stack-trigger' : 'link link--icon js-popup-open' data-popupname="stack")
                   .icon.icon--inline.icon--share: include ../../images/share.svg
                   .link__text Поделиться
-                  .link__wrap: include ../../pages/common/signone-share-common
+                  if isDesktop
+                    .link__wrap: include ../../pages/common/signone-share-common
 
       .container.emunit__middle
         .emunit__tabs.js-tabs

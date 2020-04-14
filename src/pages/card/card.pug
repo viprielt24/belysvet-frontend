@@ -6,25 +6,45 @@ block content
       include ../../components/content-header/content-header
     .content__text-editor.card
       .container
-        include ./pug/card-table
-        .card-footer
-          .card-footer__descr
-            .card-footer__title Итого ваш заказ
-            .card-footer__subtitle Заказы, стоимостью свыше 5 000 рублей доставляются бесплатно
-          .card-footer__wrap
-            .card-footer__item 2 345 позиций
-            .card-footer__item 11 021 500,00 рублей
-        .card-buttons
-          .card-buttons__clear
-            a(href="javascript:void(0);").link.link--icon
-              .icon.icon--close.icon--close-primary.icon--close-medium
-              .link__text Очистить корзину
-          .card-buttons__wrap
-            .card-buttons__box
-              button.button оформить заказ
-              button.button.button--empty купить в кредит
+        if isDesktop
+          include ./pug/card-table
+        else
+          include ./pug/card-item
+          include ./pug/card-item
+          include ./pug/card-item
+        if isDesktop
+          .card-footer
+            .card-footer__descr
+              .card-footer__title Итого ваш заказ
+              .card-footer__subtitle Заказы, стоимостью свыше 5 000 рублей доставляются бесплатно
+            .card-footer__wrap
+              .card-footer__item 2 345 позиций
+              .card-footer__item 11 021 500,00 рублей
+          .card-buttons
+            .card-buttons__clear
+              a(href="javascript:void(0);").link.link--icon
+                .icon.icon--close.icon--close-primary.icon--close-medium
+                .link__text Очистить корзину
+            .card-buttons__wrap
+              .card-buttons__box
+                button.button оформить заказ
+                button.button.button--empty купить в кредит
+              button.button.button--empty отправить заказ дистрибьютору
+              .card-buttons__text (На следующем шаге вы сможете выбрать до трех дилеров, кому будет переправлен ваш заказ)
+        else
+          .card-footer-mobile
+            .card-footer-mobile-title Итого ваш заказ
+            .card-footer-mobile-descr Заказы, стоимостью свыше 5 000 рублей доставляются бесплатно
+            .card-footer-mobile-position 2 345 позиций
+            .card-footer-mobile-total 11 021 500,00 рублей
+            button.button.button--footer-full оформить заказ
+            button.button.button--empty купить в кредит
             button.button.button--empty отправить заказ дистрибьютору
             .card-buttons__text (На следующем шаге вы сможете выбрать до трех дилеров, кому будет переправлен ваш заказ)
+            .card-buttons__link
+              a(href="javascript:void(0);").link.link--icon
+                .icon.icon--close.icon--close-primary.icon--close-medium
+                .link__text Очистить корзину
     .card-descr
       .container
         p Сайт не является интернет-магазином, мы лишь предоставляем информацию о наличии товара на наших складах и складах наших дилеров и дистрибьюторов.  Пару фраз про то и сёспо этой теме...

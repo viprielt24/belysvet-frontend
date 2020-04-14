@@ -34,6 +34,12 @@ export default class {
         prevEl: this.navPrev,
         nextEl: this.navNext,
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 22,
+        }
+      }
     });
   }
 

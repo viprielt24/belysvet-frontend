@@ -25,12 +25,18 @@ export default class {
   addEvents() {
     const thumbs = new Swiper(this.thumbsContainer, {
       slidesPerView: 4,
+      loopedSlides: 4,
       spaceBetween: 16,
       loop: true,
-      loopedSlides: 4,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          loopedSlides: 2,
+        }
+      }
     });
 
     const slider = new Swiper(this.container, {
@@ -65,12 +71,18 @@ export default class {
 
         const popupThumbs = new Swiper(this.popupThumbsContainer, {
           slidesPerView: 4,
+          loopedSlides: 4,
           spaceBetween: 16,
           loop: true,
-          loopedSlides: 4,
           watchSlidesVisibility: true,
           watchSlidesProgress: true,
           slideToClickedSlide: true,
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              loopedSlides: 2,
+            }
+          }
         });
 
         const popupSlider = new Swiper(this.popupContainer, {

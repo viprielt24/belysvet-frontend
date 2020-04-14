@@ -31,6 +31,12 @@ export default class {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          loopedSlides: 2,
+        }
+      }
     });
 
     const slider = new Swiper(this.container, {
@@ -57,6 +63,12 @@ export default class {
           watchSlidesVisibility: true,
           watchSlidesProgress: true,
           slideToClickedSlide: true,
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              loopedSlides: 2,
+            }
+          }
         });
 
         const popupSlider = new Swiper(this.popupContainer, {

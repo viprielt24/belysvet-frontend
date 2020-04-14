@@ -13,32 +13,49 @@ block content
           .col-sm-6.emunit__top-right
             .emunit__top-right-articul Артикул: а15744
             include ../../pages/common/emunit-parts-common
-            .emunit__top-right-links
-              a(href="javascript:void(0);"
-                class="link link--more-action hint hint--white hint--bottom hint--aruna"
-                aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") Заказной
-              .emunit__top-right-links-wrap
+            if isDesktop
+              .emunit__top-right-links
                 a(href="javascript:void(0);"
                   class="link link--more-action hint hint--white hint--bottom hint--aruna"
-                  aria-label="Для определения сроков изготовления и поставки этого товара добавьте товар в корзину и отправьте нам заказ. Наш менеджер уточнит информацию, свяжется с вами и сообщит срок изготовления/поставки товара.") Нет в наличии
-                span (Добавьте в заказ для определения сроков поставки)
-            .emunit__top-right-price
-              .price-wrap
-                .price-descr.props
-                  .props__item
-                    .props__name Единица измерения:
-                    .props__value штуки
-                .price: .price__item
-                  .price__value 4700,00
-                  .price__currency: a(href="javascript:void(0);"
+                  aria-label="Текстовая подсказка для статуса позиции. Примечание автора, статусы бывают: Складской, Комплектация, Заказной, Распродажа остатков, В разработке.") Заказной
+                .emunit__top-right-links-wrap
+                  a(href="javascript:void(0);"
                     class="link link--more-action hint hint--white hint--bottom hint--aruna"
-                    aria-label="Текстовая подсказка для \"цена\", текст появляется при наведении/клике в слово \"Цена\""
-                  ) Цена (руб.)
+                    aria-label="Для определения сроков изготовления и поставки этого товара добавьте товар в корзину и отправьте нам заказ. Наш менеджер уточнит информацию, свяжется с вами и сообщит срок изготовления/поставки товара.") Нет в наличии
+                  span (Добавьте в заказ для определения сроков поставки)
+            else
+              .emunit__top-right-price
+                .price: .price__item
+                  .price__currency: a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintprice") Цена (руб.)
+                  .price__value 4700,00
+              .emunit__top-right-links
+                .emunit__top-right-links-wrap
+                  a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintoutstock") Нет в наличии
+                  span (Добавьте в заказ для определения сроков поставки)
+                a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintregistered") Заказной
+              if isDesktop
+                .emunit__top-right-price
+                  .price-wrap
+                    .price-descr.props
+                      .props__item
+                        .props__name Единица измерения:
+                        .props__value штуки
+                    .price: .price__item
+                      .price__value 4700,00
+                      .price__currency: a(href="javascript:void(0);"
+                        class="link link--more-action hint hint--white hint--bottom hint--aruna"
+                        aria-label="Текстовая подсказка для \"цена\", текст появляется при наведении/клике в слово \"Цена\""
+                        ) Цена (руб.)
               .emunit__top-right-wrap
                 .count.js-count
                   .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
                   .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
                   .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+                if isMobile
+                  .price-descr.props
+                    .props__item
+                      .props__name Единица измерения:
+                      .props__value штуки
                 button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
                 button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
             .emunit__top-right-compare
@@ -48,7 +65,7 @@ block content
               a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
                 .icon.icon--inline.icon--compare: include ../../images/compare.svg
                 .link__text Сравнить выбранное
-              a(href="javascript:void(0);" style='display:none').link.link--icon.link--icon-path-fill
+              //-a(href="javascript:void(0);" style='display:none').link.link--icon.link--icon-path-fill
                 .icon.icon--close.icon--close-primary.icon--close-medium
                 .link__text Удалить из сравнения
             .emunit__top-right-proj
@@ -63,11 +80,11 @@ block content
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--print: include ../../images/print.svg
                   .link__text Распечатать
-                .link.link--icon.js-stack-trigger
+                div(class= isDesktop ? 'link link--icon js-stack-trigger' : 'link link--icon js-popup-open' data-popupname="stack")
                   .icon.icon--inline.icon--share: include ../../images/share.svg
                   .link__text Поделиться
-                  .link__wrap: include ../../pages/common/signone-share-common
-
+                  if isDesktop
+                    .link__wrap: include ../../pages/common/signone-share-common
       .container.emunit__middle
         .emunit__tabs.js-tabs
           .emunit__tabs-title
@@ -79,8 +96,10 @@ block content
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
               .emunit__models-temp-text Аксессуары и совместимые продукты для данной товарной позиции не предусмотрены
+              if isMobile
+                .emunit__models-temp-button: button.button Возможности для заказа
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
-              .emunit__models-table.text-editor: table.table
+              .emunit__models-table.text-editor: .emunit__models-table-wrap: table.table
                 thead
                   tr
                     td.table-td-center.table-td-thead Параметры
@@ -106,25 +125,49 @@ block content
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
               include ../common/aruna-polygraphy-common
           .emunit__tabs-footer
-            .emunit__tabs-footer-table.text-editor: table.table
-              thead
-                tr
-                  td(rowspan=2) Склад компании «Белый свет», г. Москва
-                  td.table-td-center Остаток на складе, шт
-                  td.table-td-center Статус позиции
-                  td.table-td-center Цена 4 700,00 руб.
-                tr
-                  td.table-td-tbody 2 345
-                  td.table-td-tbody Заказной
-                  td.emunit__tabs-footer-buttons
+            if isMobile
+              .emunit__tabs-footer-product
+                .emunit__top-right-price
+                  .emunit__top-right-price-wrap
+                    .emunit__top-right-price-title Склад компании «Белый свет», г.&nbsp;Москва
+                    .price-wrap
+                      .price: .price__item
+                        .price__value 4700,00
+                  .emunit__tabs-footer-product-props
+                    .emunit__tabs-footer-product-props-item В наличии (2 345)
+                    .emunit__tabs-footer-product-props-item Заказной
+                  .emunit__top-right-wrap
                     .count.js-count
                       .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
                       .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
                       .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
-                    button.button.emunit__models-button-fill в корзину
-                    button.button.button--empty.emunit__models-button-empty В спецификацию
-                tr
-                  td(colspan=4).table-td-gray Интернет-магазины партнеров
+                    .price-descr.props
+                      .props__item
+                        .props__name Единица измерения:
+                        .props__value штуки
+                    button(data-popupname="addcart").button.emunit__models-button-fill.js-popup-open в корзину
+                    button(data-popupname="specreg").button.button--empty.emunit__models-button-empty.js-popup-open В спецификацию
+                .emunit__top-right-price-bottom Интернет-магазины партнеров
+            .emunit__tabs-footer-table-wrap: .emunit__tabs-footer-table.text-editor: table.table
+              thead
+                if isDesktop
+                  tr
+                    td(rowspan=2) Склад компании «Белый свет», г. Москва
+                    td.table-td-center Остаток на складе, шт
+                    td.table-td-center Статус позиции
+                    td.table-td-center Цена 4 700,00 руб.
+                  tr
+                    td.table-td-tbody 2 345
+                    td.table-td-tbody Заказной
+                    td.emunit__tabs-footer-buttons
+                      .count.js-count
+                        .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+                        .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
+                        .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+                      button.button.emunit__models-button-fill в корзину
+                      button.button.button--empty.emunit__models-button-empty В спецификацию
+                  tr
+                    td(colspan=4).table-td-gray Интернет-магазины партнеров
                 tr
                   td.aruna-partners-filter: include ../common/aruna-partners-common
                   td

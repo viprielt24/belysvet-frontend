@@ -1,7 +1,8 @@
 mixin compare-item(item)
   .catalog__item.js-catalog__item
-    a(href="javascript:void(0);" aria-label="Удалить из сравнения").catalog__compare-close.js-catalog__compare-close.hint.hint--white.hint--left
-      .icon.icon--close.icon--close-primary
+    if isDesktop
+      a(href="javascript:void(0);" aria-label="Удалить из сравнения").catalog__compare-close.js-catalog__compare-close.hint.hint--white.hint--left
+        .icon.icon--close.icon--close-primary
     if item.img
       .pic: img(src= item.img).pic__img
     if item.advdescr
@@ -9,18 +10,24 @@ mixin compare-item(item)
     if item.title
       .title BS-ARUNA-81-L1-INEXI2
     if item.subtitle
-      .subtitle Артикул: а16581
+      .subtitle Артикул: <span>а16581</span>
     .catalog__item-links
       a(href="javascript:void(0);").link.link--more-action Складской
       a(href="javascript:void(0);").link.link--more-action В наличии (3 579)
+      if isMobile
+        .props
+          .props__item
+            .props__name Единица измерения:
+            .props__value штуки
       .catalog__item-links-wrap
         a(href="javascript:void(0);").link.link--more-action Цена (руб.)
         .price: .price__item: .price__value 4 700,00
     .catalog__item-count
-      .props
-        .props__item
-          .props__name Единица измерения:
-          .props__value штуки
+      if isDesktop
+        .props
+          .props__item
+            .props__name Единица измерения:
+            .props__value штуки
       .count.js-count
         .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
         .count__item: input(type="number" value="1" max="999").count__input.form-control.js-input-number
@@ -28,7 +35,10 @@ mixin compare-item(item)
     .catalog__item-button
       button.button В корзину
       button.button.button--empty В спецификацию
-
+    if isMobile
+      a(href="javascript:void(0);").link.link--icon.catalog__compare-close.js-catalog__compare-close
+        .icon.icon--close.icon--close-primary
+        .link__text Удалить из списка
     //-.catalog__item-footer
       if item.price
         if item.balance
@@ -41,4 +51,6 @@ mixin compare-item(item)
   .catalog__compare
     each compare, index in item.compare
       div(class= "catalog__compare-item js-catalog__compare-item catalog__compare-param-" + index)
+        if isMobile
+          .catalog__compare-name= compare.name
         .catalog__compare-value= compare.value

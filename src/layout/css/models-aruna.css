@@ -305,3 +305,353 @@
   margin-left: 10px;
   padding: 0;
 }
+/**
+mobile
+ */
+.mobile {
+
+  .emunit__top-links-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    margin-top: 25px;
+    padding-top: 0;
+
+    .link {
+      margin-left: 0;
+      margin-top: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .stack-popup {
+      display: none;
+    }
+  }
+
+  .emunit__models-top-wrap {
+    flex-direction: column;
+  }
+
+  .emunit__models-top-item {
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .emunit__models-top-links {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .emunit__top-left {
+    margin-bottom: 35px;
+  }
+
+  .emunit__models {
+
+    .accordion__content {
+      background-color: #F3F3F3;
+    }
+
+    .accordion__item {
+      margin-bottom: 0;
+    }
+
+    .accordion__header {
+      padding: 16px 40px 16px 16px;
+    }
+
+    .accordion__toggle {
+      top: 50%;
+      margin-top: -6px;
+    }
+
+    .title {
+      padding: 0;
+    }
+
+    .count {
+      margin-top: 20px;
+
+      & + .button {
+        margin-top: 20px;
+      }
+    }
+
+    .count__input {
+      width: 106px;
+    }
+  }
+
+  .emunit__models-item {
+    flex-direction: column;
+    background-color: #fff;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid var(--primary);
+
+    &:hover {
+      background-color: #fff;
+    }
+    
+    &:after {
+      content: none;
+    }
+  }
+
+  .emunit__models-box-title {
+    position: relative;
+    background-color: #F3F3F3;
+    margin-bottom: 20px;
+    padding: 12px 16px 20px;
+    font-size: 13px;
+    line-height: 21px;
+    border: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 0;
+      height: 1px;
+      background-color: rgba(196, 196, 196, 0.5);
+    }
+  }
+
+  .emunit__models-box-propshider {
+    display: none;
+  }
+
+  .emunit__models-props {
+
+    .props__item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+    }
+
+    .props__value,
+    .props__name {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .emunit__models-top-props {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    .props__item {
+      font-size: 14px;
+    }
+  }
+
+  .emunit__models-bottom .link {
+    display: inline-block;
+    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .emunit__models-bottom-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .emunit__models .price {
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .price__item {
+      font-size: 24px;
+    }
+
+    & + .count {
+      margin-top: 0;
+    }
+  }
+
+  .emunit__models-button-fill,
+  .emunit__models-button-empty {
+    width: 100%;
+    margin-left: 0;
+    font-size: 11px;
+  }
+
+  .emunit__models-button-empty {
+    margin-top: 15px;
+    margin-bottom: 16px;
+  }
+
+  .emunit__models .label--checkbox .label__text {
+    font-size: 13px;
+  }
+
+  .emunit__archive {
+
+    .accordion__header {
+      padding: 16px 40px 16px 16px;
+    }
+
+    .props {
+      padding: 13px;
+    }
+
+    .props__item {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 13px;
+      font-family: var(--opens);
+      color: #404040;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .props__name {
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .props__value {
+      font-weight: 400;
+    }
+  }
+
+  .emunit__archive-item {
+    margin-bottom: 20px;
+    border: 1px solid rgba(196, 196, 196, 0.5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .emunit__archive-part-title {
+    display: flex;
+    height: 47px;
+    align-items: center;
+    background-color: rgba(196, 196, 196, 0.2);
+    padding: 14px 13px;
+    font-family: var(--opens);
+    font-size: 13px;
+    font-weight: bold;
+  }
+  /**
+
+   */
+  .emunit__models-filter {
+    flex-direction: column;
+  }
+
+  .aruna.content__text-editor {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  .emunit__top-right-descr p {
+    font-size: 18px;
+  }
+
+  .emunit__top-right {
+
+    .text-editor p {
+      font-size: 14px;
+    }
+  }
+
+  .emunit__tabs-title-item {
+    font-size: 15px;
+    line-height: 19px;
+
+    &:first-child {
+      padding: 0 30px;
+    }
+  }
+
+  .emunit__models-filter-title {
+    font-size: 12px;
+  }
+
+  .emunit__models-filter {
+    margin-bottom: 30px;
+    padding: 0 16px;
+  }
+
+  .emunit__middle {
+    padding: 0;
+  }
+
+  .emunit__bottom {
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+    .container:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .emunit__review {
+    max-width: 100%;
+    padding: 35px 16px 0;
+
+    &.text-editor ul {
+      margin-bottom: 20px;
+    }
+  }
+
+  .emunit__review-item {
+    margin-bottom: 20px;
+  }
+
+  .emunit__review-item:first-of-type {
+
+    .emunit__review-title {
+      font-size: 20px;
+    }
+  }
+
+  .emunit__review-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .emunit__review-descr {
+    font-size: 14px;
+  }
+
+  .emunit__top-links .link__text,
+  .emunit__top-right-proj .link__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .emunit__models-pic {
+    width: 205px;
+    height: 200px;
+    margin: 24px auto 40px;
+  }
+}

@@ -108,4 +108,26 @@
   .swiper-container{
     height: 89px;
   }
+
+  .swiper-slide  {
+    border-bottom: 3px solid transparent;
+    transition: var(--trb);
+
+    &.swiper-slide-active {
+      border-color: var(--primary);
+    }
+  }
+}
+/**
+mobile
+ */
+.mobile {
+
+  .gallery-counter-text {
+    font-size: 11px;
+  }
+
+  .gallery-counter .swiper-pagination-fraction {
+    font-size: 14px;
+  }
 }

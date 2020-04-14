@@ -1,5 +1,5 @@
 .checkout__content-self-item.js-tabs-content-item
-  .checkout__form-auth-success-wrap
+  .checkout__form-auth-success-wrap.success--with-back
     .checkout__form-header
       .checkout__form-header-title Авторизация прошла успешно
       .checkout__form-header-subtitle При необходимости, для этого заказа вы можете изменить свои контактные данные.<br> Ваши регистрационные данные при этом не изменятся.
@@ -45,7 +45,9 @@
                 .icon.icon--clip
                 - filePlaceholder = 'Прикрепить реквизиты компании';
                 include ../../../components/input-file/input-file
-              div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+              div(class= isDesktop ? "form-text hint hint--white hint--bottom-right hint--large" : "form-text"
+              aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения."
+                ) (Не более 100Mb)
           .col-sm-7
             .form-group
               .form-element: label
@@ -54,7 +56,7 @@
 
         .form__footer
           .col-sm-6
-            a(href="javascript:void(0);").link.link--back
+            a(href="javascript:void(0);").link.link--back.button.button--empty.button--empty-primary
               .link__icon: include ../../../images/arrow-right-small.svg
               .link__text Назад
           .col-sm-6

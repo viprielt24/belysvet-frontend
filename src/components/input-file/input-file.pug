@@ -6,4 +6,5 @@ input(type='file' name='inputFile[]' data-multiple-caption='{count} files select
 label(for='inputFile' + random class="form-inputfile-label")
   span.form-inputfile-name.js-inputfile-name= filePlaceholder
 
-div(class="form-inputfile-clear js-inputfile-clear hint hint--white hint--right" aria-label="Открепить файл"): .icon.icon--close.icon--close-primary
+div(class= isDesktop ? "form-inputfile-clear js-inputfile-clear hint hint--white hint--right" : "form-inputfile-clear js-inputfile-clear"
+  aria-label="Открепить файл"): .icon.icon--close.icon--close-primary

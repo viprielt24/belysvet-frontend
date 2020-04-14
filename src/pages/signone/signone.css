@@ -754,15 +754,162 @@
 }
 
 
+/**
+mobile
+ */
+.mobile {
 
+  .emunit__top-right-table.defin {
 
+    dl {
+      flex-direction: column;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 
+  .emunit__top-right-compatibility {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: var(--border);
+  }
 
+  .emunit__models {
+    background-color: #F3F3F3;
+  }
 
+  .aruna.content__text-editor {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
 
+  .emunit__top-right-descr p {
+    font-size: 18px;
+  }
 
+  .emunit__top-right {
 
+    .text-editor p {
+      font-size: 14px;
+    }
+  }
 
+  .emunit__tabs-title-item {
+    height: 70px;
+    font-size: 15px;
+    line-height: 19px;
 
+    &:first-child {
+      padding: 0 20px;
+    }
 
+    &:last-child {
+      padding: 0 30px;
+    }
+  }
 
+  .emunit__models-filter-title {
+    font-size: 12px;
+  }
+
+  .emunit__tabs-content-item {
+    padding-top: 0;
+  }
+
+  .emunit__models-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 25px 16px 30px;
+
+    .select-custom--default .choices__list--single .choices__item {
+      height: 24px;
+      padding-left: 0;
+      padding-right: 22px;
+      font-size: 14px;
+    }
+
+    .select-custom--default .choices__list--single .choices__item.choices__placeholder {
+      font-size: 14px;
+    }
+
+    .select-custom--default .choices[data-type*="select-one"]:after {
+      right: 0;
+      margin-top: -7px;
+      background-size: 10px 10px;
+    }
+  }
+
+  .emunit__middle {
+    padding: 0;
+  }
+
+  .emunit__bottom {
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+    .container:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .emunit__review {
+    max-width: 100%;
+    padding: 35px 16px 0;
+
+    &.text-editor ul {
+      margin-bottom: 20px;
+    }
+  }
+
+  .emunit__review-item {
+    margin-bottom: 20px;
+  }
+
+  .emunit__review-item:first-of-type {
+
+    .emunit__review-title {
+      font-size: 20px;
+    }
+  }
+
+  .emunit__review-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .emunit__top-links .link__text,
+  .emunit__top-right-proj .link__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .emunit__models-filter-item{
+    margin-top: 17px;
+
+    &:first-child {
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
+
+  .emunit__review-item--more {
+    padding-top: 30px;
+  }
+
+  .emunit__review-item--more .link__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .emunit__review-item--more .link {
+    padding-bottom: 2px;
+  }
+
+  .emunit.content__text-editor {
+    padding-bottom: 10px;
+  }
+}

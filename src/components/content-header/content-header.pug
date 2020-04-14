@@ -72,27 +72,76 @@ include ../crumbs/crumbs
       h1.title!= pageName
 
   else if page === 'card'
-    .content__bottom.content__bottom--checkout
-      .content__support
-        .content__support-title Есть вопрос?
-        .content__support-bottom
-         .content__support-descr Позвоните в службу поддержки
-         a(href="javascript:void(0);").link +7 (495) 785-17-67
-      h1.title!= pageName
+    if isDesktop
+      .content__bottom.content__bottom--checkout
+        .content__support
+          .content__support-title Есть вопрос?
+          .content__support-bottom
+           .content__support-descr Позвоните в службу поддержки
+           a(href="javascript:void(0);").link +7 (495) 785-17-67
+        h1.title!= pageName
+    else
+      h1.title.title--card!= pageName
+      .content__bottom.content__bottom--checkout
+        .content__support
+          .content__support-title Есть вопрос?
+          .content__support-bottom
+            .content__support-descr Позвоните в службу поддержки
+            a(href="javascript:void(0);").link +7 (495) 785-17-67
 
   else if page === 'card-empty'
     .content__bottom.content__bottom--checkout
-      .content__support
-        .content__support-title Есть вопрос?
-        .content__support-bottom
-         .content__support-descr Позвоните в службу поддержки
-         a(href="javascript:void(0);").link +7 (495) 785-17-67
-      h1.title!= pageName
+      if isDesktop
+        .content__support
+          .content__support-title Есть вопрос?
+          .content__support-bottom
+           .content__support-descr Позвоните в службу поддержки
+           a(href="javascript:void(0);").link +7 (495) 785-17-67
+        h1.title!= pageName
+      else
+        h1.title!= pageName
+        .content__support
+          .content__support-title Есть вопрос?
+          .content__support-bottom
+            .content__support-descr Позвоните в службу поддержки
+            a(href="javascript:void(0);").link +7 (495) 785-17-67
 
   else if page === 'compare'
     .content__bottom
       h1.title!= pageName
     .content__top.content__top--signone: include ../../pages/common/tagline
+    if isMobile
+      .compare__maincel
+        .compare__maincel-wrap.js-compare__maincel-wrap
+          //- контроль
+          .compare__maincel-control
+            .compare__clear.js-compare__clear
+              a(href="javascript:void(0);").compare__clear-link
+                .icon.icon--close.icon--close-primary.icon--inline: include ../../images/close.svg
+                | Очистить весь список
+            .compare__print.js-compare__print
+              a(href="javascript:void(0);").compare__print-link
+                .icon.icon--print.icon--inline: include ../../images/print.svg
+                | Распечатать список
+          //- выбор
+          .compare__maincel-choose
+            .title Показать
+            .form-group
+              .form-element
+                label.label.label--radio
+                  input.form-control(type="radio" checked='' name="compare")
+                  .icon.icon--radio
+                  .label__text Все параметры
+              .form-element
+                label.label.label--radio
+                  input.form-control(type="radio" name="compare")
+                  .icon.icon--radio
+                  .label__text Только отличия
+        .compare__maincel-mobile
+          - placeholder = 'Товар 1'
+          include ../../pages/common/project-position-common
+          - placeholder = 'Товар 2'
+          include ../../pages/common/project-position-common
 
   else if page === 'solution'
     .content__top.content__top--signone: include ../../pages/common/tagline

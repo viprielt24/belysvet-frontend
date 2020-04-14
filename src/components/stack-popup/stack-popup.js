@@ -12,7 +12,6 @@ export default class {
       const stackWrap = trigger.querySelector('.stack-popup-wrap');
       const stackCloseBtn = trigger.querySelector('.js-stack-popup-close');
       const stackInput = trigger.querySelector('.form-control');
-      const stackCopyBtn = trigger.querySelector('.js-stack-popup-link');
 
       stackCloseBtn.addEventListener('click', () => {
         this.stacksClose(trigger, stack);
@@ -20,10 +19,6 @@ export default class {
 
       trigger.addEventListener('click', (event) => {
         this.stacksToggle(trigger, stack, stackWrap, stackCloseBtn, event);
-      });
-
-      stackCopyBtn.addEventListener('click', () => {
-        this.stackCopyBuffer(stackInput);
       });
     });
   }
@@ -42,11 +37,5 @@ export default class {
   stacksClose(trigger, stack) {
     trigger.classList.remove('is-active');
     stack.classList.remove('is-visible');
-  }
-
-  stackCopyBuffer(stackInput) {
-    stackInput.select();
-    stackInput.setSelectionRange(0, 99999); /*For mobile devices*/
-    document.execCommand("copy");
   }
 }
