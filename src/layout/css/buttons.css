@@ -2,7 +2,7 @@
   display: inline-block;
   min-height: 39px;
   padding: 12px;
-  background-color: #A1BF35;
+  background-color: var(--primary);
   border-radius: 3px;
   font-family: var(--museo);
   color: #ffffff;

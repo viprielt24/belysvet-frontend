@@ -4,6 +4,18 @@
     .header-mobile__wrap
       .header-mobile__city: include ../../../pages/common/header-select-common
       .header-mobile__client: include ./header-client
+  .header-mobile__search.js-header-mobile__search
+    .header-mobile__search-wrap
+      .form: form(action="javascript:void(0);")
+        .form-group
+          .form-element
+            input(type="text" placeholder="Поиск").form-control
+            .error
+          .button-wrap: button(type="submit").button
+    .header-mobile__search-result
+      .header-mobile__search-result-title Результаты поиска
+      .header-mobile__search-result-descr Нашлось 10 результатов
+
   .header-mobile__middle: include ./header-menu
   .header-mobile__bottom: include ./header-topmenu
   .header-mobile__orders: include ../../../components/orders/orders

@@ -157,6 +157,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-catalog-press')) {
+    import('../pages/common/js/pressMain-common').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-stack-trigger')) {
     import('../components/stack-popup/stack-popup').then(module => {
       new module.default();

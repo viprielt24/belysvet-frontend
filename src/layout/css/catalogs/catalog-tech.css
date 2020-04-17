@@ -180,4 +180,13 @@ media
       line-height: 19px;
     }
   }
+
+  .catalog--tech-main {
+    padding: 20px 0;
+
+    .catalog__item .button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

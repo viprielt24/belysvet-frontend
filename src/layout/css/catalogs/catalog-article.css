@@ -251,4 +251,25 @@ media
       line-height: 1;
     }
   }
+
+  .catalog--article-main {
+    margin-bottom: 45px;
+
+    .swiper-container {
+      padding-bottom: 0;
+    }
+
+    .swiper-pagination,
+    .date {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      right: 36px;
+    }
+
+    .catalog__title {
+      margin-bottom: 13px;
+    }
+  }
 }

@@ -31,12 +31,18 @@ if isDesktop
                       +article(item, index)
 
 if isMobile
-  .catalog.catalog--article
+  .catalog.catalog--article.catalog--article-main.js-catalog-review
     .container
       .catalog__header
         .catalog__title Обзоры
+        .swiper-button-prev
+        .swiper-button-next
       .catalog__content
-        .catalog__wrap
-          each item, index in article
-            .catalog__col
-              +article(item, index)
+        .swiper-container
+          .swiper-pagination
+          .swiper-wrapper
+            each item, index in article
+              .swiper-slide
+                .catalog__wrap
+                  .catalog__col
+                    +article(item, index)

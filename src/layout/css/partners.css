@@ -74,13 +74,17 @@ media
     }
 
     .descr{
-      margin-top: 18px;
+      margin-top: 15px;
+      margin-bottom: 15px;
       font-size: 14px;
       line-height: 22px;
     }
 
     .button {
-      width: 100%;
+      width: 196px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -90,6 +94,6 @@ media
   }
 
   .partners__box{
-    padding: 34px 16px;
+    padding: 25px 18px 35px;
   }
 }

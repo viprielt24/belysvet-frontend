@@ -33,8 +33,23 @@ media
  */
 .mobile {
 
+  .event {
+    position: relative;
+    padding-top: 12px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background-color: rgba(196, 196, 196, 0.5);;
+    }
+  }
+
   .event__wrap{
-    padding: 30px 17px;
+    padding: 30px 17px 20px;
   }
 
   .title{

@@ -240,4 +240,8 @@ media
       line-height: 23px;
     }
   }
+
+  .swiper-button-prev {
+    right: 36px;
+  }
 }

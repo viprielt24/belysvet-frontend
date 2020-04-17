@@ -265,16 +265,37 @@ media
 
     .catalog__item{
       min-height: 144px;
-      padding: 42px 12px 13px;
+      padding: 39px 13px 20px;
       background-position: 100% 0;
       background-size: 60%;
 
+      &:hover .link {
+        color: #fff;
+      }
     }
 
     .title{
       font-size: 15px;
       min-height: auto;
       margin-bottom: 16px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 124px;
+      height: 37px;
+      background-color: var(--primary);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      font-family: var(--opens);
+      font-size: 11px;
+      color: #fff;
+      border: 0;
+      border-radius: 2.64078px;
+      box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
     }
   }
 

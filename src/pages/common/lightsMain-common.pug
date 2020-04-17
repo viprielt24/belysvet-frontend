@@ -30,14 +30,12 @@ if isDesktop
                   +lights-item(item)
 
 if isMobile
-  .catalog-box.catalog.catalog--favourite
+  .catalog-box.catalog.catalog--favourite.catalog--favourite-main
     .container: .row
       .col-sm-6
           .catalog__header
             .catalog__title Световые приборы
-            a(href="javascript:void(0);").catalog__more
-              .catalog__more-text Смотреть все
-              .catalog__more-icon: include ../../images/arrow-right-small.svg
+
     .catalog__content.catalog__content--lights-main.js-catalog__content-lights-main
       .swiper-container
         .swiper-wrapper
@@ -45,14 +43,16 @@ if isMobile
             .swiper-slide
               .catalog__col
                 +lights-item(item)
+      a(href="javascript:void(0);").catalog__more
+        .catalog__more-text Смотреть все
+        .catalog__more-icon: include ../../images/arrow-right-small.svg
+
     .container: .row
       .col-sm-6
-        .catalog.catalog--favourite
+        .catalog.catalog--favourite.catalog--favourite-main
           .catalog__header
             .catalog__title Блоки аварийного питания
-            a(href="javascript:void(0);").catalog__more
-              .catalog__more-text Смотреть все
-              .catalog__more-icon: include ../../images/arrow-right-small.svg
+
     .catalog__content.catalog__content--empowers-main.js-catalog__content-lights-main
       .swiper-container
         .swiper-wrapper
@@ -60,3 +60,6 @@ if isMobile
             .swiper-slide
               .catalog__col
                 +lights-item(item)
+      a(href="javascript:void(0);").catalog__more
+        .catalog__more-text Смотреть все
+        .catalog__more-icon: include ../../images/arrow-right-small.svg

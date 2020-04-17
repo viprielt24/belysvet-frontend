@@ -6,6 +6,10 @@ mixin news(item)
     .title= item.title
     .descr= item.description
     .catalog__item-box
-      .link= item.link.title
-      .date= item.date
+      if isDesktop
+        .link= item.link.title
+        .date= item.date
+      else
+        .date= item.date
+        .link= item.link.title
     .catalog__item-sign(style= item.color ? 'background-color: ' + item.color + ';' : 'background-color: #A1BF35;')

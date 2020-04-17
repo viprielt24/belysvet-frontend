@@ -4,6 +4,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания ICEBERG</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -53,6 +54,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания RUMB</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -102,6 +104,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания TERRON</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -151,6 +154,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания REGATA</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -200,6 +204,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания RUMB</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -249,6 +254,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания TERRON</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -298,6 +304,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания ICEBERG</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -347,6 +354,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания RUMB</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -396,6 +404,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания TERRON</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -445,6 +454,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания REGATA</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -494,6 +504,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -542,6 +553,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -591,6 +603,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -640,6 +653,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -689,6 +703,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -738,6 +753,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -787,6 +803,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -836,6 +853,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -885,6 +903,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -934,6 +953,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -983,6 +1003,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1032,6 +1053,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1080,6 +1102,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1129,6 +1152,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1178,6 +1202,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1227,6 +1252,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1276,6 +1302,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1325,6 +1352,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic3.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1374,6 +1402,7 @@ module.exports = [
     title: 'ICEBERG',
     img: '/images/catalog/catalog-favourite-pic4.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1423,6 +1452,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic5.jpg',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1472,6 +1502,7 @@ module.exports = [
     title: 'TERRON',
     img: '/images/catalog/catalog-favourite-pic6.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1521,6 +1552,7 @@ module.exports = [
     title: 'REGATA',
     img: '/images/catalog/catalog-favourite-pic1.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',
@@ -1570,6 +1602,7 @@ module.exports = [
     title: 'RUMB',
     img: '/images/catalog/catalog-favourite-pic2.png',
     price: '238 300',
+    description: '<p>Блоки аварийного питания с источником аварийного питания INEXI</p>',
     link: {
       href: 'javascript:void(0);',
       title: 'подробнее',

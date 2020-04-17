@@ -1,13 +1,30 @@
 include ../../components/news/news
 
-.catalog.catalog--press
-  .container
-    .catalog__header
-      .catalog__title Пресс центр
-    .catalog__content
-      .catalog__wrap
-        each item, index in news
-          if index <= 3
-            .catalog__col
-              +news(item)
-    .catalog__footer: a(href="javascript:void(0);").button.button--press Больше новостей
+if isDesktop
+  .catalog.catalog--press
+    .container
+      .catalog__header
+        .catalog__title Пресс центр
+      .catalog__content
+        .catalog__wrap
+          each item, index in news
+            if index <= 3
+              .catalog__col
+                +news(item)
+      .catalog__footer: a(href="javascript:void(0);").button.button--press Больше новостей
+else
+  .catalog.catalog--press.catalog--press-main.js-catalog-press
+    .container
+      .catalog__header
+        .catalog__title Пресс центр
+        .swiper-button-prev
+        .swiper-button-next
+      .catalog__content
+        .swiper-container
+          .swiper-pagination
+          .swiper-wrapper
+            each item, index in news
+              .swiper-slide
+                .catalog__wrap
+                  .catalog__col
+                    +news(item)

@@ -1,140 +1,231 @@
-footer.footer
-  .footer__content
-    .container: .row
-      .col-sm-6
-        .footer__menu-top.row
-          .col-sm-4
-            .footer__menu.list
-              .list__title Компания
-              .list__wrap
-                .list__item: a(href="javascript:void(0);").list__link О компании
-                .list__item: a(href="javascript:void(0);").list__link Пресс-центр
-                .list__item: a(href="javascript:void(0);").list__link Торговые марки
-                .list__item: a(href="javascript:void(0);").list__link Карьера
-                .list__item: a(href="javascript:void(0);").list__link Контакты
-          .col-sm-4
-            .footer__menu.list.list--top-indent
-              .list__wrap
-                .list__item: a(href="javascript:void(0);").list__link Социальная ответственность
-                .list__item: a(href="javascript:void(0);").list__link Торговые марки
-                .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
-                .list__item: a(href="javascript:void(0);").list__link Карьера
-                .list__item: a(href="javascript:void(0);").list__link Контакты
-          .col-sm-4
-            .footer__menu.list
-              .list__title Покупателю
-              .list__wrap
-                .list__item: a(href="javascript:void(0);").list__link Каналы сбыта
-                .list__item: a(href="javascript:void(0);").list__link Акции
-                .list__item: a(href="javascript:void(0);").list__link Работа с сайтом
-                .list__item: a(href="javascript:void(0);").list__link Договоры Белый свет
-                .list__item: a(href="javascript:void(0);").list__link Покупка продукции
-                .list__item: a(href="javascript:void(0);").list__link Часто задаваемые вопросы
-        .footer__menu-bottom.footer__menu-bottom--left
-          .row
-            .col-sm-4
-              .footer__menu.list.list--ls-md
-                .list__title Продукция
-                .list__title Конфигуратор
-                .list__title Технические<br> решения
-                .list__title Сегменты
+if isDesktop
+  footer.footer
+    .footer__content
+      .container: .row
+        .col-sm-6
+          .footer__menu-top.row
             .col-sm-4
               .footer__menu.list
-                .list__title Поддержка
+                .list__title Компания
                 .list__wrap
-                  .list__item: a(href="javascript:void(0);").list__link Учебный центр
-                  .list__item: a(href="javascript:void(0);").list__link Обзор нормативной базы
-                  .list__item: a(href="javascript:void(0);").list__link О конфигураторе
-                  .list__item: a(href="javascript:void(0);").list__link Партнеры
-                  .list__item: a(href="javascript:void(0);").list__link Проектная работа
-                  .list__item: a(href="javascript:void(0);").list__link Скачать
+                  .list__item: a(href="javascript:void(0);").list__link О компании
+                  .list__item: a(href="javascript:void(0);").list__link Пресс-центр
+                  .list__item: a(href="javascript:void(0);").list__link Торговые марки
+                  .list__item: a(href="javascript:void(0);").list__link Карьера
+                  .list__item: a(href="javascript:void(0);").list__link Контакты
+            .col-sm-4
+              .footer__menu.list.list--top-indent
+                .list__wrap
+                  .list__item: a(href="javascript:void(0);").list__link Социальная ответственность
+                  .list__item: a(href="javascript:void(0);").list__link Торговые марки
+                  .list__item: a(href="javascript:void(0);").list__link Экология и защита окружающей среды
+                  .list__item: a(href="javascript:void(0);").list__link Карьера
+                  .list__item: a(href="javascript:void(0);").list__link Контакты
             .col-sm-4
               .footer__menu.list
-                .list__title Сервис
+                .list__title Покупателю
                 .list__wrap
-                  .list__item: a(href="javascript:void(0);").list__link Заявка на сервис
-                  .list__item: a(href="javascript:void(0);").list__link Гарантийные сроки
-                  .list__item: a(href="javascript:void(0);").list__link Сервисная политика
-                  .list__item: a(href="javascript:void(0);").list__link Сервисные партнеры
-          .footer__docs.list
-            .list__item: a(href="javascript:void(0);").list__link
-              .list__icon.icon.icon--download
-              .list__text Скачать все каталоги одним архивом
-            .list__item: a(href="javascript:void(0);").list__link
-              .list__icon.icon.icon--box
-              .list__text аналоги и устаревшие модели
-            .list__item: a(href="javascript:void(0);").list__link
-              .list__icon.icon.icon--download
-              .list__text скачать прайс-лист
-      .col-sm-6
-        .footer__menu-top.row
-          .col-sm-5
-            .footer__menu.footer__menu--offset.list.list--ls-md
-              .list__title Проекты
-              .list__title Где купить?
-              .list__title Связь с компанией
-          .col-sm-4
-            .footer__menu.list
-              .list__title Карта сайта
-        .footer__menu-bottom.footer__menu-bottom--right
-          .footer__form: .form: form(action="javascript:void(0);").js-form-validate
-            .form__title Cообщение в службу менеджмента качества
-            .form-wrap
-              .form-group.form-group--half
-                .form-element
-                  input(type="text" placeholder="Имя").form-control.js-form-validate__empty
-                  .error
-                .form-element
-                  input(type="text" placeholder="E-mail / телефон").form-control.js-form-validate__empty
-                  .error
-              .form-group
-                .form-element
-                  textarea(placeholder="Ваше сообщение" rows="7").form-control
-                  .error
-              .form__bottom
-                .button-wrap
-                  //button(type="submit").button Отправить
-                  a(href="javascript:void(0);" data-popupname="info").button.js-popup-open Отправить
+                  .list__item: a(href="javascript:void(0);").list__link Каналы сбыта
+                  .list__item: a(href="javascript:void(0);").list__link Акции
+                  .list__item: a(href="javascript:void(0);").list__link Работа с сайтом
+                  .list__item: a(href="javascript:void(0);").list__link Договоры Белый свет
+                  .list__item: a(href="javascript:void(0);").list__link Покупка продукции
+                  .list__item: a(href="javascript:void(0);").list__link Часто задаваемые вопросы
+          .footer__menu-bottom.footer__menu-bottom--left
+            .row
+              .col-sm-4
+                .footer__menu.list.list--ls-md
+                  .list__title Продукция
+                  .list__title Конфигуратор
+                  .list__title Технические<br> решения
+                  .list__title Сегменты
+              .col-sm-4
+                .footer__menu.list
+                  .list__title Поддержка
+                  .list__wrap
+                    .list__item: a(href="javascript:void(0);").list__link Учебный центр
+                    .list__item: a(href="javascript:void(0);").list__link Обзор нормативной базы
+                    .list__item: a(href="javascript:void(0);").list__link О конфигураторе
+                    .list__item: a(href="javascript:void(0);").list__link Партнеры
+                    .list__item: a(href="javascript:void(0);").list__link Проектная работа
+                    .list__item: a(href="javascript:void(0);").list__link Скачать
+              .col-sm-4
+                .footer__menu.list
+                  .list__title Сервис
+                  .list__wrap
+                    .list__item: a(href="javascript:void(0);").list__link Заявка на сервис
+                    .list__item: a(href="javascript:void(0);").list__link Гарантийные сроки
+                    .list__item: a(href="javascript:void(0);").list__link Сервисная политика
+                    .list__item: a(href="javascript:void(0);").list__link Сервисные партнеры
+            .footer__docs.list
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--download
+                .list__text Скачать все каталоги одним архивом
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--box
+                .list__text аналоги и устаревшие модели
+              .list__item: a(href="javascript:void(0);").list__link
+                .list__icon.icon.icon--download
+                .list__text скачать прайс-лист
+        .col-sm-6
+          .footer__menu-top.row
+            .col-sm-5
+              .footer__menu.footer__menu--offset.list.list--ls-md
+                .list__title Проекты
+                .list__title Где купить?
+                .list__title Связь с компанией
+            .col-sm-4
+              .footer__menu.list
+                .list__title Карта сайта
+          .footer__menu-bottom.footer__menu-bottom--right
+            .footer__form: .form: form(action="javascript:void(0);").js-form-validate
+              .form__title Cообщение в службу менеджмента качества
+              .form-wrap
+                .form-group.form-group--half
+                  .form-element
+                    input(type="text" placeholder="Имя").form-control.js-form-validate__empty
+                    .error
+                  .form-element
+                    input(type="text" placeholder="E-mail / телефон").form-control.js-form-validate__empty
+                    .error
                 .form-group
                   .form-element
-                    label.label.label--checkbox
-                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                      .icon.icon--checkbox
-                      .label__text
-                        | Я соглашаюсь на&nbsp;
-                        a(href='javascript:void(0);').label__link обработку моих персональных данных,<br>
-                        | отправляя сообщение компании «Белый свет»
-                      .error
-  .footer__bottom
-    .container
-      .footer__bottom-wrap
-        .footer__bottom-header
-          a(href="tel:+74957851767").footer__bottom-phone +7 (495) 785-17-67
-          .footer__icons.list
-            .list__wrap
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item1
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item2
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item3
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item4
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item5
-              .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item6
-        .footer__bottom-middle
-          .footer__contacts.list
-            .list__item
-              .list__text <span class="list__title">Адрес офиса:</span> Россия, 125080, Москва, Факультетский переулок, дом 12 (заезд со стороны ул. Царева)
-            .list__item
-              .list__text <span class="list__title">Тел./Факс:</span> +7 (495) 785-17-67 (многоканальный)
-            .list__item
-              .list__text <span class="list__title">E-mail:</span> info@belysvet.ru
+                    textarea(placeholder="Ваше сообщение" rows="7").form-control
+                    .error
+                .form__bottom
+                  .button-wrap
+                    //button(type="submit").button Отправить
+                    a(href="javascript:void(0);" data-popupname="info").button.js-popup-open Отправить
+                  .form-group
+                    .form-element
+                      label.label.label--checkbox
+                        input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                        .icon.icon--checkbox
+                        .label__text
+                          | Я соглашаюсь на&nbsp;
+                          a(href='javascript:void(0);').label__link обработку моих персональных данных,<br>
+                          | отправляя сообщение компании «Белый свет»
+                        .error
+    .footer__bottom
+      .container
+        .footer__bottom-wrap
+          .footer__bottom-header
+            a(href="tel:+74957851767").footer__bottom-phone +7 (495) 785-17-67
+            .footer__icons.list
+              .list__wrap
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item1
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item2
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item3
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item4
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item5
+                .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item6
+          .footer__bottom-middle
+            .footer__contacts.list
+              .list__item
+                .list__text <span class="list__title">Адрес офиса:</span> Россия, 125080, Москва, Факультетский переулок, дом 12 (заезд со стороны ул. Царева)
+              .list__item
+                .list__text <span class="list__title">Тел./Факс:</span> +7 (495) 785-17-67 (многоканальный)
+              .list__item
+                .list__text <span class="list__title">E-mail:</span> info@belysvet.ru
 
 
-        .footer__bottom-bottom
-          .footer__bottom-copyright © 2000-2018, ООО «Белый свет 2000»
-          .footer__bottom-links
-            a(href="javascript:void(0);").link Правовая информация
-            a(href="javascript:void(0);").link Специальная оценка условий труда
-            a(href="javascript:void(0);").link Обработка персональных данных
-          a(href="javascript:void(0);").footer__bottom-dev Сделано в <span>IT People</span>
+          .footer__bottom-bottom
+            .footer__bottom-copyright © 2000-2018, ООО «Белый свет 2000»
+            .footer__bottom-links
+              a(href="javascript:void(0);").link Правовая информация
+              a(href="javascript:void(0);").link Специальная оценка условий труда
+              a(href="javascript:void(0);").link Обработка персональных данных
+            a(href="javascript:void(0);").footer__bottom-dev Сделано в <span>IT People</span>
+else
+  footer.footer
+    .footer__content
+      .container
+        .footer__start-menu
+          .footer__item
+            .footer__menu.list
+              a(href="javascript:void(0);").list__title Компания
+              a(href="javascript:void(0);").list__title Проекты
+              a(href="javascript:void(0);").list__title Связь с компанией
+              a(href="javascript:void(0);").list__title Покупателю
+              a(href="javascript:void(0);").list__title Где купить?
+              a(href="javascript:void(0);").list__title Продукция
+          .footer__item
+            .footer__menu.list
+              a(href="javascript:void(0);").list__title Конфигуратор
+              a(href="javascript:void(0);").list__title Технические решения
+              a(href="javascript:void(0);").list__title Сегменты
+              a(href="javascript:void(0);").list__title Поддержка
+              a(href="javascript:void(0);").list__title Сервис
+              a(href="javascript:void(0);").list__title Карта сайта
+
+      .footer__contacts.list
+        .list__item
+          .list__text <span class="list__title">Адрес офиса:</span> Россия, 125080, Москва, Факультетский переулок, дом 12 (заезд со стороны ул. Царева)
+        .list__item
+          .list__text <span class="list__title">Тел./Факс:</span> +7 (495) 785-17-67 (многоканальный)
+        .list__item
+          .list__text <span class="list__title">E-mail:</span> info@belysvet.ru
+
+      .footer__icons.list
+        .list__title Следите за нами в соцсетях:
+        .list__wrap
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item1
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item2
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item3
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item4
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item5
+          .list__item: a(href="javascript:void(0);").list__link: .icon.icon--footer-item6
+
+      .footer__docs.list
+        .list__wrap
+          .list__item: a(href="javascript:void(0);").list__link
+            .list__icon.icon.icon--download
+            .list__text Скачать все каталоги одним архивом
+          .list__item: a(href="javascript:void(0);").list__link
+            .list__icon.icon.icon--box
+            .list__text аналоги и устаревшие модели
+          .list__item: a(href="javascript:void(0);").list__link
+            .list__icon.icon.icon--download
+            .list__text скачать прайс-лист
+
+      .footer__menu-bottom.footer__menu-bottom--right
+        .footer__form: .form: form(action="javascript:void(0);").js-form-validate
+          .form__title Cообщение в службу менеджмента качества
+          .form-wrap
+            .form-group
+              .form-element
+                input(type="text" placeholder="Имя").form-control.js-form-validate__empty
+                .error
+              .form-element
+                input(type="text" placeholder="E-mail / телефон").form-control.js-form-validate__empty
+                .error
+            .form-group
+              .form-element
+                textarea(placeholder="Ваше сообщение" rows= isDesktop ? "7" : "3").form-control
+                .error
+            .form__bottom
+              .button-wrap
+                //button(type="submit").button Отправить
+                a(href="javascript:void(0);" data-popupname="info").button.js-popup-open Отправить
+              .form-group
+                .form-element
+                  label.label.label--checkbox
+                    input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                    .icon.icon--checkbox
+                    .label__text
+                      | Я соглашаюсь на&nbsp;
+                      a(href='javascript:void(0);').label__link обработку моих персональных данных,<br>
+                      | отправляя сообщение компании «Белый свет»
+                    .error
+
+    .footer__bottom-bottom
+      a(href="tel:+74957851767").footer__bottom-phone +7 (495) 785-17-67
+      .footer__bottom-links
+        a(href="javascript:void(0);").link Правовая информация
+        a(href="javascript:void(0);").link Обработка персональных данных
+      .footer__bottom-copyright © 2000-2018, ООО «Белый свет 2000»
+      a(href="javascript:void(0);").footer__bottom-dev Сделано в <span>IT People</span>
+
 if isDesktop
   include ../orders/orders.pug
 include ../popup/popup.pug

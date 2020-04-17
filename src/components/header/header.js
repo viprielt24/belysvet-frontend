@@ -8,6 +8,9 @@ export default class {
       this.mobileMenu = document.querySelector('.js-header-mobile');
       this.mobileMenuBtn = document.querySelector('.header__middle .js-header__burger');
       this.mobileMenuMainBtn = this.mobileMenu.querySelector('.js-header__burger');
+
+      this.mobileMenuSearchBtn = document.querySelector('.js-header-mobile-search-open');
+      this.mobileMenuSearch = this.mobileMenu.querySelector('.js-header-mobile__search');
     }
 
     this.addEvents();
@@ -18,6 +21,10 @@ export default class {
     this.topMenuToggle();
 
     if (this.isMobile) {
+      this.mobileMenuSearchBtn.addEventListener('click', () => {
+        this.mobileSearchToggle();
+      });
+
       this.mobileMenuBtn.addEventListener('click', () => {
         this.mobileMenuToggle();
       });
@@ -77,10 +84,21 @@ export default class {
       this.mobileMenu.classList.remove('is-open');
       this.mobileMenuBtn.classList.remove('is-active');
       this.mobileMenuMainBtn.classList.remove('is-active');
+      setTimeout(() => {
+        this.mobileMenuSearch.classList.remove('is-open');
+      }, 400);
     } else {
       this.mobileMenu.classList.add('is-open');
       this.mobileMenuBtn.classList.add('is-active');
       this.mobileMenuMainBtn.classList.add('is-active');
+    }
+  }
+
+  mobileSearchToggle() {
+    if (this.mobileMenuSearch.classList.contains('is-open')) {
+      this.mobileMenuSearch.classList.remove('is-open');
+    } else {
+      this.mobileMenuSearch.classList.add('is-open');
     }
   }
 }

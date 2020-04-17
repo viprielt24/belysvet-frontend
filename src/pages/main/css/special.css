@@ -71,7 +71,7 @@ media
 .mobile{
 
   .special{
-    margin: 25px 0 80px;
+    margin: 25px 0 40px;
 
     .col-sm-4,
     .col-sm-8{
@@ -122,11 +122,15 @@ media
     .descr{
       font-size: 18px;
       line-height: 23px;
-      font-weight: 600;
+      font-weight: 400;
       
       br{
         display: none;
       }
     }
+  }
+
+  .special__propos .button {
+    font-weight: 400;
   }
 }
