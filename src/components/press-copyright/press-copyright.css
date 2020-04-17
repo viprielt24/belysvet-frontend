@@ -1,4 +1,4 @@
-.press-copyright{
+.press-copyright {
   padding-top: 40px;
   border-top: 1px solid rgba(196, 196, 196, 0.5);
 }
@@ -9,17 +9,17 @@
   background-color: #fff;
   min-height: 145px;
 
-  .files .file{
+  .files .file {
     width: 100%;
   }
 }
 
-.press-copyright__user{
+.press-copyright__user {
   position: relative;
   display: flex;
   align-items: center;
 
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     right: 0;
@@ -29,7 +29,7 @@
     background-color: rgba(196, 196, 196, 0.5);
   }
 
-  .user__photo{
+  .user__photo {
     flex-shrink: 0;
     width: 145px;
     height: 100%;
@@ -37,23 +37,23 @@
     background-color: #C4C4C4;
   }
 
-  .user__wrap{
+  .user__wrap {
     padding: 0 45px 0 30px;
   }
 
-  .user__name{
+  .user__name {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
 
-    span{
+    span {
       display: block;
       text-transform: uppercase;
     }
   }
 
-  .user__post{
+  .user__post {
     margin-top: 6px;
     font-style: normal;
     font-weight: normal;
@@ -64,22 +64,22 @@
   }
 }
 
-.press-copyright__contact{
+.press-copyright__contact {
   padding: 0 45px;
 }
 
-.press-copyright__contact-title{
+.press-copyright__contact-title {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
 
-  + .press-copyright__contact-item{
+  + .press-copyright__contact-item {
     margin-top: 7px;
   }
 }
 
-.press-copyright__contact-item{
+.press-copyright__contact-item {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -87,58 +87,73 @@
   font-family: var(--opens);
   color: #404040;
 }
+
 /**
 media
  */
 .mobile {
 
-  .press-copyright-wrap{
+  .press-copyright-wrap {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .press-copyright__user{
+  .press-copyright__user {
     align-items: flex-start;
 
-    &:before{
+    &:before {
       content: none;
     }
 
-    .user__photo{
+    &:after {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 0;
+      left: 100px;
+      height: 1px;
+      background: rgba(196, 196, 196, 0.5);
+    }
+
+    .user__photo {
       width: 100px;
       height: 100px;
     }
 
-    .user__wrap{
+    .user__wrap {
       padding: 12px 11px 0 11px;
     }
 
-    .user__name{
+    .user__name {
       font-size: 15px;
       line-height: 19px;
     }
 
-    .user__post{
+    .user__post {
       font-size: 12px;
       line-height: 17px;
     }
   }
 
-  .press-copyright__contact{
+  .press-copyright__contact {
     padding: 22px 12px;
   }
 
-  .press-copyright__contact-title{
+  .press-copyright__contact-title {
     font-size: 15px;
     line-height: 19px;
   }
 
-  .press-copyright__contact-item{
+  .press-copyright__contact-item {
     font-size: 14px;
     line-height: 22px;
   }
 
-  .press-copyright__item:last-child{
+  .press-copyright__item:last-child {
     padding: 0px 12px 15px;
+  }
+
+  .press-copyright {
+    padding-top: 15px;
   }
 }

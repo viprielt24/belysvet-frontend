@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(51,51,51,.4);
+  background-color: rgba(19, 19, 19, 0.8);
   opacity: 0;
   visibility: hidden;
   transition: var(--trsee);
@@ -533,6 +533,10 @@ media
  */
 .mobile {
 
+  .popup {
+    padding: 32px 16px;
+  }
+
   .popup__wrap {
     border-radius: 3px;
   }
@@ -721,6 +725,19 @@ mobile
 
     .button-wrap {
       margin-top: 3px;
+    }
+  }
+
+  .popup--solution {
+
+    .form--style .form__bottom {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .form__bottom .button-wrap {
+      margin-top: 3px;
+      margin-left: 0;
     }
   }
 }

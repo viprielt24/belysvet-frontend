@@ -35,7 +35,7 @@ export default class {
         nextEl: this.navNext,
       },
       breakpoints: {
-        320: {
+        767: {
           slidesPerView: 2,
           spaceBetween: 22,
         }

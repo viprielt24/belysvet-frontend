@@ -143,12 +143,12 @@ media
 
     .catalog__col{
       width: 100%;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
     .catalog__item{
       height: 100%;
-      padding: 18px 12px;
+      padding: 20px 12px;
     }
 
     .catalog__title{
@@ -183,10 +183,10 @@ media
 
   .catalog--tech-main {
     padding: 20px 0;
+  }
 
-    .catalog__item .button {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .catalog__item .button {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

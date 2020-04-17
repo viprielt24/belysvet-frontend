@@ -13,3 +13,45 @@
 .content__header .title {
   margin-bottom: 0;
 }
+/**
+mobile
+ */
+.mobile {
+
+  .company {
+    padding-top: 15px;
+  }
+
+  .catalog--company {
+
+    .catalog__wrap {
+      margin-bottom: 0;
+    }
+
+    .catalog__col {
+      margin-bottom: 25px;
+    }
+
+    .catalog__item {
+      min-height: 105px;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 24px;
+
+      .catalog__item-sign {
+        transform: translateY(0);
+      }
+    }
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+    }
+
+    .link {
+      color: #61AE3B;
+    }
+  }
+}

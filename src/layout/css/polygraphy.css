@@ -29,6 +29,11 @@ media
   .polygraphy {
     margin-top: 25px;
     padding-top: 20px;
+
+    .file__text {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   .polygraphy__title {

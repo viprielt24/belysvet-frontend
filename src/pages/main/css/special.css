@@ -79,7 +79,16 @@ media
     }
 
     .promo__item{
+      margin-left: 0;
+      margin-right: 0;
       padding: 32px 20px 44px;
+
+      .button {
+        position: relative;
+        z-index: 1;
+        margin-left: 0;
+        margin-right: 0;
+      }
 
       .pic{
         top: 0;

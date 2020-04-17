@@ -32,9 +32,14 @@ include ../crumbs/crumbs
     .content__middle
       .press-inner-data г. Москва
 
-    .content__bottom
-      h1.title!= pageName
-      a(href="javascript:void(0);").link Посмотреть отзыв
+    if isDesktop
+      .content__bottom
+        h1.title!= pageName
+        a(href="javascript:void(0);").link Посмотреть отзыв
+    else
+      .content__bottom.content__bottom--project-inner
+        h1.title!= pageName
+        a(href="javascript:void(0);").link Посмотреть отзыв
 
   else if page === 'signone'
     .content__top.content__top--signone: include ../../pages/common/batch-common
@@ -138,9 +143,9 @@ include ../crumbs/crumbs
                   .icon.icon--radio
                   .label__text Только отличия
         .compare__maincel-mobile
-          - placeholder = 'Товар 1'
+          - placeholder = 'BS-ARUNA-81-L1-INEXI2'
           include ../../pages/common/project-position-common
-          - placeholder = 'Товар 2'
+          - placeholder = 'BS-ARUNA-81-L1-INEXI2'
           include ../../pages/common/project-position-common
 
   else if page === 'solution'

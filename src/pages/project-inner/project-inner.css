@@ -271,4 +271,71 @@ media
       margin-top: 20px;
     }
   }
+
+  .content__bottom--project-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    .title {
+      margin-bottom: 15px;
+    }
+
+    .link {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .project-inner {
+    padding-top: 15px;
+
+    .project-inner__header-label {
+      font-size: 15px;
+      line-height: 19px;
+    }
+
+    .project-inner__header-title {
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+
+  .project-inner__header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .project-inner__middle-title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .project-inner__middle-descr {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .project-inner__slider .swiper-container {
+    height: 183px;
+  }
+
+  .project-inner__thumbs {
+    display: none;
+  }
+
+  .project-inner__slider-fraction {
+    margin-bottom: 30px;
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0;
+      margin-top: 18px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: #404040;
+    }
+  }
 }

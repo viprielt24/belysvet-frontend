@@ -492,12 +492,8 @@ mobile
       top: 100%;
       left: 0;
       width: auto;
-      margin-top: 8px;
+      margin-top: 0;
       margin-left: 0;
-      line-height: 18px;
-      color: #333333;
-      font-size: 13px;
-      font-weight: 400;
     }
 
     &.props__item--outstock {
@@ -506,11 +502,14 @@ mobile
 
       .link {
         padding-bottom: 0;
+
+        span {
+          background-image: linear-gradient(to right, #A1BF35 50%, rgba(255, 255, 255, 0) 50%);
+          background-position: left -1px bottom 0;
+          background-size: 10px 1px;
+          background-repeat: repeat-x;
+        }
       }
     }
   }
-
-
-
-
 }

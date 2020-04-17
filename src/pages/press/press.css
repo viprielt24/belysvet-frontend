@@ -69,6 +69,21 @@ media
 
   .press{
     margin-top: 0;
+
+    .tagline {
+      padding-top: 0;
+    }
+
+    .tagline__wrap {
+      flex-wrap: nowrap;
+    }
+
+    .tagline--has-clear .tagline__clear {
+      position: relative;
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
   }
 
   .press__tabs{
@@ -82,5 +97,10 @@ media
     font-size: 15px;
     line-height: 19px;
     text-align: center;
+  }
+
+  .press__calendar {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 }

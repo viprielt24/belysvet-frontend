@@ -7,6 +7,7 @@ export default class {
     this.container = this.wrap.querySelector('.swiper-container');
     this.navPrev = this.wrap.querySelector('.swiper-button-prev');
     this.navNext = this.wrap.querySelector('.swiper-button-next');
+    this.navFraction = document.querySelector('.project-inner__slider-fraction .swiper-pagination');
 
     this.thumbsWrap = document.querySelector('.js-project-inner__thumbs');
     this.thumbsContainer = this.thumbsWrap.querySelector('.swiper-container');
@@ -46,6 +47,10 @@ export default class {
       navigation: {
         prevEl: this.navPrev,
         nextEl: this.navNext,
+      },
+      pagination: {
+        el: this.navFraction,
+        type: 'fraction',
       },
     });
 

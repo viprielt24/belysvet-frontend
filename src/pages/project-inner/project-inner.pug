@@ -4,7 +4,7 @@ block content
   .content
     .container
       include ../../components/content-header/content-header
-    .content__text-editor.text-editor
+    .content__text-editor.text-editor.project-inner
       .container
         .project-inner__header: .row
           .col-sm-6
@@ -17,6 +17,31 @@ block content
               .project-inner__header-title HORECA
 
         .project-inner__middle: .row
+          if isMobile
+            .col-sm-6
+              .project-inner__slider.js-project-inner__slider
+                .swiper-container
+                  .swiper-button-prev
+                  .swiper-button-next
+                  .swiper-wrapper
+                    //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+              .project-inner__slider-fraction: .swiper-pagination
+              .project-inner__thumbs.js-project-inner__thumbs
+                .swiper-container
+                  .swiper-wrapper
+                    //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
           .col-sm-6
             .project-inner__middle-item
               .project-inner__middle-title Цели заказчиков
@@ -31,29 +56,30 @@ block content
                   li Проектирование и поставка оборудования: 2015 – 2106 год.
                   li Проектирование и поставка оборудования: 2015 – 2106 год.
                   li Проектирование и поставка оборудования: 2015 – 2106 год.
-          .col-sm-6
-            .project-inner__slider.js-project-inner__slider
-              .swiper-container
-                .swiper-button-prev
-                .swiper-button-next
-                .swiper-wrapper
-                  //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
-                  .swiper-slide
-                    a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
-                  .swiper-slide
-                    a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
-                  .swiper-slide
-                    a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
-                  .swiper-slide
-                    a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
-            .project-inner__thumbs.js-project-inner__thumbs
-              .swiper-container
-                .swiper-wrapper
-                  //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
-                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
-                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
-                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
-                  .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+          if isDesktop
+            .col-sm-6
+              .project-inner__slider.js-project-inner__slider
+                .swiper-container
+                  .swiper-button-prev
+                  .swiper-button-next
+                  .swiper-wrapper
+                    //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                    .swiper-slide
+                      a(href="javascript:void(0);" data-popupname="photo").js-contentSwiper-slide.js-popup-open: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
+              .project-inner__thumbs.js-project-inner__thumbs
+                .swiper-container
+                  .swiper-wrapper
+                    //.swiper-slide: img(src="/images/temp/project-inner-slider-pic1.png").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic2.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic3.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic4.jpg").project-inner__slider-pic
+                    .swiper-slide: img(src="/images/temp/project-inner-slider-pic5.jpg").project-inner__slider-pic
         .project-inner__video
           .project-inner__video-title Видео о проекте
           .project-inner__video-player: include ../../components/insert-video/insert-video

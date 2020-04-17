@@ -7,20 +7,18 @@ mixin compare-item(item)
       .pic: img(src= item.img).pic__img
     if item.advdescr
       .advdescr Автономный авайрийный светильник эвакуационного освещения
-    if item.title
-      .title BS-ARUNA-81-L1-INEXI2
     if item.subtitle
       .subtitle Артикул: <span>а16581</span>
     .catalog__item-links
-      a(href="javascript:void(0);").link.link--more-action Складской
-      a(href="javascript:void(0);").link.link--more-action В наличии (3 579)
+      a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintregistered") Складской
+      a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintoutstock") В наличии (3 579)
       if isMobile
         .props
           .props__item
             .props__name Единица измерения:
             .props__value штуки
       .catalog__item-links-wrap
-        a(href="javascript:void(0);").link.link--more-action Цена (руб.)
+        a(href="javascript:void(0);" class= isDesktop ? "link link--more-action" : "link link--more-action js-popup-open" data-popupname="hintprice") Цена (руб.)
         .price: .price__item: .price__value 4 700,00
     .catalog__item-count
       if isDesktop

@@ -15,4 +15,5 @@ include ../../components/sale-item/sale-item
             +sale-item(item, index)
   .catalog__footer
     a(href="javascript:void(0);").link.link--simple Скрыть прошедшие акции
+    - more.title = 'Еще прошедшие акции'
     a(href= more.href).button.button--press= more.title

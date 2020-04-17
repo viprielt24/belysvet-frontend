@@ -182,7 +182,9 @@ media
 .mobile {
 
   .projects__filter{
+    margin-top: 25px;
     margin-bottom: 38px;
+    padding-top: 25px;
   }
 
   .projects__filter-top-wrap{
@@ -255,5 +257,15 @@ media
 
   .projects__filter-middle .choices__list--single .choices__item{
     font-size: 14px;
+  }
+
+  .projects__filter-top .select-custom--default .choices__list--single .choices__item {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .projects__filter-top .select-custom .choices__list--dropdown .choices__item {
+    font-size: 12px;
+    line-height: 18px;
   }
 }

@@ -216,4 +216,30 @@ media
     font-size: 13px;
     line-height: 26px;
   }
+
+  .press-inner-footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .link--back .link__text {
+      margin-left: 8px;
+      font-size: 12px;
+    }
+
+    .stack {
+      margin-top: 20px;
+
+      ul li {
+        padding-left: 0;
+      }
+
+      .stack__title {
+        margin-right: 12px;
+      }
+
+      .ya-share2__container_size_s .ya-share2__item {
+        margin-right: 8px;
+      }
+    }
+  }
 }

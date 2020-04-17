@@ -95,73 +95,6 @@ const pages = {
       }
     }
   },
-  'normative': {
-    parameters: {
-      page: 'normative',
-      title: 'Обзор нормативной базы',
-      pageName: 'Обзор нормативной базы',
-      crumbs: ['Главная', 'Компания', 'Обзор нормативной базы'],
-      normative: data.normative
-    }
-  },
-  'project-inner': {
-    parameters: {
-      page: 'project-inner',
-      title: 'ТЦ «Мега Белая дача» - холлы и магазины',
-      pageName: 'ТЦ «Мега Белая дача» - холлы и магазины',
-      crumbs: ['Главная', 'Компания', 'ТЦ «Мега Белая дача» - холлы и магазины'],
-      files: [
-        {
-          'fileType': 'pdf',
-          'fileHref': 'javascript:void(0);',
-          'fileText': '1. Федеральный закон Российской Федерации от 30.12.2009 No 384-Фз «Технический регламент о безопасности зданий и сооружений».',
-          'fileSize': '(7.5 Mb)',
-        },
-      ],
-      video: {
-        poster: '/images/temp/project-inner-video-player.png',
-        buttonText: 'смотреть видео',
-        iframe: '<iframe id="projectInnerYoutubePlayer" src="https://www.youtube.com/embed/0kNKPYK9cd0?autoplay=1&showinfo=0&modestbranding=1&rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-      }
-    }
-  },
-  'career': {
-    parameters: {
-      page: 'career',
-      title: 'Карьера',
-      pageName: 'Карьера',
-      pageDescr: '<p>Если Вы хотите работать в динамично развивающейся компании, мечтаете о стабильной и достойно оплачиваемой работе, готовы проявить на деле свои таланты, добро пожаловать в «Белый Свет».</p><p>Мы смогли стать лидерами отечественного рынка аварийного освещения благодаря и тем, кто работает со дня основания компании, и тем, кто приходит к нам со свежими идеями.</p>',
-      crumbs: ['Главная', 'Компания', 'Карьера'],
-      career: data.career
-    }
-  },
-  'tech': {
-    parameters: {
-      page: 'tech',
-      title: 'Технические решения',
-      pageName: 'Технические решения',
-      pageDescr: '<p>В 2017 году команда компании «Белый свет» провела большую исследовательскую работу, чтобы классифицировать и максимально подробно и понятно представить описание и принципы действия технических решений аварийного освещения, именно поэтому было принято решение разделить полученный материал на два каталога.</p>',
-      crumbs: ['Главная', 'Технические решения'],
-      tech: data.tech,
-      files: data.productsFiles,
-      promo: data.promo,
-    }
-  },
-  'products': {
-    parameters: {
-      page: 'products',
-      title: 'Продукция',
-      pageName: 'Продукция',
-      pageDescr: '<p>Ассортиментный ряд продукции "Белый свет" насчитывает более 9 тысяч позиций, на базе которых можно сформировать готовые комплексные решения для аварийного освещения любого объекта в любой отрасли.</p>',
-      crumbs: ['Главная', 'Продукция'],
-      products: data.products,
-      more: {
-        href: 'javascript:void(0);',
-        title: 'Архив и аналоги'
-      },
-      files: data.productsFiles
-    }
-  },
   'projects': {
     parameters: {
       page: 'projects',
@@ -221,20 +154,34 @@ const pages = {
       },
     }
   },
-  'company': {
+  'project-inner': {
     parameters: {
-      page: 'company',
-      title: 'Компания',
-      pageName: 'Компания',
-      crumbs: ['Главная', 'Компания'],
-      company: data.company
+      page: 'project-inner',
+      title: 'ТЦ «Мега Белая дача» - холлы и магазины',
+      pageName: 'ТЦ «Мега Белая дача» - холлы и магазины',
+      crumbs: ['Главная', 'Компания', 'ТЦ «Мега Белая дача» - холлы и магазины'],
+      files: [
+        {
+          'fileType': 'pdf',
+          'fileHref': 'javascript:void(0);',
+          'fileText': '1. Федеральный закон Российской Федерации от 30.12.2009 No 384-Фз «Технический регламент о безопасности зданий и сооружений».',
+          'fileSize': '(7.5 Mb)',
+        },
+      ],
+      video: {
+        poster: '/images/temp/project-inner-video-player.png',
+        buttonText: 'смотреть видео',
+        iframe: '<iframe id="projectInnerYoutubePlayer" src="https://www.youtube.com/embed/0kNKPYK9cd0?autoplay=1&showinfo=0&modestbranding=1&rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      }
     }
   },
-  'thanks': {
+  'normative': {
     parameters: {
-      page: 'thanks',
-      title: 'Спасибо',
-      pageName: 'Спасибо',
+      page: 'normative',
+      title: 'Обзор нормативной базы',
+      pageName: 'Обзор нормативной базы',
+      crumbs: ['Главная', 'Компания', 'Обзор нормативной базы'],
+      normative: data.normative
     }
   },
   'study': {
@@ -255,6 +202,43 @@ const pages = {
       },
     }
   },
+  'career': {
+    parameters: {
+      page: 'career',
+      title: 'Карьера',
+      pageName: 'Карьера',
+      pageDescr: '<p>Если Вы хотите работать в динамично развивающейся компании, мечтаете о стабильной и достойно оплачиваемой работе, готовы проявить на деле свои таланты, добро пожаловать в «Белый Свет».</p><p>Мы смогли стать лидерами отечественного рынка аварийного освещения благодаря и тем, кто работает со дня основания компании, и тем, кто приходит к нам со свежими идеями.</p>',
+      crumbs: ['Главная', 'Компания', 'Карьера'],
+      career: data.career
+    }
+  },
+  'tech': {
+    parameters: {
+      page: 'tech',
+      title: 'Технические решения',
+      pageName: 'Технические решения',
+      pageDescr: '<p>В 2017 году команда компании «Белый свет» провела большую исследовательскую работу, чтобы классифицировать и максимально подробно и понятно представить описание и принципы действия технических решений аварийного освещения, именно поэтому было принято решение разделить полученный материал на два каталога.</p>',
+      crumbs: ['Главная', 'Технические решения'],
+      tech: data.tech,
+      files: data.productsFiles,
+      promo: data.promo,
+    }
+  },
+  'products': {
+    parameters: {
+      page: 'products',
+      title: 'Продукция',
+      pageName: 'Продукция',
+      pageDescr: '<p>Ассортиментный ряд продукции "Белый свет" насчитывает более 9 тысяч позиций, на базе которых можно сформировать готовые комплексные решения для аварийного освещения любого объекта в любой отрасли.</p>',
+      crumbs: ['Главная', 'Продукция'],
+      products: data.products,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'Архив и аналоги'
+      },
+      files: data.productsFiles
+    }
+  },
   'lights': {
     parameters: {
       page: 'lights',
@@ -267,6 +251,15 @@ const pages = {
       lights: data.lights,
       files: data.productsFiles,
       promo: data.promo,
+    }
+  },
+  'company': {
+    parameters: {
+      page: 'company',
+      title: 'Компания',
+      pageName: 'Компания',
+      crumbs: ['Главная', 'Компания'],
+      company: data.company
     }
   },
   'connect': {
@@ -357,6 +350,26 @@ const pages = {
       ],
     }
   },
+  'contacts': {
+    parameters: {
+      page: 'contacts',
+      title: 'Контакты',
+      pageName: 'Контакты',
+      crumbs: ['Главная', 'Компания', 'Контакты'],
+      connect: data.connect,
+      connectSubject: data.connectSubject,
+      connectFrom: data.connectFrom,
+      connectTo: data.connectTo,
+      connectTime: data.connectTime,
+    }
+  },
+  'thanks': {
+    parameters: {
+      page: 'thanks',
+      title: 'Спасибо',
+      pageName: 'Спасибо',
+    }
+  },
   'brands': {
     parameters: {
       page: 'brands',
@@ -380,19 +393,6 @@ const pages = {
       pageDescr: '<p>Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы, о том, что если вы не нашли ответа на свой вопрос свяжитесь с нами и мы с удовольствием вам ответим. Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы, о том, что если вы не нашли ответа на свой вопрос свяжитесь с нами и мы с удовольствием вам ответим. Какой-то вводный текст про раздел вопрос-ответ, о том что в этом разделе собраны ответы на самые частые вопросы.</p>',
       crumbs: ['Главная', 'Покупателю', 'Как купить?'],
       buyers: data.buyers
-    }
-  },
-  'contacts': {
-    parameters: {
-      page: 'contacts',
-      title: 'Контакты',
-      pageName: 'Контакты',
-      crumbs: ['Главная', 'Компания', 'Контакты'],
-      connect: data.connect,
-      connectSubject: data.connectSubject,
-      connectFrom: data.connectFrom,
-      connectTo: data.connectTo,
-      connectTime: data.connectTime,
     }
   },
   'wheretobuy': {
@@ -470,6 +470,115 @@ const pages = {
       ],
     },
   },
+  'aruna': {
+    parameters: {
+      page: 'aruna',
+      title: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
+      pageName: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
+      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA'],
+      lights: data.lights,
+      tags: data.signone,
+      tagsCompatibility: data.compatibility,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      uid: data.uid,
+      purpose: data.purpose,
+      projectsSolution: data.solutions,
+      projectsPosition: [
+        {
+          title: 'BS-ARUNA-81-L1-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L2-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L3-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L4-INEXI2',
+          value: '1',
+          selected: false
+        },
+      ],
+    }
+  },
+  'aruna-product': {
+    parameters: {
+      page: 'aruna-product',
+      title: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
+      pageName: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
+      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA', 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2'],
+      lights: data.lights,
+      tags: data.signone,
+      tagsCompatibility: data.compatibility,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      uid: data.uid,
+      purpose: data.purpose,
+      projectsSolution: data.solutions,
+      projectsPosition: [
+        {
+          title: 'BS-ARUNA-81-L1-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L2-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L3-INEXI2',
+          value: '1',
+          selected: false
+        },
+        {
+          title: 'BS-ARUNA-81-L4-INEXI2',
+          value: '1',
+          selected: false
+        },
+      ],
+    }
+  },
+
+  'empowers': {
+    parameters: {
+      page: 'empowers',
+      title: 'Блоки аварийного питания',
+      pageName: 'Блоки аварийного питания',
+      crumbs: ['Главная', 'Продукция', 'Блоки аварийного питания'],
+      catalogTitle: 'Блоки аварийного питания с функцией TELECONTROL',
+      catalogDescr: '<p>Групповая аккумуляторная установка (ГаУ) — источник электроснабжения со стандартным выходным напряжением, предназначенный для питания нескольких потребителей в пределах одной пожарной зоны и состоящий как минимум из одной аккумуляторной батареи, автоматического зарядного, контрольно-испытательного и распределительного устройств.</p>',
+      tags: data.tagline,
+      taglineClear: true,
+      lights: data.empowers,
+      files: data.productsFiles,
+      promo: data.promo,
+    }
+  },
+  'emunit': {
+    parameters: {
+      page: 'emunit',
+      title: 'Блок аварийного питания INEXI',
+      pageName: 'Блок аварийного питания INEXI',
+      crumbs: ['Главная', 'Продукция', 'Блоки аварийного питания', 'Серия INEXI'],
+      tags: data.emunit,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+    }
+  },
   'shields': {
     parameters: {
       page: 'shields',
@@ -510,6 +619,34 @@ const pages = {
       files: data.productsFiles,
       promo: data.promo,
       catalogDescr: '<p>Дистанционный пульт (Белый свет — пульт управления аварийным освещением) — элемент системы, получающий и/или передающий информацию от световых приборов аварийного освещения и/или для них, который также может осуществлять индикацию результатов испытаний.</p>'
+    }
+  },
+  'signs': {
+    parameters: {
+      page: 'signs',
+      title: 'Знаки безопасности',
+      pageName: 'Знаки безопасности',
+      crumbs: ['Главная', 'Продукция', 'Знаки безопасности'],
+      lights: data.signs,
+      files: data.productsFiles,
+      promo: data.promo,
+      catalogDescr: '<p>Компания «Белый свет» поддерживает государственную программу по созданию доступной среды для маломобильных групп населения. В нашем ассортименте вы можете подобрать все необходимые для этого знаки безопасности.</p>'
+    }
+  },
+  'signone': {
+    parameters: {
+      page: 'signone',
+      title: 'Знак безопасности серии BL-1515',
+      pageName: 'Знак безопасности серии BL-1515',
+      crumbs: ['Главная', 'Продукция', 'Знаки безопасности', 'Серия BL-1515'],
+      tags: data.signone,
+      tagsCompatibility: data.compatibility,
+      parts: data.parts,
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      uid: data.uid,
+      purpose: data.purpose,
     }
   },
   'accessories': {
@@ -628,180 +765,15 @@ const pages = {
       ]
     }
   },
-  'empowers': {
+  'card-empty': {
     parameters: {
-      page: 'empowers',
-      title: 'Блоки аварийного питания',
-      pageName: 'Блоки аварийного питания',
-      crumbs: ['Главная', 'Продукция', 'Блоки аварийного питания'],
-      catalogTitle: 'Блоки аварийного питания с функцией TELECONTROL',
-      catalogDescr: '<p>Групповая аккумуляторная установка (ГаУ) — источник электроснабжения со стандартным выходным напряжением, предназначенный для питания нескольких потребителей в пределах одной пожарной зоны и состоящий как минимум из одной аккумуляторной батареи, автоматического зарядного, контрольно-испытательного и распределительного устройств.</p>',
-      tags: data.tagline,
-      taglineClear: true,
-      lights: data.empowers,
-      files: data.productsFiles,
-      promo: data.promo,
-    }
-  },
-  'emunit': {
-    parameters: {
-      page: 'emunit',
-      title: 'Блок аварийного питания INEXI',
-      pageName: 'Блок аварийного питания INEXI',
-      crumbs: ['Главная', 'Продукция', 'Блоки аварийного питания', 'Серия INEXI'],
-      tags: data.emunit,
-      parts: data.parts,
-      files: data.productsFiles,
-      galleryCounter: true,
-      galleryCopyright: true,
-    }
-  },
-  'signs': {
-    parameters: {
-      page: 'signs',
-      title: 'Знаки безопасности',
-      pageName: 'Знаки безопасности',
-      crumbs: ['Главная', 'Продукция', 'Знаки безопасности'],
-      lights: data.signs,
-      files: data.productsFiles,
-      promo: data.promo,
-      catalogDescr: '<p>Компания «Белый свет» поддерживает государственную программу по созданию доступной среды для маломобильных групп населения. В нашем ассортименте вы можете подобрать все необходимые для этого знаки безопасности.</p>'
-    }
-  },
-  'signone': {
-    parameters: {
-      page: 'signone',
-      title: 'Знак безопасности серии BL-1515',
-      pageName: 'Знак безопасности серии BL-1515',
-      crumbs: ['Главная', 'Продукция', 'Знаки безопасности', 'Серия BL-1515'],
-      tags: data.signone,
-      tagsCompatibility: data.compatibility,
-      parts: data.parts,
-      files: data.productsFiles,
-      galleryCounter: true,
-      galleryCopyright: true,
-      uid: data.uid,
-      purpose: data.purpose,
-    }
-  },
-  'solution': {
-    parameters: {
-      page: 'solution',
-      title: 'Техническое решение №1',
-      pageName: 'Техническое решение №1 <span>Автономная система аварийного освещения с функцией TELECONTROL</span>',
-      crumbs: ['Главная', 'Технические решения', 'Техническое решение №1 Автономная система аварийного освещения с функцией TELECONTROL'],
-      tags: [
-        {
-          title: 'Щит аварийного освещения',
-        },
-        {
-          title: 'Пульт управления аварийным освещением',
-        },
-        {
-          title: 'Световые приборы',
-        },
-        {
-          title: 'Блоки аварийного питания',
-        },
-      ],
-      files: data.productsFiles,
-      galleryCounter: true,
-      galleryCopyright: true,
-      promo: data.promo,
-    }
-  },
-  'sale': {
-    parameters: {
-      page: 'sale',
-      title: 'Акции',
-      pageName: 'Акции',
-      crumbs: ['Главная', 'Компания', 'Акции'],
-      pageDescr: '<p>Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п.</p>',
-      sale: data.sale,
-      more: {
-        href: 'javascript:void(0);',
-        title: 'смотреть прошедшие акции'
-      }
-    }
-  },
-  'aruna': {
-    parameters: {
-      page: 'aruna',
-      title: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
-      pageName: 'Световые приборы аварийного освещения, серия ARUNA / KONTUR',
-      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA'],
+      page: 'card-empty',
+      title: 'Ваша корзина пуста',
+      pageName: 'Ваша корзина пуста',
+      crumbs: ['Главная', 'Продукция', 'Ваша корзина пуста'],
       lights: data.lights,
-      tags: data.signone,
-      tagsCompatibility: data.compatibility,
-      parts: data.parts,
       files: data.productsFiles,
-      galleryCounter: true,
-      galleryCopyright: true,
-      uid: data.uid,
-      purpose: data.purpose,
-      projectsSolution: data.solutions,
-      projectsPosition: [
-        {
-          title: 'BS-ARUNA-81-L1-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L2-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L3-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L4-INEXI2',
-          value: '1',
-          selected: false
-        },
-      ],
-    }
-  },
-  'aruna-product': {
-    parameters: {
-      page: 'aruna-product',
-      title: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
-      pageName: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
-      crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA', 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2'],
-      lights: data.lights,
-      tags: data.signone,
-      tagsCompatibility: data.compatibility,
-      parts: data.parts,
-      files: data.productsFiles,
-      galleryCounter: true,
-      galleryCopyright: true,
-      uid: data.uid,
-      purpose: data.purpose,
-      projectsSolution: data.solutions,
-      projectsPosition: [
-        {
-          title: 'BS-ARUNA-81-L1-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L2-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L3-INEXI2',
-          value: '1',
-          selected: false
-        },
-        {
-          title: 'BS-ARUNA-81-L4-INEXI2',
-          value: '1',
-          selected: false
-        },
-      ],
+      promo: data.promo,
     }
   },
   'checkout': {
@@ -834,6 +806,32 @@ const pages = {
       ]
     }
   },
+  'solution': {
+    parameters: {
+      page: 'solution',
+      title: 'Техническое решение №1',
+      pageName: 'Техническое решение №1 <span>Автономная система аварийного освещения с функцией TELECONTROL</span>',
+      crumbs: ['Главная', 'Технические решения', 'Техническое решение №1 Автономная система аварийного освещения с функцией TELECONTROL'],
+      tags: [
+        {
+          title: 'Щит аварийного освещения',
+        },
+        {
+          title: 'Пульт управления аварийным освещением',
+        },
+        {
+          title: 'Световые приборы',
+        },
+        {
+          title: 'Блоки аварийного питания',
+        },
+      ],
+      files: data.productsFiles,
+      galleryCounter: true,
+      galleryCopyright: true,
+      promo: data.promo,
+    }
+  },
   'card': {
     parameters: {
       page: 'card',
@@ -842,17 +840,20 @@ const pages = {
       crumbs: ['Главная', 'Продукция', 'Корзина'],
     }
   },
-  'card-empty': {
+  'sale': {
     parameters: {
-      page: 'card-empty',
-      title: 'Ваша корзина пуста',
-      pageName: 'Ваша корзина пуста',
-      crumbs: ['Главная', 'Продукция', 'Ваша корзина пуста'],
-      lights: data.lights,
-      files: data.productsFiles,
-      promo: data.promo,
+      page: 'sale',
+      title: 'Акции',
+      pageName: 'Акции',
+      crumbs: ['Главная', 'Компания', 'Акции'],
+      pageDescr: '<p>Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п. Какой-то вводный текст про проекты, про их сложность, про надежность и последующее обслуживание и т.п.</p>',
+      sale: data.sale,
+      more: {
+        href: 'javascript:void(0);',
+        title: 'смотреть прошедшие акции'
+      }
     }
-  }
+  },
 };
 // Страницы проекта
 pages.pages = {

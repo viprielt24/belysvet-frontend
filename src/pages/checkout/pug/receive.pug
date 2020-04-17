@@ -144,19 +144,38 @@
             .form-element: label
               .form-placeholder Улица: *
               input(placeholder='Введите название улицы').form-control
-          .form-group.form-group--receive-bottom
-            .form-element: label
-              .form-placeholder Дом: *
-              input.form-control
-            .form-element: label
-              .form-placeholder Корпус:
-              input.form-control
-            .form-element: label
-              .form-placeholder Строение:
-              input.form-control
-            .form-element: label
-              .form-placeholder Офис/Квартира: *
-              input.form-control
-            .form__bottom
-              button.button Выбрать
+          if isDesktop
+            .form-group.form-group--receive-bottom
+              .form-element: label
+                .form-placeholder Дом: *
+                input.form-control
+              .form-element: label
+                .form-placeholder Корпус:
+                input.form-control
+              .form-element: label
+                .form-placeholder Строение:
+                input.form-control
+              .form-element: label
+                .form-placeholder Офис/Квартира: *
+                input.form-control
+              .form__bottom
+                button.button Выбрать
+          else
+            .form-group.form-group--receive-bottom
+              .form-group.form-group--half
+                .form-element: label
+                  .form-placeholder Дом: *
+                  input.form-control
+                .form-element: label
+                  .form-placeholder Корпус:
+                  input.form-control
+              .form-group.form-group--half
+                .form-element: label
+                  .form-placeholder Строение:
+                  input.form-control
+                .form-element: label
+                  .form-placeholder Офис/Квартира: *
+                  input.form-control
+              .form__bottom
+                button.button Выбрать
 
