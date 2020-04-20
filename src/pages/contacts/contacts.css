@@ -295,4 +295,35 @@ media
     padding-top: 35px;
     padding-bottom: 45px;
   }
+
+  .balloon {
+    width: 231px;
+    height: 146px;
+    padding: 16px 20px;
+  }
+
+  .balloon-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .balloon-content-address {
+    margin: 5px 0 15px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .balloon-content-phone {
+    font-size: 13px;
+    line-height: 17px;
+    background-size: 13px auto;
+    padding-left: 23px;
+  }
+
+  .balloon-content-email {
+    font-size: 14px;
+    line-height: 18px;
+    background-size: 13px auto;
+    padding-left: 23px;
+  }
 }
