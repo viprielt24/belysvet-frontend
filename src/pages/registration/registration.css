@@ -131,12 +131,34 @@ media
   }
 
   .registration__item-title{
+    margin-bottom: 10px;
     font-size: 18px;
+    text-align: left;
   }
 
   .registration .form-element--reg-address {
     position: relative;
     top: 0;
     padding-left: 16px;
+
+    .label--checkbox .label__text {
+      font-size: 12px;
+    }
+  }
+
+  .registration__specialization {
+
+    .tagline__wrap {
+      flex-wrap: nowrap;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0 12px;
+    }
+  }
+
+  .registration__item:first-child {
+    margin-bottom: 28px;
   }
 }

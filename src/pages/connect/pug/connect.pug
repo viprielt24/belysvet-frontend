@@ -19,6 +19,22 @@ include ../../../components/accordion-connect/accordion-connect
                 .form-placeholder Email
                 input.form-control.js-form-validate__email
                 .error Текст ошибки
+            if isMobile
+              .connect__callback
+                .title Удобное время для звонка
+                .connect__callback-wrap
+                  .form-group
+                    .connect__callback-range.js-connect__callback-range
+                  .form-group.form-group--half
+                    .form-element: label
+                      .form-placeholder с
+                      include ../../common/connect-select-from-common
+                    .form-element: label
+                      .form-placeholder до
+                      include ../../common/connect-select-to-common
+                  .form-group
+                    .form-element: label
+                      include ../../common/connect-select-time-common
             .form__bottom
               .form-group
                 .form-element
@@ -30,21 +46,22 @@ include ../../../components/accordion-connect/accordion-connect
                       a(href='javascript:void(0);').label__link персональных данных
                     .error
               .button-wrap: button(type="submit").button Отправить
-        .col-sm-7
-          .connect__callback
-            .title Удобное время для звонка
-            .connect__callback-wrap
-              .form-group
-                .connect__callback-range.js-connect__callback-range
-              .form-group
-                .form-element: label
-                  .form-placeholder с
-                  include ../../common/connect-select-from-common
-                .form-element: label
-                  .form-placeholder до
-                  include ../../common/connect-select-to-common
-                .form-element: label
-                  include ../../common/connect-select-time-common
+        if isDesktop
+          .col-sm-7
+            .connect__callback
+              .title Удобное время для звонка
+              .connect__callback-wrap
+                .form-group
+                  .connect__callback-range.js-connect__callback-range
+                .form-group
+                  .form-element: label
+                    .form-placeholder с
+                    include ../../common/connect-select-from-common
+                  .form-element: label
+                    .form-placeholder до
+                    include ../../common/connect-select-to-common
+                  .form-element: label
+                    include ../../common/connect-select-time-common
     +accordion-connect(connect[1]): .accordion__content-wrap
       .connect__form: .form.form--style: form(action="javascript:void(0);").js-form-validate
         .form-wrap

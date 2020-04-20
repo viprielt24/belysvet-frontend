@@ -76,11 +76,12 @@ block content
                   input.form-control.js-form-validate__empty
                   .error Текст ошибки
               .form-group.form-group--reg-spacer: .row
-                .form-element.form-element--reg-address
-                  label.label.label--checkbox
-                    input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                    .icon.icon--checkbox
-                    .label__text Совпадает с фактическим
+                if isDesktop
+                  .form-element.form-element--reg-address
+                    label.label.label--checkbox
+                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                      .icon.icon--checkbox
+                      .label__text Совпадает с фактическим
                 .col-sm-6.form-element: label
                   .form-placeholder Фактический адрес
                     span.form-placeholder-note Город, улица, дом, квартира/офис
@@ -91,6 +92,12 @@ block content
                     span.form-placeholder-note Город, улица, дом, квартира/офис
                   input.form-control.js-form-validate__empty
                   .error Текст ошибки
+                if isMobile
+                  .form-element.form-element--reg-address
+                    label.label.label--checkbox
+                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                      .icon.icon--checkbox
+                      .label__text Совпадает с фактическим
             .form-wrap(style="display:none;").js-registration-distrib
               .form-group: .row
                 .col-sm-6.form-element: label

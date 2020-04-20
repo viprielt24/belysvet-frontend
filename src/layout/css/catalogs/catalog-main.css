@@ -304,7 +304,12 @@ media
   }
 
   .catalog__menu-content-item {
-    align-items: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid rgba(196, 196, 196, 0.5);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
   }
 
   .catalog__menu-content-title {
@@ -319,6 +324,7 @@ media
   }
 
   .catalog__menu-content .title {
+    margin-bottom: 0;
     font-size: 14px;
     line-height: 18px;
   }
@@ -329,5 +335,19 @@ media
 
   .catalog__menu-content .catalog__menu-trigger {
     right: 0;
+  }
+
+  .catalog__menu-content--simple .catalog__menu-content-wrap {
+    column-count: 2;
+
+    .catalog__menu-content-item {
+      margin-bottom: 13px;
+      padding: 0;
+      border: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

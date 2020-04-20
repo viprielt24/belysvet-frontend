@@ -137,6 +137,7 @@ media
 .mobile {
 
   .study__title {
+    margin-bottom: 15px;
     font-size: 21px;
     line-height: 27px;
   }
@@ -150,8 +151,13 @@ media
   }
 
   .study__tabs-content-item {
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
 
-
+    .catalog--article .catalog__item-footer {
+      flex-direction: row-reverse;
+    }
   }
 }

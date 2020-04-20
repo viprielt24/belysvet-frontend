@@ -175,7 +175,9 @@ media
 
   .lights__info {
     flex-wrap: wrap;
+    margin-top: 20px;
     margin-bottom: 0;
+    padding-top: 30px;
   }
 
   .lights__info-item{
@@ -209,9 +211,8 @@ media
   .lights__info-item-text {
     margin-left: 12px;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 22px;
   }
-
 
   .lights__info-part {
     margin-bottom: 13px;
@@ -223,6 +224,64 @@ media
 
     .lights__info-item-text{
       margin-top: 4px;
+    }
+  }
+
+  .lights__filter-title {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .lights__filter {
+
+    .tagline {
+      margin: 0 -16px;
+    }
+
+    .tagline__wrap {
+      flex-wrap: nowrap;
+      margin: 0;
+    }
+
+    .tagline__clear {
+      position: relative;
+      display: block;
+      margin-top: 10px;
+      margin-left: 16px;
+      text-align: left;
+    }
+  }
+
+  .lights {
+
+    .catalog--favourite .catalog__col {
+      width: 100%;
+
+      .catalog__item {
+        border-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #EBEBEB;
+      }
+    }
+
+    .catalog--favourite .descr {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .catalog--favourite .title {
+      margin-bottom: 15px;
+    }
+
+    .catalog--favourite .part__title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 15px;
     }
   }
 }

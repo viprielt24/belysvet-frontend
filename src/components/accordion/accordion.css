@@ -383,8 +383,13 @@ media
  */
 .mobile {
 
+  .accordion {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
   .accordion__item {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
 
   .accordion__header {

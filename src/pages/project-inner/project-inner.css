@@ -318,7 +318,8 @@ media
   }
 
   .project-inner__slider .swiper-container {
-    height: 183px;
+    height: 230px;
+    padding-bottom: 40px;
   }
 
   .project-inner__thumbs {
@@ -326,16 +327,28 @@ media
   }
 
   .project-inner__slider-fraction {
-    margin-bottom: 30px;
 
     .swiper-pagination {
       position: relative;
-      bottom: 0;
-      margin-top: 18px;
+      bottom: 25px;
+      margin-top: 0;
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       font-size: 16px;
       color: #404040;
     }
+  }
+
+  .project-inner__slider .swiper-button-prev,
+  .project-inner__slider .swiper-button-next {
+    margin-top: 84px;
+  }
+
+  .project-inner__slider .swiper-button-next {
+    right: 70px;
+  }
+
+  .project-inner__slider .swiper-button-prev {
+    left: 70px;
   }
 }

@@ -1,20 +1,20 @@
 @import "../../layout/variables.css";
 
-.career{
+.career {
 
-  .accordion__content{
+  .accordion__content {
     padding-right: 360px;
   }
 
-  .accordion__close{
+  .accordion__close {
     margin-right: -324px;
   }
 
-  .accordion__content-wrap:before{
+  .accordion__content-wrap:before {
     content: none;
   }
 
-  .active .accordion__header:after{
+  .active .accordion__header:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -25,18 +25,18 @@
   }
 }
 
-.career__top{
+.career__top {
   margin-top: 30px;
   margin-bottom: 23px;
   padding-bottom: 22px;
   border-bottom: 1px solid rgba(196, 196, 196, 0.5);
 
-  .list{
+  .list {
     display: flex;
     align-items: center;
   }
 
-  .list__item{
+  .list__item {
     display: flex;
     align-items: center;
     position: relative;
@@ -48,11 +48,11 @@
     font-family: var(--opens);
     color: #A1BF35;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    &:before{
+    &:before {
       content: '';
       margin-right: 6px;
       width: 22px;
@@ -65,7 +65,7 @@
   }
 }
 
-.career__top-title{
+.career__top-title {
   margin-bottom: 15px;
   font-style: normal;
   font-weight: 700;
@@ -74,7 +74,7 @@
   font-family: var(--museo);
 }
 
-.accordion__button{
+.accordion__button {
   position: absolute;
   right: 36px;
   bottom: 76px;
@@ -96,26 +96,27 @@
     color: #FFFFFF;
     transition: box-shadow var(--time);
 
-    &:hover{
+    &:hover {
       color: #FFFFFF;
     }
   }
 }
+
 /**
 
  */
-.career-form{
+.career-form {
   background-color: #fff;
   margin: 40px 0 0;
   padding: 62px 0 48px;
 
-  .form{
+  .form {
     max-width: 816px;
     margin: 36px auto 0;
   }
 }
 
-.career-form__descr{
+.career-form__descr {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -124,7 +125,7 @@
   font-family: var(--museo);
 }
 
-.career-form__title{
+.career-form__title {
   margin: 24px 0 22px;
   font-style: normal;
   font-weight: 600;
@@ -135,7 +136,7 @@
   font-family: var(--museo);
 }
 
-.career-form__subtitle{
+.career-form__subtitle {
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
@@ -145,7 +146,7 @@
   color: #404040;
 }
 
-.career-footer{
+.career-footer {
   padding: 40px 0 0;
   font-style: normal;
   font-weight: normal;
@@ -154,27 +155,23 @@
   font-family: var(--opens);
   color: #404040;
 
-  .link{
+  .link {
     display: inline-block;
     margin-left: 5px;
     color: var(--primary);
     text-decoration: none;
     transition: var(--trc);
 
-    &:hover{
+    &:hover {
       color: var(--hover);
     }
   }
 }
+
 /**
 media
  */
 .mobile {
-
-  .career__accordion {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
 
   .career__top-title {
     font-size: 15px;
@@ -191,11 +188,11 @@ media
     font-size: 14px;
     line-height: 22px;
 
-    &:before{
+    &:before {
       flex-shrink: 0;
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -215,11 +212,11 @@ media
       padding-right: 0;
     }
 
-    .accordion__close{
+    .accordion__close {
       margin-right: 0;
     }
 
-    .accordion__button{
+    .accordion__button {
       position: relative;
       right: 0;
       bottom: 0;
@@ -232,7 +229,8 @@ media
     }
   }
 
-  .career-form{
+  .career-form {
+    margin-top: 35px;
     padding-top: 22px;
     padding-bottom: 22px;
 
@@ -240,7 +238,7 @@ media
       margin: 0;
     }
 
-    .col-sm-12{
+    .col-sm-12 {
       padding: 0 16px;
     }
 
@@ -251,31 +249,36 @@ media
     .form--style .form__bottom .form-text {
 
       &:before,
-      &:after{
+      &:after {
         content: none;
       }
     }
 
-    .form__bottom .button-wrap{
+    .form__bottom {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .form__bottom .button-wrap {
       width: 100%;
       margin-left: 0;
       margin-right: 0;
     }
   }
 
-  .career-form__descr{
+  .career-form__descr {
     padding: 0 50px;
     font-size: 14px;
     line-height: 18px;
   }
 
-  .career-form__title{
+  .career-form__title {
     margin: 13px 0;
     font-size: 24px;
     line-height: 27px;
   }
 
-  .career-form__subtitle{
+  .career-form__subtitle {
     padding: 0 30px;
     font-size: 14px;
     line-height: 22px;
@@ -285,15 +288,15 @@ media
     }
   }
 
-  .career-footer{
+  .career-footer {
     padding-top: 22px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 19px;
 
-    .link{
+    .link {
       display: inline;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 12px;
+      line-height: 19px;
     }
   }
 }

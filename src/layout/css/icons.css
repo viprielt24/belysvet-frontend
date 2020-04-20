@@ -433,6 +433,12 @@
   background-image: url(/images/sort.svg);
 }
 
+.icon--informer {
+  width: 30px;
+  height: 30px;
+  background-image: url(/images/informer.svg);
+}
+
 /**
 media
  */
@@ -484,4 +490,15 @@ media
  */
 .icon--inline {
   background-image: none;
+}
+/**
+mobile
+ */
+.mobile {
+
+  .icon--play {
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/play-mobile.svg);
+  }
 }

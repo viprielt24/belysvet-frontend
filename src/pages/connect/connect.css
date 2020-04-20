@@ -243,13 +243,15 @@ media
 .mobile {
 
   .connect {
-    margin: 0 -16px;
 
     .accordion__header {
       padding-left: 54px;
 
       .icon {
         left: 16px;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
       }
     }
   }
@@ -280,13 +282,13 @@ media
     margin-bottom: 22px;
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
     }
   }
 
   .msg__name {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .connect__mail-title {
@@ -294,7 +296,8 @@ media
   }
 
   .connect__mail-item {
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 13px;
 
     &:last-child {
@@ -310,11 +313,13 @@ media
 
   .connect__mail-name {
     width: 152px;
+    margin-bottom: 8px;
     margin-right: 0;
   }
 
   .connect__call-wrap{
     width: 100%;
+    padding-right: 0;
   }
 
   .connect__call {
@@ -337,7 +342,23 @@ media
 
   .connect__callback {
     margin-top: 30px;
-    padding: 16px 20px;
+    padding: 16px 16px 20px;
+
+    .title {
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+
+  .connect__callback-wrap {
+
+    .form-group--half {
+      margin-top: 32px;
+
+      & + .form-group {
+        margin-top: 17px;
+      }
+    }
   }
 
   .connect__callback .form-group:last-child {
@@ -363,5 +384,17 @@ media
 
   .connect__callback .form-group:last-child .form-element:last-child {
     width: auto;
+  }
+
+  .connect__callback .select-custom--simple .choices__inner,
+  .connect__callback .select-custom--default .choices__list--single .choices__item {
+    height: 38px;
+  }
+
+  .connect__form--has-callback {
+
+    .form__bottom .button-wrap {
+      margin-top: 15px;
+    }
   }
 }

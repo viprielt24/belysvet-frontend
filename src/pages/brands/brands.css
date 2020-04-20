@@ -207,4 +207,44 @@ mobile
       height: 4px;
     }
   }
+
+  .brands {
+    margin-top: 20px;
+    padding-top: 25px;
+  }
+
+  .brands .accordion__header .icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+  }
+
+  .brands .accordion__header {
+    padding-left: 61px;
+  }
+
+  .brands .accordion__title {
+    font-family: var(--opens);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #404040;
+  }
+
+  .brands .accordion__content-wrap {
+    font-family: var(--opens);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #404040;
+  }
+
+  .brands .accordion__item {
+    margin-bottom: 25px;
+  }
 }

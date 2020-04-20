@@ -262,4 +262,37 @@ media
   .connect__item-more{
     font-size: 14px;
   }
+
+  .contacts__item-map {
+    margin: 0 -16px;
+  }
+
+  #contactsMap1, #contactsMap2, #contactsMap3 {
+    height: 312px;
+  }
+
+  .contacts {
+
+    .connect__item {
+      padding: 0;
+    }
+
+    .connect__item-more .icon {
+      display: none;
+    }
+  }
+
+  .contacts__item-bottom {
+    margin-top: 25px;
+  }
+
+  .contacts__item {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+  }
+
+  .contacts-bottom {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
 }

@@ -1,25 +1,25 @@
 @import "../../layout/variables.css";
 
-.seminars{
+.seminars {
   margin-bottom: -16px;
 }
 
-.seminar{
+.seminar {
   background-color: #fff;
   border-radius: 2.64078px;
   margin-bottom: 16px;
   padding: 11px 28px 13px;
   transition: var(--trsh);
 
-  &:hover{
+  &:hover {
     box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
   }
 
-  a.file{
+  a.file {
     min-height: 20px;
     padding-left: 25px;
 
-    &:before{
+    &:before {
       top: 0;
       width: 15px;
       height: 20px;
@@ -27,11 +27,11 @@
   }
 }
 
-.seminar__top{
+.seminar__top {
   margin-bottom: 5px;
 }
 
-.seminar__type{
+.seminar__type {
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -40,7 +40,7 @@
   color: var(--primary);
 }
 
-.seminar__middle{
+.seminar__middle {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -48,7 +48,7 @@
   border-bottom: 1px solid rgba(196, 196, 196, .5);
 }
 
-.seminar__title{
+.seminar__title {
   padding-right: 50px;
   font-style: normal;
   font-weight: 700;
@@ -57,15 +57,15 @@
   font-family: var(--museo);
 }
 
-.seminar__middle-wrap{
+.seminar__middle-wrap {
   display: flex;
   align-items: center;
 
-  .button:first-child{
+  .button:first-child {
     font-weight: 400;
   }
 
-  .button:last-child{
+  .button:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,17 +74,17 @@
   }
 }
 
-.seminar__bottom{
+.seminar__bottom {
   display: flex;
   align-items: center;
   padding-top: 13px;
 }
 
-.seminar__bottom-item{
+.seminar__bottom-item {
   position: relative;
   margin-right: 57px;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     top: -1px;
@@ -94,24 +94,24 @@
     background-color: rgba(196, 196, 196, 0.5);
   }
 
-  &:first-child{
+  &:first-child {
     margin-right: 26px;
 
-    &:after{
+    &:after {
       content: none;
     }
   }
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
 
-    &:after{
+    &:after {
       content: none;
     }
   }
 }
 
-.seminar__date{
+.seminar__date {
   display: flex;
   align-items: center;
   height: 28px;
@@ -137,8 +137,10 @@ media
 
   .seminar__date {
     display: inline-block;
+    min-width: 184px;
     margin-bottom: 15px;
     font-size: 14px;
+    text-align: center;
   }
 
   .seminar__type {
@@ -146,7 +148,7 @@ media
   }
 
   .seminar__middle {
-    margin: 6px 0 35px;
+    margin: 6px 0 10px;
     padding-bottom: 0;
     border-bottom: none;
   }
@@ -165,13 +167,20 @@ media
   }
 
   .seminar__title {
+    padding-right: 0;
     font-size: 18px;
+    line-height: 23px;
   }
 
   .seminar__price,
   .seminar__place {
+    font-family: var(--opens);
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .seminar__price span {
+    font-weight: 700;
   }
 
   .seminar__bottom {

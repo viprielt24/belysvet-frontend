@@ -204,7 +204,7 @@ media
     .catalog__col{
       width: 100%;
       padding: 0 16px;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
 
       &:last-child{
         margin-bottom: 0;
