@@ -41,6 +41,7 @@ export default class {
 
   distribMap() {
     ymaps.ready(function () {
+      var isMobile = document.documentElement.classList.contains('mobile');
       var markerPath = document.getElementById('map').dataset.mapmarker;
       var myMap = new ymaps.Map('map', {
           center: [55.4707759, 37.6800719],
@@ -50,12 +51,13 @@ export default class {
         objectManager = new ymaps.ObjectManager({
           clusterize: true,
           gridSize: 48,
-          hasBalloon: false,
+          hasBalloon: isMobile,
         });
       objectManager.objects.options.set({
         iconLayout: 'default#image',
         iconImageHref: markerPath,
-        iconImageSize: [34, 48]
+        iconImageSize: [34, 48],
+        balloonPanelMaxMapArea: 0,
       });
       myMap.geoObjects.add(objectManager);
       objectManager.add(citiesRussia);

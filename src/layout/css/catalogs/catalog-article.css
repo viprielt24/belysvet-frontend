@@ -271,5 +271,9 @@ media
     .catalog__title {
       margin-bottom: 13px;
     }
+
+    .catalog__item-footer {
+      justify-content: flex-end;
+    }
   }
 }

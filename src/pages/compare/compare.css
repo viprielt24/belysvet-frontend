@@ -757,4 +757,8 @@ mobile
   .catalog--compare .catalog__col {
     width: 50%;
   }
+
+  .catalog--compare .catalog__col:last-child:after {
+    content: none;
+  }
 }

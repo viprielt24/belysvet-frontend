@@ -222,6 +222,12 @@ mobile
 
     p {
       font-size: 14px;
+      line-height: 22px;
+    }
+
+    h2 {
+      font-size: 18px;
+      line-height: 23px;
     }
 
     h3 {
@@ -234,6 +240,11 @@ mobile
         font-size: 15px;
         line-height: 19px;
       }
+    }
+
+    ol li {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }

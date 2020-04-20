@@ -126,6 +126,14 @@ media
       font-size: 12px;
       line-height: 18px;
     }
+
+    .tag:hover {
+      background-color: rgba(161, 191, 53, .2);
+
+      .tag__title {
+        color: var(--primary);
+      }
+    }
   }
 
   .catalog--press-main {

@@ -103,4 +103,11 @@ media
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
+
+  .press__content-item {
+
+    .catalog--article .catalog__item-footer {
+      flex-direction: row-reverse;
+    }
+  }
 }
