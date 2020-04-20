@@ -326,4 +326,8 @@ media
     background-size: 13px auto;
     padding-left: 23px;
   }
+
+  #contactsMap3 .balloon {
+    height: 140px;
+  }
 }
