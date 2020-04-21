@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node server/server",
+    "prod": "cross-env NODE_ENV=production node server/server",
     "debug": "node --inspect server/server",
     "webpack": "webpack",
     "build": "cross-env NODE_ENV=production node server/generateStaticFiles",
@@ -65,7 +66,8 @@
     "swiper": "^4.4.6",
     "terser-webpack-plugin": "^2.3.4",
     "ua-parser-js": "^0.7.18",
-    "vanilla-text-mask": "^5.1.1"
+    "vanilla-text-mask": "^5.1.1",
+    "webpackbar": "^4.0.0"
   },
   "nodemonConfig": {
     "ignore": [
