@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./.docker/node/Dockerfile
+    ports:
+      - ${HTTP_PORT}:8080
+    stdin_open: true
+    tty: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    restart: always
+

@@ -1,0 +1,27 @@
+stages:
+  - release
+
+Release Dev:
+  stage: release
+  tags:
+    - develop
+  before_script:
+    - export COMPOSE_PROJECT_NAME=${CI_PROJECT_NAME}_${CI_COMMIT_REF_NAME}
+    - export BRANCH_NAME=${CI_COMMIT_REF_NAME}
+    - export COMPOSE_INTERACTIVE_NO_CLI=1
+    - docker login gitlab.itpeople.dev:4567 -u desin@itpeople.ru -p $ACCESS_TOKEN
+  script:
+    - HTTP_PORT="$(/home/gitlab-runner/nginx2docker/nginx2docker.py freeport $CI_COMMIT_REF_NAME.$CI_PROJECT_NAME.itpeople.dev)"
+    - export HTTP_PORT=$HTTP_PORT
+    - export COMPOSE_INTERACTIVE_NO_CLI=1
+    - docker-compose -p $COMPOSE_PROJECT_NAME -f docker-compose.yml up -d --build --force-recreate
+    - /home/gitlab-runner/nginx2docker/nginx2docker.py add-to-pool $CI_COMMIT_REF_NAME.$CI_PROJECT_NAME.itpeople.dev null $HTTP_PORT
+    - "echo Ссылка на сборку: https://${CI_COMMIT_REF_NAME}.${CI_PROJECT_NAME}.itpeople.dev"
+    - docker logout
+  only:
+    refs:
+      - master
+      - dev
+      - /^hotfix-.*$/
+      - /^release-.*$/
+      - /^feature-.*$/
