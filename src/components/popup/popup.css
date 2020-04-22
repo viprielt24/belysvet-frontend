@@ -585,7 +585,7 @@ mobile
 .mobile {
 
   .popup--style .popup__wrap {
-    padding: 20px 16px;
+    padding: 20px 12px;
     border-radius: 3px;
   }
 
@@ -738,6 +738,38 @@ mobile
     .form__bottom .button-wrap {
       margin-top: 3px;
       margin-left: 0;
+    }
+  }
+
+  .popup--study {
+
+    .popup__content-header {
+      margin-bottom: 15px;
+    }
+
+    .form-element {
+      margin-bottom: 13px;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .form__bottom {
+      margin-top: 5px;
+
+      .form-group {
+        margin-top: 0;
+      }
+
+      .button-wrap {
+        margin-top: 20px;
+      }
+    }
+
+    .form__bottom-study-price {
+      font-size: 15px;
+      line-height: 19px;
     }
   }
 }

@@ -37,3 +37,19 @@
     margin-bottom: 13px;
   }
 }
+/**
+mobile
+ */
+.mobile {
+
+  .lights {
+
+    .catalog__item .button {
+      width: 146px;
+      height: 40px;
+      background: #A1BF35;
+      box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+      border-radius: 2.64078px;
+    }
+  }
+}
