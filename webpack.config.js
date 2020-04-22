@@ -10,6 +10,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 // https://github.com/Klathmon/imagemin-webpack-plugin
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const WebpackBar = require('webpackbar');
 // devMode
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -115,6 +116,7 @@ const config = {
     new CopyWebpackPlugin([
       {from: PATH.src + '/layout/js/browserVer.js', to: PATH.build + '/js'}
     ]),
+    new WebpackBar(),
     ...devPlugins
   ],
   module: {
