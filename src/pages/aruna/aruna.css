@@ -319,6 +319,11 @@ mobile
     &:first-child {
       padding: 0 30px;
     }
+
+    &:last-child {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .emunit__models-filter-title {
@@ -350,7 +355,7 @@ mobile
 
   .emunit__review {
     max-width: 100%;
-    padding: 35px 16px 0;
+    padding: 35px 16px 10px;
 
     &.text-editor ul {
       margin-bottom: 20px;
@@ -395,5 +400,17 @@ mobile
 
   .emunit__review-item--more .link {
     padding-bottom: 2px;
+  }
+
+  .emunit__models--accordion {
+    padding: 0 16px;
+  }
+
+  .emunit__archive {
+    padding: 0 16px;
+  }
+
+  .emunit__top-right .text-editor {
+    padding-bottom: 0;
   }
 }

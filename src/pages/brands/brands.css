@@ -1,72 +1,72 @@
 @import "../../layout/variables.css";
 
-.brands{
+.brands {
   margin-top: 22px;
   padding-top: 39px;
   border-top: 1px solid rgba(196, 196, 196, 0.5);
 
-  .catalog--article{
+  .catalog--article {
 
-    .catalog__col{
+    .catalog__col {
       position: relative;
       width: 100%;
     }
 
-    .catalog__item{
+    .catalog__item {
       position: relative;
       display: flex;
       padding: 32px 35px;
       cursor: pointer;
       text-decoration: none;
 
-      .link{
+      .link {
         margin-top: auto;
       }
 
-      &:hover{
-        .link{
+      &:hover {
+        .link {
           color: var(--hover);
           border-bottom-color: var(--hover);
         }
       }
     }
 
-    .catalog__item-media{
+    .catalog__item-media {
       width: 192px;
       height: 192px;
       border: 1px solid #C2C2C2;
     }
 
-    .pic:after{
+    .pic:after {
       content: none;
     }
 
-    .pic__img{
+    .pic__img {
       object-fit: contain;
     }
 
-    .catalog__item-wrap{
+    .catalog__item-wrap {
       padding: 0 32px;
     }
 
-    .title{
+    .title {
       margin-bottom: 41px;
       font-size: 24px;
       line-height: 29px;
     }
 
-    .descr{
+    .descr {
       font-family: var(--opens);
       font-size: 16px;
       line-height: 26px;
       color: #404040;
 
-      p{
+      p {
         margin: 6px 0;
       }
     }
 
-    .text{
+    .text {
       width: 317px;
       flex-shrink: 0;
       margin-left: auto;
@@ -79,7 +79,7 @@
   }
 }
 
-.brands__warning{
+.brands__warning {
   position: relative;
   display: flex;
   align-items: center;
@@ -115,6 +115,7 @@
     color: #FFFFFF;
   }
 }
+
 /**
 mobile
  */
@@ -139,7 +140,7 @@ mobile
     }
   }
 
-  .brands .catalog--article{
+  .brands .catalog--article {
     margin-bottom: 20px;
 
     .catalog__col {
@@ -173,6 +174,7 @@ mobile
 
     .title {
       margin-bottom: 0;
+      padding-right: 10px;
       font-size: 16px;
       line-height: 19px;
     }
@@ -246,5 +248,22 @@ mobile
 
   .brands .accordion__item {
     margin-bottom: 25px;
+  }
+}
+
+/**
+mobile
+ */
+.mobile {
+
+  .brands .catalog--article .descr {
+    font-size: 15px;
+    font-weight: 700;
+
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 }

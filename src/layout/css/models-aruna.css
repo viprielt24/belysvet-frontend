@@ -368,11 +368,6 @@ mobile
       padding: 16px 40px 16px 16px;
     }
 
-    .accordion__toggle {
-      top: 50%;
-      margin-top: -6px;
-    }
-
     .title {
       padding: 0;
     }
@@ -653,5 +648,30 @@ mobile
     width: 205px;
     height: 200px;
     margin: 24px auto 40px;
+  }
+
+  .emunit__top-links--main {
+
+    .emunit__top-links-wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .link {
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .emunit__tabs--main {
+    margin-top: 10px;
+  }
+
+  .emunit__tabs-content-item {
+
+    .files .file {
+      padding-right: 0;
+    }
   }
 }

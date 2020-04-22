@@ -66,6 +66,13 @@ export default class {
         observeParents: true
       });
     }
+
+    if (targetPopupName === 'hinticon'){
+      const hintIconDescr = event.currentTarget.dataset.popupcontent;
+      const hintIconPopup = document.querySelector('.js-popup-' + targetPopupName);
+      const hintIconPopupContent = hintIconPopup.querySelector('.js-popup__content-hint-text');
+      hintIconPopupContent.innerText = hintIconDescr;
+    }
   }
 
   popupClose(event) {

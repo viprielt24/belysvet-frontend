@@ -397,12 +397,4 @@ media
       margin-top: 15px;
     }
   }
-
-  .connect {
-
-    .accordion__toggle {
-      top: 50%;
-      margin-top: -6px;
-    }
-  }
 }

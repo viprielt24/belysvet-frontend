@@ -29,7 +29,10 @@
         .input-file
           .icon.icon--clip
           include ../../../components/input-file/input-file
-        div(class="form-text hint hint--white hint--bottom-right hint--large" aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения.") (Не более 100Mb)
+        div(class= isDesktop ? "form-text hint hint--white hint--bottom-right hint--large" : "form-text js-popup-open"
+        data-popupname="hintfileattach"
+        aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения."
+        ) (Не более 100Mb)
       .form-group
         .form-element
           label.label.label--checkbox

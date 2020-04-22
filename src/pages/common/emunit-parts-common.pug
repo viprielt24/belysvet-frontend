@@ -3,5 +3,7 @@ include ../../components/parts-item/parts-item
 .part.part--product
   .part__wrap
     if parts
+      - order = 0;
       each item in parts
+        - order++;
         +parts-item(item)

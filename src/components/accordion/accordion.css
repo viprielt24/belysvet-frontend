@@ -412,11 +412,11 @@ media
   }
 
   .accordion__toggle {
-    top: 24px;
+    top: 50%;
     right: 16px;
     width: 12px;
     height: 12px;
-    margin-top: 0;
+    margin-top: -6px;
   }
 
   .accordion__content {

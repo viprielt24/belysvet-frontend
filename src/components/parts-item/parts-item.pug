@@ -1,3 +1,8 @@
 mixin parts-item(item)
-  div(aria-label=item.label).part__item.hint.hint--white.hint--right
+  - orderNum = order ? order : ''
+  div(class= isDesktop ? 'part__item hint hint--white hint--right' : 'part__item js-popup-open'
+  data-popupname="hinticon"
+  data-popupcontent= item.label + ' ' + orderNum
+  aria-label= item.label
+  )
     img(src='/images/thumbs/thumb.jpg' data-src= item.icon).part__pic.lazyload
