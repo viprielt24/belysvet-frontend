@@ -133,10 +133,13 @@
 
   .part__wrap--text{
     max-width: 270px;
-    margin: 0 auto;
+    height: 135px;
+    margin: 0 auto 20px;
     padding: 0;
     font-size: 12px;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     p{
       margin: 4px 0;
@@ -268,5 +271,17 @@ media
 
   .title {
     word-break: break-word;
+  }
+
+  .catalog__item-descr {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #404040;
+
+    p {
+      margin: 0;
+    }
   }
 }

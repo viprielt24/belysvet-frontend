@@ -1,0 +1,17 @@
+.checkout__item.checkout__item--invoice
+  .title Формирование счета  на оплату
+  .checkout__wrap.checkout__wrap--indent
+    .checkout__payment
+
+      .checkout__payment-item
+        label.label.label--checkbox
+          input.form-control.js-form-validate__checked(type='checkbox')
+          .icon.icon--checkbox
+          .label__text Сформировать и выслать счет на email
+        .invoice-text На ваш email будет отправлен файл в формате .pdf
+      .checkout__payment-item.disable
+        label.label.label--checkbox
+          input.form-control.js-form-validate__checked(type='checkbox')
+          .icon.icon--checkbox
+          .label__text Сформировать и открыть счет в отдельном окне
+        .invoice-text Откроется файл в формате .pdf, которые вы сможете сохранить или распечатать

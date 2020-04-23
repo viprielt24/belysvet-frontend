@@ -1,0 +1,57 @@
+@import "../../layout/variables.css";
+
+.lights {
+
+  .text-editor {
+    padding: 0;
+  }
+
+  .lights__title {
+    font-family: var(--museo);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .lights__description {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: var(--border);
+  }
+
+  .catalog__item .button {
+    width: 146px;
+    height: 40px;
+    background: #A1BF35;
+    box-shadow: 0 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    border-radius: 2.64078px;
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(97, 174, 59, 0.3);
+    }
+  }
+}
+
+/**
+mobile
+ */
+.mobile {
+
+  .lights {
+
+    .icon--gear {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  .lights__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .lights__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

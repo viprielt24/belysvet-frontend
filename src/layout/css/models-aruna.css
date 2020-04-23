@@ -369,7 +369,9 @@ mobile
     }
 
     .title {
+      margin-bottom: 10px;
       padding: 0;
+      font-size: 17px;
     }
 
     .count {
@@ -647,7 +649,9 @@ mobile
   .emunit__models-pic {
     width: 205px;
     height: 200px;
-    margin: 24px auto 40px;
+    margin: 15px auto 15px;
+    padding: 0;
+    border: none;
   }
 
   .emunit__top-links--main {

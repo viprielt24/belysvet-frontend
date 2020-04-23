@@ -1,9 +1,19 @@
 include ../../components/tag/tag
-
-.tagline
-  .tagline__wrap
-    each item in tagsCompatibility
-      +tag(item)
-    //- доп.элемент в линии тегов
-    if taglineClear
-      a(href="javascript:void(0);").tagline__clear.js-tagline__clear Сбросить фильтры
+if isDesktop
+  .tagline
+    .tagline__wrap
+      each item in tagsCompatibility
+        +tag(item)
+      //- доп.элемент в линии тегов
+      if taglineClear
+        a(href="javascript:void(0);").tagline__clear.js-tagline__clear Сбросить фильтры
+else
+  .tagline
+    .tagline__wrap
+      each item, index in tagsCompatibility
+        if index <= 3
+          +tag(item)
+    .tagline__wrap
+      each item, index in tagsCompatibility
+        if index <= 3
+          +tag(item)

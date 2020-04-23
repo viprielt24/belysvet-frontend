@@ -666,8 +666,9 @@
 .emunit__top-right-compatibility{
 
   .title{
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 21px;
   }
 
   .tagline{
@@ -678,7 +679,10 @@
   .tagline__wrap .tag {
     align-items: center;
     justify-content: center;
-    width: 72px;
+    width: 75px;
+    height: 27px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     padding: 0;
     text-transform: uppercase;
   }
@@ -770,8 +774,21 @@ mobile
 
   .emunit__top-right-compatibility {
     margin-bottom: 20px;
-    padding-bottom: 18px;
+    padding-bottom: 12px;
     border-bottom: var(--border);
+
+    .tagline {
+      margin: 0 -16px;
+      padding-left: 16px;
+      overflow-x: scroll;
+    }
+
+    .tagline__wrap {
+      flex-wrap: nowrap;
+      overflow: visible;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .emunit__models {
@@ -911,5 +928,35 @@ mobile
 
   .emunit.content__text-editor {
     padding-bottom: 10px;
+  }
+
+  .emunit__archive {
+    padding: 0 16px;
+  }
+
+  .emunit__top-links--main {
+
+    .emunit__top-links-wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .link {
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 25px;
+        
+        &:nth-child(2) {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  .emunit__tabs--main {
+    margin-top: 10px;
+  }
+
+  .emunit__top-left .gallery .swiper-container {
+    height: 226px;
   }
 }

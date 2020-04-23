@@ -163,14 +163,26 @@ mobile
 .mobile {
 
   .content__top--signone .tagline {
+    margin: 0 -16px;
     padding-top: 0;
-    overflow: hidden;
+    padding-left: 16px;
+    overflow-x: scroll;
+  }
+
+  .content__top--signone .tagline__wrap .tag {
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-right: 16px;
+    }
   }
 
   .content__top--signone .tagline__wrap {
     flex-wrap: nowrap;
-    margin-right: 0;
-    padding: 0 16px;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
   }
 
   .content__top-links {

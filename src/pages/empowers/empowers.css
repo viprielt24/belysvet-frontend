@@ -1,9 +1,5 @@
 @import "../../layout/variables.css";
 
-.content__bottom .title{
-  margin-bottom: 0;
-}
-
 .catalog--favourite {
   margin-bottom: 31px;
   padding-bottom: 32px;
@@ -48,24 +44,5 @@
     font-family: var(--opens);
     font-size: 12px;
     text-align: center;
-  }
-}
-/**
-
- */
-.lights__title{
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-}
-
-.lights__description{
-  margin-bottom: 24px;
-  padding: 0 0 23px 0;
-  /*margin-bottom: 59px;*/
-  border-bottom: 1px solid rgba(196, 196, 196, .5);
-
-  ul{
-    margin-bottom: 0;
   }
 }

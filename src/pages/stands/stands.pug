@@ -5,14 +5,11 @@ block content
     .container
       include ../../components/content-header/content-header
       .lights
-
+        .lights__description.text-editor!= catalogDescr
         .lights__info
           a(href="javascript:void(0);").lights__info-item
             .icon.icon--inline.icon--gear: include ../../images/gear.svg
             .lights__info-item-text Подобрать центральную<br> аккумуляторную установку
-
-        .lights__description.text-editor!= catalogDescr
-
         include ../common/lights-text-common
         include ../common/promo
         .tech-descr

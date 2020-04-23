@@ -1,3 +1,5 @@
+- cardTitle = cardTitle ? cardTitle : 'BS-ARUNA-81-L1-INEXI2'
+
 .emunit__models-item
   if page === 'signone'
     .emunit__models-pic
@@ -8,7 +10,7 @@
       .emunit__models-top-wrap
         .emunit__models-top-item
           .emunit__models-top-box
-            a(href="javascript:void(0);").title BS-ARUNA-81-L1-INEXI2
+            a(href="javascript:void(0);").title!= cardTitle
             if isDesktop
               .props__item
                 .props__name Артикул:

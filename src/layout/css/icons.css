@@ -277,8 +277,8 @@
 }
 
 .icon--blank {
-  width: 36px;
-  height: 48px;
+  width: 27px;
+  height: 36px;
   background-image: url(/images/blank.svg);
 }
 
@@ -455,7 +455,7 @@ media
   }
 
   .icon--blank {
-    width: 20px;
+    width: 15px;
     height: 20px;
   }
 

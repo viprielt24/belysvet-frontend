@@ -5,7 +5,10 @@ block content
     .container
       include ../../components/content-header/content-header
       .lights
-
+        if catalogTitle
+          .lights__title!= catalogTitle
+        if catalogDescr
+          .lights__description.text-editor!= catalogDescr
         .lights__info
           a(href="javascript:void(0);").lights__info-item
             .icon.icon--inline.icon--gear: include ../../images/gear.svg
@@ -26,11 +29,6 @@ block content
           a(href="javascript:void(0);" data-popupname="lights").lights__info-item.lights__info-item--empty.js-popup-open
             .icon.icon--inline.icon--info: include ../../images/info.svg
             .lights__info-item-text Справочная информация
-
-        if catalogTitle
-          .lights__title!= catalogTitle
-        if catalogDescr
-          .lights__description.text-editor!= catalogDescr
 
         include ../common/lights-text-common
         include ../common/promo

@@ -100,6 +100,7 @@
       width: 14px;
       height: 13px;
       background-image: url(/images/zoom.svg);
+      background-repeat: no-repeat;
       pointer-events: none;
     }
 
@@ -363,5 +364,13 @@ media
 
   .select-custom--default .choices[data-type*="select-one"]:after{
     right: 12px;
+  }
+
+  .select-custom .choices__list--dropdown:before {
+    top: 18px;
+    right: 9px;
+    width: 17px;
+    height: 16px;
+    background-image: url(/images/zoom-mobile-primary.svg);
   }
 }

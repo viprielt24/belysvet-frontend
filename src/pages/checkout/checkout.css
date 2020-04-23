@@ -716,10 +716,67 @@
   background-position: 0 50%;
   background-size: 16px 16px;
 }
+
+.checkout__item--invoice {
+
+  .invoice-text {
+    margin-left: 29px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7E7E7E;
+  }
+
+  .checkout__payment-item.disable {
+    background-image: url(/images/lock-primary.svg);
+    background-repeat: no-repeat;
+    background-position: right 30px top 50%;
+
+    * {
+      color: rgba(196, 196, 196, 0.7);
+      pointer-events: none;
+    }
+
+    .label--checkbox .icon--checkbox {
+      border-color: rgba(196, 196, 196, 0.7);
+    }
+  }
+}
+
 /**
 mobile
  */
 .mobile {
+
+  .checkout__item--invoice {
+
+    .checkout__payment-item {
+      padding-right: 40px;
+    }
+
+    .invoice-text {
+      margin-top: 5px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    .checkout__payment .label--checkbox .label__text {
+      font-size: 12px;
+      line-height: 19px;
+    }
+
+    .checkout__payment .label--checkbox {
+      align-items: flex-start;
+    }
+
+    .checkout__payment .label--checkbox .icon--checkbox {
+      margin-top: 2px;
+    }
+
+    .checkout__payment-item.disable {
+      background-position: right 14px top 50%;
+      background-size: 20px auto;
+    }
+  }
 
   .checkout__right {
     margin-left: 0;

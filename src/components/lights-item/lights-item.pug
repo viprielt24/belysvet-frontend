@@ -22,9 +22,6 @@ mixin lights-item(item)
     .catalog__item
       if item.title
         .title!= item.title
-      if item.description
-        .part
-          .part__wrap.part__wrap--text!= item.description
       .pic: img(src='/images/thumbs/thumb.jpg' data-src= item.img).pic__img.lazyload
       .descr= 'от ' + item.price + ' ₽'
       a(href="javascript:void(0);").part__title проекты

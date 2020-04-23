@@ -123,6 +123,18 @@ mobile
  */
 .mobile {
 
+  .gallery .swiper-container {
+    height: 226px;
+  }
+
+  .thumbs .swiper-container {
+    height: 82px;
+  }
+
+  .gallery-img {
+    object-fit: contain;
+  }
+
   .gallery-counter-text {
     font-size: 11px;
   }

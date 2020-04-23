@@ -2,10 +2,8 @@
 
 .lights__info {
   display: flex;
-  margin-top: 19px;
-  margin-bottom: 59px;
-  padding-top: 23px;
-  border-top: 1px solid rgba(196, 196, 196, 0.5);
+  margin-top: 30px;
+  margin-bottom: 60px;
 
   + .lights__info {
     margin-top: -30px;
@@ -181,24 +179,19 @@ media
 
   .lights__info {
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-top: 0;
   }
 
   .lights__info-item {
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     height: auto;
     min-height: 63px;
     margin-right: 0;
     margin-bottom: 12px;
     padding: 13px 16px;
-
-    .icon--gear {
-      position: relative;
-      top: 10px;
-    }
   }
 
   .lights__info-item-wrap {
@@ -234,7 +227,7 @@ media
   .lights__info-item--empty {
 
     .lights__info-item-text {
-      margin-top: 4px;
+      margin-top: 3px;
     }
   }
 
@@ -282,10 +275,11 @@ media
     .catalog--favourite .descr {
       margin-top: 15px;
       margin-bottom: 25px;
+      font-size: 18px;
     }
 
     .catalog--favourite .title {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .catalog--favourite .part__title {

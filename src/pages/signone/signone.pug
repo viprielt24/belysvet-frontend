@@ -34,7 +34,7 @@ block content
               .title Совместимы с моделями световых указателей:
               include ../../pages/common/tagline-compatibility-common
 
-            .emunit__top-links
+            .emunit__top-links.emunit__top-links--main
               .emunit__top-links-wrap
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
@@ -49,7 +49,7 @@ block content
                     .link__wrap: include ../../pages/common/signone-share-common
 
       .container.emunit__middle
-        .emunit__tabs.js-tabs
+        .emunit__tabs.emunit__tabs--main.js-tabs
           .emunit__tabs-title
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Ассоритмент знаков для этой серии
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Обзор и описании серии
@@ -59,9 +59,10 @@ block content
 
     .emunit__bottom
       .container
-        .emunit__archive.accordion
-          include ../../components/accordion-connect/accordion-connect
-          +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
-            include ./pug/archive-new
+        .emunit__archive
+          .accordion
+            include ../../components/accordion-connect/accordion-connect
+            +accordion-connect({title: 'Посмотреть в архиве устаревшие модели'})
+              include ./pug/archive-new
       .container
         include ../common/polygraphy

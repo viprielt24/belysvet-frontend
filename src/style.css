@@ -22,6 +22,7 @@
 @import '../node_modules/sal.js/dist/sal.css';
 
 @import './layout/css/catalog.css';
+@import './layout/css/lights-all.css';
 @import './layout/css/partners.css';
 @import './layout/css/distrib.css';
 @import './layout/css/calendar.css';
