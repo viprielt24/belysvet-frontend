@@ -1,12 +1,13 @@
 mixin tag(item)
-  - distribClass = item.regDistrib ? ' js-tag-distrib' : ''
-  - activeClass = item.active ? ' tag--active' : ''
+  - customerClass = item.regCustomer ? ' js-tag-customer' : '';
+  - distribClass = item.regDistrib ? ' js-tag-distrib' : '';
+  - activeClass = item.active ? ' tag--active' : '';
 
   if item.link
-    a(href= item.link.href class= 'tag' + distribClass + activeClass)
+    a(href= item.link.href class= 'tag' + customerClass + distribClass + activeClass)
       span.tag__title= item.title
       span.tag__close
   else
-    div(class= 'tag' + distribClass + activeClass)
+    div(class= 'tag' + customerClass + distribClass + activeClass)
       .tag__title= item.title
       .tag__close

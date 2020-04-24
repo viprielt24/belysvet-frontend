@@ -45,6 +45,17 @@
     border-color: var(--hover);
   }
 
+  &:disabled {
+    background-color: #EAEAEA;
+    cursor: all-scroll;
+    pointer-events: none;
+
+    &:hover {
+      cursor: all-scroll;
+      border-color: #C2C2C2;
+    }
+  }
+
   & ~ .error {
     opacity: 0;
     visibility: hidden;

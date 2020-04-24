@@ -1,21 +1,16 @@
 @import "../../layout/variables.css";
 
-.content--registration{
+.content--registration {
 
   .content__bottom {
     justify-content: center;
-  }
-
-  .content__header .title {
-    margin-bottom: 20px;
-    text-align: center;
   }
 }
 
 .registration {
   background-color: #fff;
   margin: 0 auto -40px;
-  padding: 48px 116px 56px;
+  padding: 0 100px 56px;
 
   .form__bottom {
     margin-top: 40px;
@@ -56,11 +51,11 @@
 
 .registration__item-title {
   margin-bottom: 22px;
+  padding-top: 30px;
   font-style: normal;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 25px;
   line-height: 36px;
-  text-align: center;
   letter-spacing: 0.01em;
   font-family: var(--museo);
 }
@@ -72,6 +67,7 @@
     width: auto;
     height: 27px;
     margin-bottom: 6px;
+    font-size: 13px;
   }
 }
 
@@ -84,8 +80,116 @@
   font-family: var(--opens);
   color: #404040;
 }
+
+.registration__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 83px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  .label {
+    width: 50%;
+  }
+
+  .label--checkbox {
+    padding-left: 22px;
+    min-height: 22px;
+  }
+
+  .label--checkbox .label__text {
+    margin-left: 15px;
+    font-family: var(--museo);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .label--checkbox .icon--checkbox {
+    top: 4px;
+    min-width: 22px;
+    min-height: 22px;
+    border-width: 2.5px;
+  }
+
+  .label--checkbox.label--aka-radio input[type="radio"]:checked ~ .icon--checkbox:before {
+    background-image: url(/images/checkbox-large.svg);
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+  }
+}
+
+.form-element--reg-person {
+  margin-top: 18px;
+
+  .label--checkbox {
+    padding-left: 22px;
+    min-height: 22px;
+  }
+
+  .label--checkbox .label__text {
+    margin-left: 15px;
+    font-family: var(--museo);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .label--checkbox .icon--checkbox {
+    top: 4px;
+    min-width: 22px;
+    min-height: 22px;
+    border-width: 2.5px;
+  }
+
+  .label--checkbox input[type="checkbox"]:checked ~ .icon--checkbox:before {
+    background-image: url(/images/checkbox-large.svg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+  }
+}
+
+.registration__item--person {
+
+  .form__bottom {
+    justify-content: space-between;
+    margin-top: 28px;
+
+    .button {
+      width: 210px;
+    }
+
+    .form-group,
+    .button-wrap {
+      margin: 0;
+    }
+  }
+}
 /**
-media
+mobile
  */
 .mobile {
 
@@ -93,44 +197,44 @@ media
     margin: 0 -16px -40px;
     padding: 22px 16px 38px;
 
-    .col-sm-6{
+    .col-sm-6 {
       margin-bottom: 12px;
     }
 
-    .form--style .form-group{
+    .form--style .form-group {
       margin-bottom: 0;
 
-      .form-element{
+      .form-element {
         margin-bottom: 12px;
       }
     }
 
-    .form--style .form__bottom{
+    .form--style .form__bottom {
       margin-top: 0;
       padding: 0;
 
-      .button-wrap{
+      .button-wrap {
         width: 100%;
         margin-right: 0;
       }
     }
 
     .button-wrap,
-    .form-group{
+    .form-group {
       margin-left: 0;
     }
   }
 
-  .registration__specialization-title{
+  .registration__specialization-title {
     font-size: 12px;
   }
 
-  .tagline .form-control{
+  .tagline .form-control {
     height: 27px;
     margin-top: 9px;
   }
 
-  .registration__item-title{
+  .registration__item-title {
     margin-bottom: 10px;
     font-size: 18px;
     text-align: left;

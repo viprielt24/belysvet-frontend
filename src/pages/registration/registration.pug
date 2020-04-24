@@ -4,155 +4,218 @@ block content
   .content.content--registration
     .container
       include ../../components/content-header/content-header
-      .registration.js-registration
+      .registration.js-registration.js-tabs
         .form.form--style: form(action="javascript:void(0);").js-form-validate
-          .registration__item
-            .registration__item-title Информация об организации
-            .registration__specialization
-              .registration__specialization-title Какая специализация у организации
-              include ../../pages/common/tagline-registration
-            .form-wrap.js-registration-nondistrib
-              .form-group: .row
-                .col-sm-6.form-element: label
-                  .form-placeholder Страна местонахождения
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-6.form-element: label
-                  .form-placeholder Город
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group
-                .form-element: label
-                  .form-placeholder Название организации
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group
-                .form-element: label
-                  .form-placeholder Бренд (торговая марка) организации:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group: .row
-                .col-sm-4.form-element: label
-                  .form-placeholder Сайт организации
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder Телефон организации
-                  input.form-control.js-form-validate__phone
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder Email организации
-                  input.form-control.js-form-validate__email
-                  .error Текст ошибки
-              .form-group: .row
-                .col-sm-4.form-element: label
-                  .form-placeholder ИНН:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder КПП:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder ОКАТО:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group: .row
-                .col-sm-4.form-element: label
-                  .form-placeholder ОКТМО:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder ОКПО:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder ОКВЭД:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group: .row
-                .col-sm-4.form-element: label
-                  .form-placeholder ОГРН:
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group.form-group--reg-spacer: .row
-                if isDesktop
-                  .form-element.form-element--reg-address
-                    label.label.label--checkbox
-                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                      .icon.icon--checkbox
-                      .label__text Совпадает с фактическим
-                .col-sm-6.form-element: label
-                  .form-placeholder Фактический адрес
-                    span.form-placeholder-note Город, улица, дом, квартира/офис
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-6.form-element: label
-                  .form-placeholder Почтовый адрес
-                    span.form-placeholder-note Город, улица, дом, квартира/офис
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                if isMobile
-                  .form-element.form-element--reg-address
-                    label.label.label--checkbox
-                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                      .icon.icon--checkbox
-                      .label__text Совпадает с фактическим
-            .form-wrap(style="display:none;").js-registration-distrib
-              .form-group: .row
-                .col-sm-6.form-element: label
-                  .form-placeholder Страна местонахождения
-                  include ../common/registration-country-common
-                .col-sm-6.form-element: label
-                  .form-placeholder Город
-                  include ../common/registration-city-common
-              .form-group
-                .form-element: label
-                  .form-placeholder Название организации
-                  include ../common/registration-organization-common
-          .registration__item
-            .registration__item-title Персональная информация
-            .form-wrap
-              .form-group: .row
-                .col-sm-4.form-element: label
-                  .form-placeholder Фамилия
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder Имя
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-                .col-sm-4.form-element: label
-                  .form-placeholder Отчество
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group: .row
-                .col-sm-6.form-element: label
-                  .form-placeholder Ваш мобильный телефон
-                  input.form-control.js-form-validate__phone
-                  .error Текст ошибки
-                .col-sm-6.form-element: label
-                  .form-placeholder Email (логин для входа в личный кабинет)
-                  input.form-control.js-form-validate__email
-                  .error Текст ошибки
-              .form-group
-                .form-element: label
-                  .form-placeholder Ваша должность
-                  input.form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form-group
-                .form-element: label
-                  .form-placeholder Комментарий
-                  textarea(rows="4").form-control.js-form-validate__empty
-                  .error Текст ошибки
-              .form__bottom
-                .form-group
-                  .form-element
-                    label.label.label--checkbox
-                      input.form-control.js-form-validate__checked(type='checkbox', checked='')
-                      .icon.icon--checkbox
-                      .label__text
-                        | Я соглашаюсь с условиями обработки<br>
-                        a(href='javascript:void(0);').label__link персональных данных
-                      .error
-                .button-wrap: button(type="submit").button Отправить заявку
+          .registration__header
+            label.label.label--checkbox.label--aka-radio.js-tabs-header-item.active
+              input(type='radio' name='saymyname').form-control
+              .icon.icon--checkbox
+              .label__text Юридическое лицо
+            label.label.label--checkbox.label--aka-radio.js-tabs-header-item
+              input(type='radio' name='saymyname').form-control
+              .icon.icon--checkbox
+              .label__text Физическое лицо или проектировщик
+          .registration__tabs-content
+            .js-tabs-content-item.active
+              .registration__item
+                .registration__item-title Информация об организации
+                .registration__specialization
+                  .registration__specialization-title Какая специализация у организации
+                  include ../../pages/common/tagline-registration
+                .form-wrap.js-registration-nondistrib
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Страна местонахождения
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-6.form-element: label
+                      .form-placeholder Город
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group
+                    .form-element: label
+                      .form-placeholder Название организации
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group
+                    .form-element: label
+                      .form-placeholder Бренд (торговая марка) организации:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-4.form-element: label
+                      .form-placeholder Сайт организации
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder Телефон организации
+                      input.form-control.js-form-validate__phone
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder Email организации
+                      input.form-control.js-form-validate__email
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-4.form-element: label
+                      .form-placeholder ИНН:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder КПП:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder ОКАТО:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-4.form-element: label
+                      .form-placeholder ОКТМО:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder ОКПО:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder ОКВЭД:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-4.form-element: label
+                      .form-placeholder ОГРН:
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group.form-group--reg-spacer: .row
+                    if isDesktop
+                      .form-element.form-element--reg-address
+                        label.label.label--checkbox
+                          input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                          .icon.icon--checkbox
+                          .label__text Совпадает с фактическим
+                    .col-sm-6.form-element: label
+                      .form-placeholder Фактический адрес
+                        span.form-placeholder-note Город, улица, дом, квартира/офис
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-6.form-element: label
+                      .form-placeholder Почтовый адрес
+                        span.form-placeholder-note Город, улица, дом, квартира/офис
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    if isMobile
+                      .form-element.form-element--reg-address
+                        label.label.label--checkbox
+                          input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                          .icon.icon--checkbox
+                          .label__text Совпадает с фактическим
+                //- форма для дистрибьютора
+                .form-wrap(style="display:none;").js-registration-distrib
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Страна местонахождения
+                      include ../common/registration-country-common
+                    .col-sm-6.form-element: label
+                      .form-placeholder Город
+                      include ../common/registration-city-common
+                  .form-group
+                    .form-element: label
+                      .form-placeholder Название организации
+                      include ../common/registration-organization-common
+                //- форма для покупателя
+                .form-wrap(style="display:none;").js-registration-customer
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Укажите тип покупателя
+                      include ../common/registration-customer-common
+                    .col-sm-6.form-element: label
+                      .form-placeholder Укажите другой тип покупателя вручную
+                      input(disabled="true").form-control.js-form-validate__empty.js-registration-customer-other
+                      .error Текст ошибки
+
+              .registration__item
+                .registration__item-title Персональная информация
+                .form-wrap
+                  .form-group: .row
+                    .col-sm-4.form-element: label
+                      .form-placeholder Фамилия
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder Имя
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-4.form-element: label
+                      .form-placeholder Отчество
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Ваш мобильный телефон
+                      input.form-control.js-form-validate__phone
+                      .error Текст ошибки
+                    .col-sm-6.form-element: label
+                      .form-placeholder Email (логин для входа в личный кабинет)
+                      input.form-control.js-form-validate__email
+                      .error Текст ошибки
+                  .form-group
+                    .form-element: label
+                      .form-placeholder Ваша должность
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group
+                    .form-element: label
+                      .form-placeholder Комментарий
+                      textarea(rows="4").form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form__bottom
+                    .form-group
+                      .form-element
+                        label.label.label--checkbox
+                          input.form-control.js-form-validate__checked(type='checkbox', checked='')
+                          .icon.icon--checkbox
+                          .label__text
+                            | Я соглашаюсь с условиями обработки<br>
+                            a(href='javascript:void(0);').label__link персональных данных
+                          .error
+                    .button-wrap: button(type="submit").button Отправить заявку
+            .js-tabs-content-item
+              .registration__item.registration__item--person
+                .registration__item-title Персональная информация
+                .form-wrap
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Фамилия
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                    .col-sm-6.form-element: label
+                      .form-placeholder Имя
+                      input.form-control.js-form-validate__empty
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-6.form-element: label
+                      .form-placeholder Ваш мобильный телефон
+                      input.form-control.js-form-validate__phone
+                      .error Текст ошибки
+                    .col-sm-6.form-element: label
+                      .form-placeholder Email (логин для входа в личный кабинет)
+                      input.form-control.js-form-validate__email
+                      .error Текст ошибки
+                  .form-group: .row
+                    .col-sm-6.form-element.form-element--reg-person
+                      label.label.label--checkbox
+                        input(type='checkbox' name='saymyname1234' checked='true').form-control
+                        .icon.icon--checkbox
+                        .label__text Я проектировщик
+                    .col-sm-6.form-element
+                      .form__bottom
+                        .form-group
+                          .form-element
+                            label.label.label--checkbox
+                              input.form-control.js-form-validate__checked(type='checkbox', checked='true')
+                              .icon.icon--checkbox
+                              .label__text
+                                | Я соглашаюсь с условиями обработки<br>
+                                a(href='javascript:void(0);').label__link персональных данных
+                              .error
+                        .button-wrap: button(type="submit").button Отправить

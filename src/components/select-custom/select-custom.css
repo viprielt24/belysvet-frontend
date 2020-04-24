@@ -96,7 +96,7 @@
       content: '';
       position: absolute;
       top: 20px;
-      right: 27px;
+      right: 20px;
       width: 14px;
       height: 13px;
       background-image: url(/images/zoom.svg);
@@ -161,7 +161,7 @@
       opacity: 1;
       font-style: normal;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 18px;
       font-family: var(--opens);
       color: #C2C2C2;
