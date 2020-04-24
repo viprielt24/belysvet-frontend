@@ -64,6 +64,7 @@
   margin-bottom: 18px;
 
   .form-control {
+    flex-grow: 1;
     width: auto;
     height: 27px;
     margin-bottom: 6px;
