@@ -28,10 +28,10 @@ block content
               a(href="javascript:void(0);").button.button--white.projects__filter-middle-item Казахстан
               if isDesktop
                 - cities[1].title = 'Санкт-Петербург'
-                .projects__filter-middle-item: include ../common/header-select-common
+                .projects__filter-middle-item: include ../common/projects-select-common
             if isMobile
               - cities[1].title = 'Санкт-Петербург'
-              .projects__filter-middle-item.projects__filter-middle-mobile: include ../common/header-select-common
+              .projects__filter-middle-item.projects__filter-middle-mobile: include ../common/projects-select-common
 
           .projects__filter-bottom
             .projects__filter-bottom-title Сортировать по:

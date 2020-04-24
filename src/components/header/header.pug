@@ -3,7 +3,16 @@ header.header.js-header
     .container
       .header__top-wrap
         include ./pug/header-topmenu
-        .header__top-city: include ../../pages/common/header-select-common
+        .header__top-city
+          .select-custom
+            select.form-control.js-select-custom
+              each item in cities
+                //- неправильное условие на отсутствие выделенного пункта
+                //-if !item.selected & !counter
+                  option(placeholder)= placeholder
+                  - counter++
+                if item.value
+                  option(value= item.value selected= item.selected)= item.title
   .header__content
     if isMobile
       include ./pug/mobile-menu

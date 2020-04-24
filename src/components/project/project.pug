@@ -1,6 +1,6 @@
 mixin project(item)
   a(href= item.link.href).catalog__item
-    .pic: img(src='/images/thumbs/thumb.jpg' data-bgset= item.img).pic__img.lazyload
+    .pic: img(src='/images/thumbs/thumb.jpg' data-src= item.img).pic__img.lazyload
     .catalog__item-wrap
       .title!= item.title
       .catalog__item-box

@@ -32,9 +32,8 @@ export default class {
       watchSlidesProgress: true,
       slideToClickedSlide: true,
       breakpoints: {
-        320: {
+        767: {
           slidesPerView: 2,
-          loopedSlides: 2,
         }
       }
     });
@@ -78,9 +77,8 @@ export default class {
           watchSlidesProgress: true,
           slideToClickedSlide: true,
           breakpoints: {
-            320: {
+            767: {
               slidesPerView: 2,
-              loopedSlides: 2,
             }
           }
         });

@@ -18,11 +18,18 @@ block content
                 li Cветодиодными модулями, работающими на различных токах и напряжениях;
                 li Cветодиодными лампами-ретрофитами с напряжением питания 220/230 В и 12 В;
                 li Cсветодиодными световыми приборами с напряжением питания 220/230 В.
-            .emunit__top-links
-              a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
-                .icon.icon--inline.icon--stack: include ../../images/stack.svg
-                .link__text Проекты со блоками аварийного питания INEXI
+            if isDesktop
+              .emunit__top-right-proj
+                a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                  .icon.icon--inline.icon--stack: include ../../images/stack.svg
+                  .link__text Проекты со световыми приборами серии ARUNA
+
+            .emunit__top-links.emunit__top-links--main
               .emunit__top-links-wrap
+                if isMobile
+                  a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                    .icon.icon--inline.icon--stack: include ../../images/stack.svg
+                    .link__text Проекты
                 a(href="javascript:void(0);").link.link--icon
                   .icon.icon--inline.icon--list-empty: include ../../images/list-empty.svg
                   .link__text Сохранить в PDF
@@ -36,7 +43,7 @@ block content
                     .link__wrap: include ../../pages/common/signone-share-common
 
       .container.emunit__middle
-        .emunit__tabs.js-tabs
+        .emunit__tabs.emunit__tabs--main.js-tabs
           .emunit__tabs-title
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item.active Модельный ряд
             a(href="javascript:void(0);").js-tabs-header-item.emunit__tabs-title-item Обзор и описание серии

@@ -176,52 +176,57 @@ a.projects__filter-middle-item {
 .catalog--projects {
   margin-bottom: 32px;
 }
+
+.projects__filter-middle .select-custom--default .choices {
+  background-color: transparent;
+}
+
 /**
 media
  */
 .mobile {
 
-  .projects__filter{
+  .projects__filter {
     margin-top: 25px;
     margin-bottom: 38px;
     padding-top: 25px;
   }
 
-  .projects__filter-top-wrap{
+  .projects__filter-top-wrap {
     flex-direction: column;
   }
 
-  .projects__filter-middle-wrap{
+  .projects__filter-middle-wrap {
     position: relative;
     overflow: scroll;
   }
 
-  .projects__filter-bottom-wrap{
+  .projects__filter-bottom-wrap {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .projects__filter-title{
+  .projects__filter-title {
     margin-bottom: 13px;
     font-size: 15px;
     line-height: 19px;
   }
 
-  .projects__filter-top-item{
+  .projects__filter-top-item {
     width: 100%;
     margin: 0 0 13px;
   }
 
-  .projects__filter-top-label{
+  .projects__filter-top-label {
     margin-bottom: 5px;
     font-size: 12px;
   }
 
-  .projects__filter-middle{
+  .projects__filter-middle {
     padding-bottom: 20px;
   }
 
-  a.projects__filter-middle-item{
+  a.projects__filter-middle-item {
     width: 88px;
     height: 28px;
     min-height: 28px;
@@ -230,33 +235,47 @@ media
     font-size: 12px;
   }
 
-  .projects__filter-bottom-view{
+  .projects__filter-bottom-view {
     display: none;
   }
 
-  .projects__filter-middle-mobile{
+  .projects__filter-middle-mobile {
     display: flex;
     justify-content: center;
     margin-top: 13px;
 
-    .select-custom{
+    .select-custom {
       margin-left: 0;
     }
   }
 
-  .projects__filter-bottom-title{
+  .projects__filter-bottom-title {
     margin-bottom: 13px;
     font-size: 12px;
   }
 
-  .projects__filter-bottom-item{
+  .projects__filter-bottom-item {
     margin-bottom: 13px;
     margin-right: 0;
     font-size: 14px;
   }
 
-  .projects__filter-middle .choices__list--single .choices__item{
+  .projects__filter-middle {
+
+    .select-custom--default .choices[data-type*="select-one"]:after {
+      right: 0;
+    }
+
+    .select-custom--thin.select-custom.select-custom--default .choices__list--dropdown {
+      left: 50%;
+      margin-left: -112px;
+    }
+  }
+
+  .projects__filter-middle .choices__list--single .choices__item {
     font-size: 14px;
+    padding-left: 0;
+    padding-right: 25px;
   }
 
   .projects__filter-top .select-custom--default .choices__list--single .choices__item {

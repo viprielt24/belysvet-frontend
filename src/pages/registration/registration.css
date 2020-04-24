@@ -266,4 +266,34 @@ mobile
   .registration__item:first-child {
     margin-bottom: 28px;
   }
+
+  .registration__header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 22px;
+
+    .label {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:after {
+      left: -16px;
+      right: -16px;
+    }
+  }
+
+  .registration__header .label--checkbox .label__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .registration__header .label--checkbox .icon--checkbox {
+    top: 0;
+  }
+
 }

@@ -449,7 +449,7 @@ mobile
 
   .emunit__review {
     max-width: 100%;
-    padding: 35px 16px 0;
+    padding: 35px 16px 10px;
 
     &.text-editor ul {
       margin-bottom: 20px;
@@ -481,5 +481,35 @@ mobile
   .emunit__top-right-proj .link__text {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .emunit__models--accordion {
+    padding: 0 16px;
+  }
+
+  .emunit.content__text-editor {
+    padding-bottom: 0;
+  }
+
+  .emunit__review-item--more {
+    padding-top: 25px;
+  }
+
+  .emunit__review-item--more .link__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .emunit__review-item--more .link {
+    padding-bottom: 1px;
+  }
+
+  .emunit__top-right .text-editor {
+    padding-bottom: 0;
+  }
+
+  .emunit__top-left .gallery .swiper-container {
+    height: 226px;
   }
 }
