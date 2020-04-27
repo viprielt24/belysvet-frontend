@@ -1,4 +1,5 @@
 import Swiper from 'swiper/dist/js/swiper.min.js';
+import set from '@babel/runtime/helpers/esm/set';
 
 export default class {
   constructor() {
@@ -48,7 +49,10 @@ export default class {
       let deleteBtn = slide.querySelector('.js-catalog__compare-close');
       deleteBtn.addEventListener('click', () => {
         if (this.compareSlider !== 'undefined') {
-          this.slides[index].remove();
+          this.slides[index].classList.add('is-hidden');
+          setTimeout(() => {
+            this.slides[index].remove();
+          }, 300);
           // this.compareSlider.removeSlide(index);
           this.compareSlider.update();
         }
