@@ -517,6 +517,7 @@ const pages = {
       pageName: 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2',
       crumbs: ['Главная', 'Продукция', 'Световые приборы аварийного освещения', 'Световые приборы аварийного освещения ARUNA', 'Световой прибор аварийного освещения BS-ARUNA-81-L1-INEXI2'],
       lights: data.lights,
+      productItems: data.productItems,
       tags: data.signone,
       tagsCompatibility: data.compatibility,
       parts: data.parts,

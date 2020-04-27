@@ -354,7 +354,7 @@
 .emunit__tabs-footer {
   position: relative;
   top: -1px;
-  border-top: var(--border);
+  /*border-top: var(--border);*/
 
   .text-editor table thead {
     background-color: #fff;
@@ -888,10 +888,20 @@
     content: none;
   }
 }
+
+.emunit__models-compatible {
+  padding-top: 111px;
+  padding-bottom: 33px;
+}
+
 /**
 mobile
  */
 .mobile {
+
+  .emunit__models-compatible {
+    padding-top: 87px;
+  }
 
   .emunit__tabs-footer-table {
     overflow-x: auto;
@@ -1129,8 +1139,7 @@ mobile
   }
 
   .emunit__models-temp-text {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 15px;
     font-size: 18px;
     line-height: 24px;
   }

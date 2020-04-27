@@ -187,6 +187,12 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  if (document.querySelector('.js-catalog-product-item')) {
+    import('../components/product-item/product-item').then(module => {
+      new module.default();
+    });
+  }
+
   if (document.querySelector('.js-checkout__receive-map')) {
     import('../pages/checkout/checkout').then(module => {
       new module.default();

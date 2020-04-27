@@ -1,0 +1,15 @@
+include ../../components/product-item/product-item
+
+.catalog.catalog-product-item.js-catalog-product-item
+  .catalog__header
+    .swiper-button-prev
+    .swiper-button-next
+  .catalog__content
+    .swiper-container
+      .swiper-pagination
+      .swiper-wrapper
+        each item, index in productItems
+          .swiper-slide
+            .catalog__wrap
+              .catalog__col
+                +product-item(item, index)

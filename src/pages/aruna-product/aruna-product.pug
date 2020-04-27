@@ -100,7 +100,8 @@ block content
           .emunit__tabs-content
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
-              .emunit__models-temp-text Аксессуары и совместимые продукты для данной товарной позиции не предусмотрены
+              //-.emunit__models-temp-text Аксессуары и совместимые продукты для данной товарной позиции не предусмотрены
+              .emunit__models-compatible: include ../../pages/common/product-item-common
               if isMobile
                 .emunit__models-temp-button: button.button Возможности для заказа
             .emunit__tabs-content-item.emunit__models.js-tabs-content-item
@@ -109,7 +110,7 @@ block content
                   tr
                     td.table-td-center.table-td-thead Параметры
                     td.table-td-link
-                      a(href="javascript:void(0);").link.link--icon.link--icon-path-fill
+                      a(href="javascript:void(0);" data-popupname="lights").link.link--icon.link--icon-path-fill.js-popup-open
                         .icon.icon--inline.icon--info: include ../../images/info.svg
                         .link__text BS-ARUNA-81-L1-INEXI2
                 tbody

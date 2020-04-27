@@ -1,0 +1,12 @@
+mixin product-item(item)
+  a(href="javascript:void(0);").catalog__item
+    if item.img
+      .pic: img(src= item.img).pic__img
+    if item.subtitle
+      .subtitle!= item.subtitle
+    if item.title
+      .title!= item.title
+    if item.article
+      .article!= 'Артикул: ' + item.article
+    if item.price
+      .descr!= '<span>Цена от </span>' + item.price + ' ₽'
