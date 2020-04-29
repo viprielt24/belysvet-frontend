@@ -967,6 +967,7 @@ const pages = {
     parameters: {
       page: 'user-objects-item',
       title: 'Торговый центр «Дружба»',
+      pageName: 'Торговый центр «Дружба»',
       crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)', 'Объекты', 'Торговый центр «Дружба»'],
       files: data.productsFiles,
     }
