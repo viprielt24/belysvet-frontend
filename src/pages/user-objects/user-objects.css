@@ -1,0 +1,54 @@
+@import "../../layout/variables.css";
+
+.button--add-user-object {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 222px;
+  height: 48px;
+  font-size: 14px;
+}
+
+.user-objects-filter {
+  display: flex;
+  align-items: center;
+  height: 61px;
+  background-color: #fff;
+  padding: 0 30px;
+}
+
+.user-objects-filter-item {
+  min-width: 425px;
+}
+
+.user-objects-list-item {
+  display: flex;
+  align-items: center;
+  height: 173px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+.user-objects-list-name {
+  min-width: 425px;
+}
+
+.user-objects-footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+
+  .button--press {
+    width: 225px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .button--add-user-object {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

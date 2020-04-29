@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .user-announce
+        include ../common/tagline
+        .user-announce-bottom
+          .user-announce-bottom-title Связаться с нами
+          include ../../pages/connect/pug/connect

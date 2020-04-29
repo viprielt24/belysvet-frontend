@@ -1,0 +1,123 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .hp-user
+        .container--hp-user
+          //-карточки с большой колонкой
+          .row
+            .col-sm-6
+              .hp-user-card.hp-user-card--double
+                a(href="user-announce").title Коммуникации
+                .descr У вас есть <span>5</span> непрочитанных сообщений:
+                .hp-user-card-content
+                  ul.list
+                    li.list__item
+                      .list__header
+                        .list__header-data 02.07.2019 в 07:17
+                        .list__header-name Дистрибьюторам
+                      a(href="javascript:void(0);").list__link Результаты конкурса на звание лучшего дистрибьютора на звание лучшего дистрибьютора
+                    li.list__item
+                      .list__header
+                        .list__header-data 02.07.2019 в 07:17
+                        .list__header-name Всем пользователям
+                      a(href="javascript:void(0);").list__link График работы склада и офиса в новогодние праздники и офиса в новогодние праздники
+                    li.list__item
+                      .list__header
+                        .list__header-data 02.07.2019 в 07:17
+                        .list__header-name Всем пользователям
+                      a(href="javascript:void(0);").list__link Тут до трех заголовков сообщений в одну строку, обрываем в одну строку, обрываем
+                .hp-user-card-footer
+                  a(href="javascript:void(0);").link.link--more
+                    .link__text Смотреть все
+                    .link__icon: include ../../images/arrow-right-small.svg
+            .col-sm-6
+              .row
+                .col-sm-6
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Продажи
+                    .descr У вас <span>32</span> продажи.
+                .col-sm-6
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Объекты
+                    .descr У вас <span>23</span> объекта.
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Спецификации
+                    .descr У вас <span>2345</span> спецификаций.
+                    .text Компания Белый свет сделала и разместила спецификации для вас, пожалуйста, ознакомьтесь.
+          //-карточки в линию
+          //-.row
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Коммуникации
+                .descr У вас нет непрочитанных сообщений.
+            .col-sm-3
+              .hp-user-card
+                a(href="javascript:void(0);").title Продажи
+                .descr У вас нет продаж.
+            .col-sm-3
+              .hp-user-card
+                a(href="javascript:void(0);").title Объекты
+                .descr У вас нет объектов.
+          .row
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Корзина
+                .descr В корзине <span>7035</span> позиций.
+                .hp-user-card-footer
+                  a(href="javascript:void(0);").link.link--more
+                    .link__text Оформить заказ
+                    .link__icon: include ../../images/arrow-right-small.svg
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Документы
+                .descr У вас <span>23</span> документа.
+                .text Компания Белый свет разместила для вас новые документы, пожалуйста, ознакомьтесь.
+          .row
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title История заказов
+                .descr В вашей истории заказов <span>1234</span> записи.
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Сервисные обращения
+                .hp-user-card-footer
+                  a(href="javascript:void(0);").link.link--more
+                    .link__text Подать заявку на ремонт
+                    .link__icon: include ../../images/arrow-right-small.svg
+          .row
+            .col-sm-6
+              .hp-user-card.hp-user-card--double
+                a(href="javascript:void(0);").title Скидки, бонусы, акции
+                .descr В настоящий момент действует <span>14</span>:
+                .hp-user-card-content
+                  ul.list
+                    li.list__item
+                      .list__header
+                        .list__header-data Сентябрь 2017 г.
+                      a(href="javascript:void(0);").list__link Заголовок акции
+                    li.list__item
+                      .list__header
+                        .list__header-data Сентябрь 2017 г.
+                      a(href="javascript:void(0);").list__link Заголовок акции идет в одну строку всегда и обрывается вот в одну строку всегда и обрывается вот
+                    li.list__item
+                      .list__header
+                        .list__header-data Сентябрь 2017 г.
+                      a(href="javascript:void(0);").list__link Заголовок акции идет в одну строку всегда и обрывается вот идет в одну строку всегда и обрывается вот
+                .hp-user-card-footer
+                  a(href="javascript:void(0);").link.link--more
+                    .link__text Смотреть все
+                    .link__icon: include ../../images/arrow-right-small.svg
+            .col-sm-6
+              .row
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Помощь
+                    .descr В этом разделе собрана информация о том, как работать в Личном кабинете, собраны обучающие видео и ответы на частые вопросы.
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Профиль
+                    .descr В этом разделе вы можете изменить данные о себе, о вашей компании, указать предпочтения в совместной работе и настроить получение уведомлений на e-mail.

@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .user-docs
+        .user-docs-wrap
+          - polygraphyTitle = 'Договоры'
+          .user-docs-item: include ../common/polygraphy
+          - polygraphyTitle = 'Документы'
+          .user-docs-item: include ../common/polygraphy
+          - polygraphyTitle = 'Еще какие-то документы'
+          .user-docs-item: include ../common/polygraphy

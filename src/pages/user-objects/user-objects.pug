@@ -1,0 +1,58 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .user-objects
+        form(action='javascript:void(0);')
+          .form-group: .row
+            .col-sm-6.form-group-double
+              .form-element: label
+                .form-placeholder Страна
+                include ../common/user-objects-select-country-common
+              .form-element: label
+                .form-placeholder Город
+                include ../common/user-objects-select-city-common
+          .col-sm-6
+            .button-wrap: a(href="javascript:void(0);").button.button--add-user-object Добавить объект
+        .user-objects-filter
+          a(href="javascript:void(0);").user-objects-filter-item.link.link--icon
+            | Название объекта
+            .sort: .icon.icon--inline.icon--sort: include ../../images/sort.svg
+          a(href="javascript:void(0);").user-objects-filter-item.link.link--icon
+            | Дата создания
+            .sort: .icon.icon--inline.icon--sort: include ../../images/sort.svg
+        .user-objects-list
+          .user-objects-list-item
+            .user-objects-list-name
+              .subtitle Название объекта:
+              a(href="javascript:void(0);").title.link.link--simple Торговый Центр  "Дружба"
+            .user-objects-list-props.props
+              .props__item
+                .props__name ID:
+                .props__value 112233
+              .props__item
+                .props__name Дата создания:
+                .props__value 01.06.2019
+              .props__item
+                .props__name Адрес:
+                .props__value Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5
+          .user-objects-list-item
+            .user-objects-list-name
+              .subtitle Название объекта:
+              a(href="javascript:void(0);").title.link.link--simple Торговый Центр  "Дружба"
+            .user-objects-list-props.props
+              .props__item
+                .props__name ID:
+                .props__value 112233
+              .props__item
+                .props__name Дата создания:
+                .props__value 01.06.2019
+              .props__item
+                .props__name Адрес:
+                .props__value Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5
+        .user-objects-footer
+          a(href="javascript:void(0);").button.button--press Показать еще
+          a(href="javascript:void(0);").button.button--add-user-object Добавить объект
+

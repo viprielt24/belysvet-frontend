@@ -1,0 +1,48 @@
+extends ../layout.pug
+
+block content
+  .content.content--user-objects-item
+    .container
+      include ../../components/content-header/content-header
+      .user-objects-item
+        .user-objects-item-about
+          .user-objects-item-title Торговый центр «Дружба»
+          .user-objects-item-props
+            .props__item
+              .props__name ID:
+              .props__value 112233
+            .props__item
+              .props__name Дата создания:
+              .props__value 01.06.2019
+            .props__item
+              .props__name Название объекта:
+              .props__value Торговый центр «Дружба»
+            .props__item
+              .props__name Адрес объекта:
+              .props__value Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5
+            .props__item
+              .props__name Комментарий:
+              .props__value Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.
+          .user-objects-item-footer
+            a(href="javascript:void(0);").link.link--icon
+              .icon.icon--close.icon--close-red.icon--close-medium
+              .link__text Удалить объект
+            a(href="javascript:void(0);").button.button--empty редактировать объект
+    .user-objects-item-tabs.js-tabs
+      .container
+        .user-objects-item-tabs-headers
+          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item.active Спецификации
+          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Продажи
+          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Заказы
+          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Документы
+        .user-objects-item-tabs-content
+          .js-tabs-content-item
+            .user-objects-item-temp
+              .user-objects-item-temp-text С этим объектом не связана ни одна спецификация
+              .button Создать спецификацию
+          .js-tabs-content-item 2
+          .js-tabs-content-item 3
+          .js-tabs-content-item
+            - isPolygraphyTitle = 'none';
+            include ../common/polygraphy
+

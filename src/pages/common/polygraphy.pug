@@ -1,3 +1,6 @@
+- polygraphyTitle = polygraphyTitle ? polygraphyTitle : 'Наши печатные каталоги';
+- isPolygraphyTitle = isPolygraphyTitle!=='none';console.log(isPolygraphyTitle)
 .polygraphy
-  .polygraphy__title Наши печатные каталоги
+  if isPolygraphyTitle
+    .polygraphy__title!= polygraphyTitle
   include ./file

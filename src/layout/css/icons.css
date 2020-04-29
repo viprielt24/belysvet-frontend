@@ -55,6 +55,14 @@
   }
 }
 
+.icon--close-red {
+
+  &:after,
+  &:before {
+    background-color: #DF4E3B;
+  }
+}
+
 .icon--close-medium {
   width: 18px;
   height: 18px;

@@ -1,0 +1,25 @@
+@import "../../layout/variables.css";
+
+.user-docs {
+
+  .polygraphy {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.user-docs-item {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: var(--border);
+
+  &:first-child {
+    margin-top: 16px;
+  }
+
+  &:last-child {
+    padding-bottom: 35px;
+    border-bottom: var(--border);
+  }
+}

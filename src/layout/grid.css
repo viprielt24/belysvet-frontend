@@ -17,6 +17,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  &.container--hp-user {
+    padding: 0;
+  }
 }
 
 .container-fluid {
@@ -25,6 +29,17 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.container--hp-user {
+
+  .row {
+    margin: 0 -15px;
+  }
+
+  [class*="col-"] {
+    padding: 0 15px;
+  }
 }
 
 .row {

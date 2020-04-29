@@ -1,0 +1,113 @@
+@import "../../layout/variables.css";
+
+.hp-user {
+
+}
+
+.hp-user-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 165px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px 25px;
+
+  .title {
+    margin-bottom: 5px;
+    font-family: var(--museo);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--trc);
+
+    &:hover {
+      color: var(--hover);
+    }
+  }
+
+  .descr {
+    font-family: var(--opens);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404040;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .text {
+    margin-top: 15px;
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7E7E7E;
+  }
+}
+
+.hp-user-card--double {
+  min-height: 360px;
+}
+
+.hp-user-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+
+  .link--more .link__text {
+    font-size: 17px;
+  }
+}
+
+.hp-user-card-content {
+
+  .list__header {
+    display: flex;
+    margin-bottom: 6px;
+  }
+
+  .list__header-data {
+    margin-right: 20px;
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #404040;
+    opacity: 0.8;
+  }
+
+  .list__header-name {
+    font-family: var(--opens);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #7E7E7E;
+  }
+
+  .list__item {
+    margin-top: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .list__link {
+    font-family: var(--museo);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    text-decoration: underline;
+    color: #404040;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

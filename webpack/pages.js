@@ -855,6 +855,122 @@ const pages = {
       }
     }
   },
+  'homepage-user': {
+    parameters: {
+      page: 'homepage-user',
+      title: 'Личный кабинет Покупателя (ЮЛ)',
+      pageName: 'Личный кабинет покупателя',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)'],
+    }
+  },
+  'user-announce': {
+    parameters: {
+      page: 'user-announce',
+      title: 'Коммуникации',
+      pageName: 'Коммуникации',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)', 'Коммуникации'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.</p>',
+      tags: [
+        {
+          title: 'Не прочитано',
+          active: true
+        },
+        {
+          title: 'Реклама',
+          active: false
+        },
+        {
+          title: 'Персональное',
+          active: false
+        },
+        {
+          title: 'Тег 4',
+          active: false
+        },
+        {
+          title: 'Тег 5',
+          active: false
+        },
+      ],
+      taglineClear: true,
+      connect: data.connect,
+      connectSubject: data.connectSubject,
+      connectFrom: data.connectFrom,
+      connectTo: data.connectTo,
+      connectTime: data.connectTime,
+    }
+  },
+  'user-docs': {
+    parameters: {
+      page: 'user-docs',
+      title: 'Документы',
+      pageName: 'Документы',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)', 'Документы'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про сообщения, для чего они и как ими пользоваться.</p>',
+      files: data.productsFiles,
+    }
+  },
+  'user-objects': {
+    parameters: {
+      page: 'user-objects',
+      title: 'Объекты',
+      pageName: 'Объекты',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)', 'Объекты'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      registrationCountry: [
+        {
+          title: 'Россия',
+          value: 'Russia',
+          selected: false
+        },
+        {
+          title: 'Украина',
+          value: 'Ukraine',
+          selected: false
+        },
+        {
+          title: ' Беларусь',
+          value: 'Belarus',
+          selected: false
+        },
+        {
+          title: ' Казахстан',
+          value: 'Kazakhstan',
+          selected: false
+        },
+      ],
+      registrationCity: [
+        {
+          title: 'Москва и Московская область',
+          value: 'moscow',
+          selected: false
+        },
+        {
+          title: 'Санкт-Петербург',
+          value: 'piter',
+          selected: false
+        },
+        {
+          title: ' Армавир',
+          value: 'armavir',
+          selected: false
+        },
+        {
+          title: ' Абакан',
+          value: 'abakan',
+          selected: false
+        },
+      ],
+    }
+  },
+  'user-objects-item': {
+    parameters: {
+      page: 'user-objects-item',
+      title: 'Торговый центр «Дружба»',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)', 'Объекты', 'Торговый центр «Дружба»'],
+      files: data.productsFiles,
+    }
+  },
 };
 // Страницы проекта
 pages.pages = {
