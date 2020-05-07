@@ -1,0 +1,59 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .hp-user
+        .container--hp-user
+          .row
+            .col-sm-6
+              .hp-user-card.hp-user-card--double
+                a(href="user-announce").title Коммуникации
+                .descr-empty У вас нет непрочитанных сообщений.
+            .col-sm-6
+              .row
+                .col-sm-6
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Продажи
+                    .descr-empty У вас нет продаж.
+                .col-sm-6
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Объекты
+                    .descr-empty У вас нет объектов.
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Спецификации
+                    .descr-empty У вас нет спецификаций.
+          .row
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Корзина
+                .descr-empty Ваша корзина пуста.
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Документы
+                .descr-empty Новых документов нет.
+          .row
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title История заказов
+                .descr-empty В вашей истории заказов нет записей.
+            .col-sm-6
+              .hp-user-card
+                a(href="javascript:void(0);").title Сервисные обращения
+          .row
+            .col-sm-6
+              .hp-user-card.hp-user-card--double
+                a(href="javascript:void(0);").title Скидки, бонусы, акции
+                .descr-empty В настоящий момент отсутствуют.
+            .col-sm-6
+              .row
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Помощь
+                    .descr-empty В этом разделе собрана информация о том, как работать в Личном кабинете, собраны обучающие видео и ответы на частые вопросы.
+                .col-sm-12
+                  .hp-user-card
+                    a(href="javascript:void(0);").title Профиль
+                    .descr-empty В этом разделе вы можете изменить данные о себе, о вашей компании, указать предпочтения в совместной работе и настроить получение уведомлений на e-mail.

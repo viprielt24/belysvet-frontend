@@ -855,6 +855,14 @@ const pages = {
       }
     }
   },
+  'homepage-user-empty': {
+    parameters: {
+      page: 'homepage-user',
+      title: 'Личный кабинет Покупателя (ЮЛ)',
+      pageName: 'Личный кабинет покупателя',
+      crumbs: ['Главная', 'Личный кабинет Покупателя (ЮЛ)'],
+    }
+  },
   'homepage-user': {
     parameters: {
       page: 'homepage-user',
@@ -892,6 +900,8 @@ const pages = {
           active: false
         },
       ],
+      communication: data.communicationList,
+      person: data.personManager,
       taglineClear: true,
       connect: data.connect,
       connectSubject: data.connectSubject,

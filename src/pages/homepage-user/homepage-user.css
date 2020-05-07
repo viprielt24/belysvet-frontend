@@ -11,7 +11,11 @@
   background-color: #fff;
   margin-bottom: 30px;
   padding: 20px 25px;
+  transition: var(--trsh);
 
+  &:hover {
+    box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+  }
   .title {
     margin-bottom: 5px;
     font-family: var(--museo);
@@ -37,6 +41,14 @@
     span {
       font-weight: 700;
     }
+  }
+
+  .descr-empty {
+    font-family: var(--opens);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404040;
   }
 
   .text {

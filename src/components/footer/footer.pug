@@ -83,14 +83,14 @@ if isDesktop
               .form-wrap
                 .form-group.form-group--half
                   .form-element
-                    input(type="text" placeholder="Имя").form-control.js-form-validate__empty
+                    input(type="text" name="footerName" placeholder="Имя").form-control.js-form-validate__empty
                     .error
                   .form-element
-                    input(type="text" placeholder="E-mail / телефон").form-control.js-form-validate__empty
+                    input(type="text" name="footerEmail" placeholder="E-mail / телефон").form-control.js-form-validate__empty
                     .error
                 .form-group
                   .form-element
-                    textarea(placeholder="Ваше сообщение" rows="7").form-control
+                    textarea(placeholder="Ваше сообщение" name="footerMessage" rows="7").form-control
                     .error
                 .form__bottom
                   .button-wrap
@@ -194,14 +194,14 @@ else
           .form-wrap
             .form-group
               .form-element
-                input(type="text" placeholder="Имя").form-control.js-form-validate__empty
+                input(type="text" name="footerName" placeholder="Имя").form-control.js-form-validate__empty
                 .error
               .form-element
-                input(type="text" placeholder="E-mail / телефон").form-control.js-form-validate__empty
+                input(type="text" name="footerEmail" placeholder="E-mail / телефон").form-control.js-form-validate__empty
                 .error
             .form-group
               .form-element
-                textarea(placeholder="Ваше сообщение" rows= isDesktop ? "7" : "3").form-control
+                textarea(placeholder="Ваше сообщение" name="footerMessage" rows= isDesktop ? "7" : "3").form-control
                 .error
             .form__bottom
               .button-wrap

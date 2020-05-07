@@ -1,20 +1,23 @@
 @import "../../layout/variables.css";
 @import "../../pages/connect/connect.css";
+@import "../../components/personCard/personCard.css";
+@import "../../components/communicationCard/communicationCard.css";
 
 .user-announce {
-
   .tagline {
     margin-top: 16px;
     padding-top: 25px;
     border-top: var(--border);
   }
-
   .tagline__clear {
     margin-left: auto;
   }
 }
-
-.user-announce-bottom-title {
+.user-announce-communications {
+  padding: 20px 0 0;
+}
+.user-announce-block {}
+.user-announce-block-title {
   margin-top: 50px;
   margin-bottom: 25px;
   padding-bottom: 16px;
@@ -27,3 +30,4 @@
   letter-spacing: -0.02em;
   color: #333333;
 }
+.user-announce-block-content {}

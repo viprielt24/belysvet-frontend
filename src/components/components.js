@@ -204,4 +204,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-tagline')) {
+    import('../layout/js/tagsLineEvent.js').then(module => {
+      new module.default(document.querySelector('.js-tagline'));
+    });
+  }
 });

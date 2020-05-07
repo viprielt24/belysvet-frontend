@@ -1,0 +1,25 @@
+mixin communicationCard(date,tags,status,title,description,link)
+  - let statusClass = '';
+  if status.type == 0
+    - statusClass = 'communicationCard__status--notRead';
+  else if status.type == 1
+    - statusClass = 'communicationCard__status--read';
+  a.communicationCard(href=link.href)
+    .communicationCard__wrap
+      if date || tags || status
+      .communicationCard__header
+        if date
+          .communicationCard__date!=date
+        if tags
+          .communicationCard__tags
+            each item in tags
+              span!=item
+        if status
+          .communicationCard__status(class=statusClass)!=status.title
+      if title
+        .communicationCard__title!=title
+      if description
+        .communicationCard__description!=description
+      if link
+        .communicationCard__link
+          span!=link.title

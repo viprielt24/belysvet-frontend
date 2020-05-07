@@ -1,4 +1,6 @@
 extends ../layout.pug
+include ../../components/personCard/personCard.pug
+include ../../components/communicationCard/communicationCard.pug
 
 block content
   .content
@@ -6,6 +8,32 @@ block content
       include ../../components/content-header/content-header
       .user-announce
         include ../common/tagline
-        .user-announce-bottom
-          .user-announce-bottom-title Связаться с нами
-          include ../../pages/connect/pug/connect
+        .user-announce-communications
+          each item in communication
+            +communicationCard(
+              item.date,
+              item.tags,
+              item.status,
+              item.title,
+              item.description,
+              item.link
+            )
+
+        .user-announce-block
+          .user-announce-block-title Ваши менеджеры
+          .user-announce-block-content
+            .personCardGroup
+              each item in person
+                +personCard(
+                  item.image,
+                  item.fio,
+                  item.position,
+                  item.telephone,
+                  item.fax,
+                  item.mobile,
+                  item.email
+                )
+        .user-announce-block
+          .user-announce-block-title Связаться с нами
+          .user-announce-block-content
+            include ../../pages/connect/pug/connect

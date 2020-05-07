@@ -1,0 +1,38 @@
+mixin personCard(image,fio,position,telephone,fax,mobilePhone,email,action=false)
+  .personCard
+    .personCard__wrap
+      .personCard__image(class= !image ? 'personCard__image--empty' : '')
+        if image
+          img(src=image alt=fio)
+      .personCard__group
+        if fio
+          .personCard__fio!=fio
+        if position
+          .personCard__position!=position
+        if telephone || fax || mobilePhone || email 
+          .personCard__dataArray
+            if telephone
+              .personCard__dataItem
+                span!='Телефон: '
+                = ' '
+                span!= telephone
+            if fax
+              .personCard__dataItem
+                span!='Факс:' 
+                = ' '
+                span!=fax
+            if mobilePhone
+              .personCard__dataItem
+                span!='Моб.:' 
+                = ' '
+                span!=mobilePhone
+            if email
+              .personCard__dataItem
+                span!='E-mail:' 
+                = ' '
+                a(href='mailto:'+email)!=email
+        if action
+          .personCard__action
+            .personCard__edit!='Редактировать'
+            .personCard__delete!='Удалить'
+            

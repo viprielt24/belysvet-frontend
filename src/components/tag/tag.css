@@ -8,6 +8,7 @@
   border-radius: 3px;
   padding: 0 15px;
   transition: var(--trbg), var(--trc);
+  user-select: none;
 
   &:hover {
     background-color: rgba(97, 174, 59, .2);
