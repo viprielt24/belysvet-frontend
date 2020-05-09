@@ -171,6 +171,31 @@
 /**
 
  */
+.popup--deleteFile {
+  & .popup__wrap {
+    max-width: 400px;
+  }
+  & .popup__buttonGroup {
+    margin-top: 30px;
+    text-align: center;
+    & a + a {
+      margin-left: 16px;
+    }
+  }
+  & .popup__content-title {
+    margin-bottom: 20px;
+  }
+  & .popup__content-header {
+    margin-bottom: 0;
+  }
+  & .button {
+    min-width: 132px;
+  }
+}
+
+/**
+
+ */
 .popup--photo {
   background-color: rgba(19, 19, 19, 0.8);
 

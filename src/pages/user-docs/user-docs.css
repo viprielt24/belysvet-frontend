@@ -1,25 +1,24 @@
 @import "../../layout/variables.css";
+@import "../../components/fileCard/fileCard.css";
 
-.user-docs {
-
-  .polygraphy {
-    margin: 0;
-    padding: 0;
-    border: 0;
+.userDocs {
+  & .fileCard {
+    width: 25%;
   }
 }
-
-.user-docs-item {
-  margin-top: 35px;
+.userDocs__item {
   padding-top: 25px;
-  border-top: var(--border);
-
+  padding-bottom: 25px;
+  border-bottom: var(--border);
   &:first-child {
-    margin-top: 16px;
+    margin-top: 35px;
+    border-top: var(--border);
   }
-
-  &:last-child {
-    padding-bottom: 35px;
-    border-bottom: var(--border);
-  }
+}
+.userDocs__title {
+  margin-bottom: 15px;
+  font-family: var(--museo);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
 }

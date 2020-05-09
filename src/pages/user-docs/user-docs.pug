@@ -1,14 +1,58 @@
 extends ../layout.pug
+include ../../components/fileCard/fileCard.pug
 
 block content
   .content
     .container
       include ../../components/content-header/content-header
-      .user-docs
-        .user-docs-wrap
-          - polygraphyTitle = 'Договоры'
-          .user-docs-item: include ../common/polygraphy
-          - polygraphyTitle = 'Документы'
-          .user-docs-item: include ../common/polygraphy
-          - polygraphyTitle = 'Еще какие-то документы'
-          .user-docs-item: include ../common/polygraphy
+      .userDocs
+        if filesСontract
+          .userDocs__item
+            .userDocs__title!=filesСontract.title
+            .userDocs__files
+              .fileCardGroup
+                each itemFile, index in filesСontract.files
+                  +fileCard(
+                    'filesContract'+index,
+                    itemFile.type,
+                    itemFile.fileName,
+                    itemFile.href,
+                    itemFile.size,
+                    itemFile.create,
+                    itemFile.replace,
+                    itemFile.action
+                  )
+        if filesDocs
+          .userDocs__item
+            .userDocs__title!=filesDocs.title
+            .userDocs__files
+              .fileCardGroup
+                each itemFile, index in filesDocs.files
+                  +fileCard(
+                    'filesDocs'+index,
+                    itemFile.type,
+                    itemFile.fileName,
+                    itemFile.href,
+                    itemFile.size,
+                    itemFile.create,
+                    itemFile.replace,
+                    itemFile.action
+                  )
+        if fileMore
+          .userDocs__item
+            .userDocs__title!=fileMore.title
+            .userDocs__files
+              .fileCardGroup
+                each itemFile, index in fileMore.files
+                  +fileCard(
+                    'fileMore'+index,
+                    itemFile.type,
+                    itemFile.fileName,
+                    itemFile.href,
+                    itemFile.size,
+                    itemFile.create,
+                    itemFile.replace,
+                    itemFile.action
+                  )
+  include ../../components/fileCard/icon.pug
+  include ../../components/popup/pug/deleteFile.pug

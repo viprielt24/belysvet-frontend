@@ -1,0 +1,25 @@
+mixin fileCard(id,type,fileName,href,size,create,replace,action)
+  .fileCard(class='fileCard--' + type)
+    .fileCard__wrap
+      a.fileCard__fileName(href=href target="_blank")!=fileName
+      if size || create || replace
+        .fileCard__group
+          .fileCard__size!=size
+          if replace
+            .fileCard__change!='Заменен ' + replace
+          else if create
+            .fileCard__create!='Добавлен ' + create
+      if action
+        .fileCard__action
+          .fileCard__actionReplace.fcButton.fcButton--uploadFile
+            input(type="file" id=id)
+            label(for=id)
+              .fcButton__icon
+                svg
+                  use(xlink:href="#svg-replace-file")
+              .fcButton__title!='Заменить'
+          .fileCard__actionDelete.fcButton.js-popup-open(data-popupname="delete-file")
+            .fcButton__icon
+              svg
+                use(xlink:href="#svg-delete-file")
+            .fcButton__title!='Удалить'
