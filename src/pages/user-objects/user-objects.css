@@ -1,6 +1,10 @@
+/* ------------------------------------------------------------------------- */
+
 @import "../../layout/variables.css";
 @import "../../components/tableFilter/tableFilter.css";
 @import "../../components/tableItem/tableItem.css";
+
+/* ------------------------------------------------------------------------- */
 
 .userObjects__filter {
   display: flex;
@@ -52,3 +56,25 @@
     top: 0;
   }
 }
+
+/* --------------------------------- */
+
+.userObjectsEmpty {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 400px;
+  padding: 30px 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+.userObjectsEmpty__description {
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.userObjectsEmpty__button {
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------------------- */

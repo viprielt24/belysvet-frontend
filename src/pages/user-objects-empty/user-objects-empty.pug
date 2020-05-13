@@ -1,0 +1,15 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .userObjectsEmpty
+        .userObjectsEmpty__description У вас пока нет ни одного объекта.<br />Пожалуйста, воспользуйтесь кнопкой “Добавить объект”.
+        .userObjectsEmpty__button
+          a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonFixSize.js-popup-open!='Добавить объект'
+
+  include ../../components/popup/pug/addNewObject.pug
+
