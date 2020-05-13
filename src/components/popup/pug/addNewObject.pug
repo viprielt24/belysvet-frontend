@@ -1,0 +1,47 @@
+.popup.popup--addNewObject.js-popup-add-new-object
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-object").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Добавить объект
+
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder Название объекта
+              input(placeholder='Введите название объекта').form-control.js-form-validate__empty
+            .form-element: label
+              .form-placeholder Адрес объекта
+              .form-placeholder__subTitle Город, улица, дом
+              input(placeholder='Введите адрес в свободной форме').form-control.js-form-validate__empty
+
+            .formAddressGroup
+              .formAddressGroup__title Если адреса не оказалось в реестре, пожалуйста, <br />введите его вручную ниже
+              .formAddressGroup__form
+                .form-group
+                  .form-element: label
+                    input(placeholder='Страна, регион, город, улица').form-control
+                .form-group.formAddressGroup__inputGroup
+                  .form-element: label
+                    input(placeholder='Дом').form-control
+                  .form-element: label
+                    input(placeholder='Корпус').form-control
+                  .form-element: label
+                    input(placeholder='Строение').form-control
+                  .form-element: label
+                    input(placeholder='Другое').form-control
+
+          .form-group
+            .form-element: label
+              .form-placeholder Комментарий
+              textarea(rows="4").form-control.js-form-validate__empty
+              .error Текст ошибки
+
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonWhitoutBorder.button--empty.js-popup-close
+            span отменить
+          a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonFixSize.js-popup-close Добавить

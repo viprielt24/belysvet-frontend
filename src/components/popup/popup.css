@@ -196,6 +196,75 @@
 /**
 
  */
+.popup--addNewObject {
+  & .popup__buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    & a {
+      text-align: center;
+    }
+    & a + a {
+      margin-left: 16px;
+    }
+  }
+  & .popup__content-header {
+    margin-bottom: 20px;
+  }
+  & .popup__content-title {
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+  }
+  & .popup__form {
+    width: auto;
+  }
+  & .form-element {
+    margin-top: 20px;
+  }
+  & .form-placeholder__subTitle {
+    margin-top: -5px;
+    margin-bottom: 7px;
+    font-family: var(--opens);
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+  & .formAddressGroup {
+    max-width: 580px;
+    margin: 20px 0 20px auto;
+    padding: 25px;
+    border-radius: 3px;
+    background-color: #F4F4F4;
+  }
+  & .formAddressGroup__title {
+    margin-bottom: 15px;
+    color: #484848;
+    font-family: var(--opens);
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  & .formAddressGroup__form {
+    & .form-group {
+      margin: 0;
+    }
+    & .form-control {
+      border: none;
+    }
+  }
+  & .formAddressGroup__inputGroup {
+    display: flex;
+    & .form-element {
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+/**
+
+ */
 .popup--photo {
   background-color: rgba(19, 19, 19, 0.8);
 

@@ -1,62 +1,6 @@
 extends ../layout.pug
 
 block content
-  //- Для презентации сделанных страниц
-  style.
-    .show-links {
-      column-count: 2;
-    }
-
-    .mobile .show-links {
-      column-count: 1;
-    }
-
-    .show-item {
-      margin-bottom: 10px;
-      padding-left: 5px;
-    }
-
-    .show-item:nth-child(44),
-    .show-item:nth-child(45) {
-      display: none;
-    }
-
-    .show-item:last-child{
-      display: none;
-    }
-
-    a.show-link {
-      font-size: 1.125rem;
-      color: #7c7c7c;
-      text-decoration: none;
-    }
-
-    a.show-link:hover {
-      text-decoration: underline;
-      color: #0f6cb6;
-    }
-
-    .tech {
-      color: #333;
-      z-index: 99999;
-      display: block;
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      padding: 10px 20px;
-      background: rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      border-radius: 3px;
-      transition: all .14s ease;
-      fill: currentColor;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, .14), 0 1px 2px rgba(0, 0, 0, .1);
-    }
-
-    .tech:hover {
-      color: #444;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, .3), 0 1px 2px rgba(0, 0, 0, .1);
-    }
-
   a.tech(href="/componentsPreview" target="_blank" style="display: none;")
     svg(style="width: 50px; height: 50px;")
       use(xlink:href="#icon-tech")

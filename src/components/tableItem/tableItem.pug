@@ -1,0 +1,19 @@
+mixin tableItem(leftData,rightData)
+  .tableItem
+    .tableItem__wrap
+      .tableItem__left
+        each item in leftData
+          if (item.view == '01')
+            .tableItemData.tableItemData--view01
+              .tableItemData__label!=item.label
+              .tableItemData__value
+                a(href=item.href)!=item.value
+          else
+            .tableItemData
+              .tableItemData__label!=item.label
+              .tableItemData__value!=item.value
+      .tableItem__right
+        each item in rightData
+          .tableItemData
+            .tableItemData__label!=item.label
+            .tableItemData__value!=item.value

@@ -1,0 +1,18 @@
+//- доработать статус когда выбран один из филтров, внешний вид и функционал
+mixin tableFilter(leftFilter,rightFilter)
+  .tableFilter
+    .tableFilter__wrap
+      .tableFilter__left
+        each item in leftFilter
+          .tableFilter__item
+            .tableFilter__itemTitle!=item
+            .tableFilter__itemIcon
+              svg
+                use(xlink:href="#svg-table-filter")
+      .tableFilter__right
+        each item in rightFilter
+          .tableFilter__item
+            .tableFilter__itemTitle!=item
+            .tableFilter__itemIcon
+              svg
+                use(xlink:href="#svg-table-filter")

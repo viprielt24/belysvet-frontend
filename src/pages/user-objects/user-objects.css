@@ -1,54 +1,54 @@
 @import "../../layout/variables.css";
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/tableItem/tableItem.css";
 
-.button--add-user-object {
+.userObjects__filter {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 222px;
-  height: 48px;
-  font-size: 14px;
+  align-items: flex-end;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: var(--border);
 }
-
-.user-objects-filter {
-  display: flex;
-  align-items: center;
-  height: 61px;
-  background-color: #fff;
-  padding: 0 30px;
-}
-
-.user-objects-filter-item {
-  min-width: 425px;
-}
-
-.user-objects-list-item {
-  display: flex;
-  align-items: center;
-  height: 173px;
-  background-color: #fff;
-  margin-top: 20px;
-  padding: 0 30px;
-}
-
-.user-objects-list-name {
-  min-width: 425px;
-}
-
-.user-objects-footer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
-
-  .button--press {
-    width: 225px;
-    height: 48px;
-    font-size: 14px;
+.userObjects__filterForm {
+  width: 50%;
+  & form {
+    width: 100%;
+    display: flex;
+    & .form-element {
+      width: 50%;
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
   }
-
-  .button--add-user-object {
+}
+.userObjects__filterFormTitle {
+  margin-bottom: 10px;
+  color: var(--black01);
+  font-family: var(--opens);
+  font-size: 20px;
+  line-height: 1.4;
+}
+.userObjects__filterButton {
+  margin-left: auto;
+}
+.userObjects__tableFilter {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.userObjects__list {
+  margin-top: 20px;
+  & .tableItem:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+.userObjects__footer {
+  margin-top: 30px;
+  position: relative;
+  & .button--fixPositionRight {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
   }
 }

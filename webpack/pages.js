@@ -982,6 +982,7 @@ const pages = {
           selected: false
         },
       ],
+      objectsList: data.objectsList
     }
   },
   'user-objects-item': {

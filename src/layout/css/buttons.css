@@ -142,6 +142,48 @@
   padding-right: 40px;
 }
 
+.buttonWhitoutBorder {
+  display: flex;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border: none;
+  color: var(--primary);
+  font-family: var(--opens);
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  & span {
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed var(--primary);
+  }
+  &:hover {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: var(--hover);
+    & span {
+      border-color: var(--hover);
+    }
+  }
+}
+
+.buttonFixSize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 48px;
+  font-family: var(--opens);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
 /**
 media
  */
