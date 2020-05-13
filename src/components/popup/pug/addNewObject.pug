@@ -6,17 +6,16 @@
       .popup__content-header
         .popup__content-title Добавить объект
 
-
       .popup__form.form.form--style: form(action="javascript:void(0);")
         .form-wrap
           .form-group
             .form-element: label
               .form-placeholder Название объекта
-              input(placeholder='Введите название объекта').form-control.js-form-validate__empty
+              input(placeholder='Введите название объекта').form-control
             .form-element: label
               .form-placeholder Адрес объекта
               .form-placeholder__subTitle Город, улица, дом
-              input(placeholder='Введите адрес в свободной форме').form-control.js-form-validate__empty
+              input(placeholder='Введите адрес в свободной форме').form-control
 
             .formAddressGroup
               .formAddressGroup__title Если адреса не оказалось в реестре, пожалуйста, <br />введите его вручную ниже
@@ -37,11 +36,8 @@
           .form-group
             .form-element: label
               .form-placeholder Комментарий
-              textarea(rows="4").form-control.js-form-validate__empty
-              .error Текст ошибки
-
+              textarea(rows="4").form-control
 
         .popup__buttonGroup
-          a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonWhitoutBorder.button--empty.js-popup-close
-            span отменить
+          a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
           a(href="javascript:void(0);" data-popupname="add-new-object").button.buttonFixSize.js-popup-close Добавить

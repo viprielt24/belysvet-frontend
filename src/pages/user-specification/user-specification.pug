@@ -1,0 +1,50 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .userSpecification__filter
+        .userSpecification__filterForm
+          .userSpecification__filterFormTitle!='Параметры поиска:'
+          form(action='javascript:void(0);')
+            .userSpecification__filterFormLocation
+              .form-element: label
+                .form-placeholder Страна
+                include ../common/user-objects-select-country-common
+              .form-element: label
+                .form-placeholder Город
+                include ../common/user-objects-select-city-common
+            .userSpecification__filterFormGroup
+              .userSpecification__filterFormGroupLabel Кем создана:
+              .form-element
+                label.label.label--checkbox.label--aka-radio
+                  input(type='radio' name='specificationCreate').form-control
+                  .icon.icon--checkbox
+                  .label__text Мной
+                label.label.label--checkbox.label--aka-radio
+                  input(type='radio' name='specificationCreate').form-control
+                  .icon.icon--checkbox
+                  .label__text Белый свет
+        .userSpecification__filterButton
+          a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.js-popup-open!='Создать спецификацию'
+      .userSpecification__tableFilter
+        +tableFilter(
+          ['Название объекта'],
+          ['Дата создания', 'Название объекта']
+        )
+      .userSpecification__list
+        each item in specificationList
+          +tableItem(
+            item.leftData,
+            item.rightData
+          )
+      .userSpecification__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+        a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.button--fixPositionRight.js-popup-open!='Создать спецификацию'
+
+  include ../../components/tableFilter/icon.pug
+  include ../../components/popup/pug/addNewSpecification.pug
+

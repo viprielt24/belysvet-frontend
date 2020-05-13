@@ -14,6 +14,17 @@ mixin tableItem(leftData,rightData)
               .tableItemData__value!=item.value
       .tableItem__right
         each item in rightData
-          .tableItemData
-            .tableItemData__label!=item.label
-            .tableItemData__value!=item.value
+          if (item.view == '01')
+            .tableItemData.tableItemData--view01
+              .tableItemData__label!=item.label
+              .tableItemData__value
+                a(href=item.href)!=item.value
+          else if (item.view == '02')
+            .tableItemData.tableItemData--view02
+              .tableItemData__label!=item.label
+              .tableItemData__value
+                a(href=item.href)!=item.value
+          else
+            .tableItemData
+              .tableItemData__label!=item.label
+              .tableItemData__value!=item.value

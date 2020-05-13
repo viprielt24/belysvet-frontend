@@ -1,0 +1,11 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .userOrderHistoryEmpty
+        .userOrderHistoryEmpty__description У вас пока нет ни одного заказа.
+

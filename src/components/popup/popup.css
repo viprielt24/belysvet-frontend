@@ -265,6 +265,61 @@
 /**
 
  */
+ .popup--addNewSpecification {
+  & .popup__buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    & a {
+      text-align: center;
+    }
+    & a + a {
+      margin-left: 16px;
+    }
+  }
+  & .popup__content-header {
+    margin-bottom: 20px;
+  }
+  & .popup__content-title {
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+  }
+  & .popup__form {
+    width: auto;
+  }
+  & .form-element {
+    margin-top: 20px;
+  }
+  .select-custom--default .choices__list--single .choices__item {
+    padding-left: 15px;
+  }
+  .popup__rightMessage {
+    color: var(--black03);
+    font-family: var(--opens);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: right;
+    & a {
+      color: var(--primary);
+      font-family: var(--museo);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--hover);
+      }
+    }
+  }
+  .popup__rightMessageLink {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+/**
+
+ */
 .popup--photo {
   background-color: rgba(19, 19, 19, 0.8);
 

@@ -1,0 +1,15 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .userSpecificationEmpty
+        .userSpecificationEmpty__description У вас пока нет ни одной спецификации.<br />Пожалуйста, воспользуйтесь кнопкой “Создать спецификацию”<br />или свяжитесь с нами и мы сделаем спецификацию для вас.
+        .userSpecificationEmpty__button
+          a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.js-popup-open!='Создать спецификацию'
+
+  include ../../components/popup/pug/addNewSpecification.pug
+

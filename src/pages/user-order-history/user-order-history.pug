@@ -1,0 +1,24 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header
+      .userOrderHistory__tableFilter
+        +tableFilter(
+          ['№','Дата, время'],
+          ['Объект', 'Спецификация/Заказ', 'Статус', 'Сумма']
+        )
+      .userOrderHistory__list
+        each item in orderHistoryList
+          +tableItem(
+            item.leftData,
+            item.rightData
+          )
+      .userOrderHistory__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+
+  include ../../components/tableFilter/icon.pug
+

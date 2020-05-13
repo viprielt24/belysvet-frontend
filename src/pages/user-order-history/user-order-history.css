@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------------------- */
+
+@import "../../layout/variables.css";
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/tableItem/tableItem.css";
+
+/* ------------------------------------------------------------------------- */
+
+.userOrderHistory__tableFilter {
+  border-top: var(--border);
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.userOrderHistory__list {
+  margin-top: 20px;
+  & .tableItem:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+.userOrderHistory__footer {
+  margin-top: 30px;
+  position: relative;
+  & .button--fixPositionRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* --------------------------------- */
+
+.userOrderHistoryEmpty {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 400px;
+  padding: 30px 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+.userOrderHistoryEmpty__description {
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.userOrderHistoryEmpty__button {
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------------------- */

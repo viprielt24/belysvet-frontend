@@ -60,6 +60,16 @@
       }
     }
   }
+  &.tableItemData--view02 {
+    & a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--hover);
+      }
+    }
+  }
 }
 .tableItemData__label {
   margin-right: 0.25em;
