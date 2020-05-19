@@ -1,0 +1,60 @@
+.popup.popup--addNewSale.js-popup-add-new-sale
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-sale").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Создать продажу
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group 
+            .form-element: label
+              .form-placeholder Название продажи
+              input(placeholder='Введите название продажи').form-control
+          .saleTabs.js-tabs
+            .saleTabs__headersLabel Укажите тип продажи
+            .saleTabs__headers
+              label.label.label--checkbox.label--aka-radio.saleTabs__headersItem.js-tabs-header-item.active 
+                input(type='radio' name='saleType').form-control
+                .icon.icon--checkbox
+                .label__text Клиентская
+              label.label.label--checkbox.label--aka-radio.saleTabs__headersItem.js-tabs-header-item
+                input(type='radio' name='saleType').form-control
+                .icon.icon--checkbox
+                .label__text Проектная
+              label.label.label--checkbox.label--aka-radio.saleTabs__headersItem.js-tabs-header-item
+                input(type='radio' name='saleType').form-control
+                .icon.icon--checkbox
+                .label__text Розничная
+            .saleTabs__content
+              .js-tabs-content-item
+                .form-group
+                  .form-element: label
+                    .form-placeholder Укажите название заказчика
+                    input(placeholder='Введите название заказчика').form-control
+                  .form-element: label
+                    .form-placeholder Введите название бренда (торговой марки) организации
+                    input(placeholder='Введите название вашего бренда').form-control
+              .js-tabs-content-item
+              .js-tabs-content-item
+                .form-group 
+                  .form-element: label
+                    .form-placeholder Укажите название Покупателя
+                    input(placeholder='Впишите юридическое наименование Покупателя').form-control
+                  .form-element: label
+                    .form-placeholder Введите название бренда (торговой марки) организации
+                    input(placeholder='Введите название вашего бренда').form-control
+          .form-group
+            .form-element: label
+              .form-placeholder Объект
+              include ../../../pages/common/object-select-common
+          .popup__rightMessage Для того, чтобы объект появился в списке, его необходимо<br />создать в Личном кабинете в разделе Объекты. <br /><a href="javascript:void(0);" class="popup__rightMessageLink">Перейти в раздел Объекты</a>
+          .form-group
+            .form-element: label
+              .form-placeholder Комментарий
+              textarea(rows="4").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-sale").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="add-new-sale").button.buttonFixSize.js-popup-close Создать

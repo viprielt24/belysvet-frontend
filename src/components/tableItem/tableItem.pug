@@ -1,4 +1,4 @@
-mixin tableItem(leftData,rightData)
+mixin tableItem(leftData,rightData,noFeedback)
   .tableItem
     .tableItem__wrap
       .tableItem__left
@@ -28,3 +28,5 @@ mixin tableItem(leftData,rightData)
             .tableItemData
               .tableItemData__label!=item.label
               .tableItemData__value!=item.value
+        if noFeedback
+          .tableItem__noFeedback!='Нет отзыва'

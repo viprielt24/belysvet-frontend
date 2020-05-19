@@ -1,48 +1,165 @@
 extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+include ../../components/fileCard/fileCard.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
 
 block content
-  .content.content--user-objects-item
+  .content.content--userObjectsItem
     .container
-      include ../../components/content-header/content-header
-      .user-objects-item
-        .user-objects-item-about
-          .user-objects-item-title Торговый центр «Дружба»
-          .user-objects-item-props
-            .props__item
-              .props__name ID:
-              .props__value 112233
-            .props__item
-              .props__name Дата создания:
-              .props__value 01.06.2019
-            .props__item
-              .props__name Название объекта:
-              .props__value Торговый центр «Дружба»
-            .props__item
-              .props__name Адрес объекта:
-              .props__value Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5
-            .props__item
-              .props__name Комментарий:
-              .props__value Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.
-          .user-objects-item-footer
-            a(href="javascript:void(0);").link.link--icon
-              .icon.icon--close.icon--close-red.icon--close-medium
-              .link__text Удалить объект
-            a(href="javascript:void(0);").button.button--empty редактировать объект
-    .user-objects-item-tabs.js-tabs
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userObjectsItem__headerBlock
+        +userHeaderBlock(
+          'Торговый центр «Дружба»',
+          [
+            { name: 'ID:', value: '112233' },
+            { name: 'Дата создания:', value: '01.06.2019' },
+            { name: 'Название объекта:', value: 'Торговый центр «Дружба»'},
+            { name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
+            { name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'}
+          ],
+          [
+            {
+              type: 'delete',
+              label: 'Удалить объект',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'delete-object-01'
+            },
+            {
+              type: 'edit',
+              label: 'Редактировать объект',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-object'
+            }
+          ]
+        )
+    .userObjectsTabs.js-tabs
       .container
-        .user-objects-item-tabs-headers
-          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item.active Спецификации
-          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Продажи
-          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Заказы
-          a(href="javascript:void(0);").user-objects-item-tabs-item.js-tabs-header-item Документы
-        .user-objects-item-tabs-content
-          .js-tabs-content-item
-            .user-objects-item-temp
-              .user-objects-item-temp-text С этим объектом не связана ни одна спецификация
-              .button Создать спецификацию
-          .js-tabs-content-item 2
-          .js-tabs-content-item 3
-          .js-tabs-content-item
-            - isPolygraphyTitle = 'none';
-            include ../common/polygraphy
+        .userObjectsTabs__headers
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item.active Спецификации
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Продажи
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Заказы
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Документы
+        .userObjectsTabs__content
+          .js-tabs-content-item.userObjectsTabs__specification
+            .userObjectsTabs__specificationHeader
+              .userObjectsTabs__specificationSearch
+                .specificationSearch__title Параметры поиска: 
+                .form-element
+                  label.label.label--checkbox.label--aka-radio
+                    input(type='checkbox' name='filterSpecification').form-control
+                    .icon.icon--checkbox
+                    .label__text Мои спецификации
+                  label.label.label--checkbox.label--aka-radio
+                    input(type='checkbox' name='filterSpecification').form-control
+                    .icon.icon--checkbox
+                    .label__text Спецификации "Белый свет"
+              .userObjectsTabs__specificationAdd
+                a(
+                  href="javascript:void(0);"
+                  data-popupname="add-new-specification"
+                  class="js-popup-open"
+                ).button.buttonCreate.button--fixPositionRight!='Создать спецификацию'
+            .userObjectsTabs__specificationTableFilter
+              +tableFilter(
+                ['Название спецификации'],
+                ['Дата создания', 'Статус']
+              )
+            .userObjectsTabs__specificationList
+              each item in specification
+                +tableItem(
+                  item.leftData,
+                  item.rightData
+                )
+            .userObjectsTabs__specificationFooter
+              a(href="javascript:void(0);").button.button--showMore: span!='Показать еще'
+              a(
+                href="javascript:void(0);"
+                data-popupname="add-new-specification"
+                class="js-popup-open"
+              ).button.buttonCreate.button--fixPositionRight!='Создать спецификацию'
+
+          .js-tabs-content-item.userObjectsTabs__sale
+            .userObjectsTabs__saleHeader
+              .userObjectsTabs__saleSearch
+                .saleSearch__title Параметры поиска: 
+                .form-element
+                  label.label.label--checkbox.label--aka-radio
+                    input(type='checkbox' name='filterSale').form-control
+                    .icon.icon--checkbox
+                    .label__text Нет отзыва
+              .userObjectsTabs__saleAdd
+                a(
+                  href="javascript:void(0);"
+                  data-popupname="add-new-sale"
+                  class="js-popup-open"
+                ).button.buttonCreate.button--fixPositionRight!='Создать продажу'
+            .userObjectsTabs__saleTableFilter
+              +tableFilter(
+                ['Название продажи'],
+                ['Дата создания', 'Тип', 'Этап']
+              )
+            .userObjectsTabs__saleList
+              each item in sale
+                +tableItem(
+                  item.leftData,
+                  item.rightData,
+                  item.noFeedback
+                )
+            .userObjectsTabs__saleListFooter
+              a(href="javascript:void(0);").button.button--showMore: span!='Показать еще'
+              a(
+                href="javascript:void(0);"
+                data-popupname="add-new-sale"
+                class="js-popup-open"
+              ).button.buttonCreate.button--fixPositionRight!='Создать продажу'
+
+          .js-tabs-content-item.userObjectsTabs__order
+
+            .userObjectsTabs__orderTableFilter
+              +tableFilter(
+                ['№','Дата, время'],
+                ['Продажа', 'Спецификация/Заказ', 'Статус', 'Сумма']
+              )
+            .userObjectsTabs__orderList
+              each item in order
+                +tableItem(
+                  item.leftData,
+                  item.rightData
+                )
+            .userObjectsTabs__orderListFooter
+              a(href="javascript:void(0);").button.button--showMore: span!='Показать еще'
+              
+
+
+          .js-tabs-content-item.userObjectsTabs__docs
+            .userObjectsTabs__docsFiles.fileCardGroup
+              each itemFile, index in docs
+                +fileCard(
+                  'filesContract'+index,
+                  itemFile.type,
+                  itemFile.fileName,
+                  itemFile.href,
+                  itemFile.size,
+                  itemFile.create,
+                  itemFile.replace,
+                  itemFile.action
+                )
+            .userObjectsTabs__docsFooter
+              .userObjectsTabs__docsAddFile
+                input(type="file" id="objectDocsAddNew")
+                label(for="objectDocsAddNew").button.buttonCreate!='Добавить документ'
+
+  include ../../components/userHeaderBlock/icon.pug
+  include ../../components/fileCard/icon.pug
+  include ../../components/tableFilter/icon.pug
+  include ../../components/popup/pug/deleteFile.pug
+  include ../../components/popup/pug/deleteObject.pug
+  include ../../components/popup/pug/deleteObjectConfirm.pug
+  include ../../components/popup/pug/editObject.pug
+  include ../../components/popup/pug/addNewSpecification.pug
+  include ../../components/popup/pug/addNewSale.pug
 

@@ -142,6 +142,8 @@
   padding-right: 40px;
 }
 
+/* --------------------------------- */
+
 .buttonWhitoutBorder {
   display: flex;
   width: 140px;
@@ -170,7 +172,6 @@
     }
   }
 }
-
 .buttonFixSize {
   display: flex;
   align-items: center;
@@ -185,6 +186,112 @@
   font-weight: bold;
   letter-spacing: 0.08em;
 }
+.buttonDelete {
+  display: flex;
+  min-width: 140px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border: none;
+  background: none;
+  text-transform: none;
+  &:hover {
+    background-color: none;
+    box-shadow: none;
+    & em svg {
+      stroke: var(--red03);
+    }
+    & span {
+      color: var(--red03);
+    }
+  }
+  & em {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    overflow: hidden;
+    & svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--red01);
+      transition: stroke 0.2s ease;
+    }
+  }
+  & span {
+    color: var(--red01);
+    font-family: var(--museo);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    transition: color 0.3s ease;
+  }
+}
+.buttonEdit {
+  display: flex;
+  min-width: 140px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid var(--primary);
+  background: none;
+  color: var(--primary);
+  font-family: var(--opens);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #fff;
+    background-color: var(--primary);
+  }
+}
+.buttonCreate {
+  display: flex;
+  min-width: 140px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* color: var(--primary); */
+  font-family: var(--opens);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #fff;
+    background-color: var(--primary);
+  }
+}
+.button--showMore {
+  border: none;
+  background-color: transparent;
+  color: var(--primary);
+  font-family: var(--museo);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: none;
+  letter-spacing: 0;
+  & span {
+    border-bottom: 1px dashed var(--primary);
+  }
+  &:hover {
+    color: var(--hover);
+    box-shadow: none;
+    & span {
+      border-color: var(--hover);
+    }
+  }
+}
+
+/* --------------------------------- */
 
 /**
 media

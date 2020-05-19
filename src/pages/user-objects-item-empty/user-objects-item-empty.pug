@@ -1,0 +1,87 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+include ../../components/emptyTabBlock/emptyTabBlock.pug
+
+block content
+  .content.content--userObjectsItem
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userObjectsItem__headerBlock
+        +userHeaderBlock(
+          'Торговый центр «Дружба»',
+          [
+            { name: 'ID:', value: '112233' },
+            { name: 'Дата создания:', value: '01.06.2019' },
+            { name: 'Название объекта:', value: 'Торговый центр «Дружба»'},
+            { name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
+            { name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'}
+          ],
+          [
+            {
+              type: 'delete',
+              label: 'Удалить объект',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'delete-object-01'
+            },
+            {
+              type: 'edit',
+              label: 'Редактировать объект',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-object'
+            }
+          ]
+        )
+    .userObjectsTabs.js-tabs
+      .container
+        .userObjectsTabs__headers
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item.active Спецификации
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Продажи
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Заказы
+          a(href="javascript:void(0);").userObjectsTabs__headersItem.js-tabs-header-item Документы
+        .userObjectsTabs__content
+          .js-tabs-content-item
+            +emptyTabBlock(
+              'С этим объектом не связана ни одна спецификация',
+              {
+                type: 'popup',
+                label: 'Создать спецификацию',
+                href: 'javascript:void(0);',
+                class: 'js-popup-open',
+                dataPopupname: 'add-new-specification'
+              }
+            )
+          .js-tabs-content-item
+            +emptyTabBlock(
+              'С этим объектом не связана ни одна продажа',
+              {
+                type: 'popup',
+                label: 'Создать продажу',
+                href: 'javascript:void(0);',
+                class: 'js-popup-open',
+                dataPopupname: 'add-new-sale'
+              }
+            )
+          .js-tabs-content-item 
+            +emptyTabBlock(
+              'С этим объектом не связан ни один заказ'
+            )
+          .js-tabs-content-item
+            +emptyTabBlock(
+              'С этим объектом не связан ни один документ',
+              {
+                id: 'objectDocsAddNew',
+                type: 'file',
+                label: 'Добавить документ',
+              }
+            )
+
+  include ../../components/userHeaderBlock/icon.pug
+  include ../../components/popup/pug/deleteObject.pug
+  include ../../components/popup/pug/deleteObjectConfirm.pug
+  include ../../components/popup/pug/editObject.pug
+  include ../../components/popup/pug/addNewSpecification.pug
+  include ../../components/popup/pug/addNewSale.pug
+

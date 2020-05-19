@@ -11,9 +11,9 @@
   padding-left: 5px;
 }
 
-.show-item:nth-child(46) {
+/* .show-item:nth-child(46) {
   display: none;
-}
+} */
 
 .show-item:last-child{
   display: none;

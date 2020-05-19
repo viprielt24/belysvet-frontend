@@ -1,0 +1,7 @@
+include ../crumbs/crumbs
+.content__header
+  div(class= pageDescr ? 'content__bottom content__bottom--descr' : 'content__bottom')
+    if title
+      h1.title!= title
+    if pageDescr
+      .descr!= pageDescr

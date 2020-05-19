@@ -30,6 +30,7 @@
 .tableItem__wrap {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .tableItem__left {
   width: 420px;
@@ -85,6 +86,19 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 1.2;
+}
+
+/* --------------------------------- */
+
+.tableItem__noFeedback {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--black05);
+  font-family: var(--opens);
+  font-size: 14px;
+  line-height: 1;
+  white-space: normal;
 }
 
 /* ------------------------------------------------------------------------- */

@@ -1,0 +1,16 @@
+mixin emptyTabBlock(title, button)
+  .emptyTabBlock
+    if title
+      .emptyTabBlock__title!=title
+    if button
+      .emptyTabBlock__button
+        if button.type == 'popup'
+          a(
+            href=button.href
+            data-popupname=button.dataPopupname
+            class=button.class
+          ).button.buttonCreate!=button.label
+        else if button.type == 'file'
+          .emptyTabBlock__buttonFile
+            input(type="file" id=button.id)
+            label(for=button.id).button.buttonCreate!=button.label

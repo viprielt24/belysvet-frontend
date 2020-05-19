@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------------------- */
+
+.emptyTabBlock {
+  margin: 100px 0;
+}
+.emptyTabBlock__title {
+  color: var(--black04);
+  font-family: var(--opens);
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+}
+.emptyTabBlock__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.emptyTabBlock__buttonFile {
+  & input {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------------- */

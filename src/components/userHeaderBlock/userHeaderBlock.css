@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------------------- */
+
+.userHeaderBlock {
+  background-color: #fff;
+  margin-bottom: 45px;
+  padding: 35px 45px 40px;
+}
+.userHeaderBlock__wrap {}
+.userHeaderBlock__title {
+  margin-bottom: 30px;
+  font-family: var(--museo);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: -0.02em;
+  color: #333333;
+}
+.userHeaderBlock__data {}
+
+/* --------------------------------- */
+
+.uhbData {
+
+}
+.uhbData__item {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.uhbData__name {
+  width: 190px;
+  flex-shrink: 0;
+  color: var(--black04);
+  font-family: var(--museo);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.uhbData__value {
+  color: var(--black04);
+  font-family: var(--opens);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* --------------------------------- */
+
+.userHeaderBlock__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  & .button {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */

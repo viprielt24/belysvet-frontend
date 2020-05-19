@@ -1,111 +1,44 @@
+/* ------------------------------------------------------------------------- */
+
 @import "../../layout/variables.css";
+@import "../../components/userHeaderBlock/userHeaderBlock.css";
+@import "../../components/emptyTabBlock/emptyTabBlock.css";
 
-.content--user-objects-item {
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/tableItem/tableItem.css";
+
+@import "../../components/fileCard/fileCard.css";
+
+/* ------------------------------------------------------------------------- */
+
+.content--userObjectsItem {
   margin-bottom: -40px;
-}
-
-.user-objects-item {
-  background-color: #fff;
-  margin-bottom: 45px;
-  padding: 35px 45px 40px;
-}
-
-.user-objects-item-title {
-  margin-bottom: 30px;
-  font-family: var(--museo);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
-  letter-spacing: -0.02em;
-  color: #333333;
-}
-
-.user-objects-item-props {
-
-  .props__item {
-    display: flex;
-    align-items: flex-start;
-    max-width: none;
-    margin-bottom: 17px;
-  }
-
-  .props__name {
-    flex-shrink: 0;
-    width: 188px;
-    font-family: var(--museo);
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 22px;
-    color: #333333;
-  }
-
-  .props__value {
-    font-family: var(--opens);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    color: #333333;
-  }
-}
-
-.user-objects-item-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 40px;
-
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 268px;
-    height: 48px;
-    margin-left: 40px;
-    color: var(--primary);
-    border-color: var(--primary);
-
+  & .tableItem {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: var(--border);
+    transition: all 0.3s ease;
     &:hover {
-      color: #fff;
+      box-shadow: none;
+      background-color: #fafafa;
     }
   }
-
-  .link--icon {
-
-    .link__text {
-      margin-left: 10px;
-      color: #DF4E3B;
-      line-height: 1.2;
-      transition: var(--trc);
-    }
-    
-    &:hover {
-
-      .link__text {
-        color: #FF6B4A;
-      }
-
-      .icon--close:after, .icon--close:before {
-        background-color: #FF6B4A;
-      }
-    }
-  } 
 }
+.userObjectsItem__headerBlock {}
 
-.user-objects-item-tabs {
+/* --------------------------------- */
+
+.userObjectsTabs {
   background-color: #fff;
 }
-
-.user-objects-item-tabs-headers {
+.userObjectsTabs__headers {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 45px;
   border-bottom: var(--border);
 }
-
-.user-objects-item-tabs-item {
+.userObjectsTabs__headersItem {
   position: relative;
   width: 25%;
   padding-bottom: 20px;
@@ -118,11 +51,9 @@
   text-align: center;
   text-decoration: none;
   transition: var(--trc);
-
   &:hover {
     color: var(--hover);
   }
-
   &:after {
     content: '';
     position: absolute;
@@ -132,44 +63,164 @@
     height: 5px;
     background-color: transparent;
   }
-
   &.active:after {
     background-color: var(--primary);
   }
 }
-
-.user-objects-item-tabs-content {
+.userObjectsTabs__content {
   padding: 30px 0;
-
-  .polygraphy {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
 }
 
-.user-objects-item-temp {
+/* --------------------------------- */
+/* tab 1 */
+
+.userObjectsTabs__specification {
+  margin-bottom: 30px;
+}
+.userObjectsTabs__specificationHeader {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: 55px 0;
-
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    width: 268px;
-    height: 48px;
+  padding-bottom: 30px;
+  border-bottom: var(--border);
+}
+.userObjectsTabs__specificationSearch {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  & .label + .label {
+    margin-left: 20px;
+  }
+  & .label__text {
+    color: var(--black01);
+    font-size: 17px;
+  }
+}
+.specificationSearch__title {
+  padding-right: 20px;
+  color: var(--black01);
+  font-family: var(--opens);
+  font-size: 20px;
+  line-height: 1;
+}
+.userObjectsTabs__specificationAdd {
+  margin-left: auto;
+}
+.userObjectsTabs__specificationTableFilter {
+  border-bottom: var(--border);
+  &:first-child {
+    margin-top: -30px;
+  }
+}
+.userObjectsTabs__specificationList {}
+.userObjectsTabs__specificationFooter {
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  & .button--fixPositionRight {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
-.user-objects-item-temp-text {
-  font-family: var(--opens);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
+/* --------------------------------- */
+/* tab 2 */
+
+.userObjectsTabs__sale {
+  margin-bottom: 30px;
 }
+.userObjectsTabs__saleHeader {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: var(--border);
+}
+.userObjectsTabs__saleSearch {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  & .label + .label {
+    margin-left: 20px;
+  }
+  & .label__text {
+    color: var(--black01);
+    font-size: 17px;
+  }
+}
+.saleSearch__title {
+  padding-right: 20px;
+  color: var(--black01);
+  font-family: var(--opens);
+  font-size: 20px;
+  line-height: 1;
+}
+.userObjectsTabs__saleAdd {
+  margin-left: auto;
+}
+.userObjectsTabs__saleTableFilter {
+  border-bottom: var(--border);
+  &:first-child {
+    margin-top: -30px;
+  }
+}
+.userObjectsTabs__saleList {}
+.userObjectsTabs__saleListFooter {
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  & .button--fixPositionRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* --------------------------------- */
+/* tab 3 */
+
+.userObjectsTabs__order {
+  margin-bottom: 30px;
+}
+.userObjectsTabs__orderTableFilter {
+  border-bottom: var(--border);
+  &:first-child {
+    margin-top: -30px;
+  }
+}
+.userObjectsTabs__orderList {}
+.userObjectsTabs__orderListFooter {
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  & .button--fixPositionRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* --------------------------------- */
+/* tab 4 */
+
+.userObjectsTabs__docs {
+  margin-bottom: 30px;
+  & .fileCard {
+    width: 25%;
+  }
+}
+.userObjectsTabs__docsFiles {}
+.userObjectsTabs__docsFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: var(--border);
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.userObjectsTabs__docsAddFile {
+  & input {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------------- */

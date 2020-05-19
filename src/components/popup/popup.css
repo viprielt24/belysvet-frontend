@@ -171,7 +171,7 @@
 /**
 
  */
-.popup--deleteFile {
+.popup--smallPopup {
   & .popup__wrap {
     max-width: 400px;
   }
@@ -188,6 +188,18 @@
   & .popup__content-header {
     margin-bottom: 0;
   }
+  & .popup__contentAnderLine {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bdc);
+    color: #333333;
+    font-family: var(--opens);
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+  }
   & .button {
     min-width: 132px;
   }
@@ -196,7 +208,8 @@
 /**
 
  */
-.popup--addNewObject {
+.popup--addNewObject,
+.popup--editObject {
   & .popup__buttonGroup {
     display: flex;
     justify-content: flex-end;
@@ -265,7 +278,8 @@
 /**
 
  */
- .popup--addNewSpecification {
+.popup--addNewSpecification,
+.popup--addNewSale {
   & .popup__buttonGroup {
     display: flex;
     justify-content: flex-end;
@@ -314,6 +328,27 @@
     display: block;
     margin-top: 5px;
     font-size: 16px;
+  }
+}
+.popup--addNewSale {}
+.saleTabs {
+  & .saleTabs__headersLabel {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-family: var(--opens);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  & .saleTabs__headersItem {
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
+    & .label__text {
+      color: var(--black03);
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 }
 

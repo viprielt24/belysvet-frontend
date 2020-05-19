@@ -7,12 +7,10 @@ mixin tableFilter(leftFilter,rightFilter)
           .tableFilter__item
             .tableFilter__itemTitle!=item
             .tableFilter__itemIcon
-              svg
-                use(xlink:href="#svg-table-filter")
+              svg: use(xlink:href="#svg-table-filter")
       .tableFilter__right
         each item in rightFilter
           .tableFilter__item
             .tableFilter__itemTitle!=item
             .tableFilter__itemIcon
-              svg
-                use(xlink:href="#svg-table-filter")
+              svg: use(xlink:href="#svg-table-filter")
