@@ -860,7 +860,7 @@ const pages = {
     parameters: {
       page: 'user-homepage-empty',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет Покупателя (ЮЛ) &mdash; пустой',
+      pageName: 'Личный кабинет (ЮЛ) &mdash; пустой',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
@@ -868,7 +868,7 @@ const pages = {
     parameters: {
       page: 'user-homepage',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет Покупателя (ЮЛ) &mdash; заполненный',
+      pageName: 'Личный кабинет (ЮЛ) &mdash; заполненный',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
@@ -876,7 +876,7 @@ const pages = {
     parameters: {
       page: 'user-homepage-disop-empty',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет Дистрибьютора ОтвПр &mdash; пустой',
+      pageName: 'Личный кабинет (Дистр ОтвПр) &mdash; пустой',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
@@ -884,7 +884,7 @@ const pages = {
     parameters: {
       page: 'user-homepage-disop',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет Дистрибьютора ОтвПр &mdash; заполненный',
+      pageName: 'Личный кабинет (Дистр ОтвПр) &mdash; заполненный',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
@@ -973,7 +973,7 @@ const pages = {
     parameters: {
       page: 'user-objects-disop',
       title: 'Объекты',
-      pageName: 'Список объектов Дистрибьютор ОтвПр &mdash; заполненный',
+      pageName: 'Список объектов (Дистр ОтвПр) &mdash; заполненный',
       crumbs: ['Главная', 'Личный кабинет', 'Объекты'],
       pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
       registrationCountry: data.registrationCountry,
@@ -1012,7 +1012,7 @@ const pages = {
     parameters: {
       page: 'user-objects-item-disop',
       title: 'Торговый центр «Дружба»',
-      pageName: 'Один объект Дистрибьютор ОтвПр &mdash; заполненный, не владелец',
+      pageName: 'Один объект (Дистр ОтвПр) &mdash; заполненный, не владелец',
       crumbs: ['Главная', 'Личный кабинет', 'Объекты', 'Торговый центр «Дружба»'],
       files: data.productsFiles,
       projectsSolution: data.solutions,
