@@ -17,24 +17,8 @@ block content
             { name: 'Дата создания:', value: '01.06.2019' },
             { name: 'Название объекта:', value: 'Торговый центр «Дружба»'},
             { name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
-            { name: 'Кем создан:', value: 'Мной' },
+            { name: 'Кем создан:', value: 'Петров Иван Сидорович <span>(Активен)</span>' },
             { name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'}
-          ],
-          [
-            {
-              type: 'delete',
-              label: 'Удалить объект',
-              href: 'javascript:void(0);',
-              class: 'js-popup-open',
-              dataPopupname: 'delete-object-01'
-            },
-            {
-              type: 'edit',
-              label: 'Редактировать объект',
-              href: 'javascript:void(0);',
-              class: 'js-popup-open',
-              dataPopupname: 'edit-object'
-            }
           ]
         )
     .userObjectsTabs.js-tabs
@@ -53,11 +37,11 @@ block content
                   label.label.label--checkbox.label--aka-radio
                     input(type='checkbox' name='filterSpecification').form-control
                     .icon.icon--checkbox
-                    .label__text Мои спецификации
+                    .label__text!='Cпецификации сотрудников' 
                   label.label.label--checkbox.label--aka-radio
                     input(type='checkbox' name='filterSpecification').form-control
                     .icon.icon--checkbox
-                    .label__text Спецификации "Белый свет"
+                    .label__text!='Спецификации "Белый свет"'
               .userObjectsTabs__specificationAdd
                 a(
                   href="javascript:void(0);"

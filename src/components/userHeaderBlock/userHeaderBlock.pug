@@ -9,19 +9,20 @@ mixin userHeaderBlock(title,arrayData,buttons)
             .uhbData__item
               .uhbData__name!=item.name
               .uhbData__value!=item.value
-      .userHeaderBlock__button
-        each button in buttons
-          if button.type=='edit'
-            a(
-              href=button.href
-              data-popupname=button.dataPopupname
-              class=button.class
-            ).button.buttonEdit!=button.label
-          else if button.type=='delete'
-            a(
-              href=button.href
-              data-popupname=button.dataPopupname
-              class=button.class
-            ).button.buttonDelete
-              em: svg: use(xlink:href="#svg-button-delete")
-              span!=button.label
+      if buttons
+        .userHeaderBlock__button
+          each button in buttons
+            if button.type=='edit'
+              a(
+                href=button.href
+                data-popupname=button.dataPopupname
+                class=button.class
+              ).button.buttonEdit!=button.label
+            else if button.type=='delete'
+              a(
+                href=button.href
+                data-popupname=button.dataPopupname
+                class=button.class
+              ).button.buttonDelete
+                em: svg: use(xlink:href="#svg-button-delete")
+                span!=button.label

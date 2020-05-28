@@ -26,7 +26,9 @@
 .uhbData__item {
   display: flex;
   align-items: flex-start;
-  margin: 20px 0;
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
 }
 .uhbData__name {
   width: 190px;
@@ -42,6 +44,11 @@
   font-family: var(--opens);
   font-size: 16px;
   line-height: 1.65;
+  & span {}
+  & em {
+    color: var(--red02);
+    font-style: normal;
+  }
 }
 
 /* --------------------------------- */
@@ -50,6 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 20px;
   & .button {
     &:not(:last-child) {
       margin-right: 30px;

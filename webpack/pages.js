@@ -1008,6 +1008,21 @@ const pages = {
       docs: data.filesObjectDocs
     }
   },
+  'user-objects-item-disop': {
+    parameters: {
+      page: 'user-objects-item-disop',
+      title: 'Торговый центр «Дружба»',
+      pageName: 'Один объект Дистрибьютор ОтвПр &mdash; заполненный, не владелец',
+      crumbs: ['Главная', 'Личный кабинет', 'Объекты', 'Торговый центр «Дружба»'],
+      files: data.productsFiles,
+      projectsSolution: data.solutions,
+      objectSelect: data.objectSelect,
+      specification: data.specificationObjectList,
+      sale: data.saleObjectList,
+      order: data.orderObjectList,
+      docs: data.filesObjectDocs
+    }
+  },
   'user-specification-empty': {
     parameters: {
       page: 'user-specification-empty',
