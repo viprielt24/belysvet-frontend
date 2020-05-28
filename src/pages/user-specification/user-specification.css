@@ -3,6 +3,7 @@
 @import "../../layout/variables.css";
 @import "../../components/tableFilter/tableFilter.css";
 @import "../../components/tableItem/tableItem.css";
+@import "../../components/userSearchParameters/userSearchParameters.css";
 
 /* ------------------------------------------------------------------------- */
 
@@ -17,51 +18,6 @@
 .userSpecification__filterForm {
   width: 50%;
 }
-.userSpecification__filterFormTitle {
-  margin-bottom: 10px;
-  color: var(--black01);
-  font-family: var(--opens);
-  font-size: 20px;
-  line-height: 1.4;
-}
-.userSpecification__filterFormLocation {
-  width: 100%;
-  display: flex;
-  & .form-element {
-    width: 50%;
-    &:not(:first-child) {
-      margin-left: 30px;
-    }
-  }
-}
-.userSpecification__filterFormGroup {
-  display: flex;
-  align-items: center;
-  margin: 30px 0 0;
-  & .label {
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
-    & .label__text {
-      margin-left: 10px;
-      color: var(--black03);
-      font-family: var(--opens);
-      font-size: 14px;
-      font-weight: normal;
-      line-height: 1;
-    }
-  }
-}
-.userSpecification__filterFormGroupLabel {
-  color: var(--black03);
-  font-family: var(--opens);
-  font-size: 16px;
-  line-height: 1.4;
-  & + .form-element {
-    margin-left: 20px;
-  }
-}
-
 .userSpecification__filterButton {
   margin-left: auto;
 }

@@ -3,6 +3,7 @@
 @import "../../layout/variables.css";
 @import "../../components/tableFilter/tableFilter.css";
 @import "../../components/tableItem/tableItem.css";
+@import "../../components/userSearchParameters/userSearchParameters.css";
 
 /* ------------------------------------------------------------------------- */
 
@@ -16,23 +17,6 @@
 }
 .userObjects__filterForm {
   width: 50%;
-  & form {
-    width: 100%;
-    display: flex;
-    & .form-element {
-      width: 50%;
-      &:not(:first-child) {
-        margin-left: 30px;
-      }
-    }
-  }
-}
-.userObjects__filterFormTitle {
-  margin-bottom: 10px;
-  color: var(--black01);
-  font-family: var(--opens);
-  font-size: 20px;
-  line-height: 1.4;
 }
 .userObjects__filterButton {
   margin-left: auto;

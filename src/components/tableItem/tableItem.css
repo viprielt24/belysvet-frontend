@@ -35,7 +35,16 @@
 .tableItem__left {
   width: 420px;
 }
-.tableItem__right {}
+.tableItem__right {
+  & span {
+    font-weight: normal;
+  }
+  & em {
+    color: var(--red02);
+    font-style: normal;
+    font-weight: normal;
+  }
+}
 
 /* --------------------------------- */
 

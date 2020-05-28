@@ -1,6 +1,7 @@
 extends ../layout.pug
 include ../../components/tableFilter/tableFilter.pug
 include ../../components/tableItem/tableItem.pug
+include ../../components/userSearchParameters/userSearchParameters.pug
 
 block content
   .content
@@ -8,26 +9,11 @@ block content
       include ../../components/content-header/content-header-lk
       .userSpecification__filter
         .userSpecification__filterForm
-          .userSpecification__filterFormTitle!='Параметры поиска:'
-          form(action='javascript:void(0);')
-            .userSpecification__filterFormLocation
-              .form-element: label
-                .form-placeholder Страна
-                include ../common/user-objects-select-country-common
-              .form-element: label
-                .form-placeholder Город
-                include ../common/user-objects-select-city-common
-            .userSpecification__filterFormGroup
-              .userSpecification__filterFormGroupLabel Кем создана:
-              .form-element
-                label.label.label--checkbox.label--aka-radio
-                  input(type='radio' name='specificationCreate').form-control
-                  .icon.icon--checkbox
-                  .label__text Мной
-                label.label.label--checkbox.label--aka-radio
-                  input(type='radio' name='specificationCreate').form-control
-                  .icon.icon--checkbox
-                  .label__text Белый свет
+          +userSearchParameters()(
+            title='Параметры поиска:'
+            location=true
+            creators=['Мной', 'Белый свет']
+          )
         .userSpecification__filterButton
           a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.js-popup-open!='Создать спецификацию'
       .userSpecification__tableFilter

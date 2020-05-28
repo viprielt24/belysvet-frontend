@@ -1,0 +1,59 @@
+
+//- DEFINITION VARIABLES --------------
+//- @title String
+//- @titleCheckbox Array
+//- @location Boolean
+//- @employees Boolean
+//- @creators Array
+
+//- USE -------------------------------
+//- +userSearchParameters()(
+//-   title='Параметры поиска:'
+//-   titleCheckbox=['Нет отзыва']
+//-   location=true
+//-   employees=true
+//-   creators=['Мной', 'Белый свет']
+//- )
+
+mixin userSearchParameters()
+  - var title = attributes.title
+  - var titleCheckbox = attributes.titleCheckbox
+  - var location = attributes.location
+  - var employees = attributes.employees
+  - var creators = attributes.creators
+  .userSearchParameters
+    form(action='javascript:void(0);')
+      if title || titleCheckbox
+        .userSearchParameters__block
+          if title
+            .userSearchParameters__title!=title
+          if titleCheckbox
+            .userSearchParameters__titleCheckbox.uspCheckbox
+              each check in titleCheckbox
+                .uspCheckbox__item
+                  label.label.label--checkbox.label--aka-radio
+                    input(type='radio' name='feedback').form-control
+                    .icon.icon--checkbox
+                    .label__text!=check
+      if location
+        .userSearchParameters__location
+          .form-element: label
+            .form-placeholder!='Страна'
+            include ../../pages/common/user-objects-select-country-common
+          .form-element: label
+            .form-placeholder!='Город'
+            include ../../pages/common/user-objects-select-city-common
+      if employees
+        .userSearchParameters__employees
+          .form-element: label
+            .form-placeholder!='Сотрудники'
+            include ../../pages/common/user-objects-select-employees
+      if creators
+        .userSearchParameters__creator
+          .userSearchParameters__creatorLabel!='Кем создана:'
+          .form-element
+            each creator in creators
+              label.label.label--checkbox.label--aka-radio
+                input(type='radio' name='creator').form-control
+                .icon.icon--checkbox
+                .label__text!=creator
