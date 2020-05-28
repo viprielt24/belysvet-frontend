@@ -860,7 +860,7 @@ const pages = {
     parameters: {
       page: 'user-homepage-empty',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет (ЮЛ) &mdash; пустой',
+      pageName: 'Личный кабинет &mdash; пустой',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
@@ -868,7 +868,7 @@ const pages = {
     parameters: {
       page: 'user-homepage',
       title: 'Личный кабинет',
-      pageName: 'Личный кабинет (ЮЛ) &mdash; заполненный',
+      pageName: 'Личный кабинет &mdash; заполненный',
       crumbs: ['Главная', 'Личный кабинет'],
     }
   },
