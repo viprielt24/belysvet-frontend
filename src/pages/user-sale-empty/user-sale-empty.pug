@@ -1,0 +1,15 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userSaleEmpty
+        .userSaleEmpty__description У вас пока нет ни одной продажи.<br />Пожалуйста, воспользуйтесь кнопкой “Создать продажу”<br />или свяжитесь с нами и мы сделаем продажу для вас.
+        .userSaleEmpty__button
+          a(href="javascript:void(0);" data-popupname="add-new-sale").button.buttonFixSize.js-popup-open!='Создать продажу'
+
+  include ../../components/popup/pug/addNewSale.pug
+

@@ -1,0 +1,37 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+include ../../components/userSearchParameters/userSearchParameters.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userSpecification__filter
+        .userSpecification__filterForm
+          +userSearchParameters()(
+            title='Параметры поиска:'
+            location=true
+            employees=true
+            creators=['Мной', 'Сотрудниками', 'Белый свет']
+          )
+        .userSpecification__filterButton
+          a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.js-popup-open!='Создать спецификацию'
+      .userSpecification__tableFilter
+        +tableFilter(
+          ['Название объекта'],
+          ['Дата создания', 'Название объекта']
+        )
+      .userSpecification__list
+        each item in specificationList
+          +tableItem(
+            item.leftData,
+            item.rightData
+          )
+      .userSpecification__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+        a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.button--fixPositionRight.js-popup-open!='Создать спецификацию'
+
+  include ../../components/tableFilter/icon.pug
+  include ../../components/popup/pug/addNewSpecification.pug
+

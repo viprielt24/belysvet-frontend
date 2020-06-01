@@ -1044,6 +1044,38 @@ const pages = {
       registrationCountry: data.registrationCountry,
       registrationCity: data.registrationCity,
       specificationList: data.specificationList,
+      // for popup
+      projectsSolution: data.solutions,
+      objectSelect: data.objectSelect,
+    }
+  },
+  'user-specification-dismp': {
+    parameters: {
+      page: 'user-specification-dismp',
+      title: 'Спецификации',
+      pageName: 'Список спецификаций (Дистр МП) &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      registrationCountry: data.registrationCountry,
+      registrationCity: data.registrationCity,
+      specificationList: data.specificationListDismp,
+      // for popup
+      projectsSolution: data.solutions,
+      objectSelect: data.objectSelect,
+    }
+  },
+  'user-specification-disop': {
+    parameters: {
+      page: 'user-specification-disop',
+      title: 'Спецификации',
+      pageName: 'Список спецификаций (Дистр ОтвПр) &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      registrationCountry: data.registrationCountry,
+      registrationCity: data.registrationCity,
+      selectEmployees: data.selectEmployees,
+      specificationList: data.specificationListDisop,
+      // for popup
       projectsSolution: data.solutions,
       objectSelect: data.objectSelect,
     }
@@ -1066,7 +1098,64 @@ const pages = {
       pageDescr: '<p>Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться. Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться.Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться.Какой-то вводный текст про раздел, про историю заказов, для чего она.</p>',
       orderHistoryList: data.orderHistoryList
     }
-  }
+  },
+  'user-order-history-disop': {
+    parameters: {
+      page: 'user-order-history-disop',
+      title: 'История заказов и запросов',
+      pageName: 'Список истории заказов и запросов (Дистр ОтвПр) &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться. Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться.Какой-то вводный текст про раздел, про историю заказов, для чего она и как ею пользоваться.Какой-то вводный текст про раздел, про историю заказов, для чего она.</p>',
+      selectEmployees: data.selectEmployees,
+      orderHistoryList: data.orderHistoryListDisop
+    }
+  },
+  'user-sale-empty': {
+    parameters: {
+      page: 'user-sale-empty',
+      title: 'Продажи',
+      pageName: 'Список продаж &mdash; пустой',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      // for popup
+      projectsSolution: data.solutions,
+      objectSelect: data.objectSelect,
+    }
+  },
+  'user-sale': {
+    parameters: {
+      page: 'user-sale',
+      title: 'Продажи',
+      pageName: 'Список продаж &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      // for content
+      // registrationCountry: data.registrationCountry,
+      // registrationCity: data.registrationCity,
+      objectSelect: data.objectSelect,
+      saleList: data.saleList,
+      // for popup
+      projectsSolution: data.solutions,
+      // objectSelect: data.objectSelect,
+    }
+  },
+  'user-sale-disop': {
+    parameters: {
+      page: 'user-sale-disop',
+      title: 'Продажи',
+      pageName: 'Список продаж (Дистр ОтвПр) &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться. Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.Какой-то вводный текст про раздел, про объекты, для чего они и как ими пользоваться.</p>',
+      // for content
+      registrationCountry: data.registrationCountry,
+      registrationCity: data.registrationCity,
+      objectSelect: data.objectSelect,
+      saleList: data.saleListDisop,
+      // for popup
+      projectsSolution: data.solutions,
+      // objectSelect: data.objectSelect,
+    }
+  },
 };
 // Страницы проекта
 pages.pages = {

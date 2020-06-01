@@ -7,7 +7,7 @@
 
 /* ------------------------------------------------------------------------- */
 
-.userOrderHistory__filter {
+.userSale__filter {
   display: flex;
   align-items: flex-end;
   margin-top: 25px;
@@ -15,25 +15,23 @@
   padding-top: 25px;
   border-top: var(--border);
 }
-.userOrderHistory__filterForm {
+.userSale__filterForm {
   width: 50%;
 }
-.userOrderHistory__filterButton {
+.userSale__filterButton {
   margin-left: auto;
 }
-.userOrderHistory__tableFilter {
-  border-top: var(--border);
+.userSale__tableFilter {
   margin-top: 30px;
-  padding-top: 30px;
   margin-bottom: 20px;
 }
-.userOrderHistory__list {
+.userSale__list {
   margin-top: 20px;
   & .tableItem:not(:first-child) {
     margin-top: 20px;
   }
 }
-.userOrderHistory__footer {
+.userSale__footer {
   margin-top: 30px;
   position: relative;
   & .button--fixPositionRight {
@@ -45,7 +43,7 @@
 
 /* --------------------------------- */
 
-.userOrderHistoryEmpty {
+.userSaleEmpty {
   display: flex;
   align-items: center;
   margin: 30px 0 400px;
@@ -53,13 +51,13 @@
   border-top: var(--border);
   border-bottom: var(--border);
 }
-.userOrderHistoryEmpty__description {
+.userSaleEmpty__description {
   color: var(--black03);
   font-family: var(--opens);
   font-size: 16px;
   line-height: 1.4;
 }
-.userOrderHistoryEmpty__button {
+.userSaleEmpty__button {
   margin-left: auto;
 }
 

@@ -1,0 +1,34 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+include ../../components/userSearchParameters/userSearchParameters.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userOrderHistory__filter
+        .userOrderHistory__filterForm
+          +userSearchParameters()(
+            title='Параметры поиска:'
+            employees=true
+            creators=['Мной', 'Сотрудниками']
+          )
+        //- .userOrderHistory__filterButton
+        //-   a(href="javascript:void(0);" data-popupname="add-new-specification").button.buttonFixSize.js-popup-open!='Создать спецификацию'
+      .userOrderHistory__tableFilter
+        +tableFilter(
+          ['№','Дата, время'],
+          ['Объект', 'Спецификация/Заказ', 'Статус', 'Сумма']
+        )
+      .userOrderHistory__list
+        each item in orderHistoryList
+          +tableItem(
+            item.leftData,
+            item.rightData
+          )
+      .userOrderHistory__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+
+  include ../../components/tableFilter/icon.pug
+

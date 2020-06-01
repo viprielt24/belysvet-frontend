@@ -1,0 +1,37 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+include ../../components/userSearchParameters/userSearchParameters.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userSale__filter
+        .userSale__filterForm
+          +userSearchParameters()(
+            title='Параметры поиска:'
+            titleCheckbox=['Нет отзыва']
+            object=true
+          )
+        .userSale__filterButton
+          a(href="javascript:void(0);" data-popupname="add-new-sale").button.buttonFixSize.js-popup-open!='Создать продажу'
+      .userSale__tableFilter
+        +tableFilter(
+          ['Название продажи'],
+          ['Название объекта','Дата создания', 'Тип', 'Этап']
+        )
+      .userSale__list
+        each item in saleList
+          +tableItem(
+            item.leftData,
+            item.rightData,
+            item.noFeedback
+          )
+      .userSale__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+        a(href="javascript:void(0);" data-popupname="add-new-sale").button.buttonFixSize.button--fixPositionRight.js-popup-open!='Создать продажу'
+
+  include ../../components/tableFilter/icon.pug
+  include ../../components/popup/pug/addNewSale.pug
+

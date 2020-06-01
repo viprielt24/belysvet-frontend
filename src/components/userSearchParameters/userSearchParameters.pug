@@ -10,6 +10,7 @@
 //- +userSearchParameters()(
 //-   title='Параметры поиска:'
 //-   titleCheckbox=['Нет отзыва']
+//-   object=true
 //-   location=true
 //-   employees=true
 //-   creators=['Мной', 'Белый свет']
@@ -18,6 +19,7 @@
 mixin userSearchParameters()
   - var title = attributes.title
   - var titleCheckbox = attributes.titleCheckbox
+  - var object = attributes.object
   - var location = attributes.location
   - var employees = attributes.employees
   - var creators = attributes.creators
@@ -32,7 +34,7 @@ mixin userSearchParameters()
               each check in titleCheckbox
                 .uspCheckbox__item
                   label.label.label--checkbox.label--aka-radio
-                    input(type='radio' name='feedback').form-control
+                    input(type='checkbox' name='feedback').form-control
                     .icon.icon--checkbox
                     .label__text!=check
       if location
@@ -43,6 +45,11 @@ mixin userSearchParameters()
           .form-element: label
             .form-placeholder!='Город'
             include ../../pages/common/user-objects-select-city-common
+      if object
+        .userSearchParameters__object
+          .form-element: label
+            .form-placeholder!='Объект'
+            include ../../pages/common/user-objects-select-object
       if employees
         .userSearchParameters__employees
           .form-element: label
