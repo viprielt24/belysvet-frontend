@@ -1,0 +1,41 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userServiceForm
+        .userServiceForm__wrap
+          .userServiceForm__title!='Заявка на ремонт'
+          .userServiceForm__form.form.form--style: form(action="javascript:void(0);")
+            .form-group.form-group--2col
+              .form-element: label
+                .form-placeholder Объект
+                include ../common/object-select-common
+              .form-element: label
+                .form-placeholder Модель / Марка оборудования
+                input.form-control
+            .form-group.form-group--3col
+              .form-element: label
+                .form-placeholder Количество
+                input.form-control
+              .form-element: label
+                .form-placeholder Серийный номер / Номер партии
+                input.form-control
+              .form-element: label
+                .form-placeholder Дата приобретения
+                input.form-control
+            .form-group
+              .form-element: label
+                .form-placeholder Продавец / Поставщик
+                input.form-control
+            .form-group
+              .form-element: label
+                .form-placeholder Причина обращения / Описание проблемы / Примечание / Комментарий
+                textarea(rows="4").form-control
+            .userServiceForm__action
+              a(href="javascript:void(0);" data-popupname="service-request").button.buttonFixSize.js-popup-open!='Отправить'
+
+
+  include ../../components/popup/pug/serviceRequest.pug
+

@@ -432,7 +432,6 @@ textarea.form-control {
 .form-group--checkbox {
   display: flex;
   align-items: center;
-  margin-bottom: 0;
   & .form-placeholder {
     min-height: 16px;
     margin-bottom: 0;
@@ -451,6 +450,29 @@ textarea.form-control {
     font-size: 16px;
     font-weight: normal;
     line-height: 16px;
+  }
+}
+
+.form-group--3col {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+  & .form-element {
+    width: 33.33%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.form-group--2col {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+  & .form-element {
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 

@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------------------- */
+
+@import "../../layout/variables.css";
+
+/* ------------------------------------------------------------------------- */
+
+.userServiceForm {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: var(--border);
+}
+.userServiceForm__wrap {
+  width: 100%;
+  padding: 40px 100px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.userServiceForm__title {
+  color: var(--black04);
+  font-family: var(--museo);
+  font-size: 25px;
+  line-height: 1.3;
+}
+.userServiceForm__form {
+  margin-top: 20px;
+}
+.userServiceForm__action {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ------------------------------------------------------------------------- */

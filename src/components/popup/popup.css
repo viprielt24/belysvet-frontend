@@ -237,9 +237,9 @@
   & .popup__form {
     width: auto;
   }
-  & .form-element {
+  /* & .form-element {
     margin-top: 20px;
-  }
+  } */
   & .form-placeholder__subTitle {
     margin-top: -5px;
     margin-bottom: 7px;
@@ -263,9 +263,6 @@
     line-height: 1.4;
   }
   & .formAddressGroup__form {
-    & .form-group {
-      margin: 0;
-    }
     & .form-control {
       border: none;
     }
@@ -308,9 +305,9 @@
   & .popup__form {
     width: auto;
   }
-  & .form-element {
+  /* & .form-element {
     margin-top: 20px;
-  }
+  } */
   .select-custom--default .choices__list--single .choices__item {
     padding-left: 15px;
   }
@@ -338,9 +335,13 @@
 }
 .popup--addNewSale {}
 .saleTabs {
+  margin-bottom: 20px;
+  & .saleTabs__headers {
+    margin-bottom: 20px;
+  }
   & .saleTabs__headersLabel {
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-family: var(--opens);
     font-size: 18px;
     font-weight: bold;
@@ -354,30 +355,6 @@
       color: var(--black03);
       font-size: 16px;
       font-weight: normal;
-    }
-  }
-}
-.popup--addNewEmployees {
-  & .form-group--3col {
-    display: flex;
-    align-items: flex-start;
-    margin-left: -10px;
-    margin-right: -10px;
-    & .form-element {
-      width: 33.33%;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
-  & .form-group--2col {
-    display: flex;
-    align-items: flex-start;
-    margin-left: -10px;
-    margin-right: -10px;
-    & .form-element {
-      width: 50%;
-      margin-left: 10px;
-      margin-right: 10px;
     }
   }
 }
