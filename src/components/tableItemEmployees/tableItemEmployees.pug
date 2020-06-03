@@ -1,0 +1,36 @@
+mixin tableItemEmployees(leftData,rightData)
+  .tableItemEmployees(class=(leftData.status == 'block' ? 'tableItemEmployees--block' : ''))
+    .tableItemEmployees__wrap
+      .tableItemEmployees__left
+        .tableItemEmployees__person.tiePerson
+          .tiePerson__icon
+          .tiePerson__group
+            .tiePerson__fio!=leftData.surname +'<br />'+ leftData.name + ' ' + leftData.patronymic
+            if leftData.position
+              .tiePerson__position!=leftData.position
+            if leftData.id
+              .tiePerson__id.tableItemEmployeesData
+                .tableItemEmployeesData__label!='ID:'
+                .tableItemEmployeesData__value!=leftData.id
+            .tiePerson__action
+              .tiePerson__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+              if leftData.status == 'block'
+                .tiePerson__unblock(data-popupname="unblock-employees").js-popup-open!='Разблокировать'
+              else 
+                .tiePerson__block(data-popupname="block-employees").js-popup-open!='Заблокировать'
+      .tableItemEmployees__right
+        each item in rightData
+          if (item.view == '01')
+            .tableItemEmployeesData.tableItemEmployeesData--view01
+              .tableItemEmployeesData__label!=item.label
+              .tableItemEmployeesData__value
+                a(href=item.href)!=item.value
+          else if (item.view == '02')
+            .tableItemEmployeesData.tableItemEmployeesData--view02
+              .tableItemEmployeesData__label!=item.label
+              .tableItemEmployeesData__value
+                a(href=item.href)!=item.value
+          else
+            .tableItemEmployeesData
+              .tableItemEmployeesData__label!=item.label
+              .tableItemEmployeesData__value!=item.value

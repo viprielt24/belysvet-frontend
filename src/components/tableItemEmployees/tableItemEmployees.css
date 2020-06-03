@@ -1,0 +1,210 @@
+/* ------------------------------------------------------------------------- */
+
+.tableItemEmployees {
+  overflow: hidden;
+  padding: 40px 30px;
+  background-color: #fff;
+  position: relative;
+  transition: var(--trsh);
+  &:hover {
+    box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    &:after {
+      transform: translateY(0);
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    transform: translateY(5px);
+    transition: transform 0.3s ease;
+  }
+  &.tableItemEmployees--block {
+    border: 1px solid var(--red02);
+    background-color: var(--red04);
+    &:after {
+      background-color: var(--red02);
+    }
+  }
+}
+.tableItemEmployees__wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.tableItemEmployees__left {
+  width: 420px;
+}
+.tableItemEmployees__right {
+  & span {
+    font-weight: normal;
+  }
+  & em {
+    color: var(--red02);
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+/* --------------------------------- */
+
+.tableItemEmployeesData {
+  display: flex;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  &.tableItemEmployeesData--view01 {
+    flex-direction: column;
+    & .tableItemEmployeesData__value {
+      margin-top: 8px;
+      font-family: var(--museo);
+      font-size: 18px;
+      font-weight: normal;
+      & a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        &:hover {
+          color: var(--hover);
+        }
+      }
+    }
+  }
+  &.tableItemEmployeesData--view02 {
+    & a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--hover);
+      }
+    }
+  }
+}
+.tableItemEmployeesData__label {
+  margin-right: 0.25em;
+  color: var(--black02);
+  font-family: var(--opens);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.tableItemEmployeesData__value {
+  color: var(--black02);
+  font-family: var(--opens);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* --------------------------------- */
+
+.tiePerson {
+  display: flex;
+  align-self: flex-start;
+}
+.tiePerson__icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-image: url('/images/person/person-empty.svg');
+  background-repeat: no-repeat;
+  background-size: 38px 38px;
+  background-position: center center;
+}
+.tiePerson__group {
+  margin-left: 18px;
+}
+.tiePerson__fio {
+  color: var(--black02);
+  font-family: var(--opens);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.tiePerson__position {
+  margin-top: 18px;
+  color: var(--black02);
+  font-family: var(--opens);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.tiePerson__id {
+  margin-top: 12px;
+}
+.tiePerson__action {
+  display: flex;
+  margin-top: 18px;
+}
+.tiePerson__edit {
+  padding-left: 22px;
+  color: var(--primary);
+  font-family: var(--museo);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('/images/edit.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 15px;
+    background-position: center center;
+  }
+}
+.tiePerson__block,
+.tiePerson__unblock {
+  padding-left: 22px;
+  margin-left: 25px;
+  font-family: var(--museo);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center center;
+  }
+}
+.tiePerson__block {
+  color: var(--red01);
+  &:before {
+    background-image: url('/images/block.svg');
+  }
+}
+.tiePerson__unblock {
+  color: var(--hover);
+  &:before {
+    background-image: url('/images/unblock.svg');
+  }
+}
+
+/* ------------------------------------------------------------------------- */

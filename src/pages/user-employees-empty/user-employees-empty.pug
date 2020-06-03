@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userEmployeesEmpty
+        .userEmployeesEmpty__description У вас пока нет ни одного сотрудника.<br /> Пожалуйста, воспользуйтесь кнопкой “Добавить сотрудника”<br /> или свяжитесь с нами и мы добавим сотрудника для вас.
+        .userEmployeesEmpty__button
+          a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+  include ../../components/popup/pug/addNewEmployees.pug
+

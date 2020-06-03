@@ -1,0 +1,46 @@
+extends ../layout.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItemEmployees/tableItemEmployees.pug
+include ../../components/userSearchParameters/userSearchParameters.pug
+
+block content
+  .content
+    .container
+      include ../../components/content-header/content-header-lk
+      .userEmployees__stat.ueStat
+        .ueStat__item
+          .ueStat__value 1587
+          .ueStat__title Активных<br />сотрудников
+        .ueStat__item
+          .ueStat__value 395
+          .ueStat__title Охват<br />городов
+      .userEmployees__filter
+        .userEmployees__filterForm
+          +userSearchParameters()(
+            title='Поиск сотрудника:'
+            employees=true
+            employeesLabel=false
+          )
+        .userEmployees__filterButton
+          a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+      .userEmployees__tableFilter
+        +tableFilter(
+          ['ID', 'Фамилия'],
+          ['Город','Дата регистрации', 'Кол-во объектов', 'Кол-во продаж', 'Заблокирован']
+        )
+      .userEmployees__list
+        each item in employeesList
+          +tableItemEmployees(
+            item.leftData,
+            item.rightData
+          )
+      .userEmployees__footer
+        a(href="javascript:void(0);").button.button--press.buttonFixSize!='Показать еще'
+        a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.button--fixPositionRight.js-popup-open!='Добавить сотрудника'
+
+  include ../../components/tableFilter/icon.pug
+  include ../../components/popup/pug/addNewEmployees.pug
+  include ../../components/popup/pug/editEmployees.pug
+  include ../../components/popup/pug/blockEmployees.pug
+  include ../../components/popup/pug/unblockEmployees.pug
+

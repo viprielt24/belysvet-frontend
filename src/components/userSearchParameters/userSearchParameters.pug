@@ -22,6 +22,7 @@ mixin userSearchParameters()
   - var object = attributes.object
   - var location = attributes.location
   - var employees = attributes.employees
+  - var employeesLabel = attributes.employeesLabel == false ? attributes.employeesLabel : true
   - var creators = attributes.creators
   .userSearchParameters
     form(action='javascript:void(0);')
@@ -53,7 +54,8 @@ mixin userSearchParameters()
       if employees
         .userSearchParameters__employees
           .form-element: label
-            .form-placeholder!='Сотрудники'
+            if employeesLabel 
+              .form-placeholder!='Сотрудники'
             include ../../pages/common/user-objects-select-employees
       if creators
         .userSearchParameters__creator

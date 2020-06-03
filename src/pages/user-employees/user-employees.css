@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------------------- */
+
+@import "../../layout/variables.css";
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/tableItemEmployees/tableItemEmployees.css";
+@import "../../components/userSearchParameters/userSearchParameters.css";
+
+/* ------------------------------------------------------------------------- */
+
+.userEmployees__filter {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: var(--border);
+}
+.userEmployees__filterForm {
+  width: 50%;
+}
+.userEmployees__filterButton {
+  margin-left: auto;
+}
+.userEmployees__tableFilter {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.userEmployees__list {
+  margin-top: 20px;
+  & .tableItemEmployees:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+.userEmployees__footer {
+  margin-top: 30px;
+  position: relative;
+  & .button--fixPositionRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* --------------------------------- */
+
+.userEmployees__stat {
+  margin-top: 20px;
+}
+.ueStat {
+  display: flex;
+  align-items: flex-start;
+}
+.ueStat__item {
+  display: flex;
+  align-items: center;
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+.ueStat__value {
+  color: var(--primary);
+  font-family: var(--museo);
+  font-size: 40px;
+  line-height: 1;
+}
+.ueStat__title {
+  margin-left: 16px;
+  color: var(--black04);
+  font-family: var(--opens);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* --------------------------------- */
+
+.userEmployeesEmpty {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 400px;
+  padding: 30px 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+.userEmployeesEmpty__description {
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.4;
+}
+.userEmployeesEmpty__button {
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------------------- */

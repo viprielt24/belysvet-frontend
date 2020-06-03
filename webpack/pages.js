@@ -1156,6 +1156,32 @@ const pages = {
       // objectSelect: data.objectSelect,
     }
   },
+  'user-employees-empty': {
+    parameters: {
+      page: 'user-employees-empty',
+      title: 'Сотрудники',
+      pageName: 'Сотрудники (Дистр ОтвПр) &mdash; пустой',
+      crumbs: ['Главная', 'Личный кабинет', 'Сотрудники'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться.</p>',
+      // for popup
+      // projectsSolution: data.solutions,
+      // objectSelect: data.objectSelect,
+    }
+  },
+  'user-employees': {
+    parameters: {
+      page: 'user-employees',
+      title: 'Сотрудники',
+      pageName: 'Сотрудники (Дистр ОтвПр) &mdash; заполненный',
+      crumbs: ['Главная', 'Личный кабинет', 'Сотрудники'],
+      pageDescr: '<p>Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться. Какой-то вводный текст про раздел, для чего он и как им пользоваться.</p>',
+      selectEmployees: data.selectEmployees,
+      employeesList: data.employeesList
+      // for popup
+      // projectsSolution: data.solutions,
+      // objectSelect: data.objectSelect,
+    }
+  },
 };
 // Страницы проекта
 pages.pages = {

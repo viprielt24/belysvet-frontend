@@ -204,6 +204,11 @@
     min-width: 132px;
   }
 }
+.popup--width500 {
+  & .popup__wrap {
+    max-width: 500px;
+  }
+}
 
 /**
 
@@ -279,7 +284,8 @@
 
  */
 .popup--addNewSpecification,
-.popup--addNewSale {
+.popup--addNewSale,
+.popup--addNewEmployees {
   & .popup__buttonGroup {
     display: flex;
     justify-content: flex-end;
@@ -348,6 +354,30 @@
       color: var(--black03);
       font-size: 16px;
       font-weight: normal;
+    }
+  }
+}
+.popup--addNewEmployees {
+  & .form-group--3col {
+    display: flex;
+    align-items: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    & .form-element {
+      width: 33.33%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  & .form-group--2col {
+    display: flex;
+    align-items: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    & .form-element {
+      width: 50%;
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }

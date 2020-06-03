@@ -429,6 +429,31 @@ textarea.form-control {
   animation: fadeIn .3s ease;
 }
 
+.form-group--checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  & .form-placeholder {
+    min-height: 16px;
+    margin-bottom: 0;
+    line-height: 16px;
+  }
+  & .form-checkboxGroup {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  & .label {
+    margin-right: 30px;
+  }
+  & .label__text {
+    color: var(--black03);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+  }
+}
+
 /**
 
  */
