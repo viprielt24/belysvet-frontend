@@ -14,12 +14,8 @@ mixin fileCard(id,type,fileName,href,size,create,replace,action)
           .fileCard__actionReplace.fcButton.fcButton--uploadFile
             input(type="file" id=id)
             label(for=id)
-              .fcButton__icon
-                svg
-                  use(xlink:href="#svg-replace-file")
+              .fcButton__icon: svg: use(xlink:href="#svg-replace-file")
               .fcButton__title!='Заменить'
           .fileCard__actionDelete.fcButton.js-popup-open(data-popupname="delete-file")
-            .fcButton__icon
-              svg
-                use(xlink:href="#svg-delete-file")
+            .fcButton__icon: svg: use(xlink:href="#svg-delete-file")
             .fcButton__title!='Удалить'

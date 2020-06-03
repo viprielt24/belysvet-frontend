@@ -61,6 +61,7 @@
   font-family: var(--opens);
   font-size: 12px;
   line-height: 1;
+  white-space: nowrap;
 }
 .fileCard__change,
 .fileCard__create {

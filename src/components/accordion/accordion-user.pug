@@ -1,4 +1,6 @@
-mixin accordion(item, index)
+include ../../components/fileCard/fileCard.pug
+
+mixin accordionUser(item, index)
 
   //-доп.класс на вложенный аккордеон
   - innerClass = item.inner ? 'accordion__item accordion__item--parent js-accordion__item' : 'accordion__item js-accordion__item'
@@ -24,8 +26,18 @@ mixin accordion(item, index)
 
       //-файлы
       if item.files
-        include ../../pages/common/file-accordion-common
-        - item.files = null;
+        .files.fileCardGroup
+          each itemFile, index in item.files
+            +fileCard(
+              'files'+index,
+              itemFile.type,
+              itemFile.fileName,
+              itemFile.href,
+              itemFile.size,
+              itemFile.create,
+              itemFile.replace,
+              itemFile.action
+            )
 
       //-если есть вложенный аккордеон
       if item.inner
@@ -41,8 +53,18 @@ mixin accordion(item, index)
 
                 //-файлы
                 if unit.files
-                  - item.files = unit.files
-                  include ../../pages/common/file-accordion-common
+                  .files.fileCardGroup
+                    each itemFile, index in unit.files
+                      +fileCard(
+                        'files'+index,
+                        itemFile.type,
+                        itemFile.fileName,
+                        itemFile.href,
+                        itemFile.size,
+                        itemFile.create,
+                        itemFile.replace,
+                        itemFile.action
+                      )
 
                 //-закрытие вложенного аккордеона
                 .accordion__close

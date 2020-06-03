@@ -1,11 +1,26 @@
 /* ------------------------------------------------------------------------- */
 
 @import "../../layout/variables.css";
+@import "../../components/fileCard/fileCard.css";
 
 /* ------------------------------------------------------------------------- */
 
-.userHelp__form {
-  border: 1px solid red;
+.userHelp__accordion {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  border-top: var(--border);
+  /* & .fileCardGroup {
+    clear: both;
+    border: 0;
+    padding-top: 35px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-bottom: 0;
+    & .fileCard {
+      width: 25%;
+    }
+  } */
 }
 
 /* ------------------------------------------------------------------------- */

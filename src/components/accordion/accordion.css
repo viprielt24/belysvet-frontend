@@ -5,6 +5,17 @@
   .text-editor ul{
     margin-bottom: 25px;
   }
+  & .fileCardGroup {
+    clear: both;
+    border: 0;
+    padding-top: 35px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-bottom: 0;
+    & .fileCard {
+      width: 25%;
+    }
+  }
 }
 
 .accordion__item {
@@ -212,7 +223,11 @@ a.accordion__close-text {
 }
 
 .accordion__inner{
-
+  & .fileCardGroup {
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
   &:last-child{
     border-bottom: 1px solid rgba(196, 196, 196, 0.5);
   }
