@@ -10,17 +10,6 @@
   margin-bottom: 20px;
   padding-top: 25px;
   border-top: var(--border);
-  /* & .fileCardGroup {
-    clear: both;
-    border: 0;
-    padding-top: 35px;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin-bottom: 0;
-    & .fileCard {
-      width: 25%;
-    }
-  } */
 }
 
 /* ------------------------------------------------------------------------- */

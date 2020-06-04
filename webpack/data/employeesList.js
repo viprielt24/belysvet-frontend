@@ -32,7 +32,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+79839346467'
+      },
+      {
+        label: 'E-mail:',
+        value: 'petrov-ivan@mail.ru'
+      },
     ]
   },
   {
@@ -68,7 +76,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+712343234423'
+      },
+      {
+        label: 'E-mail:',
+        value: 'konst-ark-michalov@mail.ru'
+      },
     ]
   },
   {
@@ -104,7 +120,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+71235674323'
+      },
+      {
+        label: 'E-mail:',
+        value: 'liiy-yanovna@mail.ru'
+      },
     ]
   },
   {
@@ -140,7 +164,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Заблокирован 19.05.2019 г в 10:52'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+79867655634'
+      },
+      {
+        label: 'E-mail:',
+        value: 'konovalov-ernest@mail.ru'
+      },
     ]
   },
   {
@@ -176,7 +208,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+79839346467'
+      },
+      {
+        label: 'E-mail:',
+        value: 'petrov-ivan@mail.ru'
+      },
     ]
   },
   {
@@ -212,7 +252,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+712343234423'
+      },
+      {
+        label: 'E-mail:',
+        value: 'konst-ark-michalov@mail.ru'
+      },
     ]
   },
   {
@@ -248,7 +296,15 @@ module.exports = [
       {
         label: 'Статус:',
         value: 'Активный пользователь'
-      }
+      },
+      {
+        label: 'Телефон:',
+        value: '+71235674323'
+      },
+      {
+        label: 'E-mail:',
+        value: 'liiy-yanovna@mail.ru'
+      },
     ]
   },
 ];

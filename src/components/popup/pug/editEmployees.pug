@@ -19,27 +19,28 @@
                 input(type='radio' name='gender').form-control
                 .icon.icon--checkbox
                 .label__text Женский
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Фамилия:
+              input(placeholder='Введите фамилию' value="Петров").form-control
+            .form-element: label
+              .form-placeholder Имя:
+              input(placeholder='Введите имя' value="Иван").form-control
+            .form-element: label
+              .form-placeholder Отчество:
+              input(placeholder='Введите отчество' value="Сидорович").form-control
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Город:
+              input(placeholder='Введите город' value="Тула").form-control
+            .form-element: label
+              .form-placeholder Мобильный телефон:
+              input(placeholder='Введите мобильный телефон' value="+79839346467").form-control
           .form-group
-            .form-group--3col
-              .form-element: label
-                .form-placeholder Фамилия:
-                input(placeholder='Введите фамилию' value="Петров").form-control
-              .form-element: label
-                .form-placeholder Имя:
-                input(placeholder='Введите имя' value="Иван").form-control
-              .form-element: label
-                .form-placeholder Отчество:
-                input(placeholder='Введите отчество' value="Сидорович").form-control
-            .form-group--2col
-              .form-element: label
-                .form-placeholder Город:
-                input(placeholder='Введите город' value="Тула").form-control
-              .form-element: label
-                .form-placeholder Мобильный телефон:
-                input(placeholder='Введите мобильный телефон' value="+79839346467").form-control
             .form-element: label
               .form-placeholder E-mail:
               input(placeholder='Введите e-mail' value="petrov-ivan@mail.ru").form-control
+          .form-group
             .form-element: label
               .form-placeholder Должность:
               input(placeholder='Укажите должность' value="Старший менеджер по правильной работе с ключевыми клиентами").form-control
