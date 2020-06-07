@@ -1,0 +1,14 @@
+mixin messageCompatible(view,type,title,decription)
+  - var className = 'messageCompatible--' + view + ' messageCompatible--' + type;
+  .messageCompatible(class=className)
+    .messageCompatible__icon
+      if type=='correct'
+        include ../../images/correct.svg
+      else if type=='incorrect'
+        include ../../images/attention.svg
+    if title || decription
+      .messageCompatible__group
+        if title
+          .messageCompatible__title!=title
+        if decription
+          .messageCompatible__description!=decription

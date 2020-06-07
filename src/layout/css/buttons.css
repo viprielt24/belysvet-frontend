@@ -227,6 +227,136 @@
     transition: color 0.3s ease;
   }
 }
+.buttonPrint {
+  display: flex;
+  min-width: 140px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border: none;
+  background: none;
+  text-transform: none;
+  &:hover {
+    background-color: none;
+    box-shadow: none;
+    & em svg path {
+      fill: var(--hover);
+    }
+    & span {
+      color: var(--hover);
+    }
+  }
+  & em {
+    width: 15px;
+    height: 14px;
+    margin-right: 10px;
+    overflow: hidden;
+    & svg {
+      width: 15px;
+      height: 14px;
+      & path {
+        transition: fill 0.2s ease;
+      }
+    }
+  }
+  & span {
+    color: var(--primary);
+    font-family: var(--museo);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    transition: color 0.3s ease;
+  }
+}
+.buttonEditList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--primary);
+  background: none;
+  text-transform: none;
+  transition: border-color 0.2s ease;
+  &:hover {
+    background-color: none;
+    box-shadow: none;
+    border-color: var(--hover);
+    & em svg path {
+      fill: var(--hover);
+    }
+    & span {
+      color: var(--hover);
+    }
+  }
+  & em {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    overflow: hidden;
+    & svg {
+      width: 15px;
+      height: 15px;
+      & path {
+        transition: fill 0.2s ease;
+      }
+    }
+  }
+  & span {
+    color: var(--primary);
+    font-family: var(--museo);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    transition: color 0.3s ease;
+  }
+}
+.basketAddition {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 140px;
+  max-width: 290px;
+  height: 76px;
+  padding: 0 20px;
+  border: 1px solid var(--primary);
+  background: none;
+  text-transform: none;
+  transition: border-color 0.2s ease;
+  &:hover {
+    background-color: none;
+    box-shadow: none;
+    border-color: var(--hover);
+    & em {}
+    & span {
+      color: var(--hover);
+    }
+  }
+  & span {
+    color: var(--primary);
+    font-family: var(--opens);
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    white-space: normal;
+    transition: color 0.3s ease;
+  }
+  & em {
+    padding-top: 5px;
+    color: var(--black03);
+    font-family: var(--opens);
+    font-size: 10px;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0;
+    white-space: normal;
+  }
+}
 .buttonEdit {
   display: flex;
   min-width: 140px;

@@ -1,0 +1,72 @@
+//- ---------------------------------------------------------------------------
+
+mixin userProductBasketSmall(title,array)
+  .userProductBasketSmall
+    if title
+      .userProductBasketSmall__title!=title
+    .userProductBasketSmall__group
+      each item in array
+        +userProductBasketSmallItem(
+          item.title,
+          item.href,
+          item.count,
+          item.price,
+          item.sum,
+          item.compatibility
+        )
+
+//- ---------------------------------------------------------------------------
+
+mixin userProductBasketSmallItem(title,href,count,price,sum,compatibility)
+  .userProductBasketSmallItem(class=(compatibility==false ? 'userProductBasketSmallItem--incorrect' : ''))
+    a.userProductBasketSmallItem__title(href=href)!=title
+    .userProductBasketSmallItem__group
+      .userProductBasketSmallItem__count
+        .count.js-count
+          .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+          .count__item: input(type="number" value=count max="999").count__input.form-control.js-input-number
+          .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+      .userProductBasketSmallItem__price!='шт х ' + price + ' &#8381;'
+      .userProductBasketSmallItem__sum!=sum + ' &#8381;'
+
+//- ---------------------------------------------------------------------------
+
+mixin userProductBasketBig(title,array)
+  .userProductBasketBig
+    if title
+      .userProductBasketBig__title!=title
+    .userProductBasketBig__group
+      each item in array
+        +userProductBasketBigItem(
+          item.title,
+          item.href,
+          item.data,
+          item.count,
+          item.price,
+          item.sum,
+          item.compatibility
+        )
+
+//- ---------------------------------------------------------------------------
+
+mixin userProductBasketBigItem(title,href,data,count,price,sum,compatibility)
+  .userProductBasketBigItem(class=(compatibility==false ? 'userProductBasketBigItem--incorrect' : ''))
+    a.userProductBasketBigItem__title(href=href)!=title
+    .userProductBasketBigItem__data.upbbiData
+      each item in data
+        .upbbiData__item
+          .upbbiData__label!=item.label
+          .upbbiData__value!=item.value
+    .userProductBasketBigItem__group
+      .userProductBasketBigItem__count
+        .count.js-count
+          .count__item: a(href="javascript:void(0);").count__minus.js-input-number-decr
+          .count__item: input(type="number" value=count max="999").count__input.form-control.js-input-number
+          .count__item: a(href="javascript:void(0);").count__plus.js-input-number-incr
+      .userProductBasketBigItem__price!='шт х ' + price + ' &#8381;'
+      .userProductBasketBigItem__sum!=sum + ' &#8381;'
+      .userProductBasketBigItem__button
+        a(href="javascript:void(0);").button.button--empty!='Удалить'
+        a(href="javascript:void(0);").button!='Заменить'
+
+//- ---------------------------------------------------------------------------

@@ -1,0 +1,195 @@
+extends ../layout.pug
+include ../../components/messageCompatible/messageCompatible.pug
+include ../../components/userProductBasket/userProductBasket.pug
+
+block content
+  .content.content--userSpecificationAssembly
+    .container
+      include ../../components/content-header/content-header-lk
+      .userSpecificationAssembly__description!='Выберите группу продукции в списке товаров нажмите кнопку «В сецификацию» у нужной позиции.'
+      .userSpecificationAssembly__group
+        .userSpecificationAssembly__left
+          .usaCatalog
+            include ../common/productsMain-user
+          .usaSelectedProduct
+            .usaSelectedProduct__title!='Вы добавили в спецификацию:'
+            .usaSelectedProduct__group
+              +userProductBasketBig(
+                'Световые приборы аварийного освещения:',
+                [
+                  {
+                    title: 'BS-ARUNA-83-L2-INEXI2',
+                    href: 'javascript:void(0);',
+                    data: [
+                      { label: 'Артикул:', value: 'а15328' },
+                      { label: 'Источник питания:', value: 'INEXI-2N' },
+                      { label: 'Режим работы:', value: 'Непостоянный' },
+                      { label: 'Тестирование и управление:', value: 'К. «Тест», TELECONTROL' },
+                      { label: 'Нормируемая продолжительность аварийной работы, ч:', value: '3' },
+                      { label: 'Номинальный световой поток:', value: '— (нормальный режим), 240 (аварийный режим)'},
+                      { label: 'Номинальная потребляемая мощность:', value: '2,6' },
+                    ],
+                    count: '10',
+                    price: '4 700,00',
+                    sum: '47 000,00',
+                    compatibility: true,
+                  },
+                  {
+                    title: 'BS-KONTUR-73-S1-INEXI2',
+                    href: 'javascript:void(0);',
+                    data: [
+                      { label: 'Артикул:', value: 'а15328' },
+                      { label: 'Источник питания:', value: 'INEXI-2N' },
+                      { label: 'Режим работы:', value: 'Непостоянный' },
+                      { label: 'Тестирование и управление:', value: 'К. «Тест», TELECONTROL' },
+                      { label: 'Нормируемая продолжительность аварийной работы, ч:', value: '3' },
+                      { label: 'Номинальный световой поток:', value: '— (нормальный режим), 240 (аварийный режим)'},
+                      { label: 'Номинальная потребляемая мощность:', value: '2,6' },
+                    ],
+                    count: '100',
+                    price: '4 700,00',
+                    sum: '470 000,00',
+                    compatibility: true,
+                  }
+                ]
+              )
+              +userProductBasketBig(
+                'Блоки аварийного питания:',
+                [
+                  {
+                    title: 'BS-INEXI2-81-B2-LED',
+                    href: 'javascript:void(0);',
+                    data: [
+                      { label: 'Артикул:', value: 'а15328' },
+                      { label: 'Источник питания:', value: 'INEXI-2N' },
+                      { label: 'Режим работы:', value: 'Непостоянный' },
+                      { label: 'Тестирование и управление:', value: 'К. «Тест», TELECONTROL' },
+                      { label: 'Нормируемая продолжительность аварийной работы, ч:', value: '3' },
+                      { label: 'Номинальный световой поток:', value: '— (нормальный режим), 240 (аварийный режим)'},
+                      { label: 'Номинальная потребляемая мощность:', value: '2,6' },
+                    ],
+                    count: '10',
+                    price: '400,00',
+                    sum: '4 000,00',
+                    compatibility: true,
+                  },
+                  {
+                    title: 'БАП BS-STBILAR2-81-B5-UNI BOX IP65',
+                    href: 'javascript:void(0);',
+                    data: [
+                      { label: 'Артикул:', value: 'а15328' },
+                      { label: 'Источник питания:', value: 'INEXI-2N' },
+                      { label: 'Режим работы:', value: 'Непостоянный' },
+                      { label: 'Тестирование и управление:', value: 'К. «Тест», TELECONTROL' },
+                      { label: 'Нормируемая продолжительность аварийной работы, ч:', value: '3' },
+                      { label: 'Номинальный световой поток:', value: '— (нормальный режим), 240 (аварийный режим)'},
+                      { label: 'Номинальная потребляемая мощность:', value: '2,6' },
+                    ],
+                    count: '100',
+                    price: '400,00',
+                    sum: '40 000,00',
+                    compatibility: true,
+                  },
+                  {
+                    title: 'BS-INEXI2-53-B3-LED BOX IP65',
+                    href: 'javascript:void(0);',
+                    data: [
+                      { label: 'Артикул:', value: 'а15328' },
+                      { label: 'Источник питания:', value: 'INEXI-2N' },
+                      { label: 'Режим работы:', value: 'Непостоянный' },
+                      { label: 'Тестирование и управление:', value: 'К. «Тест», TELECONTROL' },
+                      { label: 'Нормируемая продолжительность аварийной работы, ч:', value: '3' },
+                      { label: 'Номинальный световой поток:', value: '— (нормальный режим), 240 (аварийный режим)'},
+                      { label: 'Номинальная потребляемая мощность:', value: '2,6' },
+                    ],
+                    count: '100',
+                    price: '4 700,00',
+                    sum: '470 000,00',
+                    compatibility: true,
+                  }
+                ]
+              )
+          .usaSuggestionList
+            .usaSuggestionList__title!='Возможно, в вашу спецификацию надо добавить:'
+            ul.usaSuggestionList__list
+              li: a(href="javascript:void(0);")!='Центральные аккумуляторные установки и источники бесперебойного питания;'
+              li: a(href="javascript:void(0);")!='Пульты аварийного освещения;'
+              li: a(href="javascript:void(0);")!='Знаки безопасности;'
+              li: a(href="javascript:void(0);")!='Аккумуляторные батареи;'
+              li: a(href="javascript:void(0);")!='Автономные аварийные светильники эвакуационного освещения из состава рабочих светильников;'
+
+        .userSpecificationAssembly__right
+          .usaPanel
+            .usaPanel__message
+              +messageCompatible(
+                'small',
+                'correct',
+                'Совместимо!',
+                'В вашей спецификации собраны совместимые позиции'
+              )
+            .usaPanel__text Для выбраного Технического решения добавьте позиции из категорий:
+            ul.usaPanel__list
+              li!='Световые приборы аварийного освещения;'
+              li!='Блоки аварийного питания;'
+              li!='Щиты аварийного освещения;'
+            .usaPanel__title Вы добавили в спецификацию:
+            +userProductBasketSmall(
+              'Световые приборы аварийного освещения:',
+              [
+                {
+                  title: 'BS-ARUNA-83-L2-INEXI2',
+                  href: 'javascript:void(0);',
+                  count: '10',
+                  price: '4 700,00',
+                  sum: '47 000,00',
+                  compatibility: true,
+                },
+                {
+                  title: 'BS-KONTUR-73-S1-INEXI2',
+                  href: 'javascript:void(0);',
+                  count: '100',
+                  price: '4 700,00',
+                  sum: '470 000,00',
+                  compatibility: true,
+                }
+              ]
+            )
+            +userProductBasketSmall(
+              'Блоки аварийного питания:',
+              [
+                {
+                  title: 'BS-INEXI2-81-B2-LED',
+                  href: 'javascript:void(0);',
+                  count: '10',
+                  price: '400,00',
+                  sum: '4 000,00',
+                  compatibility: true,
+                },
+                {
+                  title: 'БАП BS-STBILAR2-81-B5-UNI BOX IP65',
+                  href: 'javascript:void(0);',
+                  count: '100',
+                  price: '400,00',
+                  sum: '40 000,00',
+                  compatibility: true,
+                },
+                {
+                  title: 'BS-INEXI2-53-B3-LED BOX IP65',
+                  href: 'javascript:void(0);',
+                  count: '100',
+                  price: '4 700,00',
+                  sum: '470 000,00',
+                  compatibility: true,
+                }
+              ]
+            )
+            .usaPanel__result.usapResult
+              .usapResult__title!='Итого:'
+              .usapResult__group
+                .usapResult__count!='57 позиций'
+                .usapResult__total!='342 109,00 рублей'
+            .usaPanel__button
+              a(href="javascript:void(0);").button.buttonFixSize!='Сохранить спецификацию'
+
+
+

@@ -87,6 +87,25 @@
 .table__td--center{
   text-align: center;
 }
+.table__tr--incorrect {
+  & td {
+    background-color: var(--red05);
+    &:last-child {
+      position: relative;
+      &:after {
+        content: 'Несовместимо';
+        display: block;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        color: var(--red02);
+        font-family: var(--opens);
+        font-size: 12px;
+        line-height: 1;
+      }
+    }
+  }
+}
 
 .emunit__models-table-s0 {width: 121px;}
 

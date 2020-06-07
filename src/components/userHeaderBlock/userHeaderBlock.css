@@ -1,5 +1,9 @@
 /* ------------------------------------------------------------------------- */
 
+@import "../personCard/personCard.css";
+
+/* ------------------------------------------------------------------------- */
+
 .userHeaderBlock {
   background-color: #fff;
   margin-bottom: 45px;
@@ -20,9 +24,7 @@
 
 /* --------------------------------- */
 
-.uhbData {
-
-}
+.uhbData {}
 .uhbData__item {
   display: flex;
   align-items: flex-start;
@@ -31,7 +33,8 @@
   }
 }
 .uhbData__name {
-  width: 190px;
+  width: 210px;
+  padding-right: 20px;
   flex-shrink: 0;
   color: var(--black04);
   font-family: var(--museo);
@@ -40,14 +43,139 @@
   line-height: 1.55;
 }
 .uhbData__value {
+  width: 100%;
   color: var(--black04);
   font-family: var(--opens);
   font-size: 16px;
   line-height: 1.65;
-  & span {}
-  & em {
+  & span.activeUser {}
+  & span.blockedUser {
     color: var(--red02);
     font-style: normal;
+  }
+  & p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.65;
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+  & ul {
+    margin: 0 0 0 12px;
+    padding: 0;
+    & li {
+      margin: 4px 0;
+      padding-left: 10px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 11px;
+        background-color: var(--primary);
+      }
+    }
+  }
+}
+
+/* --------------------------------- */
+/* просто данные */
+
+.uhbData__item--data {}
+
+/* --------------------------------- */
+/* данные с ссылкой в значении */
+
+.uhbData__item--link {
+  & a.uhbData__value {
+    color: var(--primary);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    &:hover {
+      color: var(--hover);
+    }
+  }
+}
+
+/* --------------------------------- */
+/* данные с календарем */
+
+.uhbData__item--date {
+  & .uhbData__value {
+    display: flex;
+    align-items: center;
+  }
+  & .uhbData__dateList {
+    display: flex;
+    align-items: center;
+  }
+  & .uhbData__dateItem {
+    margin-right: 20px;
+    &:not(:last-child) {
+      opacity: 0.5;
+      text-decoration: line-through;
+    }
+  }
+  & .uhbData__dateCalendar {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    background-image: url('/images/calendar.svg');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    cursor: pointer;
+  }
+}
+
+/* --------------------------------- */
+/* данные с карточкой персоны */
+
+.uhbData__item--person {
+  & .uhbData__value {
+    width: auto;
+  }
+  & .personCard {
+    width: auto;
+    padding: 0;
+  }
+  & .personCard__wrap {
+    padding: 20px;
+    background: #F8F8F8;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  & .personCard__image {
+    width: 42px;
+    height: 42px;
+    &.personCard__image--empty {
+      background-size: 42px 42px;
+    }
+  }
+  & .personCard__group {
+    padding-left: 20px;
+  }
+  & .personCard__fio {
+    padding-top: 3px;
+    font-size: 14px;
+    & + .personCard__position {
+      padding-top: 3px;
+    }
+  }
+  & .personCard__position {
+    font-size: 12px;
+  }
+  & .personCard__dataItem {
+    font-size: 12px;
   }
 }
 

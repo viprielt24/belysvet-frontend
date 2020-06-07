@@ -1,0 +1,1 @@
+import "../user-specification-item/user-specification-item.css";

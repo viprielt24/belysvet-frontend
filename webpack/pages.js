@@ -1080,6 +1080,57 @@ const pages = {
       objectSelect: data.objectSelect,
     }
   },
+  'user-specification-item-empty': {
+    parameters: {
+      page: 'user-specification-item',
+      title: 'Спецификация ТР№1',
+      pageName: 'Одна спецификация &mdash; пустая',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Спецификация ТР№1'],
+    }
+  },
+  'user-specification-item': {
+    parameters: {
+      page: 'user-specification-item',
+      title: 'Спецификация ТР№1',
+      pageName: 'Одна спецификация &mdash; заполненная, совместима',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Спецификация ТР№1'],
+    }
+  },
+  'user-specification-item-incorrect': {
+    parameters: {
+      page: 'user-specification-item-incorrect',
+      title: 'Спецификация ТР№1',
+      pageName: 'Одна спецификация &mdash; заполненная, несовместима',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Спецификация ТР№1'],
+    }
+  },
+  'user-specification-assembly-begin': {
+    parameters: {
+      page: 'user-specification-assembly-begin',
+      title: 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»',
+      pageName: 'Сборка спецификации &mdash; начало',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»'],
+      products: data.products,
+    }
+  },
+  'user-specification-assembly-incorrect': {
+    parameters: {
+      page: 'user-specification-assembly-incorrect',
+      title: 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»',
+      pageName: 'Сборка спецификации &mdash; несовместима',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»'],
+      products: data.products,
+    }
+  },
+  'user-specification-assembly': {
+    parameters: {
+      page: 'user-specification-assembly',
+      title: 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»',
+      pageName: 'Сборка спецификации &mdash; совместима',
+      crumbs: ['Главная', 'Личный кабинет', 'Спецификации', 'Сборка спецификации «Название спецификации, Веселые Светила, Торговый Центр "Дружба", г. Домодедово, ТР№1»'],
+      products: data.products,
+    }
+  },
   'user-service': {
     parameters: {
       page: 'user-service',

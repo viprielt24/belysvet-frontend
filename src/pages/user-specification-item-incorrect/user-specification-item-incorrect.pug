@@ -1,0 +1,125 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+include ../../components/messageCompatible/messageCompatible.pug
+
+block content
+  .content.content--userSpecificationItem
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userSpecificationItem__headerBlock
+        +userHeaderBlock(
+          'Спецификация ТР№1',
+          [
+            { type: 'data', name: 'ID:', value: '112233' },
+            { type: 'data', name: 'Дата создания:', value: '01.06.2019' },
+            { type: 'data', name: 'Название спецификации:', value: 'Названиеспецификации'},
+            { type: 'data', name: 'Кем создана:', value: 'Пользователем Седов Павел (ID:DST-SM-280819-000000007)'},
+            { type: 'person', name: 'Менеджер:', value: 
+              {
+                image: '',
+                fio: 'Менеджеров Модест Менеджерович',
+                position: 'Суперменеджер',
+                telephone: '+7 (495) 785–17–67',
+                fax: '',
+                mobile: '+7 (916) 785–17–67',
+                email:'super@zak.ru'
+              }
+            },
+            { type: 'data', name: 'Техническое решение:', value: 'Техническое решение №1 "Автономная система аварийного освещения с функцией TELECONTROL"'},
+            { type: 'data', name: 'Бренд (торговая марка) организации:', value: 'Веселые Светила'},
+            { type: 'link', name: 'Название объекта:', value:
+              {
+                title: 'Торговый Центр "Дружба"',
+                href: 'javascript:void(0);'
+              }
+            },
+            { type: 'data', name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
+            { type: 'data', name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'},
+            { type: 'date', name: 'Желаемая дата отгрузки из г. Москва:', value: [ '10.07.2019', '21.07.2019' ] },
+            { type: 'data', name: 'Результат:', value: '<p>Запрос графика поставки, 01.05.2019</p><p>Запрос графика поставки, 11.06.2019</p><p>Отправлена дилерам, 11.06.2019</p><ul><li>ООО «СК ПАЛЛОР», г. Москва</li><li>ЗАО «Электрокомплектсервис», г. Люберцы</li><li>Компакт-ОПТ, г. Новосибирск</li></ul><p>Отправлена дилерам, 05.07.2019</p><ul><li>Интернет-магазин "Русский свет", г. Москва</li></ul><p>Оформлен заказ в компании Белый свет, 19.07.2019</p>'},
+          ],
+          [
+            {
+              type: 'delete',
+              label: 'Удалить спецификацию',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'delete-specification-01'
+            },
+            {
+              type: 'edit',
+              label: 'Редактировать спецификацию',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-specification'
+            }
+          ]
+        )
+    .userSpecificationItemBlock.usib
+      .container
+        .usib__topButton
+          a(href="javascript:void(0);").button.buttonEditList
+            em: include ../../images/pen.svg
+            span!='Редактировать список'
+          a(href="javascript:void(0);").button.buttonPrint
+            em: include ../../images/print.svg
+            span!='Печатные формы'
+
+        .usib__message
+          +messageCompatible(
+            'big',
+            'incorrect',
+            'Внимание!',
+            'В вашей спецификации присутствуют несовместимые позиции'
+          )
+
+        //- .usib__message
+        //-   +messageCompatible(
+        //-     'big',
+        //-     'correct',
+        //-     'Совместимо!',
+        //-     'В вашей спецификации собраны совместимые позиции'
+        //-   )
+
+        .usib__product
+          include ../card/pug/card-table-incorrect
+          //- include ../card/pug/card-table
+          .card-footer
+            .card-footer__descr
+              .card-footer__title Итого ваш заказ
+              .card-footer__subtitle Заказы, стоимостью свыше 5 000 рублей доставляются бесплатно
+            .card-footer__wrap
+              .card-footer__item 2 345 позиций
+              .card-footer__item 11 021 500,00 рублей
+          .card-buttons
+            .card-buttons__clear
+              a(href="javascript:void(0);").link.link--icon
+                .icon.icon--close.icon--close-primary.icon--close-medium
+                .link__text Очистить корзину
+            .card-buttons__wrap
+              .card-buttons__box
+                button.button оформить заказ
+                button.button.button--empty купить в кредит
+          .usib__productButton
+            a(href="javascript:void(0);").button.basketAddition
+              span!='Запросить<br />график поставки'
+            a(href="javascript:void(0);").button.basketAddition
+              span!='Запросить<br />коммерческое предложение'
+            a(href="javascript:void(0);").button.basketAddition
+              span!='Отправить заказ дистрибьютору'
+              em!='(на следующем шаге вы сможете выбрать до трех дилеров кому будет переправлен ваш заказ)'
+
+        .usib__bottomButton
+          a(href="javascript:void(0);").button.buttonEditList
+            em: include ../../images/pen.svg
+            span!='Редактировать список'
+          a(href="javascript:void(0);").button.buttonPrint
+            em: include ../../images/print.svg
+            span!='Печатные формы'
+
+  include ../../components/userHeaderBlock/icon.pug
+  include ../../components/popup/pug/editSpecification.pug
+  include ../../components/popup/pug/deleteSpecification.pug
+  include ../../components/popup/pug/deleteSpecificationConfirm.pug
+

@@ -1,0 +1,69 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+
+block content
+  .content.content--userSpecificationItem
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userSpecificationItem__headerBlock
+        +userHeaderBlock(
+          'Спецификация ТР№1',
+          [
+            { type: 'data', name: 'ID:', value: '112233' },
+            { type: 'data', name: 'Дата создания:', value: '01.06.2019' },
+            { type: 'data', name: 'Название спецификации:', value: 'Названиеспецификации'},
+            { type: 'data', name: 'Кем создана:', value: 'Пользователем Седов Павел (ID:DST-SM-280819-000000007)'},
+            { type: 'person', name: 'Менеджер:', value: 
+              {
+                image: '',
+                fio: 'Менеджеров Модест Менеджерович',
+                position: 'Суперменеджер',
+                telephone: '+7 (495) 785–17–67',
+                fax: '',
+                mobile: '+7 (916) 785–17–67',
+                email:'super@zak.ru'
+              }
+            },
+            { type: 'data', name: 'Техническое решение:', value: 'Техническое решение №1 "Автономная система аварийного освещения с функцией TELECONTROL"'},
+            { type: 'data', name: 'Бренд (торговая марка) организации:', value: 'Веселые Светила'},
+            { type: 'link', name: 'Название объекта:', value:
+              {
+                title: 'Торговый Центр "Дружба"',
+                href: 'javascript:void(0);'
+              }
+            },
+            { type: 'data', name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
+            { type: 'data', name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'},
+            { type: 'date', name: 'Желаемая дата отгрузки из г. Москва:', value: [ '10.07.2019', '21.07.2019' ] },
+            { type: 'data', name: 'Результат:', value: '<p>Запрос графика поставки, 01.05.2019</p><p>Запрос графика поставки, 11.06.2019</p><p>Отправлена дилерам, 11.06.2019</p><ul><li>ООО «СК ПАЛЛОР», г. Москва</li><li>ЗАО «Электрокомплектсервис», г. Люберцы</li><li>Компакт-ОПТ, г. Новосибирск</li></ul><p>Отправлена дилерам, 05.07.2019</p><ul><li>Интернет-магазин "Русский свет", г. Москва</li></ul><p>Оформлен заказ в компании Белый свет, 19.07.2019</p>'},
+          ],
+          [
+            {
+              type: 'delete',
+              label: 'Удалить спецификацию',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'delete-specification-01'
+            },
+            {
+              type: 'edit',
+              label: 'Редактировать спецификацию',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-specification'
+            }
+          ]
+        )
+    .userSpecificationItemBlock.usib
+      .container
+        .usibEmpty
+          .usibEmpty__title!='В вашей спецификации пока нет ни одной позиции'
+          .usibEmpty__button
+            a(href="javascript:void(0);").button.buttonFixSize!='Добавить позицию'
+
+  include ../../components/userHeaderBlock/icon.pug
+  include ../../components/popup/pug/editSpecification.pug
+  include ../../components/popup/pug/deleteSpecification.pug
+  include ../../components/popup/pug/deleteSpecificationConfirm.pug
+

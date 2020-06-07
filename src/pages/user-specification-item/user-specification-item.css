@@ -1,0 +1,84 @@
+/* ------------------------------------------------------------------------- */
+
+@import "../../layout/variables.css";
+@import "../../components/userHeaderBlock/userHeaderBlock.css";
+@import "../../components/messageCompatible/messageCompatible.css";
+@import "../card/card.css";
+
+/* ------------------------------------------------------------------------- */
+
+.content--userSpecificationItem {
+  margin-bottom: -40px;
+}
+.userSpecificationItem__headerBlock {}
+.userSpecificationItemBlock {
+  padding: 40px 0;
+  margin-top: 50px;
+  background-color: #fff;
+}
+.usib {}
+
+/* --------------------------------- */
+
+.userSpecificationItemBlock {}
+
+/* --------------------------------- */
+
+.usib__topButton,
+.usib__bottomButton {
+  display: flex;
+  & a {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
+.usib__topButton {
+  margin-bottom: 40px;
+}
+.usib__bottomButton {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: var(--border);
+}
+
+/* --------------------------------- */
+
+.usib__message {
+  margin: 40px 0;
+}
+
+/* --------------------------------- */
+
+.usib__product {}
+.usib__productButton {
+  display: flex;
+  justify-content: flex-end;
+  & a {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* --------------------------------- */
+
+.usibEmpty {
+  margin: 80px 0;
+}
+.usibEmpty__title {
+  margin-bottom: 30px;
+  color: var(--black04);
+  font-family: var(--museo);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+.usibEmpty__button {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------------------- */

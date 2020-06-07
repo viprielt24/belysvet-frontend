@@ -1,3 +1,5 @@
+include ../personCard/personCard.pug
+
 mixin userHeaderBlock(title,arrayData,buttons)
   .userHeaderBlock
     .userHeaderBlock__wrap
@@ -6,9 +8,35 @@ mixin userHeaderBlock(title,arrayData,buttons)
       if arrayData
         .userHeaderBlock__data.uhbData
           each item in arrayData
-            .uhbData__item
-              .uhbData__name!=item.name
-              .uhbData__value!=item.value
+            if item.type == 'data' || item.type == undefined
+              .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+            else if item.type == 'link'
+              .uhbData__item.uhbData__item--link
+                .uhbData__name!=item.name
+                a.uhbData__value(href=item.value.href)!=item.value.title
+            else if item.type == 'date'
+              .uhbData__item.uhbData__item--date
+                .uhbData__name!=item.name
+                .uhbData__value
+                  .uhbData__dateList
+                    each dateItem in item.value
+                      .uhbData__dateItem!=dateItem
+                  .uhbData__dateCalendar
+            else if item.type == 'person'
+              .uhbData__item.uhbData__item--person
+                .uhbData__name!=item.name
+                .uhbData__value
+                  +personCard(
+                    item.value.image,
+                    item.value.fio,
+                    item.value.position,
+                    item.value.telephone,
+                    item.value.fax,
+                    item.value.mobile,
+                    item.value.email
+                  )
       if buttons
         .userHeaderBlock__button
           each button in buttons

@@ -1,0 +1,37 @@
+extends ../layout.pug
+include ../../components/messageCompatible/messageCompatible.pug
+
+block content
+  .content.content--userSpecificationAssembly
+    .container
+      include ../../components/content-header/content-header-lk
+      .userSpecificationAssembly__description!='Выберите группу продукции в списке товаров нажмите кнопку «В сецификацию» у нужной позиции.'
+      .userSpecificationAssembly__group
+        .userSpecificationAssembly__left
+          .usaCatalog
+            include ../common/productsMain-user
+        .userSpecificationAssembly__right
+          .usaPanel
+            .usaPanel__text!='Для выбраного Технического решения добавьте позиции из категорий:'
+            ul.usaPanel__list
+              li!='Световые приборы аварийного освещения;'
+              li!='Блоки аварийного питания;'
+              li!='Щиты аварийного освещения;'
+              li!='Центральные аккумуляторные установки и источники бесперебойного питания;'
+              li!='Пульты аварийного освещения'
+              li!='Знаки безопасности;'
+              li!='Аксессуары и комплектация;'
+              li!='Элементы управления;'
+              li!='Аккумуляторные батареи;'
+              li!='Автономные аварийные светильники эвакуационного освещения из состава рабочих светильников'
+            .usaPanel__result.usapResult
+              .usapResult__title!='Итого:'
+              .usapResult__group
+                .usapResult__count!='0 позиций'
+                .usapResult__total!='0,00 рублей'
+            .usaPanel__button
+              a(href="javascript:void(0);").button.buttonFixSize.js-popup-open!='Сохранить спецификацию'
+
+
+
+

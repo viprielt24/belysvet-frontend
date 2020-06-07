@@ -1,0 +1,218 @@
+/* ------------------------------------------------------------------------- */
+
+.userProductBasketSmall {
+  margin-bottom: 25px;
+}
+.userProductBasketSmall__title {
+  margin: 14px 0 14px;
+  color: var(--black04);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.userProductBasketSmall__group {
+  margin: 0 -15px;
+}
+
+/* --------------------------------- */
+
+.userProductBasketSmallItem {
+  padding: 25px 15px;
+  border-bottom: var(--border);
+  &:first-child {
+    border-top: var(--border);
+  }
+  &.userProductBasketSmallItem--incorrect {
+    background-color: var(--red04);
+    position: relative;
+    &:after {
+      content: 'Несовместимо';
+      display: block;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      color: var(--red02);
+      font-family: var(--opens);
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+}
+.userProductBasketSmallItem__title {
+  color: var(--primary);
+  font-family: var(--museo);
+  font-size: 16px;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--hover);
+  }
+}
+.userProductBasketSmallItem__group {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.userProductBasketSmallItem__count {
+  & .count__input {
+    width: 52px;
+    height: 32px;
+  }
+}
+.userProductBasketSmallItem__price {
+  margin-left: 15px;
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.userProductBasketSmallItem__sum {
+  margin-left: auto;
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.userProductBasketBig {
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+.userProductBasketBig__title {
+  margin: 20px 0;
+  color: var(--black04);
+  font-size: 20px;
+  line-height: 1.3;
+}
+.userProductBasketBig__group {}
+
+/* --------------------------------- */
+
+.userProductBasketBigItem {
+  padding: 25px 25px 30px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: var(--trsh);
+  position: relative;
+  &:hover {
+    box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
+    &:after {
+      transform: translateY(0);
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    transform: translateY(5px);
+    transition: transform 0.3s ease;
+  }
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+  &.userProductBasketBigItem--incorrect {
+    background-color: var(--red04);
+    border: 1px solid var(--red02);
+    position: relative;
+    &:before {
+      content: 'Несовместимо';
+      display: block;
+      position: absolute;
+      right: 5px;
+      bottom: 8px;
+      color: var(--red02);
+      font-family: var(--opens);
+      font-size: 12px;
+      line-height: 1;
+    }
+    &:after {
+      height: 4px;
+      transform: translateY(4px);
+      background-color: var(--red02);
+    }
+    &:hover {
+      &:after {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+.userProductBasketBigItem__title {
+  color: var(--primary);
+  font-family: var(--museo);
+  font-size: 18px;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--hover);
+  }
+}
+
+/* --------------------------------- */
+
+.userProductBasketBigItem__data {}
+.upbbiData {
+  margin: 10px 0 25px;
+}
+.upbbiData__item {
+  display: flex;
+  margin: 3px 0;
+  font-family: var(--opens);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.upbbiData__label {}
+.upbbiData__value {
+  margin-left: 0.5em;
+  font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.userProductBasketBigItem__group {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.userProductBasketBigItem__count {}
+.userProductBasketBigItem__price {
+  margin-left: 15px;
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.userProductBasketBigItem__sum {
+  margin-left: auto;
+  color: var(--black03);
+  font-family: var(--museo);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.userProductBasketBigItem__button {
+  display: flex;
+  margin-left: 15px;
+  & .button {
+    margin-left: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: bold;
+    &.button--empty {
+      font-weight: normal;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */
