@@ -37,6 +37,19 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     item.value.mobile,
                     item.value.email
                   )
+            else if item.type == 'separator'
+              .uhbData__item.uhbData__item--separator
+            else if item.type == 'checkbox'
+              .uhbData__item.uhbData__item--checkbox
+                .uhbData__name!=item.name
+                .uhbData__value
+                  .form-group.form-group--checkbox
+                    .form-checkboxGroup
+                      each check in item.value
+                        label.label.label--checkbox.label--aka-radio
+                          input(type='radio' name=check.name checked=check.checked).form-control
+                          .icon.icon--checkbox
+                          .label__text!=check.title
       if buttons
         .userHeaderBlock__button
           each button in buttons

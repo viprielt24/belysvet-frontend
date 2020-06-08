@@ -1,0 +1,54 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+
+block content
+  .content.content--userSaleItem
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userSaleItem__headerBlock
+        +userHeaderBlock(
+          'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г.&nbsp;Домодедово',
+          [
+            { type: 'checkbox', name: 'Состояние:', value: 
+              [
+                { name: 'saleStatus', title: 'В работе', checked: true },
+                { name: 'saleStatus', title: 'Завершена', checked: false }
+              ]
+            },
+            { type: 'data', name: 'ID:', value: '112233' },
+            { type: 'data', name: 'Дата создания:', value: '01.06.2019' },
+            { type: 'data', name: 'Тип продажи:', value: 'Клиентская'},
+            { type: 'data', name: 'Статус продажи:', value: 'Регистрация сделки'},
+            { type: 'link', name: 'Название объекта:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
+            { type: 'data', name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
+            { type: 'separator', name: '', value: '' },
+            { type: 'data', name: 'Название продажи:', value: 'Название Продажи 2' },
+            { type: 'data', name: 'Заказчик:', value: '"НаименованиеЗаказчика"' },
+            { type: 'data', name: 'Бренд (торговая марка) организации:', value: '"НаименованиеБренда"'},
+            { type: 'data', name: 'Код в CRM Белый свет:', value: '123-QWE-31072019/WW' },
+            { type: 'data', name: 'Код/номер в системе дистрибьютора:', value: '0987-SAL-BS-2019' },
+            { type: 'data', name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'},
+          ],
+          [
+            {
+              type: 'delete',
+              label: 'Удалить продажу',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'delete-sale-01'
+            },
+            {
+              type: 'edit',
+              label: 'Редактировать продажу',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-sale'
+            }
+          ]
+        )
+
+  include ../../components/userHeaderBlock/icon.pug
+  include ../../components/popup/pug/editSale.pug
+  include ../../components/popup/pug/deleteSale.pug
+  include ../../components/popup/pug/deleteSaleConfirm.pug

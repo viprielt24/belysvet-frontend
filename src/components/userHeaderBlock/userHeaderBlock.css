@@ -180,6 +180,33 @@
 }
 
 /* --------------------------------- */
+/* разделитель */
+
+.uhbData__item--separator {
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 0;
+  background-color: var(--bdc);
+}
+
+/* --------------------------------- */
+/* чекбосы */
+
+.uhbData__item--checkbox {
+  padding: 14px 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  & .uhbData__value {
+    align-self: center;
+  }
+  & .form-checkboxGroup {
+    margin-left: 0;
+  }
+}
+
+/* --------------------------------- */
 
 .userHeaderBlock__button {
   display: flex;

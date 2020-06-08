@@ -283,7 +283,8 @@
 .popup--addNewSpecification,
 .popup--editSpecification,
 .popup--addNewSale,
-.popup--addNewEmployees {
+.popup--addNewEmployees,
+.popup--editSale {
   & .popup__buttonGroup {
     display: flex;
     justify-content: flex-end;

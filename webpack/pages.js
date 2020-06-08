@@ -1223,6 +1223,24 @@ const pages = {
       projectsSolution: data.solutions,
     }
   },
+  'user-sale-item-empty': {
+    parameters: {
+      page: 'user-sale-item-empty',
+      title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
+      pageName: 'Одна продажа &mdash; пустая',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for popup
+    }
+  },
+  'user-sale-item': {
+    parameters: {
+      page: 'user-sale-item',
+      title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
+      pageName: 'Одна продажа &mdash; заполенная',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for popup
+    }
+  },
   'user-employees-empty': {
     parameters: {
       page: 'user-employees-empty',
