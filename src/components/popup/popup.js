@@ -47,7 +47,7 @@ export default class {
       popup.querySelector('[name=form_info]').value = popupInfo;
     }
 
-    if (targetPopupName === 'lights'){
+    if (targetPopupName === 'lights' || targetPopupName === 'add-new-sale-order' || targetPopupName === 'add-new-sale-specification'){
       let popup = document.querySelector('.js-popup-' + targetPopupName);
       const lightsContent = popup.querySelector('.swiper-container');
       const lightsContentBar = lightsContent.querySelector('.swiper-scrollbar');

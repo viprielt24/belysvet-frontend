@@ -1,0 +1,50 @@
+.popup.popup--style.popup--addNewSaleTable.js-popup-add-new-sale-specification
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-sale-specification").popup__header-close.js-popup-close
+        .icon.icon--close.icon--close-primary
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить спецификацию'
+        .popup__content-description!='Выберите нужные спецификации:'
+        .usiSaleSpecification__specificationTableFilter
+          +tableFilter(
+            ['Название спецификации'],
+            ['Дата создания', 'Статус'],
+            true
+          )
+      .popup__content-scroll
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+
+              .usiSaleSpecification__specificationList
+                each itemSpecification in specification
+                  +tableItem(
+                    itemSpecification.leftData,
+                    itemSpecification.rightData,
+                    '',
+                    '',
+                    true
+                  )
+                each itemSpecification in specification
+                  +tableItem(
+                    itemSpecification.leftData,
+                    itemSpecification.rightData,
+                    '',
+                    '',
+                    true
+                  )
+                each itemSpecification in specification
+                  +tableItem(
+                    itemSpecification.leftData,
+                    itemSpecification.rightData,
+                    '',
+                    '',
+                    true
+                  )
+
+          .swiper-scrollbar
+      .popup__buttonGroup
+        a(href="javascript:void(0);" data-popupname="add-new-sale-specification").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='Отменить'
+        a(href="javascript:void(0);" data-popupname="add-new-sale-specification").button.buttonFixSize.js-popup-close!='Сохранить'

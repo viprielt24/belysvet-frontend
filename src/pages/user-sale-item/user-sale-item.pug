@@ -1,8 +1,15 @@
 extends ../layout.pug
 include ../../components/userHeaderBlock/userHeaderBlock.pug
+//- include ../../components/accordion/accordion-user-sale
+include ../../components/communicationCard/communicationCard.pug
+include ../../components/personCard/personCard.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+include ../../components/fileCard/fileCard.pug
+include ../../components/tag/tag.pug
 
 block content
-  .content.content--userSaleItem
+  .content.content--userSaleItem.js-user-sale-item
     .container
       - title = ''
       include ../../components/content-header/content-header-lk
@@ -47,9 +54,888 @@ block content
             }
           ]
         )
+      .userSaleItem__accordion 
+        .accordion.js-accordion
+
+          //- Коммуникации -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Коммуникации &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCommunication
+                  .usiCommunication__empty!='У вас нет сообщений или уведомлений по теме "Название Продажи 2".'
+          //- Коммуникации -- заполененый
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Коммуникации'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCommunication
+                .usiCommunication__group
+                  each item in communication
+                    +communicationCard(
+                      item.date,
+                      item.tags,
+                      item.status,
+                      item.title,
+                      item.description,
+                      item.link
+                    )
+                  .usiCommunication__button
+                    a(href="javascript:void(0)").button.button--showMore: span!='Показать еще'
+
+          //- Команда продажи -- путсая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Команда продажи &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме, текст появляется про наведении. Текстовая подсказка по соответствующей теме, текст появляется про наведении.  Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleTeam
+                .usiSaleTeam__item
+                  .usiSaleTeam__title!='Со стороны компании Белый свет:'
+                  .usiSaleTeam__empty!='Сотрудники компании Белый свет будут назначены в ближайшее время.'
+                .usiSaleTeam__item
+                  .usiSaleTeam__title!='Со стороны дистрибьютора:'
+                  .usiSaleTeam__empty!='Добавьте свои контакты.'
+                .usiSaleTeam__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-team-person").button.buttonFixSize.js-popup-open!='Добавить контакт'
+          //- Команда продажи
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Команда продажи'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме, текст появляется про наведении. Текстовая подсказка по соответствующей теме, текст появляется про наведении.  Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleTeam
+                .usiSaleTeam__item
+                  .usiSaleTeam__title!='Со стороны компании Белый свет:'
+                  .usiSaleTeam__group.personCardGroup
+                    each item in personBelysvet
+                      +personCard(
+                        item.image,
+                        item.fio,
+                        item.position,
+                        item.telephone,
+                        item.fax,
+                        item.mobile,
+                        item.email
+                      )
+                .usiSaleTeam__item
+                  .usiSaleTeam__title!='Со стороны дистрибьютора:'
+                  .usiSaleTeam__group.personCardGroup
+                    each item in personDist
+                      +personCard(
+                        item.image,
+                        item.fio,
+                        item.position,
+                        item.telephone,
+                        item.fax,
+                        item.mobile,
+                        item.email,
+                        true
+                      )
+                .usiSaleTeam__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-team-person").button.buttonFixSize.js-popup-open!='Добавить контакт'
+
+          //- Этапы продажи
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Этапы продажи'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiStagesSale
+                .usiStagesSale__tags
+                  - 
+                    var tags = [
+                      {title:'1. Разработка Технического решения/Концепции', value: '1'},
+                      {title:'2. Продажа оборудования', value: '2'},
+                      {title:'2.1. Презентация ТР Заказчику', value: '2.1'},
+                      {title:'2.2. Тендер', value: '2.2'},
+                      {title:'2.3. Заключение договора', value: '2.3'},
+                      {title:'3. Поставка оборудования', value: '3'},
+                      {title:'4. Продажа завершена', value: '4'}
+                    ];
+                  .tagline.js-stages-sale-tagline
+                    .tagline__wrap
+                      each item in tags
+                        +tagSale(item)
+                .usiStagesSale__tender.disabledTender.js-stages-sale-tender
+                  .form.form--style: form(action="javascript:void(0);")
+                    .form-wrap
+                      .form-group.formGroupWithButton
+                        .form-element: label
+                          .form-placeholder!='Ссылка на тендер:'
+                          input(placeholder='Введите ссылку').form-control
+                        .form-element.formGroupButton
+                          a(href="javascript:void(0);").button.buttonEdit!='Сохранить'
+                .usiStagesSale__request
+                  .usiStagesSale__requestTitle!='Отправить запрос:'
+                  .usiStagesSale__requestButtons
+                    a(href="javascript:void(0);" data-popupname="send-sale-request-status-sale").button.buttonFixSize.disabledButton.js-status-sale.js-popup-open!='О статусе продажи'
+                    a(href="javascript:void(0);" data-popupname="send-sale-request-reg-deal").button.buttonFixSize.disabledButton.js-reg-deal.js-popup-open!='О регистрации сделки'
+                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-client-status.js-popup-open!='О статусе клиента'
+                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-reg-client-project.js-popup-open!='О регистрации проекта клиента'
+
+
+
+          //- Спецификации -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Спецификации &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleSpecification
+                .usiSaleSpecification__empty!='Вы пока не добавили спецификации.'
+                .usiSaleSpecification__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-specification").button.buttonFixSize.js-popup-open!='Добавить спецификацию'
+          //- Спецификации
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Спецификации'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleSpecification
+                .usiSaleSpecification__group
+                  .usiSaleSpecification__specificationTableFilter
+                    +tableFilter(
+                      ['Название спецификации'],
+                      ['Дата создания', 'Статус']
+                    )
+                  .usiSaleSpecification__specificationList
+                    each itemSpecification in specification
+                      +tableItem(
+                        itemSpecification.leftData,
+                        itemSpecification.rightData,
+                        '',
+                        itemSpecification.action
+                      )
+                .usiSaleSpecification__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-specification").button.buttonFixSize.js-popup-open!='Добавить спецификацию'
+
+          //- Заказы -- пустые
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Заказы &mdash; пустые'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleOrder
+                .usiSaleOrder__empty!='Вы пока не добавили заказы.'
+                .usiSaleOrder__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-order").button.buttonFixSize.js-popup-open!='Добавить заказ'
+          //- Заказы
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Заказы'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiSaleOrder
+                .usiSaleOrder__group
+                  .usiSaleOrder__orderTableFilter
+                    +tableFilter(
+                      ['№', 'Дата, время'],
+                      ['Статус', 'Сумма']
+                    )
+                  .usiSaleOrder__orderList
+                    each itemOrder in order
+                      +tableItem(
+                        itemOrder.leftData,
+                        itemOrder.rightData,
+                        '',
+                        itemOrder.action
+                      )
+                .usiSaleOrder__button
+                  a(href="javascript:void(0);" data-popupname="add-new-sale-order").button.buttonFixSize.js-popup-open!='Добавить заказ'
+
+          //- Запросы
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Запросы'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiRequest
+                .usiRequest__wrap
+                  .usiRequest__form
+                    .form.form--style: form(action="javascript:void(0);")
+                      .form-wrap
+                        .form-group
+                          .form-element
+                            label
+                              .form-placeholder!='Тема запроса:'
+                              include ../../components/select-custom/select-custom
+                              +select-custom([
+                                {
+                                  title: 'Общие вопросы',
+                                  value: '1',
+                                  selected: false,
+                                },
+                                {
+                                  title: 'Технические вопросы',
+                                  value: '2',
+                                  selected: false,
+                                },
+                                {
+                                  title: 'Вопросы по сборке спецификации',
+                                  value: '3',
+                                  selected: false,
+                                },
+                                {
+                                  title: 'Вопросы по продаже',
+                                  value: '4',
+                                  selected: false,
+                                },
+                              ], 'Укажите тему запроса', 'default select-custom--simple')
+                        .form-group
+                          .form-element
+                            label
+                              .form-placeholder!='Текст сообщения:'
+                              textarea(rows="5").form-control
+                        .form__bottom
+                          .form-element
+                            .input-file
+                              .icon.icon--clip
+                              include ../../components/input-file/input-file
+                            div(
+                              class="form-text hint hint--white hint--top-right hint--large"
+                              data-popupname="hintfileattach"
+                              aria-label="При необходимости передать файлы бОльшего объема/размера, пожалуйста, загрузите файл в какой-нибудь файлообменник и вставьте ссылку на скачивание в текст сообщения."
+                            ) (Не более 100Mb)
+                          .button-wrap
+                            //- button(type="submit").button!='Отправить'
+                            a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.js-popup-open!='Отправить'
+                  .usiRequest__content!='Какой-то сопроводительный поясняющий текст  Какой-то сопроводительный поясняющий текст  Какой-то сопроводительный поясняющий текст  Какой-то сопроводительный поясняющий текст.'
+
+          //- Конкуренция -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Конкуренция &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCompetition
+                .usiCompetition__wrap
+                  .usiCompetition__empty
+                    .usiCompetition__emptyDescription!='Вы пока не добавили ни одного конкурента.'
+                    .usiCompetition__emptyButton
+                      a(href="javascript:void(0);" data-popupname="add-new-sale-competition").button.buttonFixSize.js-popup-open!='Добавить конкурента'
+                  .usiCompetition__button
+                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.js-popup-open!='Отправить запрос на специальные цены'
+          //- Конкуренция
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Конкуренция'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCompetition
+                .usiCompetition__wrap
+                  .usiCompetition__item
+                    .usiCompetition__head
+                      .usiCompetition__headGroup
+                        .usiCompetition__title!='Конкурент №1'
+                        .usiCompetition__data
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Производитель:'
+                            .usiCompetition__value!='Плохой Конкурент №1'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Дистрибьютор:'
+                            .usiCompetition__value!='РосЕвроСвет ООО'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Страна:'
+                            .usiCompetition__value!='Россия'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Город:'
+                            .usiCompetition__value!='Москва'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Комментарий:'
+                            .usiCompetition__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при создания объекта.'
+                      .usiCompetition__editButton
+                        a(href="javascript:void(0);" data-popupname="edit-sale-competition").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCompetition__fileGroup
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Коммерческое предложение:'
+                        .usiCompetition__fileEmpty!='Вы пока не добавили ни одного комерческого предложения.'
+                        .usiCompetition__files
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Спецификация:'
+                        .usiCompetition__fileEmpty!='Вы пока не добавили ни одной спецификац.'
+                        .usiCompetition__files
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Другой документ:'
+                        .usiCompetition__fileEmpty!='Вы пока не добавили ни одного другого документа.'
+                        .usiCompetition__files
+                      .usiCompetition__addButton
+                        a(href="javascript:void(0);" data-popupname="add-sale-competition-docs").button.buttonFixSize.js-popup-open!='Добавить файл'
+                  .usiCompetition__item
+                    .usiCompetition__head
+                      .usiCompetition__headGroup
+                        .usiCompetition__title!='Конкурент №2'
+                        .usiCompetition__data
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Производитель:'
+                            .usiCompetition__value!='Плохой Конкурент №1'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Дистрибьютор:'
+                            .usiCompetition__value!='РосЕвроСвет ООО'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Страна:'
+                            .usiCompetition__value!='Россия'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Город:'
+                            .usiCompetition__value!='Москва'
+                          .usiCompetition__dataItem
+                            .usiCompetition__label!='Комментарий:'
+                            .usiCompetition__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при создания объекта.'
+                      .usiCompetition__editButton
+                        a(href="javascript:void(0);" data-popupname="edit-sale-competition").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCompetition__fileGroup
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Коммерческое предложение:'
+                        .usiCompetition__files
+                          each itemFile, index in docsCompetitionCom
+                            +fileCard(
+                              'docsCompetitionCom'+index,
+                              itemFile.type,
+                              itemFile.fileName,
+                              itemFile.href,
+                              itemFile.size,
+                              itemFile.create,
+                              itemFile.replace,
+                              itemFile.action
+                            )
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Спецификация:'
+                        .usiCompetition__files
+                          each itemFile, index in docsCompetitionSpecification
+                            +fileCard(
+                              'docsCompetitionSpecification'+index,
+                              itemFile.type,
+                              itemFile.fileName,
+                              itemFile.href,
+                              itemFile.size,
+                              itemFile.create,
+                              itemFile.replace,
+                              itemFile.action
+                            )
+                      .usiCompetition__fileItem
+                        .usiCompetition__fileTitle!='Другой документ:'
+                        .usiCompetition__files
+                          each itemFile, index in docsCompetitionOther
+                            +fileCard(
+                              'docsCompetitionOther'+index,
+                              itemFile.type,
+                              itemFile.fileName,
+                              itemFile.href,
+                              itemFile.size,
+                              itemFile.create,
+                              itemFile.replace,
+                              itemFile.action
+                            )
+                      .usiCompetition__addButton
+                        a(href="javascript:void(0);" data-popupname="add-sale-competition-docs").button.buttonFixSize.js-popup-open!='Добавить файл'
+
+                  .usiCompetition__addCompetition
+                    a(href="javascript:void(0);" data-popupname="add-new-sale-competition").button.buttonFixSize.js-popup-open!='Добавить конкурента'
+                  .usiCompetition__button
+                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.js-popup-open!='Отправить запрос на специальные цены'
+
+
+          //- Контрагенты продажи -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Контрагенты продажи &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCounterparties
+                .usiCounterparties__wrap
+                  .usiCounterparties__item
+                    .usiCounterparties__empty
+                      .usiCounterparties__emptyDescription!='Вы пока не добавили заказчика.'
+                      .usiCounterparties__emptyButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-customer").button.buttonFixSize.js-popup-open!='Добавить заказчика'
+                  .usiCounterparties__item
+                    .usiCounterparties__empty
+                      .usiCounterparties__emptyDescription!='Вы пока не добавили проектную организацию.'
+                      .usiCounterparties__emptyButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-project-org").button.buttonFixSize.js-popup-open!='Добавить проектную организацию'
+                  .usiCounterparties__item
+                    .usiCounterparties__empty
+                      .usiCounterparties__emptyDescription!='Вы пока не добавили монтажную организацию.'
+                      .usiCounterparties__emptyButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-assembly-org").button.buttonFixSize.js-popup-open!='Добавить монтажную организацию'
+                  .usiCounterparties__item
+                    .usiCounterparties__empty
+                      .usiCounterparties__emptyDescription!='Вы пока не добавили эксплуатирующую организацию.'
+                      .usiCounterparties__emptyButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-operating-org").button.buttonFixSize.js-popup-open!='Добавить эксплуатирующую организацию'
+                  .usiCounterparties__item
+                    .usiCounterparties__empty
+                      .usiCounterparties__emptyDescription!='Вы пока не добавили технического заказчика.'
+                      .usiCounterparties__emptyButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-technical-customer").button.buttonFixSize.js-popup-open!='Добавить технического заказчика'
+                  .usiCounterparties__button
+                    a(href="javascript:void(0);" data-popupname="add-new-sale-counterparty").button.buttonFixSize.js-popup-open!='Добавить контрагента продажи'
+
+          //- Контрагенты продажи
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Контрагенты продажи'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiCounterparties
+                .usiCounterparties__wrap
+                  .usiCounterparties__item
+                    .usiCounterparties__group
+                      .usiCounterparties__data
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Юридическое наименование заказчика:'
+                          .usiCounterparties__value!='ООО "Юридическое-Наименование-Заказчика"'
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Комментарий:'
+                          .usiCounterparties__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+                      .usiCounterparties__buttonEdit
+                        a(href="javascript:void(0);" data-popupname="edit-sale-customer").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCounterparties__employees
+                      .usiCounterparties__label!='Сотрудники заказчика:'
+                      .usiCounterparties__employeesGroup.personCardGroup
+                        each item in personDist
+                          +personCard(
+                            item.image,
+                            item.fio,
+                            item.position,
+                            item.telephone,
+                            item.fax,
+                            item.mobile,
+                            item.email,
+                            true
+                          )
+                      .usiCounterparties__employeesButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-employee").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+                  .usiCounterparties__item
+                    .usiCounterparties__group
+                      .usiCounterparties__data
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Юридическое наименование проектной организации:'
+                          .usiCounterparties__value!='ООО "Юридическое-Наименование-Заказчика"'
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Комментарий:'
+                          .usiCounterparties__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+                      .usiCounterparties__buttonEdit
+                        a(href="javascript:void(0);" data-popupname="edit-sale-project-org").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCounterparties__employees
+                      .usiCounterparties__label!='Сотрудники проектной организации:'
+                      .usiCounterparties__employeesEmpty!='У вас нет ни одного сотрудника в данной организации.'
+                      .usiCounterparties__employeesButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-employee").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+                  .usiCounterparties__item
+                    .usiCounterparties__group
+                      .usiCounterparties__data
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Юридическое наименование монтажной организации:'
+                          .usiCounterparties__value!='ООО "Юридическое-Наименование-Заказчика"'
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Комментарий:'
+                          .usiCounterparties__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+                      .usiCounterparties__buttonEdit
+                        a(href="javascript:void(0);" data-popupname="edit-sale-assembly-org").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCounterparties__employees
+                      .usiCounterparties__label!='Сотрудники монтажной организации:'
+                      .usiCounterparties__employeesGroup.personCardGroup
+                        each item in personDist
+                          +personCard(
+                            item.image,
+                            item.fio,
+                            item.position,
+                            item.telephone,
+                            item.fax,
+                            item.mobile,
+                            item.email,
+                            true
+                          )
+                      .usiCounterparties__employeesButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-employee").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+                  .usiCounterparties__item
+                    .usiCounterparties__group
+                      .usiCounterparties__data
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Юридическое наименование эксплуатирующей организации:'
+                          .usiCounterparties__value!='ООО "Юридическое-Наименование-Заказчика"'
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Комментарий:'
+                          .usiCounterparties__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+                      .usiCounterparties__buttonEdit
+                        a(href="javascript:void(0);" data-popupname="edit-sale-operating-org").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCounterparties__employees
+                      .usiCounterparties__label!='Сотрудники эксплуатирующей организации:'
+                      .usiCounterparties__employeesGroup.personCardGroup
+                        each item in personDist
+                          +personCard(
+                            item.image,
+                            item.fio,
+                            item.position,
+                            item.telephone,
+                            item.fax,
+                            item.mobile,
+                            item.email,
+                            true
+                          )
+                      .usiCounterparties__employeesButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-employee").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+                  .usiCounterparties__item
+                    .usiCounterparties__group
+                      .usiCounterparties__data
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Юридическое наименование технического заказчика:'
+                          .usiCounterparties__value!='ООО "Юридическое-Наименование-Заказчика"'
+                        .usiCounterparties__dataItem
+                          .usiCounterparties__label!='Комментарий:'
+                          .usiCounterparties__value!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+                      .usiCounterparties__buttonEdit
+                        a(href="javascript:void(0);" data-popupname="edit-sale-technical-customer").button.buttonEdit.js-popup-open!='Редактировать'
+                    .usiCounterparties__employees
+                      .usiCounterparties__label!='Сотрудники технического заказчика:'
+                      .usiCounterparties__employeesGroup.personCardGroup
+                        each item in personDist
+                          +personCard(
+                            item.image,
+                            item.fio,
+                            item.position,
+                            item.telephone,
+                            item.fax,
+                            item.mobile,
+                            item.email,
+                            true
+                          )
+                      .usiCounterparties__employeesButton
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-employee").button.buttonFixSize.js-popup-open!='Добавить сотрудника'
+
+                  .usiCounterparties__button
+                    a(href="javascript:void(0);" data-popupname="add-new-sale-counterparty").button.buttonFixSize.js-popup-open!='Добавить контрагента продажи'
+
+          //- Документация -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Документация &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiDocument
+                .usiDocument__wrap
+                  .usiDocument__group
+                    .usiDocument__item
+                      .usiDocument__title!='Коммерческие предложения:'
+                      .usiDocument__emptyDescription!='Компания Белый свет пока не добавила ни одного коммерческого предложения.'
+                    .usiDocument__item
+                      .usiDocument__title!='Графики поставок:'
+                      .usiDocument__emptyDescription!='Компания Белый свет пока не добавила ни одного графика поставок.'
+                    .usiDocument__item
+                      .usiDocument__title!='Другие документы от компании Белый свет:'
+                      .usiDocument__emptyDescription!='Компания Белый свет пока не добавила ни одного другого документа.'
+                  .usiDocument__group
+                    .usiDocument__item
+                      .usiDocument__title!='Отчеты о встречах:'
+                      .usiDocument__emptyDescription!='Вы пока не добавили ни одного отчета о встречах.'
+                    .usiDocument__item
+                      .usiDocument__title!='Отчет о состоянии продажи:'
+                      .usiDocument__emptyDescription!='Вы пока не добавили ни одного отчета о состоянии продажи.'
+                    .usiDocument__item
+                      .usiDocument__title!='Другие документы от дистрибьютора:'
+                      .usiDocument__emptyDescription!='Вы пока не добавили ни одного другого документа.'
+                  .usiDocument__button
+                    a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonFixSize.js-popup-open!='добавить документ'
+
+          //- Документация
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Документация'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiDocument
+                .usiDocument__wrap
+                  .usiDocument__group
+                    .usiDocument__item
+                      .usiDocument__title!='Коммерческие предложения:'
+                      .usiDocument__files
+                        each itemFile, index in docsCommOffers
+                          +fileCard(
+                            'docsCommOffers'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                    .usiDocument__item
+                      .usiDocument__title!='Графики поставок:'
+                      .usiDocument__files
+                        each itemFile, index in docsDeliverySchedules
+                          +fileCard(
+                            'docsDeliverySchedules'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                    .usiDocument__item
+                      .usiDocument__title!='Другие документы от компании Белый свет:'
+                      .usiDocument__files
+                        each itemFile, index in docsOthersBelysvet
+                          +fileCard(
+                            'docsOthersBelysvet'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                  .usiDocument__group
+                    .usiDocument__item
+                      .usiDocument__title!='Отчеты о встречах:'
+                      .usiDocument__files
+                        each itemFile, index in docsMeetingReports
+                          +fileCard(
+                            'docsMeetingReports'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                    .usiDocument__item
+                      .usiDocument__title!='Отчет о состоянии продажи:'
+                      .usiDocument__files
+                        each itemFile, index in docsSalesStatusReport
+                          +fileCard(
+                            'docsSalesStatusReport'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                    .usiDocument__item
+                      .usiDocument__title!='Другие документы от дистрибьютора:'
+                      .usiDocument__files
+                        each itemFile, index in docsOthersDist
+                          +fileCard(
+                            'docsOthersDist'+index,
+                            itemFile.type,
+                            itemFile.fileName,
+                            itemFile.href,
+                            itemFile.size,
+                            itemFile.create,
+                            itemFile.replace,
+                            itemFile.action
+                          )
+                  .usiDocument__button
+                    a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonFixSize.js-popup-open!='Добавить документ'
+
+          //- Отзыв о продаже -- пустая
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Отзыв о продаже &mdash; пустая'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiFeedback
+                .usiFeedback__wrap
+                  .usiFeedback__feedbackEmpty
+                    .usiFeedback__empty!='Вы пока не добавили ни одного отзыва.'
+                    .usiFeedback__button
+                      a(href="javascript:void(0);" data-popupname="add-sale-feedback").button.buttonFixSize.js-popup-open!='Добавить отзыв'
+                  .usiFeedback__filesEmpty
+                    .usiFeedback__empty!='Вы пока не добавили ни одного файла с отзывом.'
+                    .usiFeedback__button
+                      input(type="file" id="addFeedbackFile")
+                      label(for="addFeedbackFile").button.buttonFixSize!='Добавить файл'
+          //- Отзыв о продаже
+          .accordion__item.accordion__item--userSale.js-accordion__item
+            a(href="javascript:void(0);").accordion__header.js-accordion__header
+              .accordion__title!='Отзыв о продаже'
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+              .accordion__toggle.js-accordion__toggle
+            .accordion__content.js-accordion__content
+              .accordion__content-wrap.js-accordion__content-wrap.usiFeedback
+                .usiFeedback__wrap
+                  .usiFeedback__feedback
+                    .usiFeedback__feedbackGroup
+                      .usiFeedback__title!='Текст отзыва:'
+                      .usiFeedback__description!='Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ. Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ. Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ. Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ. Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ и всех прочих благ. Тут будет текст отзыва, восхищение, признательность, пожелания процветания и всех прочих благ. Тут будет текст отзыва, восхищение.'
+                      .usiFeedback__agree!='Дано согласие на размещение отзыва в разделе <a href="javascript:void(0);">Проекты</a>'
+                    .usiFeedback__button
+                      a(href="javascript:void(0);" data-popupname="edit-sale-feedback").button.buttonEdit.js-popup-open!='Редактировать'
+                  .usiFeedback__files
+                    .usiFeedback__title!='Файлы с отзывом:'
+                    .usiFeedback__filesGroup
+                      each itemFile, index in feedbackDocs
+                        +fileCard(
+                          'filesSale'+index,
+                          itemFile.type,
+                          itemFile.fileName,
+                          itemFile.href,
+                          itemFile.size,
+                          itemFile.create,
+                          itemFile.replace,
+                          itemFile.action
+                        )
+                    .usiFeedback__button
+                      input(type="file" id="addFeedbackFile")
+                      label(for="addFeedbackFile").button.buttonFixSize!='Добавить файл'
+
 
   include ../../components/userHeaderBlock/icon.pug
+  include ../../components/tableFilter/icon.pug
+  include ../../components/tableItem/icon.pug
+  include ../../components/fileCard/icon.pug
   include ../../components/popup/pug/editSale.pug
   include ../../components/popup/pug/deleteSale.pug
   include ../../components/popup/pug/deleteSaleConfirm.pug
+  include ../../components/popup/pug/addNewSaleTeamPerson.pug
+  include ../../components/popup/pug/sendSaleRequest.pug
+  include ../../components/popup/pug/deleteFile.pug
+
+  include ../../components/popup/pug/sendSaleRequestStatusSale.pug
+  include ../../components/popup/pug/sendSaleRequestRegDeal.pug
+
+  include ../../components/popup/pug/addNewSaleOrder.pug
+  include ../../components/popup/pug/addNewSaleSpecification.pug
+
+  include ../../components/popup/pug/addSaleCompetitionDocs.pug
+  include ../../components/popup/pug/addNewSaleCompetition.pug
+  include ../../components/popup/pug/editSaleCompetition.pug
+
+  include ../../components/popup/pug/addNewSaleEmployee.pug
+  include ../../components/popup/pug/addNewSaleCustomer.pug
+  include ../../components/popup/pug/addNewSaleProjectOrg.pug
+  include ../../components/popup/pug/addNewSaleAssemblyOrg.pug
+  include ../../components/popup/pug/addNewSaleOperatingOrg.pug
+  include ../../components/popup/pug/addNewSaleTechnicalCustomer.pug
+  include ../../components/popup/pug/addNewSaleCounterparty.pug
+  include ../../components/popup/pug/editSaleCustomer.pug
+  include ../../components/popup/pug/editSaleProjectOrg.pug
+  include ../../components/popup/pug/editSaleAssemblyOrg.pug
+  include ../../components/popup/pug/editSaleOperatingOrg.pug
+  include ../../components/popup/pug/editSaleTechnicalCustomer.pug
+
+  include ../../components/popup/pug/addSaleDocs.pug
+
+  include ../../components/popup/pug/addSaleFeedback.pug
+  include ../../components/popup/pug/editSaleFeedback.pug
 

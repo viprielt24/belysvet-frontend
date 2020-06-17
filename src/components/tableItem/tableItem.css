@@ -32,6 +32,10 @@
   align-items: center;
   position: relative;
 }
+.tableItem__checkbox {
+  width: 50px;
+  font-size: 1px;
+}
 .tableItem__left {
   width: 420px;
 }
@@ -108,6 +112,22 @@
   font-size: 14px;
   line-height: 1;
   white-space: normal;
+}
+
+/* --------------------------------- */
+
+.tableItem__delete {
+  display: flex;
+  align-items: center;
+  width: 13px;
+  height: 13px;
+  /* background-color: red; */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  & svg {}
 }
 
 /* ------------------------------------------------------------------------- */

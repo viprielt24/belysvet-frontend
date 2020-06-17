@@ -210,4 +210,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default(document.querySelector('.js-tagline'));
     });
   }
+
+  if (document.querySelector('.js-user-sale-item')) {
+    import('../pages/user-sale-item/user-sale-item.js').then(module => {
+      new module.default();
+    });
+  }
 });

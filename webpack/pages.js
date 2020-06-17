@@ -984,7 +984,7 @@ const pages = {
   },
   'user-objects-item-empty': {
     parameters: {
-      page: 'user-objects-item',
+      page: 'user-objects-item-empty',
       title: 'Торговый центр «Дружба»',
       pageName: 'Один объект &mdash; пустой',
       crumbs: ['Главная', 'Личный кабинет', 'Объекты', 'Торговый центр «Дружба»'],
@@ -1238,6 +1238,25 @@ const pages = {
       title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
       pageName: 'Одна продажа &mdash; заполенная',
       crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for content
+      communication: data.saleCommunicationList,
+      personBelysvet: data.salePersonBelysvet,
+      personDist: data.salePersonDist,
+      specification: data.specificationSaleList,
+      order: data.orderSaleList,
+
+      docsCompetitionCom: data.saleDocCompetitionCom,
+      docsCompetitionSpecification: data.saleDocCompetitionSpecification,
+      docsCompetitionOther: data.saleDocCompetitionOther,
+
+      docsCommOffers: data.saleDocsCommOffers,
+      docsDeliverySchedules: data.saleDocsDeliverySchedules,
+      docsOthersBelysvet: data.saleDocsOthersBelysvet,
+      docsMeetingReports: data.saleDocsMeetingReports,
+      docsSalesStatusReport: data.saleDocsSalesStatusReport,
+      docsOthersDist: data.saleDocsOthersDist,
+
+      feedbackDocs: data.saleFeedbackDocs,
       // for popup
     }
   },

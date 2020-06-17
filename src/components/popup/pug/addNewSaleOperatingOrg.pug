@@ -1,0 +1,22 @@
+.popup.popup--addNewObject.js-popup-add-new-sale-operating-org
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-sale-operating-org").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить эксплуатирующую организацию'
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder!='Юридическое наименование эксплуатирующей организации:'
+              input.form-control
+          .form-group
+            .form-element: label
+              .form-placeholder Комментарий
+              textarea(rows="4").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-sale-operating-org").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='Отменить'
+          a(href="javascript:void(0);" data-popupname="add-new-sale-operating-org").button.buttonFixSize.js-popup-close!='Добавить'

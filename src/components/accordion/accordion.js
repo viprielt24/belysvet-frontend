@@ -46,7 +46,11 @@ export default class {
       );
       itemContent.style.height = 0;
       //считаем высоту закрывашки контента
-      const itemChildCloseHeight = item.querySelector('.js-accordion__close').clientHeight;
+      let itemChildCloseHeight = 0;
+      if (item.querySelector('.js-accordion__close')) {
+        itemChildCloseHeight = item.querySelector('.js-accordion__close').clientHeight;
+      }
+      // const itemChildCloseHeight = item.querySelector('.js-accordion__close').clientHeight;
 
       itemHeader.addEventListener('click', (event) => {
         //главный аккордеон

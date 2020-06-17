@@ -1,0 +1,23 @@
+.popup.popup--addNewFeedback.js-popup-add-sale-feedback
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-sale-feedback").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить отзыв'
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder!='Текст отзыва'
+              textarea(rows="8").form-control
+          .form-group
+            label.label.label--checkbox.label--aka-radio
+              input(type='checkbox' name='agree').form-control
+              .icon.icon--checkbox
+              .label__text!='Даю согласие на размещение отзыва в разделе <a href="javascript:void(0);">Проекты</a>'
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-sale-feedback").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='отменить'
+          a(href="javascript:void(0);" data-popupname="add-sale-feedback").button.buttonFixSize.js-popup-close!='Добавить'

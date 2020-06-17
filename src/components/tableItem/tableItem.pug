@@ -1,6 +1,11 @@
-mixin tableItem(leftData,rightData,noFeedback)
+mixin tableItem(leftData,rightData,noFeedback,action=false,checkbox)
   .tableItem
     .tableItem__wrap
+      if checkbox
+        .tableItem__checkbox
+          label.label.label--checkbox.label--aka-radio.active 
+            input(type='checkbox' name='tableCheckbox').form-control
+            .icon.icon--checkbox
       .tableItem__left
         each item in leftData
           if (item.view == '01')
@@ -30,3 +35,11 @@ mixin tableItem(leftData,rightData,noFeedback)
               .tableItemData__value!=item.value
         if noFeedback
           .tableItem__noFeedback!='Нет отзыва'
+        if action
+          each actionItem in action
+            if actionItem.type == 'delete'
+              .tableItem__delete(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label=actionItem.hint
+              ): svg: use(xlink:href="#svg-table-item-delete")

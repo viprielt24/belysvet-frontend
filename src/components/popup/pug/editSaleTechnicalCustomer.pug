@@ -1,0 +1,22 @@
+.popup.popup--addNewObject.js-popup-edit-sale-technical-customer
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-sale-technical-customer").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Редактировать технического заказчика'
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder!='Юридическое наименование технического заказчика:'
+              input(value='ООО "Юридическое-Наименование-Заказчика"').form-control
+          .form-group
+            .form-element: label
+              .form-placeholder Комментарий
+              textarea(rows="4").form-control!='Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта. Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-sale-technical-customer").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='Отменить'
+          a(href="javascript:void(0);" data-popupname="edit-sale-technical-customer").button.buttonFixSize.js-popup-close!='Добавить'

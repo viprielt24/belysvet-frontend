@@ -1,0 +1,14 @@
+mixin accordionUserSale(item, index)
+  .accordion__item.accordion__item--userSale.js-accordion__item
+    //-пункты главного аккордеона
+    a(href="javascript:void(0);").accordion__header.js-accordion__header
+      .accordion__title!=item.title
+      .accordion__toggle.js-accordion__toggle
+
+    //-контент главного аккордеона
+    .accordion__content.js-accordion__content.text-editor
+      .accordion__content-wrap.js-accordion__content-wrap
+        != item.content
+      //-закрытие главного аккордеона
+      //- .accordion__close.js-accordion__close
+      //-   a(href="javascript:void(0);").accordion__close-text.js-accordion__close-text Свернуть

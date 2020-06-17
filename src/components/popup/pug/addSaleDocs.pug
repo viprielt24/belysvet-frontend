@@ -1,0 +1,42 @@
+.popup.popup--addNewSaleDocs.js-popup-add-sale-docs
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-sale-docs").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить документ'
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .formGroupHalf
+            .form-group
+              .form-element: label
+                .form-placeholder!='Укажите категорию'
+                include ../../select-custom/select-custom
+                +select-custom([
+                  {
+                    title: 'Отчеты о встречах',
+                    value: '1',
+                    selected: false,
+                  },
+                  {
+                    title: 'Отчет о состоянии продажи',
+                    value: '2',
+                    selected: false,
+                  },
+                  {
+                    title: 'Другие документы от дистрибьютора',
+                    value: '3',
+                    selected: false,
+                  },
+                ], 'Выберите категорию из списка', 'default select-custom--simple')
+            .form-group.formGroupFile
+              .form-element
+                .input-file
+                  .icon.icon--clip
+                  include ../../input-file/input-file
+                .form-text!='(Не более 100Mb)'
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='отменить'
+          a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonFixSize.js-popup-close!='Добавить'

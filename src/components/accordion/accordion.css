@@ -42,8 +42,13 @@
   text-align: left;
 
   &:hover{
-
-    .accordion__toggle{
+    & .accordion__help {
+      border-color: var(--hover);
+      & svg {
+        fill: var(--hover);
+      }
+    }
+    & .accordion__toggle {
       color: var(--hover);
     }
   }
@@ -243,7 +248,7 @@ a.accordion__close-text {
   text-decoration: none;
 
   &:hover{
-
+    
     .accordion__inner-trigger:before,
     .accordion__inner-trigger:after{
       background-color: var(--hover);
@@ -393,6 +398,31 @@ a.accordion__close-text {
     color: #fff;
   }
 }
+
+.accordion__help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  & svg {
+    fill: var(--primary);
+    transition: fill 0.3s ease;
+  }
+  &:hover {
+    background-color: var(--hover);
+    & svg {
+      fill: #fff !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+
 /**
 media
  */

@@ -1,0 +1,118 @@
+.popup.popup--addNewObject.js-popup-add-new-sale-competition
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-sale-competition").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить конкурента'
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder!='Укажите производителя'
+              include ../../select-custom/select-custom
+              +select-custom([
+                {
+                  title: 'Плохой Конкурент №1',
+                  value: '1',
+                  selected: false,
+                },
+                {
+                  title: 'Плохой Конкурент №2',
+                  value: '2',
+                  selected: false,
+                },
+                {
+                  title: 'Плохой Конкурент №3',
+                  value: '3',
+                  selected: false,
+                },
+                {
+                  title: 'Другой',
+                  value: 'competitionOthers',
+                  selected: false,
+                },
+              ], 'Выберите производителя из списка', 'default select-custom--simple')
+          .form-group
+            .form-element: label
+              .form-placeholder!='или выберите "Другой" и впишите вручную'
+              input(disabled).form-control.js-input-competition-other
+          .form-group
+            .form-element: label
+              .form-placeholder!='Укажите дистрибьютора:'
+              include ../../select-custom/select-custom
+              +select-custom([
+                {
+                  title: 'РосЕвроСвет ООО',
+                  value: '1',
+                  selected: false,
+                },
+                {
+                  title: 'РосГазСвет ООО',
+                  value: '2',
+                  selected: false,
+                },
+                {
+                  title: 'РосНефтьСвет ООО',
+                  value: '3',
+                  selected: false,
+                }
+              ], 'Выберите дистрибьютора из списка', 'default select-custom--simple js-select-competition-other')
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder!='Страна дистрибьютора:'
+              +select-custom([
+                {
+                  title: 'Россия',
+                  value: 'Russia',
+                  selected: false
+                },
+                {
+                  title: 'Украина',
+                  value: 'Ukraine',
+                  selected: false
+                },
+                {
+                  title: ' Беларусь',
+                  value: 'Belarus',
+                  selected: false
+                },
+                {
+                  title: ' Казахстан',
+                  value: 'Kazakhstan',
+                  selected: false
+                }
+              ], 'Укажите страну', 'default select-custom--simple')
+            .form-element: label
+              .form-placeholder!='Город дистрибьютора:'
+              +select-custom([
+                {
+                  title: 'Москва и Московская область',
+                  value: 'moscow',
+                  selected: false
+                },
+                {
+                  title: 'Санкт-Петербург',
+                  value: 'piter',
+                  selected: false
+                },
+                {
+                  title: ' Армавир',
+                  value: 'armavir',
+                  selected: false
+                },
+                {
+                  title: ' Абакан',
+                  value: 'abakan',
+                  selected: false
+                },
+              ], 'Укажите город', 'default select-custom--simple')
+          .form-group
+            .form-element: label
+              .form-placeholder Комментарий
+              textarea(rows="4").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-sale-competition").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='Отменить'
+          a(href="javascript:void(0);" data-popupname="add-new-sale-competition").button.buttonFixSize.js-popup-close!='Добавить'

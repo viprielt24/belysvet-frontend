@@ -283,8 +283,12 @@
 .popup--addNewSpecification,
 .popup--editSpecification,
 .popup--addNewSale,
+.popup--addNewFeedback,
 .popup--addNewEmployees,
-.popup--editSale {
+.popup--addNewSaleTeamPerson,
+.popup--editSale,
+.popup--addNewSaleDocs,
+.popup--addNewSaleTable {
   & .popup__buttonGroup {
     display: flex;
     justify-content: flex-end;
@@ -336,6 +340,81 @@
   }
 }
 .popup--addNewSale {}
+.popup--addNewFeedback {
+  & .label {
+    & .label__text {
+      color: var(--black03);
+      font-size: 13px;
+      & a {
+        color: var(--primary);
+        transition: color 0.2s ease;
+        &:hover {
+          color: var(--hover);
+        }
+      }
+    }
+  }
+}
+.popup--addNewSaleDocs {
+  & .choices__input,
+  & .choices__list:before {
+    display: none !important;
+  }
+  & .formGroupHalf {
+    display: flex;
+    & .form-group {
+      width: 50%;
+    }
+  }
+  & .formGroupFile {
+    padding-top: 30px;
+    padding-left: 30px;
+    & .form-text {
+      margin-top: 0;
+      margin-left: 25px;
+      color: var(--gray03);
+    }
+  }
+}
+.popup--addNewSaleTable {
+  & .popup__wrap {
+    max-width: 864px !important;
+  }
+  & .popup__content-description {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: var(--black04);
+    font-family: var(--opens);
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  & .popup__content-header {
+    margin-bottom: 0;
+  }
+  & .usiSaleSpecification__specificationTableFilter,
+  & .usiSaleOrder__orderTableFilter {
+    border-top: var(--border);
+    max-width: 768px;
+  }
+  & .usiSaleSpecification__specificationList,
+  & .usiSaleOrder__orderList {
+    max-width: 768px;
+  }
+  
+  & .tableFilter__left,
+  & .tableItem__left {
+    width: 320px;
+  }
+  & .tableFilter,
+  & .tableItem {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  & .tableFilter__checkbox,
+  & .tableItem__checkbox {
+    width: 40px;
+  }
+}
 .saleTabs {
   margin-bottom: 20px;
   & .saleTabs__headers {
@@ -509,7 +588,8 @@
 /**
 
  */
-.popup--lights {
+.popup--lights,
+.popup--addNewSaleTable {
   background: linear-gradient(0deg, rgba(51, 51, 51, .4), rgba(51, 51, 51, .4));
 
   .popup__wrap {

@@ -11,3 +11,8 @@ mixin tag(item)
     div(class= 'tag' + customerClass + distribClass + activeClass)
       .tag__title= item.title
       .tag__close
+
+mixin tagSale(item)
+  .tag(data-value=item.value)
+    .tag__title!=item.title
+    .tag__close

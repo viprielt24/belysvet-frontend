@@ -1,0 +1,50 @@
+.popup.popup--style.popup--addNewSaleTable.js-popup-add-new-sale-order
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-sale-order").popup__header-close.js-popup-close
+        .icon.icon--close.icon--close-primary
+    .popup__content
+      .popup__content-header
+        .popup__content-title!='Добавить заказ'
+        .popup__content-description!='Выберите нужные заказы:'
+        .usiSaleOrder__orderTableFilter
+          +tableFilter(
+            ['№', 'Дата, время'],
+            ['Статус', 'Сумма'],
+            true
+          )
+      .popup__content-scroll
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+
+              .usiSaleOrder__orderList
+                each itemOrder in order
+                  +tableItem(
+                    itemOrder.leftData,
+                    itemOrder.rightData,
+                    '',
+                    '',
+                    true
+                  )
+                each itemOrder in order
+                  +tableItem(
+                    itemOrder.leftData,
+                    itemOrder.rightData,
+                    '',
+                    '',
+                    true
+                  )
+                each itemOrder in order
+                  +tableItem(
+                    itemOrder.leftData,
+                    itemOrder.rightData,
+                    '',
+                    '',
+                    true
+                  )
+
+          .swiper-scrollbar
+      .popup__buttonGroup
+        a(href="javascript:void(0);" data-popupname="add-new-sale-order").button.buttonWhitoutBorder.button--empty.js-popup-close: span!='Отменить'
+        a(href="javascript:void(0);" data-popupname="add-new-sale-order").button.buttonFixSize.js-popup-close!='Сохранить'

@@ -1,7 +1,9 @@
 //- доработать статус когда выбран один из филтров, внешний вид и функционал
-mixin tableFilter(leftFilter,rightFilter)
+mixin tableFilter(leftFilter,rightFilter,checkbox)
   .tableFilter
     .tableFilter__wrap
+      if checkbox
+        .tableFilter__checkbox
       .tableFilter__left
         each item in leftFilter
           .tableFilter__item
