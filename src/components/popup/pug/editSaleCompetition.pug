@@ -38,27 +38,6 @@
             .form-element: label
               .form-placeholder!='или выберите "Другой" и впишите вручную'
               input(disabled).form-control.js-input-competition-other
-          .form-group
-            .form-element: label
-              .form-placeholder!='Укажите дистрибьютора:'
-              include ../../select-custom/select-custom
-              +select-custom([
-                {
-                  title: 'РосЕвроСвет ООО',
-                  value: '1',
-                  selected: true,
-                },
-                {
-                  title: 'РосГазСвет ООО',
-                  value: '2',
-                  selected: false,
-                },
-                {
-                  title: 'РосНефтьСвет ООО',
-                  value: '3',
-                  selected: false,
-                }
-              ], 'Выберите дистрибьютора из списка', 'default select-custom--simple js-select-competition-other')
           .form-group.form-group--2col
             .form-element: label
               .form-placeholder!='Страна дистрибьютора:'
@@ -108,6 +87,27 @@
                   selected: false
                 },
               ], 'Укажите город', 'default select-custom--simple')
+          .form-group
+            .form-element: label
+              .form-placeholder!='Укажите дистрибьютора:'
+              include ../../select-custom/select-custom
+              +select-custom([
+                {
+                  title: 'РосЕвроСвет ООО',
+                  value: '1',
+                  selected: true,
+                },
+                {
+                  title: 'РосГазСвет ООО',
+                  value: '2',
+                  selected: false,
+                },
+                {
+                  title: 'РосНефтьСвет ООО',
+                  value: '3',
+                  selected: false,
+                }
+              ], 'Выберите дистрибьютора из списка', 'default select-custom--simple js-select-competition-other')
           .form-group
             .form-element: label
               .form-placeholder Комментарий
