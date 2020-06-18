@@ -48,16 +48,23 @@ mixin userHeaderBlock(title,arrayData,buttons)
             else if item.type == 'separator'
               .uhbData__item.uhbData__item--separator
             else if item.type == 'checkbox'
-              .uhbData__item.uhbData__item--checkbox
-                .uhbData__name!=item.name
-                .uhbData__value
-                  .form-group.form-group--checkbox
-                    .form-checkboxGroup
-                      each check in item.value
-                        label.label.label--checkbox.label--aka-radio
-                          input(type='radio' name=check.name checked=check.checked).form-control
-                          .icon.icon--checkbox
-                          .label__text!=check.title
+              - finishedCheck = false;
+              each check in item.value
+                if (check.value == 'finished' && check.checked == true)
+                  - finishedCheck = true;
+              .uhbData__item--checkbox.js-user-sale-status(
+                class=finishedCheck ? 'uhbData__item--checkboxFinished' : ''
+              )
+                .uhbData__item.uhbData__item--checkboxWrap
+                  .uhbData__name!=item.name
+                  .uhbData__value
+                    .form-group.form-group--checkbox
+                      .form-checkboxGroup
+                        each check in item.value
+                          label.label.label--checkbox.label--aka-radio
+                            input(type='radio' name=check.name value=check.value checked=check.checked).form-control
+                            .icon.icon--checkbox
+                            .label__text!=check.title
       if buttons
         .userHeaderBlock__button
           each button in buttons

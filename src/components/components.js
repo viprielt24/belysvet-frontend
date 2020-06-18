@@ -216,4 +216,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.js-user-sale-status')) {
+    import('../components/userHeaderBlock/userHeaderBlock.js').then(module => {
+      new module.default();
+    });
+  }
 });

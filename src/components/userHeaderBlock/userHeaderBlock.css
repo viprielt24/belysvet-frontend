@@ -219,14 +219,27 @@
 /* чекбосы */
 
 .uhbData__item--checkbox {
-  padding: 14px 0;
-  border-top: var(--border);
-  border-bottom: var(--border);
+  padding: 0 45px;
+  margin: 0 -45px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+  & .uhbData__item--checkboxWrap {
+    padding: 14px 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    transition: border-color 0.2s ease;
+  }
   & .uhbData__value {
     align-self: center;
   }
   & .form-checkboxGroup {
     margin-left: 0;
+  }
+}
+.uhbData__item--checkboxFinished {
+  background-color: var(--green02);
+  & .uhbData__item--checkboxWrap {
+    border-color: #fff;
   }
 }
 
