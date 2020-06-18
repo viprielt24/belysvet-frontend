@@ -400,7 +400,13 @@
   & .usiSaleOrder__orderList {
     max-width: 768px;
   }
-  
+  & .tableFilter {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    & .tableFilter__itemTitle {
+      font-size: 14px;
+    }
+  }
   & .tableFilter__left,
   & .tableItem__left {
     width: 320px;

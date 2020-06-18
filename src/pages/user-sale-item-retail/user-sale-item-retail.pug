@@ -15,7 +15,7 @@ block content
       include ../../components/content-header/content-header-lk
       .userSaleItem__headerBlock
         +userHeaderBlock(
-          'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г.&nbsp;Домодедово',
+          'Название Продажи 2 (розничная), Торговый Центр "Дружба", г.&nbsp;Домодедово',
           [
             { type: 'checkbox', name: 'Состояние:', value: 
               [
@@ -173,7 +173,7 @@ block content
                   .usiSaleSpecification__specificationTableFilter
                     +tableFilter(
                       ['Название спецификации'],
-                      ['Дата создания', 'Статус']
+                      ['Дата создания', 'Статус', 'Кем создана']
                     )
                   .usiSaleSpecification__specificationList
                     each itemSpecification in specification
