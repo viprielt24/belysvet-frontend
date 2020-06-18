@@ -12,6 +12,14 @@ mixin userHeaderBlock(title,arrayData,buttons)
               .uhbData__item.uhbData__item--data
                 .uhbData__name!=item.name
                 .uhbData__value!=item.value
+            else if item.type == 'dataDisabled'
+              .uhbData__item.uhbData__item--dataDisabled
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+            else if item.type == 'dataEmployee'
+              .uhbData__item.uhbData__item--dataEmployee
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
             else if item.type == 'link'
               .uhbData__item.uhbData__item--link
                 .uhbData__name!=item.name

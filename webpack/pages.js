@@ -1229,14 +1229,29 @@ const pages = {
       title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
       pageName: 'Одна продажа &mdash; пустая',
       crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
-      // for popup
+      // for content
+      communication: data.saleCommunicationList,
+      personBelysvet: data.salePersonBelysvet,
+      personDist: data.salePersonDist,
+      specification: data.specificationSaleList,
+      order: data.orderSaleList,
+      docsCompetitionCom: data.saleDocCompetitionCom,
+      docsCompetitionSpecification: data.saleDocCompetitionSpecification,
+      docsCompetitionOther: data.saleDocCompetitionOther,
+      docsCommOffers: data.saleDocsCommOffers,
+      docsDeliverySchedules: data.saleDocsDeliverySchedules,
+      docsOthersBelysvet: data.saleDocsOthersBelysvet,
+      docsMeetingReports: data.saleDocsMeetingReports,
+      docsSalesStatusReport: data.saleDocsSalesStatusReport,
+      docsOthersDist: data.saleDocsOthersDist,
+      feedbackDocs: data.saleFeedbackDocs,
     }
   },
   'user-sale-item': {
     parameters: {
       page: 'user-sale-item',
       title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
-      pageName: 'Одна продажа &mdash; заполенная',
+      pageName: 'Одна продажа(клиентская) &mdash; заполенная',
       crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
       // for content
       communication: data.saleCommunicationList,
@@ -1244,20 +1259,88 @@ const pages = {
       personDist: data.salePersonDist,
       specification: data.specificationSaleList,
       order: data.orderSaleList,
-
       docsCompetitionCom: data.saleDocCompetitionCom,
       docsCompetitionSpecification: data.saleDocCompetitionSpecification,
       docsCompetitionOther: data.saleDocCompetitionOther,
-
       docsCommOffers: data.saleDocsCommOffers,
       docsDeliverySchedules: data.saleDocsDeliverySchedules,
       docsOthersBelysvet: data.saleDocsOthersBelysvet,
       docsMeetingReports: data.saleDocsMeetingReports,
       docsSalesStatusReport: data.saleDocsSalesStatusReport,
       docsOthersDist: data.saleDocsOthersDist,
-
       feedbackDocs: data.saleFeedbackDocs,
-      // for popup
+    }
+  },
+  'user-sale-item-project': {
+    parameters: {
+      page: 'user-sale-item-project',
+      title: 'Название Продажи 2 (проектная), Торговый Центр "Дружба", г. Домодедово',
+      pageName: 'Одна продажа(проектная) &mdash; заполенная',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for content
+      communication: data.saleCommunicationList,
+      personBelysvet: data.salePersonBelysvet,
+      personDist: data.salePersonDist,
+      specification: data.specificationSaleList,
+      order: data.orderSaleList,
+      docsCompetitionCom: data.saleDocCompetitionCom,
+      docsCompetitionSpecification: data.saleDocCompetitionSpecification,
+      docsCompetitionOther: data.saleDocCompetitionOther,
+      docsCommOffers: data.saleDocsCommOffers,
+      docsDeliverySchedules: data.saleDocsDeliverySchedules,
+      docsOthersBelysvet: data.saleDocsOthersBelysvet,
+      docsMeetingReports: data.saleDocsMeetingReports,
+      docsSalesStatusReport: data.saleDocsSalesStatusReport,
+      docsOthersDist: data.saleDocsOthersDist,
+      feedbackDocs: data.saleFeedbackDocs,
+    }
+  },
+  'user-sale-item-retail': {
+    parameters: {
+      page: 'user-sale-item-retail',
+      title: 'Название Продажи 2 (розничная), Торговый Центр "Дружба", г. Домодедово',
+      pageName: 'Одна продажа(розничная) &mdash; заполенная',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for content
+      communication: data.saleCommunicationList,
+      personBelysvet: data.salePersonBelysvet,
+      personDist: data.salePersonDist,
+      specification: data.specificationSaleList,
+      order: data.orderSaleList,
+      docsCompetitionCom: data.saleDocCompetitionCom,
+      docsCompetitionSpecification: data.saleDocCompetitionSpecification,
+      docsCompetitionOther: data.saleDocCompetitionOther,
+      docsCommOffers: data.saleDocsCommOffers,
+      docsDeliverySchedules: data.saleDocsDeliverySchedules,
+      docsOthersBelysvet: data.saleDocsOthersBelysvet,
+      docsMeetingReports: data.saleDocsMeetingReports,
+      docsSalesStatusReport: data.saleDocsSalesStatusReport,
+      docsOthersDist: data.saleDocsOthersDist,
+      feedbackDocs: data.saleFeedbackDocs,
+    }
+  },
+  'user-sale-item-disop': {
+    parameters: {
+      page: 'user-sale-item-disop',
+      title: 'Название Продажи 2 (клиентская), Торговый Центр "Дружба", г. Домодедово',
+      pageName: 'Одна продажа(Дистр ОтвПр) &mdash; заполенная',
+      crumbs: ['Главная', 'Личный кабинет', 'Продажи', 'НазваниеПродажи2 (клиентская), Торговый Центр "Дружба", г. Домодедово'],
+      // for content
+      communication: data.saleCommunicationList,
+      personBelysvet: data.salePersonBelysvet,
+      personDist: data.salePersonDist,
+      specification: data.specificationSaleList,
+      order: data.orderSaleList,
+      docsCompetitionCom: data.saleDocCompetitionCom,
+      docsCompetitionSpecification: data.saleDocCompetitionSpecification,
+      docsCompetitionOther: data.saleDocCompetitionOther,
+      docsCommOffers: data.saleDocsCommOffers,
+      docsDeliverySchedules: data.saleDocsDeliverySchedules,
+      docsOthersBelysvet: data.saleDocsOthersBelysvet,
+      docsMeetingReports: data.saleDocsMeetingReports,
+      docsSalesStatusReport: data.saleDocsSalesStatusReport,
+      docsOthersDist: data.saleDocsOthersDist,
+      feedbackDocs: data.saleFeedbackDocs,
     }
   },
   'user-employees-empty': {

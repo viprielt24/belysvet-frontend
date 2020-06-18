@@ -91,6 +91,32 @@
       margin-right: -12px;
     }
   }
+  &.hint--userSaleButton {
+    display: flex;
+    &:after {
+      width: 210px;
+      border-radius: 2px;
+      padding: 20px;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+      color: var(--black03);
+      font-family: var(--opens);
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: normal;
+      bottom: 58px;
+      left: 50%;
+      margin-left: -110px;
+      /* transform: translateX(-50%); */
+    }
+    &:before {
+      bottom: 52px;
+      border-color: #fff;
+      transform: rotate(-45deg);
+    }
+  }
 }
 /**
 

@@ -25,8 +25,8 @@ block content
             },
             { type: 'data', name: 'ID:', value: '112233' },
             { type: 'data', name: 'Дата создания:', value: '01.06.2019' },
-            { type: 'data', name: 'Тип продажи:', value: 'Клиентская'},
-            { type: 'data', name: 'Статус продажи:', value: 'Регистрация сделки'},
+            { type: 'data', name: 'Тип продажи:', value: 'Розничная'},
+            { type: 'dataDisabled', name: 'Статус продажи:', value: 'Отсутствует для этого типа продажи'},
             { type: 'link', name: 'Название объекта:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
             { type: 'data', name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
             { type: 'separator', name: '', value: '' },
@@ -142,34 +142,19 @@ block content
                 .usiStagesSale__tags
                   - 
                     var tags = [
-                      {title:'1. Разработка Технического решения/Концепции', value: '1'},
-                      {title:'2. Продажа оборудования', value: '2'},
-                      {title:'2.1. Презентация ТР Заказчику', value: '2.1'},
-                      {title:'2.2. Тендер', value: '2.2'},
-                      {title:'2.3. Заключение договора', value: '2.3'},
-                      {title:'3. Поставка оборудования', value: '3'},
-                      {title:'4. Продажа завершена', value: '4'}
+                      {title:'1. Заключение договора', value: ''},
+                      {title:'2. Поставка оборудования', value: ''},
+                      {title:'2.1. Размещение заказа в БС', value: ''},
+                      {title:'2.2. Закупка комплектации', value: ''},
+                      {title:'2.3. Производство оборудования', value: ''},
+                      {title:'2.4. Отгрузка оборудования Дистрибьютору', value: ''},
+                      {title:'2.5. Отгрузка оборудования Покупателю', value: ''},
+                      {title:'3. Продажа завершена', value: ''},
                     ];
                   .tagline.js-stages-sale-tagline
                     .tagline__wrap
                       each item in tags
                         +tagSale(item)
-                .usiStagesSale__tender.disabledTender.js-stages-sale-tender
-                  .form.form--style: form(action="javascript:void(0);")
-                    .form-wrap
-                      .form-group.formGroupWithButton
-                        .form-element: label
-                          .form-placeholder!='Ссылка на тендер:'
-                          input(placeholder='Введите ссылку').form-control
-                        .form-element.formGroupButton
-                          a(href="javascript:void(0);").button.buttonEdit!='Сохранить'
-                .usiStagesSale__request
-                  .usiStagesSale__requestTitle!='Отправить запрос:'
-                  .usiStagesSale__requestButtons
-                    a(href="javascript:void(0);" data-popupname="send-sale-request-status-sale").button.buttonFixSize.disabledButton.js-status-sale.js-popup-open!='О статусе продажи'
-                    a(href="javascript:void(0);" data-popupname="send-sale-request-reg-deal").button.buttonFixSize.disabledButton.js-reg-deal.js-popup-open!='О регистрации сделки'
-                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-client-status.js-popup-open!='О статусе клиента'
-                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-reg-client-project.js-popup-open!='О регистрации проекта клиента'
 
           //- Спецификации
           .accordion__item.accordion__item--userSale.js-accordion__item

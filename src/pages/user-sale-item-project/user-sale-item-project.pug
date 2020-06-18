@@ -25,14 +25,14 @@ block content
             },
             { type: 'data', name: 'ID:', value: '112233' },
             { type: 'data', name: 'Дата создания:', value: '01.06.2019' },
-            { type: 'data', name: 'Тип продажи:', value: 'Клиентская'},
+            { type: 'data', name: 'Тип продажи:', value: 'Проектная'},
             { type: 'data', name: 'Статус продажи:', value: 'Регистрация сделки'},
             { type: 'link', name: 'Название объекта:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
             { type: 'data', name: 'Адрес объекта:', value: 'Россия, Московская область, г. Домодедово, мкрн Дружба, ул. Пиратов, вл. 5' },
             { type: 'separator', name: '', value: '' },
             { type: 'data', name: 'Название продажи:', value: 'Название Продажи 2' },
-            { type: 'data', name: 'Заказчик:', value: '"НаименованиеЗаказчика"' },
-            { type: 'data', name: 'Бренд (торговая марка) организации:', value: '"НаименованиеБренда"'},
+            { type: 'dataDisabled', name: 'Заказчик:', value: 'Отсутствует для этого типа продажи' },
+            { type: 'dataDisabled', name: 'Бренд (торговая марка) организации:', value: 'Отсутствует для этого типа продажи'},
             { type: 'data', name: 'Код в CRM Белый свет:', value: '123-QWE-31072019/WW' },
             { type: 'data', name: 'Код/номер в системе дистрибьютора:', value: '0987-SAL-BS-2019' },
             { type: 'data', name: 'Комментарий:', value: 'Тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта, тут будет комментарий к объекту, который оставляют при желании в момент создания объекта.'},
@@ -142,13 +142,33 @@ block content
                 .usiStagesSale__tags
                   - 
                     var tags = [
-                      {title:'1. Разработка Технического решения/Концепции', value: '1'},
-                      {title:'2. Продажа оборудования', value: '2'},
-                      {title:'2.1. Презентация ТР Заказчику', value: '2.1'},
-                      {title:'2.2. Тендер', value: '2.2'},
-                      {title:'2.3. Заключение договора', value: '2.3'},
-                      {title:'3. Поставка оборудования', value: '3'},
-                      {title:'4. Продажа завершена', value: '4'}
+                      {title: '1. Аванпроект', value: ''},
+                      {title: '2. Разработка технических заданий', value: ''},
+                      {title: '3. Проектирование', value: ''},
+                      {title: '3.1. Тендер на проектирование', value: ''},
+                      {title: '3.2. Стадия П / Проектная организация', value: ''},
+                      {title: '3.3. Стадия Р / Проектная организация', value: ''},
+                      {title: '3.4. Разработка нового продукта', value: ''},
+                      {title: '3.5. Стадия П / Партнер', value: ''},
+                      {title: '3.6. Стадия П / Белый свет', value: ''},
+                      {title: '3.7. Стадия Р / Белый свет', value: ''},
+                      {title: '4. Контроль спецификации', value: ''},
+                      {title: '5. Тендер на строительно-монтажные работы', value: ''},
+                      {title: '6. Продажа оборудования', value: ''},
+                      {title: '6.1. Проектирование Стадия Р', value: ''},
+                      {title: '6.2. Продажа по спецификации Белый свет', value: ''},
+                      {title: '6.3. Корректировка спецификации Белый свет', value: ''},
+                      {title: '6.4. Изменение спецификации Конкурента', value: ''},
+                      {title: '6.5. Тендер', value: '2.2'},
+                      {title: '6.6. Договор, заказ, предоплата от Покупателя.', value: '2.3'},
+                      {title: '7. Проект: Поставка оборудования', value: ''},
+                      {title: '7.1. Размещение заказа в БС', value: ''},
+                      {title: '7.2. Закупка комплектации', value: ''},
+                      {title: '7.3. Производство оборудования', value: ''},
+                      {title: '7.4. Отгрузка оборудования Дистрибьютору', value: ''},
+                      {title: '7.5. Отгрузка оборудования Покупателю', value: ''},
+                      {title: '7.6. Шеф-монтаж и пусконаладочные работы.', value: ''},
+                      {title: '8. Продажа завершена.', value: ''}
                     ];
                   .tagline.js-stages-sale-tagline
                     .tagline__wrap
@@ -168,8 +188,8 @@ block content
                   .usiStagesSale__requestButtons
                     a(href="javascript:void(0);" data-popupname="send-sale-request-status-sale").button.buttonFixSize.disabledButton.js-status-sale.js-popup-open!='О статусе продажи'
                     a(href="javascript:void(0);" data-popupname="send-sale-request-reg-deal").button.buttonFixSize.disabledButton.js-reg-deal.js-popup-open!='О регистрации сделки'
-                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-client-status.js-popup-open!='О статусе клиента'
                     a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-reg-client-project.js-popup-open!='О регистрации проекта клиента'
+                    a(href="javascript:void(0);" data-popupname="send-sale-request").button.buttonFixSize.disabledButton.js-client-status.js-popup-open!='О регистрации строительного объекта'
 
           //- Спецификации
           .accordion__item.accordion__item--userSale.js-accordion__item

@@ -168,18 +168,12 @@
 }
 .usiStagesSale__requestButtons {
   display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
   & .button {
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-    &.disabledButton {
-      cursor: default;
-      pointer-events: none;
-      opacity: 0.5;
-    }
+    margin: 10px;
   }
 }
-
 
 /* ------------------------------------------------------------------------- */
 

@@ -22,11 +22,21 @@ export default class {
         const activeClassCheck = document.querySelector('.js-stages-sale-tagline .tag.tag--active');
         if (tag.classList.contains('tag--active')) {
           tag.classList.remove('tag--active');
-          this.tender.classList.add(this.disabledClassTender);
-          this.buttonStatusSale.classList.add(this.disabledClassButton);
-          this.buttonRegDeal.classList.add(this.disabledClassButton);
-          this.buttonClientStatus.classList.add(this.disabledClassButton);
-          this.buttonRegClientProject.classList.add(this.disabledClassButton);
+          if (this.tender) {
+            this.tender.classList.add(this.disabledClassTender);
+          }
+          if (this.buttonStatusSale) {
+            this.buttonStatusSale.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonRegDeal) {
+            this.buttonRegDeal.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonClientStatus) {
+            this.buttonClientStatus.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonRegClientProject) {
+            this.buttonRegClientProject.classList.add(this.disabledClassButton);
+          }
 
         } else {
           if (activeClassCheck !== null) {
@@ -34,11 +44,21 @@ export default class {
           }
           let stage = tag.dataset.value;
 
-          this.tender.classList.add(this.disabledClassTender);
-          this.buttonStatusSale.classList.add(this.disabledClassButton);
-          this.buttonRegDeal.classList.add(this.disabledClassButton);
-          this.buttonClientStatus.classList.add(this.disabledClassButton);
-          this.buttonRegClientProject.classList.add(this.disabledClassButton);
+          if (this.tender) {
+            this.tender.classList.add(this.disabledClassTender);
+          }
+          if (this.buttonStatusSale) {
+            this.buttonStatusSale.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonRegDeal) {
+            this.buttonRegDeal.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonClientStatus) {
+            this.buttonClientStatus.classList.add(this.disabledClassButton);
+          }
+          if (this.buttonRegClientProject) {
+            this.buttonRegClientProject.classList.add(this.disabledClassButton);
+          }
 
           switch (stage) {
             case '1':

@@ -91,6 +91,30 @@
 .uhbData__item--data {}
 
 /* --------------------------------- */
+/* заблокированные данные */
+
+.uhbData__item--dataDisabled {
+  & .uhbData__value {
+    color: var(--gray05);
+  }
+}
+
+/* --------------------------------- */
+/* про сотрудника: активен, заблокирован */
+
+.uhbData__item--dataEmployee {
+  & .uhbData__value {
+    & span {
+      color: var(--primary);
+    }
+    & em {
+      font-style: normal;
+      color: var(--red02);
+    }
+  }
+}
+
+/* --------------------------------- */
 /* данные с ссылкой в значении */
 
 .uhbData__item--link {

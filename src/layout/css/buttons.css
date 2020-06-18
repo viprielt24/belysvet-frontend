@@ -16,6 +16,7 @@
   text-decoration: none;
   border: none;
   outline: 0;
+  user-select: none;
   transition: box-shadow var(--time);
 
   &:focus {
@@ -267,6 +268,19 @@
     line-height: 1;
     letter-spacing: 0;
     transition: color 0.3s ease;
+  }
+}
+.disabledButton {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.disabledButtonWithEvent {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-color: var(--primary);
+  cursor: default;
+  &:hover {
+    box-shadow: none;
   }
 }
 .buttonEditList {
