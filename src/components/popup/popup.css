@@ -369,13 +369,16 @@
   & .formGroupFile {
     padding-top: 34px;
     padding-left: 30px;
+    & .input-file {
+      font-size: 0;
+    }
     & .form-text {
       margin-top: 1px;
       margin-left: 30px;
       color: var(--gray03);
     }
     & .form-inputfile-label {
-      padding-left: 5px;
+      padding-left: 10px;
     }
   }
 }
