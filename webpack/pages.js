@@ -1181,6 +1181,16 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop
     }
   },
+  'user-order-history-item': {
+    parameters: {
+      page: 'user-order-history-item',
+      title: 'Заказ для Торговый центр «Дружба»',
+      pageName: 'Заказ ИстЗак ПокЮЛ',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
+      selectEmployees: data.selectEmployees,
+      orderHistoryList: data.orderHistoryListDisop,
+    }
+  },
   'user-sale-empty': {
     parameters: {
       page: 'user-sale-empty',

@@ -447,6 +447,14 @@
   background-image: url(/images/informer.svg);
 }
 
+.icon--repeat-medium {
+  margin-top: 2px;
+  width: 16px;
+  height: 14px;
+  background: url("/images/repeat.svg") no-repeat;
+  background-size: 16px 14px;
+}
+
 /**
 media
  */
