@@ -1,6 +1,6 @@
 extends ../layout.pug
 include ../../components/userHeaderBlock/userHeaderBlock.pug
- include ../../components/file/file.pug
+  include ../../components/file/file.pug
 include ../../components/fileCard/fileCard.pug
 include ../../components/tableFilter/tableFilter.pug
 include ../../components/tableItem/tableItem.pug
@@ -8,7 +8,7 @@ include ../../components/order-comment/order-comment.pug
 include ../../components/order-messages/order-messages.pug
 
 block content
-  .content.content--userObjectsItem
+  .content.content--userObjectsItem.order-history
     .container
       - title = ''
       include ../../components/content-header/content-header-lk
@@ -18,7 +18,7 @@ block content
           [
             { name: 'Дата, время:', value: '01.06.2019, 13:12:30' },
             { name: 'Количество товаров:', value: '23'},
-            { type: 'warning', name: '', value: '' },
+            { type: 'separator', name: '', value: '' },
             { type: 'notAttached', name: 'Название объекта:', value: 'Объект не выбран'},
           ],
           [

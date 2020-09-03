@@ -18,20 +18,20 @@ block content
           [
             { name: 'Дата, время:', value: '01.06.2019, 13:12:30' },
             { name: 'Количество товаров:', value: '23'},
-            { type: 'separator', name: '', value: '' },
-            { type: 'link', name: 'Название объекта:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
+            { type: 'warning', name: '', value: '' },
+            { type: 'notAttached', name: 'Название объекта:', value: 'Объект не выбран'},
           ],
           [
             {
               type: 'edit',
-              label: 'Редактировать',
+              label: 'Привязать к объекту',
               href: 'javascript:void(0);',
               class: 'js-popup-open',
               dataPopupname: 'edit-object'
             }
           ]
         )
-  .content__text-editor.card.order-history
+  .content__text-editor.card
     .container
       include ../card/pug/card-table
       .card-footer
