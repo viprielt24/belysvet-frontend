@@ -1,0 +1,35 @@
+.orderMessages {}
+.orderMessages__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+.orderMessages__item {
+  margin-bottom: 35px;
+}
+.orderMessages__date{
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #B2B2B2;
+  margin-bottom: 10px;
+}
+.orderMessages__text {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Open Sans", sans-serif;
+}
+.form-messages {}
+.form-label {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 13px;
+}
+.button-wrap {
+  margin-top:30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+

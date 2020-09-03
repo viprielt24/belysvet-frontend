@@ -190,20 +190,21 @@
 .buttonAddMessage {
   width: 149px;
   height: 48px;
-  box-shadow: 0 6px 14px rgba(0,0,0,.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .05);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--opens);
   font-size: 14px;
   line-height: 1;
   font-weight: bold;
   letter-spacing: 0.08em;
-  &:hover{
-     box-shadow: 0 6px 20px rgba(97, 174, 59, .3);
-   }
+  &:hover {
+    box-shadow: 0 6px 20px rgba(97, 174, 59, .3);
+  }
 }
+
 .buttonDelete {
   display: flex;
   min-width: 140px;

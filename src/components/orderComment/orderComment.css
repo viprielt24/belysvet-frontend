@@ -1,12 +1,13 @@
-.orderComment--title {
+.orderComment {}
+.orderComment__title {
   flex-shrink: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
   margin-bottom: 15px;
 }
-.orderComment--description{
+.orderComment__description {
+  font-family: var(--opens);
   font-size: 16px;
   line-height: 26px;
-  font-family: "Open Sans", sans-serif;
 }

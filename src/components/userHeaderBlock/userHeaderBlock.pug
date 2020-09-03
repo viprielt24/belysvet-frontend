@@ -51,8 +51,8 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     item.value.email
                   )
             else if item.type == 'warning'
-              .uhbData__item.uhbData__item--warning
-                .uhbData__icon-close
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
                 .uhbData__value
                   +messageCompatible(
                     'big',

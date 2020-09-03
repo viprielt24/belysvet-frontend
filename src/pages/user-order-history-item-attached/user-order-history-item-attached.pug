@@ -1,11 +1,10 @@
 extends ../layout.pug
 include ../../components/userHeaderBlock/userHeaderBlock.pug
- include ../../components/file/file.pug
 include ../../components/fileCard/fileCard.pug
 include ../../components/tableFilter/tableFilter.pug
 include ../../components/tableItem/tableItem.pug
-include ../../components/order-comment/order-comment.pug
-include ../../components/order-messages/order-messages.pug
+include ../../components/orderComment/orderComment.pug
+include ../../components/orderMessages/orderMessages.pug
 
 block content
   .content.content--userObjectsItem.order-history
@@ -28,7 +27,7 @@ block content
               label: 'Редактировать',
               href: 'javascript:void(0);',
               class: 'js-popup-open',
-              dataPopupname: 'choose-object-order-history'
+              dataPopupname: 'edit-object-order-history'
             }
           ]
         )
@@ -46,15 +45,13 @@ block content
           a(href="javascript:void(0);").link.link--icon
             .icon.icon--repeat.icon--repeat-primary.icon--repeat-medium
             .link__text Повторить заказ
-  .contentOrder__item
+  .contentOrder__section
     .container
-      .contentOrder__item-section
+      .contentOrder__item
         +orderComment(
           'Комментарий к заказу:', 'Тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа. Тут будет комментарий.'
         )
-  .contentOrder__item
-    .container
-      .contentOrder__item-section
+      .contentOrder__item
         .sectionTitle Документы к заказу:
         .usiDocument__wrap
           .usiDocument__group
@@ -63,7 +60,7 @@ block content
               .usiDocument__files
                 each itemFile, index in orderHistoryDocsBelysvet
                   +fileCard(
-                    'orderHistoryDocsBelysvet' + index,
+                    'docsOthersBelysvet' + index,
                     itemFile.type,
                     itemFile.fileName,
                     itemFile.href,
@@ -77,7 +74,7 @@ block content
               .usiDocument__files
                 each itemFile, index in orderHistoryDocsDistributor
                   +fileCard(
-                    'orderHistoryDocsDistributor' + index,
+                    'docsOthersDist' + index,
                     itemFile.type,
                     itemFile.fileName,
                     itemFile.href,
@@ -88,9 +85,7 @@ block content
                   )
           .usiDocument__button
             a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonFixSize.js-popup-open!='Добавить документ'
-  .contentOrder__item.last
-    .container
-      .contentOrder__item-section
+      .contentOrder__item
         +orderMessages(
           'Сообщения',
           [
@@ -109,4 +104,4 @@ block content
   include ../../components/popup/pug/addSaleCompetitionDocs.pug
   include ../../components/popup/pug/addSaleDocs.pug
   include ../../components/popup/pug/deleteFile.pug
-  //include ../../components/popup/pug/chooseObjectOrderHistory.pug
+  include ../../components/popup/pug/editObjectOrderHistory.pug

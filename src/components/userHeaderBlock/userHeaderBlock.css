@@ -37,8 +37,8 @@
   }
 }
 
-/*---------------Иконка закрытия окна----------------------*/
-.uhbData__icon-close {
+/*---------------Warning блок----------------------*/
+.uhbData__icon--close {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -64,6 +64,14 @@
   &:after{
      transform: rotate(-45deg);
   }
+}
+
+.warning--visible {
+  display: block;
+}
+
+.warning--hidden {
+  display: none;
 }
 /*--------------------------------------------------------*/
 .uhbData__name {

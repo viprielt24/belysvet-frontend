@@ -1194,18 +1194,6 @@ const pages = {
       objectSelect: data.objectSelect
     }
   },
-  'user-order-history-item-not-attached-warning': {
-    parameters: {
-      page: 'user-order-history-item-not-attached-warning',
-      title: 'Заказ для Торговый центр «Дружба»',
-      pageName: 'Заказ ИстЗак ПокЮЛ',
-      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
-      selectEmployees: data.selectEmployees,
-      orderHistoryList: data.orderHistoryListDisop,
-      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
-      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-    }
-  },
   'user-order-history-item-attached': {
     parameters: {
       page: 'user-order-history-item-attached',
@@ -1216,9 +1204,7 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      chooseObjectOrderHistory: data.chooseObjectOrderHistory
-      // for popup
-      //objectSelect: data.objectSelect,
+      objectSelect: data.objectSelect,
     }
   },
   'user-sale-empty': {
