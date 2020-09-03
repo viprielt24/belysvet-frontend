@@ -12,5 +12,4 @@ mixin orderMessages(title, messagesArray)
         .form-label!='Добавить сообщение:'
         textarea(rows="4").form-control
         .button-wrap
-          //- button(type="submit").button!='Отправить'
-          a(href="javascript:void(0);" data-popupname="send-message").button.buttonAddMessage.js-popup-open!='Отправить'
+          button(type="submit").button.buttonAddMessage!='Отправить'
