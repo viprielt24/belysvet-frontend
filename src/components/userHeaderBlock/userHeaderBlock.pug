@@ -1,4 +1,5 @@
 include ../personCard/personCard.pug
+include ../messageCompatible/messageCompatible.pug
 
 mixin userHeaderBlock(title,arrayData,buttons)
   .userHeaderBlock
@@ -10,6 +11,10 @@ mixin userHeaderBlock(title,arrayData,buttons)
           each item in arrayData
             if item.type == 'data' || item.type == undefined
               .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+            else if item.type == 'notAttached'
+              .uhbData__item.uhbData__item--notAttached
                 .uhbData__name!=item.name
                 .uhbData__value!=item.value
             else if item.type == 'dataDisabled'
@@ -44,6 +49,16 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     item.value.fax,
                     item.value.mobile,
                     item.value.email
+                  )
+            else if item.type == 'warning'
+              .uhbData__item.uhbData__item--warning
+                .uhbData__icon-close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ не привязан к объекту. Пожалуйста, привяжите заказ к объекту.'
                   )
             else if item.type == 'separator'
               .uhbData__item.uhbData__item--separator

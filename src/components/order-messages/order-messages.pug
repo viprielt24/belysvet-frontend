@@ -1,0 +1,16 @@
+mixin orderMessages(title, messagesArray)
+  .orderMessages
+    if title
+      .orderMessages__title!=title
+    each item in messagesArray
+      .orderMessages__item
+        if item.dateTime
+          .orderMessages--date!=item.dateTime
+        if item.message
+          .orderMessages--text!=item.message
+    .form-messages
+        .form-label!='Добавить сообщение:'
+        textarea(rows="4").form-control
+        .button-wrap
+          //- button(type="submit").button!='Отправить'
+          a(href="javascript:void(0);" data-popupname="send-message").button.buttonAddMessage.js-popup-open!='Отправить'

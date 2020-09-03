@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------------------- */
+@import "../../layout/css/icons.css";
+@import "../../layout/variables.css";
+@import "../../components/userHeaderBlock/userHeaderBlock.css";
+
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/fileCard/fileCard.css";
+@import "../../components/order-comment/order-comment.css";
+@import "../../components/order-messages/order-messages.css";
+
+@import "../../pages/user-objects-item/user-objects-item.css";
+
+/* ------------------------------------------------------------------------- */
+.contentOrder__item{
+  background: #fff;
+  &.last{
+    margin-bottom: -40px;
+  }
+  &-section {
+     border-top: 1px solid rgba(196, 196, 196, 0.5);
+     padding: 40px 0;
+  }
+  & .sectionTitle{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+}
+
+/*------------------------Блок корзины----------------------------------------*/
+
+.order-history {
+  & .table {
+    .pic__img {
+      max-width: 100px;
+    }
+  }
+}
+
+/*-------------------------Блок документов---------------------------------------*/
+
+.usiDocument {
+  padding-top: 30px;
+}
+.usiDocument__wrap {
+  padding-bottom: 30px;
+}
+.usiDocument__group {
+  &:not(:first-child) {
+   padding-top: 30px;
+   border-top: var(--border);
+ }
+}
+.usiDocument__item {
+  margin: 0 0 30px;
+  &:not(:first-child) {
+   margin: 30px 0;
+ }
+}
+.usiDocument__title {
+  color: var(--black04);
+  font-family: var(--museo);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.usiDocument__files {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px -15px 20px;
+  & .fileCard {
+    width: 25%;
+  }
+}
+.usiDocument__emptyDescription {
+  padding-top: 10px;
+  color: var(--black03);
+  font-family: var(--opens);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.usiDocument__button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
