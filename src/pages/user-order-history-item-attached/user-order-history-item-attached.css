@@ -30,6 +30,7 @@
 
 .content__text-editor.card.order-history{
   padding-bottom: 30px;
+  padding-top: 45px;
   & .card-buttons {
       margin-top: 30px;
   }

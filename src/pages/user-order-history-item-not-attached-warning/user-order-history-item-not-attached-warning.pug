@@ -61,7 +61,7 @@ block content
             .usiDocument__item
               .usiDocument__title!='От компании Белый свет:'
               .usiDocument__files
-                each itemFile, index in docsOthersBelysvet
+                each itemFile, index in orderHistoryDocsBelysvet
                   +fileCard(
                     'docsOthersBelysvet' + index,
                     itemFile.type,
@@ -75,7 +75,7 @@ block content
             .usiDocument__item
               .usiDocument__title!='От дистрибьютора:'
               .usiDocument__files
-                each itemFile, index in docsOthersDist
+                each itemFile, index in orderHistoryDocsDistributor
                   +fileCard(
                     'docsOthersDist' + index,
                     itemFile.type,

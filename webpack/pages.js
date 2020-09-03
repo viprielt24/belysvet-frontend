@@ -1215,6 +1215,9 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      chooseObjectOrderHistory: data.chooseObjectOrderHistory
+      // for popup
+      //objectSelect: data.objectSelect,
     }
   },
   'user-sale-empty': {
