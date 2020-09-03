@@ -1191,6 +1191,7 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect
     }
   },
   'user-order-history-item-not-attached-warning': {

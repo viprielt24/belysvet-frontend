@@ -28,7 +28,7 @@ block content
               label: 'Привязать к объекту',
               href: 'javascript:void(0);',
               class: 'js-popup-open',
-              dataPopupname: 'edit-object'
+              dataPopupname: 'choose-object-order-history'
             }
           ]
         )
@@ -61,7 +61,7 @@ block content
             .usiDocument__item
               .usiDocument__title!='От компании Белый свет:'
               .usiDocument__files
-                each itemFile, index in docsOthersBelysvet
+                each itemFile, index in orderHistoryDocsBelysvet
                   +fileCard(
                     'docsOthersBelysvet' + index,
                     itemFile.type,
@@ -75,7 +75,7 @@ block content
             .usiDocument__item
               .usiDocument__title!='От дистрибьютора:'
               .usiDocument__files
-                each itemFile, index in docsOthersDist
+                each itemFile, index in orderHistoryDocsDistributor
                   +fileCard(
                     'docsOthersDist' + index,
                     itemFile.type,
@@ -109,3 +109,4 @@ block content
   include ../../components/popup/pug/addSaleCompetitionDocs.pug
   include ../../components/popup/pug/addSaleDocs.pug
   include ../../components/popup/pug/deleteFile.pug
+  include ../../components/popup/pug/chooseObjectOrderHistory.pug
