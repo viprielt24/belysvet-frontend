@@ -1189,8 +1189,8 @@ const pages = {
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
       selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
-      docsOthersBelysvet: data.saleDocsOthersBelysvet,
-      docsOthersDist: data.saleDocsOthersDist,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
     }
   },
   'user-order-history-item-not-attached-warning': {
@@ -1201,8 +1201,8 @@ const pages = {
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
       selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
-      docsOthersBelysvet: data.saleDocsOthersBelysvet,
-      docsOthersDist: data.saleDocsOthersDist,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
     }
   },
   'user-order-history-item-attached': {
@@ -1213,8 +1213,8 @@ const pages = {
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
       selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
-      docsOthersBelysvet: data.saleDocsOthersBelysvet,
-      docsOthersDist: data.saleDocsOthersDist,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
     }
   },
   'user-sale-empty': {

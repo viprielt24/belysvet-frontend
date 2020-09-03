@@ -17,14 +17,21 @@
     margin-bottom: -40px;
   }
   &-section {
-     border-top: 1px solid rgba(196, 196, 196, 0.5);
-     padding: 40px 0;
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
+    padding: 40px 0;
   }
   & .sectionTitle{
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 20px;
+  }
+}
+
+.content__text-editor.card.order-history{
+  padding-bottom: 30px;
+  & .card-buttons {
+      margin-top: 30px;
   }
 }
 
@@ -37,52 +44,60 @@
       max-width: 100px;
     }
   }
+  & .card-footer {
+    margin-top: 35px;
+  }
+  & .card-footer:before {
+    display: none;
+  }
 }
 
 /*-------------------------Блок документов---------------------------------------*/
 
-.usiDocument {
-  padding-top: 30px;
-}
-.usiDocument__wrap {
-  padding-bottom: 30px;
-}
-.usiDocument__group {
-  &:not(:first-child) {
-   padding-top: 30px;
-   border-top: var(--border);
- }
-}
-.usiDocument__item {
-  margin: 0 0 30px;
-  &:not(:first-child) {
-   margin: 30px 0;
- }
-}
-.usiDocument__title {
-  color: var(--black04);
-  font-family: var(--museo);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-.usiDocument__files {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px -15px 20px;
-  & .fileCard {
-    width: 25%;
+.contentOrder__item {
+  & .usiDocument {
+    padding-top: 30px;
   }
-}
-.usiDocument__emptyDescription {
-  padding-top: 10px;
-  color: var(--black03);
-  font-family: var(--opens);
-  font-size: 16px;
-  line-height: 1.5;
-}
-.usiDocument__button {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 30px;
+  .usiDocument__wrap {
+    padding-bottom: 0;
+  }
+  & .usiDocument__group {
+    &:not(:first-child) {
+       padding-top: 30px;
+       border-top: var(--border);
+    }
+  }
+  & .usiDocument__item {
+    margin: 0;
+  }
+  & .usiDocument__title {
+    color: var(--black04);
+    font-family: var(--museo);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  & .usiDocument__files {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 0;
+    & .fileCard {
+      width: 25%;
+      padding: 0 15px;
+      margin-bottom: 35px;
+    }
+  }
+  & .usiDocument__emptyDescription {
+    padding-top: 10px;
+    color: var(--black03);
+    font-family: var(--opens);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  & .usiDocument__button {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
 }
