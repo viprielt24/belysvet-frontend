@@ -1,0 +1,8 @@
+.uhbData__item--separator {
+  display: none;
+}
+.uhbData__item--separator {
+  &.separator--visible {
+    display: block;
+  }
+}

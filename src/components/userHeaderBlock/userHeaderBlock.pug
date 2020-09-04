@@ -50,7 +50,7 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     item.value.mobile,
                     item.value.email
                   )
-            else if item.type == 'warning'
+            else if item.type == 'warning-order'
               .uhbData__item.uhbData__item--warning.warning--visible
                 .uhbData__icon--close
                 .uhbData__value
@@ -59,6 +59,16 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     'incorrect',
                     'Внимание!',
                     'Ваш заказ не привязан к объекту. Пожалуйста, привяжите заказ к объекту.'
+                  )
+            else if item.type == 'warning-order-specification'
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ-спецификация не привязан к продаже. Пожалуйста, привяжите заказ-спецификацию к продаже.'
                   )
             else if item.type == 'separator'
               .uhbData__item.uhbData__item--separator

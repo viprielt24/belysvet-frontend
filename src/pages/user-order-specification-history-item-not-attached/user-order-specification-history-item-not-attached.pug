@@ -5,6 +5,7 @@ include ../../components/tableFilter/tableFilter.pug
 include ../../components/tableItem/tableItem.pug
 include ../../components/orderComment/orderComment.pug
 include ../../components/orderMessages/orderMessages.pug
+include ../../components/tag/tag.pug
 
 block content
   .content.content--userObjectsItem.order-history
@@ -13,25 +14,58 @@ block content
       include ../../components/content-header/content-header-lk
       .userObjectsItem__headerBlock
         +userHeaderBlock(
-          'Заказ №7',
+          'Заказ-спецификация № 37',
           [
-            { name: 'Дата, время:', value: '01.06.2019, 13:12:30' },
+            { name: 'Дата, время:', value: '03.07.2019, 13:12:30' },
             { name: 'Количество товаров:', value: '23'},
             { name: 'Сумма:', value: '41 399 ₽'},
             { type: 'separator', name: '', value: '' },
-            { type: 'warning-order', name: '', value: '' },
-            { type: 'notAttached', name: 'Название объекта:', value: 'Объект не выбран'},
+            { type: 'warning-order-specification', name: '', value: '' },
+            { type: 'link', name: 'Объект:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
+            { type: 'link', name: 'Спецификация:', value: { title: 'Название спецификации', href: 'javascript:void(0);' }},
+            { type: 'notAttached', name: 'Продажа:', value: 'Продажа не выбрана'},
           ],
           [
             {
               type: 'edit',
-              label: 'Привязать к объекту',
+              label: 'Привязать к продаже',
               href: 'javascript:void(0);',
               class: 'js-popup-open',
-              dataPopupname: 'choose-object-order-history'
+              dataPopupname: 'choose-order-specification-history'
             }
           ]
         )
+      .contentOrder__item.stepsSale__section
+        .stepsTitle Этап продажи:
+        .usiStagesSale__tags
+          -
+            var tags = [
+              {
+                title: '7.1. Размещение заказа в Белый свет',
+                value: '',
+                active: 'true',
+                dateStart: {title: 'Дата начала этапа:', date: '14.10.2019'}
+              },
+              {
+                title: '7.2. Закупка комплектации',
+                value: '',
+                dateStart: {title: 'Дата начала этапа:', date: '14.10.2019'}
+              },
+              {
+                title: '7.3. Производство оборудования',
+                value: '',
+                dateStart: {title: 'Дата начала этапа:', date: '02.11.2019'}
+              },
+              {
+                title: '7.4. Отгрузка оборудования Дистрибьютору',
+                value: '',
+                shipmentDate: { title: 'Планируемая дата отгрузки:', start: '02.11.2019', end: '25.11.2019'}
+              },
+            ];
+          .tagline.js-stages-sale-tagline
+            .tagline__wrap
+              each item in tags
+                +tagOrderHistory(item)
   .content__text-editor.card.order-history
     .container
       include ../card/pug/card-table
@@ -104,4 +138,4 @@ block content
   include ../../components/popup/pug/addSaleCompetitionDocs.pug
   include ../../components/popup/pug/addSaleDocs.pug
   include ../../components/popup/pug/deleteFile.pug
-  include ../../components/popup/pug/chooseObjectOrderHistory.pug
+  include ../../components/popup/pug/chooseOrderSpecificationHistory.pug
