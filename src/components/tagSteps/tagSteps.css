@@ -1,0 +1,89 @@
+.stepsSale {
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: var(--border);
+}
+.stepsSale__wrap {
+  /*padding: 40px 0;*/
+}
+.stepsSale__title {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.stepsSale__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stepSale__item {
+  margin-bottom: 30px;
+  margin-right: 18px;
+  max-width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stepSale__tag {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 32px;
+  background-color: var(--tag);
+  border-radius: 3px;
+  padding: 0 20px;
+  transition: background-color .3s ease, color .3s ease;
+  user-select: none;
+  &:hover {
+     background-color: rgba(97, 174, 59, .2);
+  }
+  .tag__title {
+    color: #61AE3B;
+  }
+}
+.tag--active {
+  background-color: #61AE3B;
+  & .tag__title {
+    color: #FFF;
+  }
+}
+
+.dateStartStep,
+.dateShipmentStep {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dateStep {
+  margin-top: 8px;
+  margin-right: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--opens);
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  color: var(--black02);
+  & span {
+    margin-right: 5px;
+  }
+}
+.dateStep__title {
+
+}
+.dateStart__date {}
+.shipmentDate__start {
+  color: var(--gray06);
+  text-decoration: line-through;
+}
+.shipmentDate__end {
+  color: var(--red02);
+}

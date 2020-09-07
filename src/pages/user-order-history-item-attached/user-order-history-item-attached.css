@@ -8,6 +8,8 @@
 @import "../../components/orderComment/orderComment.css";
 @import "../../components/orderMessages/orderMessages.css";
 
+@import "../user-order-history-item-attached/user-order-history-item-attached.css";
+@import "../card/card.css";
 @import "../../pages/user-objects-item/user-objects-item.css";
 
 /* ------------------------------------------------------------------------- */

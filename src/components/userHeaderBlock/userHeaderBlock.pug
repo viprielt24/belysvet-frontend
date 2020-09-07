@@ -1,7 +1,8 @@
 include ../personCard/personCard.pug
 include ../messageCompatible/messageCompatible.pug
+include ../tagSteps/tagSteps.pug
 
-mixin userHeaderBlock(title,arrayData,buttons)
+mixin userHeaderBlock(title,arrayData,buttons,tagSteps)
   .userHeaderBlock
     .userHeaderBlock__wrap
       if title
@@ -107,3 +108,5 @@ mixin userHeaderBlock(title,arrayData,buttons)
               ).button.buttonDelete
                 em: svg: use(xlink:href="#svg-button-delete")
                 span!=button.label
+      if tagSteps
+        +tagSteps(tagSteps.title, tagSteps.tags)

@@ -17,20 +17,3 @@ mixin tagSale(item)
     .tag__title!=item.title
     .tag__close
 
-mixin tagOrderHistory(item)
-  - activeClass = item.active ? ' tag--active' : '';
-
-  if item
-    div(class= 'stepSale')
-      div(class= 'tag' + activeClass)
-        if item.title
-          .tag__title!=item.title
-      if item.dateStart
-        div(class= 'dateStartStep')
-          .dateStart__title!=item.dateStart.title
-          .dateStart__date!=item.dateStart.date
-      if item.shipmentDate
-        div(class= 'dateShipmentStep')
-          .shipmentDate__title!=item.shipmentDate.title
-          .shipmentDate__start!=item.shipmentDate.start
-          .shipmentDate__end!=item.shipmentDate.end

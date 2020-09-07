@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------*/
+@import "../user-order-history-item-not-attached/user-order-history-item-not-attached.css";
+/*--------------------------------------------------------------------*/
+
 .uhbData__item--separator {
   display: none;
 }
@@ -6,3 +10,4 @@
     display: block;
   }
 }
+

@@ -1,7 +1,3 @@
-import "../user-order-history-item-attached/user-order-history-item-attached.css";
-import "../user-order-specification-history-item-attached/user-order-specification-history-item-attached.css";
-import "../card/card.css";
-
 let warningCloseTrigger = document.querySelector('.uhbData__icon--close');
 
 warningCloseTrigger.addEventListener('click', function (event) {
