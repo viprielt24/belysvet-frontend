@@ -21,7 +21,7 @@ mixin tagOrderHistory(item)
   - activeClass = item.active ? ' tag--active' : '';
 
   if item
-    div(class= 'stepsSale')
+    div(class= 'stepSale')
       div(class= 'tag' + activeClass)
         if item.title
           .tag__title!=item.title

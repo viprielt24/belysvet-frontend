@@ -1187,7 +1187,6 @@ const pages = {
       title: 'Заказ для Торговый центр «Дружба»',
       pageName: 'Одна история заказа -- непривязанный объект',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
-      selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
@@ -1200,11 +1199,22 @@ const pages = {
       title: 'Заказ для Торговый центр «Дружба»',
       pageName: 'Одна история заказа -- привязанный объект',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
-      selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
       objectSelect: data.objectSelect,
+    }
+  },
+  'user-order-specification-history-item-attached': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached',
+      title: 'Заказ для Торговый центр «Дружба»',
+      pageName: 'Одна история заказа-спецификации -- привязанная продажа',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      orderSaleList: data.orderSaleList
     }
   },
   'user-order-specification-history-item-not-attached': {
@@ -1213,7 +1223,6 @@ const pages = {
       title: 'Заказ для Торговый центр «Дружба»',
       pageName: 'Одна история заказа-спецификации -- непривязанная продажа',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
-      selectEmployees: data.selectEmployees,
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
