@@ -34,6 +34,10 @@
   }
 }
 
+.order-history .uhbData__item--link a.uhbData__value {
+  font-weight: normal;
+}
+
 /*------------------------Блок корзины----------------------------------------*/
 
 .order-history {
