@@ -1261,6 +1261,19 @@ const pages = {
       orderSaleList: data.orderSaleList,
     }
   },
+  'user-order-history-item-not-attached-details': {
+    parameters: {
+      page: 'user-order-history-item-not-attached-details',
+      title: 'Заказ №57',
+      pageName: 'Одна история заказа -- подробнее',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ №57'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect,
+      saleSelect: data.saleSelect
+    }
+  },
   'user-sale-empty': {
     parameters: {
       page: 'user-sale-empty',

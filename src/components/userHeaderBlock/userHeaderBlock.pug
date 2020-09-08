@@ -61,6 +61,16 @@ mixin userHeaderBlock(title,arrayData,buttons,tagSteps)
                     'Внимание!',
                     'Ваш заказ не привязан к объекту. Пожалуйста, привяжите заказ к объекту.'
                   )
+            else if item.type == 'warning-order-object'
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ не привязан к объекту и продаже. Пожалуйста, привяжите заказ к объекту и к продаже.'
+                  )
             else if item.type == 'warning-order-specification'
               .uhbData__item.uhbData__item--warning.warning--visible
                 .uhbData__icon--close
