@@ -1253,7 +1253,7 @@ const pages = {
     parameters: {
       page: 'user-order-specification-history-item-details',
       title: 'Заказ - спецификация №13',
-      pageName: 'Одна история заказа-спецификации -- привязанная продажа',
+      pageName: 'Одна история заказа-спецификации -- подробнее',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №13'],
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
