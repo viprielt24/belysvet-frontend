@@ -17,5 +17,5 @@ mixin tagSteps(title,tags)
             if tag.shipmentDate
               .dateStep
                 span.dateStep__title!=tag.shipmentDate.title
-                span.shipmentDate__start!=tag.shipmentDate.start
-                span.shipmentDate__end!=tag.shipmentDate.end
+                span.dateStep__line!=tag.shipmentDate.start
+                span.dateStep__red!=tag.shipmentDate.end

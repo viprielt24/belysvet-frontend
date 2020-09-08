@@ -222,4 +222,9 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+  if (document.querySelector('.uhbData__item--warning')) {
+    import('../components/userHeaderBlock/warningClose.js').then(module => {
+      new module.default();
+    });
+  }
 });

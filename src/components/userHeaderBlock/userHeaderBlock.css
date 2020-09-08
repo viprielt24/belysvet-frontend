@@ -259,6 +259,7 @@
 /* разделитель */
 
 .uhbData__item--separator {
+  margin: 37px 0;
   width: 100%;
   height: 1px;
   overflow: hidden;

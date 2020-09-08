@@ -1,7 +1,7 @@
-/*--------------------------------------------------------------------*/
-@import "../user-order-history-item-not-attached/user-order-history-item-not-attached.css";
-/*--------------------------------------------------------------------*/
-
+@import "../user-order-history-item-attached/user-order-history-item-attached.css";
+@import "../user-order-specification-history-item-not-attached/user-order-specification-history-item-not-attached.css";
+@import "../card/card.css";
+/*-------------------------------------------------------------------------------*/
 .uhbData__item--separator {
   display: none;
 }

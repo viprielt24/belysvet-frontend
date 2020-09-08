@@ -1214,19 +1214,51 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      orderSaleList: data.orderSaleList
+      orderSaleList: data.orderSaleList,
     }
   },
   'user-order-specification-history-item-not-attached': {
     parameters: {
       page: 'user-order-specification-history-item-not-attached',
-      title: 'Заказ для Торговый центр «Дружба»',
+      title: 'Заказ - спецификация №37',
       pageName: 'Одна история заказа-спецификации -- непривязанная продажа',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      orderSaleList: data.orderSaleList
+      orderSaleList: data.orderSaleList,
+    }
+  },
+  'user-order-specification-history-item-attached-sent': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-sent',
+      title: 'Заказ - спецификация №37',
+      pageName: 'Одна история заказа-спецификации -- заказ отправлен',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderSaleList: data.orderSaleList,
+    }
+  },
+  'user-order-specification-history-item-attached-request': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-request',
+      title: 'Заказ - спецификация №6',
+      pageName: 'Одна история заказа-спецификации -- запрос графика поставок',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №6'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderSaleList: data.orderSaleList,
+    }
+  },
+  'user-order-specification-history-item-details': {
+    parameters: {
+      page: 'user-order-specification-history-item-details',
+      title: 'Заказ - спецификация №13',
+      pageName: 'Одна история заказа-спецификации -- привязанная продажа',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №13'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      orderSaleList: data.orderSaleList,
     }
   },
   'user-sale-empty': {

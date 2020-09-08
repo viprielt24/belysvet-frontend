@@ -72,7 +72,7 @@ mixin userHeaderBlock(title,arrayData,buttons,tagSteps)
                     'Ваш заказ-спецификация не привязан к продаже. Пожалуйста, привяжите заказ-спецификацию к продаже.'
                   )
             else if item.type == 'separator'
-              .uhbData__item.uhbData__item--separator
+              .uhbData__item--separator
             else if item.type == 'checkbox'
               - finishedCheck = false;
               each check in item.value
@@ -91,6 +91,17 @@ mixin userHeaderBlock(title,arrayData,buttons,tagSteps)
                             input(type='radio' name=check.name value=check.value checked=check.checked).form-control
                             .icon.icon--checkbox
                             .label__text!=check.title
+            else if item.type == 'result-sent'
+              .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+                  if item.list
+                    .uhbData__list
+                        .result__item!=item.list.value
+            else if item.type == 'result-request'
+              .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value.pastDate__value!=item.value
       if buttons
         .userHeaderBlock__button
           each button in buttons

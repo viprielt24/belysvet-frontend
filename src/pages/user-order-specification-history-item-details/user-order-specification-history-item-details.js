@@ -1,0 +1,1 @@
+import './user-order-specification-history-item-details.css'
