@@ -1214,7 +1214,7 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      orderSaleList: data.orderSaleList,
+      saleSelect: data.saleSelect,
     }
   },
   'user-order-specification-history-item-not-attached': {
@@ -1226,7 +1226,7 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      orderSaleList: data.orderSaleList,
+      saleSelect: data.saleSelect,
     }
   },
   'user-order-specification-history-item-attached-sent': {
@@ -1258,7 +1258,6 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
       orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
-      orderSaleList: data.orderSaleList,
     }
   },
   'user-order-history-item-not-attached-details': {
@@ -1266,6 +1265,19 @@ const pages = {
       page: 'user-order-history-item-not-attached-details',
       title: 'Заказ №57',
       pageName: 'Одна история заказа -- подробнее',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ №57'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect,
+      saleSelect: data.saleSelect
+    }
+  },
+  'user-order-history-item-not-attached-details-order': {
+    parameters: {
+      page: 'user-order-history-item-not-attached-details-order',
+      title: 'Заказ №57',
+      pageName: 'Одна история заказа -- подробнее заказ Заказ',
       crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ №57'],
       orderHistoryList: data.orderHistoryListDisop,
       orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,

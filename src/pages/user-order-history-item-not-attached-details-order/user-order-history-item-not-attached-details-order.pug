@@ -13,22 +13,26 @@ block content
       include ../../components/content-header/content-header-lk
       .userObjectsItem__headerBlock
         +userHeaderBlock(
-          'Заказ-спецификация № 13',
+          'Заказ №57',
           [
-            {name: 'Дата, время:', value: '03.07.2019, 13:12:30'},
-            {name: 'Количество товаров:', value: '23'},
-            {name: 'Сумма:', value: '421 399 ₽'},
+            { name: 'Дата, время:', value: '01.06.2019, 13:12:30' },
+            { name: 'Количество товаров:', value: '23'},
+            { name: 'Сумма:', value: '41 399 ₽'},
             { type: 'dataEmployee', name: 'Сотрудник:', value: 'Константинопольский-Ганапольский Аркадий Михайлович <span>(Активен)</span>' },
-            {type: 'separator', name: '', value: ''},
-            {type: 'link', name: 'Объект:', value: {title: 'Торговый центр «Дружба»', href: 'javascript:void(0);'}},
-            {type: 'link', name: 'Спецификация:', value: {title: 'Название спецификации', href: 'javascript:void(0);'}},
-            {type: 'separator', name: '', value: ''},
-            { type: 'result-request',
-              name: 'Результат:',
-              value: 'Запрос коммерческого предложения: <span>05.07.2019 в 12:10</span> <span>07.07.2019 в 10:57</span> 10.07.2019 в 12:52',
-              dates: { pastDate:'05.07.2019 в 12:10', pastDate:'07.07.2019 в 10:57', actualDate: '10.07.2019 в 12:52'}},
+            { type: 'separator', name: '', value: '' },
+            { type: 'warning-order-object', name: '', value: '' },
+            { type: 'notAttached', name: 'Название объекта:', value: 'Объект не выбран'},
+            { type: 'notAttached', name: 'Продажа:', value: 'Продажа не выбрана'},
           ],
-          []
+          [
+            {
+              type: 'edit',
+              label: 'Привязать',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'choose-object-sale-order-history'
+            }
+          ]
         )
   .content__text-editor.card.order-history
     .container
@@ -102,3 +106,4 @@ block content
   include ../../components/popup/pug/addSaleCompetitionDocs.pug
   include ../../components/popup/pug/addSaleDocs.pug
   include ../../components/popup/pug/deleteFile.pug
+  include ../../components/popup/pug/chooseObjectAndSaleOrderHistory.pug
