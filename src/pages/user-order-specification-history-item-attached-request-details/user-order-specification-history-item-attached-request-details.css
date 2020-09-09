@@ -1,0 +1,16 @@
+/*-----------------------------------------------------------------------------*/
+@import "../user-order-history-item-attached/user-order-history-item-attached.css";
+@import "../user-order-specification-history-item-attached/user-order-specification-history-item-attached.css";
+@import "../card/card.css";
+/*-----------------------------------------------------------------------------*/
+
+.pastDate__value {
+  & span {
+    font-family: var(--opens);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: line-through;
+    color: var(--gray06);
+  }
+}

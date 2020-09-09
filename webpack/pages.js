@@ -1274,6 +1274,16 @@ const pages = {
       saleSelect: data.saleSelect
     }
   },
+  'user-order-specification-history-item-attached-request-details': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-request-details',
+      title: 'Заказ - спецификация №57',
+      pageName: 'Одна история заказа-спецификации -- подробнее запрос КП',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №57'],
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+    }
+  },
   'user-sale-empty': {
     parameters: {
       page: 'user-sale-empty',
