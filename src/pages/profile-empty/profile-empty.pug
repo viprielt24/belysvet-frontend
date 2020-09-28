@@ -1,6 +1,7 @@
 extends ../layout.pug
 include ../../components/personInformation/personInformation.pug
 include ../../components/tableItemEmployees/tableItemEmployees.pug
+include ../../components/companyInformationFull/companyInformationFull.pug
 
 block content
   .content
@@ -8,7 +9,7 @@ block content
       include ../../components/content-header/content-header-lk
       .profileCard
         .profileCard__wrap
-          .profileCard__personaInfo
+          .profileCard__section.profileCard__personaInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
               class="hint hint--white hint--left hint--userSale"
               data-popupname="hintfileattach"
@@ -57,3 +58,50 @@ block content
                     }
                   ]
                 )
+
+          .profileCard__section.profileCard__companyInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .companyInfo__title!='Информация об организациях'
+            .companyInfo__accordion
+              .accordion.js-accordion
+
+                //- «Юридическое лицо» ООО, г. Москва
+                .accordion__item.js-accordion__item.accordion__item--companyInfo
+                  a(href="javascript:void(0);").accordion__header.js-accordion__header
+                    .companyInfo__icon
+                    .companyInfo__nameCompany!='«Юридическое лицо» ООО, г. Москва'
+
+                    .accordion__toggle.js-accordion__toggle
+                  .accordion__content.accordion__content--companyInfo.js-accordion__content
+                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
+                      .accordion__group--companyInfo
+                        +companyInformationFull
+
+                //- Команда продажи
+                .accordion__item.accordion__item--userSale.js-accordion__item
+                  a(href="javascript:void(0);").accordion__header.js-accordion__header
+                    .accordion__title!='Команда продажи'
+                    .accordion__help.js-accordion__help(
+                      class="hint hint--white hint--left hint--userSale"
+                      data-popupname="hintfileattach"
+                      aria-label="Текстовая подсказка по соответствующей теме, текст появляется про наведении. Текстовая подсказка по соответствующей теме, текст появляется про наведении.  Текстовая подсказка по соответствующей теме."
+                    )
+                      include ../../images/question.svg
+                    .accordion__toggle.js-accordion__toggle
+                  .accordion__content.js-accordion__content
+                    .accordion__content-wrap.js-accordion__content-wrap.usiSaleTeam
+                      .usiSaleTeam__item
+                        .usiSaleTeam__title!='Со стороны компании Белый свет:'
+                        .usiSaleTeam__group.personCardGroup
+
+                      .usiSaleTeam__item
+                        .usiSaleTeam__title!='Со стороны дистрибьютора:'
+                        .usiSaleTeam__group.personCardGroup
+
+                      .usiSaleTeam__button
+                        a(href="javascript:void(0);" data-popupname="add-new-sale-team-person").button.buttonFixSize.js-popup-open!='Добавить контакт'

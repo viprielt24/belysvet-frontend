@@ -1,0 +1,92 @@
+mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,country,inn,kpp,okato,oktmo,okpo,ogrn,okved2,nameBank,addressBank,checkingAccount,correspondentAccount,bik,positionDirector,lastNameDirector,lastNameDirector,patronymicDirector,positionAccountant,lastNameAccountant,firstNameAccountant,patronymicAccountant,factCountry,factZipcode,factRegion,factCity,factStreet,factHouse,factFlat,mailingAddress)
+  .companyInfoFull
+    .companyInfoFull__wrap
+      .companyInfoFull__section.commonInfo
+        .companyInfoFull__title!='Общая ифнормация'
+        .companyInfoFull__group
+          .commonInfoFull__item
+            span!='Название организации:'
+            if nameCompany
+              span!= nameCompany
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='Бренд (торговая марка) </br>организации:'
+            if brand
+              span!= brand
+            else
+              span!= '-'
+          .commonInfoFull__item
+          span!='Сайт:'
+            if site
+              span!= site
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='Телефон организации:'
+            if phoneCompany
+              span!= phoneCompany
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='E-mail организации:'
+            if email
+              span!= email
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='Город:'
+            if city
+              span!= city
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='Страна:'
+            if country
+              span!= country
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ИНН:'
+            if inn
+              span!= inn
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='КПП:'
+            if kpp
+              span!= kpp
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ОКАТО:'
+            if okato
+              span!= okato
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ОКТМО:'
+            if oktmo
+              span!= oktmo
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ОКПО:'
+            if okpo
+              span!= okpo
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ОГРН:'
+            if ogrn
+              span!= ogrn
+            else
+              span!= '-'
+          .commonInfoFull__item
+            span!='ОКВЭД 2:'
+            if okved2
+              span!= okved2
+            else
+              span!= '-'
+          .companyInfoFull__button
+            .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
