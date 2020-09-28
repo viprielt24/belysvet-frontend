@@ -1,0 +1,98 @@
+mixin personInformation(image,lastName,firstName,id,typeProfile,mobile,email,position,pol,discount,bonus,termsPayment,balance,credit, buttons)
+  .personCard
+    .personCard__wrap
+      .personCard__person
+        .personCard__icon(class= !image ? 'personCard__icon--empty' : '')
+          if image
+            img(src=image alt=fio)
+        .personCard__name
+          if lastName
+            .personCard__firstName!= lastName
+          if firstName
+            .personCard__lastName!= firstName
+      .personCard__data
+        .personCard__dataGroup
+          if id
+            .personCard__dataItem
+              span!='ID пользователя: '
+              = ' '
+              span!= id
+          if typeProfile
+            .personCard__dataItem
+              span!='Тип профиля: '
+              = ' '
+              span!= typeProfile
+          if mobile
+            .personCard__dataItem
+              span!='Мобильный телефон:'
+              = ' '
+              span!=mobile
+          if email
+            .personCard__dataItem.personCard__dataItem--help
+              span!='E-mail:'
+              = ' '
+              a(href='mailto:'+email)!=email
+              .accordion__help.js-accordion__help(
+                class="hint hint--white hint--left hint--userSale"
+                data-popupname="hintfileattach"
+                aria-label="Текстовая подсказка по соответствующей теме."
+              )
+                include ../../images/question.svg
+          if position
+            .personCard__dataItem
+              span!='Должность: '
+              = ' '
+              span!= position
+          if pol
+            .personCard__dataItem.personCard__dataItem--pol
+              span!='Пол: '
+              = ' '
+              span!= pol
+        .personCard__dataGroup
+          if discount
+            .personCard__dataItem.personCard__dataItem--green
+              span!='Скидка: '
+              = ' '
+              span!= discount
+          if bonus
+            .personCard__dataItem.personCard__dataItem--green
+              span!='Бонусы: '
+              = ' '
+              span!= bonus
+          if termsPayment
+            .personCard__dataItem.personCard__dataItem--green
+              span!='Условия оплаты: '
+              = ' '
+              span!= termsPayment
+          if balance
+            .personCard__dataItem.personCard__dataItem--red
+              span!='Баланс: '
+              = ' '
+              span!= balance
+          if credit
+            .personCard__dataItem.personCard__dataItem--green
+              span!='Кредит: '
+              = ' '
+              span!= credit
+      .personCard__buttons
+        each button in buttons
+          if button.type == 'edit-password'
+            a(
+              href=button.href
+              data-popupname=button.dataPopupname
+              class=button.class
+            ).button.buttonEdit!=button.label
+          else if button.type == 'edit-profile'
+            a(
+              href=button.href
+              data-popupname=button.dataPopupname
+              class=button.class
+            ).button.buttonEdit!=button.label
+          else if button.type == 'delete-profile'
+            a(
+              href=button.href
+              data-popupname=button.dataPopupname
+              class=button.class
+            ).button.buttonDelete
+              em: svg: use(xlink:href="#svg-button-delete")
+              span!=button.label

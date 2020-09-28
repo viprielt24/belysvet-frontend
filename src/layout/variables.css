@@ -7,13 +7,16 @@
   --tag: rgba(161, 191, 53, .2);
   --border: 1px solid rgba(196, 196, 196, 0.5);
   --bdc: rgba(196, 196, 196, 0.5);
+  --back1: rgba(207, 85, 79, 0.1);
   --red01: #DF4E3B;
   --red02: #DE3831;
   --red03: #FF6B4A;
   --red04: #FCEBEA;
   --red05: #FDF5F4;
+  --red06: #CF554F;
   --green01: #EDF3D8;
   --green02: #F6F9EB;
+  --green03: #7D9D0A;
   --black01: #151515;
   --black02: #5E5E5E;
   --black03: #404040;
