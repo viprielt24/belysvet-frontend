@@ -1,2 +1,2 @@
-import './profile-empty.css'
+import './profile-disop.css'
 import '../checkout/checkout'

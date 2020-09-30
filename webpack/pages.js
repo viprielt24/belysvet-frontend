@@ -1300,11 +1300,102 @@ const pages = {
     parameters: {
       page: 'profile-empty',
       title: 'Профиль',
-      pageName: 'Профиль ЮЛ',
+      pageName: 'ЛК ЮЛ Профиль -- пустой',
       pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
       crumbs: ['Главная', 'Личный кабинет покупателя (ЮЛ)', 'Профиль'],
       person: data.personCompany,
-      company: data.companyInfoFull
+      company: data.companyInfoFull,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ]
+    }
+  },
+  'profile-disop': {
+    parameters: {
+      page: 'profile-disop',
+      title: 'Профиль',
+      pageName: 'ЛК ЮЛ Профиль -- заполненный',
+      pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
+      crumbs: ['Главная', 'Личный кабинет покупателя (ЮЛ)', 'Профиль'],
+      person: data.personCompany,
+      company: data.companyInfoFull,
+      physicalPersonCard: data.physicalPersonCard,
+      deliveryAddresses: data.deliveryAddresses,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ],
+    }
+  },
+  'profile-fizlico-disop': {
+    parameters: {
+      page: 'profile-fizlico-disop',
+      title: 'Профиль',
+      pageName: 'ЛК ФЛ Профиль -- заполненный',
+      pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
+      crumbs: ['Главная', 'Личный кабинет покупателя (ФЛ)', 'Профиль'],
+      person: data.personCompany,
+      physicalPersonCard: data.physicalPersonCard,
+      deliveryAddresses: data.deliveryAddresses,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ],
     }
   },
   'user-sale-empty': {

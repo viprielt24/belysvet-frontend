@@ -1,8 +1,8 @@
 extends ../layout.pug
 include ../../components/personInformation/personInformation.pug
-include ../../components/tableItemEmployees/tableItemEmployees.pug
-include ../../components/companyInformationFull/companyInformationFull.pug
 include ../../components/select-custom/select-custom
+include ../../components/physicalPersonCard/physicalPersonCard.pug
+include ../../components/deliveryAddresses/deliveryAddresses.pug
 
 block content
   .content
@@ -60,79 +60,6 @@ block content
                   ]
                 )
 
-          .profileCard__section.profileCard__companyInfo
-            .accordion__help.js-accordion__help.accordion__help--personalInfo(
-              class="hint hint--white hint--left hint--userSale"
-              data-popupname="hintfileattach"
-              aria-label="Текстовая подсказка по соответствующей теме."
-            )
-              include ../../images/question.svg
-            .profileCard__sectionTitle!='Информация об организациях'
-            .companyInfo__accordion
-              .accordion.js-accordion
-
-                //- «Юридическое лицо» ООО, г. Москва
-                .accordion__item.js-accordion__item.accordion__item--companyInfo
-                  a(href="javascript:void(0);").accordion__header.js-accordion__header
-                    .companyInfo__icon
-                    .companyInfo__nameCompany!='«Юридическое лицо» ООО, г. Москва'
-
-                    .accordion__toggle.js-accordion__toggle
-                  .accordion__content.accordion__content--companyInfo.js-accordion__content
-                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
-                      .accordion__group--companyInfo
-                        +companyInformationFull
-                        a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
-                          .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
-                          span Удалить юридическое лицо
-
-                // - «Электрокомплектсервис» ЗАО, г. Ангарск
-                .accordion__item.js-accordion__item.accordion__item--companyInfo
-                  a(href="javascript:void(0);").accordion__header.js-accordion__header
-                    .companyInfo__icon
-                    .companyInfo__nameCompany!='«Электрокомплектсервис» ЗАО, г. Ангарск'
-
-                    .accordion__toggle.js-accordion__toggle
-                  .accordion__content.accordion__content--companyInfo.js-accordion__content
-                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
-                      .accordion__group--companyInfo
-                        +companyInformationFull
-                        a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
-                          .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
-                          span Удалить юридическое лицо
-
-                // - «АвтопромГазМяс» ООО, г. Тула
-                .accordion__item.js-accordion__item.accordion__item--companyInfo
-                  a(href="javascript:void(0);").accordion__header.js-accordion__header
-                    .companyInfo__icon
-                    .companyInfo__nameCompany!='«АвтопромГазМяс» ООО, г. Тула'
-
-                    .accordion__toggle.js-accordion__toggle
-                  .accordion__content.accordion__content--companyInfo.js-accordion__content
-                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
-                      .accordion__group--companyInfo
-                        +companyInformationFull
-                        a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
-                          .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
-                          span Удалить юридическое лицо
-
-                .profileCard__rightButton
-                  a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить юридическое лицо'
-
-          .profileCard__section.profileCard__fizlicaInfo
-            .accordion__help.js-accordion__help.accordion__help--personalInfo(
-              class="hint hint--white hint--left hint--userSale"
-              data-popupname="hintfileattach"
-              aria-label="Текстовая подсказка по соответствующей теме."
-            )
-              include ../../images/question.svg
-            .profileCard__sectionTitle!='Информация о физических лицах'
-            .profileCard__content--empty
-              p!='У вас пока нет добавленных физических лиц в вашем профиле. </br>Для добавления воспользуйтесь кнопкой “Добавить физическое лицо”'
-              .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить физическое лицо'
-
-
           .profileCard__section.profileCard__deliveryAddressInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
               class="hint hint--white hint--left hint--userSale"
@@ -141,10 +68,15 @@ block content
             )
               include ../../images/question.svg
             .profileCard__sectionTitle!='Адреса доставки'
-            .profileCard__content.profileCard__content--empty
-              p!='У вас пока нет добавленных адресов в вашем профиле. </br>Для добавления воспользуйтесь кнопкой “Добавить адрес”'
-              .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить адрес'
+            .usiSaleTeam__group.personCardGroup
+              each item in deliveryAddresses
+                +deliveryAddresses(
+                  item.icon,
+                  item.address,
+                  true
+                )
+            .profileCard__rightButton
+              a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить адрес'
 
           .profileCard__section.profileCard__deliveryAddressInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(

@@ -1,8 +1,7 @@
 module.exports = [
   {
     image: '/images/person/person-empty.svg',
-    lastName: 'Тургенев',
-    firstName: 'Алексей Александрович',
+    fio: 'Тургенев </br>Алексей Александрович',
     id: 'DST-SM-280819-987654321',
     typeProfile: 'Покупатель',
     position: 'Менеджер',

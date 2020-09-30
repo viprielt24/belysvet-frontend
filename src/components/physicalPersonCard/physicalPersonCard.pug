@@ -1,0 +1,23 @@
+mixin physicalPersonCard(image,fio,mobile,email,action=false)
+  .personCard
+    .personCard__wrap.personCard__wrap--border
+      .personCard__image.personCard__image--small(class= !image ? 'personCard__image--empty' : '')
+        if image
+          img(src=image alt=fio)
+      .personCard__group
+        if fio
+          .personCard__fio.personCard__fio--marginBottom!=fio
+        if mobile
+          .personCard__dataItem
+            span!='Мобильный телефон:'
+            = ' '
+            span!=mobile
+        if email
+          .personCard__dataItem
+            span!='E-mail:'
+            = ' '
+            a(href='mailto:'+email)!=email
+        if action
+          .personCard__action
+            .personCard__edit!='Редактировать'
+            .personCard__delete!='Удалить'

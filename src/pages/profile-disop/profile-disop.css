@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------------*/
+@import "../../layout/variables.css";
+@import "../../layout/css/buttons.css";
+@import "../../components/tableItemEmployees/tableItemEmployees.css";
+@import "../../pages/profile-empty/profile-empty.css";
+@import "../../components/accordion/accordion.css";
+@import "../../components/companyInformationFull/companyInformationFull.css";
+@import "../../pages/checkout/checkout.css";
+@import "../../layout/css/forms.css";
+@import "../../components/fileCard/fileCard.css";
+@import "../../components/personCard/personCard.css";
+/*-------------------------------------------------------------------------*/
+
+.personCard__wrap--border {
+  border: var(--border);
+}
+.personCard__image--small {
+  width: 47px;
+  height: 47px;
+}
+.personCard__fio--marginBottom {
+  margin-bottom: 5px;
+}
+
+.personCard__image--addressIcon {
+
+}

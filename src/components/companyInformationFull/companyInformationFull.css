@@ -4,8 +4,19 @@
 
 .companyInfoFull__wrap {}
 
+.companyInfoFull__doubleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.companyInfoFull__section--double {
+  width: 49%;
+}
+
 .companyInfoFull__section {
   padding: 20px 50px;
+  margin-bottom: 20px;
+  background: var(--gray07);
 }
 
 .companyInfoFull__title {
@@ -16,46 +27,56 @@
   font-weight: 500;
   line-height: 1.2;
   position: relative;
-&:before {
-   content: "";
-   width: 18px;
-   height: 18px;
-   left: -26px;
-   top: 1px;
-   background: url("/images/company-info-icon.svg") center no-repeat;
-   background-size: 18px;
-   position: absolute;
- }
+  &:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: -26px;
+    top: 1px;
+    background: url("/images/company-info-icon.svg") center no-repeat;
+    background-size: 18px;
+    position: absolute;
+  }
 }
 
-.commonInfoFull__item {
+.companyInfoFull__item {
   margin-bottom: 18px;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-& span {
+  & span {
     font-family: var(--museo);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
-&:first-child {
-   min-width: 200px;
-   margin-right: 35px;
-   color: var(--black06);
-   font-weight: 600;
- }
-&:last-child {
-   color: var(--black03);
-   font-weight: 400;
- }
-}
-&:last-child {
-   margin-bottom: 30px;
- }
+    &:first-child {
+      min-width: 200px;
+      margin-right: 35px;
+      color: var(--black06);
+      font-weight: 600;
+    }
+    &:last-child {
+      color: var(--black03);
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+  & p {
+    padding-bottom: 10px;
+    color: var(--gray08);
+    font-size: 15px;
+    font-weight: 300;
+  }
+  &:last-child {
+    margin-bottom: 30px;
+  }
 }
 
-.companyInfoFull__button {
-
+.mailingAddressInfo,
+.legalAddressInfo {
+  margin-bottom: 0;
 }
+
+.companyInfoFull__button {}
 
 .companyInfoFull__edit {
   padding-left: 22px;
@@ -66,20 +87,20 @@
   line-height: 1.4;
   cursor: pointer;
   position: relative;
-&:before {
-   content: '';
-   display: block;
-   width: 16px;
-   height: 15px;
-   overflow: hidden;
-   position: absolute;
-   left: 0;
-   top: 0;
-   background-image: url(/images/edit.svg);
-   background-repeat: no-repeat;
-   background-size: 16px 15px;
-   background-position: center center;
- }
+  &:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(/images/edit.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 15px;
+    background-position: center center;
+  }
 }
 
 /* ------------------------------------------------------------------------- */

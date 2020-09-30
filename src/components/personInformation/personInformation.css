@@ -1,162 +1,145 @@
 /* ------------------------------------------------------------------------- */
 
-.personCardGroup {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-.personCard {
-  width: 50%;
-  padding: 15px;
-}
-.personCard__wrap {
-  display: flex;
-  height: 100%;
-  padding: 30px;
-  overflow: hidden;
-  background-color: #fff;
-  transition: var(--trsh);
-  position: relative;
-  &:hover {
-    box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);
-    /* &:after {
-      transform: translateY(0);
-    } */
-  }
-  /* &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--primary);
-    transform: translateY(5px);
-    transition: transform 0.3s ease;
-  } */
-}
-.personCard__image {
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: 83px;
-  height: 83px;
-  border-radius: 100%;
-  overflow: hidden;
-  &.personCard__image--empty {
-    background-image: url('/images/person/person-empty.svg');
-    background-repeat: no-repeat;
-    background-size: 83px 83px;
-    background-position: center center;
-  }
-}
-.personCard__group {
-  padding-left: 30px;
-}
-.personCard__fio {
-  color: #434343;
-  font-family: var(--museo);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.4;
-  & + .personCard__position {
-    padding-top: 5px;
-  }
-}
-.personCard__position {
-  color: #767676;
-  font-family: var(--opens);
-  font-size: 15px;
-  line-height: 1.4;
-}
-.personCard__dataArray {
-  margin-top: 15px;
-  padding-top: 15px;
-  position: relative;
-  &:before {
-    content: '';
-    display: block;
-    width: 90px;
-    height: 1px;
-    overflow: hidden;
-    background-color: #DEDEDE;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-.personCard__dataItem {
-  color: #333333;
-  font-family: var(--opens);
-  font-size: 14px;
-  line-height: 1.4;
-  white-space: normal;
-  &:not(:first-child) {
-    padding-top: 9px;
-  }
-  & span {
-    white-space: nowrap;
-  }
-  & a {
-    color: #333333;
-    text-decoration: none;
-  }
-}
-.personCard__action {
-  display: flex;
-  margin-top: 24px;
-}
-.personCard__edit {
-  padding-left: 22px;
-  color: var(--primary);
-  font-family: var(--museo);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  cursor: pointer;
-  position: relative;
-  &:before {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 15px;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url('/images/edit.svg');
-    background-repeat: no-repeat;
-    background-size: 16px 15px;
-    background-position: center center;
-  }
-}
-.personCard__delete {
-  padding-left: 22px;
-  margin-left: 25px;
-  color: var(--red01);
-  font-family: var(--museo);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  cursor: pointer;
-  position: relative;
-  &:before {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url('/images/delete.svg');
-    background-repeat: no-repeat;
-    background-size: 13px 13px;
-    background-position: center center;
-  }
-}
+/*.personCardGroup {*/
+/*  display: flex;*/
+/*  align-items: stretch;*/
+/*  flex-wrap: wrap;*/
+/*  margin: -15px;*/
+/*}*/
+/*.personCard {*/
+/*  width: 50%;*/
+/*  padding: 15px;*/
+/*}*/
+/*.personCard__wrap {*/
+/*  display: flex;*/
+/*  height: 100%;*/
+/*  padding: 30px;*/
+/*  overflow: hidden;*/
+/*  background-color: #fff;*/
+/*  transition: var(--trsh);*/
+/*  position: relative;*/
+/*  &:hover {*/
+/*    box-shadow: 0px 5.28155px 12.3236px rgba(0, 0, 0, 0.05);*/
+/*  }*/
+/*}*/
+/*.personCard__image {*/
+/*  flex-shrink: 0;*/
+/*  flex-grow: 0;*/
+/*  width: 83px;*/
+/*  height: 83px;*/
+/*  border-radius: 100%;*/
+/*  overflow: hidden;*/
+/*  &.personCard__image--empty {*/
+/*    background-image: url('/images/person/person-empty.svg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 83px 83px;*/
+/*    background-position: center center;*/
+/*  }*/
+/*}*/
+/*.personCard__group {*/
+/*  padding-left: 30px;*/
+/*}*/
+/*.personCard__fio {*/
+/*  color: #434343;*/
+/*  font-family: var(--museo);*/
+/*  font-size: 16px;*/
+/*  font-weight: 700;*/
+/*  line-height: 1.4;*/
+/*  & + .personCard__position {*/
+/*    padding-top: 5px;*/
+/*  }*/
+/*}*/
+/*.personCard__position {*/
+/*  color: #767676;*/
+/*  font-family: var(--opens);*/
+/*  font-size: 15px;*/
+/*  line-height: 1.4;*/
+/*}*/
+/*.personCard__dataArray {*/
+/*  margin-top: 15px;*/
+/*  padding-top: 15px;*/
+/*  position: relative;*/
+/*  &:before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 90px;*/
+/*    height: 1px;*/
+/*    overflow: hidden;*/
+/*    background-color: #DEDEDE;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*  }*/
+/*}*/
+/*.personCard__dataItem {*/
+/*  color: #333333;*/
+/*  font-family: var(--opens);*/
+/*  font-size: 14px;*/
+/*  line-height: 1.4;*/
+/*  white-space: normal;*/
+/*  &:not(:first-child) {*/
+/*    padding-top: 9px;*/
+/*  }*/
+/*  & span {*/
+/*    white-space: nowrap;*/
+/*  }*/
+/*  & a {*/
+/*    color: #333333;*/
+/*    text-decoration: none;*/
+/*  }*/
+/*}*/
+/*.personCard__action {*/
+/*  display: flex;*/
+/*  margin-top: 24px;*/
+/*}*/
+/*.personCard__edit {*/
+/*  padding-left: 22px;*/
+/*  color: var(--primary);*/
+/*  font-family: var(--museo);*/
+/*  font-size: 14px;*/
+/*  font-weight: 500;*/
+/*  line-height: 1.4;*/
+/*  cursor: pointer;*/
+/*  position: relative;*/
+/*  &:before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 16px;*/
+/*    height: 15px;*/
+/*    overflow: hidden;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    background-image: url('/images/edit.svg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 16px 15px;*/
+/*    background-position: center center;*/
+/*  }*/
+/*}*/
+/*.personCard__delete {*/
+/*  padding-left: 22px;*/
+/*  margin-left: 25px;*/
+/*  color: var(--red01);*/
+/*  font-family: var(--museo);*/
+/*  font-size: 14px;*/
+/*  font-weight: 500;*/
+/*  line-height: 1.4;*/
+/*  cursor: pointer;*/
+/*  position: relative;*/
+/*  &:before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 16px;*/
+/*    height: 16px;*/
+/*    overflow: hidden;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    background-image: url('/images/delete.svg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 13px 13px;*/
+/*    background-position: center center;*/
+/*  }*/
+/*}*/
 
 /* ------------------------------------------------------------------------- */

@@ -73,6 +73,15 @@
   height: 13px;
 }
 
+.icon--close-smaller {
+  width: 15px;
+  height: 15px;
+}
+
+.icon--delete {
+  margin-right: 5px;
+}
+
 /**
 
  */
