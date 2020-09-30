@@ -43,7 +43,7 @@ block content
                       label: 'Удалить профиль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'delete-object-01'
+                      dataPopupname: 'delete-profile-01'
                     },
                     {
                       type: 'edit-password',
@@ -57,7 +57,7 @@ block content
                       label: 'Редактировать профиль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'edit-profile'
+                      dataPopupname: 'edit-person-info'
                     }
                   ]
                 )
@@ -121,7 +121,7 @@ block content
                             item.factFlat,
                             item.mailingAddress
                           )
-                          a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
                             .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
                             span Удалить юридическое лицо
 
@@ -173,7 +173,7 @@ block content
                             item.factFlat,
                             item.mailingAddress
                           )
-                          a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
                             .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
                             span Удалить юридическое лицо
 
@@ -225,12 +225,12 @@ block content
                             item.factFlat,
                             item.mailingAddress
                           )
-                          a(href="javascript:void(0);").js-popup-open.button.buttonDelete.buttonDelete--company
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
                             .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
                             span Удалить юридическое лицо
 
                 .profileCard__rightButton
-                  a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить юридическое лицо'
+                  a(href="javascript:void(0);" data-popupname="add-new-company").button.buttonFixSize.js-popup-open!='Добавить юридическое лицо'
 
           .profileCard__section.profileCard__fizlicaInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
@@ -250,7 +250,7 @@ block content
                   true
                 )
             .profileCard__rightButton
-              a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить физическое лицо'
+              a(href="javascript:void(0);" data-popupname="add-new-fizlico").button.buttonFixSize.js-popup-open!='Добавить физическое лицо'
 
           .profileCard__section.profileCard__deliveryAddressInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
@@ -268,7 +268,7 @@ block content
                   true
                 )
             .profileCard__rightButton
-              a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить адрес'
+              a(href="javascript:void(0);" data-popupname="add-new-delivery-address").button.buttonFixSize.js-popup-open!='Добавить адрес'
 
           .profileCard__section.profileCard__deliveryAddressInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
@@ -281,7 +281,7 @@ block content
             .profileCard__content.profileCard__content--deliveryMethod
               include ../checkout/pug/receive
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
 
 
           .profileCard__section.profileCard__deliveryAddressInfo
@@ -295,7 +295,7 @@ block content
             .profileCard__content.profileCard__content--paymentMethod
               include ../checkout/pug/payment
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
 
 
           .profileCard__section.profileCard__deliveryAddressInfo
@@ -335,4 +335,25 @@ block content
                     .label__text Сообщать на e-mail о появлении новой статьи
 
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+  include ../../components/popup/pug/editPersonInfo.pug
+  include ../../components/popup/pug/deleteProfile.pug
+  include ../../components/popup/pug/deleteProfileConfirm.pug
+  include ../../components/popup/pug/editCommonInfoCompany.pug
+  include ../../components/popup/pug/editBankInfo.pug
+  include ../../components/popup/pug/editRukovodstvoInfo.pug
+  include ../../components/popup/pug/editBuhgalteriaInfo.pug
+  include ../../components/popup/pug/editFactAddressInfo.pug
+  include ../../components/popup/pug/editMailingAddressInfo.pug
+  include ../../components/popup/pug/editLegalAddressInfo.pug
+  include ../../components/popup/pug/deleteCompany.pug
+  include ../../components/popup/pug/deleteCompanyConfirm.pug
+  include ../../components/popup/pug/addNewCompany.pug
+  include ../../components/popup/pug/addNewFizlico.pug
+  include ../../components/popup/pug/editFizlico.pug
+  include ../../components/popup/pug/deleteFizlico.pug
+  include ../../components/popup/pug/addNewDeliveryAddress.pug
+  include ../../components/popup/pug/editDeliveryAddress.pug
+  include ../../components/popup/pug/deleteDeliveryAddress.pug
+  include ../../components/popup/pug/infoSave.pug

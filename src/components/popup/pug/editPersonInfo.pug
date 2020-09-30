@@ -1,0 +1,45 @@
+.popup.popup--addNewEmployees.js-popup-edit-person-info
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-person-info").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование персональной информации
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group.form-group--checkbox
+            .form-placeholder Пол:
+            .form-checkboxGroup
+              label.label.label--checkbox.label--aka-radio
+                input(type='radio' name='gender' checked).form-control
+                .icon.icon--checkbox
+                .label__text Мужской
+              label.label.label--checkbox.label--aka-radio
+                input(type='radio' name='gender').form-control
+                .icon.icon--checkbox
+                .label__text Женский
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Фамилия:
+              input(placeholder='Введите фамилию' value="Тургенев").form-control
+            .form-element: label
+              .form-placeholder Имя:
+              input(placeholder='Введите имя' value="Алексей").form-control
+            .form-element: label
+              .form-placeholder Отчество:
+              input(placeholder='Введите отчество' value="Александррович").form-control
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder E-mail:
+              input(placeholder='Введите e-mail' value="petrov-ivan@mail.ru").form-control
+            .form-element: label
+              .form-placeholder Мобильный телефон:
+              input(placeholder='Введите мобильный телефон' value="+79839346467").form-control
+          .form-group
+            .form-element: label
+              .form-placeholder Должность:
+              input(placeholder='Укажите должность' value="Старший менеджер по правильной работе с ключевыми клиентами").form-control
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-person-info").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-person-info").button.buttonFixSize.js-popup-close Сохранить

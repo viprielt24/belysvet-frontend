@@ -89,7 +89,7 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
             else
               span!= '-'
           .companyInfoFull__button
-            .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+            .companyInfoFull__edit(data-popupname="edit-common-info-company").js-popup-open!='Редактировать'
       .companyInfoFull__section.bankInfo
         .companyInfoFull__title!='Банковские реквизиты'
         .companyInfoFull__group
@@ -124,7 +124,7 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
             else
               span!= '-'
           .companyInfoFull__button
-            .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+            .companyInfoFull__edit(data-popupname="edit-bank-info").js-popup-open!='Редактировать'
       .companyInfoFull__doubleContainer
         .companyInfoFull__section.companyInfoFull__section--double.rukovodstvoInfo
           .companyInfoFull__title!='Руководство'
@@ -154,7 +154,7 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
               else
                 span!= '-'
             .companyInfoFull__button
-              .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+              .companyInfoFull__edit(data-popupname="edit-rukovodstvo-info").js-popup-open!='Редактировать'
         .companyInfoFull__section.companyInfoFull__section--double.buhgalteriaInfo
           .companyInfoFull__title!='Бухгалтерия'
           .companyInfoFull__group
@@ -183,7 +183,7 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
               else
                 span!= '-'
             .companyInfoFull__button
-              .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+              .companyInfoFull__edit(data-popupname="edit-buhgalteria-info").js-popup-open!='Редактировать'
       .companyInfoFull__section.factAddressInfo
         .companyInfoFull__title!='Фактический адрес'
         .companyInfoFull__group
@@ -230,7 +230,7 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
             else
               span!= '-'
           .companyInfoFull__button
-            .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+            .companyInfoFull__edit(data-popupname="edit-fact-address-info").js-popup-open!='Редактировать'
       .companyInfoFull__doubleContainer
         .companyInfoFull__section.companyInfoFull__section--double.mailingAddressInfo
           .companyInfoFull__title!='Почтовый адрес для корреспонденции:'
@@ -238,11 +238,11 @@ mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,coun
             .companyInfoFull__item
               p!= 'Совпадает с фактическим'
             .companyInfoFull__button
-              .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+              .companyInfoFull__edit(data-popupname="edit-mailing-address-info").js-popup-open!='Редактировать'
         .companyInfoFull__section.companyInfoFull__section--double.legalAddressInfo
-          .companyInfoFull__title!='Почтовый адрес для корреспонденции:'
+          .companyInfoFull__title!='Юридический адрес:'
           .companyInfoFull__group
             .companyInfoFull__item
               p!= 'Совпадает с фактическим'
             .companyInfoFull__button
-              .companyInfoFull__edit(data-popupname="edit-employees").js-popup-open!='Редактировать'
+              .companyInfoFull__edit(data-popupname="edit-legal-address-info").js-popup-open!='Редактировать'

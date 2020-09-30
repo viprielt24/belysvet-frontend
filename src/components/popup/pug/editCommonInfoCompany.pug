@@ -1,0 +1,59 @@
+.popup.popup--addNewEmployees.js-popup-edit-common-info-company
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-common-info-company").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование общей информации о юр. лице
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder Бренд (торговая марка) организации:
+                input(placeholder='Введите название бренда' value="«Веселые Светила»").form-control
+          .form-group
+            .form-element: label
+              .form-placeholder Название организации:
+                input(placeholder='Введите название организации' value="«Электрокомплектсервис» ЗАО").form-control
+
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Сайт организации:
+              input(placeholder='Введите сайт' value="+79839346467").form-control
+            .form-element: label
+              .form-placeholder Телефон организации:
+              input(placeholder='Введите телефон' value="www.electro.ru").form-control
+            .form-element: label
+              .form-placeholder E-mail:
+              input(placeholder='Введите e-mail' value="electro@super.ru").form-control
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Город:
+              input(placeholder='Введите город' value="Тула").form-control
+            .form-element: label
+              .form-placeholder Страна:
+              input(placeholder='Введите страну' value="Россия").form-control
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder КПП:
+              input(placeholder='Введите КПП' value="55678555777").form-control
+            .form-element: label
+              .form-placeholder ОКАТО:
+              input(placeholder='Введите ОКАТО' value="55346789966").form-control
+            .form-element: label
+              .form-placeholder ОКТМО:
+              input(placeholder='Введите ОКТМО' value="34563222").form-control
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder ОКПО:
+              input(placeholder='Введите ОКПО' value="1890007654").form-control
+            .form-element: label
+              .form-placeholder ОГРН:
+              input(placeholder='Введите ОГРН' value="65400086555").form-control
+            .form-element: label
+              .form-placeholder ОКВЭД 2:
+              input(placeholder='Введите ОКВЭД 2' value="21.33 34.45.5 67.89").form-control
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-common-info-company").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-common-info-company").button.buttonFixSize.js-popup-close Сохранить

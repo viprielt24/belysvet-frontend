@@ -187,6 +187,10 @@
   font-weight: bold;
   letter-spacing: 0.08em;
 }
+.buttonFixSize--small {
+  max-width: max-content;
+  margin: 0 auto;
+}
 .buttonAddMessage {
   width: 149px;
   height: 48px;

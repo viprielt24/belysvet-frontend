@@ -1,0 +1,38 @@
+.popup.popup--addNewEmployees.js-popup-edit-fact-address-info
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-fact-address-info").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование физического адреса
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Страна:
+              input(placeholder='Введите название страны' value="Россия").form-control
+            .form-element: label
+              .form-placeholder Индекс:
+              input(placeholder='Введите индекс' value="134567").form-control
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Регион:
+              input(placeholder='Введите название региона' value="Ангарск мкр 19").form-control
+            .form-element: label
+              .form-placeholder Город / н.п.:
+              input(placeholder='Введите название города' value="134567").form-control
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Улица:
+              input(placeholder='Введите название улицы' value="ул. Пиратов").form-control
+            .form-element: label
+              .form-placeholder Дом:
+              input(placeholder='Введите номер дома' value="д.13").form-control
+            .form-element: label
+              .form-placeholder Квартира:
+              input(placeholder='Введите номер квартиры' value="123").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-fact-address-info").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-fact-address-info").button.buttonFixSize.js-popup-close Сохранить

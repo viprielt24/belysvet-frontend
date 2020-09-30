@@ -19,5 +19,5 @@ mixin physicalPersonCard(image,fio,mobile,email,action=false)
             a(href='mailto:'+email)!=email
         if action
           .personCard__action
-            .personCard__edit!='Редактировать'
-            .personCard__delete!='Удалить'
+            .personCard__edit(data-popupname="edit-fizlico").js-popup-open!='Редактировать'
+            .personCard__delete(data-popupname="delete-fizlico-01").js-popup-open!='Удалить'

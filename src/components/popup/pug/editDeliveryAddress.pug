@@ -1,0 +1,32 @@
+.popup.popup--addNewSale.js-popup-edit-delivery-address
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-delivery-address").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование адреса доставки
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group 
+            .form-element: label
+              .form-placeholder Адрес:
+              input(placeholder='' value="107497, Россия, Санкт-Петербург, 3-я улица Строителей, 25, кв.12").form-control
+        .form-wrap--gray
+          .form-info-text Если адреса не оказалось в реестре, пожалуйста, </br>введите его вручную ниже
+          .form-group
+            .form-element
+              input(placeholder='Страна, регион, город, улица' value="").form-control
+          .form-group.form-group--4col
+            .form-element
+              input(placeholder='Дом' value="").form-control
+            .form-element
+              input(placeholder='Корпус' value="").form-control
+            .form-element
+              input(placeholder='Строение' value="").form-control
+            .form-element
+              input(placeholder='Другое' value="").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-delivery-address").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-delivery-address").button.buttonFixSize.js-popup-close Добавить

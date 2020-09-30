@@ -1,0 +1,31 @@
+.popup.popup--addNewEmployees.js-popup-edit-bank-info
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-bank-info").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование банковских реквизитов
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Название банка:
+                input(placeholder='Введите название банка' value="АО АЛЬФА-БАНК").form-control
+            .form-element: label
+              .form-placeholder Адрес банка:
+                input(placeholder='Введите адрес банка' value="Санкт-Петербург, 3-я ул Строителей, 25, кв.12").form-control
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Расчётный счёт:
+              input(placeholder='Укажите расчётный счёт' value="90702810401332116563").form-control
+            .form-element: label
+              .form-placeholder Корреспондентский счет:
+              input(placeholder='Укажите корреспондентский счёт' value="30303830200000000593").form-control
+            .form-element: label
+              .form-placeholder Бик:
+              input(placeholder='Укажите БИК' value="055525595").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-bank-info").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-bank-info").button.buttonFixSize.js-popup-close Сохранить
