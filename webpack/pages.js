@@ -1181,6 +1181,223 @@ const pages = {
       orderHistoryList: data.orderHistoryListDisop
     }
   },
+  'user-order-history-item-not-attached': {
+    parameters: {
+      page: 'user-order-history-item-not-attached',
+      title: 'Заказ для Торговый центр «Дружба»',
+      pageName: 'Одна история заказа -- непривязанный объект',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect
+    }
+  },
+  'user-order-history-item-attached': {
+    parameters: {
+      page: 'user-order-history-item-attached',
+      title: 'Заказ для Торговый центр «Дружба»',
+      pageName: 'Одна история заказа -- привязанный объект',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Торговый центр «Дружба»'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect,
+    }
+  },
+  'user-order-specification-history-item-attached': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached',
+      title: 'Заказ для Торговый центр «Дружба»',
+      pageName: 'Одна история заказа-спецификации -- привязанная продажа',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      saleSelect: data.saleSelect,
+    }
+  },
+  'user-order-specification-history-item-not-attached': {
+    parameters: {
+      page: 'user-order-specification-history-item-not-attached',
+      title: 'Заказ - спецификация №37',
+      pageName: 'Одна история заказа-спецификации -- непривязанная продажа',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      saleSelect: data.saleSelect,
+    }
+  },
+  'user-order-specification-history-item-attached-sent': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-sent',
+      title: 'Заказ - спецификация №37',
+      pageName: 'Одна история заказа-спецификации -- заказ отправлен',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №37'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderSaleList: data.orderSaleList,
+    }
+  },
+  'user-order-specification-history-item-attached-request': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-request',
+      title: 'Заказ - спецификация №6',
+      pageName: 'Одна история заказа-спецификации -- запрос графика поставок',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №6'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderSaleList: data.orderSaleList,
+    }
+  },
+  'user-order-specification-history-item-details': {
+    parameters: {
+      page: 'user-order-specification-history-item-details',
+      title: 'Заказ - спецификация №13',
+      pageName: 'Одна история заказа-спецификации -- подробнее',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №13'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+    }
+  },
+  'user-order-history-item-not-attached-details': {
+    parameters: {
+      page: 'user-order-history-item-not-attached-details',
+      title: 'Заказ №57',
+      pageName: 'Одна история заказа -- подробнее',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ №57'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect,
+      saleSelect: data.saleSelect
+    }
+  },
+  'user-order-history-item-not-attached-details-order': {
+    parameters: {
+      page: 'user-order-history-item-not-attached-details-order',
+      title: 'Заказ №57',
+      pageName: 'Одна история заказа -- подробнее заказ Заказ',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ №57'],
+      orderHistoryList: data.orderHistoryListDisop,
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+      objectSelect: data.objectSelect,
+      saleSelect: data.saleSelect
+    }
+  },
+  'user-order-specification-history-item-attached-request-details': {
+    parameters: {
+      page: 'user-order-specification-history-item-attached-request-details',
+      title: 'Заказ - спецификация №57',
+      pageName: 'Одна история заказа-спецификации -- подробнее запрос КП',
+      crumbs: ['Главная', 'Личный кабинет', 'История заказов', 'Заказ - спецификация №57'],
+      orderHistoryDocsBelysvet: data.orderHistoryDocsBelysvet,
+      orderHistoryDocsDistributor: data.orderHistoryDocsDistributor,
+    }
+  },
+  'user-profile-empty': {
+    parameters: {
+      page: 'user-profile-empty',
+      title: 'Профиль',
+      pageName: 'ЛК ЮЛ Профиль -- пустой',
+      pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
+      crumbs: ['Главная', 'Личный кабинет покупателя (ЮЛ)', 'Профиль'],
+      person: data.personCompany,
+      company: data.companyInfoFull,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ]
+    }
+  },
+  'user-profile-disop': {
+    parameters: {
+      page: 'user-profile-disop',
+      title: 'Профиль',
+      pageName: 'ЛК ЮЛ Профиль -- заполненный',
+      pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
+      crumbs: ['Главная', 'Личный кабинет покупателя (ЮЛ)', 'Профиль'],
+      person: data.personCompany,
+      company: data.companyInfoFull,
+      physicalPersonCard: data.physicalPersonCard,
+      deliveryAddresses: data.deliveryAddresses,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ],
+    }
+  },
+  'user-profile-fizlico-disop': {
+    parameters: {
+      page: 'user-profile-fizlico-disop',
+      title: 'Профиль',
+      pageName: 'ЛК ФЛ Профиль -- заполненный',
+      pageDescr: '<p>Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться. Какой-то вводный текст про раздел, про профиль, для чего он и как им пользоваться.</p>',
+      crumbs: ['Главная', 'Личный кабинет покупателя (ФЛ)', 'Профиль'],
+      person: data.personCompany,
+      physicalPersonCard: data.physicalPersonCard,
+      deliveryAddresses: data.deliveryAddresses,
+      llc: [
+        {
+          title: '«Русский свет»',
+          value: '1',
+          selected: false,
+        },
+        {
+          title: '«Свет-привет»',
+          value: '2',
+          selected: false,
+        },
+        {
+          title: '«ЛЕД-Свет»',
+          value: '3',
+          selected: false,
+        },
+        {
+          title: '«iLampochka»',
+          value: '4',
+          selected: false,
+        }
+      ],
+    }
+  },
   'user-sale-empty': {
     parameters: {
       page: 'user-sale-empty',

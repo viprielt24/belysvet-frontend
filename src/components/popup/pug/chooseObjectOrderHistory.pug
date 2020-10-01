@@ -1,0 +1,19 @@
+.popup.popup--editSpecification.js-popup-choose-object-order-history
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="choose-object-order-history").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Привязать заказ к объекту
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder Объект
+              include ../../../pages/common/object-select-common
+          .popup__rightMessage Для того, чтобы объект появился в списке, его необходимо<br />создать в Личном кабинете в разделе Объекты. <br /><a href="javascript:void(0);" class="popup__rightMessageLink">Перейти в раздел Объекты</a>
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="choose-object-order-history").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="choose-object-order-history").button.buttonFixSize.js-popup-close Сохранить

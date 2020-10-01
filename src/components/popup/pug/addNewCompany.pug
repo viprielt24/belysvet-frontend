@@ -1,0 +1,18 @@
+.popup.popup--addNewSale.js-popup-add-new-company
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-company").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Добавление юридического лица
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group 
+            .form-element: label
+              .form-placeholder Название юридического лица:
+              input(placeholder='Введите название юридического лица').form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-company").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="add-new-company").button.buttonFixSize.js-popup-close Добавить

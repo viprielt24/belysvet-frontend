@@ -1,0 +1,13 @@
+mixin deliveryAddresses(icon,address,action=false)
+  .personCard
+    .personCard__wrap.personCard__wrap--border
+      .personCard__image.personCard__image--small
+        if icon
+          img(src=icon alt=address)
+      .personCard__group
+        if address
+          .personCard__fio.personCard__fio--marginBottom!= address
+        if action
+          .personCard__action
+            .personCard__edit(data-popupname="edit-delivery-address").js-popup-open!='Редактировать'
+            .personCard__delete(data-popupname="delete-delivery-address-01").js-popup-open!='Удалить'

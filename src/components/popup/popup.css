@@ -67,6 +67,10 @@
   border-radius: 5px;
 }
 
+.popup__wrap--bigPadding {
+  padding: 60px 33px 45px;
+}
+
 /**
 
  */
@@ -105,6 +109,10 @@
   line-height: 35px;
   text-align: center;
   color: #333333;
+}
+
+.popup__content-title--noPadding {
+  padding: 0;
 }
 
 .popup__content-subtitle {

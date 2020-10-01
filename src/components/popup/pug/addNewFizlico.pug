@@ -1,0 +1,32 @@
+.popup.popup--addNewEmployees.js-popup-add-new-fizlico
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="add-new-fizlico").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Добавление физ. лиц
+
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Фамилия:
+              input(placeholder='' value="").form-control
+            .form-element: label
+              .form-placeholder Имя:
+              input(placeholder='' value="").form-control
+            .form-element: label
+              .form-placeholder Отчество:
+              input(placeholder='' value="").form-control
+
+          .form-group.form-group--2col
+            .form-element: label
+              .form-placeholder Мобильный телефон:
+              input(placeholder='' value="").form-control
+            .form-element: label
+              .form-placeholder Email:
+              input(placeholder='' value="").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="add-new-fizlico").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="add-new-fizlico").button.buttonFixSize.js-popup-close Сохранить

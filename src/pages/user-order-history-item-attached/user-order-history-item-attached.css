@@ -1,0 +1,108 @@
+/* ------------------------------------------------------------------------- */
+@import "../../layout/css/icons.css";
+@import "../../layout/variables.css";
+@import "../../components/userHeaderBlock/userHeaderBlock.css";
+
+@import "../../components/tableFilter/tableFilter.css";
+@import "../../components/fileCard/fileCard.css";
+@import "../../components/orderComment/orderComment.css";
+@import "../../components/orderMessages/orderMessages.css";
+
+@import "../user-order-history-item-attached/user-order-history-item-attached.css";
+@import "../card/card.css";
+@import "../../pages/user-objects-item/user-objects-item.css";
+
+/* ------------------------------------------------------------------------- */
+.contentOrder__section{
+  background: #fff;
+  margin-bottom: -40px;
+}
+.contentOrder__item {
+    border-top: 1px solid rgba(196, 196, 196, 0.5);
+    padding: 40px 0;
+}
+.sectionTitle{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+}
+
+.content__text-editor.card.order-history{
+  padding-bottom: 30px;
+  padding-top: 45px;
+  & .card-buttons {
+      margin-top: 30px;
+  }
+}
+
+.order-history .uhbData__item--link a.uhbData__value {
+  font-weight: normal;
+}
+
+/*------------------------Блок корзины----------------------------------------*/
+
+.order-history {
+  margin-bottom: 45px;
+  & .table {
+    .pic__img {
+      max-width: 100px;
+    }
+  }
+  & .card-footer {
+    margin-top: 35px;
+  }
+  & .card-footer:before {
+    display: none;
+  }
+}
+
+/*-------------------------Блок документов---------------------------------------*/
+
+.contentOrder__item {
+  & .usiDocument {
+    padding-top: 30px;
+  }
+  & .usiDocument__wrap {
+    padding-bottom: 0;
+  }
+  & .usiDocument__group {
+    &:not(:first-child) {
+       padding-top: 30px;
+       border-top: var(--border);
+    }
+  }
+  & .usiDocument__item {
+    margin: 0;
+  }
+  & .usiDocument__title {
+    color: var(--black04);
+    font-family: var(--museo);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  & .usiDocument__files {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 0;
+    & .fileCard {
+      width: 25%;
+      padding: 0 15px;
+      margin-bottom: 35px;
+    }
+  }
+  & .usiDocument__emptyDescription {
+    padding-top: 10px;
+    color: var(--black03);
+    font-family: var(--opens);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  & .usiDocument__button {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+}

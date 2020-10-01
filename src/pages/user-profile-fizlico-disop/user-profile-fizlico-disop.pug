@@ -1,0 +1,156 @@
+extends ../layout.pug
+include ../../components/personInformation/personInformation.pug
+include ../../components/select-custom/select-custom
+include ../../components/physicalPersonCard/physicalPersonCard.pug
+include ../../components/deliveryAddresses/deliveryAddresses.pug
+
+block content
+  .content
+    .container
+      script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+      include ../../components/content-header/content-header-lk
+      .profileCard
+        .profileCard__wrap
+          .profileCard__section.profileCard__personaInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle.profileCard__sectionTitle--noSeparator!='Персональная информация'
+            .profileCard__group
+              each item in person
+                +personInformation(
+                  item.image,
+                  item.fio,
+                  item.id,
+                  item.typeProfile,
+                  item.mobile,
+                  item.email,
+                  item.position,
+                  item.pol,
+                  item.discount,
+                  item.bonus,
+                  item.termsPayment,
+                  item.balance,
+                  item.credit,
+                  [
+                    {
+                      type: 'delete-profile',
+                      label: 'Удалить профиль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'delete-profile-01'
+                    },
+                    {
+                      type: 'edit-password',
+                      label: 'Изменить пароль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'change-password'
+                    },
+                    {
+                      type: 'edit-profile',
+                      label: 'Редактировать профиль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'edit-person-info'
+                    }
+                  ]
+                )
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Адреса доставки'
+            .usiSaleTeam__group.personCardGroup
+              each item in deliveryAddresses
+                +deliveryAddresses(
+                  item.icon,
+                  item.address,
+                  true
+                )
+            .profileCard__rightButton
+              a(href="javascript:void(0);" data-popupname="add-new-delivery-address").button.buttonFixSize.js-popup-open!='Добавить адрес'
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Предпочтительный способ получения заказов'
+            .profileCard__content.profileCard__content--deliveryMethod
+              include ../checkout/pug/receive
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Предпочтительный способ оплаты'
+            .profileCard__content.profileCard__content--paymentMethod
+              include ../checkout/pug/payment
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Получение сообщений и уведомлений по e-mail'
+            .profileCard__content
+              .checkout__payment.notifications--profileCard
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox', checked='').form-control.js-form-validate__checked
+                    .icon.icon--checkbox
+                    .label__text Дублировать рекламные сообщения на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Дублировать сообщения для Покупателей на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox', checked='').form-control.js-form-validate__checked
+                    .icon.icon--checkbox
+                    .label__text Дублировать персональные сообщения на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Дублировать новости и события на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Сообщать на e-mail о появлении новой статьи
+
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+  include ../../components/popup/pug/editPersonInfo.pug
+  include ../../components/popup/pug/deleteProfile.pug
+  include ../../components/popup/pug/deleteProfileConfirm.pug
+  include ../../components/popup/pug/changePassword.pug
+  include ../../components/popup/pug/addNewDeliveryAddress.pug
+  include ../../components/popup/pug/editDeliveryAddress.pug
+  include ../../components/popup/pug/deleteDeliveryAddress.pug
+  include ../../components/popup/pug/infoSave.pug

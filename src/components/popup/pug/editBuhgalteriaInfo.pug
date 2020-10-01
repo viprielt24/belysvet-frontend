@@ -1,0 +1,27 @@
+.popup.popup--addNewEmployees.js-popup-edit-buhgalteria-info
+  .popup__wrap
+    .popup__header
+      a(href="javascript:void(0);" data-popupname="edit-buhgalteria-info").popup__header-close.js-popup-close: .icon.icon--close.icon--close-dark
+    .popup__content
+      .popup__content-header
+        .popup__content-title Редактирование бухгалтерии
+      .popup__form.form.form--style: form(action="javascript:void(0);")
+        .form-wrap
+          .form-group
+            .form-element: label
+              .form-placeholder Должность:
+              input(placeholder='Введите название должности' value="Главный бухгалтер").form-control
+          .form-group.form-group--3col
+            .form-element: label
+              .form-placeholder Фамилия:
+              input(placeholder='Введите фамилию' value="Копейкина").form-control
+            .form-element: label
+              .form-placeholder Имя:
+              input(placeholder='Введите имя' value="Клара").form-control
+            .form-element: label
+              .form-placeholder Отчество:
+              input(placeholder='Введите отчество' value="Захаровнар").form-control
+
+        .popup__buttonGroup
+          a(href="javascript:void(0);" data-popupname="edit-buhgalteria-info").button.buttonWhitoutBorder.button--empty.js-popup-close: span отменить
+          a(href="javascript:void(0);" data-popupname="edit-buhgalteria-info").button.buttonFixSize.js-popup-close Сохранить

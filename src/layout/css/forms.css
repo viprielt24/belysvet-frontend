@@ -442,6 +442,9 @@ textarea.form-control {
     align-items: center;
     margin-left: 30px;
   }
+  & .form-checkboxGroup--margin0 {
+    margin-left: 0;
+  }
   & .label {
     margin-right: 30px;
   }
@@ -474,6 +477,34 @@ textarea.form-control {
     margin-left: 10px;
     margin-right: 10px;
   }
+}
+
+.form-wrap--gray {
+  width: 70%;
+  padding: 20px 25px;
+  margin: 20px 0 0 auto;
+  background: var(--gray07);
+}
+
+.form-group--4col {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+& .form-element {
+    width: 22%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.form-info-text {
+  margin-bottom: 8px;
+  color: var(--black07);
+  font-family: var(--opens);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 /**

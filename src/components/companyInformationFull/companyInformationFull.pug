@@ -1,0 +1,248 @@
+mixin companyInformationFull(nameCompany,brand,site,phoneCompany,email,city,country,inn,kpp,okato,oktmo,okpo,ogrn,okved2,nameBank,addressBank,checkingAccount,correspondentAccount,bik,positionDirector,lastNameDirector,firstNameDirector,patronymicDirector,positionAccountant,lastNameAccountant,firstNameAccountant,patronymicAccountant,factCountry,factZipcode,factRegion,factCity,factStreet,factHouse,factFlat,mailingAddress)
+  .companyInfoFull
+    .companyInfoFull__wrap
+      .companyInfoFull__section.commonInfo
+        .companyInfoFull__title!='Общая ифнормация'
+        .companyInfoFull__group
+          .companyInfoFull__item
+            span!='Название организации:'
+            if nameCompany
+              span!= nameCompany
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Бренд (торговая марка) </br>организации:'
+            if brand
+              span!= brand
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Сайт:'
+            if site
+              span!= site
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Телефон организации:'
+            if phoneCompany
+              span!= phoneCompany
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='E-mail организации:'
+            if email
+              span!= email
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Город:'
+            if city
+              span!= city
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Страна:'
+            if country
+              span!= country
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ИНН:'
+            if inn
+              span!= inn
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='КПП:'
+            if kpp
+              span!= kpp
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ОКАТО:'
+            if okato
+              span!= okato
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ОКТМО:'
+            if oktmo
+              span!= oktmo
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ОКПО:'
+            if okpo
+              span!= okpo
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ОГРН:'
+            if ogrn
+              span!= ogrn
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='ОКВЭД 2:'
+            if okved2
+              span!= okved2
+            else
+              span!= '-'
+          .companyInfoFull__button
+            .companyInfoFull__edit(data-popupname="edit-common-info-company").js-popup-open!='Редактировать'
+      .companyInfoFull__section.bankInfo
+        .companyInfoFull__title!='Банковские реквизиты'
+        .companyInfoFull__group
+          .companyInfoFull__item
+            span!='Название банка:'
+            if nameBank
+              span!= nameBank
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Адрес банка:'
+            if addressBank
+              span!= addressBank
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Расчётный счёт:'
+            if checkingAccount
+              span!= checkingAccount
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Корреспондентский счет::'
+            if correspondentAccount
+              span!= correspondentAccount
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='БИК:'
+            if bik
+              span!= bik
+            else
+              span!= '-'
+          .companyInfoFull__button
+            .companyInfoFull__edit(data-popupname="edit-bank-info").js-popup-open!='Редактировать'
+      .companyInfoFull__doubleContainer
+        .companyInfoFull__section.companyInfoFull__section--double.rukovodstvoInfo
+          .companyInfoFull__title!='Руководство'
+          .companyInfoFull__group
+            .companyInfoFull__item
+              span!='Должность:'
+              if positionDirector
+                span!= positionDirector
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Фамилия:'
+              if lastNameDirector
+                span!= lastNameDirector
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Имя:'
+              if firstNameDirector
+                span!= firstNameDirector
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Отчество:'
+              if patronymicDirector
+                span!= patronymicDirector
+              else
+                span!= '-'
+            .companyInfoFull__button
+              .companyInfoFull__edit(data-popupname="edit-rukovodstvo-info").js-popup-open!='Редактировать'
+        .companyInfoFull__section.companyInfoFull__section--double.buhgalteriaInfo
+          .companyInfoFull__title!='Бухгалтерия'
+          .companyInfoFull__group
+            .companyInfoFull__item
+              span!='Должность:'
+              if positionAccountant
+                span!= positionAccountant
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Фамилия:'
+              if lastNameAccountant
+                span!= lastNameAccountant
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Имя:'
+              if firstNameAccountant
+                span!= firstNameAccountant
+              else
+                span!= '-'
+            .companyInfoFull__item
+              span!='Отчество:'
+              if patronymicAccountant
+                span!= patronymicAccountant
+              else
+                span!= '-'
+            .companyInfoFull__button
+              .companyInfoFull__edit(data-popupname="edit-buhgalteria-info").js-popup-open!='Редактировать'
+      .companyInfoFull__section.factAddressInfo
+        .companyInfoFull__title!='Фактический адрес'
+        .companyInfoFull__group
+          .companyInfoFull__item
+            span!='Страна:'
+            if factCountry
+              span!= factCountry
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Индекс:'
+            if factZipcode
+              span!= factZipcode
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Регион:'
+            if factRegion
+              span!= factRegion
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Город / н.п.:'
+            if factCity
+              span!= factCity
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Улица:'
+            if factStreet
+              span!= factStreet
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Дом:'
+            if factHouse
+              span!= factHouse
+            else
+              span!= '-'
+          .companyInfoFull__item
+            span!='Квартира:'
+            if factFlat
+              span!= factFlat
+            else
+              span!= '-'
+          .companyInfoFull__button
+            .companyInfoFull__edit(data-popupname="edit-fact-address-info").js-popup-open!='Редактировать'
+      .companyInfoFull__doubleContainer
+        .companyInfoFull__section.companyInfoFull__section--double.mailingAddressInfo
+          .companyInfoFull__title!='Почтовый адрес для корреспонденции:'
+          .companyInfoFull__group
+            .companyInfoFull__item
+              p!= 'Совпадает с фактическим'
+            .companyInfoFull__button
+              .companyInfoFull__edit(data-popupname="edit-mailing-address-info").js-popup-open!='Редактировать'
+        .companyInfoFull__section.companyInfoFull__section--double.legalAddressInfo
+          .companyInfoFull__title!='Юридический адрес:'
+          .companyInfoFull__group
+            .companyInfoFull__item
+              p!= 'Совпадает с фактическим'
+            .companyInfoFull__button
+              .companyInfoFull__edit(data-popupname="edit-legal-address-info").js-popup-open!='Редактировать'

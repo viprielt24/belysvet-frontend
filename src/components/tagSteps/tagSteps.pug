@@ -1,0 +1,21 @@
+mixin tagSteps(title,tags)
+  .stepsSale
+    if title
+      .stepsSale__title!=title
+    if tags
+      .stepsSale__items
+        each tag in tags
+          - let activeClass = tag.active ? ' tag--active' : '';
+          .stepSale__item
+            .stepSale__tag(class=activeClass)
+              if tag.title
+                .tag__title!=tag.title
+            if tag.dateStart
+              .dateStep
+                span.dateStep__title!=tag.dateStart.title
+                span.dateStep__date!=tag.dateStart.date
+            if tag.shipmentDate
+              .dateStep
+                span.dateStep__title!=tag.shipmentDate.title
+                span.dateStep__line!=tag.shipmentDate.start
+                span.dateStep__red!=tag.shipmentDate.end

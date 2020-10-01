@@ -1,0 +1,306 @@
+/*------------------------------------------------------------------------*/
+@import "../../layout/variables.css";
+@import "../../layout/css/buttons.css";
+@import "../../layout/css/icons.css";
+@import "../../components/accordion/accordion.css";
+@import "../../components/companyInformationFull/companyInformationFull.css";
+/*-------------------------------------------------------------------------*/
+
+/*----------------------Personal Info------------------------*/
+
+.profileCard {
+  margin: 20px 0 50px;
+  padding-top: 35px;
+  border-top: var(--border);
+}
+
+.profileCard__section {
+  margin-bottom: 40px;
+  padding: 35px 40px;
+  color: var(--black04);
+  font-family: var(--opens);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #fff;
+  position: relative;
+}
+
+.profileCard__sectionTitle {
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+  border-bottom: var(--border);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.profileCard__sectionTitle--noSeparator {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.accordion__help--personalInfo {
+  top: 35px;
+  right: 40px;
+  position: absolute;
+}
+
+.personInfoCard__wrap {}
+
+.personInfoCard__person {
+  margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.personInfoCard__icon {
+  margin-right: 30px;
+  width: 78px;
+  height: 78px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-image: url('/images/person/person-empty.svg');
+  background-repeat: no-repeat;
+  background-size: 78px;
+  background-position: center;
+}
+
+.personInfoCard__name {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.personInfoCard__fio {}
+
+.personInfoCard__data {
+  margin: 0 0 35px 110px;
+  display: flex;
+  color: var(--black04);
+  font-family: var(--opens);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.personInfoCard__dataGroup {
+  margin-right: 120px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.personInfoCard__dataItem {
+  margin-bottom: 20px;
+  display: flex;
+  & span:first-child {
+    min-width: 195px;
+    margin-right: 55px;
+    font-weight: bold;
+  }
+}
+
+.personInfoCard__dataItem--help {
+  display: flex;
+  & a {
+    margin-right: 10px;
+    color: var(--black04);
+    text-decoration: none;
+  }
+  & .accordion__help {
+    width: 20px;
+    height: 20px;
+    & svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.personInfoCard__dataItem--pol {
+  & span {
+    &:last-child {
+      color: var(--gray06);
+    }
+  }
+}
+
+.personInfoCard__dataItem--green {
+  & span {
+    &:last-child {
+      padding: 3px 17px;
+      border-radius: 16px;
+      color: var(--green03);
+      background: var(--tag);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+  }
+}
+
+.personInfoCard__dataItem--red {
+  & span {
+    &:last-child {
+      padding: 3px 17px;
+      border-radius: 16px;
+      color: var(--red06);
+      background: var(--back1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.personInfoCard__buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  & .button {
+    &:not(:last-child) {
+      margin-right: 30px;
+   }
+  }
+}
+
+
+/*------------------Company Info--------------------------------*/
+
+.companyInfo__title {
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.companyInfo__nameCompany {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.companyInfo__icon {
+  left: 30px;
+  top: 36px;
+  width: 30px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  background-image: url("/images/company-icon.svg");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accordion__item--companyInfo {
+  margin-bottom: 20px;
+  border: var(--border);
+}
+
+.accordion__wrap--companyInfo {
+  padding: 0 35px;
+}
+
+.accordion__content--companyInfo {
+  margin-left: 50px;
+  padding: 0;
+}
+
+.accordion__wrap--companyInfo {
+  &:before {
+    display: none;
+  }
+}
+
+.accordion__group--companyInfo {
+
+}
+
+.profileCard__content {}
+
+.profileCard__content--empty {
+  padding: 70px 20px;
+  & p {
+    color: #000;
+    font-family: var(--opens);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.profileCard__rightButton {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profileCard__centerButton {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.profileCard__content--deliveryMethod {
+  max-width: 675px;
+  margin: 0 auto;
+  padding-top: 0;
+  & .checkout__item {
+    & .checkout__wrap {
+      padding: 0;
+    }
+    & .title,
+    & .checkout__temp-text {
+      display: none;
+    }
+  }
+}
+
+.profileCard__content--paymentMethod {
+  max-width: 700px;
+  margin: 0 auto;
+  & .checkout__item {
+    & .title,
+    & .checkout__temp-text {
+      display: none;
+    }
+    & .checkout__wrap--indent {
+      padding: 0;
+    }
+  }
+  & .checkout__payment-item {
+    background: #fff;
+    &:last-child,
+    &:nth-last-child(2) {
+      display: none;
+    }
+  }
+}
+
+.form-element--profileCard {
+  margin-bottom: 25px;
+  min-width: 440px;
+  &:nth-child(odd) {
+    margin-right: 95px;
+  }
+}
+
+.notifications--profileCard {
+  max-width: 1000px;
+  padding-top: 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttonDelete--company {
+  padding: 0;
+  margin: 15px 0 15px;
+  justify-content: flex-start;
+}

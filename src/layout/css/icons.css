@@ -73,6 +73,15 @@
   height: 13px;
 }
 
+.icon--close-smaller {
+  width: 15px;
+  height: 15px;
+}
+
+.icon--delete {
+  margin-right: 5px;
+}
+
 /**
 
  */
@@ -445,6 +454,14 @@
   width: 30px;
   height: 30px;
   background-image: url(/images/informer.svg);
+}
+
+.icon--repeat-medium {
+  margin-top: 2px;
+  width: 16px;
+  height: 14px;
+  background: url("/images/repeat.svg") no-repeat;
+  background-size: 16px 14px;
 }
 
 /**

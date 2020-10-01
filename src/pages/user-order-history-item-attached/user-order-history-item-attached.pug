@@ -1,0 +1,107 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+include ../../components/fileCard/fileCard.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+include ../../components/orderComment/orderComment.pug
+include ../../components/orderMessages/orderMessages.pug
+
+block content
+  .content.content--userObjectsItem.order-history
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userObjectsItem__headerBlock
+        +userHeaderBlock(
+          'Заказ №7',
+          [
+            { name: 'Дата, время:', value: '01.06.2019, 13:12:30' },
+            { name: 'Количество товаров:', value: '23'},
+            { name: 'Сумма:', value: '41 399 ₽'},
+            { type: 'separator', name: '', value: '' },
+            { type: 'link', name: 'Название объекта:', value: { title: 'Торговый центр «Дружба»', href: 'javascript:void(0);' }},
+          ],
+          [
+            {
+              type: 'edit',
+              label: 'Редактировать',
+              href: 'javascript:void(0);',
+              class: 'js-popup-open',
+              dataPopupname: 'edit-object-order-history'
+            }
+          ]
+        )
+  .content__text-editor.card.order-history
+    .container
+      include ../card/pug/card-table
+      .card-footer
+        .card-footer__descr
+          .card-footer__title Итого ваш заказ
+        .card-footer__wrap
+          .card-footer__item 2 345 позиций
+          .card-footer__item 11 021 500,00 рублей
+      .card-buttons
+        .card-buttons__clear
+          a(href="javascript:void(0);").link.link--icon
+            .icon.icon--repeat.icon--repeat-primary.icon--repeat-medium
+            .link__text Повторить заказ
+  .contentOrder__section
+    .container
+      .contentOrder__item
+        +orderComment(
+          'Комментарий к заказу:', 'Тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа, тут будет комментарий, оставленный при оформлении заказа. Тут будет комментарий.'
+        )
+      .contentOrder__item
+        .sectionTitle Документы к заказу:
+        .usiDocument__wrap
+          .usiDocument__group
+            .usiDocument__item
+              .usiDocument__title!='От компании Белый свет:'
+              .usiDocument__files
+                each itemFile, index in orderHistoryDocsBelysvet
+                  +fileCard(
+                    'docsOthersBelysvet' + index,
+                    itemFile.type,
+                    itemFile.fileName,
+                    itemFile.href,
+                    itemFile.size,
+                    itemFile.create,
+                    itemFile.replace,
+                    itemFile.action
+                  )
+            .usiDocument__item
+              .usiDocument__title!='От дистрибьютора:'
+              .usiDocument__files
+                each itemFile, index in orderHistoryDocsDistributor
+                  +fileCard(
+                    'docsOthersDist' + index,
+                    itemFile.type,
+                    itemFile.fileName,
+                    itemFile.href,
+                    itemFile.size,
+                    itemFile.create,
+                    itemFile.replace,
+                    itemFile.action
+                  )
+          .usiDocument__button
+            a(href="javascript:void(0);" data-popupname="add-sale-docs").button.buttonFixSize.js-popup-open!='Добавить документ'
+      .contentOrder__item
+        +orderMessages(
+          'Сообщения',
+          [
+            {
+              dateTime: '04.07.2019 в 13:31',
+              message: 'Тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения.'
+            },
+            {
+              dateTime: '07.07.2020 в 17:03',
+              message: 'Тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено после оформления заказа, тут будет текст вашего сообщения, которое было оставлено.'
+            },
+          ]
+        )
+
+  include ../../components/fileCard/icon.pug
+  include ../../components/popup/pug/addSaleCompetitionDocs.pug
+  include ../../components/popup/pug/addSaleDocs.pug
+  include ../../components/popup/pug/deleteFile.pug
+  include ../../components/popup/pug/editObjectOrderHistory.pug

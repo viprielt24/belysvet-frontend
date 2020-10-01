@@ -1,6 +1,8 @@
 include ../personCard/personCard.pug
+include ../messageCompatible/messageCompatible.pug
+include ../tagSteps/tagSteps.pug
 
-mixin userHeaderBlock(title,arrayData,buttons)
+mixin userHeaderBlock(title,arrayData,buttons,tagSteps)
   .userHeaderBlock
     .userHeaderBlock__wrap
       if title
@@ -10,6 +12,10 @@ mixin userHeaderBlock(title,arrayData,buttons)
           each item in arrayData
             if item.type == 'data' || item.type == undefined
               .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+            else if item.type == 'notAttached'
+              .uhbData__item.uhbData__item--notAttached
                 .uhbData__name!=item.name
                 .uhbData__value!=item.value
             else if item.type == 'dataDisabled'
@@ -45,8 +51,38 @@ mixin userHeaderBlock(title,arrayData,buttons)
                     item.value.mobile,
                     item.value.email
                   )
+            else if item.type == 'warning-order'
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ не привязан к объекту. Пожалуйста, привяжите заказ к объекту.'
+                  )
+            else if item.type == 'warning-order-object'
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ не привязан к объекту и продаже. Пожалуйста, привяжите заказ к объекту и к продаже.'
+                  )
+            else if item.type == 'warning-order-specification'
+              .uhbData__item.uhbData__item--warning.warning--visible
+                .uhbData__icon--close
+                .uhbData__value
+                  +messageCompatible(
+                    'big',
+                    'incorrect',
+                    'Внимание!',
+                    'Ваш заказ-спецификация не привязан к продаже. Пожалуйста, привяжите заказ-спецификацию к продаже.'
+                  )
             else if item.type == 'separator'
-              .uhbData__item.uhbData__item--separator
+              .uhbData__item--separator
             else if item.type == 'checkbox'
               - finishedCheck = false;
               each check in item.value
@@ -65,6 +101,17 @@ mixin userHeaderBlock(title,arrayData,buttons)
                             input(type='radio' name=check.name value=check.value checked=check.checked).form-control
                             .icon.icon--checkbox
                             .label__text!=check.title
+            else if item.type == 'result-sent'
+              .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value!=item.value
+                  if item.list
+                    .uhbData__list
+                        .result__item!=item.list.value
+            else if item.type == 'result-request'
+              .uhbData__item.uhbData__item--data
+                .uhbData__name!=item.name
+                .uhbData__value.pastDate__value!=item.value
       if buttons
         .userHeaderBlock__button
           each button in buttons
@@ -82,3 +129,5 @@ mixin userHeaderBlock(title,arrayData,buttons)
               ).button.buttonDelete
                 em: svg: use(xlink:href="#svg-button-delete")
                 span!=button.label
+      if tagSteps
+        +tagSteps(tagSteps.title, tagSteps.tags)

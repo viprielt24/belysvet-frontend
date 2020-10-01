@@ -1,0 +1,46 @@
+extends ../layout.pug
+include ../../components/userHeaderBlock/userHeaderBlock.pug
+include ../../components/fileCard/fileCard.pug
+include ../../components/tableFilter/tableFilter.pug
+include ../../components/tableItem/tableItem.pug
+
+block content
+  .content.content--userObjectsItem.order-history
+    .container
+      - title = ''
+      include ../../components/content-header/content-header-lk
+      .userObjectsItem__headerBlock
+        +userHeaderBlock(
+          'Заказ-спецификация № 13',
+          [
+            {name: 'Дата, время:', value: '03.07.2019, 13:12:30'},
+            {name: 'Количество товаров:', value: '23'},
+            {name: 'Сумма:', value: '421 399 ₽'},
+            {type: 'separator', name: '', value: ''},
+            {type: 'link', name: 'Объект:', value: {title: 'Торговый центр «Дружба»', href: 'javascript:void(0);'}},
+            {type: 'link', name: 'Спецификация:', value: {title: 'Название спецификации', href: 'javascript:void(0);'}},
+            {type: 'separator', name: '', value: ''},
+            { type: 'result-sent',
+              name: 'Результат:', value: 'Заказ отправлен дистрибьюторам, 11.06.2019',
+              list: { value:'<ul><li>ООО «СК ПАЛЛОР», г. Москва </li> <li>ЗАО «Электрокомплектсервис», г. Люберцы</li><li> Компакт-ОПТ, г. Новосибирск</li></ul>'}},
+          ],
+          []
+        )
+  .content__text-editor.card.order-history
+    .container
+      include ../card/pug/card-table
+      .card-footer
+        .card-footer__descr
+          .card-footer__title Итого ваш заказ
+        .card-footer__wrap
+          .card-footer__item 2 345 позиций
+          .card-footer__item 11 021 500,00 рублей
+      .card-buttons
+        .card-buttons__clear
+          a(href="javascript:void(0);").link.link--icon
+            .icon.icon--repeat.icon--repeat-primary.icon--repeat-medium
+            .link__text Повторить заказ
+  .contentOrder__section
+    .container
+      .contentOrder__item
+  include ../../components/fileCard/icon.pug

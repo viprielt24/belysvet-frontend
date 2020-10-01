@@ -1,0 +1,1 @@
+import './user-order-history-item-attached.css';

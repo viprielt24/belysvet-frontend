@@ -1,0 +1,359 @@
+extends ../layout.pug
+include ../../components/personInformation/personInformation.pug
+include ../../components/companyInformationFull/companyInformationFull.pug
+include ../../components/select-custom/select-custom
+include ../../components/physicalPersonCard/physicalPersonCard.pug
+include ../../components/deliveryAddresses/deliveryAddresses.pug
+
+block content
+  .content
+    .container
+      script(src = "https://api-maps.yandex.ru/2.1/?apikey=bb14b62c-4405-4ce3-9db0-762219c7cb4a&lang=ru_RU" type="text/javascript")
+      include ../../components/content-header/content-header-lk
+      .profileCard
+        .profileCard__wrap
+          .profileCard__section.profileCard__personaInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle.profileCard__sectionTitle--noSeparator!='Персональная информация'
+            .profileCard__group
+              each item in person
+                +personInformation(
+                  item.image,
+                  item.fio,
+                  item.id,
+                  item.typeProfile,
+                  item.mobile,
+                  item.email,
+                  item.position,
+                  item.pol,
+                  item.discount,
+                  item.bonus,
+                  item.termsPayment,
+                  item.balance,
+                  item.credit,
+                  [
+                    {
+                      type: 'delete-profile',
+                      label: 'Удалить профиль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'delete-profile-01'
+                    },
+                    {
+                      type: 'edit-password',
+                      label: 'Изменить пароль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'change-password'
+                    },
+                    {
+                      type: 'edit-profile',
+                      label: 'Редактировать профиль',
+                      href: 'javascript:void(0);',
+                      class: 'js-popup-open',
+                      dataPopupname: 'edit-person-info'
+                    }
+                  ]
+                )
+
+          .profileCard__section.profileCard__companyInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Информация об организациях'
+            .companyInfo__accordion
+              .accordion.js-accordion
+
+                //- «Юридическое лицо» ООО, г. Москва
+                .accordion__item.js-accordion__item.accordion__item--companyInfo
+                  a(href="javascript:void(0);").accordion__header.js-accordion__header
+                    .companyInfo__icon
+                    .companyInfo__nameCompany!='«Юридическое лицо» ООО, г. Москва'
+
+                    .accordion__toggle.js-accordion__toggle
+                  .accordion__content.accordion__content--companyInfo.js-accordion__content
+                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
+                      .accordion__group--companyInfo
+                        each item in company
+                          +companyInformationFull(
+                            item.nameCompany,
+                            item.brand,
+                            item.site,
+                            item.phoneCompany,
+                            item.email,
+                            item.city,
+                            item.country,
+                            item.inn,
+                            item.kpp,
+                            item.okato,
+                            item.oktmo,
+                            item.okpo,
+                            item.ogrn,
+                            item.okved2,
+                            item.nameBank,
+                            item.addressBank,
+                            item.checkingAccount,
+                            item.correspondentAccount,
+                            item.bik,
+                            item.positionDirector,
+                            item.lastNameDirector,
+                            item.firstNameDirector,
+                            item.patronymicDirector,
+                            item.positionAccountant,
+                            item.lastNameAccountant,
+                            item.firstNameAccountant,
+                            item.patronymicAccountant,
+                            item.factCountry,
+                            item.factZipcode,
+                            item.factRegion,
+                            item.factCity,
+                            item.factStreet,
+                            item.factHouse,
+                            item.factFlat,
+                            item.mailingAddress
+                          )
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
+                            .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
+                            span Удалить юридическое лицо
+
+                // - «Электрокомплектсервис» ЗАО, г. Ангарск
+                .accordion__item.js-accordion__item.accordion__item--companyInfo
+                  a(href="javascript:void(0);").accordion__header.js-accordion__header
+                    .companyInfo__icon
+                    .companyInfo__nameCompany!='«Электрокомплектсервис» ЗАО, г. Ангарск'
+
+                    .accordion__toggle.js-accordion__toggle
+                  .accordion__content.accordion__content--companyInfo.js-accordion__content
+                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
+                      .accordion__group--companyInfo
+                        each item in company
+                          +companyInformationFull(
+                            item.nameCompany,
+                            item.brand,
+                            item.site,
+                            item.phoneCompany,
+                            item.email,
+                            item.city,
+                            item.country,
+                            item.inn,
+                            item.kpp,
+                            item.okato,
+                            item.oktmo,
+                            item.okpo,
+                            item.ogrn,
+                            item.okved2,
+                            item.nameBank,
+                            item.addressBank,
+                            item.checkingAccount,
+                            item.correspondentAccount,
+                            item.bik,
+                            item.positionDirector,
+                            item.lastNameDirector,
+                            item.firstNameDirector,
+                            item.patronymicDirector,
+                            item.positionAccountant,
+                            item.lastNameAccountant,
+                            item.firstNameAccountant,
+                            item.patronymicAccountant,
+                            item.factCountry,
+                            item.factZipcode,
+                            item.factRegion,
+                            item.factCity,
+                            item.factStreet,
+                            item.factHouse,
+                            item.factFlat,
+                            item.mailingAddress
+                          )
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
+                            .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
+                            span Удалить юридическое лицо
+
+                // - «АвтопромГазМяс» ООО, г. Тула
+                .accordion__item.js-accordion__item.accordion__item--companyInfo
+                  a(href="javascript:void(0);").accordion__header.js-accordion__header
+                    .companyInfo__icon
+                    .companyInfo__nameCompany!='«АвтопромГазМяс» ООО, г. Тула'
+
+                    .accordion__toggle.js-accordion__toggle
+                  .accordion__content.accordion__content--companyInfo.js-accordion__content
+                    .accordion__content-wrap.accordion__wrap--companyInfo.js-accordion__content-wrap
+                      .accordion__group--companyInfo
+                        each item in company
+                          +companyInformationFull(
+                            item.nameCompany,
+                            item.brand,
+                            item.site,
+                            item.phoneCompany,
+                            item.email,
+                            item.city,
+                            item.country,
+                            item.inn,
+                            item.kpp,
+                            item.okato,
+                            item.oktmo,
+                            item.okpo,
+                            item.ogrn,
+                            item.okved2,
+                            item.nameBank,
+                            item.addressBank,
+                            item.checkingAccount,
+                            item.correspondentAccount,
+                            item.bik,
+                            item.positionDirector,
+                            item.lastNameDirector,
+                            item.firstNameDirector,
+                            item.patronymicDirector,
+                            item.positionAccountant,
+                            item.lastNameAccountant,
+                            item.firstNameAccountant,
+                            item.patronymicAccountant,
+                            item.factCountry,
+                            item.factZipcode,
+                            item.factRegion,
+                            item.factCity,
+                            item.factStreet,
+                            item.factHouse,
+                            item.factFlat,
+                            item.mailingAddress
+                          )
+                          a(href="javascript:void(0);" data-popupname="delete-company-01").js-popup-open.button.buttonDelete.buttonDelete--company
+                            .icon.icon--close.icon--close-smaller.icon--close-red.icon--delete
+                            span Удалить юридическое лицо
+
+                .profileCard__rightButton
+                  a(href="javascript:void(0);" data-popupname="add-new-company").button.buttonFixSize.js-popup-open!='Добавить юридическое лицо'
+
+          .profileCard__section.profileCard__fizlicaInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Информация о физических лицах'
+            .usiSaleTeam__group.personCardGroup
+              each item in physicalPersonCard
+                +physicalPersonCard(
+                  item.image,
+                  item.fio,
+                  item.mobile,
+                  item.email,
+                  true
+                )
+            .profileCard__rightButton
+              a(href="javascript:void(0);" data-popupname="add-new-fizlico").button.buttonFixSize.js-popup-open!='Добавить физическое лицо'
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Адреса доставки'
+            .usiSaleTeam__group.personCardGroup
+              each item in deliveryAddresses
+                +deliveryAddresses(
+                  item.icon,
+                  item.address,
+                  true
+                )
+            .profileCard__rightButton
+              a(href="javascript:void(0);" data-popupname="add-new-delivery-address").button.buttonFixSize.js-popup-open!='Добавить адрес'
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Предпочтительный способ получения заказов'
+            .profileCard__content.profileCard__content--deliveryMethod
+              include ../checkout/pug/receive
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Предпочтительный способ оплаты'
+            .profileCard__content.profileCard__content--paymentMethod
+              include ../checkout/pug/payment
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+          .profileCard__section.profileCard__deliveryAddressInfo
+            .accordion__help.js-accordion__help.accordion__help--personalInfo(
+              class="hint hint--white hint--left hint--userSale"
+              data-popupname="hintfileattach"
+              aria-label="Текстовая подсказка по соответствующей теме."
+            )
+              include ../../images/question.svg
+            .profileCard__sectionTitle!='Получение сообщений и уведомлений по e-mail'
+            .profileCard__content
+              .checkout__payment.notifications--profileCard
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox', checked='').form-control.js-form-validate__checked
+                    .icon.icon--checkbox
+                    .label__text Дублировать рекламные сообщения на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Дублировать сообщения для Покупателей на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox', checked='').form-control.js-form-validate__checked
+                    .icon.icon--checkbox
+                    .label__text Дублировать персональные сообщения на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Дублировать новости и события на e-mail
+                .form-element.form-element--profileCard
+                  label.label.label--checkbox
+                    input(type='checkbox').form-control
+                    .icon.icon--checkbox
+                    .label__text Сообщать на e-mail о появлении новой статьи
+
+              .profileCard__centerButton
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+  include ../../components/popup/pug/editPersonInfo.pug
+  include ../../components/popup/pug/deleteProfile.pug
+  include ../../components/popup/pug/deleteProfileConfirm.pug
+  include ../../components/popup/pug/changePassword.pug
+  include ../../components/popup/pug/editCommonInfoCompany.pug
+  include ../../components/popup/pug/editBankInfo.pug
+  include ../../components/popup/pug/editRukovodstvoInfo.pug
+  include ../../components/popup/pug/editBuhgalteriaInfo.pug
+  include ../../components/popup/pug/editFactAddressInfo.pug
+  include ../../components/popup/pug/editMailingAddressInfo.pug
+  include ../../components/popup/pug/editLegalAddressInfo.pug
+  include ../../components/popup/pug/deleteCompany.pug
+  include ../../components/popup/pug/deleteCompanyConfirm.pug
+  include ../../components/popup/pug/addNewCompany.pug
+  include ../../components/popup/pug/addNewFizlico.pug
+  include ../../components/popup/pug/editFizlico.pug
+  include ../../components/popup/pug/deleteFizlico.pug
+  include ../../components/popup/pug/addNewDeliveryAddress.pug
+  include ../../components/popup/pug/editDeliveryAddress.pug
+  include ../../components/popup/pug/deleteDeliveryAddress.pug
+  include ../../components/popup/pug/infoSave.pug
