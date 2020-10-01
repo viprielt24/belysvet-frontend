@@ -191,6 +191,9 @@
   max-width: max-content;
   margin: 0 auto;
 }
+.button-wrap--marginZero {
+  margin: 0 !important;
+}
 .buttonAddMessage {
   width: 149px;
   height: 48px;
