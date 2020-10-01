@@ -1,6 +1,5 @@
 extends ../layout.pug
 include ../../components/personInformation/personInformation.pug
-include ../../components/tableItemEmployees/tableItemEmployees.pug
 include ../../components/companyInformationFull/companyInformationFull.pug
 include ../../components/select-custom/select-custom
 include ../../components/physicalPersonCard/physicalPersonCard.pug
@@ -20,7 +19,7 @@ block content
               aria-label="Текстовая подсказка по соответствующей теме."
             )
               include ../../images/question.svg
-            .profileCard__sectionTitle!='Персональная информация'
+            .profileCard__sectionTitle.profileCard__sectionTitle--noSeparator!='Персональная информация'
             .profileCard__group
               each item in person
                 +personInformation(
@@ -50,7 +49,7 @@ block content
                       label: 'Изменить пароль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'edit-password'
+                      dataPopupname: 'change-password'
                     },
                     {
                       type: 'edit-profile',
@@ -340,6 +339,7 @@ block content
   include ../../components/popup/pug/editPersonInfo.pug
   include ../../components/popup/pug/deleteProfile.pug
   include ../../components/popup/pug/deleteProfileConfirm.pug
+  include ../../components/popup/pug/changePassword.pug
   include ../../components/popup/pug/editCommonInfoCompany.pug
   include ../../components/popup/pug/editBankInfo.pug
   include ../../components/popup/pug/editRukovodstvoInfo.pug

@@ -18,7 +18,7 @@ block content
               aria-label="Текстовая подсказка по соответствующей теме."
             )
               include ../../images/question.svg
-            .profileCard__sectionTitle!='Персональная информация'
+            .profileCard__sectionTitle.profileCard__sectionTitle--noSeparator!='Персональная информация'
             .profileCard__group
               each item in person
                 +personInformation(
@@ -41,21 +41,21 @@ block content
                       label: 'Удалить профиль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'delete-object-01'
+                      dataPopupname: 'delete-profile-01'
                     },
                     {
                       type: 'edit-password',
                       label: 'Изменить пароль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'edit-password'
+                      dataPopupname: 'change-password'
                     },
                     {
                       type: 'edit-profile',
                       label: 'Редактировать профиль',
                       href: 'javascript:void(0);',
                       class: 'js-popup-open',
-                      dataPopupname: 'edit-profile'
+                      dataPopupname: 'edit-person-info'
                     }
                   ]
                 )
@@ -76,7 +76,7 @@ block content
                   true
                 )
             .profileCard__rightButton
-              a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Добавить адрес'
+              a(href="javascript:void(0);" data-popupname="add-new-delivery-address").button.buttonFixSize.js-popup-open!='Добавить адрес'
 
           .profileCard__section.profileCard__deliveryAddressInfo
             .accordion__help.js-accordion__help.accordion__help--personalInfo(
@@ -89,7 +89,7 @@ block content
             .profileCard__content.profileCard__content--deliveryMethod
               include ../checkout/pug/receive
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
 
 
           .profileCard__section.profileCard__deliveryAddressInfo
@@ -103,7 +103,7 @@ block content
             .profileCard__content.profileCard__content--paymentMethod
               include ../checkout/pug/payment
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
 
 
           .profileCard__section.profileCard__deliveryAddressInfo
@@ -143,4 +143,14 @@ block content
                     .label__text Сообщать на e-mail о появлении новой статьи
 
               .profileCard__centerButton
-                a(href="javascript:void(0);" data-popupname="add-new-employees").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+                a(href="javascript:void(0);" data-popupname="info-save").button.buttonFixSize.js-popup-open!='Сохранить изменения'
+
+
+  include ../../components/popup/pug/editPersonInfo.pug
+  include ../../components/popup/pug/deleteProfile.pug
+  include ../../components/popup/pug/deleteProfileConfirm.pug
+  include ../../components/popup/pug/changePassword.pug
+  include ../../components/popup/pug/addNewDeliveryAddress.pug
+  include ../../components/popup/pug/editDeliveryAddress.pug
+  include ../../components/popup/pug/deleteDeliveryAddress.pug
+  include ../../components/popup/pug/infoSave.pug

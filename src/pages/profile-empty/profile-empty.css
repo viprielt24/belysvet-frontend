@@ -2,12 +2,9 @@
 @import "../../layout/variables.css";
 @import "../../layout/css/buttons.css";
 @import "../../layout/css/icons.css";
-@import "../../components/tableItemEmployees/tableItemEmployees.css";
 @import "../../components/accordion/accordion.css";
 @import "../../components/companyInformationFull/companyInformationFull.css";
-@import "../../pages/checkout/checkout.css";
 @import "../../layout/css/forms.css";
-@import "../../components/fileCard/fileCard.css";
 /*-------------------------------------------------------------------------*/
 
 /*----------------------Personal Info------------------------*/
@@ -22,7 +19,7 @@
   margin-bottom: 40px;
   padding: 35px 40px;
   color: var(--black04);
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--opens);
   font-size: 17px;
   font-weight: 400;
   line-height: 1.2;
@@ -40,10 +37,15 @@
   line-height: 1.2;
 }
 
+.profileCard__sectionTitle--noSeparator {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
 .accordion__help--personalInfo {
-  position: absolute;
   top: 35px;
-  right: 35px;
+  right: 40px;
+  position: absolute;
 }
 
 .personInfoCard__wrap {}
@@ -77,8 +79,8 @@
 .personInfoCard__data {
   margin: 0 0 35px 110px;
   display: flex;
-  color: #333333;
-  font-family: "Open Sans", sans-serif;
+  color: var(--black04);
+  font-family: var(--opens);
   font-size: 17px;
   font-weight: 400;
   line-height: 1.2;
@@ -156,10 +158,10 @@
 }
 
 .personInfoCard__buttons {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 20px;
   & .button {
     &:not(:last-child) {
       margin-right: 30px;
@@ -185,11 +187,11 @@
 }
 
 .companyInfo__icon {
-  content: "";
   left: 30px;
   top: 36px;
   width: 30px;
   height: 30px;
+  content: "";
   position: absolute;
   background-image: url("/images/company-icon.svg");
   background-size: 30px;
