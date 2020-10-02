@@ -95,9 +95,9 @@ const pages = {
       }
     }
   },
-  'text': {
+  'press-inner-text': {
     parameters: {
-      page: 'text',
+      page: 'press-inner-text',
       title: 'Пресс-центр текстовая НОВАЯ',
       pageName: 'INEXI TECHNOLOGY — инновации в аварийном освещении',
       crumbs: ['Главная', 'Компания', 'Пресс-центр', 'INEXI TECHNOLOGY — инновации в аварийном освещении'],
