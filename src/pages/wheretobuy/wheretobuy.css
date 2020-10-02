@@ -179,7 +179,7 @@
      bottom: 0;
      left: 0;
      right: 0;
-     background: #8DC63F;
+     background: var(--primary);
      position: absolute;
      content: "";
      transition: transform .3s ease;
