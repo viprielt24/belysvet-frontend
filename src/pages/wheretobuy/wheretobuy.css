@@ -171,6 +171,25 @@
   background-color: #fff;
   margin-bottom: 33px;
   padding: 15px;
+  position: relative;
+  transition: box-shadow .3s ease;
+  overflow: hidden;
+  &:after {
+     height: 4px;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: #8DC63F;
+     position: absolute;
+     content: "";
+     transition: transform .3s ease;
+     transform: translateY(5px);
+  }
+  &:hover {
+    &:after {
+       transform: translateY(0);
+    }
+  }
 }
 
 .wheretobuy-partners__item-pic {
