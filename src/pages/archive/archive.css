@@ -173,6 +173,31 @@
   }
 }
 
+.lights--archive {
+  .catalog--favourite {
+    .catalog__item {
+      transition: box-shadow .3s ease;
+      overflow: hidden;
+      &:after {
+         height: 4px;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: var(--gray09);
+         position: absolute;
+         content: "";
+         transition: transform .3s ease;
+         transform: translateY(5px);
+      }
+      &:hover {
+        &:after {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
 /**
 mobile
  */
