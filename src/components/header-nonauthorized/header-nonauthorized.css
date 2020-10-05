@@ -211,6 +211,7 @@
 .header__content-wrap {
   background-color: #fff;
   box-shadow: 0 1px 10px rgba(104, 104, 104, 0.1);
+  position: relative;
 }
 
 .header__middle {
@@ -481,7 +482,6 @@
 
   &:last-child {
     margin-right: 0;
-    position: relative;
   }
 
   &:hover {
