@@ -46,7 +46,7 @@
 
   .swiper-container {
     width: 1240px;
-    overflow: visible;
+    overflow: hidden;
 
     .catalog__wrap{
       margin: 0;
