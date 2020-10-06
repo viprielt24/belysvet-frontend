@@ -33,13 +33,13 @@ mixin seminar(item)
       .seminar__bottom
         .seminar__bottom-item
           .seminar__place= item.place
-        .seminar__bottom-item
-          if item.price
-            .seminar__price= 'Стоимость: '
-              span= item.price + ' рублей'
-          else
-            .seminar__price Стоимость:
-              span= ' Бесплатно'
+        //.seminar__bottom-item
+        //  if item.price
+        //    .seminar__price= 'Стоимость: '
+        //      span= item.price + ' рублей'
+        //  else
+        //    .seminar__price Стоимость:
+        //      span= ' Бесплатно'
         .seminar__bottom-item
           .seminar__program
             +file(item.program)
