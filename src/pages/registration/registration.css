@@ -9,8 +9,8 @@
 
 .registration {
   background-color: #fff;
-  margin: 0 auto 40px;
-  padding: 0 100px 56px;
+  margin: 0 auto 80px;
+  padding: 0 100px 40px;
 
   .form__bottom {
     margin-top: 40px;
@@ -46,6 +46,12 @@
 
   &:first-child {
     margin-bottom: 40px;
+  }
+  .form__bottom .button-wrap {
+    margin-right: 0;
+  }
+  .form__bottom .form-group {
+    margin-bottom: 0;
   }
 }
 
