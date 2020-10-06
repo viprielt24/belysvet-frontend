@@ -1,6 +1,4 @@
 @import "header/header.css";
-@import "header-nonauthorized/header-nonauthorized.css";
-@import "header-authorized/header-authorized.css";
 @import "footer/footer.css";
 @import "orders/orders.css";
 @import "popup/popup.css";

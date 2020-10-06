@@ -526,7 +526,7 @@
   border-radius:0;
   &:hover {
     &:after {
-    display: none;
+      display: none;
     }
   }
   svg {
@@ -561,19 +561,18 @@
     line-height: 1;
     text-decoration: none;
     transition: color .3s ease;
-    /*position: relative;*/
-  &:after {
-    content: '';
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 10px;
-    height: 6px;
-    background-image: url(/images/arrow-down-green.svg);
-    margin-top: -3px;
-    border: 0;
-    transition: transform .3s ease;
-   }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 10px;
+      height: 6px;
+      background-image: url(/images/arrow-down-green.svg);
+      margin-top: -3px;
+      border: 0;
+      transition: transform .3s ease;
+    }
   }
   &.is-open {
     .header__top-submenu {

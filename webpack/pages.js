@@ -57,6 +57,21 @@ const pages = {
       lights: data.lights,
     }
   },
+  'main-auth': {
+    parameters: {
+      page: 'main-auth',
+      title: 'Белый свет 2000',
+      pageName: 'Главная - авторизованный пользователь',
+      news: data.news,
+      article: data.article,
+      products: data.products,
+      tech: data.tech,
+      segments: data.segments,
+      promo: data.promo,
+      projects: data.projects,
+      lights: data.lights,
+    }
+  },
   'press': {
     parameters: {
       page: 'press',

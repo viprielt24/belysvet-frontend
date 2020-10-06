@@ -1,0 +1,63 @@
+@import "../../../layout/variables.css";
+
+.event{
+
+  .title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: normal;
+    color: #434343;
+  }
+
+  .descr{
+    margin: 16px 0 14px;
+    overflow: hidden;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: var(--opens);
+    color: #434343;
+    transition: height .3s ease;
+  }
+
+}
+
+.event__wrap{
+  background-color: #fff;
+  padding: 40px 44px 20px;
+}
+/**
+media
+ */
+.mobile {
+
+  .event {
+    position: relative;
+    padding-top: 12px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background-color: rgba(196, 196, 196, 0.5);;
+    }
+  }
+
+  .event__wrap{
+    padding: 30px 17px 20px;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .descr{
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

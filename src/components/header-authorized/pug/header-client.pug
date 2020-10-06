@@ -7,28 +7,27 @@
   a(href="javascript:void(0);" aria-label="Корзина").header__client-item.header__cart.hint.hint--white.hint--bottom-left
     .icon.icon--inline.icon--cart: include ../../../images/cart.svg
     .header__cart-count 28
-  a(href="javascript:void(0);" aria-label="Авторизация/Регистрация" data-popupname="login").header__client-item.header__auth.header__auth--true.hint.hint--white.hint--bottom-left.list__link.js-popup-open
-    .icon.icon--inline: include ../../../images/auth.svg
-  .list__item.list__item--parent.list__item--user.js-header__menu-parent
-    a(href="javascript:void(0);").list__link Константин
+  .header__client-item.list__item--user.js-header__menu-parent
+    .icon.icon--inline.icon--user: include ../../../images/auth.svg
+    .list__link!='Константин'
     .header__top-submenu.js-header__top-submenu
       .header__top-submenu-wrap
         .header__top-submenu-item.list
           .group__userInfo
             .icon.icon--inline: include ../../../images/auth-green.svg
             .group__userName
-              .name__user  Константин <br> Константинопольский
-              .type__user Юридическое лицо
-          .list__item: a(href="javascript:void(0);").list__link Личный кабинет
-          .list__item: a(href="javascript:void(0);").list__link Коммуникации
-          .list__item: a(href="javascript:void(0);").list__link Корзина
-          .list__item: a(href="javascript:void(0);").list__link Объекты
-          .list__item: a(href="javascript:void(0);").list__link Спецификации
-          .list__item: a(href="javascript:void(0);").list__link Документы
-          .list__item: a(href="javascript:void(0);").list__link История заказов
-          .list__item: a(href="javascript:void(0);").list__link Сервисные обращения
-          .list__item: a(href="javascript:void(0);").list__link Журнал испытаний
-          .list__item: a(href="javascript:void(0);").list__link Скидки, бонусы, акции
-          .list__item: a(href="javascript:void(0);").list__link Помощь
-          .list__item: a(href="javascript:void(0);").list__link Профиль
-          .list__item: a(href="javascript:void(0);").list__link Выход
+              .name__user!='Константин <br> Константинопольский'
+              .type__user!='Юридическое лицо'
+            .list__item: a(href="javascript:void(0);").list__link Личный кабинет
+            .list__item: a(href="javascript:void(0);").list__link Коммуникации
+            .list__item: a(href="javascript:void(0);").list__link Корзина
+            .list__item: a(href="javascript:void(0);").list__link Объекты
+            .list__item: a(href="javascript:void(0);").list__link Спецификации
+            .list__item: a(href="javascript:void(0);").list__link Документы
+            .list__item: a(href="javascript:void(0);").list__link История заказов
+            .list__item: a(href="javascript:void(0);").list__link Сервисные обращения
+            .list__item: a(href="javascript:void(0);").list__link Журнал испытаний
+            .list__item: a(href="javascript:void(0);").list__link Скидки, бонусы, акции
+            .list__item: a(href="javascript:void(0);").list__link Помощь
+            .list__item: a(href="javascript:void(0);").list__link Профиль
+            .list__item: a(href="javascript:void(0);").list__link Выход
