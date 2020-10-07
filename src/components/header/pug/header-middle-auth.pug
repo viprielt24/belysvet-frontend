@@ -1,15 +1,14 @@
-.header__client
-  if isMobile
-    a(href="javascript:void(0);" aria-label="Поиск").header__client-item.header__compare.js-header-mobile-search-open
-      .icon.icon--inline.icon--zoom-big: include ../../../images/zoom-big.svg
-  a(href="javascript:void(0);" aria-label="Сравнение").header__client-item.header__compare.hint.hint--white.hint--bottom-left
-    .icon.icon--inline.icon--compare: include ../../../images/compare.svg
-  a(href="javascript:void(0);" aria-label="Корзина").header__client-item.header__cart.hint.hint--white.hint--bottom-left
-    .icon.icon--inline.icon--cart: include ../../../images/cart.svg
-    .header__cart-count 28
-  .header__client-item.list__item--user.js-header__menu-parent
-    .icon.icon--inline.icon--user: include ../../../images/auth.svg
-    .list__link.list__link--user!='Константин'
+.header__middle-item
+  .header__logo
+    a(href="/").header__logo-link: img(src="/images/logo.svg")
+    a(href="/").header__logo-link.header__logo-link--mobile: img(src="/images/logo-mobile.svg")
+  .header__phone
+    a(href="tel:+74957851767").header__phone-link +7 (495) 785-17-67
+    a(href="tel:+74957851767").header__phone-link.header__phone-link--mobile
+      img(src="/images/phone-small.svg")
+      | +7 (495) 785-17-67
+  .header__client-item.header__auth.header__auth--mobile.list__item--user.js-header__menu-parent
+    .icon.icon--inline: include ../../../images/auth.svg
     .header__top-submenu.js-header__top-submenu
       .header__top-submenu-wrap
         .header__top-submenu-item.list
@@ -31,3 +30,8 @@
           .list__item: a(href="javascript:void(0);").list__link Помощь
           .list__item: a(href="javascript:void(0);").list__link Профиль
           .list__item: a(href="javascript:void(0);").list__link Выход
+  .header__burger.js-header__burger.burger.burger--close6
+    .burger__icon
+      .burger__line.burger__line--1
+      .burger__line.burger__line--2
+      .burger__line.burger__line--3
