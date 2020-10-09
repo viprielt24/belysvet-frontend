@@ -1105,4 +1105,15 @@ mobile
       line-height: 19px;
     }
   }
+
+  .list__item--user {
+    .icon--close {
+      width: 20px;
+      height: 20px;
+    }
+    .popup__header {
+      top: 13px;
+      right: 16px;
+    }
+  }
 }

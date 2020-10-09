@@ -36,8 +36,8 @@ export default class {
     let targetPopupName = event.currentTarget.dataset.popupname;
     let popupInfo = event.currentTarget.dataset.info;
     let popup = document.querySelector('.js-popup-' + targetPopupName);
-    this.html.classList.add('popup-opened');
-    this.body.classList.add('popup-open');
+    (targetPopupName === 'login') ? this.html.classList.add('popup-login-open') : this.html.classList.add('popup-opened');
+    this.body.classList.add('popup-open')
     this.body.style.marginRight = this.scrollFix + 'px';
     // this.orders.style.right = this.ordersRight + this.scrollFix + 'px';
     popup.classList.add('popup--visible');
@@ -82,7 +82,6 @@ export default class {
     if (popupInfo) {
       popup.querySelector('[name=form_info]').value = 'Отправка запроса';
     }
-
     setTimeout(() => {
       this.html.classList.remove('popup-opened');
       this.body.style.marginRight = 0;
@@ -92,3 +91,18 @@ export default class {
     popup.classList.remove('popup--visible');
   }
 }
+
+/*----------------------------Login Popup--------------------------------------*/
+const popupLogin = document.querySelector('.js-popup-login');
+popupLogin.addEventListener("click", function(event){
+  const e = event;
+  if (e.target == this) {
+    const html = document.documentElement;
+    const body = document.body;
+    popupLogin.classList.remove('popup--visible');
+    html.classList.remove('popup-opened');
+    body.classList.remove('popup-open');
+    html.classList.remove('popup-login-open');
+  }
+});
+
