@@ -3,6 +3,7 @@
 @import "../personCard/personCard.css";
 @import "../messageCompatible/messageCompatible.css";
 @import "../tagSteps/tagSteps.css";
+@import "../../../node_modules/js-datepicker/dist/datepicker.min.css";
 
 /* ------------------------------------------------------------------------- */
 
@@ -310,4 +311,44 @@
   }
 }
 
-/* ------------------------------------------------------------------------- */
+/* ------------------Date Picker--------------------------------------- */
+
+.qs-datepicker-container {
+  width: 20.625em;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.qs-controls {
+  padding: 20px 10px 5px;
+  text-align: center;
+  background: #fff;
+  .qs-month-year {
+    color: var(--black08);
+    font-family: var(--opens);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column-reverse;
+    .qs-year {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .qs-month {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+  }
+}
+
+.qs-squares {
+  padding: 15px 35px 30px;
+  .qs-day {
+    color: var(--black06);
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+  .qs-num {
+
+  }
+}
