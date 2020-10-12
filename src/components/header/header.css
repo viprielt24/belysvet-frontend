@@ -554,50 +554,50 @@
          display: none;
        }
     }
+    .header__top-submenu-wrap {
+      .list {
+        padding: 15px 20px;
+        width: 100%;
+        .group__userInfo {
+          padding: 0 0 15px 0;
+          margin-bottom: 20px;
+          border-bottom: var(--border);
+          display: flex;
+          justify-content: flex-start;
+          .icon {
+            margin-right: 10px;
+          }
+          .name__user {
+            margin-bottom: 5px;
+            font-family: var(--opens);
+            color: var(--black04);
+            font-size: 14px;
+            line-height: 1.3;
+            font-weight: 400;
+          }
+          .type__user {
+            font-family: var(--opens);
+            color: var(--black05);
+            font-size: 11px;
+            line-height: 1.7;
+            font-weight: 300;
+          }
+        }
+        .list__link {
+          transition: color .3s ease;
+          &:after {
+            transform: rotate(-180deg);
+          }
+          &:hover {
+            color: #61AE3B;
+          }
+        }
+      }
+    }
     &.is-open {
       .header__top-submenu {
         opacity: 1;
         visibility: visible;
-        .header__top-submenu-wrap {
-          .list {
-            padding: 15px 20px;
-            width: 100%;
-            .group__userInfo {
-              padding: 0 0 15px 0;
-              margin-bottom: 20px;
-              border-bottom: var(--border);
-              display: flex;
-              justify-content: flex-start;
-              .icon {
-                margin-right: 10px;
-              }
-              .name__user {
-                margin-bottom: 5px;
-                font-family: var(--opens);
-                color: var(--black04);
-                font-size: 14px;
-                line-height: 1.3;
-                font-weight: 400;
-              }
-              .type__user {
-                font-family: var(--opens);
-                color: var(--black05);
-                font-size: 11px;
-                line-height: 1.7;
-                font-weight: 300;
-              }
-            }
-            .list__link {
-              transition: color .3s ease;
-              &:after {
-                transform: rotate(-180deg);
-              }
-              &:hover {
-                color: #61AE3B;
-              }
-            }
-          }
-        }
       }
       .list__link--user {
         &:after {
@@ -762,12 +762,17 @@ mobile
   }
 }
 
+.list__item--user.header__auth--mobile {
+  .header__top-submenu {
+    top: 53px;
+    padding-top: 0;
+  }
+}
+
 .header__auth--mobile.is-open {
   .header__top-submenu {
     opacity: 1;
     visibility: visible;
-    top: 53px;
-    padding-top: 0;
   }
 }
 
