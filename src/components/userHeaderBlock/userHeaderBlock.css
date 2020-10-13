@@ -317,8 +317,8 @@
 /* ------------------Date Picker--------------------------------------- */
 
 .qs-datepicker-container {
-  width: 20.625em;
-  margin: 20px 0 0 -9.3em;
+  width: 20.6em;
+  margin: 12px 0 0 -9.6em;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: visible;
@@ -329,7 +329,7 @@
   &:before{
     top: -6px;
     left: 50%;
-    margin-left: -12px;
+    margin-left: -8px;
     width: 14px;
     height: 14px;
     background: #FFF;
@@ -346,7 +346,7 @@
 }
 
 .qs-controls {
-  padding: 20px 10px 5px;
+  padding: 18px 10px 0;
   text-align: center;
   background: #fff;
   position: relative;
@@ -354,15 +354,19 @@
     color: var(--black08);
     font-family: var(--opens);
     font-weight: 400;
+    border-bottom: none;
     display: flex;
     flex-direction: column-reverse;
+    &:hover {
+      border-bottom: none;
+    }
     .qs-year {
       font-size: 12px;
-      line-height: 2;
+      line-height: 1.9;
     }
     .qs-month {
       font-size: 18px;
-      line-height: 1.3;
+      line-height: 1;
       color: var(--black01);
     }
   }
@@ -372,29 +376,33 @@
     border-bottom: 2px solid var(--black04);
     border-right: 2px solid var(--black04);
     border-radius: 0;
+    &:hover {
+      background: none;
+    }
     &:after {
       display: none;
     }
     &.qs-left {
-      margin-left: 20px;
+      margin-left: 10px;
       transform: rotate(135deg);
     }
     &.qs-right {
-      margin-right: 20px;
+      margin-right: 10px;
       transform: rotate(-45deg);
     }
   }
 }
 
 .qs-squares {
-  padding: 15px 35px 30px;
+  padding: 18px 18px 22px;
   position: relative;
   &:before{
     width: 100%;
     height: 1px;
-    top: 42px;
+    top: 45px;
     left: 0;
-    background: var(--gray04);
+    background: #000;
+    opacity: 0.1;
     position: absolute;
     content: "";
 
@@ -403,14 +411,27 @@
     height: auto;
   }
   .qs-day {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     color: var(--black05);
-    font-size: 13px;
+    font-size: 11px;
     line-height: 1.25;
     font-weight: 400;
   }
   .qs-num {
-    font-size: 13px;
-    line-height: 2.25;
+    font-size: 14px;
+    line-height: 2.2;
   }
+  .qs-current {
+    text-decoration: none;
+    background: var(--gray01);
+  }
+  .qs-active {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background: var(--hover);
+  color: #fff;
 }

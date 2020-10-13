@@ -14,8 +14,8 @@ export default class {
         const newDatePicker =  datepicker('.uhbData__dateCalendar', {
           customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
           customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-          overlayButton: "Выбрать",
           minDate: new Date(),
+          disableYearOverlay: true,
           onSelect: instance => {
             const newDateItem = instance.dateSelected.toLocaleDateString().split('/').join('.');
             let newItem = document.createElement('div')
