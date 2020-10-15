@@ -5,6 +5,7 @@ export default class {
     //tabs
     this.popupOpenTrigger = document.querySelectorAll('.js-popup-open');
     this.popupCloseTrigger = document.querySelectorAll('.js-popup-close');
+    this.popupWrap = document.querySelectorAll('.popup__wrap');
     this.html = document.documentElement;
     this.body = document.body;
     this.orders = document.querySelector('.js-orders');
@@ -26,6 +27,43 @@ export default class {
         this.popupClose(event);
       });
     });
+    document.addEventListener("click", event => {
+      let clickMobile = false;
+      let mobileIcon = event.target;
+      while (mobileIcon) {
+        if (mobileIcon.classList.contains("header__auth--mobile")) {
+          clickMobile = true;
+          return true;
+        } else {
+          mobileIcon = mobileIcon.parentElement;
+        }
+      }
+      this.popupWrap.forEach(elem => {
+        // Подключаем обработчик только если есть открыте окна
+        if (elem.parentElement.classList.contains("popup--visible")) {
+          if (!clickMobile) {
+            //если форма авторизации не для моб. версии
+            document.addEventListener("click", closeOnOverlay, false);
+          }
+        }
+      });
+    });
+    let closeOnOverlay = (e) => {
+      let CurrentNode = e.target;
+      let clickOn = false;
+      while (CurrentNode) {
+        // Для определения оверлея пройдемся по dom модального окна
+        if (CurrentNode.classList.contains("popup__wrap")) {
+          clickOn = true;
+          return true;
+        } else {
+          CurrentNode = CurrentNode.parentElement;
+        }
+      }
+      if (!clickOn)
+        this.popupClose(e);
+      document.removeEventListener("click", closeOnOverlay, false); // Удалим обратчик события на оверлее после закрытия окна
+    };
   }
 
   popupOpen(event) {
@@ -36,8 +74,8 @@ export default class {
     let targetPopupName = event.currentTarget.dataset.popupname;
     let popupInfo = event.currentTarget.dataset.info;
     let popup = document.querySelector('.js-popup-' + targetPopupName);
-    this.html.classList.add('popup-opened');
-    this.body.classList.add('popup-open');
+    (targetPopupName === 'login') ? this.html.classList.add('popup-login-open') : this.html.classList.add('popup-opened');
+    this.body.classList.add('popup-open')
     this.body.style.marginRight = this.scrollFix + 'px';
     // this.orders.style.right = this.ordersRight + this.scrollFix + 'px';
     popup.classList.add('popup--visible');
@@ -76,13 +114,22 @@ export default class {
   }
 
   popupClose(event) {
-    let targetPopupName = event.currentTarget.dataset.popupname;
-    let popup = document.querySelector('.js-popup-' + targetPopupName);
+    // let targetPopupName = event.currentTarget.dataset.popupname;
+    let targetPopupName;
+    this.popupWrap.forEach(elem => {
+      if (elem.parentElement.classList.contains("popup--visible")) {
+        targetPopupName = elem.children[0].children[0].dataset.popupname; //Найдем имя модального окна исходя из тех что открыты в данный момент
+      }
+    });
+    if(typeof(targetPopupName) == 'undefined'){
+      targetPopupName = event.currentTarget.dataset.popupname;
+    }
+
+    let popup = document.querySelector(".js-popup-" + targetPopupName);
     let popupInfo = popup.querySelector('[name=form_info]');
     if (popupInfo) {
       popup.querySelector('[name=form_info]').value = 'Отправка запроса';
     }
-
     setTimeout(() => {
       this.html.classList.remove('popup-opened');
       this.body.style.marginRight = 0;
@@ -92,3 +139,17 @@ export default class {
     popup.classList.remove('popup--visible');
   }
 }
+
+/*----------------------------Login Popup--------------------------------------*/
+const popupLogin = document.querySelector('.js-popup-login');
+popupLogin.addEventListener("click", function(event){
+  const e = event;
+  if (e.target == this) {
+    const html = document.documentElement;
+    const body = document.body;
+    popupLogin.classList.remove('popup--visible');
+    html.classList.remove('popup-opened');
+    body.classList.remove('popup-open');
+    html.classList.remove('popup-login-open');
+  }
+});

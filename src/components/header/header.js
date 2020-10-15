@@ -37,15 +37,27 @@ export default class {
 
   menuToggle() {
     this.parentMenu.forEach(menu => {
-      menu.addEventListener('click', () => {
+      menu.addEventListener('click', (event) => {
         if (menu.classList.contains('is-open')) {
           menu.classList.remove('is-open');
+          document.removeEventListener("click", CloseMenuOnOverlay, false);
         } else {
           let openMenu = document.querySelector('.js-header__menu-parent.is-open');
           if (openMenu) {
             openMenu.classList.remove('is-open');
           }
           menu.classList.add('is-open');
+          if(menu.classList.contains('list__item--user')){
+            document.addEventListener("click", CloseMenuOnOverlay, false);
+          }
+          if (this.mobileMenu && this.mobileMenu.classList.contains('is-open')) {
+            this.mobileMenu.classList.remove('is-open');
+            this.mobileMenuBtn.classList.remove('is-active');
+            this.mobileMenuMainBtn.classList.remove('is-active');
+            setTimeout(() => {
+              this.mobileMenuSearch.classList.remove('is-open');
+            }, 400);
+          }
         }
       });
 
@@ -55,6 +67,25 @@ export default class {
         }
       });
     });
+
+    function CloseMenuOnOverlay (event) {
+      let clickMenu = false;
+      let menuIcon = event.target;
+      while (menuIcon) {
+        if (menuIcon.classList.contains("list__item--user")) {
+          clickMenu = true;
+          return true;
+        } else {
+          menuIcon = menuIcon.parentElement;
+        }
+      }
+      if(!clickMenu){
+        let menu = document.querySelector('.header__client-item.list__item--user.js-header__menu-parent.is-open');
+        if(menu && menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+        }
+      }
+    }
   }
 
   topMenuToggle() {

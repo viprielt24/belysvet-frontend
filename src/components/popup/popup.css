@@ -821,6 +821,46 @@
     max-height: 200px;
   }
 }
+
+.popup--login {
+  right: 0;
+  top: 0;
+  left: auto;
+  width: auto;
+  height: auto;
+  background: transparent;
+  position: absolute;
+  z-index: 1000;
+  .popup__wrap {
+    width: 320px;
+    padding: 20px;
+  }
+  .popup__content-title {
+    padding: 0;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: left;
+  }
+  .label--checkbox .label__text {
+    color: var(--black03);
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .checkout__form-footer-wrap {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    .link--simple {
+      font-size: 13px;
+    }
+  }
+}
+
+
 /**
 media
  */
@@ -1063,6 +1103,17 @@ mobile
     .form__bottom-study-price {
       font-size: 15px;
       line-height: 19px;
+    }
+  }
+
+  .list__item--user {
+    .icon--close {
+      width: 20px;
+      height: 20px;
+    }
+    .popup__header {
+      top: 13px;
+      right: 16px;
     }
   }
 }
