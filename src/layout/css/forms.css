@@ -2,7 +2,7 @@
 
 :root {
   --formIndent: 15px;
-  --inputHeight: 32px;
+  --inputHeight: 48px;
   --inputLineHeight: calc(var(--inputHeight) - 2px);
   --iconIndent: 8px;
   --iconIndentx2: 16px;
@@ -98,6 +98,7 @@
     font-size: 13px;
     font-weight: 300;
     line-height: var(--inputLineHeight);
+    opacity: 1;
   }
 
   &:-moz-placeholder {
@@ -106,6 +107,7 @@
     font-size: 13px;
     font-weight: 300;
     line-height: var(--inputLineHeight);
+    opacity: 1;
   }
 
   &:-ms-input-placeholder {
@@ -114,6 +116,7 @@
     font-size: 13px;
     font-weight: 300;
     line-height: var(--inputLineHeight);
+    opacity: 1;
   }
 
   /** placeholder */
