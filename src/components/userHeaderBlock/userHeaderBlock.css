@@ -3,6 +3,7 @@
 @import "../personCard/personCard.css";
 @import "../messageCompatible/messageCompatible.css";
 @import "../tagSteps/tagSteps.css";
+@import "../../../node_modules/js-datepicker/dist/datepicker.min.css";
 
 /* ------------------------------------------------------------------------- */
 
@@ -190,8 +191,10 @@
     align-items: center;
   }
   & .uhbData__dateList {
+    max-width: 81%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   & .uhbData__dateItem {
     margin-right: 20px;
@@ -208,6 +211,7 @@
     background-image: url('/images/calendar.svg');
     background-repeat: no-repeat;
     background-size: 24px 24px;
+    position: relative;
     cursor: pointer;
   }
 }
@@ -310,4 +314,126 @@
   }
 }
 
-/* ------------------------------------------------------------------------- */
+/* ------------------Date Picker--------------------------------------- */
+
+.qs-datepicker-container {
+  width: 20.6em;
+  margin: 12px 0 0 -9.5em;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+}
+
+.qs-datepicker {
+  position: relative;
+  &:before{
+    top: -6px;
+    left: 50%;
+    margin-left: -8px;
+    width: 14px;
+    height: 14px;
+    background: #FFF;
+    box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.2);
+    transform: rotate(-135deg);
+    position: absolute;
+    content: '';
+    z-index: 10;
+  }
+}
+
+.qs-overlay {
+  padding: 20px .5em;
+}
+
+.qs-controls {
+  padding: 18px 10px 0;
+  border-radius: .26em .26em 0 0;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  .qs-month-year {
+    color: var(--black08);
+    font-family: var(--opens);
+    font-weight: 400;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column-reverse;
+    &:hover {
+      border-bottom: none;
+    }
+    .qs-year {
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .qs-month {
+      font-size: 18px;
+      line-height: 1;
+      color: var(--black01);
+    }
+  }
+  .qs-arrow {
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid var(--black04);
+    border-right: 2px solid var(--black04);
+    border-radius: 0;
+    &:hover {
+      background: none;
+    }
+    &:after {
+      display: none;
+    }
+    &.qs-left {
+      margin-left: 10px;
+      transform: rotate(135deg);
+    }
+    &.qs-right {
+      margin-right: 10px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.qs-squares {
+  padding: 18px 18px 22px;
+  position: relative;
+  &:before{
+    width: 100%;
+    height: 1px;
+    top: 45px;
+    left: 0;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    content: "";
+
+  }
+  .qs-square {
+    height: auto;
+  }
+  .qs-day {
+    margin-bottom: 23px;
+    color: var(--black06);
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+  .qs-num {
+    font-size: 14px;
+    line-height: 2.2;
+  }
+  .qs-current {
+    text-decoration: none;
+    background: var(--gray01);
+  }
+  .qs-active {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background: var(--hover);
+  color: #fff;
+}

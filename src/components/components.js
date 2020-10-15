@@ -227,4 +227,10 @@ document.addEventListener('DOMContentLoaded', event => {
       new module.default();
     });
   }
+
+  if (document.querySelector('.uhbData__dateCalendar')) {
+    import('../components/userHeaderBlock/datePicker.js').then(module => {
+      new module.default();
+    });
+  }
 });
