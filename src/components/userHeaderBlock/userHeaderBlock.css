@@ -412,10 +412,11 @@
   }
   .qs-day {
     margin-bottom: 23px;
-    color: var(--black05);
+    color: var(--black06);
     font-size: 13px;
     line-height: 1.25;
     font-weight: 400;
+    opacity: 0.5;
   }
   .qs-num {
     font-size: 14px;
