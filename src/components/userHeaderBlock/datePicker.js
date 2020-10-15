@@ -13,7 +13,7 @@ export default class {
       datePick.addEventListener('click', (e) => {
         const newDatePicker =  datepicker('.uhbData__dateCalendar', {
           customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-          customDays: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+          customDays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
           minDate: new Date(),
           disableYearOverlay: true,
           onSelect: instance => {

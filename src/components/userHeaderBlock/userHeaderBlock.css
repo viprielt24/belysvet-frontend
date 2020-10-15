@@ -318,7 +318,7 @@
 
 .qs-datepicker-container {
   width: 20.6em;
-  margin: 12px 0 0 -9.6em;
+  margin: 12px 0 0 -9.5em;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: visible;
@@ -333,11 +333,11 @@
     width: 14px;
     height: 14px;
     background: #FFF;
-    box-shadow: 2px 2px 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.2);
     transform: rotate(-135deg);
     position: absolute;
     content: '';
-  z-index: 10;
+    z-index: 10;
   }
 }
 
@@ -411,9 +411,9 @@
     height: auto;
   }
   .qs-day {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
     color: var(--black05);
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.25;
     font-weight: 400;
   }
