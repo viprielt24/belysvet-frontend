@@ -347,6 +347,7 @@
 
 .qs-controls {
   padding: 18px 10px 0;
+  border-radius: .26em .26em 0 0;
   text-align: center;
   background: #fff;
   position: relative;
